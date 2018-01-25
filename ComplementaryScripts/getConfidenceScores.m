@@ -5,10 +5,6 @@
 % Reactions without gene but need for modelling -1;
 % Reactions without gene -0;
 % Exchange reactions -none;
-
-% hongzhong, Benjamin
-% January 23, 2018
-
 %%%%%%%%%%%%%%%%%%%%
 function rxnConfidenceScores = getConfidenceScores(model)
 t=length(model.rxnNames);

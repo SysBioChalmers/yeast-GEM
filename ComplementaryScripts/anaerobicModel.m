@@ -1,8 +1,6 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % anaerobicModel.m
 % Converts model to anaerobic
-%
-% Benjamín J. Sánchez. Last edited: 2017-10-31
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %1st change: Changes media to anaerobic (no O2 uptake and allows sterol
