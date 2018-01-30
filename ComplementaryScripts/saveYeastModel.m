@@ -5,8 +5,6 @@
 
 function saveYeastModel(model)
 
-model.description = 'yeastGEM';
-
 %Remove any space in rxnECNumbers:
 model.rxnECNumbers = strrep(model.rxnECNumbers,' ','');
 
