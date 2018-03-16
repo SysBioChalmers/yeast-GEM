@@ -1,0 +1,15 @@
+GPR_old;GPR will used in the yeast 8;GPR.new from isce926;comment
+( x(339) | x(633) );((YGR032W or YLR342W) and (YCR034W or YLR372W));((YGR032W or YLR342W) and (YCR034W or YLR372W));Seems OK
+x(162);(YDR035W or YBR249C);(YDR035W or YBR249C);Seems OK
+( x(18) | x(57) );(YBR093C or YAR071W or YBR092C or YHR215W);(YBR093C or YAR071W or YBR092C or YHR215W);Seems OK
+(( x(63) & x(171) & x(661) ) | ( x(63) & x(171) & x(701) ));((YBR126C and YDR074W and YML100W) or (YBR126C and YDR074W and YMR261C));((YBR126C and YDR074W and YMR261C and YML100W) or YBR126C);It seems that YML100W and YMR261C have the same regulating activity, thus the old GPR from yeast 7.6 seems more reasonable.
+( x(474) | ( x(505) & x(827) ));(YJL130C and YJR109C and YOR303W);(YJL130C and YJR109C and YOR303W);Seems OK
+( x(370) & x(691) );(YMR205C or (YGR240C and YMR205C));(YMR205C or (YGR240C and YMR205C));YGR240C as a subunit
+( x(370) & x(691) );(YMR205C or (YGR240C and YMR205C));(YMR205C or (YGR240C and YMR205C));YGR240C as a subunit
+( x(538) | x(681) );YMR105C or YKL127W;((YMR105C or YKL127W) and (YMR105C or YKL127W or YMR278W));YMR278W is Major phosphoribomutase that converts ribose 1-phosphate to ribose 5-phosphate. Involved in ribose salvage via the pentose phosphate pathway, not consistent with the reaction based on annotation in SGD
+(( x(28) & x(771) ) | ( x(279) & x(771) ) | ( x(388) & x(547) ));((YKL181W and YER099C) or (YKL181W and YHL011C) or (YKL181W and YBL068W) or (YER099C and YOL061W) or (YBL068W and YOL061W));((YKL181W and YER099C) or (YKL181W and YHL011C) or (YKL181W and YBL068W) or (YER099C and YOL061W) or (YBL068W and YOL068W));The Journal of biological chemistry 2004, 279, 40345-40350.
+( x(161) | x(395) );(YDR023W or YHR011W);(YDR023W or (YDR023W and YHR011W));"YHR011W is Probable mitochondrial seryl-tRNA synthetase; mutant displays increased invasive and pseudohyphal growth ; YDR023W is Cytosolic seryl-tRNA synthetase; class II aminoacyl-tRNA synthetase that aminoacylates tRNA(Ser), displays tRNA-dependent amino acid recognition which enhances discrimination of the serine substrate, interacts with peroxin Pex21p according to the gene annotation in SGD"
+(( x(63) & x(171) & x(661) ) | ( x(63) & x(171) & x(701) ));((YBR126C and YDR074W and YMR261C and YML100W) or YBR126C);((YBR126C and YDR074W and YMR261C and YML100W) or YBR126C);Seems OK
+x(688);(YMR170C or YOR374W or YER073W);(YMR170C or YOR374W or YER073W);Seems OK
+x(715);(YMR319C or YMR058W);(YMR319C or YMR058W);Seems OK
+x(803);YOR130C;(YOR130C or BAC1);https://www.ncbi.nlm.nih.gov/pubmed/26002808, BAC1 should be removed
