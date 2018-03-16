@@ -1,0 +1,16 @@
+﻿Abbreviation;GPR will used in the yeast 8;GPR  from isc926;Comment
+r_0026;(YHR208W or YJR148W or YGL202W or YHR137W);(YHR208W or YJR148W or YGL202W or YHR137W);YHR208W or YJR148W need further check
+r_0043;(YPL252C or YDR376W);(YPL252C or YDR376W);Not sure
+r_0044;(YDR538W and YDR539W);(YDR538W and YDR539W);Not sure
+r_0086;YJR024C;YJR024C;Right
+r_0087;YPR118W;YPR118W;Right
+r_0094;(YAR069W-A or YHR214W-F);(YAR069W-A or YHR214W-F);"Putative 7-keto-8-aminopelargonic acid (KAPA) synthetase; in sake strains and S. cerevisiae strains YJM627 and A364a; involved in the biotin biosynthesis pathway based on SGD"
+r_0475;;(YMR096W or (YMR095C and YMR096W));wrong gene annotation from isce926 based on SGD
+r_0696;YOL151W;YOL151W;Right
+r_0992;((YDL040C and YGR147C and YHR013C) or (YDL040C and YGR147C));((YDL040C and YGR147C and YHR013C) or (YDL040C and YGR147C));"Mol Cell Biol. 2003 Oct;23(20):7403-14."
+r_1603;YFL058W;YGL234W;The gene should be YFL058W based on SGD database
+r_1623;YER183C;YER183C;Right
+r_1624;YER183C;YER183C;Right
+r_1685;YUBIC;YUBIC;Add an E. coli like ubiC gene for reaction r_1685. We call it here Y-ubiC . The ORF is unknown but the gene has been identified as GG based on isce926
+r_1739;YDR071C;YDR071C;Right
+r_1790;YDL045C;YDL045C;Right
