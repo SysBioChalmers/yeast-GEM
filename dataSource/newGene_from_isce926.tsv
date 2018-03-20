@@ -1,0 +1,16 @@
+reactionID	GPR_yeast7	GPR_isc926	GPR_yeast 8	Remark
+r_0026	NA	(YHR208W or YJR148W or YGL202W or YHR137W)	(YHR208W or YJR148W or YGL202W or YHR137W)	Not sure. Evidence from isce926. YHR208W or YJR148W need further check
+r_0043	NA	(YPL252C or YDR376W)	(YPL252C or YDR376W)	Not sure. Evidence from isce926
+r_0044	NA	(YDR538W and YDR539W)	(YDR538W and YDR539W)	Not sure. Evidence from isce926
+r_0086	NA	YJR024C	YJR024C	Evidence from isce926 and latest gene annotation
+r_0087	NA	YPR118W	YPR118W	Evidence from isce926 and latest gene annotation
+r_0094	NA	(YAR069W-A or YHR214W-F)	(YAR069W-A or YHR214W-F)	"Putative 7-keto-8-aminopelargonic acid (KAPA) synthetase; in sake strains and S. cerevisiae strains YJM627 and A364a; involved in the biotin biosynthesis pathway based on SGD"
+r_0475	NA	(YMR096W or (YMR095C and YMR096W))		wrong gene annotation from isce926 based on SGD
+r_0696	NA	YOL151W	YOL151W	Evidence from isce926 and latest gene annotation
+r_0992	NA	((YDL040C and YGR147C and YHR013C) or (YDL040C and YGR147C))	((YDL040C and YGR147C and YHR013C) or (YDL040C and YGR147C))	"Mol Cell Biol.Ê2003 Oct;23(20):7403-14."
+r_1603	NA	YGL234W	YFL058W	The gene should be YFL058W based on SGD database
+r_1623	NA	YER183C	YER183C	Evidence from isce926 and latest gene annotation
+r_1624	NA	YER183C	YER183C	Evidence from isce926 and latest gene annotation
+r_1685	NA	YUBIC	YUBIC	Add an E. coli like ubiC gene for reaction r_1685. We call it here Y-ubiC . The ORF is unknown but the gene has been identified as GG based on isce926
+r_1739	NA	YDR071C	YDR071C	Evidence from isce926 and latest gene annotation
+r_1790	NA	YDL045C	YDL045C	Evidence from isce926 and latest gene annotation

@@ -1,0 +1,15 @@
+reactionID	GPR_yeast7	GPR_isce926	GPR_yeast 8	Remark
+r_0005	(YGR032W or YLR342W)	((YGR032W or YLR342W) and (YCR034W or YLR372W))	((YGR032W or YLR342W) and (YCR034W or YLR372W))	Evidence from isc926
+r_0020	YDR035W	(YDR035W or YBR249C)	(YDR035W or YBR249C)	Evidence from isc926
+r_0116	(YAR071W or YBR093C)	(YBR093C or YAR071W or YBR092C or YHR215W)	(YBR093C or YAR071W or YBR092C or YHR215W)	Evidence from isc926
+r_0195	((YBR126C and YDR074W and YML100W) or (YBR126C and YDR074W and YMR261C))	((YBR126C and YDR074W and YMR261C and YML100W) or YBR126C)	((YBR126C and YDR074W and YML100W) or (YBR126C and YDR074W and YMR261C))	It seems that YML100W and YMR261C have the same regulating activity, thus the old GPR from yeast 7.6 seems more reasonable.
+r_0250	(YJL130C or (YJR109C and YOR303W))	(YJL130C and YJR109C and YOR303W)	(YJL130C and YJR109C and YOR303W)	Evidence from isc926
+r_0886	(YGR240C and YMR205C)	(YMR205C or (YGR240C and YMR205C))	(YMR205C or (YGR240C and YMR205C))	YGR240C as a subunit
+r_0887	(YGR240C and YMR205C)	(YMR205C or (YGR240C and YMR205C))	(YMR205C or (YGR240C and YMR205C))	YGR240C as a subunit
+r_0888	(YKL127W or YMR105C)	((YMR105C or YKL127W) and (YMR105C or YKL127W or YMR278W))	YMR105C or YKL127W	YMR278W is Major phosphoribomutase that converts ribose 1-phosphate to ribose 5-phosphate. Involved in ribose salvage via the pentose phosphate pathway, not consistent with the reaction based on annotation in SGD
+r_0916	((YBL068W and YOL061W) or (YER099C and YOL061W) or (YHL011C and YKL181W))	((YKL181W and YER099C) or (YKL181W and YHL011C) or (YKL181W and YBL068W) or (YER099C and YOL061W) or (YBL068W and YOL068W))	((YKL181W and YER099C) or (YKL181W and YHL011C) or (YKL181W and YBL068W) or (YER099C and YOL061W) or (YBL068W and YOL061W))	The Journal of biological chemistry 2004, 279, 40345-40350. gene YOL068W doesn't seem to exist, it  should be YOL061W
+r_0995	(YDR023W or YHR011W)	(YDR023W or (YDR023W and YHR011W))	(YDR023W or YHR011W)	"YHR011W is Probable mitochondrial seryl-tRNA synthetase; mutant displays increased invasive and pseudohyphal growth ; YDR023W is Cytosolic seryl-tRNA synthetase; class II aminoacyl-tRNA synthetase that aminoacylates tRNA(Ser), displays tRNA-dependent amino acid recognition which enhances discrimination of the serine substrate, interacts with peroxin Pex21p according to the gene annotation in SGD"
+r_1051	((YBR126C and YDR074W and YML100W) or (YBR126C and YDR074W and YMR261C))	((YBR126C and YDR074W and YMR261C and YML100W) or YBR126C)	((YBR126C and YDR074W and YMR261C and YML100W) or YBR126C)	Evidence from isc926
+r_2116	YMR170C	(YMR170C or YOR374W or YER073W)	(YMR170C or YOR374W or YER073W)	Evidence from isc926
+r_1178	YMR319C	(YMR319C or YMR058W)	(YMR319C or YMR058W)	Evidence from isc926
+r_1237	YOR130C	(YOR130C or BAC1)	YOR130C	https://www.ncbi.nlm.nih.gov/pubmed/26002808, BAC1 should be removed
