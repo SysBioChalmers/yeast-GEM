@@ -40,9 +40,9 @@ fclose(fid2);
 
 ss3 = length(model.genes)
 genePosition = zeros(ss3,1)
-for i = 1: t2
+for i = 1: ss3
     if ~isempty(find(strcmp(yeast_gene_annotation{1}, model.genes{i})))
-        genePosition(i) = find(yeast_gene_annotation{1}, model.genes{i}))
+        genePosition(i) = find(strcmp(yeast_gene_annotation{1}, model.genes{i}))
         model.geneNames{i} = yeast_gene_annotation{2}{genePosition(i)}
     else
         genePosition(i) = nan
