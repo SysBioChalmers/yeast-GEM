@@ -3,46 +3,57 @@
 % changeGeneAssociation.m is a function from cobra
 % March 22, 2018 by Hongzhong
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-model2 = readCbModel('yeastGEM.xml');
-model = model2; %import the latest model
-GPRsReplace = cellstr(correct_gene_relation_from_isce926)%import corrected gene relation data
-newGene =  cellstr(new_gene_from_isce926) %import added new gene
-gene_name = yeastgeneannotationSGD %import gene standard name
-gene_name(:,2) % gene systematic name in SGD
-gene_standard_name = gene_name(:,4) % gene standard name
-% correct some gene relation based on isce926
-for  i = 1 : size(GPRsReplace, 1)
-    oldGPRrxns = find(strcmp(model.rules, GPRsReplace{i, 1}));%Find all reactions that have the old GPR
-    for j = 1:length(oldGPRrxns)
-        model = changeGeneAssociation(model, model.rxns{oldGPRrxns(j)}, GPRsReplace{i, 2});
-    end
+model = readCbModel('yeastGEM.xml');
+% correct some gene relations based on isce926
+%fid = fopen('../../ComplementaryData/correct_gene_relation_isce926.tsv');
+fid = fopen('correct_gene_relation_isce926.tsv');
+correct_gene_relation = textscan(fid,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
+fclose(fid);
+
+ss1 = length(correct_gene_relation{1})
+oldGPRrxns = zeros(ss1,1)
+for  i = 1 : ss1
+    oldGPRrxns(i) = find(strcmp(model.rxns, correct_gene_relation{1}{i}));%Find all reactions that have the old GPR
+    model = changeGeneAssociation(model, model.rxns{oldGPRrxns(i)}, correct_gene_relation{4}{i});
 end
 
-% add some new gene based on isce926
-t1 = length(newGene)
-ss = zeros(t1,1)
-for  i = 1:t1
-    ss(i) = strmatch(newGene(i,1), model.rxns)
-    model = changeGeneAssociation(model,model.rxns{ss(i)}, newGene{i,2})
+% add new genes based on isce926
+%fid1 = fopen('../../ComplementaryData/newGene_from_isce926.tsv');
+fid1 = fopen('newGene_from_isce926.tsv');
+newGene_from_isce926 = textscan(fid1,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
+fclose(fid1);
+
+
+ss2 = length(newGene_from_isce926{1})
+oldGPRrxns = zeros(ss2,1)
+for  i = 1 : ss2
+    oldGPRrxns(i) = find(strcmp(model.rxns, newGene_from_isce926{1}{i}));%Find all reactions that have the old GPR
+    model = changeGeneAssociation(model, model.rxns{oldGPRrxns(i)}, newGene_from_isce926{4}{i});
 end
 
-% add gene standard name for gene
-t2 = length(model.genes)
-ss1 = zeros(t2,1)
+
+% add gene standard name for new gene from isce926
+%fid2 = fopen('../../ComplementaryData/yeast_gene_annotation_SGD.tsv');
+fid2 = fopen('yeast_gene_annotation_SGD.tsv');
+yeast_gene_annotation = textscan(fid2,'%s %s','Delimiter','\t','HeaderLines',1);
+fclose(fid2);
+
+ss3 = length(model.genes)
+genePosition = zeros(ss3,1)
 for i = 1: t2
-    if ~isempty(find(strcmp(gene_name(:,2), model.genes{i})))
-        ss1(i) = find(strcmp(gene_name(:,2), model.genes{i}))
-        model.geneNames{i} = gene_standard_name{ss1(i)}
+    if ~isempty(find(strcmp(yeast_gene_annotation{1}, model.genes{i})))
+        genePosition(i) = find(yeast_gene_annotation{1}, model.genes{i}))
+        model.geneNames{i} = yeast_gene_annotation{2}{genePosition(i)}
     else
-        ss1(i) = nan
+        genePosition(i) = nan
     end
 end
 
-% add protein name for gene
-t2 = length(model.genes)
-ss2 = cell(t2,1)
-for i = 1:t2
-ss2{i} = strcat('COBRARProtein',num2str(i))
-model.proteins{i} = ss2{i}
+% add protein name for new gene from isce926
+ss4 = length(model.genes)
+proteinName = cell(ss4,1)
+for i = 1:ss4
+proteinName{i} = strcat('COBRARProtein',num2str(i))
+model.proteins{i} = proteinName{i}
 end
 
