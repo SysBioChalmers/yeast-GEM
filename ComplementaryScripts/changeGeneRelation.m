@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Correct gene relation (and add some new gene from isce926)
 % changeGeneAssociation.m is a function from cobra
-% Feb 7, 2018 by Hongzhong
+% March 22, 2018 by Hongzhong
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 model2 = readCbModel('yeastGEM.xml');
 model = model2; %import the latest model
