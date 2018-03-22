@@ -4,7 +4,7 @@ r_0043	NA	(YPL252C or YDR376W)	(YPL252C or YDR376W)	Not sure. Evidence from isce
 r_0044	NA	(YDR538W and YDR539W)	(YDR538W and YDR539W)	Not sure. Evidence from isce926
 r_0086	NA	YJR024C	YJR024C	Evidence from isce926 and latest gene annotation
 r_0087	NA	YPR118W	YPR118W	Evidence from isce926 and latest gene annotation
-r_0094	NA	(YAR069W_A or YHR214W_F)	(YAR069W_A or YHR214W_F)	"Putative 7-keto-8-aminopelargonic acid (KAPA) synthetase; in sake strains and S. cerevisiae strains YJM627 and A364a; involved in the biotin biosynthesis pathway based on SGD"
+r_0094	NA	(YAR069W-A or YHR214W-F)	(YAR069W-A or YHR214W-F)	"Putative 7-keto-8-aminopelargonic acid (KAPA) synthetase; in sake strains and S. cerevisiae strains YJM627 and A364a; involved in the biotin biosynthesis pathway based on SGD"
 r_0475	NA	(YMR096W or (YMR095C and YMR096W))		wrong gene annotation from isce926 based on SGD
 r_0696	NA	YOL151W	YOL151W	Evidence from isce926 and latest gene annotation
 r_0992	NA	((YDL040C and YGR147C and YHR013C) or (YDL040C and YGR147C))	((YDL040C and YGR147C and YHR013C) or (YDL040C and YGR147C))	"Mol Cell Biol.Ê2003 Oct;23(20):7403-14."
