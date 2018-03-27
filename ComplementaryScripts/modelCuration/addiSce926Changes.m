@@ -58,7 +58,7 @@ ss4         = length(model.genes);
 proteinName = cell(ss4,1);
 
 for i = 1:ss4
-    proteinName{i}    = strcat('COBRARProtein',num2str(i));
+    proteinName{i}    = strcat('COBRAProtein',num2str(i));
     model.proteins{i} = proteinName{i};
 end
 
