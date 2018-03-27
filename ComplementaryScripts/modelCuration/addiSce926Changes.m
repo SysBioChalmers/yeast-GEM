@@ -1,7 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% changeGeneRelation
-% Correct gene relation (and add some new genes from isce926)
-% changeGeneAssociation.m is a function from cobra
+% addiSce926Changes
+% Add changes from the model iSce926 + manual curation on those changes
+% iSce926 source: http://www.maranasgroup.com/submission_models/iSce926.htm
+%
+% NOTE: changeGeneAssociation.m is a function from cobra
 % 
 % Hongzhong Lu & Benjamín Sánchez
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -10,7 +12,7 @@
 model = readCbModel('../../ModelFiles/xml/yeastGEM.xml');
 
 %Correct some gene relations based on isce926:
-fid = fopen('../../ComplementaryData/correct_gene_relation_isce926.tsv');
+fid = fopen('../../ComplementaryData/isce926curatedGeneRules.tsv');
 correct_gene_relation = textscan(fid,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid);
 
@@ -22,7 +24,7 @@ for  i = 1:ss1
 end
 
 %Add new genes based on isce926:
-fid1 = fopen('../../ComplementaryData/newGene_from_isce926.tsv');
+fid1 = fopen('../../ComplementaryData/isce926NewGenes.tsv');
 newGene_from_isce926 = textscan(fid1,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid1);
 
@@ -34,7 +36,7 @@ for  i = 1:ss2
 end
 
 %Add gene standard name for new gene from isce926:
-fid2 = fopen('../../ComplementaryData/yeast_gene_annotation_SGD.tsv');
+fid2 = fopen('../../ComplementaryData/SGDgeneNames.tsv');
 yeast_gene_annotation = textscan(fid2,'%s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid2);
 
