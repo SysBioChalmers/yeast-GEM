@@ -5,8 +5,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 model = readCbModel('yeastGEM.xml');
 % correct some gene relations based on isce926
-%fid = fopen('../../ComplementaryData/correct_gene_relation_isce926.tsv');
-fid = fopen('correct_gene_relation_isce926.tsv');
+fid = fopen('../../ComplementaryData/correct_gene_relation_isce926.tsv');
 correct_gene_relation = textscan(fid,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid);
 
@@ -18,8 +17,7 @@ for  i = 1 : ss1
 end
 
 % add new genes based on isce926
-%fid1 = fopen('../../ComplementaryData/newGene_from_isce926.tsv');
-fid1 = fopen('newGene_from_isce926.tsv');
+fid1 = fopen('../../ComplementaryData/newGene_from_isce926.tsv');
 newGene_from_isce926 = textscan(fid1,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid1);
 
@@ -33,8 +31,7 @@ end
 
 
 % add gene standard name for new gene from isce926
-%fid2 = fopen('../../ComplementaryData/yeast_gene_annotation_SGD.tsv');
-fid2 = fopen('yeast_gene_annotation_SGD.tsv');
+fid2 = fopen('../../ComplementaryData/yeast_gene_annotation_SGD.tsv');
 yeast_gene_annotation = textscan(fid2,'%s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid2);
 
