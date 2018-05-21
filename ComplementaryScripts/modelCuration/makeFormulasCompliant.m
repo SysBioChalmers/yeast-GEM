@@ -39,9 +39,8 @@ aas = {'s_0955[c]'	'ala'   	% A     Alanine
 %         C10H12N5O13P3   C3H7NO2     R      	   C3H6NOR		   C10H12N5O7P	 HO7P2
 
 for i = 1:length(model.mets)
-    name    = model.metNames{i};
-    formula = model.metFormulas{i};
-    if contains(model.metNames{i},'-tRNA(')
+    name = model.metNames{i};
+    if contains(name,'-tRNA(')
         %Correct metabolite:
         try
             aaName = lower(name(1:strfind(name,'-')-1));
@@ -63,10 +62,68 @@ for i = 1:length(model.mets)
     end
 end
 
-%Display the remaining problems:
+%Try to use COBRA's "computeMetFormulae":
+problems = contains(model.metFormulas,'(');
+model_test = model;
+model_test.metFormulas(problems) = '';
+[~,metFormulae,~,~,~,~,~,~] = computeMetFormulae(model_test);
+
 for i = 1:length(model.mets)
-    if contains(model.metFormulas{i},')n')
-        disp([model.metNames{i} ': ' model.metFormulas{i}]);
+    if problems(i)
+        name        = model.metNames{i};
+        formula     = model.metFormulas{i};
+        formula_new = '';
+        rxn_set     = find(model.S(i,:) ~= 0);
+        disp(' ')
+        disp([model.mets{i} ' - ' name ':']);
+        try
+            pos = strcmp(metFormulae(:,1),model.mets{i});
+            formula_new = metFormulae{pos,2};
+        catch
+            disp('Could not balance with COBRA!')
+        end
+        
+        %For the rest solve by manual inspection of rxn formulas:
+        for j = rxn_set
+            %Substrates:
+            rxn_subs = model.S(:,j) < 0;
+            rxn_subs = model.metFormulas(rxn_subs);
+            rxn_subs = strjoin(rxn_subs,' + ');
+            %Products:
+            rxn_prods = model.S(:,j) > 0;
+            rxn_prods = model.metFormulas(rxn_prods);
+            rxn_prods = strjoin(rxn_prods,' + ');
+            disp([model.rxns{j} ' - ' model.rxnNames{j} ': ' rxn_subs ' -> ' rxn_prods])
+        end
+        
+        %Solve depending on the case:
+        if strcmp(formula_new,'')
+            if contains(name,'-beta-D-glucan ')
+                %All glucans can have the same formula:
+                formula_new = 'C6H10O5';
+            elseif contains(name,'dolichol ') || contains(name,'dolichyl ')
+                %Remove "(C5H8)n", as it doesn't respect mass balances:
+                formula_new = formula(1:strfind(formula,'(')-1);
+            elseif contains(name,'chitin ') || contains(name,'chitosan ') || ...
+                    contains(name,'pectin ')
+                %Keep inner part, as the rest is "H2O(...)" to simbolyze that is 
+                %hydrated, but doesn't respect mass balances:
+                formula_new = formula(strfind(formula,'(')+1:strfind(formula,')')-1);
+            elseif contains(name,'lipoylprotein ')
+                %Remove "(C2H2NOR)n", as it doesn't respect mass balances:
+                formula_new = formula(1:strfind(formula,'(')-1);
+            end
+        end
+        
+        %Adapt metabolite formula:
+        model.metFormulas{i} = formula_new;
+        disp(['Resolution: ' formula ' -> ' formula_new]);
+        
+        %Verify that reactions associated to the metabolite are balanced with RAVEN:
+        for j = rxn_set
+            getElementalBalance(model,j,true,true);
+        end
+        pause
     end
 end
 

@@ -4,7 +4,7 @@
     - id: s_0001
     - name: (1->3)-beta-D-glucan
     - compartment: ce
-    - formula: (C6H10O5)n
+    - formula: C6H10O5
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:37671
@@ -13,7 +13,7 @@
     - id: s_0002
     - name: (1->3)-beta-D-glucan
     - compartment: c
-    - formula: (C6H10O5)n
+    - formula: C6H10O5
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:37671
@@ -22,7 +22,7 @@
     - id: s_0003
     - name: (1->3)-beta-D-glucan
     - compartment: e
-    - formula: (C6H10O5)n
+    - formula: C6H10O5
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:37671
@@ -31,7 +31,7 @@
     - id: s_0004
     - name: (1->6)-beta-D-glucan
     - compartment: ce
-    - formula: C12H22O11(C6H10O5)n
+    - formula: C6H10O5
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:27380
@@ -2130,7 +2130,6 @@
     - id: s_0330
     - name: 6-(alpha-D-glucosaminyl)-O-acyl-1-phosphatidyl-1D-myo-inositol
     - compartment: er
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:53055
   - !!omap
@@ -2146,7 +2145,7 @@
     - id: s_0332
     - name: 6-[6-(2-aminoethylphosphoryl)-alpha-mannosyl-(1->6)-2-(2-aminoethylphosphoryl)-alpha-mannosyl-(1->6)-alpha-2-(2-aminoethylphosphoryl)mannosyl-(1->4)-alpha-glucosaminyl]-O-acyl-1-phosphatidyl-1D-myo-inositol
     - compartment: er
-    - formula: (GlcN)1 (Ino(acyl)-P)1 (Man)3 (EtN)2 (P)2
+    - formula: C43H44N9O
     - annotation: !!omap
       - chebi: CHEBI:53060
   - !!omap
@@ -2161,7 +2160,6 @@
     - id: s_0334
     - name: 6-O-[alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl]-O-acyl-1-phosphatidyl-1D-myo-inositol
     - compartment: er
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:53056
   - !!omap
@@ -2177,21 +2175,18 @@
     - id: s_0337
     - name: 6-O-{2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol
     - compartment: er
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:53057
   - !!omap
     - id: s_0338
     - name: 6-O-{alpha-D-mannosyl-(1->2)-alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol
     - compartment: er
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:53059
   - !!omap
     - id: s_0339
     - name: 6-O-{alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol
     - compartment: er
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:53058
   - !!omap
@@ -2710,7 +2705,7 @@
     - id: s_0414
     - name: alpha-D-mannosyl-beta-D-mannosyldiacetylchitobiosyldiphosphodolichol
     - compartment: g
-    - formula: C38H68N2O27P2(C5H8)n
+    - formula: C38H68N2O27P2
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:28067
@@ -2938,7 +2933,7 @@
     - id: s_0443
     - name: beta-D-mannosyldiacetylchitobiosyldiphosphodolichol
     - compartment: c
-    - formula: C32H58N2O22P2(C5H8)n
+    - formula: C32H58N2O22P2
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:18396
@@ -2947,7 +2942,7 @@
     - id: s_0444
     - name: beta-D-mannosyldiacetylchitobiosyldiphosphodolichol
     - compartment: g
-    - formula: C32H58N2O22P2(C5H8)n
+    - formula: C32H58N2O22P2
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:18396
@@ -2992,7 +2987,6 @@
     - id: s_0450
     - name: biomass
     - compartment: c
-    - formula: NA
   - !!omap
     - id: s_0451
     - name: biotin
@@ -3389,7 +3383,7 @@
     - id: s_0509
     - name: chitin
     - compartment: c
-    - formula: H2O(C8H13NO5)n
+    - formula: C8H13NO5
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:17029
@@ -3398,7 +3392,7 @@
     - id: s_0510
     - name: chitosan
     - compartment: ce
-    - formula: H2O(C6H12NO4)n
+    - formula: C6H12NO4
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:16261
@@ -3578,21 +3572,18 @@
     - id: s_0535
     - name: complex sphingolipid
     - compartment: c
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:26739
   - !!omap
     - id: s_0536
     - name: complex sphingolipid
     - compartment: g
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:26739
   - !!omap
     - id: s_0537
     - name: complex sphingolipid
     - compartment: m
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:26739
   - !!omap
@@ -4356,7 +4347,7 @@
     - id: s_0642
     - name: dolichol
     - compartment: c
-    - formula: C20H36O(C5H8)n
+    - formula: C20H36O
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:16091
@@ -4365,7 +4356,7 @@
     - id: s_0643
     - name: dolichol
     - compartment: lp
-    - formula: C20H36O(C5H8)n
+    - formula: C20H36O
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:16091
@@ -4374,7 +4365,7 @@
     - id: s_0644
     - name: dolichyl D-mannosyl phosphate
     - compartment: er
-    - formula: C26H47O9P(C5H8)n
+    - formula: C26H47O9P
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:15809
@@ -4383,7 +4374,7 @@
     - id: s_0645
     - name: dolichyl phosphate
     - compartment: c
-    - formula: C20H37O4P(C5H8)n
+    - formula: C20H37O4P
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:16214
@@ -4392,7 +4383,7 @@
     - id: s_0646
     - name: dolichyl phosphate
     - compartment: er
-    - formula: C20H37O4P(C5H8)n
+    - formula: C20H37O4P
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:16214
@@ -4768,7 +4759,6 @@
     - id: s_0709
     - name: ferricytochrome c
     - compartment: m
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:15991
       - kegg.compound: C00125
@@ -4776,7 +4766,6 @@
     - id: s_0710
     - name: ferrocytochrome c
     - compartment: m
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:16928
       - kegg.compound: C00126
@@ -5175,7 +5164,6 @@
     - id: s_0773
     - name: glycogen
     - compartment: c
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:28087
       - kegg.compound: C00182
@@ -5183,7 +5171,6 @@
     - id: s_0774
     - name: glycogen
     - compartment: v
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:28087
       - kegg.compound: C00182
@@ -7658,7 +7645,6 @@
     - id: s_1096
     - name: lipid
     - compartment: c
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:18059
       - kegg.compound: C01356
@@ -7675,7 +7661,7 @@
     - id: s_1098
     - name: lipoylprotein
     - compartment: m
-    - formula: C12H18N2O4S2R2(C2H2NOR)n
+    - formula: C12H18N2O4S2R2
     - annotation: !!omap
       - chebi: CHEBI:15804
       - kegg.compound: C02051
@@ -7735,7 +7721,6 @@
     - id: s_1107
     - name: mannan
     - compartment: c
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:28808
       - kegg.compound: C00464
@@ -7743,7 +7728,6 @@
     - id: s_1108
     - name: mannan
     - compartment: er
-    - formula: NA
     - annotation: !!omap
       - chebi: CHEBI:28808
       - kegg.compound: C00464
@@ -8213,7 +8197,7 @@
     - id: s_1184
     - name: N,N'-diacetylchitobiosyldiphosphodolichol
     - compartment: c
-    - formula: C36H64N2O17P2(C5H8)n
+    - formula: C36H64N2O17P2
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:12427
@@ -9044,7 +9028,7 @@
     - id: s_1309
     - name: pectin
     - compartment: e
-    - formula: H2O(C6H8O6)n
+    - formula: C6H8O6
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:17309
@@ -11176,7 +11160,6 @@
     - id: s_1845
     - name: ACP1
     - compartment: m
-    - formula: NA
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:18359
@@ -11266,7 +11249,6 @@
     - id: s_2775
     - name: 3-hydroxybutanoyl-ACP
     - compartment: m
-    - formula: NA
     - charge: 0
     - annotation: !!omap
       - kegg.compound: C04618
@@ -11292,7 +11274,6 @@
     - id: s_2778
     - name: trans-but-2-enoyl-ACP
     - compartment: m
-    - formula: NA
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:132146
@@ -11300,7 +11281,6 @@
     - id: s_2779
     - name: trans-hex-2-enoyl-ACP
     - compartment: m
-    - formula: NA
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:10727
@@ -11309,7 +11289,6 @@
     - id: s_2780
     - name: trans-oct-2-enoyl-ACP
     - compartment: m
-    - formula: NA
     - charge: 0
     - annotation: !!omap
       - kegg.compound: C05751
@@ -11588,7 +11567,6 @@
     - id: s_2812
     - name: trans-icos-2-enoyl-CoA
     - compartment: erm
-    - formula: NA
     - charge: 0
   - !!omap
     - id: s_2813
@@ -12238,7 +12216,6 @@
     - id: s_2889
     - name: trans-icos-2-enoyl-CoA
     - compartment: p
-    - formula: NA
     - charge: 0
   - !!omap
     - id: s_2890
@@ -12294,7 +12271,6 @@
     - id: s_2896
     - name: trans-2,cis-5-dodecadienoyl-CoA
     - compartment: p
-    - formula: NA
     - charge: 0
   - !!omap
     - id: s_2897
@@ -12358,7 +12334,6 @@
     - id: s_2904
     - name: (R)-3-hydroxyoctanoyl-CoA
     - compartment: p
-    - formula: NA
     - charge: 0
     - annotation: !!omap
       - chebi: CHEBI:28573
@@ -12399,13 +12374,11 @@
     - id: s_2909
     - name: (R)-3-hydroxy-cis-tetradec-7-enoyl-CoA
     - compartment: p
-    - formula: NA
     - charge: 0
   - !!omap
     - id: s_2910
     - name: (R)-3-hydroxy-cis-dodec-5-enoyl-CoA
     - compartment: p
-    - formula: NA
     - charge: 0
   - !!omap
     - id: s_2911
@@ -12502,7 +12475,6 @@
     - id: s_2922
     - name: 3-oxo-cis-dodec-5-enoyl-CoA
     - compartment: p
-    - formula: NA
     - charge: 0
   - !!omap
     - id: s_2923
@@ -16354,7 +16326,6 @@
     - id: s_3479
     - name: 1-acylglycerophosphoserine (16:0)
     - compartment: ce
-    - formula: NA
   - !!omap
     - id: s_3480
     - name: phosphatidyl-L-serine (1-16:1, 2-16:1)
@@ -16364,7 +16335,6 @@
     - id: s_3481
     - name: 1-acylglycerophosphoserine (16:1)
     - compartment: ce
-    - formula: NA
   - !!omap
     - id: s_3482
     - name: phosphatidyl-L-serine (1-18:0, 2-16:1)
@@ -16377,7 +16347,6 @@
     - id: s_3483
     - name: 1-acylglycerophosphoserine (18:0)
     - compartment: ce
-    - formula: NA
   - !!omap
     - id: s_3484
     - name: phosphatidyl-L-serine (1-18:1, 2-16:1)
@@ -16390,7 +16359,6 @@
     - id: s_3485
     - name: 1-acylglycerophosphoserine (18:1)
     - compartment: ce
-    - formula: NA
   - !!omap
     - id: s_3486
     - name: phosphatidyl-L-serine (1-16:0, 2-18:1)
