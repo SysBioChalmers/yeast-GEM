@@ -18380,6 +18380,2317 @@
     - id: s_3747
     - name: lipid chain
     - compartment: c
+  - !!omap
+    - id: s_3748
+    - name: Cytochrome c
+    - compartment: m
+    - formula: C42H44FeN8O8S2R4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18070
+      - kegg.compound: C00524
+  - !!omap
+    - id: s_3749
+    - name: Apocytochrome c
+    - compartment: m
+    - formula: C8H12N4O4S2R4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15697
+      - kegg.compound: C02248
+  - !!omap
+    - id: s_3750
+    - name: diacetyl
+    - compartment: c
+    - formula: C4H6O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16583
+      - kegg.compound: C00741
+  - !!omap
+    - id: s_3751
+    - name: (R)-acetoin
+    - compartment: n
+    - formula: C4H8O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15686
+      - kegg.compound: C00810
+  - !!omap
+    - id: s_3752
+    - name: diacetyl
+    - compartment: n
+    - formula: C4H6O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16583
+      - kegg.compound: C00741
+  - !!omap
+    - id: s_3753
+    - name: NADH
+    - compartment: n
+    - formula: C21H27N7O14P2
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:57945
+      - kegg.compound: C00004
+  - !!omap
+    - id: s_3754
+    - name: L-glutamyl-tRNA(Gln)
+    - compartment: m
+    - formula: C20H28N6O13PRC5H8O6PR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:29165
+      - kegg.compound: C06112
+  - !!omap
+    - id: s_3755
+    - name: L-glutamine
+    - compartment: m
+    - formula: C5H10N2O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18050
+      - kegg.compound: C00064
+  - !!omap
+    - id: s_3756
+    - name: Gln-tRNA(Gln)
+    - compartment: m
+    - formula: C20H29N7O12PRC5H8O6PR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:29166
+      - kegg.compound: C02282
+  - !!omap
+    - id: s_3757
+    - name: Met-Ala
+    - compartment: v
+  - !!omap
+    - id: s_3758
+    - name: L-methionine
+    - compartment: v
+  - !!omap
+    - id: s_3759
+    - name: L-alanine
+    - compartment: v
+    - formula: C3H7NO2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16977
+      - kegg.compound: C00041
+  - !!omap
+    - id: s_3760
+    - name: ADP-D-ribose 1''-phosphate
+    - compartment: c
+    - formula: C15H24N5O17P3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:48584
+  - !!omap
+    - id: s_3761
+    - name: ADP-ribose
+    - compartment: c
+    - formula: C15H21N5O14P2
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:57967
+      - kegg.compound: C00301
+  - !!omap
+    - id: s_3762
+    - name: quinone
+    - compartment: c
+    - formula: C6H4O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16509
+      - kegg.compound: C00472
+  - !!omap
+    - id: s_3763
+    - name: 1,4-benzosemiquinone
+    - compartment: c
+    - formula: C6H5O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17977
+  - !!omap
+    - id: s_3764
+    - name: UDP-N-acetyl-alpha-D-glucosamine
+    - compartment: er
+    - formula: C17H25N3O17P2
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:57705
+      - kegg.compound: C00043
+  - !!omap
+    - id: s_3765
+    - name: N-Acetyl-D-glucosaminyldiphosphodolichol
+    - compartment: er
+    - formula: C28H51NO12P2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18278
+      - kegg.compound: C04500
+  - !!omap
+    - id: s_3766
+    - name: UDP
+    - compartment: er
+    - formula: C9H11N2O12P2
+    - charge: -3
+    - annotation: !!omap
+      - chebi: CHEBI:58223
+      - kegg.compound: C00015
+  - !!omap
+    - id: s_3767
+    - name: N,N'-Chitobiosyldiphosphodolichol
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00002
+  - !!omap
+    - id: s_3768
+    - name: D-ribofuranose 5-phosphate
+    - compartment: c
+    - formula: C5H11O8P
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17797
+      - kegg.compound: C00117
+  - !!omap
+    - id: s_3769
+    - name: Oxalate
+    - compartment: p
+    - formula: C2O4
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:30623
+      - kegg.compound: C00209
+  - !!omap
+    - id: s_3770
+    - name: Oxalyl-CoA
+    - compartment: p
+    - formula: C23H36N7O19P3S
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15535
+      - kegg.compound: C00313
+  - !!omap
+    - id: s_3771
+    - name: G00171
+    - compartment: er
+    - formula: Glc2GlcNAc2Man9Asn1
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00171
+  - !!omap
+    - id: s_3772
+    - name: D-glucose
+    - compartment: er
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:4167
+      - kegg.compound: C00031
+  - !!omap
+    - id: s_3773
+    - name: G00010
+    - compartment: er
+    - formula: Glc1GlcNAc2Man9Asn1
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00010
+  - !!omap
+    - id: s_3774
+    - name: G00011
+    - compartment: er
+    - formula: GlcNAc2Man9Asn1
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00011
+  - !!omap
+    - id: s_3775
+    - name: sodium
+    - compartment: v
+    - formula: Na
+    - charge: 1
+    - annotation: !!omap
+      - chebi: CHEBI:29101
+      - kegg.compound: C01330
+  - !!omap
+    - id: s_3776
+    - name: D-fructose
+    - compartment: v
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15824
+      - kegg.compound: C00095
+  - !!omap
+    - id: s_3777
+    - name: D-galactose
+    - compartment: v
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:4139
+      - kegg.compound: C00124
+  - !!omap
+    - id: s_3778
+    - name: UMP
+    - compartment: er
+    - formula: C9H11N2O9P
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:57865
+      - kegg.compound: C00105
+  - !!omap
+    - id: s_3779
+    - name: cadmium(2+)
+    - compartment: c
+    - formula: Cd
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:48775
+  - !!omap
+    - id: s_3780
+    - name: cadmium(2+)
+    - compartment: e
+    - formula: Cd
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:48775
+  - !!omap
+    - id: s_3781
+    - name: (sulfur carrier)-H
+    - compartment: m
+    - charge: 0
+  - !!omap
+    - id: s_3782
+    - name: L-cysteine
+    - compartment: m
+    - formula: C3H7NO2S
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17561
+      - kegg.compound: C00097
+  - !!omap
+    - id: s_3783
+    - name: (sulfur carrier)-SH
+    - compartment: m
+    - charge: 0
+  - !!omap
+    - id: s_3784
+    - name: cholesterol
+    - compartment: er
+    - formula: C27H46O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16113
+      - kegg.compound: C00187
+  - !!omap
+    - id: s_3785
+    - name: cholesterol
+    - compartment: erm
+    - formula: C27H46O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16113
+      - kegg.compound: C00187
+  - !!omap
+    - id: s_3786
+    - name: 3-chlorobenzyl alcohol
+    - compartment: c
+    - formula: C7H7ClO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: PubChem CID:70117
+  - !!omap
+    - id: s_3787
+    - name: 3-chlorobenzaldehyde
+    - compartment: c
+    - formula: C7H5ClO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: PubChem CID:70117
+  - !!omap
+    - id: s_3788
+    - name: 3-hydroxybenzyl alcohol
+    - compartment: c
+    - formula: C7H8O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17069
+      - kegg.compound: C03351
+  - !!omap
+    - id: s_3789
+    - name: 3-hydroxybenzaldehyde
+    - compartment: c
+    - formula: C7H6O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16207
+      - kegg.compound: C03067
+  - !!omap
+    - id: s_3790
+    - name: 3-methylbenzyl alcohol
+    - compartment: c
+    - formula: C8H10O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27995
+      - kegg.compound: C07216
+  - !!omap
+    - id: s_3791
+    - name: 3-methylbenzaldehyde
+    - compartment: c
+    - formula: C8H8O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28476
+      - kegg.compound: C07209
+  - !!omap
+    - id: s_3792
+    - name: 4-isopropylbenzyl alcohol
+    - compartment: c
+    - formula: C10H14O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27628
+  - !!omap
+    - id: s_3793
+    - name: p-cumic aldehyde
+    - compartment: c
+    - formula: C10H12O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28671
+      - kegg.compound: C06577
+  - !!omap
+    - id: s_3794
+    - name: 4-methylbenzyl alcohol
+    - compartment: c
+    - formula: C8H10O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:1895
+      - kegg.compound: C06757
+  - !!omap
+    - id: s_3795
+    - name: 4-methylbenzaldehyde
+    - compartment: c
+    - formula: C8H8O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28617
+      - kegg.compound: C06758
+  - !!omap
+    - id: s_3796
+    - name: benzyl alcohol
+    - compartment: c
+    - formula: C7H8O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17987
+      - kegg.compound: C00556
+  - !!omap
+    - id: s_3797
+    - name: benzaldehyde
+    - compartment: c
+    - formula: C7H6O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17169
+      - kegg.compound: C00261
+  - !!omap
+    - id: s_3798
+    - name: Mn(2+)
+    - compartment: c
+    - formula: Mn
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:29035
+      - kegg.compound: C19610
+  - !!omap
+    - id: s_3799
+    - name: Mn(2+)
+    - compartment: er
+    - formula: Mn
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:29035
+      - kegg.compound: C19610
+  - !!omap
+    - id: s_3800
+    - name: [protein]-L-lysine
+    - compartment: c
+    - formula: C7H13N3O2R2
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C02188
+  - !!omap
+    - id: s_3801
+    - name: [protein]-N(6)-acetyl-L-lysine
+    - compartment: c
+    - formula: C8H16N2O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17752
+  - !!omap
+    - id: s_3802
+    - name: Mannitol
+    - compartment: c
+    - formula: C6H14O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16899
+      - kegg.compound: C00392
+  - !!omap
+    - id: s_3803
+    - name: 4-hydroxy-4-methyl-2-oxoglutarate
+    - compartment: c
+    - formula: C6H8O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17801
+      - kegg.compound: C06033
+  - !!omap
+    - id: s_3804
+    - name: L-methionine (S)-S-oxide
+    - compartment: c
+    - formula: C5H11NO3S
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:49031
+      - kegg.compound: C15999
+  - !!omap
+    - id: s_3805
+    - name: tRNA(Pro)
+    - compartment: m
+    - formula: R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:29177
+      - kegg.compound: C01649
+  - !!omap
+    - id: s_3806
+    - name: Pro-tRNA(Pro)
+    - compartment: m
+    - formula: C5H8NOR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:29154
+      - kegg.compound: C02702
+  - !!omap
+    - id: s_3807
+    - name: 5-oxo-L-proline
+    - compartment: c
+    - formula: C5H7NO3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18183
+      - kegg.compound: C01879
+  - !!omap
+    - id: s_3808
+    - name: 4a-Hydroxytetrahydrobiopterin
+    - compartment: c
+    - formula: C9H15N5O4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15642
+      - kegg.compound: C15522
+  - !!omap
+    - id: s_3809
+    - name: Dihydrobiopterin
+    - compartment: c
+    - formula: C9H13N5O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:20680
+      - kegg.compound: C00268
+  - !!omap
+    - id: s_3810
+    - name: superoxide
+    - compartment: m
+    - formula: O2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:18421
+      - kegg.compound: C00704
+  - !!omap
+    - id: s_3811
+    - name: 2-deoxy-D-glucose 6-phosphate
+    - compartment: c
+    - formula: C6H13O8P
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16043
+      - kegg.compound: C06369
+  - !!omap
+    - id: s_3812
+    - name: 2-deoxy-D-glucose
+    - compartment: c
+    - formula: C6H12O5
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15866
+      - kegg.compound: C00586
+  - !!omap
+    - id: s_3813
+    - name: [cytochrome c]-L-lysine
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3814
+    - name: [cytochrome c]-N6-methyl-L-lysine
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3815
+    - name: S-adenosyl-L-methionine
+    - compartment: n
+    - formula: C15H23N6O5S
+    - charge: 1
+    - annotation: !!omap
+      - chebi: CHEBI:67040
+      - kegg.compound: C00019
+  - !!omap
+    - id: s_3816
+    - name: L-lysine-[histone]
+    - compartment: n
+    - charge: 0
+  - !!omap
+    - id: s_3817
+    - name: S-adenosyl-L-homocysteine
+    - compartment: n
+    - formula: C14H20N6O5S
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16680
+      - kegg.compound: C00021
+  - !!omap
+    - id: s_3818
+    - name: N6-methyl-L-lysine-[histone]
+    - compartment: n
+    - formula: C8H15N3O2R2
+    - charge: 0
+  - !!omap
+    - id: s_3819
+    - name: Zn(2+)
+    - compartment: c
+    - formula: Zn
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:29105
+      - kegg.compound: C00038
+  - !!omap
+    - id: s_3820
+    - name: Zn(2+)
+    - compartment: er
+    - formula: Zn
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:29105
+      - kegg.compound: C00038
+  - !!omap
+    - id: s_3821
+    - name: Ferricytochrome b5
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18097
+      - kegg.compound: C00996
+  - !!omap
+    - id: s_3822
+    - name: Ferrocytochrome b5
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C00999
+  - !!omap
+    - id: s_3823
+    - name: Ferricytochrome b5
+    - compartment: m
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18097
+      - kegg.compound: C00996
+  - !!omap
+    - id: s_3824
+    - name: Ferrocytochrome b5
+    - compartment: m
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C00999
+  - !!omap
+    - id: s_3825
+    - name: (S)-benzoin
+    - compartment: c
+    - formula: C14H12O2
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C20227
+  - !!omap
+    - id: s_3826
+    - name: benzil
+    - compartment: c
+    - formula: C14H10O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:51507
+      - kegg.compound: C20226
+  - !!omap
+    - id: s_3827
+    - name: RX
+    - compartment: er
+    - formula: RX
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17792
+      - kegg.compound: C01322
+  - !!omap
+    - id: s_3828
+    - name: glutathione
+    - compartment: er
+    - formula: C10H16N3O6S
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:57925
+      - kegg.compound: C00051
+  - !!omap
+    - id: s_3829
+    - name: HX
+    - compartment: er
+    - formula: X
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16042
+      - kegg.compound: C00462
+  - !!omap
+    - id: s_3830
+    - name: R-S-glutathione
+    - compartment: er
+    - formula: C10H16N3O6SR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17021
+      - kegg.compound: C02320
+  - !!omap
+    - id: s_3831
+    - name: RX
+    - compartment: c
+    - formula: RX
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17792
+      - kegg.compound: C01322
+  - !!omap
+    - id: s_3832
+    - name: HX
+    - compartment: c
+    - formula: X
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16042
+      - kegg.compound: C00462
+  - !!omap
+    - id: s_3833
+    - name: R-S-glutathione
+    - compartment: c
+    - formula: C10H16N3O6SR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17021
+      - kegg.compound: C02320
+  - !!omap
+    - id: s_3834
+    - name: L-Methionine S-oxide
+    - compartment: c
+    - formula: C5H11NO3S
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17016
+      - kegg.compound: C02989
+  - !!omap
+    - id: s_3835
+    - name: Ala-Gly
+    - compartment: v
+    - formula: C5H10N2O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:73757
+  - !!omap
+    - id: s_3836
+    - name: L-glycine
+    - compartment: v
+    - formula: C2H5NO2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15428
+      - kegg.compound: C00037
+  - !!omap
+    - id: s_3837
+    - name: Ala-Leu
+    - compartment: v
+    - formula: C9H18N2O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:73770
+  - !!omap
+    - id: s_3838
+    - name: Threo-3-hydroxy-L-aspartate
+    - compartment: c
+    - formula: C4H7NO5
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:10696
+      - kegg.compound: C11511
+  - !!omap
+    - id: s_3839
+    - name: RX
+    - compartment: p
+    - formula: RX
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17792
+      - kegg.compound: C01322
+  - !!omap
+    - id: s_3840
+    - name: glutathione
+    - compartment: p
+    - formula: C10H16N3O6S
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:57925
+      - kegg.compound: C00051
+  - !!omap
+    - id: s_3841
+    - name: HX
+    - compartment: p
+    - formula: X
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16042
+      - kegg.compound: C00462
+  - !!omap
+    - id: s_3842
+    - name: R-S-glutathione
+    - compartment: p
+    - formula: C10H16N3O6SR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17021
+      - kegg.compound: C02320
+  - !!omap
+    - id: s_3843
+    - name: dehydroascorbate
+    - compartment: c
+    - formula: C6H6O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27956
+      - kegg.compound: C05422
+  - !!omap
+    - id: s_3844
+    - name: ascorbate
+    - compartment: c
+    - formula: C6H8O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:38290
+      - kegg.compound: C00072
+  - !!omap
+    - id: s_3845
+    - name: dehydroascorbate
+    - compartment: p
+    - formula: C6H6O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27956
+      - kegg.compound: C05422
+  - !!omap
+    - id: s_3846
+    - name: glutathione disulfide
+    - compartment: p
+    - formula: C20H30N6O12S2
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:58297
+      - kegg.compound: C00127
+  - !!omap
+    - id: s_3847
+    - name: ascorbate
+    - compartment: p
+    - formula: C6H8O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:38290
+      - kegg.compound: C00072
+  - !!omap
+    - id: s_3848
+    - name: Cyanamide
+    - compartment: c
+    - formula: CH2N2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16698
+      - kegg.compound: C01566
+  - !!omap
+    - id: s_3849
+    - name: aldehydo-D-ribose 5-phosphate
+    - compartment: c
+    - formula: C5H11O8P
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17797
+      - kegg.compound: C00117
+  - !!omap
+    - id: s_3850
+    - name: R-S-Cysteinylglycine
+    - compartment: c
+    - formula: C5H9N2O3SR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:8744
+      - kegg.compound: C05729
+  - !!omap
+    - id: s_3851
+    - name: S-Substituted L-cysteine
+    - compartment: c
+    - formula: C3H6NO2SR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:47910
+      - kegg.compound: C05726
+  - !!omap
+    - id: s_3852
+    - name: iron(3+)
+    - compartment: m
+    - charge: 0
+  - !!omap
+    - id: s_3853
+    - name: Glycyl-tRNA(Ala)
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3854
+    - name: D-tyrosyl-tRNA(Tyr)
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3855
+    - name: D-tyrosine
+    - compartment: c
+    - formula: CH2NOR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28479
+      - kegg.compound: C06420
+  - !!omap
+    - id: s_3856
+    - name: 4-nitrophenyl phosphate
+    - compartment: c
+    - formula: C6H6NO6P
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17440
+      - kegg.compound: C03360
+  - !!omap
+    - id: s_3857
+    - name: 4-nitrophenol
+    - compartment: c
+    - formula: C6H5NO3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16836
+      - kegg.compound: C00870
+  - !!omap
+    - id: s_3858
+    - name: L-iditol
+    - compartment: c
+    - formula: C6H14O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18202
+      - kegg.compound: C01507
+  - !!omap
+    - id: s_3859
+    - name: alpha-D-Galactose
+    - compartment: c
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28061
+      - kegg.compound: C00984
+  - !!omap
+    - id: s_3860
+    - name: 3-hydroxy-2-methylpropanoyl-CoA
+    - compartment: m
+    - formula: C25H42N7O18P3S
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15481
+      - kegg.compound: C04047
+  - !!omap
+    - id: s_3861
+    - name: 3-hydroxy-2-methylpropanoate
+    - compartment: m
+    - formula: C4H7O3
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:11805
+      - kegg.compound: C01188
+  - !!omap
+    - id: s_3862
+    - name: sterols
+    - compartment: e
+    - formula: C19H31OR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15889
+      - kegg.compound: C00370
+  - !!omap
+    - id: s_3863
+    - name: sterols
+    - compartment: c
+    - formula: C19H31OR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15889
+      - kegg.compound: C00370
+  - !!omap
+    - id: s_3864
+    - name: 2-Phenylacetamide
+    - compartment: c
+    - formula: C8H9NO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16562
+      - kegg.compound: C02505
+  - !!omap
+    - id: s_3865
+    - name: (Indol-3-yl)acetamide
+    - compartment: c
+    - formula: C10H10N2O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16031
+      - kegg.compound: C02693
+  - !!omap
+    - id: s_3866
+    - name: Monocarboxylic acid amide
+    - compartment: c
+    - formula: CH2NOR
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C03620
+  - !!omap
+    - id: s_3867
+    - name: Carboxylate
+    - compartment: c
+    - formula: CO2R
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:35757
+      - kegg.compound: C00060
+  - !!omap
+    - id: s_3868
+    - name: Acrylic acid
+    - compartment: c
+    - formula: C3H3O2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:37080
+      - kegg.compound: C00511
+  - !!omap
+    - id: s_3869
+    - name: Acrylamide
+    - compartment: c
+    - formula: C3H5NO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28619
+      - kegg.compound: C01659
+  - !!omap
+    - id: s_3870
+    - name: Benzamide
+    - compartment: c
+    - formula: C7H7NO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28179
+      - kegg.compound: C09815
+  - !!omap
+    - id: s_3871
+    - name: Benzoate
+    - compartment: c
+    - formula: C7H5O2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16150
+      - kegg.compound: C00180
+  - !!omap
+    - id: s_3872
+    - name: D-gluconate
+    - compartment: c
+    - formula: C6H11O7
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:18391
+      - kegg.compound: C00257
+  - !!omap
+    - id: s_3873
+    - name: Protein C-terminal S-farnesyl-L-cysteine
+    - compartment: c
+    - formula: C20H33N2O3SRC2H2NOR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17171
+      - kegg.compound: C04506
+  - !!omap
+    - id: s_3874
+    - name: Protein C-terminal S-farnesyl-L-cysteine methyl ester
+    - compartment: c
+    - formula: C21H35N2O3SRC2H2NOR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15818
+      - kegg.compound: C04748
+  - !!omap
+    - id: s_3875
+    - name: 1-phosphatidyl-1D-myo-inositol
+    - compartment: er
+    - formula: C11H16O13P
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16749
+      - kegg.compound: C01194
+  - !!omap
+    - id: s_3876
+    - name: G00143
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00143
+  - !!omap
+    - id: s_3877
+    - name: Ca(2+)
+    - compartment: c
+    - formula: Ca
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:29108
+      - kegg.compound: C00076
+  - !!omap
+    - id: s_3878
+    - name: ATP
+    - compartment: v
+    - formula: C10H12N5O13P3
+    - charge: -4
+    - annotation: !!omap
+      - chebi: CHEBI:30616
+      - kegg.compound: C00002
+  - !!omap
+    - id: s_3879
+    - name: Ca(2+)
+    - compartment: v
+    - formula: Ca
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:29108
+      - kegg.compound: C00076
+  - !!omap
+    - id: s_3880
+    - name: ADP
+    - compartment: v
+    - formula: C10H12N5O10P2
+    - charge: -3
+    - annotation: !!omap
+      - chebi: CHEBI:456216
+      - kegg.compound: C00008
+  - !!omap
+    - id: s_3881
+    - name: Protein
+    - compartment: c
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C00017
+  - !!omap
+    - id: s_3882
+    - name: L-Arginyl-protein
+    - compartment: c
+    - formula: C8H16N5O3RC2H2NOR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17518
+      - kegg.compound: C16739
+  - !!omap
+    - id: s_3883
+    - name: Protein asparagine
+    - compartment: er
+    - formula: C5H7N3O3R2
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C03021
+  - !!omap
+    - id: s_3884
+    - name: G00008
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00008
+  - !!omap
+    - id: s_3885
+    - name: Dolichyl diphosphate
+    - compartment: er
+    - formula: C20H35O7P2
+    - charge: -3
+    - annotation: !!omap
+      - chebi: CHEBI:57497
+      - kegg.compound: C00621
+  - !!omap
+    - id: s_3886
+    - name: G00009
+    - compartment: er
+    - formula: Glc3GlcNAc2Man9Asn1
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00009
+  - !!omap
+    - id: s_3887
+    - name: GDP-alpha-D-mannose
+    - compartment: er
+    - formula: C16H23N5O16P2
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:57527
+      - kegg.compound: C00096
+  - !!omap
+    - id: s_3888
+    - name: G10694
+    - compartment: er
+    - formula: GlcNAc2Man8Asn1
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G10694
+  - !!omap
+    - id: s_3889
+    - name: GDP
+    - compartment: er
+    - formula: C10H12N5O11P2
+    - charge: -3
+    - annotation: !!omap
+      - chebi: CHEBI:58189
+      - kegg.compound: C00035
+  - !!omap
+    - id: s_3890
+    - name: G01813
+    - compartment: er
+    - formula: GlcNAc2Man9Asn1
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G01813
+  - !!omap
+    - id: s_3891
+    - name: G00003
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00003
+  - !!omap
+    - id: s_3892
+    - name: G00004
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00004
+  - !!omap
+    - id: s_3893
+    - name: G00005
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00005
+  - !!omap
+    - id: s_3894
+    - name: 2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate
+    - compartment: c
+    - formula: C9H14O12P
+    - charge: -3
+    - annotation: !!omap
+      - chebi: CHEBI:60331
+      - kegg.compound: C16699
+  - !!omap
+    - id: s_3895
+    - name: D-Glycerate
+    - compartment: c
+    - formula: C3H5O4
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16659
+      - kegg.compound: C00275
+  - !!omap
+    - id: s_3896
+    - name: alpha-D-mannoside
+    - compartment: c
+    - formula: C6H11O6R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27535
+      - kegg.compound: C02603
+  - !!omap
+    - id: s_3897
+    - name: alpha-D-mannopyranose
+    - compartment: c
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28729
+      - kegg.compound: C00936
+  - !!omap
+    - id: s_3898
+    - name: non glycosylated sugar acceptor
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3899
+    - name: L-Threonylcarbamoyladenylate
+    - compartment: c
+    - formula: C15H21N6O11P
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C20641
+  - !!omap
+    - id: s_3900
+    - name: D-Serine
+    - compartment: c
+    - formula: C3H7NO3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16523
+      - kegg.compound: C00740
+  - !!omap
+    - id: s_3901
+    - name: O-acetyl-L-serine
+    - compartment: m
+    - formula: C5H9NO4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17981
+      - kegg.compound: C00979
+  - !!omap
+    - id: s_3902
+    - name: hydrogen sulfide
+    - compartment: m
+    - formula: HS
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:29919
+      - kegg.compound: C00283
+  - !!omap
+    - id: s_3903
+    - name: phosphatidate
+    - compartment: m
+    - formula: C5H7O8PR2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16337
+      - kegg.compound: C00416
+  - !!omap
+    - id: s_3904
+    - name: CDP-diacylglycerol
+    - compartment: m
+    - formula: C14H19N3O15P2R2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:58332
+      - kegg.compound: C00269
+  - !!omap
+    - id: s_3905
+    - name: Sulfur donor
+    - compartment: c
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:80867
+      - kegg.compound: C17023
+  - !!omap
+    - id: s_3906
+    - name: ADP-5-ethyl-4-methylthiazole-2-carboxylate
+    - compartment: c
+    - formula: C17H19N6O12P2S
+    - charge: -3
+    - annotation: !!omap
+      - chebi: CHEBI:134399
+      - kegg.compound: C20784
+  - !!omap
+    - id: s_3907
+    - name: Dolichyl beta-D-glucosyl phosphate
+    - compartment: er
+    - formula: C31H55O9P
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:57525
+      - kegg.compound: C01246
+  - !!omap
+    - id: s_3908
+    - name: G10599
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G10599
+  - !!omap
+    - id: s_3909
+    - name: nitric oxide
+    - compartment: c
+    - formula: NO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16480
+      - kegg.compound: C00533
+  - !!omap
+    - id: s_3910
+    - name: nitrate
+    - compartment: c
+    - formula: HNO3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:48107
+      - kegg.compound: C00244
+  - !!omap
+    - id: s_3911
+    - name: (R)-Lipoate
+    - compartment: c
+    - formula: C8H14O2S2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:30314
+      - kegg.compound: C16241
+  - !!omap
+    - id: s_3912
+    - name: Lipoyl-AMP
+    - compartment: c
+    - formula: C18H26N5O8PS2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:83091
+      - kegg.compound: C16238
+  - !!omap
+    - id: s_3913
+    - name: Apoprotein
+    - compartment: c
+    - formula: NH2R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:13850
+      - kegg.compound: C16240
+  - !!omap
+    - id: s_3914
+    - name: Protein N6-(lipoyl)lysine
+    - compartment: c
+    - formula: C8H14NOS2R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:80399
+      - kegg.compound: C16237
+  - !!omap
+    - id: s_3915
+    - name: phosphatidylethanolamine
+    - compartment: er
+  - !!omap
+    - id: s_3916
+    - name: G00141
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00141
+  - !!omap
+    - id: s_3917
+    - name: 1,2-Diacyl-sn-glycerol
+    - compartment: er
+    - formula: C5H6O5R2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17815
+      - kegg.compound: C00641
+  - !!omap
+    - id: s_3918
+    - name: G00151
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00151
+  - !!omap
+    - id: s_3919
+    - name: N-(4-oxoglutarate)-L-cysteinylglycine
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3920
+    - name: N-(4-oxoglutarate)-L-cysteinylglycine
+    - compartment: m
+    - charge: 0
+  - !!omap
+    - id: s_3921
+    - name: L-cysteinylglycine
+    - compartment: m
+    - formula: C5H10N2O3S
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:4047
+      - kegg.compound: C01419
+  - !!omap
+    - id: s_3922
+    - name: chloride
+    - compartment: g
+    - formula: Cl
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:17996
+      - kegg.compound: C00698
+  - !!omap
+    - id: s_3923
+    - name: chloride
+    - compartment: c
+    - formula: Cl
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:17996
+      - kegg.compound: C00698
+  - !!omap
+    - id: s_3924
+    - name: ribonucleoside 5'-triphosphate
+    - compartment: c
+    - formula: C5H12O13P3R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17972
+      - kegg.compound: C03802
+  - !!omap
+    - id: s_3925
+    - name: ribonucleoside 5'-phosphate
+    - compartment: c
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:37015
+  - !!omap
+    - id: s_3926
+    - name: 2'-deoxyribonucleoside 5'-triphosphate
+    - compartment: c
+    - formula: C5H12O12P3R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16381
+      - kegg.compound: C00677
+  - !!omap
+    - id: s_3927
+    - name: 2'-deoxyribonucleoside 5'-phosphate
+    - compartment: c
+    - formula: C5H10O6PR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18241
+      - kegg.compound: C00676
+  - !!omap
+    - id: s_3928
+    - name: superoxide
+    - compartment: c
+    - formula: O2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:18421
+      - kegg.compound: C00704
+  - !!omap
+    - id: s_3929
+    - name: G00012
+    - compartment: er
+    - formula: GlcNAc2Man5Asn1
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00012
+  - !!omap
+    - id: s_3930
+    - name: D-mannose
+    - compartment: er
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:4208
+      - kegg.compound: C00159
+  - !!omap
+    - id: s_3931
+    - name: Ethylnitronate
+    - compartment: c
+    - formula: C2H4NO2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:55327
+      - kegg.compound: C18091
+  - !!omap
+    - id: s_3932
+    - name: Nitrite
+    - compartment: c
+    - formula: NO2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16301
+      - kegg.compound: C00088
+  - !!omap
+    - id: s_3933
+    - name: Fe(III)-siderophore
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3934
+    - name: Fe(II)-siderophore
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_3935
+    - name: Acyl-CoA
+    - compartment: er
+    - formula: C22H35N7O17P3SR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17984
+      - kegg.compound: C00040
+  - !!omap
+    - id: s_3936
+    - name: 1-acyl-sn-glycerol 3-phosphate
+    - compartment: er
+    - formula: C4H8O7PR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16975
+      - kegg.compound: C00681
+  - !!omap
+    - id: s_3937
+    - name: 1,2-diacyl-sn-glycerol 3-phosphate
+    - compartment: er
+    - formula: C5H7O8PR2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16337
+      - kegg.compound: C00416
+  - !!omap
+    - id: s_3938
+    - name: Peptide diphthine
+    - compartment: c
+    - formula: C13H20N4O3R2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18054
+      - kegg.compound: C01573
+  - !!omap
+    - id: s_3939
+    - name: Peptide diphthamide
+    - compartment: c
+    - formula: C13H22N5O2R2
+    - charge: 1
+    - annotation: !!omap
+      - chebi: CHEBI:16692
+      - kegg.compound: C02872
+  - !!omap
+    - id: s_3940
+    - name: 8-oxo-dGTP
+    - compartment: p
+    - formula: C10H16N5O14P3
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C19967
+  - !!omap
+    - id: s_3941
+    - name: 8-oxo-dGMP
+    - compartment: p
+    - formula: C10H14N5O8P
+    - charge: 0
+    - annotation: !!omap
+      - kegg.compound: C19968
+  - !!omap
+    - id: s_3942
+    - name: Apoprotein
+    - compartment: m
+    - formula: NH2R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:13850
+      - kegg.compound: C16240
+  - !!omap
+    - id: s_3943
+    - name: Protein N6-(octanoyl)lysine
+    - compartment: m
+    - formula: C8H16NOR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:80398
+      - kegg.compound: C16236
+  - !!omap
+    - id: s_3944
+    - name: Lipoyl-[acp]
+    - compartment: m
+    - formula: C8H13OS3R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:80400
+      - kegg.compound: C16239
+  - !!omap
+    - id: s_3945
+    - name: Protein N6-(lipoyl)lysine
+    - compartment: m
+    - formula: C8H14NOS2R
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:80399
+      - kegg.compound: C16237
+  - !!omap
+    - id: s_3946
+    - name: beta-D-Fructose 6-phosphate
+    - compartment: c
+    - formula: C6H11O9P
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:57634
+      - kegg.compound: C05345
+  - !!omap
+    - id: s_3947
+    - name: beta-D-Glucose
+    - compartment: c
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15903
+      - kegg.compound: C00221
+  - !!omap
+    - id: s_3948
+    - name: beta-D-Glucose 6-phosphate
+    - compartment: c
+    - formula: C6H13O9P
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17719
+      - kegg.compound: C01172
+  - !!omap
+    - id: s_3949
+    - name: alpha-D-Glucose
+    - compartment: c
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17925
+      - kegg.compound: C00267
+  - !!omap
+    - id: s_3950
+    - name: alpha-D-Glucose 6-phosphate
+    - compartment: c
+    - formula: C6H13O9P
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17665
+      - kegg.compound: C00668
+  - !!omap
+    - id: s_3951
+    - name: D-Glucosamine
+    - compartment: c
+    - formula: C6H13NO5
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:47977
+      - kegg.compound: C00329
+  - !!omap
+    - id: s_3952
+    - name: beta-D-Fructose
+    - compartment: c
+    - formula: C6H12O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28645
+      - kegg.compound: C02336
+  - !!omap
+    - id: s_3953
+    - name: 2,5-Dioxopentanoate
+    - compartment: c
+    - formula: C5H6O4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17415
+      - kegg.compound: C00433
+  - !!omap
+    - id: s_3954
+    - name: Aldehyde
+    - compartment: c
+    - formula: CHOR
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17478
+      - kegg.compound: C00071
+  - !!omap
+    - id: s_3955
+    - name: fatty acid
+    - compartment: c
+  - !!omap
+    - id: s_3956
+    - name: 2-Propynal
+    - compartment: c
+    - formula: C3H2O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27976
+      - kegg.compound: C05985
+  - !!omap
+    - id: s_3957
+    - name: Propynoate
+    - compartment: c
+    - formula: C3HO2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:15364
+      - kegg.compound: C00804
+  - !!omap
+    - id: s_3958
+    - name: D-Glucuronolactone
+    - compartment: c
+    - formula: C6H8O6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18268
+      - kegg.compound: C02670
+  - !!omap
+    - id: s_3959
+    - name: D-Glucarate
+    - compartment: c
+    - formula: C6H8O8
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:30612
+      - kegg.compound: C00818
+  - !!omap
+    - id: s_3960
+    - name: 4-Trimethylammoniobutanal
+    - compartment: c
+    - formula: C7H16NO
+    - charge: 1
+    - annotation: !!omap
+      - chebi: CHEBI:18020
+      - kegg.compound: C01149
+  - !!omap
+    - id: s_3961
+    - name: 4-Trimethylammoniobutanoate
+    - compartment: c
+    - formula: C7H16NO2
+    - charge: 1
+    - annotation: !!omap
+      - chebi: CHEBI:1941
+      - kegg.compound: C01181
+  - !!omap
+    - id: s_3962
+    - name: (S)-Methylmalonate semialdehyde
+    - compartment: c
+    - formula: C4H6O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27821
+      - kegg.compound: C06002
+  - !!omap
+    - id: s_3963
+    - name: Methylmalonate
+    - compartment: c
+    - formula: C4H4O4
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:17453
+      - kegg.compound: C02170
+  - !!omap
+    - id: s_3964
+    - name: Imidazole-4-acetaldehyde
+    - compartment: c
+    - formula: C5H6N2O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27398
+      - kegg.compound: C05130
+  - !!omap
+    - id: s_3965
+    - name: Imidazole-4-acetate
+    - compartment: c
+    - formula: C5H6N2O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16974
+      - kegg.compound: C02835
+  - !!omap
+    - id: s_3966
+    - name: 3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al
+    - compartment: c
+    - formula: C27H46O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27428
+      - kegg.compound: C05445
+  - !!omap
+    - id: s_3967
+    - name: 3alpha,7alpha-Dihydroxy-5beta-cholestanate
+    - compartment: c
+    - formula: C27H45O4
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16577
+      - kegg.compound: C04554
+  - !!omap
+    - id: s_3968
+    - name: 5-Hydroxyindoleacetaldehyde
+    - compartment: c
+    - formula: C10H9NO2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:50157
+      - kegg.compound: C05634
+  - !!omap
+    - id: s_3969
+    - name: 5-Hydroxyindoleacetate
+    - compartment: c
+    - formula: C10H9NO3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27823
+      - kegg.compound: C05635
+  - !!omap
+    - id: s_3970
+    - name: N4-Acetylaminobutanal
+    - compartment: c
+    - formula: C6H11NO2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:7386
+      - kegg.compound: C05936
+  - !!omap
+    - id: s_3971
+    - name: 4-Acetamidobutanoate
+    - compartment: c
+    - formula: C6H10NO3
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:11951
+      - kegg.compound: C02946
+  - !!omap
+    - id: s_3972
+    - name: trans-3-Chloroallyl aldehyde
+    - compartment: c
+    - formula: C3H3ClO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28452
+      - kegg.compound: C06613
+  - !!omap
+    - id: s_3973
+    - name: trans-3-Chloroacrylic acid
+    - compartment: c
+    - formula: C3H2ClO2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:19982
+      - kegg.compound: C06614
+  - !!omap
+    - id: s_3974
+    - name: cis-3-Chloroallyl aldehyde
+    - compartment: c
+    - formula: C3H3ClO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:80465
+      - kegg.compound: C16348
+  - !!omap
+    - id: s_3975
+    - name: cis-3-Chloroacrylic acid
+    - compartment: c
+    - formula: C3H2ClO2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:27397
+      - kegg.compound: C06615
+  - !!omap
+    - id: s_3976
+    - name: Chloroacetaldehyde
+    - compartment: c
+    - formula: C2H3ClO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27871
+      - kegg.compound: C06754
+  - !!omap
+    - id: s_3977
+    - name: Chloroacetic acid
+    - compartment: c
+    - formula: C2H3ClO2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:27869
+      - kegg.compound: C06755
+  - !!omap
+    - id: s_3978
+    - name: Perillyl aldehyde
+    - compartment: c
+    - formula: C10H14O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15421
+      - kegg.compound: C02576
+  - !!omap
+    - id: s_3979
+    - name: Perillic acid
+    - compartment: c
+    - formula: C10H14O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:36999
+      - kegg.compound: C11924
+  - !!omap
+    - id: s_3980
+    - name: 2-trans,6-trans-Farnesal
+    - compartment: c
+    - formula: C15H24O
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15894
+      - kegg.compound: C03461
+  - !!omap
+    - id: s_3981
+    - name: Farnesoic acid
+    - compartment: c
+    - formula: C15H24O2
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:84162
+      - kegg.compound: C16502
+  - !!omap
+    - id: s_3982
+    - name: phospholipid
+    - compartment: erm
+    - formula: C5H6O8PR3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16247
+      - kegg.compound: C00865
+  - !!omap
+    - id: s_3983
+    - name: phospholipid
+    - compartment: gm
+    - formula: C5H6O8PR3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16247
+      - kegg.compound: C00865
+  - !!omap
+    - id: s_3984
+    - name: ADP
+    - compartment: erm
+    - formula: C10H12N5O10P2
+    - charge: -3
+    - annotation: !!omap
+      - chebi: CHEBI:456216
+      - kegg.compound: C00008
+  - !!omap
+    - id: s_3985
+    - name: 1-oleoyl-sn-glycerol
+    - compartment: c
+    - formula: C21H40O4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:75757
+  - !!omap
+    - id: s_3986
+    - name: G10526
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G10526
+  - !!omap
+    - id: s_3987
+    - name: G00006
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00006
+  - !!omap
+    - id: s_3988
+    - name: carnosine
+    - compartment: c
+    - formula: C9H14N4O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:15727
+      - kegg.compound: C00386
+  - !!omap
+    - id: s_3989
+    - name: anserine
+    - compartment: c
+    - formula: C10H16N4O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18323
+      - kegg.compound: C01262
+  - !!omap
+    - id: s_3990
+    - name: G10595
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G10595
+  - !!omap
+    - id: s_3991
+    - name: G10596
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G10596
+  - !!omap
+    - id: s_3992
+    - name: G10597
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G10597
+  - !!omap
+    - id: s_3993
+    - name: G00007
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00007
+  - !!omap
+    - id: s_3994
+    - name: glycolate
+    - compartment: c
+    - formula: C2H3O3
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:29805
+      - kegg.compound: C00160
+  - !!omap
+    - id: s_3995
+    - name: sucrose
+    - compartment: c
+    - formula: C12H22O11
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17992
+      - kegg.compound: C00089
+  - !!omap
+    - id: s_3996
+    - name: Isomaltose
+    - compartment: c
+    - formula: C12H22O11
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28189
+      - kegg.compound: C00252
+  - !!omap
+    - id: s_3997
+    - name: Dextrin
+    - compartment: c
+    - formula: C12H20O10
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28675
+      - kegg.compound: C00721
+  - !!omap
+    - id: s_3998
+    - name: G10598
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G10598
+  - !!omap
+    - id: s_3999
+    - name: G00149
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00149
+  - !!omap
+    - id: s_4000
+    - name: G00140
+    - compartment: er
+    - charge: 0
+    - annotation: !!omap
+      - kegg.glycan: G00140
+  - !!omap
+    - id: s_4001
+    - name: Sulfur donor
+    - compartment: m
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:80867
+      - kegg.compound: C17023
+  - !!omap
+    - id: s_4002
+    - name: 5'-Deoxyadenosine
+    - compartment: m
+    - formula: C10H13N5O3
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:17319
+      - kegg.compound: C05198
+  - !!omap
+    - id: s_4003
+    - name: S-sulfanyl-[L-cysteine desulfurase]
+    - compartment: m
+    - charge: 0
+  - !!omap
+    - id: s_4004
+    - name: [disordered-form [Fe-S] cluster scaffold protein]
+    - compartment: m
+    - charge: 0
+  - !!omap
+    - id: s_4005
+    - name: S-sulfanyl-[cysteine desulfurase]-[disordered-form scaffold protein] complex
+    - compartment: m
+    - charge: 0
+  - !!omap
+    - id: s_4006
+    - name: hydrogen cyanide
+    - compartment: m
+    - formula: CHN
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:18407
+      - kegg.compound: C01326
+  - !!omap
+    - id: s_4007
+    - name: thiosulfate
+    - compartment: m
+    - formula: HO3S2
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:33541
+      - kegg.compound: C00320
+  - !!omap
+    - id: s_4008
+    - name: sulphite
+    - compartment: m
+    - formula: HO3S
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:17137
+      - kegg.compound: C11481
+  - !!omap
+    - id: s_4009
+    - name: thiocyanate
+    - compartment: m
+    - formula: CHNS
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:29200
+      - kegg.compound: C01755
+  - !!omap
+    - id: s_4010
+    - name: Mg(2+)
+    - compartment: c
+    - formula: Mg
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:18420
+      - kegg.compound: C00305
+  - !!omap
+    - id: s_4011
+    - name: Mg(2+)
+    - compartment: m
+    - formula: Mg
+    - charge: 2
+    - annotation: !!omap
+      - chebi: CHEBI:18420
+      - kegg.compound: C00305
+  - !!omap
+    - id: s_4012
+    - name: UDP-D-glucose
+    - compartment: er
+    - formula: C15H22N2O17P2
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:58367
+      - kegg.compound: C00029
+  - !!omap
+    - id: s_4013
+    - name: sulphate
+    - compartment: er
+    - formula: O4S
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:16189
+      - kegg.compound: C00059
+  - !!omap
+    - id: s_4014
+    - name: N-Acetyl-D-glucosamine
+    - compartment: c
+    - formula: C8H15NO6
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:506227
+      - kegg.compound: C00140
+  - !!omap
+    - id: s_4015
+    - name: polyphosphate
+    - compartment: c
+    - formula: O3PnHO
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:16838
+      - kegg.compound: C00404
+  - !!omap
+    - id: s_4016
+    - name: Cu2(+)
+    - compartment: c
+    - formula: Cu
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28694
+      - kegg.compound: C00070
+  - !!omap
+    - id: s_4017
+    - name: Cu2(+)
+    - compartment: e
+    - formula: Cu
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:28694
+      - kegg.compound: C00070
+  - !!omap
+    - id: s_4018
+    - name: 2-Oxoglutaramate
+    - compartment: c
+    - formula: C5H6NO4
+    - charge: -1
+    - annotation: !!omap
+      - chebi: CHEBI:16769
+      - kegg.compound: C00940
+  - !!omap
+    - id: s_4019
+    - name: porphyrin
+    - compartment: e
+    - formula: C20H14N4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:8337
+      - kegg.compound: C05113
+  - !!omap
+    - id: s_4020
+    - name: porphyrin
+    - compartment: c
+    - formula: C20H14N4
+    - charge: 0
+    - annotation: !!omap
+      - chebi: CHEBI:8337
+      - kegg.compound: C05113
+  - !!omap
+    - id: s_4021
+    - name: Starch
+    - compartment: c
+    - charge: 0
+  - !!omap
+    - id: s_4022
+    - name: UDP-N-acetyl-alpha-D-glucosamine
+    - compartment: g
+    - formula: C17H25N3O17P2
+    - charge: -2
+    - annotation: !!omap
+      - chebi: CHEBI:57705
+      - kegg.compound: C00043
 - reactions:
   - !!omap
     - id: r_0001
