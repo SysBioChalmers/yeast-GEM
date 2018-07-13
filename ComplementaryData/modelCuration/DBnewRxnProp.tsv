@@ -1,0 +1,185 @@
+RxnID	REV	GPR	RxnName	EC	Subsystems
+R02480	1	( YAL039C or YKL087C )	Cytochrome c apocytochrome-c-lyase	4.4.1.17;4.4.1.-	sce00860  porphyrin and chlorophyll metabolism
+R02855	1	YAL061W	(R)-Acetoin:NAD+ oxidoreductase	1.1.1.303	sce00650  butanoate metabolism
+R02855_2	1	YAL061W	Probable diacetyl reductase [(R)-acetoin forming] 2 (EC 1.1.1.303)	1.1.1.303	sce00650  butanoate metabolism
+6.3.5.6-RXN	0	YBL080C	Glutamyl-tRNA(Gln) amidotransferase subunit B, mitochondrial (Glu-AdT subunit B) (EC 6.3.5.-) (Cytochrome c oxidase assembly factor PET112)	6.3.5.-	sce00970  aminoacyl-trna biosynthesis
+MNXR100968	1	( YBL091C or YLR244C )	Methionine aminopeptidase 2 (MAP 2) (MetAP 2) (EC 3.4.11.18) (Peptidase M)	3.4.11.18	other
+MNXR116282	1	( YBR022W or YMR087W )	ADP-ribose 1''-phosphate phosphatase (EC 3.1.3.84) (EC 3.2.2.-) ([Protein ADP-ribosylglutamate] hydrolase)	3.1.3.84; 3.2.2.-	other
+R02364	1	YBR046C	NADPH2:quinone oxidoreductase	1.6.5.5	sce00350  tyrosine metabolism
+R05970	1	( YBR070C and YGL047W )	UDP-N-acetylglucosamine transferase subunit ALG14 (Asparagine-linked glycosylation protein 14)	2.4.1.141	sce00510  n-glycan biosynthesis
+MNXR106807	1	YBR111C	ADP-ribose pyrophosphatase (EC 3.6.1.13) (ADP-ribose diphosphatase) (ADP-ribose phosphohydrolase) (Adenosine diphosphoribose pyrophosphatase) (ADPR-PPase)	3.6.1.13	sce00230  purine metabolism
+MNXR95951	1	( YBR147W or YDR352W )	Probable vacuolar amino acid transporter YPQ3 (PQ-loop repeat-containing protein 3) (Protein RTC2) (Restriction of telomere capping protein 2)		l-arg transport (from lysosomal lumen to cytosol);l-his transport (from lysosomal lumen to cytosol);l-lys transport (from lysoso...
+MNXR100645	1	( YBR147W or YDR352W )	Probable vacuolar amino acid transporter YPQ3 (PQ-loop repeat-containing protein 3) (Protein RTC2) (Restriction of telomere capping protein 2)		l-arg transport (from lysosomal lumen to cytosol);l-his transport (from lysosomal lumen to cytosol);l-lys transport (from lysoso...
+MNXR101266	1	( YBR147W or YDR352W )	Probable vacuolar amino acid transporter YPQ3 (PQ-loop repeat-containing protein 3) (Protein RTC2) (Restriction of telomere capping protein 2)		l-arg transport (from lysosomal lumen to cytosol);l-his transport (from lysosomal lumen to cytosol);l-lys transport (from lysoso...
+R01558	1	YBR222C	oxalate:CoA ligase (AMP-forming)	6.-.-.-	sce00630  glyoxylate and dicarboxylate metabolism
+R05980	1	YBR229C	Glucosidase 2 subunit alpha (EC 3.2.1.84) (Alpha-glucosidase II subunit alpha) (Glucosidase II subunit alpha) (Reversal of TOR2 lethality protein 2)	3.2.1.84	sce00510  n-glycan biosynthesis
+R05981	1	YBR229C	Glucosidase 2 subunit alpha (EC 3.2.1.84) (Alpha-glucosidase II subunit alpha) (Glucosidase II subunit alpha) (Reversal of TOR2 lethality protein 2)	3.2.1.84	sce00510  n-glycan biosynthesis
+MNXR101803	1	YBR235W	Vacuolar cation-chloride cotransporter 1 (Vacuolar homolog of CCC family protein 1)	3.6.3.7	chloride transport;k+ transport;na transport
+MNXR99660	1	( YBR241C or YGL104C )	Probable metabolite transport protein YBR241C		sugar transport
+MNXR100023	1	( YBR241C or YGL104C )	Probable metabolite transport protein YBR241C		sugar transport
+R01007	1	YBR243C	UDP-N-acetyl-D-glucosamine:dolichyl-phosphate N-acetyl-D-glucosamine phosphotransferase	2.7.8.15	sce00510  n-glycan biosynthesis
+R03916	0	( YBR281C and YNL191W )	(5-glutamyl)-peptide:amino-acid 5-glutamyltransferase	3.4.-.-	sce00480  glutathione metabolism
+MNXR96495	0	YBR295W	P-type cation-transporting ATPase (EC 3.6.3.3) (Cadmium resistance protein 2) (Cadmium-translocating P-type ATPase) (Cd(2+)-exporting ATPase)	3.6.3.3	cadmium transport
+R11528	1	YCL017C	L-cysteine:sulfur-acceptor sulfurtransferase	2.8.1.7	iron-sulfur cluster biosynthesis
+MNXR96713	1	YCR011C	Probable ATP-dependent permease		cholesterol  transport
+RXN-9909	1	( YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W )	Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)	1.1.1.-	methylglyoxal metabolism
+BENZYL-ALCOHOL-DEHYDROGENASE-RXN	1	( YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W )	Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)	1.1.1.-	methylglyoxal metabolism
+R05347	1	( YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W )	Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)	1.1.1.-	methylglyoxal metabolism
+RXN-662	1	( YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W )	Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)	1.1.1.-	methylglyoxal metabolism
+RXN-8581	1	( YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W )	Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)	1.1.1.-	methylglyoxal metabolism
+R01763	1	( YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W )	Benzyl alcohol:NAD+ oxidoreductase	1.1.1.-	methylglyoxal metabolism
+MNXR125914	1	YEL031W	Manganese-transporting ATPase 1 (EC 3.6.3.-)	3.6.3.-	mn2+ transport
+RHEA:53916	1	YEL066W	D-amino-acid N-acetyltransferase HPA3 (DNT) (EC 2.3.1.36) (EC 2.3.1.48) (Histone and other protein acetyltransferase 3)	2.3.1.36; 2.3.1.48	other
+R00868	1	( YEL070W or YNR073C )	D-Mannitol:NAD+ 2-oxidoreductase	1.1.1.-	sce00051  fructose and mannose metabolism
+R00008	1	YER010C	4-hydroxy-4-methyl-2-oxoglutarate pyruvate-lyase (pyruvate-forming)	4.1.3.17; 4.1.1.3	sce00362  benzoate degradation;sce00660  c5-branched dibasic acid metabolism
+R00217	0	YER010C	oxaloacetate carboxy-lyase (pyruvate-forming)	4.1.3.17; 4.1.1.3	sce00362  benzoate degradation;sce00660  c5-branched dibasic acid metabolism
+R07606	1	YER042W	L-methionine:thioredoxin-disulfide S-oxidoreductase	1.8.4.11	sce00270  cysteine and methionine metabolism
+R03661	0	YER087W	L-proline:tRNA(Pro) ligase (AMP-forming)	6.1.1.15	sce00970  aminoacyl-trna biosynthesis
+R11861	0	YER163C	Glutathione-specific gamma-glutamylcyclotransferase (Gamma-GCG) (EC 4.3.2.-)	4.3.2.-	sce00480  glutathione metabolism
+R04734	1	YHL018W	4a-hydroxytetrahydrobiopterin hydro-lyase	4.2.1.96	sce00790  folate biosynthesis
+R00275_2	1	YHR008C	superoxide:superoxide oxidoreductase	1.15.1.1	sce04146  peroxisome
+R02587	1	( YHR043C or YHR044C )	2-Deoxy-D-glucose 6-phosphate phosphohydrolase	3.1.3.68	alternate carbon metabolism
+R03875	1	YHR109W	Cytochrome c lysine N-methyltransferase 1 (EC 2.1.1.59)	2.1.1.59	lysine metabolism
+R03938	1	( YHR119W or YDR440W or YJL168C )	S-Adenosyl-L-methionine:histone-L-lysine N6-methyltransferase	2.1.1.43	lysine metabolism
+MNXR105277	1	( YIL023C or YMR243C or YOR316C )	Zinc transporter YKE4		zinc transport
+R00100	1	( YIL043C or YML125C )	NADH:ferricytochrome-b5 oxidoreductase	1.6.2.2	sce00520  amino sugar and nucleotide sugar metabolism
+R00100_2	1	( YIL043C or YKL150W or YML125C )	NADH-cytochrome b5 reductase 1 (EC 1.6.2.2) (Microsomal cytochrome b reductase) (P35)	1.6.2.2	sce00520  amino sugar and nucleotide sugar metabolism
+RXN-12898	1	YIR036C	Benzil reductase ((S)-benzoin forming) IRC24 (EC 1.1.1.320) (Increased recombination centers protein 24)	1.1.1.320	other
+R03522	1	( YIR038C or YLL060C or YMR251W )	Glutathione S-transferase 1 (EC 2.5.1.18) (GST-I)	2.5.1.18	sce00480  glutathione metabolism
+R03522_2	1	( YLL060C or YMR251W or YKR076W )	Glutathione S-transferase 1 (EC 2.5.1.18) (GST-I)	2.5.1.18	sce00480  glutathione metabolism
+R02025	1	YKL069W	L-methionine:oxidized-thioredoxin S-oxidoreductase	1.8.4.14	sce00270  cysteine and methionine metabolism
+RXN0-6977	1	YKL103C	Vacuolar aminopeptidase 1 (EC 3.4.11.22) (Aminopeptidase yscI) (Leucine aminopeptidase IV) (LAPIV) (Lysosomal aminopeptidase III) (Polypeptidase) (Vacuolar aminopeptidase I)	3.4.11.22	hydrolysis of peptide bond
+RXN0-6979	1	YKL103C	Vacuolar aminopeptidase 1 (EC 3.4.11.22) (Aminopeptidase yscI) (Leucine aminopeptidase IV) (LAPIV) (Lysosomal aminopeptidase III) (Polypeptidase) (Vacuolar aminopeptidase I)	3.4.11.22	hydrolysis of peptide bond
+R00251	0	YKL215C	5-oxo-L-proline amidohydrolase (ATP-hydrolysing)	3.5.2.9	sce00480  glutathione metabolism
+R05758	1	YKL218C	threo-3-hydroxy-L-aspartate ammonia-lyase	4.3.1.16	other
+R03522_3	1	YGR154C	Glutathione S-transferase omega-like 2 (EC 2.5.1.18) (Extracellular mutant protein 4) (Glutathione-dependent dehydroascorbate reductase) (EC 1.8.5.1)	2.5.1.18	sce00480  glutathione metabolism
+R01108	1	YKR076W	glutathione:dehydroascorbate oxidoreductase	2.5.1.18; 1.8.5.1	sce00480  glutathione metabolism
+R01108_2	1	YGR154C	Glutathione S-transferase omega-like 2 (EC 2.5.1.18) (Extracellular mutant protein 4) (Glutathione-dependent dehydroascorbate reductase) (EC 1.8.5.1)	2.5.1.18; 1.8.5.1	sce00480  glutathione metabolism
+R00778	1	( YFL061W or YNL335W )	urea hydro-lyase (cyanamide-forming)	4.2.1.69	sce00791  atrazine degradation
+R10089	1	( YFL060C or YNL334C )	D-ribose 5-phosphate,D-glyceraldehyde 3-phosphate pyridoxal 5-phosphate-lyase (glutamine-hydrolyzing)	4.3.3.6; 3.5.1.2	sce00750  vitamin b6 metabolism
+R07456	1	( YFL059W or YNL333W )	D-ribulose 5-phosphate,D-glyceraldehyde 3-phosphate pyridoxal 5-phosphate-lyase	4.3.3.6; 3.5.1.2	sce00750  vitamin b6 metabolism
+R10686	1	( YFL058W or YDL244W or YJR156C or YNL332W )	4-amino-5-hydroxymethyl-2-methylpyrimidine phosphate synthase THI5 (HMP-P synthase) (Hydroxymethylpyrimidine phosphate synthase) (Thiamine biosynthesis protein 5) (Thiamine pyrimidine synthase)		Thiamine metabolism
+R00899	1	YFR044C	L-cysteinylglycine dipeptidase	3.4.13.-	sce00270  cysteine and methionine metabolism
+R04951	1	YFR044C	Cys-Gly metallodipeptidase DUG1 (EC 3.4.13.-) (Deficient in utilization of glutathione protein 1) (GSH degradosomal complex subunit DUG1)	3.4.13.-	sce00270  cysteine and methionine metabolism
+R00548	1	YDL024C	riboflavin-5-phosphate phosphohydrolase	3.1.3.2	sce00730  thiamine metabolism
+R00078	1	YDL120W	Fe(II):oxygen oxidoreductase; Fe2+:oxygen oxidoreductase	1.16.3.1	iron-sulfur cluster biosynthesis
+RHEA:53744	1	YDL219W	D-aminoacyl-tRNA deacylase (DTD) (EC 3.1.1.96) (D-tyrosyl-tRNA(Tyr) deacylase) (Gly-tRNA(Ala) deacylase) (EC 3.1.1.-)	3.1.1.96; 3.1.1.-	other
+RHEA:25347	1	YDL219W	D-aminoacyl-tRNA deacylase (DTD) (EC 3.1.1.96) (D-tyrosyl-tRNA(Tyr) deacylase) (Gly-tRNA(Ala) deacylase) (EC 3.1.1.-)	3.1.1.96; 3.1.1.-	other
+R03024	1	YDL236W	4-nitrophenyl phosphate phosphohydrolase	3.1.3.41	sce00627  aminobenzoate degradation
+R02896	1	YDL246C	D-Iditol:NAD+ 2-oxidoreductase	1.1.1.14	sce00040  pentose and glucuronate interconversions
+R01092	0	YDR009W	ATP:alpha-D-galactose 1-phosphotransferase		sce00052  galactose metabolism
+R03352	1	YDR036C	3-Hydroxy-2-methylpropanoyl-CoA hydrolase	3.1.2.4	valine, leucine and isoleucine metabolism
+RHEA:14633	0	( YDR038C or YDR039C or YDR040C )	Sodium transport ATPase 5 (EC 3.6.3.7)	3.6.3.7	sodium transport
+MNXR124322	1	( YDR051C or YOL075C )	Broad-range acid phosphatase DET1 (EC 3.1.3.-) (Decreased ergosterol transport protein 1)	3.1.3.-	sterols transport
+R00258	1	YDR111C	L-Alanine:2-oxoglutarate aminotransferase	2.6.1.2	sce00250  alanine, aspartate and glutamate metabolism
+R02540	1	YDR242W	2-phenylacetamide amidohydrolase	3.5.1.4	sce00330  arginine and proline metabolism;sce00360  phenylalanine metabolism;sce00380  tryptophan metabolism
+R03096	1	YDR242W	Indole-3-acetamide amidohydrolase	3.5.1.4	sce00330  arginine and proline metabolism;sce00360  phenylalanine metabolism;sce00380  tryptophan metabolism
+R03909	1	YDR242W	Monocarboxylic acid amide amidohydrolase	3.5.1.4	sce00330  arginine and proline metabolism;sce00360  phenylalanine metabolism;sce00380  tryptophan metabolism
+R05551	1	YDR242W	Probable amidase (EC 3.5.1.4)	3.5.1.4	sce00330  arginine and proline metabolism;sce00360  phenylalanine metabolism;sce00380  tryptophan metabolism
+R05590	1	YDR242W	Acylamide aminohydrolase	3.5.1.4	sce00330  arginine and proline metabolism;sce00360  phenylalanine metabolism;sce00380  tryptophan metabolism
+R01737	0	YDR248C	ATP:D-Gluconate 6-phosphotransferase	2.7.1.12	sce00030  pentose phosphate pathway
+R04496	1	YDR410C	S-Adenosyl-L-methionine:protein-C-terminal-S-farnesyl-L-cysteine O-methyltransferase	2.1.1.100	sce00900  terpenoid backbone biosynthesis
+R05916	1	( YDR437W and YGR216C and YNL038W and YPL076W and YPL175W and YPL096C-A )	Phosphatidylinositol N-acetylglucosaminyltransferase subunit GPI19 (GPI-GlcNAc transferase complex subunit GPI19) (GPI-GnT subunit GPI19) (EC 2.4.1.198)	2.4.1.198	lycosylphosphatidylinositol (gpi)-anchor biosynthesis
+R00299	0	YDR516C	ATP:D-glucose 6-phosphotransferase	2.7.1.1	sce00010  glycolysis / gluconeogenesis
+R09796	1	( YDR533C or YMR322C or YOR391C or YPL280W )	(R)-lactate hydro-lyase	4.2.1.130	methylglyoxal metabolism
+MNXR96434	0	( YGL006W or YGL167C )	Calcium-transporting ATPase 2 (EC 3.6.3.8) (Vacuolar Ca(2+)-ATPase)	3.6.3.8	ca2+ transport
+R03862	1	YGL017W	L-arginyl-tRNA(Arg):protein arginyltransferase	2.3.2.8	other
+R05976	1	YGL022W	Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit STT3 (Oligosaccharyl transferase subunit STT3) (EC 2.4.99.18)	2.4.99.18	sce00510  n-glycan biosynthesis
+R05979	1	YGL027C	Mannosyl-oligosaccharide glucosidase (EC 3.2.1.106) (Processing A-glucosidase I) (Glucosidase I)	3.2.1.106	sce00510  n-glycan biosynthesis
+R08599	1	YGL038C	Initiation-specific alpha-1,6-mannosyltransferase (EC 2.4.1.232) (Outer chain elongation protein 1)	2.4.1.232	sce00513  various types of n-glycan biosynthesis
+R05973	1	YGL065C	Alpha-1,3/1,6-mannosyltransferase ALG2 (EC 2.4.1.132) (EC 2.4.1.257) (Asparagine-linked glycosylation protein 2) (GDP-Man:Man(1)GlcNAc(2)-PP-Dol alpha-1,3-mannosyltransferase) (GDP-Man:Man(1)GlcNAc(2)-PP-dolichol mannosyltransferase) (GDP-Man:Man(2)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase)	2.4.1.132; 2.4.1.257	sce00510  n-glycan biosynthesis
+R06238	1	YGL065C	GDP-D-mannose:D-Man-alpha-(1->3)-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-6-mannosyltransferase	2.4.1.132; 2.4.1.257	sce00510  n-glycan biosynthesis
+R09645	0	YGL156W	2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate 6-phosphomannohydrolase	3.2.1.24	sce00511  other glycan degradation
+3.2.1.24-RXN	0	YGL156W	Alpha-mannosidase (EC 3.2.1.24) (Alpha-D-mannoside mannohydrolase)	3.2.1.24	sce00511  other glycan degradation
+R10463	0	YGL169W	ATP:L-threonyl,bicarbonate adenylyltransferase	2.7.7.87	other
+R00221	1	YGL196W	D-serine ammonia-lyase	4.3.1.18	sce00260  glycine, serine and threonine metabolism
+R00897	1	YGR012W	O3-acetyl-L-serine:hydrogen-sulfide 2-amino-2-carboxyethyltransferase; O3-acetyl-L-serine acetate-lyase (adding hydrogen sulfide)	2.5.1.47	sce00270  cysteine and methionine metabolism
+R01004	1	YGR036C	Dolichyl-diphosphate phosphohydrolase	3.6.1.43	sce00510  n-glycan biosynthesis
+R01799	1	YGR046W	CTP:phosphatidate cytidyltransferase	2.7.7.41	sce00564  glycerophospholipid metabolism
+R10685	1	YGR144W	Thiamine thiazole synthase (Thiazole biosynthetic enzyme)		sce00730  thiamine metabolism
+R06264	1	YGR227W	dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,2-glucosyltransferase	2.4.1.256	sce00510  n-glycan biosynthesis
+R05725	0	YGR234W	nitric oxide, NADPH2:oxygen oxidoreductase	1.14.12.17	sce00910  nitrogen metabolism
+R05725_2	0	YGR234W	Flavohemoprotein (EC 1.14.12.17) (Flavohemoglobin) (Hemoglobin-like protein) (Nitric oxide dioxygenase) (NO oxygenase) (NOD)	1.14.12.17	sce00910  nitrogen metabolism
+R07770	0	YJL046W	Putative lipoate-protein ligase A (EC 6.3.1.20) (Altered inheritance rate of mitochondria protein 22)	6.3.1.20	sce00785  lipoic acid metabolism
+R07771	1	YJL046W	Putative lipoate-protein ligase A (EC 6.3.1.20) (Altered inheritance rate of mitochondria protein 22)	6.3.1.20	sce00785  lipoic acid metabolism
+R11143	0	YJL046W	[lipoyl-carrier protein]-L-lysine:lipoate ligase (AMP-forming)	6.3.1.20	sce00785  lipoic acid metabolism
+R05924	1	YJL062W	GPI ethanolamine phosphate transferase 2 (EC 2.-.-.-) (Glycosylphosphatidylinositol-anchor biosynthesis protein 7) (Local anestheticum-sensitive protein 21)	2.-.-.-	sce00563  glycosylphosphatidylinositol (gpi)-anchor biosynthesis
+R12024	1	YJL126W	Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase homolog 1)	3.5.1.-	other
+R12024_2	1	YJL126W	Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase homolog 1)	3.5.1.-	other
+R01324	1	YJL200C	citrate hydroxymutase	4.2.1.-	lysine metabolism;sce00020  citrate cycle (tca cycle)
+MNXR96797	1	YJR040W	Anion/proton exchange transporter GEF1 (CLC protein GEF1) (ClC-A) (ClC-Y1) (Voltage-gated chloride channel) [Cleaved into: GEF1 N-terminal; GEF1 C-terminal]		chloride transport
+R00402	1	YJR051W	succinate:NAD+ oxidoreductase	1.3.1.6	sce00720  carbon fixation pathways in prokaryotes
+R01532	0	YJR069C	nucleoside-triphosphate diphosphohydrolase	3.6.1.9	sce00230  purine metabolism
+RXN0-384	0	YJR069C	Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)	3.6.1.9	sce00230  purine metabolism
+R01855	0	YJR069C	2'-Deoxyguanosine 5'-triphosphate diphosphohydrolase	3.6.1.9	sce00230  purine metabolism
+R11323	0	YJR069C	dTTP diphosphohydrolase	3.6.1.9	sce00230  purine metabolism
+3.6.1.19-RXN	1	YJR069C	Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)	3.6.1.9	sce00230  purine metabolism
+R00275	1	YJR104C	superoxide:superoxide oxidoreductase	1.15.1.1	sce04146  peroxisome
+R05982	1	( YJR131W or YLR057W )	Endoplasmic reticulum mannosyl-oligosaccharide 1,2-alpha-mannosidase (EC 3.2.1.113) (ER alpha-1,2-mannosidase) (Man(9)-alpha-mannosidase)	3.2.1.113;3.2.1.-	sce00510  n-glycan biosynthesis
+R06722	1	( YJR131W or YLR057W )	alpha 1,2-mannosyloligosaccharide alpha-D-mannohydrolase	3.2.1.113;3.2.1.-	sce00510  n-glycan biosynthesis
+R00025	1	YJR149W	ethylnitronate:oxygen 2-oxidoreductase (nitrite-forming)	1.13.12.16	sce00910  nitrogen metabolism
+R00999	1	( YLL058W or YML082W )	O-Succinyl-L-homoserine succinate-lyase (deaminating; 2-oxobutanoate-forming)	2.5.1.48	sce00270  cysteine and methionine metabolism
+R09541	1	( YLR047C  or YKL220C or YLL051C or YLR214W or YNR060W or YOL152W or YOR381W or YOR384W )	Fe(II):NADP+ oxidoreductase	1.16.1.7	ferric-chelate reductase
+R00851	1	( YLR099C or YPR139C )	acyl-CoA:sn-glycerol-3-phosphate 1-O-acyltransferase	2.3.1.51	sce00561  glycerolipid metabolism;sce00564  glycerophospholipid metabolism
+R03613	0	YLR143W	diphthine:ammonia ligase (AMP-forming)	6.3.1.14	diphthamide biosynthesis
+R09832	1	YLR151C	8-oxo-dGTP diphosphohydrolase	3.6.1.55	other
+R07766	1	YLR239C	octanoyl-[acp]:protein N6-octanoyltransferase	2.3.1.181	sce00785  lipoic acid metabolism
+R07769	1	YLR239C	lipoyl-[acp]:protein N6-lipoyltransferase	2.3.1.181	sce00785  lipoic acid metabolism
+R02732	0	YLR345W	ATP:D-fructose-6-phosphate 2-phosphotransferase	2.7.1.105; 3.1.3.46	sce00051  fructose and mannose metabolism
+R00867	0	YLR446W	ATP:D-fructose 6-phosphotransferase	2.7.1.1	sce00010  glycolysis / gluconeogenesis
+R01600	0	YLR446W	ATP:beta-D-glucose 6-phosphotransferase	2.7.1.1	sce00010  glycolysis / gluconeogenesis
+R01786	0	YLR446W	ATP:alpha-D-glucose 6-phosphotransferase	2.7.1.1	sce00010  glycolysis / gluconeogenesis
+R01961	0	YLR446W	ATP:D-glucosamine 6-phosphotransferase	2.7.1.1	sce00010  glycolysis / gluconeogenesis
+R03920	0	YLR446W	ATP:D-fructose 6-phosphotransferase	2.7.1.1	sce00010  glycolysis / gluconeogenesis
+R02739	1	YMR099C	alpha-D-Glucose 6-phosphate ketol-isomerase	5.1.3.15	sce00010  glycolysis / gluconeogenesis
+R00264	1	YMR110C	Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)	1.2.1.3	sce00600  sphingolipid metabolism
+R00631	1	YMR110C	Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)	1.2.1.3	sce00600  sphingolipid metabolism
+R01752	1	YMR110C	D-Glyceraldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R01986	1	YMR110C	4-Aminobutyraldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R02549	0	YMR110C	4-aminobutanal:NAD+ 1-oxidoreductase; 4-aminobutyraldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R02678	0	YMR110C	Indole-3-acetaldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R02940	1	YMR110C	2-Propyn-1-al:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R02957	1	YMR110C	D-Glucuronolactone:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R03283	1	YMR110C	4-Trimethylammoniobutanal:NAD+ 1-oxidoreductase; 4-Trimethylammoniobutanal:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R03869	1	YMR110C	(S)-Methylmalonate semialdehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R04065	1	YMR110C	Imidazole acetaldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R04506	1	YMR110C	3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R04903	1	YMR110C	5-Hydroxyindoleacetaldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R05050	1	YMR110C	N4-Acetylaminobutanal:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R05237	1	YMR110C	Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)	1.2.1.3	sce00600  sphingolipid metabolism
+R05238	1	YMR110C	Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)	1.2.1.3	sce00600  sphingolipid metabolism
+R05286	1	YMR110C	Chloroacetaldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R06366	1	YMR110C	Aldehyde:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+R08146	1	YMR110C	farnesal:NAD+ oxidoreductase	1.2.1.3	sce00600  sphingolipid metabolism
+MNXR125804	0	YMR162C	Probable phospholipid-transporting ATPase DNF3 (EC 3.6.3.1) (Aminophospholipid translocase) (APT) (Phospholipid translocase) (PLT)	3.6.3.1	phospholipids transport
+RXN-15089	0	YMR210W	Putative esterase YMR210W (EC 3.1.1.-)	3.1.1.-	sce00564  glycerophospholipid metabolism
+R06127	1	YNL048W	GDP-mannose:glycolipid 1,2-alpha-D-mannosyltransferase	2.4.1.131	sce00510  n-glycan biosynthesis
+R06128	1	YNL048W	GDP-mannose:glycolipid 1,2-alpha-D-mannosyltransferase	2.4.1.131	sce00510  n-glycan biosynthesis
+R02144	1	YNL092W	S-adenosyl-L-methionine:carnosine N-methyltransferase	2.1.1.22	sce00340  histidine metabolism
+R06259	1	YNL219C	Alpha-1,2-mannosyltransferase ALG9 (EC 2.4.1.259) (EC 2.4.1.261) (Asparagine-linked glycosylation protein 9) (Dol-P-Man:Man(6)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase) (Dol-P-Man:Man(8)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase)	2.4.1.259; 2.4.1.261	sce00510  n-glycan biosynthesis
+R06261	1	YNL219C	Alpha-1,2-mannosyltransferase ALG9 (EC 2.4.1.259) (EC 2.4.1.261) (Asparagine-linked glycosylation protein 9) (Dol-P-Man:Man(6)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase) (Dol-P-Man:Man(8)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase)	2.4.1.259; 2.4.1.261	sce00510  n-glycan biosynthesis
+R00717	1	YNL274C	Glycolate:NAD+ oxidoreductase	1.1.1.26	sce00630  glyoxylate and dicarboxylate metabolism
+R06260	1	YNR030W	Dol-P-Man:Man(7)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase (EC 2.4.1.260) (Asparagine-linked glycosylation protein 12) (Dolichyl-P-Man:Man(7)GlcNAc(2)-PP-dolichyl-alpha-1,6-mannosyltransferase) (Extracellular mutant protein 39) (Mannosyltransferase ALG12)	2.4.1.260	sce00510  n-glycan biosynthesis
+R00801	1	YOL157C	sucrose glucohydrolase	3.2.1.10	sce00500  starch and sucrose metabolism
+R01718	1	YOL157C	Isomaltose 6-alpha-D-glucanohydrolase	3.2.1.10	sce00500  starch and sucrose metabolism
+R01791	1	YOL157C	Dextrin 6-alpha-D-glucanohydrolase	3.2.1.10	sce00500  starch and sucrose metabolism
+R06262	1	YOR002W	dolichyl beta-D-glucosyl phosphate:D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase	2.4.1.267	sce00510  n-glycan biosynthesis
+R06263	1	YOR067C	dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase	2.4.1.265	sce00510  n-glycan biosynthesis
+R07129	1	YOR149C	GPI mannosyltransferase 4 (EC 2.4.1.-) (GPI mannosyltransferase IV) (GPI-MT-IV)	2.4.1.-	sce00563  glycosylphosphatidylinositol (gpi)-anchor biosynthesis
+R07767	1	YOR196C	protein N6-(octanoyl)lysine:sulfur sulfurtransferase	2.8.1.8	sce00785  lipoic acid metabolism
+R07768	1	YOR196C	octanoyl-[acp]:sulfur sulfurtransferase	2.8.1.8	sce00785  lipoic acid metabolism
+RXN-14381	0	( YOR226C or YPL135W )	Iron sulfur cluster assembly protein 2, mitochondrial (Iron sulfur cluster scaffold protein 2)		iron-sulfur cluster biosynthesis
+R01931	1	( YOR251C or YOR285W or YOR286W )	thiosulfate:cyanide sulfurtranserase	2.8.1.1;2.8.1.-	sce00920  sulfur metabolism
+MNXR101505	1	( YOR334W or YPL060W )	Magnesium transporter MRS2, mitochondrial (RNA-splicing protein MRS2)		magnesium transport
+R01005	1	YPL227C	UDPglucose:dolichyl-phosphate beta-D-glucosyltransferase	2.4.1.117	sce00510  n-glycan biosynthesis
+MNXR104466	1	YPR003C	Putative sulfate transporter YPR003C		sulfate transport
+R01708	1	YPR127W	Pyridoxine:NADP+ 4-oxidoreductase	1.1.1.65	sce00750  vitamin b6 metabolism
+R01206	1	( YDR371W or YLR286C )	[1,4-(N-Acetyl-beta-D-glucosaminyl)]n glycanohydrolase	3.2.1.14	sce00520  amino sugar and nucleotide sugar metabolism
+MNXR96691	1	YOR161C	Protein PNS1 (pH nine-sensitive protein 1)		choline transport
+R03042	1	( YHR201C or YDR452W )	Polyphosphate phosphohydrolase	3.6.1.10; 3.6.1.-; 3.6.1.11	cofactor and prosthetic group biosynthesis
+MNXR96952	0	YDR270W	Copper-transporting ATPase (EC 3.6.3.54) (Cu(2+)-ATPase)	3.6.3.54	cu2+ transport
+RXN-14214	0	YDR452W	Endopolyphosphatase (EC 3.6.1.10) (Deoxyadenosine triphosphate phosphohydrolase) (dATP phosphohydrolase) (EC 3.6.1.-) (Exopolyphosphatase) (EC 3.6.1.11) (Phosphate metabolism protein 5)	3.6.1.10; 3.6.1.-; 3.6.1.11	other
+R03804	1	YLR351C	Monoamide of a dicarboxylic acid amidohydrolase	3.5.1.3	other
+MNXR124629	1	YMR301C	Iron-sulfur clusters transporter ATM1, mitochondrial		porphyrin transport
+R06199	1	YOL157C	Oligo-1,6-glucosidase IMA2 (EC 3.2.1.10) (Alpha-glucosidase) (Isomaltase 2)	3.2.1.10	sce00500  starch and sucrose metabolism
+MNXR99010	1	YEL004W	UDP-N-acetylglucosamine transporter YEA4		uridine diphosphate-n-acetylglucosamine (udp-glcnac) transport

@@ -16,7 +16,7 @@ This repository contains the current consensus genome-scale metabolic model of _
 
 |Taxonomy | Template Model | Reactions | Metabolites| Genes |
 |:-------:|:--------------:|:---------:|:----------:|:-----:|
-|_Saccharomyces cerevisiae_|[Yeast 7.6](https://sourceforge.net/projects/yeast/)|3520|2516|1019|
+|_Saccharomyces cerevisiae_|[Yeast 7.6](https://sourceforge.net/projects/yeast/)|3704|2516|1183|
 
 This repository is administered by Benjamín J. Sánchez ([@BenjaSanchez](https://github.com/benjasanchez)), Division of Systems and Synthetic Biology, Department of Biology and Biological Engineering, Chalmers University of Technology.
 

@@ -101,7 +101,81 @@ for i = 1:length(newmet.metNames)
     end
 end
 
+%Load rxnProp(rev and GPR)
+fid2 = fopen('../../ComplementaryData/modelCuration/DBnewRxnProp.tsv');
+rev = textscan(fid2,'%s %s %s %s %s %s','Delimiter','\t','HeaderLines',1);
+newrxn.ID = rev{1};
+newrxn.Rev = cellfun(@str2num, rev{2});
+newrxn.GPR = rev{3};
+newrxn.rxnNames = rev{4};
+newrxn.rxnECNumbers = rev{5};
+newrxn.subSystems = rev{6};
+fclose(fid2);
+
+%add new reactions according to rev ID. Met Coef need to be in the column,
+%not a row. Coef should be double, which was converted at the import
+%section.
+EnergyResults = {};
+MassChargeresults = {};
+RedoxResults = {};
+ for i = 1:length(newrxn.ID)
+    cd ../otherchanges
+    newID   = getNewIndex(model.rxns);
+    cd ../modelCuration
+    j = find(strcmp(matrix.rxnIDs,newrxn.ID{i}));
+    Met = matrix.mets(j);
+    Coef = transpose(matrix.metcoef(j));
+    model = addReaction(model,...
+    ['r_' newID],...
+    'reactionName', newrxn.ID{i},...
+    'metaboliteList',Met,...
+    'stoichCoeffList',Coef,...
+    'reversible',newrxn.Rev(i,1),...
+    'geneRule',newrxn.GPR{i},...
+    'checkDuplicate',1);
+    [EnergyResults,RedoxResults] = CheckEnergyProduction(model,{['r_' newID]},EnergyResults,RedoxResults);
+    [MassChargeresults] = CheckBalanceforSce(model,{['r_' newID]},MassChargeresults);
+end
+ 
+
+
+% add gene standard name for new genes
+%fid2 = fopen('../../ComplementaryData/yeast_gene_annotation_SGD.tsv');
+fid4 = fopen('../../ComplementaryData/databases/SGDgeneNames.tsv');
+yeast_gene_annotation = textscan(fid4,'%s %s','Delimiter','\t','HeaderLines',1);
+fclose(fid4);
+
+
+geneIndex = zeros(1,1);
+for i = 1: length(model.genes)
+    geneIndex = strcmp(yeast_gene_annotation{1}, model.genes{i});
+    if sum(geneIndex) == 1 && ~isempty(yeast_gene_annotation{2}{geneIndex})
+        model.geneNames{i} = yeast_gene_annotation{2}{geneIndex};
+    else
+        model.geneNames{i} = model.genes{i};
+    end
+end
+
+% Add protein name for genes
+for i = 1:length(model.genes)
+    model.proteins{i} = strcat('COBRAProtein',num2str(i));
+end
+
+
+
+
+%add rxn annotation
+for i = 1:length(newrxn.ID)
+    [~,rxnID] = ismember(newrxn.ID(i),model.rxnNames);
+    if rxnID ~= 0 
+        model.rxnNames{rxnID} = newrxn.rxnNames{i};
+        model.rxnECNumbers(rxnID) =  newrxn.rxnECNumbers(i);
+        %model.subSystems{rxnID} = newrxn.subSystems(i);
+    end
+end
+
 % Save model:
+model = rmfield(model,'grRules');
 cd ..
 saveYeastModel(model)
 cd modelCuration

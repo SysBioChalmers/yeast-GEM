@@ -74925,6 +74925,2661 @@
     - lower_bound: 0
     - upper_bound: 1000
     - confidence_score: 1
+  - !!omap
+    - id: r_4152
+    - name: Cytochrome c apocytochrome-c-lyase
+    - metabolites: !!omap
+      - s_0712: 1
+      - s_3748: -1
+      - s_3749: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YAL039C or YKL087C
+    - annotation: !!omap
+      - ec-code:
+        - 4.4.1.17
+        - 4.4.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4153
+    - name: (R)-Acetoin:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0020: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3750: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YAL061W
+    - annotation: !!omap
+      - ec-code: 1.1.1.303
+    - confidence_score: 0
+  - !!omap
+    - id: r_4154
+    - name: Probable diacetyl reductase [(R)-acetoin forming] 2 (EC 1.1.1.303)
+    - metabolites: !!omap
+      - s_1201: -1
+      - s_3751: -1
+      - s_3752: 1
+      - s_3753: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YAL061W
+    - annotation: !!omap
+      - ec-code: 1.1.1.303
+    - confidence_score: 0
+  - !!omap
+    - id: r_4155
+    - name: Glutamyl-tRNA(Gln) amidotransferase subunit B, mitochondrial (Glu-AdT subunit B) (EC 6.3.5.-) (Cytochrome c oxidase assembly factor PET112)
+    - metabolites: !!omap
+      - s_0397: 1
+      - s_0993: 1
+      - s_1326: 1
+      - s_3754: -1
+      - s_3755: -1
+      - s_3756: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBL080C
+    - annotation: !!omap
+      - ec-code: 6.3.5.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4156
+    - name: Methionine aminopeptidase 2 (MAP 2) (MetAP 2) (EC 3.4.11.18) (Peptidase M)
+    - metabolites: !!omap
+      - s_0810: -1
+      - s_3757: -1
+      - s_3758: 1
+      - s_3759: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBL091C or YLR244C
+    - annotation: !!omap
+      - ec-code: 3.4.11.18
+    - confidence_score: 0
+  - !!omap
+    - id: r_4157
+    - name: ADP-ribose 1''-phosphate phosphatase (EC 3.1.3.84) (EC 3.2.2.-) ([Protein ADP-ribosylglutamate] hydrolase)
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1322: 1
+      - s_3760: -1
+      - s_3761: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR022W or YMR087W
+    - annotation: !!omap
+      - ec-code:
+        - 3.1.3.84
+        - 3.2.2.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4158
+    - name: NADPH2:quinone oxidoreductase
+    - metabolites: !!omap
+      - s_0794: -1
+      - s_1207: 1
+      - s_1212: -1
+      - s_3762: -1
+      - s_3763: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR046C
+    - annotation: !!omap
+      - ec-code: 1.6.5.5
+    - confidence_score: 0
+  - !!omap
+    - id: r_4159
+    - name: UDP-N-acetylglucosamine transferase subunit ALG14 (Asparagine-linked glycosylation protein 14)
+    - metabolites: !!omap
+      - s_3764: -1
+      - s_3765: -1
+      - s_3766: 1
+      - s_3767: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR070C and YGL047W
+    - annotation: !!omap
+      - ec-code: 2.4.1.141
+    - confidence_score: 0
+  - !!omap
+    - id: r_4160
+    - name: ADP-ribose pyrophosphatase (EC 3.6.1.13) (ADP-ribose diphosphatase) (ADP-ribose phosphohydrolase) (Adenosine diphosphoribose pyrophosphatase) (ADPR-PPase)
+    - metabolites: !!omap
+      - s_0423: 1
+      - s_0794: 2
+      - s_0803: -1
+      - s_3761: -1
+      - s_3768: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR111C
+    - annotation: !!omap
+      - ec-code: 3.6.1.13
+    - confidence_score: 0
+  - !!omap
+    - id: r_4161
+    - name: Probable vacuolar amino acid transporter YPQ3 (PQ-loop repeat-containing protein 3) (Protein RTC2) (Restriction of telomere capping protein 2)
+    - metabolites: !!omap
+      - s_0965: 1
+      - s_0968: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR147W or YDR352W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4162
+    - name: Probable vacuolar amino acid transporter YPQ3 (PQ-loop repeat-containing protein 3) (Protein RTC2) (Restriction of telomere capping protein 2)
+    - metabolites: !!omap
+      - s_1006: 1
+      - s_1009: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR147W or YDR352W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4163
+    - name: Probable vacuolar amino acid transporter YPQ3 (PQ-loop repeat-containing protein 3) (Protein RTC2) (Restriction of telomere capping protein 2)
+    - metabolites: !!omap
+      - s_1025: 1
+      - s_1028: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR147W or YDR352W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4164
+    - name: oxalate:CoA ligase (AMP-forming)
+    - metabolites: !!omap
+      - s_0426: 1
+      - s_0439: -1
+      - s_0534: -1
+      - s_0638: 1
+      - s_3769: -1
+      - s_3770: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR222C
+    - annotation: !!omap
+      - ec-code: 6.-.-.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4165
+    - name: Glucosidase 2 subunit alpha (EC 3.2.1.84) (Alpha-glucosidase II subunit alpha) (Glucosidase II subunit alpha) (Reversal of TOR2 lethality protein 2)
+    - metabolites: !!omap
+      - s_0804: -1
+      - s_3771: -1
+      - s_3772: 1
+      - s_3773: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR229C
+    - annotation: !!omap
+      - ec-code: 3.2.1.84
+    - confidence_score: 0
+  - !!omap
+    - id: r_4166
+    - name: Glucosidase 2 subunit alpha (EC 3.2.1.84) (Alpha-glucosidase II subunit alpha) (Glucosidase II subunit alpha) (Reversal of TOR2 lethality protein 2)
+    - metabolites: !!omap
+      - s_0804: -1
+      - s_3772: 1
+      - s_3773: -1
+      - s_3774: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR229C
+    - annotation: !!omap
+      - ec-code: 3.2.1.84
+    - confidence_score: 0
+  - !!omap
+    - id: r_4167
+    - name: Vacuolar cation-chloride cotransporter 1 (Vacuolar homolog of CCC family protein 1)
+    - metabolites: !!omap
+      - s_1437: 1
+      - s_3775: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR235W
+    - annotation: !!omap
+      - ec-code: 3.6.3.7
+    - confidence_score: 0
+  - !!omap
+    - id: r_4168
+    - name: Probable metabolite transport protein YBR241C
+    - metabolites: !!omap
+      - s_0553: -1
+      - s_3776: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR241C or YGL104C
+    - confidence_score: 0
+  - !!omap
+    - id: r_4169
+    - name: Probable metabolite transport protein YBR241C
+    - metabolites: !!omap
+      - s_0558: -1
+      - s_3777: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR241C or YGL104C
+    - confidence_score: 0
+  - !!omap
+    - id: r_4170
+    - name: UDP-N-acetyl-D-glucosamine:dolichyl-phosphate N-acetyl-D-glucosamine phosphotransferase
+    - metabolites: !!omap
+      - s_0646: -1
+      - s_3764: -1
+      - s_3765: 1
+      - s_3778: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR243C
+    - annotation: !!omap
+      - ec-code: 2.7.8.15
+    - confidence_score: 0
+  - !!omap
+    - id: r_4171
+    - name: (5-glutamyl)-peptide:amino-acid 5-glutamyltransferase
+    - metabolites: !!omap
+      - s_0750: -1
+      - s_0803: -1
+      - s_0983: 1
+      - s_0991: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR281C and YNL191W
+    - annotation: !!omap
+      - ec-code: 3.4.-.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4172
+    - name: P-type cation-transporting ATPase (EC 3.6.3.3) (Cadmium resistance protein 2) (Cadmium-translocating P-type ATPase) (Cd(2+)-exporting ATPase)
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1322: 1
+      - s_3779: -1
+      - s_3780: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YBR295W
+    - annotation: !!omap
+      - ec-code: 3.6.3.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4173
+    - name: L-cysteine:sulfur-acceptor sulfurtransferase
+    - metabolites: !!omap
+      - s_0957: 1
+      - s_3781: -1
+      - s_3782: -1
+      - s_3783: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCL017C
+    - annotation: !!omap
+      - ec-code: 2.8.1.7
+    - confidence_score: 0
+  - !!omap
+    - id: r_4174
+    - name: Probable ATP-dependent permease
+    - metabolites: !!omap
+      - s_3784: -1
+      - s_3785: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR011C
+    - confidence_score: 0
+  - !!omap
+    - id: r_4175
+    - name: Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3786: -1
+      - s_3787: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W
+    - annotation: !!omap
+      - ec-code: 1.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4176
+    - name: Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3788: -1
+      - s_3789: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W
+    - annotation: !!omap
+      - ec-code: 1.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4177
+    - name: Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3790: -1
+      - s_3791: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W
+    - annotation: !!omap
+      - ec-code: 1.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4178
+    - name: Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3792: -1
+      - s_3793: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W
+    - annotation: !!omap
+      - ec-code: 1.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4179
+    - name: Putative aryl-alcohol dehydrogenase AAD3 (EC 1.1.1.-)
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3794: -1
+      - s_3795: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W
+    - annotation: !!omap
+      - ec-code: 1.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4180
+    - name: Benzyl alcohol:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3796: -1
+      - s_3797: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YCR107W or YDL243C or YJR155W or YNL331C or YOL165C or YPL088W
+    - annotation: !!omap
+      - ec-code: 1.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4181
+    - name: Manganese-transporting ATPase 1 (EC 3.6.3.-)
+    - metabolites: !!omap
+      - s_3798: -1
+      - s_3799: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YEL031W
+    - annotation: !!omap
+      - ec-code: 3.6.3.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4182
+    - name: D-amino-acid N-acetyltransferase HPA3 (DNT) (EC 2.3.1.36) (EC 2.3.1.48) (Histone and other protein acetyltransferase 3)
+    - metabolites: !!omap
+      - s_0373: -1
+      - s_0529: 1
+      - s_3800: -1
+      - s_3801: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YEL066W
+    - annotation: !!omap
+      - ec-code:
+        - 2.3.1.36
+        - 2.3.1.48
+    - confidence_score: 0
+  - !!omap
+    - id: r_4183
+    - name: D-Mannitol:NAD+ 2-oxidoreductase
+    - metabolites: !!omap
+      - s_0553: 1
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3802: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YEL070W or YNR073C
+    - annotation: !!omap
+      - ec-code: 1.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4184
+    - name: 4-hydroxy-4-methyl-2-oxoglutarate pyruvate-lyase (pyruvate-forming)
+    - metabolites: !!omap
+      - s_1399: 2
+      - s_3803: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YER010C
+    - annotation: !!omap
+      - ec-code:
+        - 4.1.3.17
+        - 4.1.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4185
+    - name: oxaloacetate carboxy-lyase (pyruvate-forming)
+    - metabolites: !!omap
+      - s_0456: 1
+      - s_0794: -1
+      - s_1271: -1
+      - s_1399: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER010C
+    - annotation: !!omap
+      - ec-code:
+        - 4.1.3.17
+        - 4.1.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4186
+    - name: L-methionine:thioredoxin-disulfide S-oxidoreductase
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1029: -1
+      - s_1616: 1
+      - s_1620: -1
+      - s_3804: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YER042W
+    - annotation: !!omap
+      - ec-code: 1.8.4.11
+    - confidence_score: 0
+  - !!omap
+    - id: r_4187
+    - name: L-proline:tRNA(Pro) ligase (AMP-forming)
+    - metabolites: !!omap
+      - s_0424: 1
+      - s_0437: -1
+      - s_0636: 1
+      - s_1037: -1
+      - s_3805: -1
+      - s_3806: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER087W
+    - annotation: !!omap
+      - ec-code: 6.1.1.15
+    - confidence_score: 0
+  - !!omap
+    - id: r_4188
+    - name: Glutathione-specific gamma-glutamylcyclotransferase (Gamma-GCG) (EC 4.3.2.-)
+    - metabolites: !!omap
+      - s_0750: -1
+      - s_0983: 1
+      - s_3807: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YER163C
+    - annotation: !!omap
+      - ec-code: 4.3.2.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4189
+    - name: 4a-hydroxytetrahydrobiopterin hydro-lyase
+    - metabolites: !!omap
+      - s_0803: 1
+      - s_3808: -1
+      - s_3809: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YHL018W
+    - annotation: !!omap
+      - ec-code: 4.2.1.96
+    - confidence_score: 0
+  - !!omap
+    - id: r_4190
+    - name: superoxide:superoxide oxidoreductase
+    - metabolites: !!omap
+      - s_0799: -2
+      - s_0838: 1
+      - s_1278: 1
+      - s_3810: -2
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR008C
+    - annotation: !!omap
+      - ec-code: 1.15.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4191
+    - name: 2-Deoxy-D-glucose 6-phosphate phosphohydrolase
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1322: 1
+      - s_3811: -1
+      - s_3812: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR043C or YHR044C
+    - annotation: !!omap
+      - ec-code: 3.1.3.68
+    - confidence_score: 0
+  - !!omap
+    - id: r_4192
+    - name: Cytochrome c lysine N-methyltransferase 1 (EC 2.1.1.59)
+    - metabolites: !!omap
+      - s_1413: 1
+      - s_1416: -1
+      - s_3813: -1
+      - s_3814: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR109W
+    - annotation: !!omap
+      - ec-code: 2.1.1.59
+    - confidence_score: 0
+  - !!omap
+    - id: r_4193
+    - name: S-Adenosyl-L-methionine:histone-L-lysine N6-methyltransferase
+    - metabolites: !!omap
+      - s_3815: -1
+      - s_3816: -1
+      - s_3817: 1
+      - s_3818: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR119W or YDR440W or YJL168C
+    - annotation: !!omap
+      - ec-code: 2.1.1.43
+    - confidence_score: 0
+  - !!omap
+    - id: r_4194
+    - name: Zinc transporter YKE4
+    - metabolites: !!omap
+      - s_3819: -1
+      - s_3820: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL023C or YMR243C or YOR316C
+    - confidence_score: 0
+  - !!omap
+    - id: r_4195
+    - name: NADH:ferricytochrome-b5 oxidoreductase
+    - metabolites: !!omap
+      - s_0795: 1
+      - s_1199: 1
+      - s_1204: -1
+      - s_3821: -2
+      - s_3822: 2
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL043C or YML125C
+    - annotation: !!omap
+      - ec-code: 1.6.2.2
+    - confidence_score: 0
+  - !!omap
+    - id: r_4196
+    - name: NADH-cytochrome b5 reductase 1 (EC 1.6.2.2) (Microsomal cytochrome b reductase) (P35)
+    - metabolites: !!omap
+      - s_0799: 1
+      - s_1200: 1
+      - s_1205: -1
+      - s_3823: -2
+      - s_3824: 2
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIL043C or YKL150W or YML125C
+    - annotation: !!omap
+      - ec-code: 1.6.2.2
+    - confidence_score: 0
+  - !!omap
+    - id: r_4197
+    - name: Benzil reductase ((S)-benzoin forming) IRC24 (EC 1.1.1.320) (Increased recombination centers protein 24)
+    - metabolites: !!omap
+      - s_1207: -1
+      - s_1212: 1
+      - s_3825: -1
+      - s_3826: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIR036C
+    - annotation: !!omap
+      - ec-code: 1.1.1.320
+    - confidence_score: 0
+  - !!omap
+    - id: r_4198
+    - name: Glutathione S-transferase 1 (EC 2.5.1.18) (GST-I)
+    - metabolites: !!omap
+      - s_3827: -1
+      - s_3828: -1
+      - s_3829: 1
+      - s_3830: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YIR038C or YLL060C or YMR251W
+    - annotation: !!omap
+      - ec-code: 2.5.1.18
+    - confidence_score: 0
+  - !!omap
+    - id: r_4199
+    - name: Glutathione S-transferase 1 (EC 2.5.1.18) (GST-I)
+    - metabolites: !!omap
+      - s_0750: -1
+      - s_3831: -1
+      - s_3832: 1
+      - s_3833: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLL060C or YMR251W or YKR076W
+    - annotation: !!omap
+      - ec-code: 2.5.1.18
+    - confidence_score: 0
+  - !!omap
+    - id: r_4200
+    - name: L-methionine:oxidized-thioredoxin S-oxidoreductase
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1029: -1
+      - s_1616: 1
+      - s_1620: -1
+      - s_3834: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL069W
+    - annotation: !!omap
+      - ec-code: 1.8.4.14
+    - confidence_score: 0
+  - !!omap
+    - id: r_4201
+    - name: Vacuolar aminopeptidase 1 (EC 3.4.11.22) (Aminopeptidase yscI) (Leucine aminopeptidase IV) (LAPIV) (Lysosomal aminopeptidase III) (Polypeptidase) (Vacuolar aminopeptidase I)
+    - metabolites: !!omap
+      - s_0810: -1
+      - s_3759: 1
+      - s_3835: -1
+      - s_3836: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL103C
+    - annotation: !!omap
+      - ec-code: 3.4.11.22
+    - confidence_score: 0
+  - !!omap
+    - id: r_4202
+    - name: Vacuolar aminopeptidase 1 (EC 3.4.11.22) (Aminopeptidase yscI) (Leucine aminopeptidase IV) (LAPIV) (Lysosomal aminopeptidase III) (Polypeptidase) (Vacuolar aminopeptidase I)
+    - metabolites: !!omap
+      - s_0810: -1
+      - s_1024: 1
+      - s_3759: 1
+      - s_3837: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL103C
+    - annotation: !!omap
+      - ec-code: 3.4.11.22
+    - confidence_score: 0
+  - !!omap
+    - id: r_4203
+    - name: 5-oxo-L-proline amidohydrolase (ATP-hydrolysing)
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0794: 1
+      - s_0803: -2
+      - s_0991: 1
+      - s_1322: 1
+      - s_3807: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL215C
+    - annotation: !!omap
+      - ec-code: 3.5.2.9
+    - confidence_score: 0
+  - !!omap
+    - id: r_4204
+    - name: threo-3-hydroxy-L-aspartate ammonia-lyase
+    - metabolites: !!omap
+      - s_0419: 1
+      - s_1271: 1
+      - s_3838: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKL218C
+    - annotation: !!omap
+      - ec-code: 4.3.1.16
+    - confidence_score: 0
+  - !!omap
+    - id: r_4205
+    - name: Glutathione S-transferase omega-like 2 (EC 2.5.1.18) (Extracellular mutant protein 4) (Glutathione-dependent dehydroascorbate reductase) (EC 1.8.5.1)
+    - metabolites: !!omap
+      - s_3839: -1
+      - s_3840: -1
+      - s_3841: 1
+      - s_3842: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR154C
+    - annotation: !!omap
+      - ec-code: 2.5.1.18
+    - confidence_score: 0
+  - !!omap
+    - id: r_4206
+    - name: glutathione:dehydroascorbate oxidoreductase
+    - metabolites: !!omap
+      - s_0750: -2
+      - s_0754: 1
+      - s_3843: -1
+      - s_3844: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YKR076W
+    - annotation: !!omap
+      - ec-code:
+        - 2.5.1.18
+        - 1.8.5.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4207
+    - name: Glutathione S-transferase omega-like 2 (EC 2.5.1.18) (Extracellular mutant protein 4) (Glutathione-dependent dehydroascorbate reductase) (EC 1.8.5.1)
+    - metabolites: !!omap
+      - s_3840: -2
+      - s_3845: -1
+      - s_3846: 1
+      - s_3847: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR154C
+    - annotation: !!omap
+      - ec-code:
+        - 2.5.1.18
+        - 1.8.5.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4208
+    - name: urea hydro-lyase (cyanamide-forming)
+    - metabolites: !!omap
+      - s_0803: 1
+      - s_1552: -1
+      - s_3848: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YFL061W or YNL335W
+    - annotation: !!omap
+      - ec-code: 4.2.1.69
+    - confidence_score: 0
+  - !!omap
+    - id: r_4209
+    - name: D-ribose 5-phosphate,D-glyceraldehyde 3-phosphate pyridoxal 5-phosphate-lyase (glutamine-hydrolyzing)
+    - metabolites: !!omap
+      - s_0764: -1
+      - s_0794: 1
+      - s_0803: 3
+      - s_0991: 1
+      - s_0999: -1
+      - s_1322: 1
+      - s_1393: 1
+      - s_3849: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YFL060C or YNL334C
+    - annotation: !!omap
+      - ec-code:
+        - 4.3.3.6
+        - 3.5.1.2
+    - confidence_score: 0
+  - !!omap
+    - id: r_4210
+    - name: D-ribulose 5-phosphate,D-glyceraldehyde 3-phosphate pyridoxal 5-phosphate-lyase
+    - metabolites: !!omap
+      - s_0577: -1
+      - s_0764: -1
+      - s_0803: 3
+      - s_0991: 1
+      - s_0999: -1
+      - s_1322: 1
+      - s_1393: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YFL059W or YNL333W
+    - annotation: !!omap
+      - ec-code:
+        - 4.3.3.6
+        - 3.5.1.2
+    - confidence_score: 0
+  - !!omap
+    - id: r_4211
+    - name: 4-amino-5-hydroxymethyl-2-methylpyrimidine phosphate synthase THI5 (HMP-P synthase) (Hydroxymethylpyrimidine phosphate synthase) (Thiamine biosynthesis protein 5) (Thiamine pyrimidine synthase)
+    - metabolites: !!omap
+      - s_0268: 1
+      - s_1006: -1
+      - s_1393: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YFL058W or YDL244W or YJR156C or YNL332W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4212
+    - name: L-cysteinylglycine dipeptidase
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_0981: 1
+      - s_0983: -1
+      - s_1003: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YFR044C
+    - annotation: !!omap
+      - ec-code: 3.4.13.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4213
+    - name: Cys-Gly metallodipeptidase DUG1 (EC 3.4.13.-) (Deficient in utilization of glutathione protein 1) (GSH degradosomal complex subunit DUG1)
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1003: 1
+      - s_3850: -1
+      - s_3851: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YFR044C
+    - annotation: !!omap
+      - ec-code: 3.4.13.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4214
+    - name: riboflavin-5-phosphate phosphohydrolase
+    - metabolites: !!omap
+      - s_0714: -1
+      - s_0803: -1
+      - s_1322: 1
+      - s_1405: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL024C
+    - annotation: !!omap
+      - ec-code: 3.1.3.2
+    - confidence_score: 0
+  - !!omap
+    - id: r_4215
+    - name: Fe(II):oxygen oxidoreductase; Fe2+:oxygen oxidoreductase
+    - metabolites: !!omap
+      - s_0799: -4
+      - s_0807: 2
+      - s_0926: -4
+      - s_1278: -1
+      - s_3852: 4
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL120W
+    - annotation: !!omap
+      - ec-code: 1.16.3.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4216
+    - name: D-aminoacyl-tRNA deacylase (DTD) (EC 3.1.1.96) (D-tyrosyl-tRNA(Tyr) deacylase) (Gly-tRNA(Ala) deacylase) (EC 3.1.1.-)
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1003: 1
+      - s_1582: 1
+      - s_3853: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL219W
+    - annotation: !!omap
+      - ec-code:
+        - 3.1.1.96
+        - 3.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4217
+    - name: D-aminoacyl-tRNA deacylase (DTD) (EC 3.1.1.96) (D-tyrosyl-tRNA(Tyr) deacylase) (Gly-tRNA(Ala) deacylase) (EC 3.1.1.-)
+    - metabolites: !!omap
+      - s_1612: 1
+      - s_3854: -1
+      - s_3855: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL219W
+    - annotation: !!omap
+      - ec-code:
+        - 3.1.1.96
+        - 3.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4218
+    - name: 4-nitrophenyl phosphate phosphohydrolase
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1322: 1
+      - s_3856: -1
+      - s_3857: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL236W
+    - annotation: !!omap
+      - ec-code: 3.1.3.41
+    - confidence_score: 0
+  - !!omap
+    - id: r_4219
+    - name: D-Iditol:NAD+ 2-oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1043: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3858: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDL246C
+    - annotation: !!omap
+      - ec-code: 1.1.1.14
+    - confidence_score: 0
+  - !!omap
+    - id: r_4220
+    - name: ATP:alpha-D-galactose 1-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0410: 1
+      - s_0434: -1
+      - s_3859: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR009W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4221
+    - name: 3-Hydroxy-2-methylpropanoyl-CoA hydrolase
+    - metabolites: !!omap
+      - s_0532: 1
+      - s_0799: 1
+      - s_0807: -1
+      - s_3860: -1
+      - s_3861: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR036C
+    - annotation: !!omap
+      - ec-code: 3.1.2.4
+    - confidence_score: 0
+  - !!omap
+    - id: r_4222
+    - name: Sodium transport ATPase 5 (EC 3.6.3.7)
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1322: 1
+      - s_1437: -1
+      - s_1438: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR038C or YDR039C or YDR040C
+    - annotation: !!omap
+      - ec-code: 3.6.3.7
+    - confidence_score: 0
+  - !!omap
+    - id: r_4223
+    - name: Broad-range acid phosphatase DET1 (EC 3.1.3.-) (Decreased ergosterol transport protein 1)
+    - metabolites: !!omap
+      - s_3862: -1
+      - s_3863: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR051C or YOL075C
+    - annotation: !!omap
+      - ec-code: 3.1.3.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4224
+    - name: L-Alanine:2-oxoglutarate aminotransferase
+    - metabolites: !!omap
+      - s_0180: -1
+      - s_0955: -1
+      - s_0991: 1
+      - s_1399: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR111C
+    - annotation: !!omap
+      - ec-code: 2.6.1.2
+    - confidence_score: 0
+  - !!omap
+    - id: r_4225
+    - name: 2-phenylacetamide amidohydrolase
+    - metabolites: !!omap
+      - s_0419: 1
+      - s_0803: -1
+      - s_1321: 1
+      - s_3864: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR242W
+    - annotation: !!omap
+      - ec-code: 3.5.1.4
+    - confidence_score: 0
+  - !!omap
+    - id: r_4226
+    - name: Indole-3-acetamide amidohydrolase
+    - metabolites: !!omap
+      - s_0419: 1
+      - s_0803: -1
+      - s_0853: 1
+      - s_3865: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR242W
+    - annotation: !!omap
+      - ec-code: 3.5.1.4
+    - confidence_score: 0
+  - !!omap
+    - id: r_4227
+    - name: Monocarboxylic acid amide amidohydrolase
+    - metabolites: !!omap
+      - s_0419: 1
+      - s_0803: -1
+      - s_3866: -1
+      - s_3867: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR242W
+    - annotation: !!omap
+      - ec-code: 3.5.1.4
+    - confidence_score: 0
+  - !!omap
+    - id: r_4228
+    - name: Probable amidase (EC 3.5.1.4)
+    - metabolites: !!omap
+      - s_0419: -1
+      - s_0803: 1
+      - s_3868: -1
+      - s_3869: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR242W
+    - annotation: !!omap
+      - ec-code: 3.5.1.4
+    - confidence_score: 0
+  - !!omap
+    - id: r_4229
+    - name: Acylamide aminohydrolase
+    - metabolites: !!omap
+      - s_0419: 1
+      - s_0803: -1
+      - s_3870: -1
+      - s_3871: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR242W
+    - annotation: !!omap
+      - ec-code: 3.5.1.4
+    - confidence_score: 0
+  - !!omap
+    - id: r_4230
+    - name: ATP:D-Gluconate 6-phosphotransferase
+    - metabolites: !!omap
+      - s_0340: 1
+      - s_0394: 1
+      - s_0434: -1
+      - s_0794: 1
+      - s_3872: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR248C
+    - annotation: !!omap
+      - ec-code: 2.7.1.12
+    - confidence_score: 0
+  - !!omap
+    - id: r_4231
+    - name: S-Adenosyl-L-methionine:protein-C-terminal-S-farnesyl-L-cysteine O-methyltransferase
+    - metabolites: !!omap
+      - s_1413: 1
+      - s_1416: -1
+      - s_3873: -1
+      - s_3874: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR410C
+    - annotation: !!omap
+      - ec-code: 2.1.1.100
+    - confidence_score: 0
+  - !!omap
+    - id: r_4232
+    - name: Phosphatidylinositol N-acetylglucosaminyltransferase subunit GPI19 (GPI-GlcNAc transferase complex subunit GPI19) (GPI-GnT subunit GPI19) (EC 2.4.1.198)
+    - metabolites: !!omap
+      - s_3764: -1
+      - s_3766: 1
+      - s_3875: -1
+      - s_3876: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR437W and YGR216C and YNL038W and YPL076W and YPL175W and YPL096C-A
+    - annotation: !!omap
+      - ec-code: 2.4.1.198
+    - confidence_score: 0
+  - !!omap
+    - id: r_4233
+    - name: ATP:D-glucose 6-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0563: -1
+      - s_0568: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR516C
+    - annotation: !!omap
+      - ec-code: 2.7.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4234
+    - name: (R)-lactate hydro-lyase
+    - metabolites: !!omap
+      - s_0025: -1
+      - s_0803: 1
+      - s_1151: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR533C or YMR322C or YOR391C or YPL280W
+    - annotation: !!omap
+      - ec-code: 4.2.1.130
+    - confidence_score: 0
+  - !!omap
+    - id: r_4235
+    - name: Calcium-transporting ATPase 2 (EC 3.6.3.8) (Vacuolar Ca(2+)-ATPase)
+    - metabolites: !!omap
+      - s_0802: 1
+      - s_0803: -1
+      - s_1329: 1
+      - s_3877: -1
+      - s_3878: -1
+      - s_3879: 1
+      - s_3880: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL006W or YGL167C
+    - annotation: !!omap
+      - ec-code: 3.6.3.8
+    - confidence_score: 0
+  - !!omap
+    - id: r_4236
+    - name: L-arginyl-tRNA(Arg):protein arginyltransferase
+    - metabolites: !!omap
+      - s_0428: -1
+      - s_1583: 1
+      - s_3881: -1
+      - s_3882: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL017W
+    - annotation: !!omap
+      - ec-code: 2.3.2.8
+    - confidence_score: 0
+  - !!omap
+    - id: r_4237
+    - name: Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit STT3 (Oligosaccharyl transferase subunit STT3) (EC 2.4.99.18)
+    - metabolites: !!omap
+      - s_3883: -1
+      - s_3884: -1
+      - s_3885: 1
+      - s_3886: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL022W
+    - annotation: !!omap
+      - ec-code: 2.4.99.18
+    - confidence_score: 0
+  - !!omap
+    - id: r_4238
+    - name: Mannosyl-oligosaccharide glucosidase (EC 3.2.1.106) (Processing A-glucosidase I) (Glucosidase I)
+    - metabolites: !!omap
+      - s_0804: -1
+      - s_3771: 1
+      - s_3772: 1
+      - s_3886: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL027C
+    - annotation: !!omap
+      - ec-code: 3.2.1.106
+    - confidence_score: 0
+  - !!omap
+    - id: r_4239
+    - name: Initiation-specific alpha-1,6-mannosyltransferase (EC 2.4.1.232) (Outer chain elongation protein 1)
+    - metabolites: !!omap
+      - s_3887: -1
+      - s_3888: -1
+      - s_3889: 1
+      - s_3890: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL038C
+    - annotation: !!omap
+      - ec-code: 2.4.1.232
+    - confidence_score: 0
+  - !!omap
+    - id: r_4240
+    - name: Alpha-1,3/1,6-mannosyltransferase ALG2 (EC 2.4.1.132) (EC 2.4.1.257) (Asparagine-linked glycosylation protein 2) (GDP-Man:Man(1)GlcNAc(2)-PP-Dol alpha-1,3-mannosyltransferase) (GDP-Man:Man(1)GlcNAc(2)-PP-dolichol mannosyltransferase) (GDP-Man:Man(2)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase)
+    - metabolites: !!omap
+      - s_3887: -1
+      - s_3889: 1
+      - s_3891: -1
+      - s_3892: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL065C
+    - annotation: !!omap
+      - ec-code:
+        - 2.4.1.132
+        - 2.4.1.257
+    - confidence_score: 0
+  - !!omap
+    - id: r_4241
+    - name: GDP-D-mannose:D-Man-alpha-(1->3)-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-6-mannosyltransferase
+    - metabolites: !!omap
+      - s_3887: -1
+      - s_3889: 1
+      - s_3892: -1
+      - s_3893: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL065C
+    - annotation: !!omap
+      - ec-code:
+        - 2.4.1.132
+        - 2.4.1.257
+    - confidence_score: 0
+  - !!omap
+    - id: r_4242
+    - name: 2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate 6-phosphomannohydrolase
+    - metabolites: !!omap
+      - s_0574: 1
+      - s_0803: -1
+      - s_3894: -1
+      - s_3895: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL156W
+    - annotation: !!omap
+      - ec-code: 3.2.1.24
+    - confidence_score: 0
+  - !!omap
+    - id: r_4243
+    - name: Alpha-mannosidase (EC 3.2.1.24) (Alpha-D-mannoside mannohydrolase)
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_3896: -1
+      - s_3897: 1
+      - s_3898: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL156W
+    - annotation: !!omap
+      - ec-code: 3.2.1.24
+    - confidence_score: 0
+  - !!omap
+    - id: r_4244
+    - name: ATP:L-threonyl,bicarbonate adenylyltransferase
+    - metabolites: !!omap
+      - s_0434: -1
+      - s_0445: -1
+      - s_0633: 1
+      - s_0794: -1
+      - s_0803: 1
+      - s_1045: -1
+      - s_3899: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL169W
+    - annotation: !!omap
+      - ec-code: 2.7.7.87
+    - confidence_score: 0
+  - !!omap
+    - id: r_4245
+    - name: D-serine ammonia-lyase
+    - metabolites: !!omap
+      - s_0419: 1
+      - s_1399: 1
+      - s_3900: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGL196W
+    - annotation: !!omap
+      - ec-code: 4.3.1.18
+    - confidence_score: 0
+  - !!omap
+    - id: r_4246
+    - name: O3-acetyl-L-serine:hydrogen-sulfide 2-amino-2-carboxyethyltransferase; O3-acetyl-L-serine acetate-lyase (adding hydrogen sulfide)
+    - metabolites: !!omap
+      - s_0365: 1
+      - s_3782: 1
+      - s_3901: -1
+      - s_3902: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR012W
+    - annotation: !!omap
+      - ec-code: 2.5.1.47
+    - confidence_score: 0
+  - !!omap
+    - id: r_4247
+    - name: Dolichyl-diphosphate phosphohydrolase
+    - metabolites: !!omap
+      - s_0646: 1
+      - s_0804: -1
+      - s_1323: 1
+      - s_3885: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR036C
+    - annotation: !!omap
+      - ec-code: 3.6.1.43
+    - confidence_score: 0
+  - !!omap
+    - id: r_4248
+    - name: CTP:phosphatidate cytidyltransferase
+    - metabolites: !!omap
+      - s_0541: -1
+      - s_0636: 1
+      - s_3903: -1
+      - s_3904: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR046W
+    - annotation: !!omap
+      - ec-code: 2.7.7.41
+    - confidence_score: 0
+  - !!omap
+    - id: r_4249
+    - name: Thiamine thiazole synthase (Thiazole biosynthetic enzyme)
+    - metabolites: !!omap
+      - s_0803: 3
+      - s_1003: -1
+      - s_1198: -1
+      - s_1216: 1
+      - s_3905: -1
+      - s_3906: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR144W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4250
+    - name: dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,2-glucosyltransferase
+    - metabolites: !!omap
+      - s_0646: 1
+      - s_3884: 1
+      - s_3907: -1
+      - s_3908: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR227W
+    - annotation: !!omap
+      - ec-code: 2.4.1.256
+    - confidence_score: 0
+  - !!omap
+    - id: r_4251
+    - name: nitric oxide, NADPH2:oxygen oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1198: 1
+      - s_1203: -1
+      - s_1275: -2
+      - s_3909: -2
+      - s_3910: 2
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR234W
+    - annotation: !!omap
+      - ec-code: 1.14.12.17
+    - confidence_score: 0
+  - !!omap
+    - id: r_4252
+    - name: Flavohemoprotein (EC 1.14.12.17) (Flavohemoglobin) (Hemoglobin-like protein) (Nitric oxide dioxygenase) (NO oxygenase) (NOD)
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1207: 1
+      - s_1212: -1
+      - s_1275: -2
+      - s_3909: -2
+      - s_3910: 2
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YGR234W
+    - annotation: !!omap
+      - ec-code: 1.14.12.17
+    - confidence_score: 0
+  - !!omap
+    - id: r_4253
+    - name: Putative lipoate-protein ligase A (EC 6.3.1.20) (Altered inheritance rate of mitochondria protein 22)
+    - metabolites: !!omap
+      - s_0434: -1
+      - s_0633: 1
+      - s_3911: -1
+      - s_3912: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL046W
+    - annotation: !!omap
+      - ec-code: 6.3.1.20
+    - confidence_score: 0
+  - !!omap
+    - id: r_4254
+    - name: Putative lipoate-protein ligase A (EC 6.3.1.20) (Altered inheritance rate of mitochondria protein 22)
+    - metabolites: !!omap
+      - s_0423: 1
+      - s_3912: -1
+      - s_3913: -1
+      - s_3914: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL046W
+    - annotation: !!omap
+      - ec-code: 6.3.1.20
+    - confidence_score: 0
+  - !!omap
+    - id: r_4255
+    - name: [lipoyl-carrier protein]-L-lysine:lipoate ligase (AMP-forming)
+    - metabolites: !!omap
+      - s_0423: 1
+      - s_0434: -1
+      - s_0633: 1
+      - s_3911: -1
+      - s_3913: -1
+      - s_3914: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL046W
+    - annotation: !!omap
+      - ec-code: 6.3.1.20
+    - confidence_score: 0
+  - !!omap
+    - id: r_4256
+    - name: GPI ethanolamine phosphate transferase 2 (EC 2.-.-.-) (Glycosylphosphatidylinositol-anchor biosynthesis protein 7) (Local anestheticum-sensitive protein 21)
+    - metabolites: !!omap
+      - s_3915: -1
+      - s_3916: -1
+      - s_3917: 1
+      - s_3918: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL062W
+    - annotation: !!omap
+      - ec-code: 2.-.-.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4257
+    - name: Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase homolog 1)
+    - metabolites: !!omap
+      - s_0180: 1
+      - s_0803: -1
+      - s_0983: 1
+      - s_3919: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL126W
+    - annotation: !!omap
+      - ec-code: 3.5.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4258
+    - name: Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase homolog 1)
+    - metabolites: !!omap
+      - s_0182: 1
+      - s_0807: -1
+      - s_3920: -1
+      - s_3921: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL126W
+    - annotation: !!omap
+      - ec-code: 3.5.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4259
+    - name: citrate hydroxymutase
+    - metabolites: !!omap
+      - s_0524: -1
+      - s_0941: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJL200C
+    - annotation: !!omap
+      - ec-code: 4.2.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4260
+    - name: Anion/proton exchange transporter GEF1 (CLC protein GEF1) (ClC-A) (ClC-Y1) (Voltage-gated chloride channel) [Cleaved into: GEF1 N-terminal; GEF1 C-terminal]
+    - metabolites: !!omap
+      - s_3922: -1
+      - s_3923: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR040W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4261
+    - name: succinate:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0727: 1
+      - s_0799: 1
+      - s_1200: -1
+      - s_1205: 1
+      - s_1460: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR051W
+    - annotation: !!omap
+      - ec-code: 1.3.1.6
+    - confidence_score: 0
+  - !!omap
+    - id: r_4262
+    - name: nucleoside-triphosphate diphosphohydrolase
+    - metabolites: !!omap
+      - s_0633: 1
+      - s_0794: 1
+      - s_0803: -1
+      - s_3924: -1
+      - s_3925: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR069C
+    - annotation: !!omap
+      - ec-code: 3.6.1.9
+    - confidence_score: 0
+  - !!omap
+    - id: r_4263
+    - name: Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)
+    - metabolites: !!omap
+      - s_0584: 1
+      - s_0586: -1
+      - s_0633: 1
+      - s_0794: 1
+      - s_0803: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR069C
+    - annotation: !!omap
+      - ec-code: 3.6.1.9
+    - confidence_score: 0
+  - !!omap
+    - id: r_4264
+    - name: 2'-Deoxyguanosine 5'-triphosphate diphosphohydrolase
+    - metabolites: !!omap
+      - s_0615: 1
+      - s_0617: -1
+      - s_0633: 1
+      - s_0794: 1
+      - s_0803: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR069C
+    - annotation: !!omap
+      - ec-code: 3.6.1.9
+    - confidence_score: 0
+  - !!omap
+    - id: r_4265
+    - name: dTTP diphosphohydrolase
+    - metabolites: !!omap
+      - s_0633: 1
+      - s_0649: 1
+      - s_0650: -1
+      - s_0794: 1
+      - s_0803: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR069C
+    - annotation: !!omap
+      - ec-code: 3.6.1.9
+    - confidence_score: 0
+  - !!omap
+    - id: r_4266
+    - name: Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)
+    - metabolites: !!omap
+      - s_0633: 1
+      - s_0794: 1
+      - s_0803: -1
+      - s_3926: -1
+      - s_3927: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR069C
+    - annotation: !!omap
+      - ec-code: 3.6.1.9
+    - confidence_score: 0
+  - !!omap
+    - id: r_4267
+    - name: superoxide:superoxide oxidoreductase
+    - metabolites: !!omap
+      - s_0794: -2
+      - s_0837: 1
+      - s_1275: 1
+      - s_3928: -2
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR104C
+    - annotation: !!omap
+      - ec-code: 1.15.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4268
+    - name: Endoplasmic reticulum mannosyl-oligosaccharide 1,2-alpha-mannosidase (EC 3.2.1.113) (ER alpha-1,2-mannosidase) (Man(9)-alpha-mannosidase)
+    - metabolites: !!omap
+      - s_0804: -4
+      - s_3774: -1
+      - s_3929: 1
+      - s_3930: 4
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR131W or YLR057W
+    - annotation: !!omap
+      - ec-code:
+        - 3.2.1.113
+        - 3.2.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4269
+    - name: alpha 1,2-mannosyloligosaccharide alpha-D-mannohydrolase
+    - metabolites: !!omap
+      - s_0804: -1
+      - s_3774: -1
+      - s_3888: 1
+      - s_3930: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR131W or YLR057W
+    - annotation: !!omap
+      - ec-code:
+        - 3.2.1.113
+        - 3.2.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4270
+    - name: ethylnitronate:oxygen 2-oxidoreductase (nitrite-forming)
+    - metabolites: !!omap
+      - s_0359: 1
+      - s_0714: 1
+      - s_0717: -1
+      - s_0803: 1
+      - s_1275: -1
+      - s_3931: -1
+      - s_3932: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YJR149W
+    - annotation: !!omap
+      - ec-code: 1.13.12.16
+    - confidence_score: 0
+  - !!omap
+    - id: r_4271
+    - name: O-Succinyl-L-homoserine succinate-lyase (deaminating; 2-oxobutanoate-forming)
+    - metabolites: !!omap
+      - s_0178: 1
+      - s_0419: 1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1241: -1
+      - s_1458: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLL058W or YML082W
+    - annotation: !!omap
+      - ec-code: 2.5.1.48
+    - confidence_score: 0
+  - !!omap
+    - id: r_4272
+    - name: Fe(II):NADP+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1207: 1
+      - s_1212: -1
+      - s_3933: -2
+      - s_3934: 2
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR047C or YKL220C or YLL051C or YLR214W or YNR060W or YOL152W or YOR381W or YOR384W
+    - annotation: !!omap
+      - ec-code: 1.16.1.7
+    - confidence_score: 0
+  - !!omap
+    - id: r_4273
+    - name: acyl-CoA:sn-glycerol-3-phosphate 1-O-acyltransferase
+    - metabolites: !!omap
+      - s_0530: 1
+      - s_3935: -1
+      - s_3936: -1
+      - s_3937: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR099C or YPR139C
+    - annotation: !!omap
+      - ec-code: 2.3.1.51
+    - confidence_score: 0
+  - !!omap
+    - id: r_4274
+    - name: diphthine:ammonia ligase (AMP-forming)
+    - metabolites: !!omap
+      - s_0419: -1
+      - s_0423: 1
+      - s_0434: -1
+      - s_0633: 1
+      - s_0794: -1
+      - s_3938: -1
+      - s_3939: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR143W
+    - annotation: !!omap
+      - ec-code: 6.3.1.14
+    - confidence_score: 0
+  - !!omap
+    - id: r_4275
+    - name: 8-oxo-dGTP diphosphohydrolase
+    - metabolites: !!omap
+      - s_0638: 1
+      - s_0809: -1
+      - s_3940: -1
+      - s_3941: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR151C
+    - annotation: !!omap
+      - ec-code: 3.6.1.55
+    - confidence_score: 0
+  - !!omap
+    - id: r_4276
+    - name: octanoyl-[acp]:protein N6-octanoyltransferase
+    - metabolites: !!omap
+      - s_1254: -1
+      - s_1845: 1
+      - s_3942: -1
+      - s_3943: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR239C
+    - annotation: !!omap
+      - ec-code: 2.3.1.181
+    - confidence_score: 0
+  - !!omap
+    - id: r_4277
+    - name: lipoyl-[acp]:protein N6-lipoyltransferase
+    - metabolites: !!omap
+      - s_1845: 1
+      - s_3942: -1
+      - s_3944: -1
+      - s_3945: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR239C
+    - annotation: !!omap
+      - ec-code: 2.3.1.181
+    - confidence_score: 0
+  - !!omap
+    - id: r_4278
+    - name: ATP:D-fructose-6-phosphate 2-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0442: 1
+      - s_3946: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR345W
+    - annotation: !!omap
+      - ec-code:
+        - 2.7.1.105
+        - 3.1.3.46
+    - confidence_score: 0
+  - !!omap
+    - id: r_4279
+    - name: ATP:D-fructose 6-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0553: -1
+      - s_3946: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR446W
+    - annotation: !!omap
+      - ec-code: 2.7.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4280
+    - name: ATP:beta-D-glucose 6-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_3947: -1
+      - s_3948: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR446W
+    - annotation: !!omap
+      - ec-code: 2.7.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4281
+    - name: ATP:alpha-D-glucose 6-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_3949: -1
+      - s_3950: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR446W
+    - annotation: !!omap
+      - ec-code: 2.7.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4282
+    - name: ATP:D-glucosamine 6-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0412: 1
+      - s_0434: -1
+      - s_3951: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR446W
+    - annotation: !!omap
+      - ec-code: 2.7.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4283
+    - name: ATP:D-fructose 6-phosphotransferase
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_3946: 1
+      - s_3952: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR446W
+    - annotation: !!omap
+      - ec-code: 2.7.1.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4284
+    - name: alpha-D-Glucose 6-phosphate ketol-isomerase
+    - metabolites: !!omap
+      - s_3948: 1
+      - s_3950: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR099C
+    - annotation: !!omap
+      - ec-code: 5.1.3.15
+    - confidence_score: 0
+  - !!omap
+    - id: r_4285
+    - name: Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)
+    - metabolites: !!omap
+      - s_0180: 1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1207: -1
+      - s_1212: 1
+      - s_3953: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4286
+    - name: Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3954: -1
+      - s_3955: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4287
+    - name: D-Glyceraldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0570: -1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3895: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4288
+    - name: 4-Aminobutyraldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0274: -1
+      - s_0734: 1
+      - s_0794: 2
+      - s_0803: -1
+      - s_1207: -1
+      - s_1212: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4289
+    - name: 4-aminobutanal:NAD+ 1-oxidoreductase; 4-aminobutyraldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0274: -1
+      - s_0734: 1
+      - s_0794: 2
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4290
+    - name: Indole-3-acetaldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 2
+      - s_0803: -1
+      - s_0850: -1
+      - s_0853: 1
+      - s_1198: -1
+      - s_1203: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4291
+    - name: 2-Propyn-1-al:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3956: -1
+      - s_3957: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4292
+    - name: D-Glucuronolactone:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -2
+      - s_1198: -1
+      - s_1203: 1
+      - s_3958: -1
+      - s_3959: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4293
+    - name: 4-Trimethylammoniobutanal:NAD+ 1-oxidoreductase; 4-Trimethylammoniobutanal:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3960: -1
+      - s_3961: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4294
+    - name: (S)-Methylmalonate semialdehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3962: -1
+      - s_3963: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4295
+    - name: Imidazole acetaldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3964: -1
+      - s_3965: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4296
+    - name: 3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3966: -1
+      - s_3967: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4297
+    - name: 5-Hydroxyindoleacetaldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3968: -1
+      - s_3969: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4298
+    - name: N4-Acetylaminobutanal:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3970: -1
+      - s_3971: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4299
+    - name: Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)
+    - metabolites: !!omap
+      - s_0794: 2
+      - s_0803: -1
+      - s_3972: -1
+      - s_3973: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4300
+    - name: Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)
+    - metabolites: !!omap
+      - s_0794: 2
+      - s_0803: -1
+      - s_3974: -1
+      - s_3975: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4301
+    - name: Chloroacetaldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3976: -1
+      - s_3977: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4302
+    - name: Aldehyde:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3978: -1
+      - s_3979: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4303
+    - name: farnesal:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_0803: -1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3980: -1
+      - s_3981: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR110C
+    - annotation: !!omap
+      - ec-code: 1.2.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4304
+    - name: Probable phospholipid-transporting ATPase DNF3 (EC 3.6.3.1) (Aminophospholipid translocase) (APT) (Phospholipid translocase) (PLT)
+    - metabolites: !!omap
+      - s_2783: 1
+      - s_2808: -1
+      - s_2831: -1
+      - s_2966: 1
+      - s_3982: -1
+      - s_3983: 1
+      - s_3984: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR162C
+    - annotation: !!omap
+      - ec-code: 3.6.3.1
+    - confidence_score: 0
+  - !!omap
+    - id: r_4305
+    - name: Putative esterase YMR210W (EC 3.1.1.-)
+    - metabolites: !!omap
+      - s_0765: 1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1260: 1
+      - s_3985: -1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR210W
+    - annotation: !!omap
+      - ec-code: 3.1.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4306
+    - name: GDP-mannose:glycolipid 1,2-alpha-D-mannosyltransferase
+    - metabolites: !!omap
+      - s_3887: -1
+      - s_3889: 1
+      - s_3893: -1
+      - s_3986: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL048W
+    - annotation: !!omap
+      - ec-code: 2.4.1.131
+    - confidence_score: 0
+  - !!omap
+    - id: r_4307
+    - name: GDP-mannose:glycolipid 1,2-alpha-D-mannosyltransferase
+    - metabolites: !!omap
+      - s_3887: -1
+      - s_3889: 1
+      - s_3986: -1
+      - s_3987: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL048W
+    - annotation: !!omap
+      - ec-code: 2.4.1.131
+    - confidence_score: 0
+  - !!omap
+    - id: r_4308
+    - name: S-adenosyl-L-methionine:carnosine N-methyltransferase
+    - metabolites: !!omap
+      - s_1413: 1
+      - s_1416: -1
+      - s_3988: -1
+      - s_3989: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL092W
+    - annotation: !!omap
+      - ec-code: 2.1.1.22
+    - confidence_score: 0
+  - !!omap
+    - id: r_4309
+    - name: Alpha-1,2-mannosyltransferase ALG9 (EC 2.4.1.259) (EC 2.4.1.261) (Asparagine-linked glycosylation protein 9) (Dol-P-Man:Man(6)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase) (Dol-P-Man:Man(8)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase)
+    - metabolites: !!omap
+      - s_0644: -1
+      - s_0646: 1
+      - s_3990: -1
+      - s_3991: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL219C
+    - annotation: !!omap
+      - ec-code:
+        - 2.4.1.259
+        - 2.4.1.261
+    - confidence_score: 0
+  - !!omap
+    - id: r_4310
+    - name: Alpha-1,2-mannosyltransferase ALG9 (EC 2.4.1.259) (EC 2.4.1.261) (Asparagine-linked glycosylation protein 9) (Dol-P-Man:Man(6)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase) (Dol-P-Man:Man(8)GlcNAc(2)-PP-Dol alpha-1,2-mannosyltransferase)
+    - metabolites: !!omap
+      - s_0644: -1
+      - s_0646: 1
+      - s_3992: -1
+      - s_3993: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL219C
+    - annotation: !!omap
+      - ec-code:
+        - 2.4.1.259
+        - 2.4.1.261
+    - confidence_score: 0
+  - !!omap
+    - id: r_4311
+    - name: Glycolate:NAD+ oxidoreductase
+    - metabolites: !!omap
+      - s_0779: 1
+      - s_0794: 1
+      - s_1198: -1
+      - s_1203: 1
+      - s_3994: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNL274C
+    - annotation: !!omap
+      - ec-code: 1.1.1.26
+    - confidence_score: 0
+  - !!omap
+    - id: r_4312
+    - name: Dol-P-Man:Man(7)GlcNAc(2)-PP-Dol alpha-1,6-mannosyltransferase (EC 2.4.1.260) (Asparagine-linked glycosylation protein 12) (Dolichyl-P-Man:Man(7)GlcNAc(2)-PP-dolichyl-alpha-1,6-mannosyltransferase) (Extracellular mutant protein 39) (Mannosyltransferase ALG12)
+    - metabolites: !!omap
+      - s_0644: -1
+      - s_0646: 1
+      - s_3991: -1
+      - s_3992: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YNR030W
+    - annotation: !!omap
+      - ec-code: 2.4.1.260
+    - confidence_score: 0
+  - !!omap
+    - id: r_4313
+    - name: sucrose glucohydrolase
+    - metabolites: !!omap
+      - s_0553: 1
+      - s_0563: 1
+      - s_0803: -1
+      - s_3995: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL157C
+    - annotation: !!omap
+      - ec-code: 3.2.1.10
+    - confidence_score: 0
+  - !!omap
+    - id: r_4314
+    - name: Isomaltose 6-alpha-D-glucanohydrolase
+    - metabolites: !!omap
+      - s_0563: 1
+      - s_0803: -1
+      - s_3949: 1
+      - s_3996: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL157C
+    - annotation: !!omap
+      - ec-code: 3.2.1.10
+    - confidence_score: 0
+  - !!omap
+    - id: r_4315
+    - name: Dextrin 6-alpha-D-glucanohydrolase
+    - metabolites: !!omap
+      - s_0563: 2
+      - s_0803: -1
+      - s_3997: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL157C
+    - annotation: !!omap
+      - ec-code: 3.2.1.10
+    - confidence_score: 0
+  - !!omap
+    - id: r_4316
+    - name: dolichyl beta-D-glucosyl phosphate:D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase
+    - metabolites: !!omap
+      - s_0646: 1
+      - s_3907: -1
+      - s_3993: -1
+      - s_3998: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR002W
+    - annotation: !!omap
+      - ec-code: 2.4.1.267
+    - confidence_score: 0
+  - !!omap
+    - id: r_4317
+    - name: dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase
+    - metabolites: !!omap
+      - s_0646: 1
+      - s_3907: -1
+      - s_3908: 1
+      - s_3998: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR067C
+    - annotation: !!omap
+      - ec-code: 2.4.1.265
+    - confidence_score: 0
+  - !!omap
+    - id: r_4318
+    - name: GPI mannosyltransferase 4 (EC 2.4.1.-) (GPI mannosyltransferase IV) (GPI-MT-IV)
+    - metabolites: !!omap
+      - s_0644: -1
+      - s_0646: 1
+      - s_3999: -1
+      - s_4000: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR149C
+    - annotation: !!omap
+      - ec-code: 2.4.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4319
+    - name: protein N6-(octanoyl)lysine:sulfur sulfurtransferase
+    - metabolites: !!omap
+      - s_1031: 2
+      - s_1419: -2
+      - s_3943: -1
+      - s_3945: 1
+      - s_4001: -2
+      - s_4002: 2
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR196C
+    - annotation: !!omap
+      - ec-code: 2.8.1.8
+    - confidence_score: 0
+  - !!omap
+    - id: r_4320
+    - name: octanoyl-[acp]:sulfur sulfurtransferase
+    - metabolites: !!omap
+      - s_1031: 2
+      - s_1254: -1
+      - s_1419: -2
+      - s_3944: 1
+      - s_4001: -2
+      - s_4002: 2
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR196C
+    - annotation: !!omap
+      - ec-code: 2.8.1.8
+    - confidence_score: 0
+  - !!omap
+    - id: r_4321
+    - name: Iron sulfur cluster assembly protein 2, mitochondrial (Iron sulfur cluster scaffold protein 2)
+    - metabolites: !!omap
+      - s_4003: -1
+      - s_4004: -1
+      - s_4005: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR226C or YPL135W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4322
+    - name: thiosulfate:cyanide sulfurtranserase
+    - metabolites: !!omap
+      - s_0799: 2
+      - s_4006: -1
+      - s_4007: -1
+      - s_4008: 1
+      - s_4009: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR251C or YOR285W or YOR286W
+    - annotation: !!omap
+      - ec-code:
+        - 2.8.1.1
+        - 2.8.1.-
+    - confidence_score: 0
+  - !!omap
+    - id: r_4323
+    - name: Magnesium transporter MRS2, mitochondrial (RNA-splicing protein MRS2)
+    - metabolites: !!omap
+      - s_4010: -1
+      - s_4011: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR334W or YPL060W
+    - confidence_score: 0
+  - !!omap
+    - id: r_4324
+    - name: UDPglucose:dolichyl-phosphate beta-D-glucosyltransferase
+    - metabolites: !!omap
+      - s_0646: -1
+      - s_3766: 1
+      - s_3907: 1
+      - s_4012: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YPL227C
+    - annotation: !!omap
+      - ec-code: 2.4.1.117
+    - confidence_score: 0
+  - !!omap
+    - id: r_4325
+    - name: Putative sulfate transporter YPR003C
+    - metabolites: !!omap
+      - s_1467: -1
+      - s_4013: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YPR003C
+    - confidence_score: 0
+  - !!omap
+    - id: r_4326
+    - name: Pyridoxine:NADP+ 4-oxidoreductase
+    - metabolites: !!omap
+      - s_0794: 1
+      - s_1207: -1
+      - s_1212: 1
+      - s_1392: 1
+      - s_1396: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YPR127W
+    - annotation: !!omap
+      - ec-code: 1.1.1.65
+    - confidence_score: 0
+  - !!omap
+    - id: r_4327
+    - name: [1,4-(N-Acetyl-beta-D-glucosaminyl)]n glycanohydrolase
+    - metabolites: !!omap
+      - s_0509: -1
+      - s_0803: -2
+      - s_4014: 3
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR371W or YLR286C
+    - annotation: !!omap
+      - ec-code: 3.2.1.14
+    - confidence_score: 0
+  - !!omap
+    - id: r_4328
+    - name: Protein PNS1 (pH nine-sensitive protein 1)
+    - metabolites: !!omap
+      - s_0512: -1
+      - s_0513: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOR161C
+    - confidence_score: 0
+  - !!omap
+    - id: r_4329
+    - name: Polyphosphate phosphohydrolase
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_1322: 2
+      - s_4015: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YHR201C or YDR452W
+    - annotation: !!omap
+      - ec-code:
+        - 3.6.1.10
+        - 3.6.1.-
+        - 3.6.1.11
+    - confidence_score: 0
+  - !!omap
+    - id: r_4330
+    - name: Copper-transporting ATPase (EC 3.6.3.54) (Cu(2+)-ATPase)
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1322: 1
+      - s_4016: -1
+      - s_4017: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR270W
+    - annotation: !!omap
+      - ec-code: 3.6.3.54
+    - confidence_score: 0
+  - !!omap
+    - id: r_4331
+    - name: Endopolyphosphatase (EC 3.6.1.10) (Deoxyadenosine triphosphate phosphohydrolase) (dATP phosphohydrolase) (EC 3.6.1.-) (Exopolyphosphatase) (EC 3.6.1.11) (Phosphate metabolism protein 5)
+    - metabolites: !!omap
+      - s_0582: 1
+      - s_0586: -1
+      - s_0803: -1
+      - s_1322: 1
+    - lower_bound: 0
+    - upper_bound: 1000
+    - gene_reaction_rule: YDR452W
+    - annotation: !!omap
+      - ec-code:
+        - 3.6.1.10
+        - 3.6.1.-
+        - 3.6.1.11
+    - confidence_score: 0
+  - !!omap
+    - id: r_4332
+    - name: Monoamide of a dicarboxylic acid amidohydrolase
+    - metabolites: !!omap
+      - s_0180: 1
+      - s_0419: 1
+      - s_0803: -1
+      - s_4018: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YLR351C
+    - annotation: !!omap
+      - ec-code: 3.5.1.3
+    - confidence_score: 0
+  - !!omap
+    - id: r_4333
+    - name: Iron-sulfur clusters transporter ATM1, mitochondrial
+    - metabolites: !!omap
+      - s_0394: 1
+      - s_0434: -1
+      - s_0794: 1
+      - s_0803: -1
+      - s_1322: 1
+      - s_4019: -1
+      - s_4020: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YMR301C
+    - confidence_score: 0
+  - !!omap
+    - id: r_4334
+    - name: Oligo-1,6-glucosidase IMA2 (EC 3.2.1.10) (Alpha-glucosidase) (Isomaltase 2)
+    - metabolites: !!omap
+      - s_0803: -1
+      - s_3949: 2
+      - s_4021: -1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YOL157C
+    - annotation: !!omap
+      - ec-code: 3.2.1.10
+    - confidence_score: 0
+  - !!omap
+    - id: r_4335
+    - name: UDP-N-acetylglucosamine transporter YEA4
+    - metabolites: !!omap
+      - s_1544: -1
+      - s_4022: 1
+    - lower_bound: -1000
+    - upper_bound: 1000
+    - gene_reaction_rule: YEL004W
+    - confidence_score: 0
 - genes:
   - !!omap
     - id: Q0045
@@ -74963,6 +77618,9 @@
     - id: YAL038W
     - name: CDC19
   - !!omap
+    - id: YAL039C
+    - name: CYC3
+  - !!omap
     - id: YAL044C
     - name: GCV3
   - !!omap
@@ -74971,6 +77629,9 @@
   - !!omap
     - id: YAL060W
     - name: BDH1
+  - !!omap
+    - id: YAL061W
+    - name: BDH2
   - !!omap
     - id: YAL062W
     - name: GDH3
@@ -75023,6 +77684,12 @@
     - id: YBL076C
     - name: ILS1
   - !!omap
+    - id: YBL080C
+    - name: PET112
+  - !!omap
+    - id: YBL091C
+    - name: MAP2
+  - !!omap
     - id: YBL098W
     - name: BNA4
   - !!omap
@@ -75059,6 +77726,9 @@
     - id: YBR021W
     - name: FUR4
   - !!omap
+    - id: YBR022W
+    - name: POA1
+  - !!omap
     - id: YBR023C
     - name: CHS3
   - !!omap
@@ -75089,6 +77759,9 @@
     - id: YBR042C
     - name: CST26
   - !!omap
+    - id: YBR046C
+    - name: ZTA1
+  - !!omap
     - id: YBR058C-A
     - name: TSC3
   - !!omap
@@ -75097,6 +77770,9 @@
   - !!omap
     - id: YBR069C
     - name: TAT1
+  - !!omap
+    - id: YBR070C
+    - name: ALG14
   - !!omap
     - id: YBR084W
     - name: MIS1
@@ -75115,6 +77791,9 @@
   - !!omap
     - id: YBR110W
     - name: ALG1
+  - !!omap
+    - id: YBR111C
+    - name: YSA1
   - !!omap
     - id: YBR115C
     - name: LYS2
@@ -75136,6 +77815,9 @@
   - !!omap
     - id: YBR145W
     - name: ADH5
+  - !!omap
+    - id: YBR147W
+    - name: RTC2
   - !!omap
     - id: YBR149W
     - name: ARA1
@@ -75191,8 +77873,20 @@
     - id: YBR221C
     - name: PDB1
   - !!omap
+    - id: YBR222C
+    - name: PCS60
+  - !!omap
+    - id: YBR229C
+    - name: ROT2
+  - !!omap
+    - id: YBR235W
+    - name: VHC1
+  - !!omap
     - id: YBR241C
     - name: YBR241C
+  - !!omap
+    - id: YBR243C
+    - name: ALG7
   - !!omap
     - id: YBR244W
     - name: GPX2
@@ -75218,6 +77912,9 @@
     - id: YBR278W
     - name: DPB3
   - !!omap
+    - id: YBR281C
+    - name: DUG2
+  - !!omap
     - id: YBR291C
     - name: CTP1
   - !!omap
@@ -75226,6 +77923,9 @@
   - !!omap
     - id: YBR294W
     - name: SUL1
+  - !!omap
+    - id: YBR295W
+    - name: PCA1
   - !!omap
     - id: YBR296C
     - name: PHO89
@@ -75244,6 +77944,9 @@
   - !!omap
     - id: YCL009C
     - name: ILV6
+  - !!omap
+    - id: YCL017C
+    - name: NFS1
   - !!omap
     - id: YCL018W
     - name: LEU2
@@ -75283,6 +77986,9 @@
   - !!omap
     - id: YCR010C
     - name: ADY2
+  - !!omap
+    - id: YCR011C
+    - name: ADP1
   - !!omap
     - id: YCR012W
     - name: PGK1
@@ -75328,6 +78034,9 @@
   - !!omap
     - id: YCR105W
     - name: ADH7
+  - !!omap
+    - id: YCR107W
+    - name: AAD3
   - !!omap
     - id: YDL004W
     - name: ATP16
@@ -75389,6 +78098,9 @@
     - id: YDL103C
     - name: QRI1
   - !!omap
+    - id: YDL120W
+    - name: YFH1
+  - !!omap
     - id: YDL131W
     - name: LYS21
   - !!omap
@@ -75440,8 +78152,20 @@
     - id: YDL215C
     - name: GDH2
   - !!omap
+    - id: YDL219W
+    - name: DTD1
+  - !!omap
+    - id: YDL236W
+    - name: PHO13
+  - !!omap
     - id: YDL238C
     - name: GUD1
+  - !!omap
+    - id: YDL243C
+    - name: AAD4
+  - !!omap
+    - id: YDL244W
+    - name: THI13
   - !!omap
     - id: YDL245C
     - name: HXT15
@@ -75458,6 +78182,9 @@
     - id: YDR007W
     - name: TRP1
   - !!omap
+    - id: YDR009W
+    - name: GAL3
+  - !!omap
     - id: YDR017C
     - name: KCS1
   - !!omap
@@ -75473,8 +78200,20 @@
     - id: YDR035W
     - name: ARO3
   - !!omap
+    - id: YDR036C
+    - name: EHD3
+  - !!omap
     - id: YDR037W
     - name: KRS1
+  - !!omap
+    - id: YDR038C
+    - name: ENA5
+  - !!omap
+    - id: YDR039C
+    - name: ENA2
+  - !!omap
+    - id: YDR040C
+    - name: ENA1
   - !!omap
     - id: YDR044W
     - name: HEM13
@@ -75490,6 +78229,9 @@
   - !!omap
     - id: YDR050C
     - name: TPI1
+  - !!omap
+    - id: YDR051C
+    - name: DET1
   - !!omap
     - id: YDR058C
     - name: TGL2
@@ -75511,6 +78253,9 @@
   - !!omap
     - id: YDR105C
     - name: TMS1
+  - !!omap
+    - id: YDR111C
+    - name: ALT2
   - !!omap
     - id: YDR121W
     - name: DPB4
@@ -75569,6 +78314,9 @@
     - id: YDR242W
     - name: AMD2
   - !!omap
+    - id: YDR248C
+    - name: YDR248C
+  - !!omap
     - id: YDR256C
     - name: CTA1
   - !!omap
@@ -75577,6 +78325,9 @@
   - !!omap
     - id: YDR268W
     - name: MSW1
+  - !!omap
+    - id: YDR270W
+    - name: CCC2
   - !!omap
     - id: YDR272W
     - name: GLO2
@@ -75626,6 +78377,9 @@
     - id: YDR345C
     - name: HXT3
   - !!omap
+    - id: YDR352W
+    - name: YPQ2
+  - !!omap
     - id: YDR353W
     - name: TRR1
   - !!omap
@@ -75637,6 +78391,9 @@
   - !!omap
     - id: YDR368W
     - name: YPR1
+  - !!omap
+    - id: YDR371W
+    - name: CTS2
   - !!omap
     - id: YDR373W
     - name: FRQ1
@@ -75674,14 +78431,26 @@
     - id: YDR408C
     - name: ADE8
   - !!omap
+    - id: YDR410C
+    - name: STE14
+  - !!omap
     - id: YDR419W
     - name: RAD30
   - !!omap
     - id: YDR428C
     - name: BNA7
   - !!omap
+    - id: YDR437W
+    - name: GPI19
+  - !!omap
+    - id: YDR440W
+    - name: DOT1
+  - !!omap
     - id: YDR441C
     - name: APT2
+  - !!omap
+    - id: YDR452W
+    - name: PPN1
   - !!omap
     - id: YDR453C
     - name: TSA2
@@ -75716,6 +78485,9 @@
     - id: YDR513W
     - name: GRX2
   - !!omap
+    - id: YDR516C
+    - name: EMI2
+  - !!omap
     - id: YDR529C
     - name: QCR7
   - !!omap
@@ -75725,6 +78497,9 @@
     - id: YDR531W
     - name: CAB1
   - !!omap
+    - id: YDR533C
+    - name: HSP31
+  - !!omap
     - id: YDR536W
     - name: STL1
   - !!omap
@@ -75733,6 +78508,9 @@
   - !!omap
     - id: YDR539W
     - name: FDC1
+  - !!omap
+    - id: YEL004W
+    - name: YEA4
   - !!omap
     - id: YEL006W
     - name: YEA6
@@ -75751,6 +78529,9 @@
   - !!omap
     - id: YEL029C
     - name: BUD16
+  - !!omap
+    - id: YEL031W
+    - name: SPF1
   - !!omap
     - id: YEL038W
     - name: UTR4
@@ -75779,8 +78560,14 @@
     - id: YEL063C
     - name: CAN1
   - !!omap
+    - id: YEL066W
+    - name: HPA3
+  - !!omap
     - id: YEL069C
     - name: HXT13
+  - !!omap
+    - id: YEL070W
+    - name: DSF1
   - !!omap
     - id: YEL071W
     - name: DLD3
@@ -75790,6 +78577,9 @@
   - !!omap
     - id: YER005W
     - name: YND1
+  - !!omap
+    - id: YER010C
+    - name: YER010C
   - !!omap
     - id: YER014W
     - name: HEM14
@@ -75811,6 +78601,9 @@
   - !!omap
     - id: YER037W
     - name: PHM8
+  - !!omap
+    - id: YER042W
+    - name: MXR1
   - !!omap
     - id: YER043C
     - name: SAH1
@@ -75857,6 +78650,9 @@
     - id: YER086W
     - name: ILV1
   - !!omap
+    - id: YER087W
+    - name: AIM10
+  - !!omap
     - id: YER090W
     - name: TRP2
   - !!omap
@@ -75874,6 +78670,9 @@
   - !!omap
     - id: YER152C
     - name: YER152C
+  - !!omap
+    - id: YER163C
+    - name: GCG1
   - !!omap
     - id: YER170W
     - name: ADK2
@@ -75926,8 +78725,14 @@
     - id: YFL058W
     - name: THI5
   - !!omap
+    - id: YFL059W
+    - name: SNZ3
+  - !!omap
     - id: YFL060C
     - name: SNO3
+  - !!omap
+    - id: YFL061W
+    - name: DDI2
   - !!omap
     - id: YFR015C
     - name: GSY1
@@ -75944,6 +78749,9 @@
     - id: YFR033C
     - name: QCR6
   - !!omap
+    - id: YFR044C
+    - name: DUG1
+  - !!omap
     - id: YFR047C
     - name: BNA6
   - !!omap
@@ -75956,6 +78764,9 @@
     - id: YGL001C
     - name: ERG26
   - !!omap
+    - id: YGL006W
+    - name: PMC1
+  - !!omap
     - id: YGL008C
     - name: PMA1
   - !!omap
@@ -75965,14 +78776,29 @@
     - id: YGL012W
     - name: ERG4
   - !!omap
+    - id: YGL017W
+    - name: ATE1
+  - !!omap
+    - id: YGL022W
+    - name: STT3
+  - !!omap
     - id: YGL026C
     - name: TRP5
+  - !!omap
+    - id: YGL027C
+    - name: CWH41
   - !!omap
     - id: YGL037C
     - name: PNC1
   - !!omap
+    - id: YGL038C
+    - name: OCH1
+  - !!omap
     - id: YGL040C
     - name: HEM2
+  - !!omap
+    - id: YGL047W
+    - name: ALG13
   - !!omap
     - id: YGL055W
     - name: OLE1
@@ -75982,6 +78808,9 @@
   - !!omap
     - id: YGL063W
     - name: PUS2
+  - !!omap
+    - id: YGL065C
+    - name: ALG2
   - !!omap
     - id: YGL067W
     - name: NPY1
@@ -76016,6 +78845,15 @@
     - id: YGL154C
     - name: LYS5
   - !!omap
+    - id: YGL156W
+    - name: AMS1
+  - !!omap
+    - id: YGL167C
+    - name: PMR1
+  - !!omap
+    - id: YGL169W
+    - name: SUA5
+  - !!omap
     - id: YGL184C
     - name: STR3
   - !!omap
@@ -76027,6 +78865,9 @@
   - !!omap
     - id: YGL191W
     - name: COX13
+  - !!omap
+    - id: YGL196W
+    - name: DSD1
   - !!omap
     - id: YGL202W
     - name: ARO8
@@ -76061,6 +78902,9 @@
     - id: YGR010W
     - name: NMA2
   - !!omap
+    - id: YGR012W
+    - name: MCY1
+  - !!omap
     - id: YGR019W
     - name: UGA1
   - !!omap
@@ -76069,6 +78913,12 @@
   - !!omap
     - id: YGR032W
     - name: GSC2
+  - !!omap
+    - id: YGR036C
+    - name: CAX4
+  - !!omap
+    - id: YGR046W
+    - name: TAM41
   - !!omap
     - id: YGR055W
     - name: MUP1
@@ -76112,8 +78962,14 @@
     - id: YGR143W
     - name: SKN1
   - !!omap
+    - id: YGR144W
+    - name: THI4
+  - !!omap
     - id: YGR147C
     - name: NAT2
+  - !!omap
+    - id: YGR154C
+    - name: GTO1
   - !!omap
     - id: YGR155W
     - name: CYS4
@@ -76165,6 +79021,15 @@
   - !!omap
     - id: YGR209C
     - name: TRX2
+  - !!omap
+    - id: YGR216C
+    - name: GPI1
+  - !!omap
+    - id: YGR227W
+    - name: DIE2
+  - !!omap
+    - id: YGR234W
+    - name: YHB1
   - !!omap
     - id: YGR240C
     - name: PFK1
@@ -76229,6 +79094,9 @@
     - id: YHL016C
     - name: DUR3
   - !!omap
+    - id: YHL018W
+    - name: YHL018W
+  - !!omap
     - id: YHL032C
     - name: GUT1
   - !!omap
@@ -76243,6 +79111,9 @@
   - !!omap
     - id: YHR007C
     - name: ERG11
+  - !!omap
+    - id: YHR008C
+    - name: SOD2
   - !!omap
     - id: YHR011W
     - name: DIA4
@@ -76273,6 +79144,12 @@
   - !!omap
     - id: YHR042W
     - name: NCP1
+  - !!omap
+    - id: YHR043C
+    - name: DOG2
+  - !!omap
+    - id: YHR044C
+    - name: DOG1
   - !!omap
     - id: YHR046C
     - name: INM1
@@ -76316,8 +79193,14 @@
     - id: YHR106W
     - name: TRR2
   - !!omap
+    - id: YHR109W
+    - name: CTM1
+  - !!omap
     - id: YHR116W
     - name: COX23
+  - !!omap
+    - id: YHR119W
+    - name: SET1
   - !!omap
     - id: YHR123W
     - name: EPT1
@@ -76348,6 +79231,9 @@
   - !!omap
     - id: YHR190W
     - name: ERG9
+  - !!omap
+    - id: YHR201C
+    - name: PPX1
   - !!omap
     - id: YHR208W
     - name: BAT1
@@ -76381,6 +79267,12 @@
   - !!omap
     - id: YIL021W
     - name: RPB3
+  - !!omap
+    - id: YIL023C
+    - name: YKE4
+  - !!omap
+    - id: YIL043C
+    - name: CBR1
   - !!omap
     - id: YIL053W
     - name: GPP1
@@ -76457,8 +79349,14 @@
     - id: YIR034C
     - name: LYS1
   - !!omap
+    - id: YIR036C
+    - name: IRC24
+  - !!omap
     - id: YIR037W
     - name: HYR1
+  - !!omap
+    - id: YIR038C
+    - name: GTT1
   - !!omap
     - id: YJL003W
     - name: COX16
@@ -76475,11 +79373,17 @@
     - id: YJL045W
     - name: YJL045W
   - !!omap
+    - id: YJL046W
+    - name: AIM22
+  - !!omap
     - id: YJL052W
     - name: TDH1
   - !!omap
     - id: YJL060W
     - name: BNA3
+  - !!omap
+    - id: YJL062W
+    - name: LAS21
   - !!omap
     - id: YJL068C
     - name: YJL068C
@@ -76504,6 +79408,9 @@
   - !!omap
     - id: YJL121C
     - name: RPE1
+  - !!omap
+    - id: YJL126W
+    - name: NIT2
   - !!omap
     - id: YJL129C
     - name: TRK1
@@ -76537,6 +79444,9 @@
   - !!omap
     - id: YJL167W
     - name: ERG20
+  - !!omap
+    - id: YJL168C
+    - name: SET2
   - !!omap
     - id: YJL180C
     - name: ATP12
@@ -76592,6 +79502,9 @@
     - id: YJR025C
     - name: BNA1
   - !!omap
+    - id: YJR040W
+    - name: GEF1
+  - !!omap
     - id: YJR043C
     - name: POL32
   - !!omap
@@ -76600,6 +79513,9 @@
   - !!omap
     - id: YJR049C
     - name: UTR1
+  - !!omap
+    - id: YJR051W
+    - name: OSM1
   - !!omap
     - id: YJR057W
     - name: CDC8
@@ -76625,6 +79541,9 @@
     - id: YJR103W
     - name: URA8
   - !!omap
+    - id: YJR104C
+    - name: SOD1
+  - !!omap
     - id: YJR105W
     - name: ADO1
   - !!omap
@@ -76639,6 +79558,9 @@
   - !!omap
     - id: YJR130C
     - name: STR2
+  - !!omap
+    - id: YJR131W
+    - name: MNS1
   - !!omap
     - id: YJR133W
     - name: XPT1
@@ -76655,11 +79577,20 @@
     - id: YJR148W
     - name: BAT2
   - !!omap
+    - id: YJR149W
+    - name: YJR149W
+  - !!omap
     - id: YJR152W
     - name: DAL5
   - !!omap
     - id: YJR153W
     - name: PGU1
+  - !!omap
+    - id: YJR155W
+    - name: AAD10
+  - !!omap
+    - id: YJR156C
+    - name: THI11
   - !!omap
     - id: YJR158W
     - name: HXT16
@@ -76709,17 +79640,26 @@
     - id: YKL067W
     - name: YNK1
   - !!omap
+    - id: YKL069W
+    - name: YKL069W
+  - !!omap
     - id: YKL080W
     - name: VMA5
   - !!omap
     - id: YKL085W
     - name: MDH1
   - !!omap
+    - id: YKL087C
+    - name: CYT2
+  - !!omap
     - id: YKL088W
     - name: CAB3
   - !!omap
     - id: YKL094W
     - name: YJU3
+  - !!omap
+    - id: YKL103C
+    - name: APE1
   - !!omap
     - id: YKL104C
     - name: GFA1
@@ -76750,6 +79690,9 @@
   - !!omap
     - id: YKL148C
     - name: SDH1
+  - !!omap
+    - id: YKL150W
+    - name: MCR1
   - !!omap
     - id: YKL152C
     - name: GPM1
@@ -76784,11 +79727,20 @@
     - id: YKL212W
     - name: SAC1
   - !!omap
+    - id: YKL215C
+    - name: OXP1
+  - !!omap
     - id: YKL216W
     - name: URA1
   - !!omap
     - id: YKL217W
     - name: JEN1
+  - !!omap
+    - id: YKL218C
+    - name: SRY1
+  - !!omap
+    - id: YKL220C
+    - name: FRE2
   - !!omap
     - id: YKR002W
     - name: PAP1
@@ -76829,6 +79781,9 @@
     - id: YKR072C
     - name: SIS2
   - !!omap
+    - id: YKR076W
+    - name: ECM4
+  - !!omap
     - id: YKR080W
     - name: MTD1
   - !!omap
@@ -76868,6 +79823,9 @@
     - id: YLL048C
     - name: YBT1
   - !!omap
+    - id: YLL051C
+    - name: FRE6
+  - !!omap
     - id: YLL052C
     - name: AQY2
   - !!omap
@@ -76876,6 +79834,9 @@
   - !!omap
     - id: YLL058W
     - name: YLL058W
+  - !!omap
+    - id: YLL060C
+    - name: GTT2
   - !!omap
     - id: YLL061W
     - name: MMP1
@@ -76907,8 +79868,14 @@
     - id: YLR044C
     - name: PDC1
   - !!omap
+    - id: YLR047C
+    - name: FRE8
+  - !!omap
     - id: YLR056W
     - name: ERG3
+  - !!omap
+    - id: YLR057W
+    - name: MNL2
   - !!omap
     - id: YLR058C
     - name: SHM2
@@ -76928,6 +79895,9 @@
     - id: YLR092W
     - name: SUL2
   - !!omap
+    - id: YLR099C
+    - name: ICT1
+  - !!omap
     - id: YLR100W
     - name: ERG27
   - !!omap
@@ -76946,8 +79916,14 @@
     - id: YLR142W
     - name: PUT1
   - !!omap
+    - id: YLR143W
+    - name: DPH6
+  - !!omap
     - id: YLR146C
     - name: SPE4
+  - !!omap
+    - id: YLR151C
+    - name: PCD1
   - !!omap
     - id: YLR153C
     - name: ACS2
@@ -76982,14 +79958,23 @@
     - id: YLR209C
     - name: PNP1
   - !!omap
+    - id: YLR214W
+    - name: FRE1
+  - !!omap
     - id: YLR231C
     - name: BNA5
   - !!omap
     - id: YLR237W
     - name: THI7
   - !!omap
+    - id: YLR239C
+    - name: LIP2
+  - !!omap
     - id: YLR240W
     - name: VPS34
+  - !!omap
+    - id: YLR244C
+    - name: MAP1
   - !!omap
     - id: YLR245C
     - name: CDD1
@@ -77005,6 +79990,9 @@
   - !!omap
     - id: YLR285W
     - name: NNT1
+  - !!omap
+    - id: YLR286C
+    - name: CTS1
   - !!omap
     - id: YLR295C
     - name: ATP14
@@ -77041,6 +80029,9 @@
   - !!omap
     - id: YLR348C
     - name: DIC1
+  - !!omap
+    - id: YLR351C
+    - name: NIT3
   - !!omap
     - id: YLR354C
     - name: TAL1
@@ -77144,6 +80135,9 @@
     - id: YML123C
     - name: PHO84
   - !!omap
+    - id: YML125C
+    - name: PGA3
+  - !!omap
     - id: YML126C
     - name: ERG13
   - !!omap
@@ -77189,8 +80183,14 @@
     - id: YMR084W
     - name: YMR084W
   - !!omap
+    - id: YMR087W
+    - name: YMR087W
+  - !!omap
     - id: YMR088C
     - name: VBA1
+  - !!omap
+    - id: YMR099C
+    - name: YMR099C
   - !!omap
     - id: YMR101C
     - name: SRT1
@@ -77212,6 +80212,9 @@
   - !!omap
     - id: YMR145C
     - name: NDE1
+  - !!omap
+    - id: YMR162C
+    - name: DNF3
   - !!omap
     - id: YMR165C
     - name: PAH1
@@ -77237,6 +80240,9 @@
     - id: YMR208W
     - name: ERG12
   - !!omap
+    - id: YMR210W
+    - name: MGL2
+  - !!omap
     - id: YMR217W
     - name: GUA1
   - !!omap
@@ -77249,11 +80255,17 @@
     - id: YMR241W
     - name: YHM2
   - !!omap
+    - id: YMR243C
+    - name: ZRC1
+  - !!omap
     - id: YMR246W
     - name: FAA4
   - !!omap
     - id: YMR250W
     - name: GAD1
+  - !!omap
+    - id: YMR251W
+    - name: GTO3
   - !!omap
     - id: YMR256C
     - name: COX7
@@ -77291,6 +80303,9 @@
     - id: YMR300C
     - name: ADE4
   - !!omap
+    - id: YMR301C
+    - name: ATM1
+  - !!omap
     - id: YMR303C
     - name: ADH2
   - !!omap
@@ -77305,6 +80320,9 @@
   - !!omap
     - id: YMR319C
     - name: FET4
+  - !!omap
+    - id: YMR322C
+    - name: SNO4
   - !!omap
     - id: YMR323W
     - name: ERR3
@@ -77324,8 +80342,14 @@
     - id: YNL037C
     - name: IDH1
   - !!omap
+    - id: YNL038W
+    - name: GPI15
+  - !!omap
     - id: YNL045W
     - name: LAP2
+  - !!omap
+    - id: YNL048W
+    - name: ALG11
   - !!omap
     - id: YNL052W
     - name: COX5A
@@ -77335,6 +80359,9 @@
   - !!omap
     - id: YNL073W
     - name: MSK1
+  - !!omap
+    - id: YNL092W
+    - name: YNL092W
   - !!omap
     - id: YNL101W
     - name: AVT4
@@ -77372,11 +80399,17 @@
     - id: YNL169C
     - name: PSD1
   - !!omap
+    - id: YNL191W
+    - name: DUG3
+  - !!omap
     - id: YNL192W
     - name: CHS1
   - !!omap
     - id: YNL202W
     - name: SPS19
+  - !!omap
+    - id: YNL219C
+    - name: ALG9
   - !!omap
     - id: YNL220W
     - name: ADE12
@@ -77408,6 +80441,9 @@
     - id: YNL270C
     - name: ALP1
   - !!omap
+    - id: YNL274C
+    - name: GOR1
+  - !!omap
     - id: YNL277W
     - name: MET2
   - !!omap
@@ -77428,6 +80464,21 @@
   - !!omap
     - id: YNL325C
     - name: FIG4
+  - !!omap
+    - id: YNL331C
+    - name: AAD14
+  - !!omap
+    - id: YNL332W
+    - name: THI12
+  - !!omap
+    - id: YNL333W
+    - name: SNZ2
+  - !!omap
+    - id: YNL334C
+    - name: SNO2
+  - !!omap
+    - id: YNL335W
+    - name: DDI3
   - !!omap
     - id: YNR001C
     - name: CIT1
@@ -77453,6 +80504,9 @@
     - id: YNR027W
     - name: BUD17
   - !!omap
+    - id: YNR030W
+    - name: ALG12
+  - !!omap
     - id: YNR033W
     - name: ABZ1
   - !!omap
@@ -77474,11 +80528,17 @@
     - id: YNR058W
     - name: BIO3
   - !!omap
+    - id: YNR060W
+    - name: FRE4
+  - !!omap
     - id: YNR067C
     - name: DSE4
   - !!omap
     - id: YNR072W
     - name: HXT17
+  - !!omap
+    - id: YNR073C
+    - name: MAN2
   - !!omap
     - id: YOL005C
     - name: RPB11
@@ -77522,6 +80582,9 @@
     - id: YOL068C
     - name: HST1
   - !!omap
+    - id: YOL075C
+    - name: YOL075C
+  - !!omap
     - id: YOL077W-A
     - name: ATP19
   - !!omap
@@ -77555,8 +80618,20 @@
     - id: YOL151W
     - name: GRE2
   - !!omap
+    - id: YOL152W
+    - name: FRE7
+  - !!omap
     - id: YOL156W
     - name: HXT11
+  - !!omap
+    - id: YOL157C
+    - name: IMA2
+  - !!omap
+    - id: YOL165C
+    - name: AAD15
+  - !!omap
+    - id: YOR002W
+    - name: ALG6
   - !!omap
     - id: YOR011W
     - name: AUS1
@@ -77572,6 +80647,9 @@
   - !!omap
     - id: YOR065W
     - name: CYT1
+  - !!omap
+    - id: YOR067C
+    - name: ALG8
   - !!omap
     - id: YOR071C
     - name: NRT1
@@ -77624,11 +80702,17 @@
     - id: YOR143C
     - name: THI80
   - !!omap
+    - id: YOR149C
+    - name: SMP3
+  - !!omap
     - id: YOR151C
     - name: RPB2
   - !!omap
     - id: YOR155C
     - name: ISN1
+  - !!omap
+    - id: YOR161C
+    - name: PNS1
   - !!omap
     - id: YOR163W
     - name: DDP1
@@ -77657,6 +80741,9 @@
     - id: YOR192C
     - name: THI72
   - !!omap
+    - id: YOR196C
+    - name: LIP5
+  - !!omap
     - id: YOR202W
     - name: HIS3
   - !!omap
@@ -77678,6 +80765,9 @@
     - id: YOR224C
     - name: RPB8
   - !!omap
+    - id: YOR226C
+    - name: ISU2
+  - !!omap
     - id: YOR236W
     - name: DFR1
   - !!omap
@@ -77686,6 +80776,9 @@
   - !!omap
     - id: YOR245C
     - name: DGA1
+  - !!omap
+    - id: YOR251C
+    - name: TUM1
   - !!omap
     - id: YOR270C
     - name: VPH1
@@ -77696,11 +80789,20 @@
     - id: YOR278W
     - name: HEM4
   - !!omap
+    - id: YOR285W
+    - name: RDL1
+  - !!omap
+    - id: YOR286W
+    - name: RDL2
+  - !!omap
     - id: YOR303W
     - name: CPA1
   - !!omap
     - id: YOR311C
     - name: DGK1
+  - !!omap
+    - id: YOR316C
+    - name: COT1
   - !!omap
     - id: YOR317W
     - name: FAA1
@@ -77716,6 +80818,9 @@
   - !!omap
     - id: YOR332W
     - name: VMA4
+  - !!omap
+    - id: YOR334W
+    - name: MRS2
   - !!omap
     - id: YOR335C
     - name: ALA1
@@ -77744,8 +80849,17 @@
     - id: YOR377W
     - name: ATF1
   - !!omap
+    - id: YOR381W
+    - name: FRE3
+  - !!omap
+    - id: YOR384W
+    - name: FRE5
+  - !!omap
     - id: YOR388C
     - name: FDH1
+  - !!omap
+    - id: YOR391C
+    - name: HSP33
   - !!omap
     - id: YOR393W
     - name: ERR1
@@ -77774,11 +80888,17 @@
     - id: YPL059W
     - name: GRX5
   - !!omap
+    - id: YPL060W
+    - name: MFM1
+  - !!omap
     - id: YPL061W
     - name: ALD6
   - !!omap
     - id: YPL069C
     - name: BTS1
+  - !!omap
+    - id: YPL076W
+    - name: GPI2
   - !!omap
     - id: YPL078C
     - name: ATP4
@@ -77786,11 +80906,17 @@
     - id: YPL087W
     - name: YDC1
   - !!omap
+    - id: YPL088W
+    - name: YPL088W
+  - !!omap
     - id: YPL091W
     - name: GLR1
   - !!omap
     - id: YPL092W
     - name: SSU1
+  - !!omap
+    - id: YPL096C-A
+    - name: ERI1
   - !!omap
     - id: YPL097W
     - name: MSY1
@@ -77813,6 +80939,9 @@
     - id: YPL134C
     - name: ODC1
   - !!omap
+    - id: YPL135W
+    - name: ISU1
+  - !!omap
     - id: YPL147W
     - name: PXA1
   - !!omap
@@ -77828,6 +80957,9 @@
     - id: YPL172C
     - name: COX10
   - !!omap
+    - id: YPL175W
+    - name: SPT14
+  - !!omap
     - id: YPL188W
     - name: POS5
   - !!omap
@@ -77842,6 +80974,9 @@
   - !!omap
     - id: YPL214C
     - name: THI6
+  - !!omap
+    - id: YPL227C
+    - name: ALG5
   - !!omap
     - id: YPL231W
     - name: FAS2
@@ -77876,6 +81011,9 @@
     - id: YPL274W
     - name: SAM3
   - !!omap
+    - id: YPL280W
+    - name: HSP32
+  - !!omap
     - id: YPL281C
     - name: ERR2
   - !!omap
@@ -77884,6 +81022,9 @@
   - !!omap
     - id: YPR002W
     - name: PDH1
+  - !!omap
+    - id: YPR003C
+    - name: YPR003C
   - !!omap
     - id: YPR006C
     - name: ICL2
@@ -77939,11 +81080,17 @@
     - id: YPR121W
     - name: THI22
   - !!omap
+    - id: YPR127W
+    - name: YPR127W
+  - !!omap
     - id: YPR128C
     - name: ANT1
   - !!omap
     - id: YPR138C
     - name: MEP3
+  - !!omap
+    - id: YPR139C
+    - name: LOA1
   - !!omap
     - id: YPR140W
     - name: TAZ1
