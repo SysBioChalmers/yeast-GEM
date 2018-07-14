@@ -6,16 +6,21 @@ R02855	1	(R)-acetoin	reactant	cytoplasm
 R02855	1	NAD	reactant	cytoplasm
 R02855	1	diacetyl	product	cytoplasm
 R02855	1	NADH	product	cytoplasm
+R02855	1	H+	product	cytoplasm
 R02855_2	1	(R)-acetoin	reactant	nucleus
 R02855_2	1	NAD	reactant	nucleus
 R02855_2	1	diacetyl	product	nucleus
 R02855_2	1	NADH	product	nucleus
+R02855_2	1	H+	product	cytoplasm
+6.3.5.6-RXN	1	H2O	reactant	mitochondrion
+6.3.5.6-RXN	1	ATP	reactant	mitochondrion
 6.3.5.6-RXN	1	L-glutamyl-tRNA(Gln)	reactant	mitochondrion
 6.3.5.6-RXN	1	L-glutamine	reactant	mitochondrion
 6.3.5.6-RXN	1	ADP	product	mitochondrion
 6.3.5.6-RXN	1	phosphate	product	mitochondrion
 6.3.5.6-RXN	1	Gln-tRNA(Gln)	product	mitochondrion
 6.3.5.6-RXN	1	L-glutamate	product	mitochondrion
+6.3.5.6-RXN	2	H+	product	mitochondrion
 MNXR100968	1	Met-Ala	reactant	vacuole
 MNXR100968	1	H2O	reactant	vacuole
 MNXR100968	1	L-methionine	product	vacuole
@@ -24,15 +29,16 @@ MNXR116282	1	ADP-D-ribose 1''-phosphate	reactant	cytoplasm
 MNXR116282	1	H2O	reactant	cytoplasm
 MNXR116282	1	ADP-ribose	product	cytoplasm
 MNXR116282	1	phosphate	product	cytoplasm
-R02364	1	quinone	reactant	cytoplasm
+R02364	2	quinone	reactant	cytoplasm
 R02364	1	H+	reactant	cytoplasm
 R02364	1	NADPH	reactant	cytoplasm
-R02364	1	1,4-benzosemiquinone	product	cytoplasm
+R02364	2	1,4-benzosemiquinone	product	cytoplasm
 R02364	1	NADP(+)	product	cytoplasm
 R05970	1	UDP-N-acetyl-alpha-D-glucosamine	reactant	endoplasmic reticulum
 R05970	1	N-Acetyl-D-glucosaminyldiphosphodolichol	reactant	endoplasmic reticulum
 R05970	1	UDP	product	endoplasmic reticulum
 R05970	1	N,N'-Chitobiosyldiphosphodolichol	product	endoplasmic reticulum
+R05970	1	H+	product	endoplasmic reticulum
 MNXR106807	1	ADP-ribose	reactant	cytoplasm
 MNXR106807	1	H2O	reactant	cytoplasm
 MNXR106807	1	AMP	product	cytoplasm
@@ -59,7 +65,11 @@ R05981	1	G00010	reactant	endoplasmic reticulum
 R05981	1	D-glucose	product	endoplasmic reticulum
 R05981	1	G00011	product	endoplasmic reticulum
 MNXR101803	1	sodium	reactant	vacuole
+MNXR101803	1	potassium	reactant	vacuole
+MNXR101803	1	chloride	reactant	vacuole
+MNXR101803	1	potassium	product	cytoplasm
 MNXR101803	1	sodium	product	cytoplasm
+MNXR101803	1	chloride	product	cytoplasm
 MNXR99660	1	D-fructose	reactant	cytoplasm
 MNXR99660	1	D-fructose	product	vacuole
 MNXR100023	1	D-galactose	reactant	cytoplasm
@@ -116,11 +126,17 @@ R01763	1	benzaldehyde	product	cytoplasm
 R01763	1	NADH	product	cytoplasm
 R01763	1	H+	product	cytoplasm
 MNXR125914	1	Mn(2+)	reactant	cytoplasm
+MNXR125914	1	ATP	reactant	cytoplasm
+MNXR125914	1	H2O	reactant	cytoplasm
+MNXR125914	1	ADP	product	cytoplasm
+MNXR125914	1	phosphate	product	cytoplasm
+MNXR125914	1	H+	product	cytoplasm
 MNXR125914	1	Mn(2+)	product	endoplasmic reticulum
-RHEA:53916	1	acetyl-CoA	reactant	cytoplasm
-RHEA:53916	1	[protein]-L-lysine	reactant	cytoplasm
-RHEA:53916	1	coenzyme A	product	cytoplasm
-RHEA:53916	1	[protein]-N(6)-acetyl-L-lysine	product	cytoplasm
+RHEA:45948	1	acetyl-CoA	reactant	cytoplasm
+RHEA:45948	1	[protein]-L-lysine	reactant	cytoplasm
+RHEA:45948	1	coenzyme A	product	cytoplasm
+RHEA:45948	1	[protein]-N(6)-acetyl-L-lysine	product	cytoplasm
+RHEA:45948	1	H+	product	cytoplasm
 R00868	1	Mannitol	reactant	cytoplasm
 R00868	1	NAD	reactant	cytoplasm
 R00868	1	D-fructose	product	cytoplasm
@@ -161,10 +177,12 @@ R03875	1	S-adenosyl-L-methionine	reactant	cytoplasm
 R03875	1	[cytochrome c]-L-lysine	reactant	cytoplasm
 R03875	1	S-adenosyl-L-homocysteine	product	cytoplasm
 R03875	1	[cytochrome c]-N6-methyl-L-lysine	product	cytoplasm
+R03875	1	H+	product	cytoplasm
 R03938	1	S-adenosyl-L-methionine	reactant	nucleus
 R03938	1	L-lysine-[histone]	reactant	nucleus
 R03938	1	S-adenosyl-L-homocysteine	product	nucleus
 R03938	1	N6-methyl-L-lysine-[histone]	product	nucleus
+R03938	1	H+	product	nucleus
 MNXR105277	1	Zn(2+)	reactant	cytoplasm
 MNXR105277	1	Zn(2+)	product	endoplasmic reticulum
 R00100	1	NADH	reactant	endoplasmic reticulum
@@ -181,6 +199,7 @@ RXN-12898	1	(S)-benzoin	reactant	cytoplasm
 RXN-12898	1	NADP(+)	reactant	cytoplasm
 RXN-12898	1	benzil	product	cytoplasm
 RXN-12898	1	NADPH	product	cytoplasm
+RXN-12898	1	H+	product	cytoplasm
 R03522	1	RX	reactant	endoplasmic reticulum
 R03522	1	glutathione	reactant	endoplasmic reticulum
 R03522	1	HX	product	endoplasmic reticulum
@@ -242,9 +261,7 @@ R07456	1	pyridoxal 5'-phosphate	product	cytoplasm
 R07456	1	L-glutamate	product	cytoplasm
 R07456	1	phosphate	product	cytoplasm
 R07456	3	H2O	product	cytoplasm
-R10686	1	pyridoxal 5'-phosphate	reactant	cytoplasm
-R10686	1	L-histidine	reactant	cytoplasm
-R10686	1	4-amino-2-methyl-5-phosphomethylpyrimidine	product	cytoplasm
+R07456	1	H+	product	cytoplasm
 R00899	1	L-cysteinylglycine	reactant	cytoplasm
 R00899	1	H2O	reactant	cytoplasm
 R00899	1	L-cysteine	product	cytoplasm
@@ -266,13 +283,16 @@ RHEA:53744	1	Glycyl-tRNA(Ala)	reactant	cytoplasm
 RHEA:53744	1	H2O	reactant	cytoplasm
 RHEA:53744	1	L-glycine	product	cytoplasm
 RHEA:53744	1	tRNA(Ala)	product	cytoplasm
+RHEA:25347	1	H2O	reactant	cytoplasm
 RHEA:25347	1	D-tyrosyl-tRNA(Tyr)	reactant	cytoplasm
 RHEA:25347	1	D-tyrosine	product	cytoplasm
+RHEA:25347	1	H+	product	cytoplasm
 RHEA:25347	1	tRNA(Tyr)	product	cytoplasm
 R03024	1	4-nitrophenyl phosphate	reactant	cytoplasm
 R03024	1	H2O	reactant	cytoplasm
 R03024	1	4-nitrophenol	product	cytoplasm
 R03024	1	phosphate	product	cytoplasm
+R03024	1	H+	product	cytoplasm
 R02896	1	L-iditol	reactant	cytoplasm
 R02896	1	NAD	reactant	cytoplasm
 R02896	1	L-sorbose	product	cytoplasm
@@ -282,6 +302,7 @@ R01092	1	ATP	reactant	cytoplasm
 R01092	1	alpha-D-Galactose	reactant	cytoplasm
 R01092	1	ADP	product	cytoplasm
 R01092	1	alpha-D-galactose 1-phosphate	product	cytoplasm
+R01092	1	H+	product	cytoplasm
 R03352	1	3-hydroxy-2-methylpropanoyl-CoA	reactant	mitochondrion
 R03352	1	H2O	reactant	mitochondrion
 R03352	1	3-hydroxy-2-methylpropanoate	product	mitochondrion
@@ -293,8 +314,13 @@ RHEA:14633	1	H2O	reactant	cytoplasm
 RHEA:14633	1	sodium	product	extracellular
 RHEA:14633	1	ADP	product	cytoplasm
 RHEA:14633	1	phosphate	product	cytoplasm
-RHEA:14633	1	H+	product	cytoplasm
+MNXR101803	1	H+	product	cytoplasm
 MNXR124322	1	sterols	reactant	extracellular
+MNXR124322	1	ATP	reactant	cytoplasm
+MNXR124322	1	H2O	reactant	cytoplasm
+MNXR124322	1	ADP	product	cytoplasm
+RHEA:14633	1	phosphate	product	cytoplasm
+MNXR101803	1	H+	product	cytoplasm
 MNXR124322	1	sterols	product	cytoplasm
 R00258	1	L-alanine	reactant	cytoplasm
 R00258	1	2-oxoglutarate	reactant	cytoplasm
@@ -332,11 +358,13 @@ R04496	1	Protein C-terminal S-farnesyl-L-cysteine methyl ester	product	cytoplasm
 R05916	1	UDP-N-acetyl-alpha-D-glucosamine	reactant	endoplasmic reticulum
 R05916	1	1-phosphatidyl-1D-myo-inositol	reactant	endoplasmic reticulum
 R05916	1	UDP	product	endoplasmic reticulum
+R05916	1	H+	product	cytoplasm
 R05916	1	G00143	product	endoplasmic reticulum
 R00299	1	ATP	reactant	cytoplasm
 R00299	1	D-glucose	reactant	cytoplasm
 R00299	1	ADP	product	cytoplasm
 R00299	1	D-glucose 6-phosphate	product	cytoplasm
+R09796	1	H+	reactant	cytoplasm
 R09796	1	(R)-lactate	reactant	cytoplasm
 R09796	1	methylglyoxal	product	cytoplasm
 R09796	1	H2O	product	cytoplasm
@@ -350,26 +378,31 @@ MNXR96434	1	H+	product	vacuole
 R03862	1	Arg-tRNA(Arg)	reactant	cytoplasm
 R03862	1	Protein	reactant	cytoplasm
 R03862	1	tRNA(Arg)	product	cytoplasm
+R03862	1	H+	product	cytoplasm
 R03862	1	L-Arginyl-protein	product	cytoplasm
 R05976	1	Protein asparagine	reactant	endoplasmic reticulum
 R05976	1	G00008	reactant	endoplasmic reticulum
 R05976	1	Dolichyl diphosphate	product	endoplasmic reticulum
 R05976	1	G00009	product	endoplasmic reticulum
+R05976	1	H+	product	endoplasmic reticulum
 R05979	1	H2O	reactant	endoplasmic reticulum
 R05979	1	G00009	reactant	endoplasmic reticulum
 R05979	1	D-glucose	product	endoplasmic reticulum
 R05979	1	G00171	product	endoplasmic reticulum
 R08599	1	GDP-alpha-D-mannose	reactant	endoplasmic reticulum
 R08599	1	G10694	reactant	endoplasmic reticulum
+R08599	1	H+	product	endoplasmic reticulum
 R08599	1	GDP	product	endoplasmic reticulum
 R08599	1	G01813	product	endoplasmic reticulum
 R05973	1	GDP-alpha-D-mannose	reactant	endoplasmic reticulum
 R05973	1	G00003	reactant	endoplasmic reticulum
 R05973	1	GDP	product	endoplasmic reticulum
 R05973	1	G00004	product	endoplasmic reticulum
+R05973	1	H+	product	endoplasmic reticulum
 R06238	1	GDP-alpha-D-mannose	reactant	endoplasmic reticulum
 R06238	1	G00004	reactant	endoplasmic reticulum
 R06238	1	GDP	product	endoplasmic reticulum
+R06238	1	H+	product	endoplasmic reticulum
 R06238	1	G00005	product	endoplasmic reticulum
 R09645	1	2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate	reactant	cytoplasm
 R09645	1	H2O	reactant	cytoplasm
@@ -382,7 +415,6 @@ R09645	1	D-Glycerate	product	cytoplasm
 R10463	1	L-threonine	reactant	cytoplasm
 R10463	1	ATP	reactant	cytoplasm
 R10463	1	bicarbonate	reactant	cytoplasm
-R10463	1	H+	reactant	cytoplasm
 R10463	1	L-Threonylcarbamoyladenylate	product	cytoplasm
 R10463	1	diphosphate	product	cytoplasm
 R10463	1	H2O	product	cytoplasm
@@ -400,6 +432,7 @@ R01004	1	phosphate	product	endoplasmic reticulum
 R01799	1	CTP	reactant	mitochondrion
 R01799	1	phosphatidate	reactant	mitochondrion
 R01799	1	diphosphate	product	mitochondrion
+R01799	1	H+	product	mitochondrion
 R01799	1	CDP-diacylglycerol	product	mitochondrion
 R10685	1	NAD	reactant	cytoplasm
 R10685	1	L-glycine	reactant	cytoplasm
@@ -410,6 +443,7 @@ R10685	3	H2O	product	cytoplasm
 R06264	1	Dolichyl beta-D-glucosyl phosphate	reactant	endoplasmic reticulum
 R06264	1	G10599	reactant	endoplasmic reticulum
 R06264	1	dolichyl phosphate	product	endoplasmic reticulum
+R06264	1	H+	product	endoplasmic reticulum
 R06264	1	G00008	product	endoplasmic reticulum
 R05725	2	nitric oxide	reactant	cytoplasm
 R05725	2	oxygen	reactant	cytoplasm
@@ -423,24 +457,17 @@ R05725_2	1	NADPH	reactant	cytoplasm
 R05725_2	2	nitrate	product	cytoplasm
 R05725_2	1	NADP(+)	product	cytoplasm
 R05725_2	1	H+	product	cytoplasm
+R07770	1	H+	reactant	cytoplasm
 R07770	1	ATP	reactant	cytoplasm
 R07770	1	(R)-Lipoate	reactant	cytoplasm
 R07770	1	diphosphate	product	cytoplasm
 R07770	1	Lipoyl-AMP	product	cytoplasm
-R07771	1	Lipoyl-AMP	reactant	cytoplasm
-R07771	1	Apoprotein	reactant	cytoplasm
-R07771	1	Protein N6-(lipoyl)lysine	product	cytoplasm
-R07771	1	AMP	product	cytoplasm
 R11143	1	ATP	reactant	cytoplasm
 R11143	1	(R)-Lipoate	reactant	cytoplasm
 R11143	1	Apoprotein	reactant	cytoplasm
 R11143	1	Protein N6-(lipoyl)lysine	product	cytoplasm
 R11143	1	AMP	product	cytoplasm
 R11143	1	diphosphate	product	cytoplasm
-R05924	1	phosphatidylethanolamine	reactant	endoplasmic reticulum
-R05924	1	G00141	reactant	endoplasmic reticulum
-R05924	1	1,2-Diacyl-sn-glycerol	product	endoplasmic reticulum
-R05924	1	G00151	product	endoplasmic reticulum
 R12024	1	N-(4-oxoglutarate)-L-cysteinylglycine	reactant	cytoplasm
 R12024	1	H2O	reactant	cytoplasm
 R12024	1	2-oxoglutarate	product	cytoplasm
@@ -502,6 +529,7 @@ R00025	1	acetaldehyde	product	cytoplasm
 R00025	1	Nitrite	product	cytoplasm
 R00025	1	FMN	product	cytoplasm
 R00025	1	H2O	product	cytoplasm
+R00025	2	H+	product	cytoplasm
 R00999	1	O-succinyl-L-homoserine	reactant	cytoplasm
 R00999	1	H2O	reactant	cytoplasm
 R00999	1	2-oxobutanoate	product	cytoplasm
@@ -520,7 +548,7 @@ R00851	1	1,2-diacyl-sn-glycerol 3-phosphate	product	endoplasmic reticulum
 R03613	1	ATP	reactant	cytoplasm
 R03613	1	Peptide diphthine	reactant	cytoplasm
 R03613	1	ammonium	reactant	cytoplasm
-R03613	1	H+	reactant	cytoplasm
+R03613	1	H+	product	cytoplasm
 R03613	1	AMP	product	cytoplasm
 R03613	1	diphosphate	product	cytoplasm
 R03613	1	Peptide diphthamide	product	cytoplasm
@@ -528,6 +556,7 @@ R09832	1	8-oxo-dGTP	reactant	peroxisome
 R09832	1	H2O	reactant	peroxisome
 R09832	1	8-oxo-dGMP	product	peroxisome
 R09832	1	diphosphate	product	peroxisome
+R09832	1	H+	reactant	peroxisome
 R07766	1	octanoyl-ACP	reactant	mitochondrion
 R07766	1	Apoprotein	reactant	mitochondrion
 R07766	1	Protein N6-(octanoyl)lysine	product	mitochondrion
@@ -540,46 +569,40 @@ R02732	1	ATP	reactant	cytoplasm
 R02732	1	beta-D-Fructose 6-phosphate	reactant	cytoplasm
 R02732	1	ADP	product	cytoplasm
 R02732	1	beta-D-fructose 2,6-bisphosphate	product	cytoplasm
+R02732	1	H+	product	cytoplasm
 R00867	1	ATP	reactant	cytoplasm
 R00867	1	D-fructose	reactant	cytoplasm
 R00867	1	ADP	product	cytoplasm
 R00867	1	beta-D-Fructose 6-phosphate	product	cytoplasm
+R00867	1	H+	product	cytoplasm
 R01600	1	ATP	reactant	cytoplasm
 R01600	1	beta-D-Glucose	reactant	cytoplasm
 R01600	1	ADP	product	cytoplasm
 R01600	1	beta-D-Glucose 6-phosphate	product	cytoplasm
+R01600	1	H+	product	cytoplasm
 R01786	1	ATP	reactant	cytoplasm
 R01786	1	alpha-D-Glucose	reactant	cytoplasm
 R01786	1	ADP	product	cytoplasm
 R01786	1	alpha-D-Glucose 6-phosphate	product	cytoplasm
+R01786	1	H+	product	cytoplasm
 R01961	1	ATP	reactant	cytoplasm
 R01961	1	D-Glucosamine	reactant	cytoplasm
 R01961	1	ADP	product	cytoplasm
 R01961	1	alpha-D-glucosamine 6-phosphate	product	cytoplasm
+R01961	1	H+	product	cytoplasm
 R03920	1	ATP	reactant	cytoplasm
 R03920	1	beta-D-Fructose	reactant	cytoplasm
 R03920	1	ADP	product	cytoplasm
 R03920	1	beta-D-Fructose 6-phosphate	product	cytoplasm
+R03920	1	H+	product	cytoplasm
 R02739	1	alpha-D-Glucose 6-phosphate	reactant	cytoplasm
 R02739	1	beta-D-Glucose 6-phosphate	product	cytoplasm
-R00264	1	2,5-Dioxopentanoate	reactant	cytoplasm
-R00264	1	NADP(+)	reactant	cytoplasm
-R00264	1	H2O	reactant	cytoplasm
-R00264	1	2-oxoglutarate	product	cytoplasm
-R00264	1	NADPH	product	cytoplasm
-R00264	1	H+	product	cytoplasm
-R00631	1	Aldehyde	reactant	cytoplasm
-R00631	1	NAD	reactant	cytoplasm
-R00631	1	H2O	reactant	cytoplasm
-R00631	1	fatty acid	product	cytoplasm
-R00631	1	NADH	product	cytoplasm
-R00631	1	H+	product	cytoplasm
 R01752	1	D-glyceraldehyde	reactant	cytoplasm
 R01752	1	NAD	reactant	cytoplasm
 R01752	1	H2O	reactant	cytoplasm
 R01752	1	D-Glycerate	product	cytoplasm
 R01752	1	NADH	product	cytoplasm
-R01752	1	H+	product	cytoplasm
+R01752	2	H+	product	cytoplasm
 R01986	1	4-aminobutanal	reactant	cytoplasm
 R01986	1	NADP(+)	reactant	cytoplasm
 R01986	1	H2O	reactant	cytoplasm
@@ -603,13 +626,13 @@ R02940	1	NAD	reactant	cytoplasm
 R02940	1	H2O	reactant	cytoplasm
 R02940	1	Propynoate	product	cytoplasm
 R02940	1	NADH	product	cytoplasm
-R02940	1	H+	product	cytoplasm
+R02940	2	H+	product	cytoplasm
 R02957	1	D-Glucuronolactone	reactant	cytoplasm
 R02957	1	NAD	reactant	cytoplasm
 R02957	2	H2O	reactant	cytoplasm
 R02957	1	D-Glucarate	product	cytoplasm
 R02957	1	NADH	product	cytoplasm
-R02957	1	H+	product	cytoplasm
+R02957	3	H+	product	cytoplasm
 R03283	1	4-Trimethylammoniobutanal	reactant	cytoplasm
 R03283	1	NAD	reactant	cytoplasm
 R03283	1	H2O	reactant	cytoplasm
@@ -621,7 +644,7 @@ R03869	1	NAD	reactant	cytoplasm
 R03869	1	H2O	reactant	cytoplasm
 R03869	1	Methylmalonate	product	cytoplasm
 R03869	1	NADH	product	cytoplasm
-R03869	1	H+	product	cytoplasm
+R03869	2	H+	product	cytoplasm
 R04065	1	Imidazole-4-acetaldehyde	reactant	cytoplasm
 R04065	1	NAD	reactant	cytoplasm
 R04065	1	H2O	reactant	cytoplasm
@@ -633,7 +656,7 @@ R04506	1	NAD	reactant	cytoplasm
 R04506	1	H2O	reactant	cytoplasm
 R04506	1	3alpha,7alpha-Dihydroxy-5beta-cholestanate	product	cytoplasm
 R04506	1	NADH	product	cytoplasm
-R04506	1	H+	product	cytoplasm
+R04506	2	H+	product	cytoplasm
 R04903	1	5-Hydroxyindoleacetaldehyde	reactant	cytoplasm
 R04903	1	NAD	reactant	cytoplasm
 R04903	1	H2O	reactant	cytoplasm
@@ -645,7 +668,7 @@ R05050	1	NAD	reactant	cytoplasm
 R05050	1	H2O	reactant	cytoplasm
 R05050	1	4-Acetamidobutanoate	product	cytoplasm
 R05050	1	NADH	product	cytoplasm
-R05050	1	H+	product	cytoplasm
+R05050	2	H+	product	cytoplasm
 R05237	1	trans-3-Chloroallyl aldehyde	reactant	cytoplasm
 R05237	1	H2O	reactant	cytoplasm
 R05237	1	trans-3-Chloroacrylic acid	product	cytoplasm
@@ -685,20 +708,24 @@ RXN-15089	1	glycerol	product	cytoplasm
 RXN-15089	1	oleate	product	cytoplasm
 RXN-15089	1	H+	product	cytoplasm
 R06127	1	G00005	reactant	endoplasmic reticulum
-R06127	1	GDP-alpha-D-mannose	reactant	endoplasmic reticulum
+R06127	2	GDP-alpha-D-mannose	reactant	endoplasmic reticulum
 R06127	1	G10526	product	endoplasmic reticulum
-R06127	1	GDP	product	endoplasmic reticulum
+R06127	2	GDP	product	endoplasmic reticulum
+R06127	2	H+	product	endoplasmic reticulum
 R06128	1	G10526	reactant	endoplasmic reticulum
-R06128	1	GDP-alpha-D-mannose	reactant	endoplasmic reticulum
+R06128	2	GDP-alpha-D-mannose	reactant	endoplasmic reticulum
 R06128	1	G00006	product	endoplasmic reticulum
-R06128	1	GDP	product	endoplasmic reticulum
+R06128	2	GDP	product	endoplasmic reticulum
+R06128	2	H+	product	endoplasmic reticulum
 R02144	1	S-adenosyl-L-methionine	reactant	cytoplasm
 R02144	1	carnosine	reactant	cytoplasm
 R02144	1	S-adenosyl-L-homocysteine	product	cytoplasm
 R02144	1	anserine	product	cytoplasm
+R02144	1	H+	product	cytoplasm
 R06259	1	dolichyl D-mannosyl phosphate	reactant	endoplasmic reticulum
 R06259	1	G10595	reactant	endoplasmic reticulum
 R06259	1	dolichyl phosphate	product	endoplasmic reticulum
+R06259	1	H+	product	endoplasmic reticulum
 R06259	1	G10596	product	endoplasmic reticulum
 R06261	1	dolichyl D-mannosyl phosphate	reactant	endoplasmic reticulum
 R06261	1	G10597	reactant	endoplasmic reticulum
@@ -722,19 +749,22 @@ R01718	1	H2O	reactant	cytoplasm
 R01718	1	alpha-D-Glucose	product	cytoplasm
 R01718	1	D-glucose	product	cytoplasm
 R01791	1	Dextrin	reactant	cytoplasm
-R01791	1	H2O	reactant	cytoplasm
+R01791	2	H2O	reactant	cytoplasm
 R01791	2	D-glucose	product	cytoplasm
 R06262	1	Dolichyl beta-D-glucosyl phosphate	reactant	endoplasmic reticulum
 R06262	1	G00007	reactant	endoplasmic reticulum
 R06262	1	dolichyl phosphate	product	endoplasmic reticulum
 R06262	1	G10598	product	endoplasmic reticulum
+R06262	1	H+	product	endoplasmic reticulum
 R06263	1	Dolichyl beta-D-glucosyl phosphate	reactant	endoplasmic reticulum
 R06263	1	G10598	reactant	endoplasmic reticulum
 R06263	1	dolichyl phosphate	product	endoplasmic reticulum
 R06263	1	G10599	product	endoplasmic reticulum
+R06263	1	H+	product	endoplasmic reticulum
 R07129	1	dolichyl D-mannosyl phosphate	reactant	endoplasmic reticulum
 R07129	1	G00149	reactant	endoplasmic reticulum
 R07129	1	dolichyl phosphate	product	endoplasmic reticulum
+R07129	1	H+	product	endoplasmic reticulum
 R07129	1	G00140	product	endoplasmic reticulum
 R07767	1	Protein N6-(octanoyl)lysine	reactant	mitochondrion
 R07767	2	Sulfur donor	reactant	mitochondrion
@@ -753,7 +783,7 @@ RXN-14381	1	[disordered-form [Fe-S] cluster scaffold protein]	reactant	mitochond
 RXN-14381	1	S-sulfanyl-[cysteine desulfurase]-[disordered-form scaffold protein] complex	product	mitochondrion
 R01931	1	hydrogen cyanide	reactant	mitochondrion
 R01931	1	thiosulfate	reactant	mitochondrion
-R01931	2	H+	product	mitochondrion
+R01931	1	H+	product	mitochondrion
 R01931	1	sulphite	product	mitochondrion
 R01931	1	thiocyanate	product	mitochondrion
 MNXR101505	1	Mg(2+)	reactant	cytoplasm
@@ -770,13 +800,14 @@ R01708	1	pyridoxal	product	cytoplasm
 R01708	1	NADPH	product	cytoplasm
 R01708	1	H+	product	cytoplasm
 R01206	1	chitin	reactant	cytoplasm
-R01206	2	H2O	reactant	cytoplasm
-R01206	3	N-Acetyl-D-glucosamine	product	cytoplasm
+R01206	1	H2O	reactant	cytoplasm
+R01206	1	N-Acetyl-D-glucosamine	product	cytoplasm
 MNXR96691	1	choline	reactant	cytoplasm
 MNXR96691	1	choline	product	extracellular
 R03042	1	polyphosphate	reactant	cytoplasm
 R03042	1	H2O	reactant	cytoplasm
 R03042	2	phosphate	product	cytoplasm
+R03042	1	H+	product	cytoplasm
 MNXR96952	1	Cu2(+)	reactant	cytoplasm
 MNXR96952	1	ATP	reactant	cytoplasm
 MNXR96952	1	H2O	reactant	cytoplasm
@@ -788,6 +819,7 @@ RXN-14214	1	dATP	reactant	cytoplasm
 RXN-14214	1	H2O	reactant	cytoplasm
 RXN-14214	1	dADP	product	cytoplasm
 RXN-14214	1	phosphate	product	cytoplasm
+RXN-14214	1	H+	product	cytoplasm
 R03804	1	2-Oxoglutaramate	reactant	cytoplasm
 R03804	1	H2O	reactant	cytoplasm
 R03804	1	2-oxoglutarate	product	cytoplasm
