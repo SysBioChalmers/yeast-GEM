@@ -28076,7 +28076,7 @@
       - s_0999: -1
     - lower_bound: 0
     - upper_bound: 1000
-    - gene_reaction_rule: YFL060C
+    - gene_reaction_rule: YFL060C or YNL334C
     - annotation: !!omap
       - pmid: 3309138
     - confidence_score: 0
@@ -34475,7 +34475,7 @@
       - s_0260: -1
     - lower_bound: -1000
     - upper_bound: 1000
-    - gene_reaction_rule: YKL152C
+    - gene_reaction_rule: YOR283W or YKL152C
     - subsystem:
         - Gluconeogenesis
         - sce00010  Glycolysis
@@ -36318,7 +36318,7 @@
       - s_1537: -1
     - lower_bound: -1000
     - upper_bound: 1000
-    - gene_reaction_rule: (YDR178W and YJL045W and YKL141W and YLL041C) or (YDR178W and YKL141W and YKL148C and YLL041C)
+    - gene_reaction_rule: (YDR178W and YJL045W and YKL141W and YLL041C) or (YDR178W and YKL141W and YKL148C and YLL041C) or (YLR164W and YJL045W and YKL141W and YLL041C)
     - subsystem:
         - sce00020  Citrate cycle (TCA cycle)
         - sce00190  Oxidative phosphorylation
@@ -36829,7 +36829,7 @@
       - s_1427: -1
     - lower_bound: -1000
     - upper_bound: 1000
-    - gene_reaction_rule: YLR354C
+    - gene_reaction_rule: YGR043C or YLR354C
     - subsystem:
         - sce00030  Pentose phosphate pathway
         - sce01110  Biosynthesis of secondary metabolites
@@ -79026,6 +79026,9 @@
     - id: YGR036C
     - name: CAX4
   - !!omap
+    - id: YGR043C
+    - name: NQM1
+  - !!omap
     - id: YGR046W
     - name: TAM41
   - !!omap
@@ -80043,6 +80046,9 @@
     - id: YLR160C
     - name: ASP3-4
   - !!omap
+    - id: YLR164W
+    - name: SHH4
+  - !!omap
     - id: YLR172C
     - name: DPH5
   - !!omap
@@ -80888,6 +80894,9 @@
   - !!omap
     - id: YOR278W
     - name: HEM4
+  - !!omap
+    - id: YOR283W
+    - name: YOR283W
   - !!omap
     - id: YOR285W
     - name: RDL1
