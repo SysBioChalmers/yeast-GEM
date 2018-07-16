@@ -18,14 +18,14 @@ quinone [cytoplasm]	C6H4O2	0	cytoplasm	C00472	CHEBI:16509	based on chebi
 UDP-N-acetyl-alpha-D-glucosamine [endoplasmic reticulum]	C17H25N3O17P2	-2	endoplasmic reticulum	C00043	CHEBI:57705	Present in yeast model
 N-Acetyl-D-glucosaminyldiphosphodolichol [endoplasmic reticulum]	C28H51NO12P2R	0	endoplasmic reticulum	C04500	CHEBI:18278	based on chebi
 UDP [endoplasmic reticulum]	C9H11N2O12P2	-3	endoplasmic reticulum	C00015	CHEBI:58223	Present in yeast model
-N,N'-Chitobiosyldiphosphodolichol [endoplasmic reticulum]	C36H64N2O17P2R	0	endoplasmic reticulum	G00002		based on kegg
+N,N'-Chitobiosyldiphosphodolichol [endoplasmic reticulum]	C36H64N2O17P2R	0	endoplasmic reticulum			based on kegg, G00002
 D-ribofuranose 5-phosphate [cytoplasm]	C5H9O8P	-2	cytoplasm		CHEBI:78346	based on chebi
 Oxalate [peroxisome]	C2O4	-2	peroxisome	C00209	CHEBI:30623	based on metnx
 Oxalyl-CoA [peroxisome]	C23H31N7O19P3S	-5	peroxisome	C00313	CHEBI:57388	based on chebi
-G00171 [endoplasmic reticulum]	C86H142N4O67R	0	endoplasmic reticulum	G00171		based on kegg
+G00171 [endoplasmic reticulum]	C86H142N4O67R	0	endoplasmic reticulum			based on kegg, G00171
 D-glucose [endoplasmic reticulum]	C6H12O6	0	endoplasmic reticulum	C00031	CHEBI:4167	based on metnx
-G00010 [endoplasmic reticulum]	C80H132N4O62R	0	endoplasmic reticulum	G00010		based on kegg
-G00011 [endoplasmic reticulum]	C74H122N4O57R	0	endoplasmic reticulum	G00011		based on kegg
+G00010 [endoplasmic reticulum]	C80H132N4O62R	0	endoplasmic reticulum			based on kegg, G00010
+G00011 [endoplasmic reticulum]	C74H122N4O57R	0	endoplasmic reticulum			based on kegg, G00011
 sodium [vacuole]	Na	1	vacuole	C01330	CHEBI:29101	based on metnx
 potassium [vacuole]	K	1	vacuole	C00238	CHEBI:29103	based on metnx
 chloride [vacuole]	Cl	-1	vacuole	C00698	CHEBI:17996	based on metnx
@@ -40,8 +40,8 @@ L-cysteine [mitochondrion]	C3H7NO2S	0	mitochondrion	C00097	CHEBI:17561	based on 
 (sulfur carrier)-SH [mitochondrion]	SR	0	mitochondrion			General type
 cholesterol [endoplasmic reticulum]	C27H46O	0	endoplasmic reticulum	C00187	CHEBI:16113	based on metnx
 cholesterol [endoplasmic reticulum membrane]	C27H46O	0	endoplasmic reticulum membrane	C00187	CHEBI:16113	based on metnx
-3-chlorobenzyl alcohol [cytoplasm]	C7H7ClO	0	cytoplasm			PubChem CID:70117
-3-chlorobenzaldehyde [cytoplasm]	C7H5ClO	0	cytoplasm			PubChem CID:70117
+3-chlorobenzyl alcohol [cytoplasm]	C7H7ClO	0	cytoplasm			PubChem CID, 70117
+3-chlorobenzaldehyde [cytoplasm]	C7H5ClO	0	cytoplasm			PubChem CID, 70117
 3-hydroxybenzyl alcohol [cytoplasm]	C7H8O2	0	cytoplasm	C03351	CHEBI:17069	based on metnx
 3-hydroxybenzaldehyde [cytoplasm]	C7H6O2	0	cytoplasm	C03067	CHEBI:16207	based on metnx
 3-methylbenzyl alcohol [cytoplasm]	C8H10O	0	cytoplasm	C07216	CHEBI:27995	based on metnx
@@ -73,7 +73,7 @@ superoxide [mitochondrion]	O2	-1	mitochondrion	C00704	CHEBI:18421	based on metnx
 S-adenosyl-L-methionine [nucleus]	C15H23N6O5S	1	nucleus	C00019	CHEBI:67040	Present in yeast model
 L-lysine-[histone] [nucleus]	C6H13N2OR2	1	nucleus		CHEBI:29969	General type, based on metanetx MNXM59465
 S-adenosyl-L-homocysteine [nucleus]	C14H20N6O5S	0	nucleus	C00021	CHEBI:16680	based on chebi
-N6-methyl-L-lysine-[histone] [nucleus]	C7H15N2OR2	1	nucleus		CHEBI:61929	General type, Histone N6-methyl-L-lysine, C03702 ,  based on metanetx MNXM63025
+N6-methyl-L-lysine-[histone] [nucleus]	C7H15N2OR2	1	nucleus		CHEBI:61929	General type, Histone N6-methyl-L-lysine, C03702, based on metanetx MNXM63025
 Zn(2+) [cytoplasm]	Zn	2	cytoplasm	C00038	CHEBI:29105	based on metnx
 Zn(2+) [endoplasmic reticulum]	Zn	2	endoplasmic reticulum	C00038	CHEBI:29105	based on metnx
 Ferricytochrome b5 [endoplasmic reticulum]	Fe	3	endoplasmic reticulum	C00996	CHEBI:18097	based on kegg and Rhea
@@ -131,7 +131,7 @@ D-gluconate [cytoplasm]	C6H11O7	-1	cytoplasm	C00257	CHEBI:18391	based on metnx
 Protein C-terminal S-farnesyl-L-cysteine [cytoplasm]	C20H32N2O3SR	-1	cytoplasm	C04506	CHEBI:17171	based on kegg
 Protein C-terminal S-farnesyl-L-cysteine methyl ester [cytoplasm]	C21H35N2O3SR	0	cytoplasm	C04748	CHEBI:15818	based on kegg
 1-phosphatidyl-1D-myo-inositol [endoplasmic reticulum]	C11H16O13PR2	-1	endoplasmic reticulum	C01194	CHEBI:57880	Present in yeast model
-G00143 [endoplasmic reticulum]	C19H29NO18PR2	-1	endoplasmic reticulum	G00143	CHEBI:57265	based on kegg and Rhea
+G00143 [endoplasmic reticulum]	C19H29NO18PR2	-1	endoplasmic reticulum		CHEBI:57265	based on kegg and Rhea, G00143
 Ca(2+) [cytoplasm]	Ca	2	cytoplasm	C00076	CHEBI:29108	based on metnx
 ATP [vacuole]	C10H12N5O13P3	-4	vacuole	C00002	CHEBI:30616	Present in yeast model
 Ca(2+) [vacuole]	Ca	2	vacuole	C00076	CHEBI:29108	based on metnx
@@ -139,38 +139,38 @@ ADP [vacuole]	C10H12N5O10P2	-3	vacuole	C00008	CHEBI:456216	Present in yeast mode
 Protein [cytoplasm]	C2H4NOR	1	cytoplasm	C00017		General type
 L-Arginyl-protein [cytoplasm]	C8H17N5O2R	2	cytoplasm	C16739	CHEBI:17518	based on kegg
 Protein asparagine [endoplasmic reticulum]	C4H6N2O2R	0	endoplasmic reticulum	C03021	CHEBI:50347	based on chebi
-G00008 [endoplasmic reticulum]	C108H182N2O77P2R	-2	endoplasmic reticulum	G00008		based on kegg
+G00008 [endoplasmic reticulum]	C108H182N2O77P2R	-2	endoplasmic reticulum			based on kegg, G00008
 Dolichyl diphosphate [endoplasmic reticulum]	C20H35O7P2R	-3	endoplasmic reticulum		CHEBI:57497	based on Rhea
-G00009 [endoplasmic reticulum]	C92H152N4O72R	0	endoplasmic reticulum	G00009	CHEBI:132537	based on Rhea
+G00009 [endoplasmic reticulum]	C92H152N4O72R	0	endoplasmic reticulum		CHEBI:132537	based on Rhea, G00009
 GDP-alpha-D-mannose [endoplasmic reticulum]	C16H23N5O16P2	-2	endoplasmic reticulum	C00096	CHEBI:57527	Present in yeast model
-G10694 [endoplasmic reticulum]	C68H112N4O52R	0	endoplasmic reticulum	G10694		based on kegg and Rhea
+G10694 [endoplasmic reticulum]	C68H112N4O52R	0	endoplasmic reticulum			based on kegg and Rhea, G10694
 GDP [endoplasmic reticulum]	C10H12N5O11P2	-3	endoplasmic reticulum	C00035	CHEBI:58189	Present in yeast model
-G01813 [endoplasmic reticulum]	C74H122N4O57R	0	endoplasmic reticulum	G01813		based on rxn
-G00003 [endoplasmic reticulum]	C42H72N2O22P2R	-2	endoplasmic reticulum	G00003		based on metnx: MNXM1078
-G00004 [endoplasmic reticulum]	C48H82N2O27P2R	-2	endoplasmic reticulum	G00004		based on metnx: MNXM11174
-G00005 [endoplasmic reticulum]	C54H92N2O32P2R	-2	endoplasmic reticulum	G00005		based on metnx: MNXM162650
+G01813 [endoplasmic reticulum]	C74H122N4O57R	0	endoplasmic reticulum			based on rxn, G01813
+G00003 [endoplasmic reticulum]	C42H72N2O22P2R	-2	endoplasmic reticulum			based on metnx, MNXM1078, G00003
+G00004 [endoplasmic reticulum]	C48H82N2O27P2R	-2	endoplasmic reticulum			based on metnx, MNXM11174, G00004
+G00005 [endoplasmic reticulum]	C54H92N2O32P2R	-2	endoplasmic reticulum			based on metnx, MNXM162650, G00005
 2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate [cytoplasm]	C9H14O12P	-3	cytoplasm	C16699	CHEBI:60331	based on metnx
 D-Glycerate [cytoplasm]	C3H5O4	-1	cytoplasm	C00275	CHEBI:16659	based on metnx
 alpha-D-mannoside [cytoplasm]	C6H11O6R	0	cytoplasm	C02603	CHEBI:27535	based on kegg
 alpha-D-mannopyranose [cytoplasm]	C6H12O6	0	cytoplasm	C00936	CHEBI:28729	based on metnx
 non glycosylated sugar acceptor [cytoplasm]	HOR	0	cytoplasm			General type
-L-Threonylcarbamoyladenylate [cytoplasm]	C15H19N6O11P	-2	cytoplasm	C20641		based on metnx: MNXM145767
+L-Threonylcarbamoyladenylate [cytoplasm]	C15H19N6O11P	-2	cytoplasm	C20641		based on metnx, MNXM145767
 D-Serine [cytoplasm]	C3H7NO3	0	cytoplasm	C00740	CHEBI:16523	based on chebi
 O-acetyl-L-serine [mitochondrion]	C5H9NO4	0	mitochondrion	C00979	CHEBI:17981	based on chebi
 hydrogen sulfide [mitochondrion]	HS	-1	mitochondrion	C00283	CHEBI:29919	Present in yeast model
-beta-D-Fructose 6-phosphate [cytoplasm]	C6H11O9P	-2	cytoplasm	C05345	CHEBI:57634	based on metnx: MNXM89621
+beta-D-Fructose 6-phosphate [cytoplasm]	C6H11O9P	-2	cytoplasm	C05345	CHEBI:57634	based on metnx, MNXM89621
 phosphatidate [mitochondrion]	C5H7O8PR2	0	mitochondrion	C00416	CHEBI:16337	based on chebi
 CDP-diacylglycerol [mitochondrion]	C14H17N3O15P2R2	-2	mitochondrion	C00269	CHEBI:58332	based on chebi
 Sulfur donor [cytoplasm]		0	cytoplasm	C17023	CHEBI:80867	based on kegg
-ADP-5-ethyl-4-methylthiazole-2-carboxylate [cytoplasm]	C17H19N6O12P2S	-3	cytoplasm	C20784	CHEBI:134399	based on metnx: MNXM37826
+ADP-5-ethyl-4-methylthiazole-2-carboxylate [cytoplasm]	C17H19N6O12P2S	-3	cytoplasm	C20784	CHEBI:134399	based on metnx, MNXM37826
 Dolichyl beta-D-glucosyl phosphate [endoplasmic reticulum]	C26H46O9PR	-1	endoplasmic reticulum	C01246	CHEBI:57525	based on chebi
-G10599 [endoplasmic reticulum]	C102H172N2O72P2R	-2	endoplasmic reticulum	G10599		based on kegg
-nitric oxide [cytoplasm]	NO	0	cytoplasm	C00533	CHEBI:16480	based on metnx: MNXM228
+G10599 [endoplasmic reticulum]	C102H172N2O72P2R	-2	endoplasmic reticulum			based on kegg, G10599
+nitric oxide [cytoplasm]	NO	0	cytoplasm	C00533	CHEBI:16480	based on metnx, MNXM228
 nitrate [cytoplasm]	NO3	-1	cytoplasm	C00244	CHEBI:17632	based on chebi
 (R)-Lipoate [cytoplasm]	C8H13O2S2	-1	cytoplasm	C16241	CHEBI:83088	based on chebi
 Lipoyl-AMP [cytoplasm]	C18H25N5O8PS2	-1	cytoplasm	C16238	CHEBI:83091	based on chebi
 Apoprotein [cytoplasm]	NH2R	0	cytoplasm	C16240	CHEBI:13850	based on kegg
-Protein N6-(lipoyl)lysine [cytoplasm]	C8H14NOS2R	0	cytoplasm	C16237	CHEBI:80399	based on metnx: MNXM96070
+Protein N6-(lipoyl)lysine [cytoplasm]	C8H14NOS2R	0	cytoplasm	C16237	CHEBI:80399	based on metnx, MNXM96070
 N-(4-oxoglutarate)-L-cysteinylglycine [cytoplasm]	C10H12N2O7S	-2	cytoplasm		CHEBI:138256	based on chebi
 N-(4-oxoglutarate)-L-cysteinylglycine [mitochondrion]	C10H12N2O7S	-2	mitochondrion		CHEBI:138256	based on chebi
 L-cysteinylglycine [mitochondrion]	C5H10N2O3S	0	mitochondrion	C01419	CHEBI:4047	based on chebi
@@ -180,7 +180,7 @@ ribonucleoside 5'-phosphate [cytoplasm]	C5H8O7PR	-2	cytoplasm		CHEBI:58043	based
 2'-deoxyribonucleoside 5'-triphosphate [cytoplasm]	C5H8O12P3R	-4	cytoplasm	C00677	CHEBI:61560	based on metnx
 2'-deoxyribonucleoside 5'-phosphate [cytoplasm]	C5H8O6PR	-2	cytoplasm	C00676	CHEBI:65317	based on metnx
 superoxide [cytoplasm]	O2	-1	cytoplasm	C00704	CHEBI:18421	based on metnx
-G00012 [endoplasmic reticulum]	C50H66N4O29	0	endoplasmic reticulum	G00012		based on kegg
+G00012 [endoplasmic reticulum]	C50H66N4O29	0	endoplasmic reticulum			based on kegg, G00012
 D-mannose [endoplasmic reticulum]	C6H12O6	0	endoplasmic reticulum	C00159	CHEBI:4208	based on metnx
 Ethylnitronate [cytoplasm]	C2H5NO2	0	cytoplasm	C18091	CHEBI:16268	based on chebi
 Nitrite [cytoplasm]	NO2	-1	cytoplasm	C00088	CHEBI:16301	based on metnx
@@ -191,8 +191,8 @@ Acyl-CoA [endoplasmic reticulum]	C22H31N7O17P3SR	-4	endoplasmic reticulum	C00040
 1,2-diacyl-sn-glycerol 3-phosphate [endoplasmic reticulum]	C5H5O8PR2	-2	endoplasmic reticulum	C00416	CHEBI:58608	based on chebi
 Peptide diphthine [cytoplasm]	C13H20N4O3R2	0	cytoplasm	C01573	CHEBI:18054	based on metnx MNXM51194
 Peptide diphthamide [cytoplasm]	C13H22N5O2R2	1	cytoplasm	C02872	CHEBI:82696	based on metnx MNXM4769
-8-oxo-dGTP [peroxisome]	C10H16N5O14P3	-4	peroxisome	C19967		based on metnx: MNXM4425
-8-oxo-dGMP [peroxisome]	C10H14N5O8P	-2	peroxisome	C19968		based on metnx: MNXM2497
+8-oxo-dGTP [peroxisome]	C10H16N5O14P3	-4	peroxisome	C19967		based on metnx, MNXM4425
+8-oxo-dGMP [peroxisome]	C10H14N5O8P	-2	peroxisome	C19968		based on metnx, MNXM2497
 Apoprotein [mitochondrion]	NH2R	0	mitochondrion	C16240	CHEBI:13850	based on kegg
 Protein N6-(octanoyl)lysine [mitochondrion]	C8H16NOR	0	mitochondrion	C16236	CHEBI:80398	based on metnx
 Lipoyl-[acp] [mitochondrion]	C8H13OS3R	0	mitochondrion	C16239	CHEBI:80400	based on metnx
@@ -233,21 +233,21 @@ phospholipid [endoplasmic reticulum membrane]	C5H6O8PR3	0	endoplasmic reticulum 
 phospholipid [Golgi membrane]	C5H6O8PR3	0	Golgi membrane	C00865	CHEBI:16247	based on kegg
 ADP [endoplasmic reticulum membrane]	C10H12N5O10P2	-3	endoplasmic reticulum membrane	C00008	CHEBI:456216	Present in yeast model
 1-oleoyl-sn-glycerol [cytoplasm]	C21H40O4	0	cytoplasm		CHEBI:75757	based on chebi
-G10526 [endoplasmic reticulum]	C66H112N2O42P2R	-2	endoplasmic reticulum	G10526	CHEBI:132511	based on kegg and Rhea
-G00006 [endoplasmic reticulum]	C78H132N2O52P2R	-2	endoplasmic reticulum	G00006	CHEBI:132515	based on kegg and Rhea
+G10526 [endoplasmic reticulum]	C66H112N2O42P2R	-2	endoplasmic reticulum		CHEBI:132511	based on kegg and Rhea, G10526
+G00006 [endoplasmic reticulum]	C78H132N2O52P2R	-2	endoplasmic reticulum		CHEBI:132515	based on kegg and Rhea, G00006
 carnosine [cytoplasm]	C9H14N4O3	0	cytoplasm	C00386	CHEBI:15727	based on chebi
 anserine [cytoplasm]	C10H16N4O3	0	cytoplasm	C01262	CHEBI:18323	based on chebi
-G10595 [endoplasmic reticulum]	C72H122N2O47P2R	-2	endoplasmic reticulum	G10595		based on kegg
-G10596 [endoplasmic reticulum]	C78H132N2O52P2R	-2	endoplasmic reticulum	G10596		based on kegg
-G10597 [endoplasmic reticulum]	C84H142N2O57P2R	-2	endoplasmic reticulum	G10597		based on kegg
-G00007 [endoplasmic reticulum]	C90H152N2O62P2R	-2	endoplasmic reticulum	G00007		based on kegg
+G10595 [endoplasmic reticulum]	C72H122N2O47P2R	-2	endoplasmic reticulum			based on kegg, G10595
+G10596 [endoplasmic reticulum]	C78H132N2O52P2R	-2	endoplasmic reticulum			based on kegg, G10596
+G10597 [endoplasmic reticulum]	C84H142N2O57P2R	-2	endoplasmic reticulum			based on kegg, G10597
+G00007 [endoplasmic reticulum]	C90H152N2O62P2R	-2	endoplasmic reticulum			based on kegg, G00007
 glycolate [cytoplasm]	C2H3O3	-1	cytoplasm	C00160	CHEBI:29805	based on metnx
 sucrose [cytoplasm]	C12H22O11	0	cytoplasm	C00089	CHEBI:17992	based on metnx
 Isomaltose [cytoplasm]	C12H22O11	0	cytoplasm	C00252	CHEBI:28189	based on metnx
 Dextrin [cytoplasm]	C12H20O10	0	cytoplasm	C00721	CHEBI:28675	based on kegg
-G10598 [endoplasmic reticulum]	C96H162N2O67P2R	0	endoplasmic reticulum	G10598		based on kegg and Rhea
-G00149 [endoplasmic reticulum]		0	endoplasmic reticulum	G00149		based on kegg and Rhea
-G00140 [endoplasmic reticulum]		0	endoplasmic reticulum	G00140		based on kegg and Rhea
+G10598 [endoplasmic reticulum]	C96H162N2O67P2R	0	endoplasmic reticulum			based on kegg and Rhea, G10598
+G00149 [endoplasmic reticulum]		0	endoplasmic reticulum			based on kegg and Rhea, G00149
+G00140 [endoplasmic reticulum]		0	endoplasmic reticulum			based on kegg and Rhea, G00140
 Sulfur donor [mitochondrion]		0	mitochondrion	C17023	CHEBI:80867	based on kegg
 5'-Deoxyadenosine [mitochondrion]	C10H13N5O3	0	mitochondrion	C05198	CHEBI:17319	based on metnx
 S-sulfanyl-[L-cysteine desulfurase] [mitochondrion]		0	mitochondrion			General type
