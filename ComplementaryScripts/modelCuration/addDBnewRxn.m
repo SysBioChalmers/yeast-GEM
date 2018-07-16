@@ -103,13 +103,14 @@ end
 
 %Load rxnProp(rev and GPR)
 fid2 = fopen('../../ComplementaryData/modelCuration/DBnewRxnProp.tsv');
-rev = textscan(fid2,'%s %s %s %s %s %s','Delimiter','\t','HeaderLines',1);
+rev = textscan(fid2,'%s %s %s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 newrxn.ID = rev{1};
 newrxn.Rev = cellfun(@str2num, rev{2});
 newrxn.GPR = rev{3};
 newrxn.rxnNames = rev{4};
 newrxn.rxnECNumbers = rev{5};
 newrxn.subSystems = rev{6};
+newrxn.rxnKEGGID = rev{7};
 fclose(fid2);
 
 %add new reactions according to rev ID. Met Coef need to be in the column,
@@ -171,6 +172,7 @@ for i = 1:length(newrxn.ID)
         model.rxnNames{rxnID} = newrxn.rxnNames{i};
         model.rxnECNumbers(rxnID) =  newrxn.rxnECNumbers(i);
         %model.subSystems{rxnID} = newrxn.subSystems(i);
+        model.rxnKEGGID(rxnID) =  newrxn.rxnKEGGID(i);
     end
 end
 
