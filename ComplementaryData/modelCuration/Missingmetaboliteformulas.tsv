@@ -1,0 +1,37 @@
+Met ID	Met Name	Met Formula	Source	
+s_0330[er]'	6-(alpha-D-glucosaminyl)-O-acyl-1-phosphatidyl-1D-myo-inositol [endoplasmic reticulum]'	missing in source		
+s_0334[er]'	6-O-[alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl]-O-acyl-1-phosphatidyl-1D-myo-inositol [endoplasmic reticulum]'	missing in source		
+s_0337[er]'	6-O-{2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol [endoplasmic reticulum]'	missing in source		
+s_0338[er]'	6-O-{alpha-D-mannosyl-(1->2)-alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol [endoplasmic reticulum]'	missing in source		
+s_0339[er]'	6-O-{alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol [endoplasmic reticulum]'	missing in source		
+s_0450[c]'	biomass [cytoplasm]'			
+s_0694[c]'	fatty acid backbone [cytoplasm]'			
+s_0709[m]'	ferricytochrome c [mitochondrion]'	C42H44FeN8O8S2R4	https://www.genome.jp/dbget-bin/www_bget?cpd:C00125	
+s_0710[m]'	ferrocytochrome c [mitochondrion]'	C42H44FeN8O8S2R4	https://www.genome.jp/dbget-bin/www_bget?cpd:C00126	
+s_0773[c]'	glycogen [cytoplasm]'	C24H42O21	https://www.genome.jp/dbget-bin/www_bget?C00182	
+s_0774[v]'	glycogen [vacuole]'	C24H42O21	https://www.genome.jp/dbget-bin/www_bget?C00182	
+s_1096[c]'	lipid [cytoplasm]'			
+s_1107[c]'	mannan [cytoplasm]'	C12H21O10(C12H20O11)n	https://www.genome.jp/dbget-bin/www_bget?cpd:C04276	
+s_1108[er]'	mannan [endoplasmic reticulum]'	C12H21O10(C12H20O11)n	https://www.genome.jp/dbget-bin/www_bget?cpd:C04276	
+s_1845[m]'	ACP1 [mitochondrion]'			
+s_2775[m]'	3-hydroxybutanoyl-ACP [mitochondrion]'	C4H7O2SR	https://www.genome.jp/dbget-bin/www_bget?C04618	
+s_2778[m]'	trans-but-2-enoyl-ACP [mitochondrion]'	C4H5OS	https://www.ebi.ac.uk/chebi/searchId.do?chebiId=132146	
+s_2779[m]'	trans-hex-2-enoyl-ACP [mitochondrion]'	C6H9OSR	https://www.genome.jp/dbget-bin/www_bget?C05748	
+s_2780[m]'	trans-oct-2-enoyl-ACP [mitochondrion]'	C8H13OSR	https://www.genome.jp/dbget-bin/www_bget?C05751	
+s_2812[erm]'	trans-icos-2-enoyl-CoA [endoplasmic reticulum membrane]'	C41H72N7O17P3S	http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:75061	
+s_2889[p]'	trans-icos-2-enoyl-CoA [peroxisome]'	C41H72N7O17P3S	http://www.ebi.ac.uk/chebi/searchId.do?chebiId=CHEBI:75061	
+s_2896[p]'	"trans-2,cis-5-dodecadienoyl-CoA [peroxisome]'"	C35H54N7O17P3S	http://mousecyc.jax.org/META/NEW-IMAGE?type=COMPOUND&object=CPD0-1162	
+s_2904[p]'	(R)-3-hydroxyoctanoyl-CoA [peroxisome]'	C29H50N7O18P3S	https://www.genome.jp/dbget-bin/www_bget?cpd:C05278	
+s_2909[p]'	(R)-3-hydroxy-cis-tetradec-7-enoyl-CoA [peroxisome]'	Missing source and formula		
+s_2910[p]'	(R)-3-hydroxy-cis-dodec-5-enoyl-CoA [peroxisome]'	Missing source and formula		
+s_2922[p]'	3-oxo-cis-dodec-5-enoyl-CoA [peroxisome]'	Missing source and formula		
+s_3479[ce]'	1-acylglycerophosphoserine (16:0) [cell envelope]'	C22H44NP10	Found by elemental balance	
+s_3481[ce]'	1-acylglycerophosphoserine (16:1) [cell envelope]'	C22H42NP10	Found by elemental balance	
+s_3483[ce]'	1-acylglycerophosphoserine (18:0) [cell envelope]'	C24H48NP10	Found by elemental balance	
+s_3485[ce]'	1-acylglycerophosphoserine (18:1) [cell envelope]'	C24H46NP10	Found by elemental balance	
+s_3717[c]'	protein [cytoplasm]'			
+s_3718[c]'	carbohydrate [cytoplasm]'			
+s_3719[c]'	RNA [cytoplasm]'			
+s_3720[c]'	DNA [cytoplasm]'			
+s_3746[c]'	lipid - backbones [cytoplasm]'			
+s_3747[c]'	lipid - tails [cytoplasm]'			
