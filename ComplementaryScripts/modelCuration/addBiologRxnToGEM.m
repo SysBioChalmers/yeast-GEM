@@ -141,6 +141,7 @@ for i = 1:length(newrxn.ID)
     model.rxnKEGGID(rxnIndex)     = newrxn.rxnKEGGID(i);
     model.rxnMetaNetXID(rxnIndex) = newrxn.rxnMetaNetXID(i);
     model.rxnConfidenceScores(rxnIndex) = 1;   %reactions without gene but needed for modelling
+    model.rxnNotes{rxnIndex} = ['NOTES: BIOLOG; ',newrxn.rxnNotes{i}];
 end
 
 % Save model:
