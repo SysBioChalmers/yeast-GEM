@@ -43,11 +43,9 @@ Thumbs.db
 *.mex*
 *.mlappinstall 
 *.mltbx
-*.mat
 helpsearch*/
 
 # Non-complying tables #
 ########################
 *.xls
-*.xlsx
 *.tab

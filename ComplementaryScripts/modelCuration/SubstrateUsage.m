@@ -67,6 +67,7 @@ for i = 1:length(SubBiologName)
         % Fix confidence score:
         SubRxnIndex = findRxnIDs(newModel,ExchRxn);
         newModel.rxnConfidenceScores(SubRxnIndex) = NaN;    %exchange rxns
+        newModel.rxnNotes{SubRxnIndex} = ['NOTES: BIOLOG; ', newModel.rxnNames{SubRxnIndex}];
         
         % Change media:
         newModel_test = newModel;
