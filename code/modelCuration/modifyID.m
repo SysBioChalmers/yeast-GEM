@@ -12,7 +12,7 @@ cd ..
 model = loadYeastModel;
 
 %Load modifyID.tsv files
-fid = fopen('../ComplementaryData/modelcuration/modifyID.tsv');
+fid = fopen('../data/modelcuration/modifyID.tsv');
 format = repmat('%s ',1,16);
 format = strtrim(format);
 temp = textscan(fid,format,'Delimiter','\t','HeaderLines',0);

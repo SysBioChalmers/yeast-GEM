@@ -1,7 +1,7 @@
 % This Function is for updating new database annotated metabolites/reactions of model.
 % Add changes from the database new anotation for new reactions and new metabolites and new genes related + manual curation on those changes
 % Input: model, DBnewrRxnMatrix.tsv,DBnewRxnMetAnnotation.tsv,SGDgeneNames.tsv, DBnewRxnIDmappinglist.tsv. .
-% As for the reference of new genes and reactions related, please find detailed information in the /ComplementaryData/databases/DBnewGeneAnnotation.tsv
+% As for the reference of new genes and reactions related, please find detailed information in the /data/databases/DBnewGeneAnnotation.tsv
 % NOTE: changeGeneAssociation.m is a function from cobra
 %       Extract model info from .tsv format.
 %       Before run the codes below, the file should be manually editted.
@@ -14,14 +14,14 @@ cd ..
 model = loadYeastModel;
 
 %mapping list:
-fid = fopen('../ComplementaryData/modelCuration/DBnewRxnIDmappinglist.tsv');
+fid = fopen('../data/modelCuration/DBnewRxnIDmappinglist.tsv');
 map = textscan(fid,'%s %s','Delimiter','\t','HeaderLines',1);
 mappinglist(:,1) = map{1};
 mappinglist(:,2) = map{2};
 fclose(fid);
 
 %newreaction:
-fid = fopen('../ComplementaryData/modelCuration/DBnewrRxnMatrix.tsv');
+fid = fopen('../data/modelCuration/DBnewrRxnMatrix.tsv');
 newreaction    = textscan(fid,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 matrix.rxnIDs  = newreaction{1};
 matrix.metcoef = cellfun(@str2num, newreaction{2});
@@ -75,7 +75,7 @@ for j = 1:length(matrix.metnames)
 end
 
 % add met annotation
-fid = fopen('../../ComplementaryData/modelCuration/DBnewRxnMetAnnotation.tsv');
+fid = fopen('../../data/modelCuration/DBnewRxnMetAnnotation.tsv');
 newmet_annot = textscan(fid,'%s %s %s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 newmet.metNames    = newmet_annot{1};
 newmet.metFormulas = newmet_annot{2};
@@ -97,7 +97,7 @@ for i = 1:length(newmet.metNames)
 end
 
 %Load rxnProp(rev and GPR)
-fid = fopen('../../ComplementaryData/modelCuration/DBnewRxnProp.tsv');
+fid = fopen('../../data/modelCuration/DBnewRxnProp.tsv');
 rev = textscan(fid,'%s %s %s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 newrxn.ID  = rev{1};
 newrxn.Rev = cellfun(@str2num, rev{2});
@@ -142,7 +142,7 @@ for i = 1:length(newrxn.ID)
 end
 
 % add gene standard name for new genes
-fid = fopen('../../ComplementaryData/databases/SGDgeneNames.tsv');
+fid = fopen('../../data/databases/SGDgeneNames.tsv');
 yeast_gene_annotation = textscan(fid,'%s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid);
 

@@ -7,7 +7,7 @@ function model = loadYeastModel
 
 scriptFolder = fileparts(which(mfilename));
 currentDir = cd(scriptFolder);
-model = readCbModel('../ModelFiles/xml/yeastGEM.xml');
+model = readCbModel('../model/xml/yeastGEM.xml');
 model = buildRxnGeneMat(model);
 cd(currentDir)
 

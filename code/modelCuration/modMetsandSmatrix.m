@@ -13,7 +13,7 @@ cd ..
 model = loadYeastModel;
 
 %Load modMetsandSmatrix.tsv
-fid = fopen('../ComplementaryData/modelCuration/modMetsandSmatrix.tsv');
+fid = fopen('../data/modelCuration/modMetsandSmatrix.tsv');
 format = repmat('%s ',1,14);
 format = strtrim(format);
 temp = textscan(fid,format,'Delimiter','\t','HeaderLines',0);

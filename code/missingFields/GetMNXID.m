@@ -1,7 +1,7 @@
 function model = GetMNXID(model,type,level)
 % GetMNXID
 %   mapping the model into metanetxID
-%   In this function, we call the function 'mapIDsViaMNXref.m' from /ComplementaryScripts/missingFields, which is orginiated from
+%   In this function, we call the function 'mapIDsViaMNXref.m' from /code/missingFields, which is orginiated from
 %   HMR3, and the part 'Load MNXref data structure' is modified to read the reference data from RAVEN.
 %
 %   model                   a model structure;please load yeast model using function 'loadYeastModel.m' from
@@ -46,7 +46,7 @@ if strcmpi(type,'mets')
         
     elseif level == 2
         %load mapping list for yeast7.6MNXmodel from mnx website
-        fid  = fopen('../../ComplementaryData/databases/Yeast7.6MNXMetMappingList.tsv','r');
+        fid  = fopen('../../data/databases/Yeast7.6MNXMetMappingList.tsv','r');
         MNX = textscan(fid,'%s %s','Delimiter','\t','HeaderLines',1);
         MNXmodel.mets  = MNX{1};
         MNXmodel.MetMNXid = MNX{2};
@@ -76,7 +76,7 @@ elseif strcmpi(type,'rxns')
         
     elseif level == 2
         %load mapping list for yeast7.6MNXmodel from mnx website
-        fid  = fopen('../../ComplementaryData/databases/Yeast7.6MNXRxnMappingList.tsv','r');
+        fid  = fopen('../../data/databases/Yeast7.6MNXRxnMappingList.tsv','r');
         MNX = textscan(fid,'%s %s','Delimiter','\t','HeaderLines',1);
         MNXmodel.rxns  = MNX{1};
         MNXmodel.rxnMNXid = MNX{2};

@@ -7,10 +7,10 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %Load model:
-model = readCbModel('../../ModelFiles/xml/yeastGEM.xml');
+model = readCbModel('../../model/xml/yeastGEM.xml');
 
 %Correct some gene relations based on isce926:
-fid      = fopen('../../ComplementaryData/modelCuration/iSce926curatedGeneRules.tsv');
+fid      = fopen('../../data/modelCuration/iSce926curatedGeneRules.tsv');
 newRules = textscan(fid,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid);
 
@@ -23,7 +23,7 @@ for i = 1:ss1
 end
 
 %Add new genes based on isce926:
-fid1     = fopen('../../ComplementaryData/modelCuration/iSce926newGenes.tsv');
+fid1     = fopen('../../data/modelCuration/iSce926newGenes.tsv');
 newGenes = textscan(fid1,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid1);
 
@@ -36,7 +36,7 @@ for i = 1:ss2
 end
 
 %Add gene standard name for new gene from isce926:
-fid2 = fopen('../../ComplementaryData/databases/SGDgeneNames.tsv');
+fid2 = fopen('../../data/databases/SGDgeneNames.tsv');
 SGD  = textscan(fid2,'%s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid2);
 

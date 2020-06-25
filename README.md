@@ -52,13 +52,13 @@ This repository is administered by Benjamín J. Sánchez ([@BenjaSanchez](https:
 Make sure to load/save the model with the corresponding wrapper functions!
 * In Matlab:
   ```matlab
-  cd ./ComplementaryScripts
+  cd ./code
   model = loadYeastModel(); % loading
   saveYeastModel(model);    % saving
   ```
 * In Python:
   ```python
-  import ComplementaryScripts.io as io
+  import code.io as io
   model = io.read_yeast_model() # loading
   io.write_yeast_model(model)   # saving
   ```

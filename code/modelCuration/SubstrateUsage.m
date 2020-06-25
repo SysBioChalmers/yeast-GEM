@@ -2,7 +2,7 @@
 % SubstrateUsage
 %
 % Automatically adds exchange reactions for every metabolite in 
-% ComplementaryData/physiology/Biolog_substrate.tsv and checks whether
+% data/physiology/Biolog_substrate.tsv and checks whether
 % it can be used as a "solo" substrate.
 %
 % NOTE: requires COBRA
@@ -13,7 +13,7 @@ cd ..
 model = loadYeastModel;
 
 % Load data:
-fid2 = fopen('../ComplementaryData/physiology/Biolog_substrate.tsv');
+fid2 = fopen('../data/physiology/Biolog_substrate.tsv');
 substrate = textscan(fid2,'%s %s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 SubBiologName = substrate{1};
 SubModelName  = substrate{2};
@@ -138,7 +138,7 @@ end
 
 % Update results from model:
 cd ..
-fid2 = fopen('../ComplementaryData/physiology/Biolog_substrate.tsv','w');
+fid2 = fopen('../data/physiology/Biolog_substrate.tsv','w');
 formatSpec = '%s\t%s\t%s\t%s\t%s\n';
 fprintf(fid2,formatSpec,'Substrate','Name_in_Model','Substrate_type','Growth_Biolog','Growth_Model');
 for i = 1:length(FBAresult)

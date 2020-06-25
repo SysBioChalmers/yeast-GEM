@@ -5,7 +5,7 @@
 function model = fitGAM(model)
 
 %Load chemostat data:
-fid = fopen('../../ComplementaryData/physiology/chemostatData_VanHoek1998.tsv','r');
+fid = fopen('../../data/physiology/chemostatData_VanHoek1998.tsv','r');
 exp_data = textscan(fid,'%f32 %f32 %f32 %f32','Delimiter','\t','HeaderLines',1);
 exp_data = [exp_data{1} exp_data{2} exp_data{3} exp_data{4}];
 fclose(fid);

@@ -9,7 +9,7 @@ cd ..
 model = loadYeastModel;
 
 %Load data:
-fid = fopen('../ComplementaryData/modelCuration/Missingmetaboliteformulas.tsv','r');
+fid = fopen('../data/modelCuration/Missingmetaboliteformulas.tsv','r');
 metaboliteData = textscan(fid,'%s %s %s %s %f32 %s','Delimiter','\t','HeaderLines',1);
 fclose(fid);
 

@@ -58,10 +58,10 @@ Here's how to set up yeast-GEM for local development to contribute smaller featu
     * If your changes are not so small and require several steps, create a script that loads the model, reads data (if applicable), changes the model accordingly, and saves the model back.
     * Each script should start with a commented section describing the script, explaining the parameters, and indicating your name and the date it was written. Existing functions can clarify what style should be used.
     * As much as possible follow the model conventions:
-      - For new metabolites and/or reactions, please use `/ComplementaryScripts/otherChanges/getNewIndex.m` for obtaining new ids.
+      - For new metabolites and/or reactions, please use `/code/otherChanges/getNewIndex.m` for obtaining new ids.
       - For metabolite and/or reaction names, please avoid any unconventional characters (e.g. Greek letters).
       - For new genes, please use as id the [systematic names from SGD](http://seq.yeastgenome.org/help/community/nomenclature-conventions).
-    * Store scripts in the appropriate folder in `/ComplementaryScripts` and data (as `.tsv` files) in the appropriate folder in `/ComplementaryData`. If you think no folder is adequate for your script/data, feel free to create your own folder. Note that binary data such as `.mat` structures or `.xls` tables cannot be stored in the repo (as they cannot be version-controlled, and they increment too much the size of the repo).
+    * Store scripts in the appropriate folder in `/code` and data (as `.tsv` files) in the appropriate folder in `/data`. If you think no folder is adequate for your script/data, feel free to create your own folder. Note that binary data such as `.mat` structures or `.xls` tables cannot be stored in the repo (as they cannot be version-controlled, and they increment too much the size of the repo).
     * When you are done making changes, review locally your changes with `git diff` or any git client, to make sure you are modifying the model as you intended.
 
 7. Commit your changes and push your branch to GitHub.
@@ -150,8 +150,8 @@ Follow all other steps in the same way. Also, when creating your pull request (o
 ### Reviewing pull requests
 
 Every pull request must be approved by at least one reviewer before it can be merged. When reviewing someone else's pull request, keep in mind the following aspects:
-* **Compatibility:** First of all, make sure that the model is still compatible with the loading/saving wrappers (`loadYeastModel.m` & `saveYeastModel.m`) and that no errors appear. Check also that [`dependencies.txt`](https://github.com/SysBioChalmers/yeast-GEM/blob/master/ModelFiles/dependencies.txt) does not change in any unexpected ways (e.g. an "unknown" toolbox version). Finally, ensure that the SBML fields `model metaid`, `model id` and `model name` never change, as if they change it would create a conflict in the next release.
-* **Documentation:** Every change should be justified with a reference/link/argument. This can be provided as data in `/ComplementaryData`, or directly as a comment in the pull request.
+* **Compatibility:** First of all, make sure that the model is still compatible with the loading/saving wrappers (`loadYeastModel.m` & `saveYeastModel.m`) and that no errors appear. Check also that [`dependencies.txt`](https://github.com/SysBioChalmers/yeast-GEM/blob/master/model/dependencies.txt) does not change in any unexpected ways (e.g. an "unknown" toolbox version). Finally, ensure that the SBML fields `model metaid`, `model id` and `model name` never change, as if they change it would create a conflict in the next release.
+* **Documentation:** Every change should be justified with a reference/link/argument. This can be provided as data in `/data`, or directly as a comment in the pull request.
 * **Reproducibility:** If there are any added scripts, make sure that if you run them, the model gets updated from how it was in `devel` to how it is in the pull request. For this, you may _locally_ switch to the corresponding branch, replace the `.xml` file with the one from `devel` before the changes, and run the associated scripts. Remember to stash any undesired changes afterwards.
 * **Style:** Ensure that the changes to the model are compliant with the model's rxn/met/gene naming conventions (when unsure, take a look at a similar field in the model). Also, make sure that scripts have a compliant style, and datasets are straight-forward to understand.
 * When commenting in the review, please comply with our [code of conduct](https://github.com/SysBioChalmers/yeast-GEM/blob/master/.github/CODE_OF_CONDUCT.md).

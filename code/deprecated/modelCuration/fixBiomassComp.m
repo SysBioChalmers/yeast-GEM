@@ -21,7 +21,7 @@ model = loadYeastModel;
 cd otherChanges
 
 %Load data from Forster 2003:
-fid = fopen('../../ComplementaryData/physiology/biomassComposition_Forster2003.tsv');
+fid = fopen('../../data/physiology/biomassComposition_Forster2003.tsv');
 Forster2003     = textscan(fid,'%s %s %f32 %f32 %s','Delimiter','\t','HeaderLines',1);
 data.mets       = Forster2003{1};
 data.abundances = double(Forster2003{3});
@@ -56,7 +56,7 @@ sumBioMass(model);
 
 %Correct with data from biomassComposition_Cofactor_Ion:
 data_original = data;
-fid = fopen('../../ComplementaryData/physiology/biomassComposition_Cofactor_Ion.tsv');
+fid = fopen('../../data/physiology/biomassComposition_Cofactor_Ion.tsv');
 Cofactors       = textscan(fid,'%s %s %f32 %f32 %s %s','Delimiter','\t','HeaderLines',1);
 data.mets       = Cofactors{1};
 data.abundances = double(Cofactors{3});
@@ -79,7 +79,7 @@ end
 [X,P,C,R,~,~,~,~] = sumBioMass(model);
 
 %Correct with data from Lahtvee 2017:
-fid = fopen('../../ComplementaryData/physiology/biomassComposition_Lahtvee2017.tsv');
+fid = fopen('../../data/physiology/biomassComposition_Lahtvee2017.tsv');
 Lahtvee2017      = textscan(fid,'%s %s %f32 %f32 %s','Delimiter','\t','HeaderLines',1);
 data2.mets       = Lahtvee2017{1};
 data2.names      = Lahtvee2017{2};

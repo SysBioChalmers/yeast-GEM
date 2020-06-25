@@ -20,7 +20,7 @@ if ~strcmp(currentBranch,'master')
 end
 
 %Bump version number:
-oldModel   = load('../ModelFiles/mat/yeastGEM.mat');
+oldModel   = load('../model/mat/yeastGEM.mat');
 oldVersion = oldModel.model.modelID;
 oldVersion = oldVersion(strfind(oldVersion,'_v')+2:end);
 oldVersion = str2double(strsplit(oldVersion,'.'));
@@ -50,7 +50,7 @@ end
 
 %Load model:
 initCobraToolbox
-model = readCbModel('../ModelFiles/xml/yeastGEM.xml');
+model = readCbModel('../model/xml/yeastGEM.xml');
 
 %Include tag and save model:
 model.modelID = ['yeastGEM_v' newVersion];
@@ -64,7 +64,7 @@ for i = 1:length(diff)
     diff_i = strsplit(diff{i},'\t');
     if length(diff_i) == 3
         %.xml file: 1 line should be added & 1 line should be deleted
-        if strcmp(diff_i{3},'ModelFiles/xml/yeastGEM.xml')
+        if strcmp(diff_i{3},'model/xml/yeastGEM.xml')
             if eval([diff_i{1} ' > 1']) || eval([diff_i{2} ' > 1'])
                 disp(['NOTE: File ' diff_i{3} ' is changing more than expected'])
                 change = true;
@@ -98,7 +98,7 @@ fclose('all');
 delete('backup');
 
 %Store model as .mat:
-save('../ModelFiles/mat/yeastGEM.mat','model');
+save('../model/mat/yeastGEM.mat','model');
 
 %Convert to RAVEN format and store model as .xlsx:
 model = ravenCobraWrapper(model);
@@ -110,7 +110,7 @@ model.annotation.familyName   = 'Sanchez';
 model.annotation.email        = 'bensan@chalmers.se';
 model.annotation.organization = 'Chalmers University of Technology';
 model.annotation.note         = 'Saccharomyces cerevisiae - strain S288C';
-exportToExcelFormat(model,'../ModelFiles/xlsx/yeastGEM.xlsx');
+exportToExcelFormat(model,'../model/xlsx/yeastGEM.xlsx');
 
 %Update version file:
 fid = fopen('../version.txt','wt');

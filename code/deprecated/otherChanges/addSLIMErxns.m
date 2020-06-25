@@ -60,7 +60,7 @@ model_SLIMEr.S(Hpos,bioRxn)   = +GAM;
 model_SLIMEr.S(Ppos,bioRxn)   = +GAM;
 
 %Save model & return to origin:
-cd ../../yeast-GEM/complementaryScripts
+cd ../../yeast-GEM/code
 saveYeastModel(model_SLIMEr);
 cd otherChanges
 

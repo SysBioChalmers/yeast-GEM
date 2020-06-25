@@ -3,7 +3,7 @@
 % Add changes from the database new anootation for new genes + manual curation on those changes
 % Input: model, databasenewGPR.tsv,SGDgeneNames.tsv.
 % As for the reference of new GPR, please find detailed information in:
-% ComplementaryData/databases/DBnewGeneAnnotation.tsv
+% data/databases/DBnewGeneAnnotation.tsv
 % NOTE: changeGeneAssociation.m is a function from cobra
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -12,7 +12,7 @@ cd ..
 model = loadYeastModel;
 
 % Change GPR relations
-fid           = fopen('../ComplementaryData/modelCuration/databasenewGPR.tsv');
+fid           = fopen('../data/modelCuration/databasenewGPR.tsv');
 changegpr     = textscan(fid,'%s %s %s','Delimiter','\t','HeaderLines',1);
 newGPR.ID     = changegpr{1};
 newGPR.oldGPR = changegpr{2};
@@ -27,7 +27,7 @@ end
 model = removeUnusedGenes(model);
 
 % Add gene standard name for new genes
-fid = fopen('../ComplementaryData/databases/SGDgeneNames.tsv');
+fid = fopen('../data/databases/SGDgeneNames.tsv');
 yeast_gene_annotation = textscan(fid,'%s %s','Delimiter','\t','HeaderLines',1);
 fclose(fid);
 for i = 1: length(model.genes)

@@ -10,7 +10,7 @@ cd ..
 model = loadYeastModel;
 
 % Load stoichiometry data:
-fid = fopen('../ComplementaryData/modelCuration/GapfillingnewRxnMatrix.tsv');
+fid = fopen('../data/modelCuration/GapfillingnewRxnMatrix.tsv');
 newreaction = textscan(fid,'%s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 matrix.rxnIDs  = newreaction{1};
 matrix.metcoef = cellfun(@str2num, newreaction{2});
@@ -20,7 +20,7 @@ matrix.metcompartments = newreaction{5};
 fclose(fid);
 
 % Load rxn properties data:
-fid  = fopen('../ComplementaryData/modelCuration/GapfillingnewRxnProp.tsv','r');
+fid  = fopen('../data/modelCuration/GapfillingnewRxnProp.tsv','r');
 rev = textscan(fid,'%s %s %s %s %s %s %s %s %s','Delimiter','\t','HeaderLines',1);
 newrxn.ID  = rev{1};
 newrxn.Rev = cellfun(@str2num, rev{2});

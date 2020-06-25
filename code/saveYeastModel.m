@@ -46,13 +46,13 @@ if ~isempty(errors)
 end
 
 %Update .xml, .txt and .yml models:
-copyfile('tempModel.xml','../ModelFiles/xml/yeastGEM.xml')
+copyfile('tempModel.xml','../model/xml/yeastGEM.xml')
 delete('tempModel.xml');
-writeCbModel(model,'text','../ModelFiles/txt/yeastGEM.txt');
+writeCbModel(model,'text','../model/txt/yeastGEM.txt');
 exportForGit(model,'yeastGEM','..',{'yml'});
 
 %Detect boundary metabolites and save them in a .txt file:
-fid = fopen('../ModelFiles/boundaryMets.txt','wt');
+fid = fopen('../model/boundaryMets.txt','wt');
 for i = 1:length(model.rxns)
     pos = find(model.S(:,i) ~= 0);
     if length(pos) == 1 %Exchange rxn
@@ -88,9 +88,9 @@ delete('backup.md');
 
 %Convert notation "e-005" to "e-05 " in stoich. coeffs. to avoid
 %inconsistencies between Windows and MAC:
-copyfile('../ModelFiles/xml/yeastGEM.xml','backup.xml')
+copyfile('../model/xml/yeastGEM.xml','backup.xml')
 fin  = fopen('backup.xml','r');
-fout = fopen('../ModelFiles/xml/yeastGEM.xml','w');
+fout = fopen('../model/xml/yeastGEM.xml','w');
 still_reading = true;
 while still_reading
     inline = fgets(fin);

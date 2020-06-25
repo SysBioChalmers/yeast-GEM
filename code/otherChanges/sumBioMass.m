@@ -20,14 +20,14 @@ function [X,P,C,R,D,L,I,F] = sumBioMass(model)
 
 %Load original biomass component MWs:
 %TODO: compute MW automatically from chemical formulas (check that all components have them first)
-fid = fopen('../../ComplementaryData/physiology/biomassComposition_Forster2003.tsv');
+fid = fopen('../../data/physiology/biomassComposition_Forster2003.tsv');
 Forster2003 = textscan(fid,'%s %s %f32 %f32 %s','Delimiter','\t','HeaderLines',1);
 data.mets   = Forster2003{1};
 data.MWs    = double(Forster2003{4});
 fclose(fid);
 
 %load additional cofactor/ion MWs:
-fid = fopen('../../ComplementaryData/physiology/biomassComposition_Cofactor_Ion.tsv');
+fid = fopen('../../data/physiology/biomassComposition_Cofactor_Ion.tsv');
 CofactorsIons = textscan(fid,'%s %s %f32 %f32 %s %s','Delimiter','\t','HeaderLines',1);
 data_new.mets = CofactorsIons{1};
 data_new.MWs  = double(CofactorsIons{4});

@@ -6,7 +6,7 @@
 function model = updateMetaboliteAnnotation(model)
 
 %Load data:
-fid = fopen('../../ComplementaryData/modelCuration/metabolite_manual_curation.tsv','r');
+fid = fopen('../../data/modelCuration/metabolite_manual_curation.tsv','r');
 metaboliteData = textscan(fid,'%s %s %s %s %f32 %s','Delimiter','\t','HeaderLines',1);
 fclose(fid);
 
