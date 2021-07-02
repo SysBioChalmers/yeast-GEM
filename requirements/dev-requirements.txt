@@ -75,18 +75,6 @@ chardet==4.0.0
     #   datapackage
     #   requests
     #   tabulator
-click-configfile==0.2.3
-    # via
-    #   -r requirements.txt
-    #   memote
-click-default-group==1.2.2
-    # via
-    #   -r requirements.txt
-    #   goodtables
-click-log==0.3.2
-    # via
-    #   -r requirements.txt
-    #   memote
 click==7.1.2
     # via
     #   -r requirements.txt
@@ -101,6 +89,18 @@ click==7.1.2
     #   tableschema
     #   tabulator
     #   travis-encrypt
+click-configfile==0.2.3
+    # via
+    #   -r requirements.txt
+    #   memote
+click-default-group==1.2.2
+    # via
+    #   -r requirements.txt
+    #   goodtables
+click-log==0.3.2
+    # via
+    #   -r requirements.txt
+    #   memote
 cobra==0.21.0
     # via
     #   -r requirements.txt
@@ -218,16 +218,16 @@ ipykernel==5.5.3
     # via
     #   -r requirements.txt
     #   notebook
+ipython==7.22.0
+    # via
+    #   -r requirements.txt
+    #   ipykernel
 ipython-genutils==0.2.0
     # via
     #   -r requirements.txt
     #   nbformat
     #   notebook
     #   traitlets
-ipython==7.22.0
-    # via
-    #   -r requirements.txt
-    #   ipykernel
 isodate==0.6.0
     # via
     #   -r requirements.txt
@@ -236,10 +236,6 @@ jedi==0.18.0
     # via
     #   -r requirements.txt
     #   ipython
-jinja2-time==0.2.0
-    # via
-    #   -r requirements.txt
-    #   cookiecutter
 jinja2==2.11.3
     # via
     #   -r requirements.txt
@@ -250,6 +246,10 @@ jinja2==2.11.3
     #   notebook
     #   numpydoc
     #   sphinx
+jinja2-time==0.2.0
+    # via
+    #   -r requirements.txt
+    #   cookiecutter
 jmespath==0.10.0
     # via
     #   -r requirements.txt
@@ -406,7 +406,7 @@ pycparser==2.20
     # via
     #   -r requirements.txt
     #   cffi
-pydantic==1.8.1
+pydantic==1.8.2
     # via
     #   -r requirements.txt
     #   cobra
@@ -490,15 +490,15 @@ rich==6.2.0
     # via
     #   -r requirements.txt
     #   cobra
-ruamel.yaml.clib==0.2.2
-    # via
-    #   -r requirements.txt
-    #   ruamel.yaml
 ruamel.yaml==0.17.4
     # via
     #   -r requirements.txt
     #   cobra
     #   memote
+ruamel.yaml.clib==0.2.2
+    # via
+    #   -r requirements.txt
+    #   ruamel.yaml
 s3transfer==0.3.6
     # via
     #   -r requirements.txt
