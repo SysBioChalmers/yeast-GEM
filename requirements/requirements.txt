@@ -48,12 +48,6 @@ chardet==4.0.0
     #   datapackage
     #   requests
     #   tabulator
-click-configfile==0.2.3
-    # via memote
-click-default-group==1.2.2
-    # via goodtables
-click-log==0.3.2
-    # via memote
 click==7.1.2
     # via
     #   click-configfile
@@ -66,6 +60,12 @@ click==7.1.2
     #   tableschema
     #   tabulator
     #   travis-encrypt
+click-configfile==0.2.3
+    # via memote
+click-default-group==1.2.2
+    # via goodtables
+click-log==0.3.2
+    # via memote
 cobra==0.21.0
     # via
     #   -r requirements.in
@@ -134,19 +134,17 @@ iniconfig==1.1.1
     # via pytest
 ipykernel==5.5.3
     # via notebook
+ipython==7.22.0
+    # via ipykernel
 ipython-genutils==0.2.0
     # via
     #   nbformat
     #   notebook
     #   traitlets
-ipython==7.22.0
-    # via ipykernel
 isodate==0.6.0
     # via tableschema
 jedi==0.18.0
     # via ipython
-jinja2-time==0.2.0
-    # via cookiecutter
 jinja2==2.11.3
     # via
     #   cookiecutter
@@ -156,6 +154,8 @@ jinja2==2.11.3
     #   notebook
     #   numpydoc
     #   sphinx
+jinja2-time==0.2.0
+    # via cookiecutter
 jmespath==0.10.0
     # via
     #   boto3
@@ -310,12 +310,12 @@ rfc3986[idna2008]==1.4.0
     #   tableschema
 rich==6.2.0
     # via cobra
-ruamel.yaml.clib==0.2.2
-    # via ruamel.yaml
 ruamel.yaml==0.17.4
     # via
     #   cobra
     #   memote
+ruamel.yaml.clib==0.2.2
+    # via ruamel.yaml
 s3transfer==0.3.6
     # via boto3
 send2trash==1.5.0
@@ -421,7 +421,7 @@ unicodecsv==0.14.1
     #   datapackage
     #   tableschema
     #   tabulator
-urllib3==1.26.4
+urllib3==1.26.5
     # via
     #   botocore
     #   requests
