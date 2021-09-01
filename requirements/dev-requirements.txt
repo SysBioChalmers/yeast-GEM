@@ -323,7 +323,7 @@ nest-asyncio==1.5.1
     # via
     #   -r requirements.txt
     #   nbclient
-notebook==6.4.1
+notebook==6.4.3
     # via -r requirements.txt
 numpy==1.20.2
     # via
