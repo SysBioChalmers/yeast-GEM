@@ -20,9 +20,9 @@ if rxnID ~= 0
     model_test = changeObjective(model_test,'GenerateATP', 1);
     sol = optimizeCbModel(model_test);
     if sol.f <= 360 && sol.f > 0 %later can be changed to the experimental value
-        energyResults = [energyResults; model.rxns(rxnID),'pass',num2str(sol.obj)];
+        energyResults = [energyResults; model.rxns(rxnID),'pass',num2str(sol.f)];
     elseif sol.f > 360
-        energyResults = [energyResults; model.rxns(rxnID),'Fail',num2str(sol.obj)];
+        energyResults = [energyResults; model.rxns(rxnID),'Fail',num2str(sol.f)];
     else
         energyResults = [energyResults; model.rxns(rxnID),'error','error'];
     end
