@@ -1,0 +1,210 @@
+index	rxnNames	grRules	lb	ub	rev	subSystems	eccodes	rxnNotes	rxnReferences	rxnConfidenceScores	kegg.reaction	kegg.pathway	bigg.reaction	metanetx.reaction	brenda	biocyc	reactome	sabiork.reaction	seed.reactions	rhea
+1	glutathione:NAD+ oxidoreductase	YPL091W	-1000	1000	1	other	1.8.1.7	New rxns from databases curation (PR #304)			R00094									
+2	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	YKL067W	0	1000	0	Pyrimidine metabolism	2.7.4.6	New rxns from databases curation (PR #304)			R00139									
+3	FAD nucleotidohydrolase	(YCR026C or YEL016C)	-1000	1000	1	Riboflavin metabolism	"3.6.1.9; 3.6.1.18"	New rxns from databases curation (PR #304)			R00160									
+4	P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase	(YCR026C or YEL016C)	0	1000	0	Purine metabolism	3.6.1.29	New rxns from databases curation (PR #304)			R00187									
+5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	YHR037W	-1000	1000	1	Arginine and proline metabolism	1.2.1.88	New rxns from databases curation (PR #304)			R00245									
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	YHR039C	-1000	1000	1	"Pentose and glucuronate interconversions;Ascorbate and aldarate metabolism"	"1.2.1.3; 1.2.1.26"	New rxns from databases curation (PR #304)			R00264									
+7	GTP 8,9-hydrolase	YGR267C	-1000	1000	1	Folate biosynthesis	3.5.4.16	New rxns from databases curation (PR #304)			R00428									
+8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	YJL005W	0	1000	0	Purine metabolism	"4.6.1.1; 4.6.1.2"	New rxns from databases curation (PR #304)			R00434									
+9	ATP:cytidine 5'-phosphotransferase	YNR012W	-1000	1000	1	Pyrimidine metabolism	"2.7.1.48; 2.7.1.213"	New rxns from databases curation (PR #304)			R00513									
+10	(S)-ureidoglycolate urea-lyase (glyoxylate-forming)	YIR032C	-1000	1000	1	Purine metabolism	4.3.2.3	New rxns from databases curation (PR #304)			R00776									
+11	acetyl adenylate:CoA acetyltransferase	(YLR153C or YAL054C)	-1000	1000	1	pyruvate metabolism	6.2.1.1	New rxns from databases curation (PR #304)			R00236									
+12	"acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;"	YIL160C	-1000	1000	1	Valine, leucine and isoleucine degradation	"2.3.1.9; 2.3.1.16"	New rxns from databases curation (PR #304)			R00927									
+13	ATP:D-ribose-5-phosphate diphosphotransferase	(YBL068W or YHL011C or YER099C or YOL061W or YKL181W)	-1000	1000	1	"Pentose phosphate pathway;Purine metabolism"	2.7.6.1	New rxns from databases curation (PR #304)			R01049									
+14	ATP:D-glyceraldehyde 3-phosphotransferase	(YML070W or YFL053W)	0	1000	0	Fructose and mannose metabolism	2.7.1.28	New rxns from databases curation (PR #304)			R01059									
+15	butanoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase	YGL205W	-1000	1000	1	"Fatty acid degradation;Butanoate metabolism"	"1.3.3.6; 1.3.8.1; 1.3.8.7; 1.3.99.; 1.3.99.-"	New rxns from databases curation (PR #304)			R01175									
+16	5-Methylcytosine aminohydrolase	YPR062W	0	1000	0	Pyrimidine metabolism	3.5.4.1	New rxns from databases curation (PR #304)			R01411									
+17	adenosine:phosphate alpha-D-ribosyltransferase	YLR209C	-1000	1000	1	Purine metabolism	2.4.2.1	New rxns from databases curation (PR #304)			R01561									
+18	D-glucose 1-epimerase	(YHR210C or YNR071C)	-1000	1000	1	Glycolysis / Gluconeogenesis	5.1.3.3	New rxns from databases curation (PR #304)			R01602									
+19	APS:ATP adenylyltransferase	(YDR530C or YCL050C)	0	1000	0	Purine metabolism	2.7.7.53	New rxns from databases curation (PR #304)			R01618									
+20	Glycerol:NAD+ oxidoreductase	(YBR149W or YJR096W or YDL124W)	-1000	1000	1	Glycerolipid metabolism	"1.1.1.21; 1.1.1.72"	New rxns from databases curation (PR #304)			R01036									
+21	L-Homoserine:NAD+ oxidoreductase	YJR139C	0	1000	0	"Glycine, serine and threonine metabolism;Cysteine and methionine metabolism;Lysine biosynthesis"	1.1.1.3	New rxns from databases curation (PR #304)			R01773									
+22	L-Homoserine:NAD+ oxidoreductase	YJR139C	0	1000	0	"Glycine, serine and threonine metabolism;Cysteine and methionine metabolism;Lysine biosynthesis"	1.1.1.3	New rxns from databases curation (PR #304)			R01773									
+23	L-Kynurenine:2-oxoglutarate aminotransferase	YJL060W	-1000	1000	1	Tryptophan metabolism	2.6.1.7	New rxns from databases curation (PR #304)			R01956									
+24	L-Kynurenine:2-oxoglutarate aminotransferase	YJL060W	-1000	1000	1	Tryptophan metabolism	2.6.1.7	New rxns from databases curation (PR #304)			R01956									
+25	1,4-alpha-D-Glucan:1,4-alpha-D-glucan 6-alpha-D-(1,4-alpha-D-glucano)-transferase	YEL011W	-1000	1000	1	Starch and sucrose metabolism	2.4.1.18	New rxns from databases curation (PR #304)			R02110									
+26	retinol:NAD+ oxidoreductase	(YDL168W or YCR105W or YMR303C or YBR145W or YMR083W or YOL086C)	-1000	1000	1	Retinol metabolism	"1.1.1.1; 1.1.1.105"	New rxns from databases curation (PR #304)			R02124									
+27	retinol:NAD+ oxidoreductase	YDL168W	0	1000	0	Retinol metabolism	1.1.1.284	New rxns from databases curation (PR #304)			R02124									
+28	5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase	YOR074C	-1000	1000	1	"One carbon pool by folate;Folate biosynthesis"	1.5.1.3	New rxns from databases curation (PR #304)			R00936									
+29	nicotinamide ribonucleotide phosphohydrolase	(YOR155C or YGL224C or YER037W)	0	1000	0	Nicotinate and nicotinamide metabolism	"3.1.3.5; 3.1.3.; 3.1.3.-"	New rxns from databases curation (PR #304)			R02323									
+30	Aldehyde:NADP+ oxidoreductase	YHR039C	-1000	1000	1	Phenylalanine metabolism	1.2.1.5	New rxns from databases curation (PR #304)			R02537									
+31	p-cumic alcohol:NAD+ oxidoreductase	(YER073W or YOR374W or YMR170C or YMR169C or YHR039C)	-1000	1000	1	Glycine, serine and threonine metabolism	1.2.1.8	New rxns from databases curation (PR #304)			R02565									
+32	p-cumic alcohol:NAD+ oxidoreductase	(YER073W or YOR374W or YMR170C or YMR169C or YHR039C)	-1000	1000	1	Glycine, serine and threonine metabolism	1.2.1.8	New rxns from databases curation (PR #304)			R02565									
+33	Donor:hydrogen-peroxide oxidoreductase	YBL064C	-1000	1000	1	Phenylpropanoid biosynthesis	"1.11.1.7; 1.11.1.21"	New rxns from databases curation (PR #304)			R02596									
+34	phenylacrylic acid decarboxylase	(YDR538W or YDR539W)	0	1000	0	Phenylpropanoid biosynthesis	4.1.1.102	New rxns from databases curation (PR #304)			R02952									
+35	phenylacrylic acid decarboxylase	(YDR538W or YDR539W)	0	1000	0	Phenylpropanoid biosynthesis	2.5.1.129	New rxns from databases curation (PR #304)			R02952									
+36	"L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;"	YBR115C	-1000	1000	1	Lysine biosynthesis	1.2.1.95	New rxns from databases curation (PR #304)			R03098									
+37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	YHR201C	-1000	1000	1	Purine metabolism	"3.6.1.11; 3.6.1.40"	New rxns from databases curation (PR #304)			R03409									
+38	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	(YJL137C or YKR058W)	-1000	1000	1	other	2.4.1.186	New rxns from databases curation (PR #304)			R03681									
+39	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	(YJL137C or YKR058W)	0	1000	0	other	2.4.1.186	New rxns from databases curation (PR #304)			R03681									
+40	acetyl-CoA:D-amino-acid N-acetyltransferase	(YEL066W or YPR193C)	0	1000	0	Phenylalanine metabolism	2.3.1.36	New rxns from databases curation (PR #304)			R03903									
+41	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	(YML022W or YDR441C)	-1000	1000	1	Purine metabolism	2.4.2.7	New rxns from databases curation (PR #304)			R04378									
+42	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	(YML022W or YDR441C)	0	1000	0	Purine metabolism	2.4.2.7	New rxns from databases curation (PR #304)			R04378									
+43	"L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;"	YBR115C	0	1000	0	Lysine biosynthesis	1.2.1.95	New rxns from databases curation (PR #304)			R04378									
+44	Se-Adenosylselenohomocysteine hydrolase	YER043C	-1000	1000	1	other	3.3.1.1	New rxns from databases curation (PR #304)			R04936									
+45	Selenocystathionine L-homocysteine-lyase (deaminating)	(YGL184C or YHR112C or YFR055W)	0	1000	0	Selenocompound metabolism	4.4.1.8	New rxns from databases curation (PR #304)			R04941									
+46	R03158	YDR036C	-1000	1000	1	"beta-Alanine metabolism;Propanoate metabolism"	3.1.2.4	New rxns from databases curation (PR #304)			R03158									
+47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	YOR184W	-1000	1000	1	Vitamin B6 metabolism	2.6.1.52	New rxns from databases curation (PR #304)			R05085									
+48	ATP:1D-myo-inositol-hexakisphosphate phosphotransferase	YLR410W	0	1000	0	other	2.7.4.24	New rxns from databases curation (PR #304)			R05799									
+49	(2R)-3-sulfolactate:NAD+ oxidoreductase	(YKL085W or YDL078C or YOL126C)	-1000	1000	1	"Cysteine and methionine metabolism;Methane metabolism"	"1.1.1.37; 1.1.1.337"	New rxns from databases curation (PR #304)			R07136									
+50	5-methyltetrahydrofolate:NAD+ oxidoreductase	(YGL125W or YPL023C)	-1000	1000	1	"One carbon pool by folate;Carbon fixation pathways in prokaryotes"	1.5.1.20	New rxns from databases curation (PR #304)			R07168									
+51	1,2-dihydroxy-5-(methylthio)pent-1-en-3-one:oxygen oxidoreductase (formate-forming)	YMR009W	-1000	1000	1	Cysteine and methionine metabolism	1.13.11.54	New rxns from databases curation (PR #304)			R07364									
+52	R07481	YML008C	-1000	1000	1	Steroid biosynthesis	2.1.1.41	New rxns from databases curation (PR #304)			R07481									
+53	R07494	YGL001C	-1000	1000	1	Steroid biosynthesis	1.1.1.170	New rxns from databases curation (PR #304)			R07494									
+54	5-fluorouridine monophosphate:diphosphate phospho-alpha-D-ribosyl-transferase	YEL021W	0	1000	0	Drug metabolism - other enzymes	2.4.2.10	New rxns from databases curation (PR #304)			R08231									
+55	6-thioinosine 5'-monophosphate:NAD+ oxidoreductase	(YML056C or YLR432W or YHR216W)	0	1000	0	Drug metabolism - other enzymes	1.1.1.205	New rxns from databases curation (PR #304)			R08240									
+56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	(YPR069C or YLR146C)	0	1000	0	Glutathione metabolism	2.5.1.16	New rxns from databases curation (PR #304)			R08359									
+57	R08383	YOR246C	-1000	1000	1	Retinol metabolism	"1.1.1.; 1.1.1.-"	New rxns from databases curation (PR #304)			R08383									
+58	5-methyltetrahydropteroyltri-L-glutamate:L-selenohomocysteine Se-methyltransferase	YER091C	0	1000	0	Selenocompound metabolism	"2.1.1.13; 2.1.1.14"	New rxns from databases curation (PR #304)			R09365									
+59	2,5-diamino-6-(5-phospho-D-ribitylamino)pyrimidin-4(3H)-one:NAD+ 1'-oxidoreductase	YBR153W	-1000	1000	1	Riboflavin metabolism	1.1.1.302	New rxns from databases curation (PR #304)			R09375									
+60	(2R,3S)-3-isopropylmalate:NAD+ oxidoreductase	YCL018W	0	1000	0	other	1.1.1.85	New rxns from databases curation (PR #304)			R10052									
+61	(2R,3S)-3-isopropylmalate hydro-lyase (2-isopropylmaleate-forming)	YGL009C	0	1000	0	other	4.2.1.33	New rxns from databases curation (PR #304)			R10170									
+62	S-adenosyl-L-methionine:L-histidine-[translation elongation factor 2] 2-[(3S)-3-amino-3-carboxypropyl]transferase	YIL103W	-1000	1000	1	other	2.5.1.108	New rxns from databases curation (PR #304)			R10455									
+63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	YPL214C	-1000	1000	1	Thiamine metabolism	2.5.1.3	New rxns from databases curation (PR #304)			R10712									
+64	diphthine methyl ester acylhydrolase	YBR246W	-1000	1000	1	other	3.1.1.97	New rxns from databases curation (PR #304)			R11166									
+65	dimethylallyl-phosphate:FMNH2 prenyltransferase	YDR538W	-1000	1000	1	other	2.5.1.129	New rxns from databases curation (PR #304)			R11225									
+66	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	(YDL178W or YEL071W)	0	1000	0	pyruvate metabolism	1.1.99.40	New rxns from databases curation (PR #304)			R11593									
+67	acetyl-CoA:L-glutamate-5-semialdehyde N-acetyltransferase	YJL127C	-1000	1000	1	Arginine and proline metabolism	2.3.1.271	New rxns from databases curation (PR #304)			R12085									
+68	L-serine hydro-lyase	YCL064C	0	1000	0	Cysteine and methionine metabolism	4.3.1.17	New rxns from databases curation (PR #304)			R00590									
+69	"NAD+-4-hydroxybenzaldehyde dehydrogenase;4-hydroxybenzoate dehydrogenase"	YMR110C	0	1000	0	"4-hydroxybenzoate biosynthesis I (eukaryotes);4-hydroxybenzoate biosynthesis IV (plants);4-hydroxymandelate degradation"	1.2.1.64	New rxns from databases curation (PR #304)								HYDROXYBENZALDEHYDE-OXIDATION-NAD-RXN				
+70	cytidine nucleosidase	YDR400W	0	1000	0	pyrimidine ribonucleosides salvage III	3.2.2.3	New rxns from databases curation (PR #304)								RXN0-361				
+71	"L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase"	(YGR124W or YPR145W)	0	1000	0	L-asparagine biosynthesis II	6.3.1.1	New rxns from databases curation (PR #304)								ASNSYNA-RXN				
+72	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	YDR481C	0	1000	0	"all-trans-farnesol biosynthesis;juvenile hormone III biosynthesis II"	3.1.7.6	New rxns from databases curation (PR #304)								RXN-8617				
+73	saccharopine dehydrogenase	YNR050C	0	1000	0	L-lysine degradation XI (mammalian)	1.5.1.9	New rxns from databases curation (PR #304)								1.5.1.9-RXN				
+74	"lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase"	YNR050C	0	1000	0	L-lysine degradation XI (mammalian)	1.5.1.8	New rxns from databases curation (PR #304)								1.5.1.8-RXN				
+75	2-hexaprenyl-3-methyl-5-hydroxy-6-methoxy-1,4-benzoquinol O-methyltransferase	YOL096C	0	1000	0	"ubiquinol-6 biosynthesis from 4-hydroxybenzoate (eukaryotic);ubiquinol-6 biosynthesis from 4-aminobenzoate (yeast);ubiquinol-6 bypass biosynthesis (eukaryotic)"	2.1.1.64	New rxns from databases curation (PR #304)								RXN3O-102				
+76	2,5-hexadione reductase	(YOL151W or YGL157W or YDR541C or YGL039W)	0	1000	0	other	1.1.1.283	New rxns from databases curation (PR #304)								RXN-14686				
+77	D-ribulokinase	YDR109C	-1000	1000	1	"D-arabinose degradation II;ribitol degradation"	2.7.1.47	New rxns from databases curation (PR #304)								D-RIBULOKIN-RXN				
+78	ATP-dependent NADH-hydrate dehydratase	YKL151C	0	1000	0	NADH repair	4.2.1.93	New rxns from databases curation (PR #304)								4.2.1.93-RXN				
+79	"glutathione S-conjugate carboxypeptidase;glutathione-S-conjugate glycine hydrolase"	(YBR139W or YMR297W)	0	1000	0	glutathione-mediated detoxification II	3.4.17.	New rxns from databases curation (PR #304)								RXN-12532				
+80	"2-ketoglutarate dehydrogenase;dihydrolipoamide dehydrogenase;2-oxoglutarate dehydrogenase"	(YIL125W or YDR148C)	0	1000	0	"TCA cycle II (plants and fungi);TCA cycle I (prokaryotic);TCA cycle VII (acetate-producers)"	1.2.1.	New rxns from databases curation (PR #304)								2OXOGLUTARATEDEH-RXN				
+81	"decarboxylase;2-oxoisovalerate carboxy-lyase;alpha-ketoisovalerate decarboxylase"	(YGR087C or YLR044C or YLR134W)	0	1000	0	"butanol and isobutanol biosynthesis (engineered);pyruvate fermentation to isobutanol (engineered);L-valine degradation II"	4.1.1.72	New rxns from databases curation (PR #304)								RXN-7643				
+82	"decarboxylase;2-oxoisovalerate carboxy-lyase;alpha-ketoisovalerate decarboxylase"	(YGR087C or YLR044C or YLR134W)	0	1000	0	"butanol and isobutanol biosynthesis (engineered);pyruvate fermentation to isobutanol (engineered);L-valine degradation II"	4.1.1.72	New rxns from databases curation (PR #304)								RXN-7643_2				
+83	"decarboxylase;2-oxoisovalerate carboxy-lyase;alpha-ketoisovalerate decarboxylase"	(YGR087C or YLR044C or YLR134W)	0	1000	0	"butanol and isobutanol biosynthesis (engineered);pyruvate fermentation to isobutanol (engineered);L-valine degradation II"	4.1.1.72	New rxns from databases curation (PR #304)								RXN-7643_3				
+84	N-acetylglucosaminyldiphosphodolichol N-acetylglucosaminyltransferase	(YGL047W or YBR070C)	0	1000	0	protein N-glycosylation initial phase (eukaryotic)	2.4.1.141	New rxns from databases curation (PR #304)								2.4.1.141-RXN				
+85	phosphatidyl-N-dimethylethanolamine N-methyltransferase	YJR073C	0	1000	0	"phosphatidylcholine biosynthesis V;phosphatidylcholine biosynthesis IV;phosphatidylcholine biosynthesis III"	2.1.1.71	New rxns from databases curation (PR #304)								RXN4FS-2				
+86	ATP:acetate adenylyltransferase	(YLR153C or YAL054C)	-1000	1000	1	pyruvate metabolism	6.2.1.1	New rxns from databases curation (PR #304)			R00316									
+87	UTP:cytidine 5'-phosphotransferase	YNR012W	-1000	1000	1	Pyrimidine metabolism	2.7.1.48	New rxns from databases curation (PR #304)			R00516									
+88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	YHR037W	-1000	1000	1	"Alanine, aspartate and glutamate metabolism;Arginine and proline metabolism"	1.2.1.88	New rxns from databases curation (PR #304)			R00708									
+89	Succinate:CoA ligase (IDP-forming)	(YOR142W or YGR244C)	-1000	1000	1	Citrate cycle (TCA cycle)	6.2.1.4	New rxns from databases curation (PR #304)			R00727									
+90	galactitol:NAD+ 1-oxidoreductase	(YBR149W or YJR096W or YDL124W)	-1000	1000	1	Galactose metabolism	1.1.1.21	New rxns from databases curation (PR #304)			R01093									
+91	dATP:pyruvate 2-O-phosphotransferase	(YAL038W or YOR347C)	-1000	1000	1	Purine metabolism	2.7.1.40	New rxns from databases curation (PR #304)			R01138									
+92	palmitoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase	YGL205W	-1000	1000	1	Fatty acid degradation	"1.3.3.6; 1.3.8.7; 1.3.8.8; 1.3.8.9"	New rxns from databases curation (PR #304)			R01279									
+93	L-gulonate:NADP+ 6-oxidoreductase	(YJR096W or YDL124W)	-1000	1000	1	"Pentose and glucuronate interconversions;Ascorbate and aldarate metabolism"	"1.1.1.2; 1.1.1.19"	New rxns from databases curation (PR #304)			R01481									
+94	Isocitrate:NADP+ oxidoreductase	(YDL066W or YLR174W or YNL009W)	-1000	1000	1	Citrate cycle (TCA cycle)	1.1.1.42	New rxns from databases curation (PR #304)			R01899									
+95	2-oxoadipate dehydrogenase complex	YIL125W	0	1000	0	Tryptophan metabolism	"1.2.4.2; 1.8.1.4; 2.3.1.61"	New rxns from databases curation (PR #304)			R01933									
+96	Deoxyguanosine:orthophosphate ribosyltransferase	YLR209C	-1000	1000	1	Purine metabolism	"2.4.2.1; 2.4.2.4"	New rxns from databases curation (PR #304)			R01969									
+97	dTTP nucleotidohydrolase	(YER005W or YEL042W)	0	1000	0	Pyrimidine metabolism	"3.6.1.5; 3.6.1.39"	New rxns from databases curation (PR #304)			R02095									
+98	3-sulfino-L-alanine carboxy-lyase	YMR250W	-1000	1000	1	Taurine and hypotaurine metabolism	"4.1.1.15; 4.1.1.29"	New rxns from databases curation (PR #304)			R02466									
+99	p-Cumic alcohol:NADP+ oxidoreductase	(YER073W or YOR374W or YMR170C or YMR169C or YHR039C)	-1000	1000	1	Glycine, serine and threonine metabolism	1.2.1.8	New rxns from databases curation (PR #304)			R02566									
+100	5-hydroxytryptamine:oxygen 2,3-dioxygenase (indole-decyclizing)	YJR078W	0	1000	0	Tryptophan metabolism	1.13.11.52	New rxns from databases curation (PR #304)			R02909									
+101	serotonin O-methyltransferase	YOR239W	0	1000	0	Tryptophan metabolism	"2.1.1.; 2.1.1.-"	New rxns from databases curation (PR #304)			R02912									
+102	Deamino-NAD+ nucleotidohydrolase	(YCR026C or YEL016C or YGL067W)	-1000	1000	1	Nicotinate and nicotinamide metabolism	"3.6.1.9; 3.6.1.22"	New rxns from databases curation (PR #304)			R03004									
+103	CTP:D-tagatose 6-phosphate 1-phosphotransferase	(YGR240C or YMR205C)	-1000	1000	1	Galactose metabolism	2.7.1.11	New rxns from databases curation (PR #304)			R03237									
+104	trans-4-Hydroxy-L-proline:NAD+ 5-oxidoreductase	YER023W	-1000	1000	1	Arginine and proline metabolism	1.5.1.2	New rxns from databases curation (PR #304)			R03291									
+105	nicotinate D-ribonucleotide phosphohydrolase	(YOR155C or YGL224C or YER037W)	0	1000	0	Nicotinate and nicotinamide metabolism	"3.1.3.5; 3.1.3.; 3.1.3.-"	New rxns from databases curation (PR #304)			R03346									
+106	R03367	(YDR538W or YDR539W)	0	1000	0	Phenylpropanoid biosynthesis	4.1.1.102	New rxns from databases curation (PR #304)			R03367									
+107	trans-Oct-2-enoyl-CoA reductase	YBR026C	-1000	1000	1	Fatty acid elongation	"1.3.1.8; 1.3.1.38"	New rxns from databases curation (PR #304)			R03776									
+108	Sucrose 6-phosphate fructohydrolase	YIL162W	0	1000	0	Starch and sucrose metabolism	3.2.1.26	New rxns from databases curation (PR #304)			R03921									
+109	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	YJL060W	0	1000	0	Tryptophan metabolism	2.6.1.7	New rxns from databases curation (PR #304)			R04171									
+110	(S)-2-Acetolactate pyruvate-lyase (carboxylating)	(YMR108W or YCL009C)	-1000	1000	1	other	2.2.1.6	New rxns from databases curation (PR #304)			R04672									
+111	L-Serine hydro-lyase (adding homocysteine)	YGR155W	-1000	1000	1	other	4.2.1.22	New rxns from databases curation (PR #304)			R04942									
+112	"O-phosphorylhomoserine:selenocysteine Se-(3-amino-3-carboxypropyl)transferase;"	(YJR130C or YML082W or YLL058W)	0	1000	0	Selenocompound metabolism	2.5.1.48	New rxns from databases curation (PR #304)			R04944									
+113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	YDR036C	-1000	1000	1	Valine, leucine and isoleucine degradation	3.1.2.4	New rxns from databases curation (PR #304)			R05064									
+114	6-thioxanthine 5'-monophosphate:L-glutamine amido-ligase (AMP-forming)	YMR217W	0	1000	0	Drug metabolism - other enzymes	6.3.5.2	New rxns from databases curation (PR #304)			R08244									
+115	methaneselenol:NADP+ oxidoreductase	(YDR353W or YHR106W)	0	1000	0	Selenocompound metabolism	1.8.1.9	New rxns from databases curation (PR #304)			R09372									
+116	meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]	(YAL061W or YAL060W)	-1000	1000	1	Butanoate metabolism	"1.1.1.; 1.1.1.-"	New rxns from databases curation (PR #304)			R10504									
+117	R10949	(YJL130C or YJR109C or YOR303W)	-1000	1000	1	other	6.3.5.5	New rxns from databases curation (PR #304)			R10949									
+118	ATP:5-fluorodeoxyuridine-monophosphate phosphotransferase	YKL024C	0	1000	0	Drug metabolism - other enzymes	2.7.4.14	New rxns from databases curation (PR #304)			R11892									
+119	ATP:5-fluorouridine-diphosphate phosphotransferase	YKL067W	0	1000	0	Drug metabolism - other enzymes	2.7.4.6	New rxns from databases curation (PR #304)			R11894									
+120	methylated diphthine methylhydrolase	YBR246W	0	1000	0	diphthamide biosynthesis II (eukaryotes)	3.1.1.97	New rxns from databases curation (PR #304)								RXN-15776				
+121	5-methylcytosine deaminase	YPR062W	0	1000	0	other	3.5.4.1	New rxns from databases curation (PR #304)								RXN-14197				
+122	nicotinamide ribose nucleosidase	YDR400W	0	1000	0	pyridine nucleotide cycling (plants)	3.2.2.3	New rxns from databases curation (PR #304)								RXN-8441				
+123	"dihydrolipoyllysine-residue acetyltransferase;dihydrolipoamide acetyltransferase;lipoate acetyltransferase"	YNL071W	0	1000	0	pyruvate decarboxylation to acetyl CoA	2.3.1.12	New rxns from databases curation (PR #304)								RXN0-1133				
+124	"dihydrolipoyltranssuccinylase;dihydrolipoyllysine-residue succinyltransferase"	YDR148C	-1000	1000	1	"TCA cycle III (animals);2-oxoglutarate decarboxylation to succinyl-CoA"	2.3.1.61	New rxns from databases curation (PR #304)								RXN0-1147				
+125	"cysteine conjugate beta-lyase;L-cysteine-S-conjugate thiol-lyase (deaminating pyruvate-forming);cysteine-S-conjugate beta-lyase;cystein-S-conjugate beta-lyase"	(YGL184C or YFR055W)	0	1000	0	glutathione-mediated detoxification II	4.4.1.13	New rxns from databases curation (PR #304)								RXN-6763				
+126	dolichyl-P-Man:Man5GlcNAc2-PP-dolichol alpha-1,3-mannosyltransferase	YBL082C	0	1000	0	protein N-glycosylation initial phase (eukaryotic)	2.4.1.258	New rxns from databases curation (PR #304)								RXN-5466				
+127	phosphatidyl-N-methylethanolamine N-methyltransferase	YJR073C	0	1000	0	"phosphatidylcholine biosynthesis V;phosphatidylcholine biosynthesis III"	2.1.1.71	New rxns from databases curation (PR #304)								2.1.1.71-RXN				
+128	2-(3-amino-3-carboxypropyl)histidine synthase	(YKL191W or YIL103W or YBL071W)	0	1000	0	"diphthamide biosynthesis I (archaea);diphthamide biosynthesis II (eukaryotes)"	2.5.1.108	New rxns from databases curation (PR #304)								RXN-11371				
+129	"uroporphyrinogen-I decarboxylase;uroporphyrinogen I decarboxylase;uroporphyrinogen decarboxylase"	YDR047W	0	1000	0	other	4.1.1.37	New rxns from databases curation (PR #304)								RXN-10642				
+130	"ureidoglycolate urea-lyase;ureidoglycolate lyase"	YIR032C	0	1000	0	"allantoin degradation to glyoxylate III;allantoin degradation to glyoxylate I"	4.3.2.3	New rxns from databases curation (PR #304)								UREIDOGLYCOLATE-LYASE-RXN				
+131	"acireductone dioxygenase [iron(II)-requiring];1,2-dihydroxy-5-(methylthio)pent-1-en-3-one:oxygen oxidoreductase (formate-forming)"	YMR009W	0	1000	0	S-methyl-5-thio-alpha-D-ribose 1-phosphate degradation I	1.13.11.54	New rxns from databases curation (PR #304)								R147-RXN				
+132	"flavin prenyltransferase;FMN prenyltransferase"	YDR538W	0	1000	0	other	2.5.1.129	New rxns from databases curation (PR #304)								RXN-16937				
+133	"fructose-bisphosphate aldolase;fructose-1,6-bisphosphate aldolase;D-fructose-1,6-bisphosphate D-glyceraldehyde-3-phosphate-lyase (glycerone-phosphate-forming);fructose bisphosphate aldolase;D-fructose 1,6-bisphosphate aldolase"	YKL060C	-1000	1000	1	"1,3-propanediol biosynthesis (engineered);glycolysis V (Pyrococcus);glycolysis III (from glucose);gluconeogenesis II (Methanobacterium thermoautotrophicum);gluconeogenesis I;glycolysis I (from glucose 6-phosphate);sucrose biosynthesis I (from photosynthesis);glycolysis II (from fructose 6-phosphate);gluconeogenesis III;Calvin-Benson-Bassham cycle;formaldehyde assimilation III (dihydroxyacetone cycle);formaldehyde assimilation II (assimilatory RuMP Cycle);glycolysis IV (plant cytosol)"	4.1.2.13	New rxns from databases curation (PR #304)								F16ALDOLASE-RXN				
+134	3-hydroxyacyl-CoA dehydrogenase	YKR009C	0	1000	0	9-cis, 11-trans-octadecadienoyl-CoA degradation (isomerase-dependent, yeast)	"1.1.1.; 1.1.1.-"	New rxns from databases curation (PR #304)								RXN-14802				
+135	trans cinamate decarboxylase	YDR539W	0	1000	0	other	4.1.1.102	New rxns from databases curation (PR #304)								RXN-803				
+136	"glutathioneS-conjugate gamma-glutamate hydrolase;glutathione-S conjugate gamma-glutamyl hydrolase;glutathione S-conjugate gamma-glutamate hydrolase;glutathione-S-conjugate gamma-glutamate hydrolase"	YLR299W	0	1000	0	"glutathione-mediated detoxification II;glutathione-mediated detoxification I"	3.4.19.13	New rxns from databases curation (PR #304)								RXN-6641				
+137	"S-nitrosoglutathione dehydrogenase;S-nitrosoglutathione reductase"	YDL168W	0	1000	0	protein S-nitrosylation and denitrosylation	1.1.1.284	New rxns from databases curation (PR #304)								RXN-17884				
+138	"pyrroline-5-carboxylate reductase;PCA reductase"	YER023W	0	1000	0	"L-ornithine degradation II (Stickland reaction);L-proline biosynthesis III;L-proline biosynthesis I;L-arginine degradation VI (arginase 2 pathway);L-proline biosynthesis II (from arginine)"	1.5.1.2	New rxns from databases curation (PR #304)								PYRROLINECARBREDUCT-RXN				
+139	"pyrroline-5-carboxylate reductase;PCA reductase"	YER023W	0	1000	0	"L-ornithine degradation II (Stickland reaction);L-proline biosynthesis III;L-proline biosynthesis I;L-arginine degradation VI (arginase 2 pathway);L-proline biosynthesis II (from arginine)"	1.5.1.2	New rxns from databases curation (PR #304)								PYRROLINECARBREDUCT-RXN_2				
+140	5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase	YOR074C	-1000	1000	1	"One carbon pool by folate;Folate biosynthesis"	1.5.1.3	New rxns from databases curation (PR #304)			R00940									
+141	ITP:cytidine 5'-phosphotransferase	YNR012W	-1000	1000	1	Pyrimidine metabolism	2.7.1.48	New rxns from databases curation (PR #304)			R00962									
+142	galactitol:NADP+ 1-oxidoreductase	(YBR149W or YJR096W or YDL124W)	-1000	1000	1	Galactose metabolism	1.1.1.21	New rxns from databases curation (PR #304)			R01095									
+143	dGTP:pyruvate 2-O-phosphotransferase	(YAL038W or YOR347C)	-1000	1000	1	Purine metabolism	2.7.1.40	New rxns from databases curation (PR #304)			R01858									
+144	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	(YLR027C or YKL106W)	-1000	1000	1	Cysteine and methionine metabolism	2.6.1.1	New rxns from databases curation (PR #304)			R02619									
+145	melatonin:oxygen 2,3-dioxygenase (indole-decyclizing)	YJR078W	0	1000	0	Tryptophan metabolism	1.13.11.52	New rxns from databases curation (PR #304)			R03628									
+146	octanoyl-CoA:electron-transfer flavoprotein 2-oxidoreductase	YGL205W	-1000	1000	1	Fatty acid degradation	"1.3.3.6; 1.3.8.7; 1.3.8.8; 1.3.99.; 1.3.99.-"	New rxns from databases curation (PR #304)			R03777									
+147	trans-Dodec-2-enoyl-CoA reductase	YBR026C	-1000	1000	1	Fatty acid elongation	"1.3.1.8; 1.3.1.38"	New rxns from databases curation (PR #304)			R03856									
+148	Donor:hydrogen-peroxide oxidoreductase	YBL064C	-1000	1000	1	Phenylpropanoid biosynthesis	"1.11.1.7; 1.11.1.21"	New rxns from databases curation (PR #304)			R04007									
+149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	YHR037W	-1000	1000	1	Arginine and proline metabolism	1.2.1.88	New rxns from databases curation (PR #304)			R04445									
+150	Selenomethionine methanethiol-lyase (deaminating)	(YAL012W or YHR112C)	0	1000	0	Selenocompound metabolism	"4.4.1.1; 4.4.1.11"	New rxns from databases curation (PR #304)			R04770									
+151	O-Acetylhomoserine succinate-lyase (adding cysteine)	(YJR130C or YML082W or YLL058W)	-1000	1000	1	other	2.5.1.48	New rxns from databases curation (PR #304)			R04945									
+152	6-Hydroxyhexanoate:NADP+ oxidoreductase	(YJR096W or YDL124W)	-1000	1000	1	Caprolactam degradation	1.1.1.2	New rxns from databases curation (PR #304)			R05231									
+153	trans-3-Chloro-2-propene-1-ol:NAD+ oxidoreductase	(YDL168W or YCR105W or YMR303C or YBR145W or YGL256W or YMR083W or YOL086C)	-1000	1000	1	Chloroalkane and chloroalkene degradation	1.1.1.1	New rxns from databases curation (PR #304)			R05233									
+154	ATP:5-fluorodeoxyuridine-diphosphate phosphotransferase	YKL067W	0	1000	0	Drug metabolism - other enzymes	2.7.4.6	New rxns from databases curation (PR #304)			R11895									
+155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	YKL067W	0	1000	0	Pyrimidine metabolism	2.7.4.6	New rxns from databases curation (PR #304)			R00139									
+156	FAD nucleotidohydrolase	(YCR026C or YEL016C)	-1000	1000	1	Riboflavin metabolism	"3.6.1.9; 3.6.1.18"	New rxns from databases curation (PR #304)			R00160									
+157	P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase	(YCR026C or YEL016C)	0	1000	0	Purine metabolism	3.6.1.29	New rxns from databases curation (PR #304)			R00187									
+158	GTP 8,9-hydrolase	YGR267C	-1000	1000	1	Folate biosynthesis	3.5.4.16	New rxns from databases curation (PR #304)			R00428									
+159	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	YJL005W	0	1000	0	Purine metabolism	"4.6.1.1; 4.6.1.2"	New rxns from databases curation (PR #304)			R00434									
+160	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	YJL005W	0	1000	0	Purine metabolism	"4.6.1.1; 4.6.1.2"	New rxns from databases curation (PR #304)			R00434									
+161	ATP:cytidine 5'-phosphotransferase	YNR012W	-1000	1000	1	Pyrimidine metabolism	"2.7.1.48; 2.7.1.213"	New rxns from databases curation (PR #304)			R00513									
+162	acetyl adenylate:CoA acetyltransferase	(YLR153C or YAL054C)	-1000	1000	1	pyruvate metabolism	6.2.1.1	New rxns from databases curation (PR #304)			R00236									
+163	"acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;"	YIL160C	-1000	1000	1	Valine, leucine and isoleucine degradation	"2.3.1.9; 2.3.1.16"	New rxns from databases curation (PR #304)			R00927									
+164	5-Methylcytosine aminohydrolase	YPR062W	0	1000	0	Pyrimidine metabolism	3.5.4.1	New rxns from databases curation (PR #304)			R01411									
+165	Ethanol:NADP+ oxidoreductase	(YJR096W or YDL124W)	-1000	1000	1	Glycolysis / Gluconeogenesis	"1.1.1.2; 1.1.1.71"	New rxns from databases curation (PR #304)			R00746									
+166	APS:ATP adenylyltransferase	(YDR530C or YCL050C)	0	1000	0	Purine metabolism	2.7.7.53	New rxns from databases curation (PR #304)			R01618									
+167	L-Homoserine:NAD+ oxidoreductase	YJR139C	0	1000	0	"Glycine, serine and threonine metabolism;Cysteine and methionine metabolism;Lysine biosynthesis"	1.1.1.3	New rxns from databases curation (PR #304)			R01773									
+168	L-Kynurenine:2-oxoglutarate aminotransferase	YJL060W	-1000	1000	1	Tryptophan metabolism	2.6.1.7	New rxns from databases curation (PR #304)			R01956									
+169	L-Kynurenine:2-oxoglutarate aminotransferase	YJL060W	-1000	1000	1	Tryptophan metabolism	2.6.1.7	New rxns from databases curation (PR #304)			R01956									
+170	retinol:NAD+ oxidoreductase	(YDL168W or YCR105W or YMR303C or YBR145W or YMR083W or YOL086C)	-1000	1000	1	Retinol metabolism	"1.1.1.1; 1.1.1.105"	New rxns from databases curation (PR #304)			R02124									
+171	retinol:NAD+ oxidoreductase	YDL168W	0	1000	0	Retinol metabolism	1.1.1.284	New rxns from databases curation (PR #304)			R02124									
+172	Aldehyde:NADP+ oxidoreductase	YHR039C	-1000	1000	1	Phenylalanine metabolism	1.2.1.5	New rxns from databases curation (PR #304)			R02537									
+173	acetyl-CoA:D-amino-acid N-acetyltransferase	(YEL066W or YPR193C)	0	1000	0	Phenylalanine metabolism	2.3.1.36	New rxns from databases curation (PR #304)			R03903									
+174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	(YML022W or YDR441C)	-1000	1000	1	Purine metabolism	2.4.2.7	New rxns from databases curation (PR #304)			R04378									
+175	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	(YML022W or YDR441C)	0	1000	0	Purine metabolism	2.4.2.7	New rxns from databases curation (PR #304)			R04378									
+176	Selenocystathionine L-homocysteine-lyase (deaminating)	(YGL184C or YHR112C or YFR055W)	0	1000	0	Selenocompound metabolism	4.4.1.8	New rxns from databases curation (PR #304)			R04941									
+177	ATP:1D-myo-inositol-hexakisphosphate phosphotransferase	YLR410W	0	1000	0	other	2.7.4.24	New rxns from databases curation (PR #304)			R05799									
+178	S-(hydroxymethyl)glutathione dehydrogenase	YDL168W	-1000	1000	1	Methane metabolism	1.1.1.284	New rxns from databases curation (PR #304)			R06983									
+179	5-methyltetrahydrofolate:NAD+ oxidoreductase	(YGL125W or YPL023C)	-1000	1000	1	"One carbon pool by folate;Carbon fixation pathways in prokaryotes"	1.5.1.20	New rxns from databases curation (PR #304)			R07168									
+180	1,2-dihydroxy-5-(methylthio)pent-1-en-3-one:oxygen oxidoreductase (formate-forming)	YMR009W	-1000	1000	1	Cysteine and methionine metabolism	1.13.11.54	New rxns from databases curation (PR #304)			R07364									
+181	R07494	YGL001C	-1000	1000	1	Steroid biosynthesis	1.1.1.170	New rxns from databases curation (PR #304)			R07494									
+182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	(YPR069C or YLR146C)	0	1000	0	Glutathione metabolism	2.5.1.16	New rxns from databases curation (PR #304)			R08359									
+183	cytidine nucleosidase	YDR400W	0	1000	0	pyrimidine ribonucleosides salvage III	3.2.2.3	New rxns from databases curation (PR #304)								RXN0-361_n				
+184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	YDR481C	0	1000	0	"all-trans-farnesol biosynthesis;juvenile hormone III biosynthesis II"	3.1.7.6	New rxns from databases curation (PR #304)								RXN-8617_c				
+185	2,5-hexadione reductase	(YOL151W or YGL157W or YDR541C or YGL039W)	0	1000	0	other	1.1.1.283	New rxns from databases curation (PR #304)								RXN-14686_n				
+186	phosphatidyl-N-dimethylethanolamine N-methyltransferase	YJR073C	0	1000	0	"phosphatidylcholine biosynthesis V;phosphatidylcholine biosynthesis IV;phosphatidylcholine biosynthesis III"	2.1.1.71	New rxns from databases curation (PR #304)								RXN4FS-2_er				
+187	ATP:acetate adenylyltransferase	(YLR153C or YAL054C)	-1000	1000	1	pyruvate metabolism	6.2.1.1	New rxns from databases curation (PR #304)			R00316									
+188	UTP:cytidine 5'-phosphotransferase	YNR012W	-1000	1000	1	Pyrimidine metabolism	2.7.1.48	New rxns from databases curation (PR #304)			R00516									
+189	Succinate:CoA ligase (IDP-forming)	(YOR142W or YGR244C)	-1000	1000	1	Citrate cycle (TCA cycle)	6.2.1.4	New rxns from databases curation (PR #304)			R00727									
+190	L-gulonate:NADP+ 6-oxidoreductase	(YJR096W or YDL124W)	-1000	1000	1	"Pentose and glucuronate interconversions;Ascorbate and aldarate metabolism"	"1.1.1.2; 1.1.1.19"	New rxns from databases curation (PR #304)			R01481									
+191	CTP:D-tagatose 6-phosphate 1-phosphotransferase	(YGR240C or YMR205C)	-1000	1000	1	Galactose metabolism	2.7.1.11	New rxns from databases curation (PR #304)			R03237									
+192	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	YJL060W	0	1000	0	Tryptophan metabolism	2.6.1.7	New rxns from databases curation (PR #304)			R04171									
+193	"O-phosphorylhomoserine:selenocysteine Se-(3-amino-3-carboxypropyl)transferase;"	(YJR130C or YML082W or YLL058W)	0	1000	0	Selenocompound metabolism	2.5.1.48	New rxns from databases curation (PR #304)			R04944									
+194	methaneselenol:NADP+ oxidoreductase	(YDR353W or YHR106W)	0	1000	0	Selenocompound metabolism	1.8.1.9	New rxns from databases curation (PR #304)			R09372									
+195	meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]	(YAL061W or YAL060W)	-1000	1000	1	Butanoate metabolism	"1.1.1.; 1.1.1.-"	New rxns from databases curation (PR #304)			R10504									
+196	ATP:5-fluorodeoxyuridine-monophosphate phosphotransferase	YKL024C	0	1000	0	Drug metabolism - other enzymes	2.7.4.14	New rxns from databases curation (PR #304)			R11892									
+197	5-methylcytosine deaminase	YPR062W	0	1000	0	other	3.5.4.1	New rxns from databases curation (PR #304)								RXN-14197_n				
+198	nicotinamide ribose nucleosidase	YDR400W	0	1000	0	pyridine nucleotide cycling (plants)	3.2.2.3	New rxns from databases curation (PR #304)								RXN-8441_n				
+199	"cysteine conjugate beta-lyase;L-cysteine-S-conjugate thiol-lyase (deaminating pyruvate-forming);cysteine-S-conjugate beta-lyase;cystein-S-conjugate beta-lyase"	(YGL184C or YFR055W)	0	1000	0	glutathione-mediated detoxification II	4.4.1.13	New rxns from databases curation (PR #304)								RXN-6763_n				
+200	phosphatidyl-N-methylethanolamine N-methyltransferase	YJR073C	0	1000	0	"phosphatidylcholine biosynthesis V;phosphatidylcholine biosynthesis III"	2.1.1.71	New rxns from databases curation (PR #304)								2.1.1.71-RXN_m				
+201	"acireductone dioxygenase [iron(II)-requiring];1,2-dihydroxy-5-(methylthio)pent-1-en-3-one:oxygen oxidoreductase (formate-forming)"	YMR009W	0	1000	0	S-methyl-5-thio-alpha-D-ribose 1-phosphate degradation I	1.13.11.54	New rxns from databases curation (PR #304)								R147-RXN_n				
+202	"S-nitrosoglutathione dehydrogenase;S-nitrosoglutathione reductase"	YDL168W	0	1000	0	protein S-nitrosylation and denitrosylation	1.1.1.284	New rxns from databases curation (PR #304)								RXN-17884_m				
+203	ITP:cytidine 5'-phosphotransferase	YNR012W	-1000	1000	1	Pyrimidine metabolism	2.7.1.48	New rxns from databases curation (PR #304)			R00962									
+204	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	(YLR027C or YKL106W)	-1000	1000	1	Cysteine and methionine metabolism	2.6.1.1	New rxns from databases curation (PR #304)			R02619									
+205	O-Acetylhomoserine succinate-lyase (adding cysteine)	(YJR130C or YML082W or YLL058W)	-1000	1000	1	other	2.5.1.48	New rxns from databases curation (PR #304)			R04945									
+206	6-Hydroxyhexanoate:NADP+ oxidoreductase	(YJR096W or YDL124W)	-1000	1000	1	Caprolactam degradation	1.1.1.2	New rxns from databases curation (PR #304)			R05231									
+207	trans-3-Chloro-2-propene-1-ol:NAD+ oxidoreductase	(YDL168W or YCR105W or YMR303C or YBR145W or YGL256W or YMR083W or YOL086C)	-1000	1000	1	Chloroalkane and chloroalkene degradation	1.1.1.1	New rxns from databases curation (PR #304)			R05233									
+208	ATP:5-fluorodeoxyuridine-diphosphate phosphotransferase	YKL067W	0	1000	0	Drug metabolism - other enzymes	2.7.4.6	New rxns from databases curation (PR #304)			R11895									
+209	ATP:5-fluorouridine-diphosphate phosphotransferase	YKL067W	0	1000	0	Drug metabolism - other enzymes	2.7.4.6	New rxns from databases curation (PR #304)			R11894									

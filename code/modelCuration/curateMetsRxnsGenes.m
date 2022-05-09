@@ -167,33 +167,39 @@ end
 if ~any(strcmp({rxnsCoeffs,rxnsInfo},'none'))
     % Gather all data, first about reaction stoichiometries...
     fid = fopen(rxnsCoeffs);
-    raw = textscan(fid,'%q %q %q %f','Delimiter','\t','HeaderLines',1);
+    raw = textscan(fid,'%q %q %q %q %f','Delimiter','\t','HeaderLines',1);
     fclose(fid);
-    rxns.rxnNames   = raw{1};
-    rxns.metNames   = raw{2};
-    rxns.comps      = raw{3};
-    rxns.coeffs     = raw{4};
+    rxnCheck.coeffsIdx = str2double(raw{1});
+    rxns.rxnNames   = raw{2};
+    rxns.metNames   = raw{3};
+    rxns.comps      = raw{4};
+    rxns.coeffs     = raw{5};
+    rxnCheck.coeffs = strcat(raw{1},'***',rxns.rxnNames);
+
     % ... and then additional reaction-specific data.
     fid = fopen(rxnsInfo);
-    raw = textscan(fid,['%q ' repmat(' %q',1,19)],'Delimiter','\t');
+    raw = textscan(fid,['%q' repmat(' %q',1,20)],'Delimiter','\t');
     fclose(fid);
-    rxnsToAdd.rxnNames              = raw{1}(2:end);
+    rxnCheck.rxnsIdx = str2double(raw{1}(2:end));
+    rxnCheck.rxns = strcat(raw{1}(2:end),'***',raw{2}(2:end));
     
-    notMatching = setxor(rxns.rxnNames,rxnsToAdd.rxnNames);
+    notMatching = setxor(rxnCheck.coeffs,rxnCheck.rxns);
     if numel(notMatching)>1
-        error(['The following reactions are not matched between the rxnsInfo '...
-            'and rxnsCoeffs files:\n\t\t%s'],strjoin(notMatching,'\n\t\t'))
+        error(['The following reactions ánd/or their indices are not matched '...
+            'between the rxnsInfo and rxnsCoeffs files:\n\t\t%s'],...
+            strjoin(regexprep(notMatching,'^\d+***',''),'\n\t\t'))
     end
-       
-    rxnsToAdd.grRules               = raw{2}(2:end);
-    rxnsToAdd.lb                    = cellfun(@str2num,raw{3}(2:end));
-    rxnsToAdd.ub                    = cellfun(@str2num,raw{4}(2:end));
-    rxnsToAdd.rev                   = cellfun(@str2num,raw{5}(2:end));
-    rxnsToAdd.subSystems            = raw{6}(2:end);
-    rxnsToAdd.eccodes               = raw{7}(2:end);
-    rxnsToAdd.rxnNotes              = raw{8}(2:end);
-    rxnsToAdd.rxnReferences         = raw{9}(2:end);
-    rxnsToAdd.rxnConfidenceScores   = cellfun(@str2num,raw{10}(2:end),'UniformOutput',false);
+    
+    rxnsToAdd.rxnNames              = raw{2}(2:end);
+    rxnsToAdd.grRules               = raw{3}(2:end);
+    rxnsToAdd.lb                    = cellfun(@str2num,raw{4}(2:end));
+    rxnsToAdd.ub                    = cellfun(@str2num,raw{5}(2:end));
+    rxnsToAdd.rev                   = cellfun(@str2num,raw{6}(2:end));
+    rxnsToAdd.subSystems            = raw{7}(2:end);
+    rxnsToAdd.eccodes               = raw{8}(2:end);
+    rxnsToAdd.rxnNotes              = raw{9}(2:end);
+    rxnsToAdd.rxnReferences         = raw{10}(2:end);
+    rxnsToAdd.rxnConfidenceScores   = cellfun(@str2num,raw{11}(2:end),'UniformOutput',false);
     emptyEntry = cellfun(@isempty,rxnsToAdd.rxnConfidenceScores);
     if all(emptyEntry)
         rxnsToAdd           = rmfield(rxnsToAdd,'rxnConfidenceScores');
@@ -206,8 +212,8 @@ if ~any(strcmp({rxnsCoeffs,rxnsInfo},'none'))
     
     existingRxn=[];
     notNewRxn=[];
-    for i=1:numel(rxnsToAdd.rxnNames)
-        rxnRows                     = find(strcmp(rxnsToAdd.rxnNames{i},rxns.rxnNames));
+    for i=1:numel(rxnCheck.rxnsIdx)
+        rxnRows                     = find(rxnCheck.rxnsIdx(i)==rxnCheck.coeffsIdx);
         rxnsToAdd.mets{i,1}         = cell(1,1);
         rxnsToAdd.stoichCoeffs{i,1} = cell(1,1);
         for j=1:numel(rxnRows)
