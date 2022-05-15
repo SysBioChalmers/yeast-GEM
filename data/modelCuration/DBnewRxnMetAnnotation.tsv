@@ -1,0 +1,1854 @@
+NewMetName	Charged formula	Charge	compartment	KEGG ID	CHEBI ID	Remark
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-16:0) [lipid particle]	C53H100O6	0	lipid particle		CHEBI:89759	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-monoglyceride (16:1) [lipid particle]	C19H36O4	0	lipid particle		CHEBI:134128	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+sn-2-acyl-1-lysophosphatidylinositol (16:1) [lipid particle]	C25H47O12P	0	lipid particle		CHEBI:138108	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-phosphatidyl-1D-myo-inositol (1-18:0, 2-16:1) [lipid particle]	C43H81O13P	0	lipid particle		CHEBI:88557	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-monoglyceride (16:0) [lipid particle]	C19H38O4	0	lipid particle		CHEBI:134127	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+behenate [lipid particle]	C22H43O2	-1	lipid particle	C08281	CHEBI:23858	based on kegg
+docosanoyl-CoA [lipid particle]	C43H74N7O17P3S	-4	lipid particle	C16528	CHEBI:65088	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-16:0) [lipid particle]	C51H96O6	0	lipid particle		CHEBI:85427	based on chebi
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+ethanol [lipid particle]	C2H6O	0	lipid particle	C00469	CHEBI:16236	based on kegg
+decanoyl-CoA [lipid particle]	C31H50N7O17P3S	-4	lipid particle	C05274	CHEBI:61430	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ethyl decanoate [lipid particle]	C12H24O2	0	lipid particle		CHEBI:87430	based on chebi
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (18:1) [lipid particle]	C21H39O7P	0	lipid particle	C03630	CHEBI:36475	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+oxygen [lipid particle]	O2	0	lipid particle	C00007	CHEBI:15379	based on kegg
+squalene [lipid particle]	C30H50	0	lipid particle	C00751	CHEBI:15440	based on kegg
+(S)-2,3-epoxysqualene [lipid particle]	C30H50O	0	lipid particle	C01054	CHEBI:15441	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-18:0) [lipid particle]	C55H102O6	0	lipid particle			 
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:0) [lipid particle]	C53H98O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-monoglyceride (16:0) [lipid particle]	C19H38O4	0	lipid particle		CHEBI:134127	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+3-ketosphinganine [lipid particle]	C18H38NO2	1	lipid particle	C02934	CHEBI:58299	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+sphinganine [lipid particle]	C18H40NO2	1	lipid particle	C00836	CHEBI:57817	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+cerotic acid [lipid particle]	C26H51O2	-1	lipid particle		CHEBI:31013	based on chebi
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+hexacosanoyl-CoA [lipid particle]	C47H82N7O17P3S	-4	lipid particle		CHEBI:52966	based on chebi
+ethanol [lipid particle]	C2H6O	0	lipid particle	C00469	CHEBI:16236	based on kegg
+hexanoyl-CoA [lipid particle]		0	lipid particle			 
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ethyl hexanoate [lipid particle]	C8H16O2	0	lipid particle		CHEBI:86055	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-16:0) [lipid particle]	C51H96O6	0	lipid particle		CHEBI:85427	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+lignoceric acid [lipid particle]	C24H47O2	-1	lipid particle	C08320	CHEBI:31014	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+tetracosanoyl-CoA [lipid particle]	C45H78N7O17P3S	-4	lipid particle	C16529	CHEBI:52974	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+(S)-Methylmalonate semialdehyde [lipid particle]	C4H5O3	-1	lipid particle	C06002	CHEBI:62413	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+Methylmalonate [lipid particle]	C4H4O4	-2	lipid particle	C02170	CHEBI:17453	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+cerotic acid [lipid particle]	C26H51O2	-1	lipid particle		CHEBI:31013	based on chebi
+hexacosanoyl-CoA [lipid particle]	C47H82N7O17P3S	-4	lipid particle		CHEBI:52966	based on chebi
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-16:0) [lipid particle]	C53H98O6	0	lipid particle			 
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+octadecaprenyl diphosphate [lipid particle]	C90H145O7P2	-3	lipid particle		CHEBI:53035	based on chebi
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+nonadecaprenyl diphosphate [lipid particle]	C95H153O7P2	-3	lipid particle		CHEBI:53034	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+D-Glucuronolactone [lipid particle]	C6H8O6	0	lipid particle	C02670	CHEBI:18268	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+D-Glucarate [lipid particle]	C6H8O8	-2	lipid particle	C00818	CHEBI:30612	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+triglyceride (1-18:1, 2-18:1, 3-18:0) [lipid particle]	C57H106O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+ethanol [lipid particle]	C2H6O	0	lipid particle	C00469	CHEBI:16236	based on kegg
+octanoyl-CoA [lipid particle]	C29H46N7O17P3S	-4	lipid particle	C01944	CHEBI:15533	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ethyl octanoate [lipid particle]	C10H20O2	0	lipid particle	C12292	CHEBI:87426	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+acylglycerone phosphate (18:1) [lipid particle]	C21H39O7P	0	lipid particle	C03630	CHEBI:36475	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:1) [lipid particle]	C21H41O7P	0	lipid particle		CHEBI:62837	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+methionol [lipid particle]	C4H10OS	0	lipid particle		CHEBI:49019	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+methionyl acetate [lipid particle]	C6H12O2S	0	lipid particle			 
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-monoglyceride (18:0) [lipid particle]	C21H42O4	0	lipid particle		CHEBI:134129	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+glycerol [lipid particle]	C3H8O3	0	lipid particle	C00116	CHEBI:17754	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+behenate [lipid particle]	C22H43O2	-1	lipid particle	C08281	CHEBI:23858	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+docosanoyl-CoA [lipid particle]	C43H74N7O17P3S	-4	lipid particle	C16528	CHEBI:65088	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-18:0) [lipid particle]	C55H102O6	0	lipid particle			 
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-16:0) [lipid particle]	C53H100O6	0	lipid particle		CHEBI:89759	based on chebi
+henicosaprenyl diphosphate [lipid particle]	C105H169O7P2	-3	lipid particle		CHEBI:53032	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+docosaprenyl diphosphate [lipid particle]	C110H177O7P2	-3	lipid particle		CHEBI:53031	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:0) [lipid particle]	C53H98O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-18:0) [lipid particle]	C53H100O6	0	lipid particle		CHEBI:89763	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+2-phenylethanol [lipid particle]	C8H10O	0	lipid particle	C05853	CHEBI:49000	based on kegg
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phenethyl acetate [lipid particle]	C10H12O2	0	lipid particle	C12303	CHEBI:31988	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-16:0) [lipid particle]	C51H94O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-18:0, 2-18:1) [lipid particle]	C39H75O8P	0	lipid particle		CHEBI:74847	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+5-Hydroxyindoleacetaldehyde [lipid particle]	C10H9NO2	0	lipid particle	C05634	CHEBI:50157	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+5-Hydroxyindoleacetate [lipid particle]	C10H8NO3	-1	lipid particle	C05635	CHEBI:27823	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:1) [lipid particle]	C19H37O7P	0	lipid particle		CHEBI:75070	based on chebi
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+heptadecaprenyl diphosphate [lipid particle]	C85H137O7P2	-3	lipid particle		CHEBI:53036	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+octadecaprenyl diphosphate [lipid particle]	C90H145O7P2	-3	lipid particle		CHEBI:53035	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-16:1, 2-18:1) [lipid particle]	C37H69O8P	0	lipid particle			 
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (16:1) [lipid particle]	C19H35O7P	0	lipid particle			 
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+isobutanol [lipid particle]	C4H10O	0	lipid particle	C14710	CHEBI:46645	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+isobutyl acetate [lipid particle]	C6H12O2	0	lipid particle		CHEBI:50569	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+geranylgeranyl diphosphate [lipid particle]	C20H33O7P2	-3	lipid particle	C00353	CHEBI:58756	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+pentaprenyl diphosphate [lipid particle]	C25H41O7P2	-3	lipid particle	C04217	CHEBI:53048	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:0) [lipid particle]	C51H94O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:88998	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+acylglycerone phosphate (18:0) [lipid particle]	C21H41O7P	0	lipid particle	C03805	CHEBI:36476	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:0) [lipid particle]	C21H43O7P	0	lipid particle		CHEBI:74850	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-16:0, 2-16:1) [lipid particle]	C35H67O8P	0	lipid particle		CHEBI:73998	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-monoglyceride (18:1) [lipid particle]	C21H40O4	0	lipid particle		CHEBI:134130	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-18:0) [lipid particle]	C53H100O6	0	lipid particle		CHEBI:89763	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:0) [lipid particle]	C21H43O7P	0	lipid particle		CHEBI:74850	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-18:0, 2-18:1) [lipid particle]	C39H75O8P	0	lipid particle		CHEBI:74847	based on chebi
+icosaprenyl diphosphate [lipid particle]	C100H161O7P2	-3	lipid particle		CHEBI:53033	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+henicosaprenyl diphosphate [lipid particle]	C105H169O7P2	-3	lipid particle		CHEBI:53032	based on chebi
+dodecaprenyl diphosphate [lipid particle]	C60H97O7P2	-3	lipid particle	C05847	CHEBI:53041	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+tridecaprenyl diphosphate [lipid particle]	C65H105O7P2	-3	lipid particle		CHEBI:53040	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+pentaprenyl diphosphate [lipid particle]	C25H41O7P2	-3	lipid particle	C04217	CHEBI:53048	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+hexaprenyl diphosphate [lipid particle]	C30H49O7P2	-3	lipid particle	C01230	CHEBI:53047	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-18:1, 2-16:1) [lipid particle]	C37H69O8P	0	lipid particle		CHEBI:75074	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:1) [lipid particle]	C21H41O7P	0	lipid particle		CHEBI:62837	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-18:0) [lipid particle]	C57H106O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+sn-glycero-3-phosphocholine [lipid particle]	C8H20NO6P	0	lipid particle	C00670	CHEBI:16870	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-18:0) [lipid particle]	C55H102O6	0	lipid particle			 
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:0) [lipid particle]	C19H39O7P	0	lipid particle	C04036	CHEBI:15799	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-16:0, 2-18:1) [lipid particle]	C37H71O8P	0	lipid particle	C13889	CHEBI:64844	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+ergosteryl oleate [lipid particle]	C46H76O2	0	lipid particle		CHEBI:52377	based on chebi
+ergosterol [lipid particle]	C28H44O	0	lipid particle	C01694	CHEBI:16933	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-18:0) [lipid particle]	C57H106O6	0	lipid particle			 
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+tetradecaprenyl diphosphate [lipid particle]	C70H113O7P2	-3	lipid particle		CHEBI:53039	based on chebi
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+pentadecaprenyl diphosphate [lipid particle]	C75H121O7P2	-3	lipid particle		CHEBI:53038	based on chebi
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+lanosteryl oleate [lipid particle]	C48H82O2	0	lipid particle		CHEBI:52382	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+lanosterol [lipid particle]	C30H50O	0	lipid particle	C01724	CHEBI:16521	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+sn-glycero-3-phosphocholine [lipid particle]	C8H20NO6P	0	lipid particle	C00670	CHEBI:16870	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:0) [lipid particle]	C21H43O7P	0	lipid particle		CHEBI:74850	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+pentadecaprenyl diphosphate [lipid particle]	C75H121O7P2	-3	lipid particle		CHEBI:53038	based on chebi
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+hexadecaprenyl diphosphate [lipid particle]	C80H129O7P2	-3	lipid particle		CHEBI:53037	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylglycerol (1-16:0, 2-16:1) [lipid particle]	C38H73O10P	0	lipid particle		CHEBI:136224	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+2-trans,6-trans-Farnesal [lipid particle]	C15H24O	0	lipid particle	C03461	CHEBI:15894	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+Farnesoic acid [lipid particle]	C15H23O2	-1	lipid particle	C16502	CHEBI:84162	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+heptaprenyl diphosphate [lipid particle]	C35H57O7P2	-3	lipid particle	C04216	CHEBI:53046	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+octaprenyl diphosphate [lipid particle]	C40H65O7P2	-3	lipid particle	C04146	CHEBI:53045	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+undecaprenyl diphosphate [lipid particle]	C55H89O7P2	-3	lipid particle	C03543	CHEBI:53042	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+dodecaprenyl diphosphate [lipid particle]	C60H97O7P2	-3	lipid particle	C05847	CHEBI:53041	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:0) [lipid particle]	C53H100O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+episteryl oleate [lipid particle]	C46H78O2	0	lipid particle		CHEBI:52375	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+episterol [lipid particle]	C28H46O	0	lipid particle	C15777	CHEBI:23929	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-18:0) [lipid particle]	C55H102O6	0	lipid particle			 
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+N4-Acetylaminobutanal [lipid particle]	C6H11NO2	0	lipid particle	C05936	CHEBI:7386	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+4-Acetamidobutanoate [lipid particle]	C6H10NO3	-1	lipid particle	C02946	CHEBI:11951	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+episteryl palmitoleate [lipid particle]	C44H74O2	0	lipid particle		CHEBI:52376	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+episterol [lipid particle]	C28H46O	0	lipid particle	C15777	CHEBI:23929	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+zymosterol intermediate 2 [lipid particle]	C27H42O	0	lipid particle		CHEBI:52386	based on chebi
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+zymosterol [lipid particle]	C27H44O	0	lipid particle	C05437	CHEBI:18252	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+octaprenyl diphosphate [lipid particle]	C40H65O7P2	-3	lipid particle	C04146	CHEBI:53045	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+nonaprenyl diphosphate [lipid particle]	C45H73O7P2	-3	lipid particle	C04145	CHEBI:53044	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-18:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:88998	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-16:0) [lipid particle]	C55H102O6	0	lipid particle		CHEBI:88999	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-monoglyceride (18:1) [lipid particle]	C21H40O4	0	lipid particle		CHEBI:134130	based on chebi
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+hexanol [lipid particle]	C6H14O	0	lipid particle		CHEBI:87393	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+hexyl acetate [lipid particle]	C8H16O2	0	lipid particle		CHEBI:87510	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-18:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:88998	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+oxygen [lipid particle]	O2	0	lipid particle	C00007	CHEBI:15379	based on kegg
+squalene [lipid particle]	C30H50	0	lipid particle	C00751	CHEBI:15440	based on kegg
+(S)-2,3-epoxysqualene [lipid particle]	C30H50O	0	lipid particle	C01054	CHEBI:15441	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-16:0) [lipid particle]	C51H94O6	0	lipid particle			 
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+acylglycerone phosphate (16:1) [lipid particle]	C19H35O7P	0	lipid particle			 
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:1) [lipid particle]	C19H37O7P	0	lipid particle		CHEBI:75070	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+cis-3-Chloroallyl aldehyde [lipid particle]	C3H3ClO	0	lipid particle	C16348	CHEBI:80465	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+cis-3-Chloroacrylic acid [lipid particle]	C3H2ClO2	-1	lipid particle	C06615	CHEBI:27397	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-18:1, 2-18:1) [lipid particle]	C39H73O8P	0	lipid particle		CHEBI:83775	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-16:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:89755	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+zymosteryl oleate [lipid particle]	C45H76O2	0	lipid particle		CHEBI:52384	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+zymosterol [lipid particle]	C27H44O	0	lipid particle	C05437	CHEBI:18252	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+acetaldehyde [lipid particle]	C2H4O	0	lipid particle	C00084	CHEBI:15343	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+acetate [lipid particle]	C2H3O2	-1	lipid particle	C00033	CHEBI:30089	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+acylglycerone phosphate (18:0) [lipid particle]	C21H41O7P	0	lipid particle	C03805	CHEBI:36476	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:0) [lipid particle]	C21H43O7P	0	lipid particle		CHEBI:74850	based on chebi
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+triglyceride (1-18:1, 2-18:1, 3-16:0) [lipid particle]	C55H102O6	0	lipid particle		CHEBI:88999	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:0) [lipid particle]	C55H102O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-monoglyceride (18:1) [lipid particle]	C21H40O4	0	lipid particle		CHEBI:134130	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+glycerol [lipid particle]	C3H8O3	0	lipid particle	C00116	CHEBI:17754	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:1) [lipid particle]	C19H37O7P	0	lipid particle		CHEBI:75070	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:1) [lipid particle]	C21H41O7P	0	lipid particle		CHEBI:62837	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-monoglyceride (16:0) [lipid particle]	C19H38O4	0	lipid particle		CHEBI:134127	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+glycerol [lipid particle]	C3H8O3	0	lipid particle	C00116	CHEBI:17754	based on kegg
+3-aminopropanal [lipid particle]	C3H8NO	1	lipid particle	C02229	CHEBI:58374	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+beta-alanine [lipid particle]	C3H7NO2	0	lipid particle	C00099	CHEBI:16958	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-monoglyceride (16:1) [lipid particle]	C19H36O4	0	lipid particle		CHEBI:134128	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+glycerol [lipid particle]	C3H8O3	0	lipid particle	C00116	CHEBI:17754	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+3'-dephospho-CoA [lipid particle]	C21H33N7O13P2S	-2	lipid particle	C00882	CHEBI:57328	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+ADP [lipid particle]	C10H12N5O10P2	-3	lipid particle	C00008	CHEBI:456216	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-18:0) [lipid particle]	C53H100O6	0	lipid particle		CHEBI:89763	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+sn-2-acyl-1-lysophosphatidylinositol (18:1) [lipid particle]	C27H51O12P	0	lipid particle			 
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-phosphatidyl-1D-myo-inositol (1-18:0, 2-18:1) [lipid particle]	C45H85O13P	0	lipid particle		CHEBI:77346	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+fecosteryl palmitoleate [lipid particle]	C44H74O2	0	lipid particle		CHEBI:52380	based on chebi
+fecosterol [lipid particle]	C28H46O	0	lipid particle	C04525	CHEBI:17038	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+(S)-2,3-epoxysqualene [lipid particle]	C30H50O	0	lipid particle	C01054	CHEBI:15441	based on kegg
+lanosterol [lipid particle]	C30H50O	0	lipid particle	C01724	CHEBI:16521	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+D-glyceraldehyde [lipid particle]	C3H6O3	0	lipid particle	C00577	CHEBI:17378	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+D-Glycerate [lipid particle]	C3H5O4	-1	lipid particle	C00258	CHEBI:16659	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:0) [lipid particle]	C21H43O7P	0	lipid particle		CHEBI:74850	based on chebi
+ethanol [lipid particle]	C2H6O	0	lipid particle	C00469	CHEBI:16236	based on kegg
+butanoyl-CoA [lipid particle]	C25H38N7O17P3S	-4	lipid particle	C00136	CHEBI:57371	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ethyl butanoate [lipid particle]	C6H12O2	0	lipid particle		CHEBI:88764	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+fecosteryl oleate [lipid particle]	C46H78O2	0	lipid particle		CHEBI:52379	based on chebi
+fecosterol [lipid particle]	C28H46O	0	lipid particle	C04525	CHEBI:17038	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+2-Propynal [lipid particle]	C3H2O	0	lipid particle	C05985	CHEBI:27976	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+Propynoate [lipid particle]	C3HO2	-1	lipid particle	C00804	CHEBI:15364	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al [lipid particle]	C27H46O3	0	lipid particle	C05445	CHEBI:27428	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+3alpha,7alpha-Dihydroxy-5beta-cholestanate [lipid particle]	C27H45O4	-1	lipid particle	C04554	CHEBI:16577	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+indol-3-ylacetaldehyde [lipid particle]	C10H9NO	0	lipid particle	C00637	CHEBI:18086	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+indole-3-acetate [lipid particle]	C10H8NO2	-1	lipid particle	C00954	CHEBI:30854	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-18:0) [lipid particle]	C57H108O6	0	lipid particle		CHEBI:90305	based on chebi
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:0, 2-18:1, 3-16:0) [lipid particle]	C53H100O6	0	lipid particle		CHEBI:89759	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-18:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:89958	based on chebi
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+acylglycerone phosphate (16:0) [lipid particle]	C19H37O7P	0	lipid particle	C01192	CHEBI:17868	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:0) [lipid particle]	C19H39O7P	0	lipid particle	C04036	CHEBI:15799	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+acylglycerone phosphate (16:0) [lipid particle]	C19H37O7P	0	lipid particle	C01192	CHEBI:17868	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:0) [lipid particle]	C19H39O7P	0	lipid particle	C04036	CHEBI:15799	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+myristate [lipid particle]	C14H27O2	-1	lipid particle	C06424	CHEBI:30807	based on kegg
+myristoyl-CoA [lipid particle]	C35H58N7O17P3S	-4	lipid particle	C02593	CHEBI:57385	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-16:0) [lipid particle]	C53H98O6	0	lipid particle			 
+4-aminobutanal [lipid particle]	C4H10NO	1	lipid particle	C00555	CHEBI:58264	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+gamma-aminobutyrate [lipid particle]	C4H9NO2	0	lipid particle	C00334	CHEBI:16865	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+propanol [lipid particle]	C3H8O	0	lipid particle	C05979	CHEBI:28831	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+propyl acetate [lipid particle]	C5H10O2	0	lipid particle		CHEBI:40116	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+4-Trimethylammoniobutanal [lipid particle]	C7H16NO	1	lipid particle	C01149	CHEBI:18020	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+4-Trimethylammoniobutanoate [lipid particle]	C7H15NO2	0	lipid particle	C01181	CHEBI:1941	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-18:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:89958	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:0) [lipid particle]	C19H39O7P	0	lipid particle	C04036	CHEBI:15799	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+behenate [lipid particle]	C22H43O2	-1	lipid particle	C08281	CHEBI:23858	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+docosanoyl-CoA [lipid particle]	C43H74N7O17P3S	-4	lipid particle	C16528	CHEBI:65088	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:1) [lipid particle]	C21H41O7P	0	lipid particle		CHEBI:62837	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-18:1, 2-18:1) [lipid particle]	C39H73O8P	0	lipid particle		CHEBI:83775	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylglycerol (1-18:0, 2-16:1) [lipid particle]	C40H77O10P	0	lipid particle		CHEBI:89270	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+2-methylbutanol [lipid particle]	C5H12O	0	lipid particle		CHEBI:48945	based on chebi
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+2-methylbutyl acetate [lipid particle]	C7H14O2	0	lipid particle		CHEBI:50585	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+cerotic acid [lipid particle]	C26H51O2	-1	lipid particle		CHEBI:31013	based on chebi
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+hexacosanoyl-CoA [lipid particle]	C47H82N7O17P3S	-4	lipid particle		CHEBI:52966	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+ethanol [lipid particle]	C2H6O	0	lipid particle	C00469	CHEBI:16236	based on kegg
+propionyl-CoA [lipid particle]	C24H36N7O17P3S	-4	lipid particle	C00100	CHEBI:57386	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ethyl propionate [lipid particle]	C5H10O2	0	lipid particle		CHEBI:41330	based on chebi
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (16:0) [lipid particle]	C19H37O7P	0	lipid particle	C01192	CHEBI:17868	based on kegg
+hexadecaprenyl diphosphate [lipid particle]	C80H129O7P2	-3	lipid particle		CHEBI:53037	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+heptadecaprenyl diphosphate [lipid particle]	C85H137O7P2	-3	lipid particle		CHEBI:53036	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-18:0) [lipid particle]	C53H98O6	0	lipid particle			 
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+ethanol [lipid particle]	C2H6O	0	lipid particle	C00469	CHEBI:16236	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ethyl acetate [lipid particle]	C4H8O2	0	lipid particle	C00849	CHEBI:27750	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+lanosteryl palmitoleate [lipid particle]	C46H78O2	0	lipid particle		CHEBI:52383	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+lanosterol [lipid particle]	C30H50O	0	lipid particle	C01724	CHEBI:16521	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylglycerol (1-18:1, 2-16:1) [lipid particle]	C40H75O10P	0	lipid particle		CHEBI:89093	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:0) [lipid particle]	C57H108O6	0	lipid particle		CHEBI:90305	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-monoglyceride (16:1) [lipid particle]	C19H36O4	0	lipid particle		CHEBI:134128	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+lignoceric acid [lipid particle]	C24H47O2	-1	lipid particle	C08320	CHEBI:31014	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+tetracosanoyl-CoA [lipid particle]	C45H78N7O17P3S	-4	lipid particle	C16529	CHEBI:52974	based on kegg
+3-dehydro-4-methylzymosterol [lipid particle]	C28H44O	0	lipid particle	C15816	CHEBI:50593	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+4alpha-methylzymosterol [lipid particle]	C28H46O	0	lipid particle	C05103	CHEBI:1949	based on kegg
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-18:0, 2-16:1) [lipid particle]	C37H71O8P	0	lipid particle		CHEBI:75073	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-16:0, 2-18:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136148	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylglycerol (1-16:1, 2-18:1) [lipid particle]	C40H75O10P	0	lipid particle		CHEBI:89398	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:89958	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-16:1) [lipid particle]	C51H94O6	0	lipid particle		CHEBI:89765	based on chebi
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-16:1, 2-16:1) [lipid particle]	C37H70NO8P	0	lipid particle		CHEBI:138792	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-16:1, 2-16:1) [lipid particle]	C35H65O8P	0	lipid particle		CHEBI:75071	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:0) [lipid particle]	C19H39O7P	0	lipid particle	C04036	CHEBI:15799	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-16:0, 2-18:1) [lipid particle]	C37H71O8P	0	lipid particle	C13889	CHEBI:64844	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+tridecaprenyl diphosphate [lipid particle]	C65H105O7P2	-3	lipid particle		CHEBI:53040	based on chebi
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+tetradecaprenyl diphosphate [lipid particle]	C70H113O7P2	-3	lipid particle		CHEBI:53039	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+myristate [lipid particle]	C14H27O2	-1	lipid particle	C06424	CHEBI:30807	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+myristoyl-CoA [lipid particle]	C35H58N7O17P3S	-4	lipid particle	C02593	CHEBI:57385	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+Chloroacetaldehyde [lipid particle]	C2H3ClO	0	lipid particle	C06754	CHEBI:27871	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+Chloroacetic acid [lipid particle]	C2H2ClO2	-1	lipid particle	C06755	CHEBI:27869	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+ergosteryl palmitoleate [lipid particle]	C44H72O2	0	lipid particle		CHEBI:52378	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+ergosterol [lipid particle]	C28H44O	0	lipid particle	C01694	CHEBI:16933	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+4-aminobutanal [lipid particle]	C4H10NO	1	lipid particle	C00555	CHEBI:58264	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+gamma-aminobutyrate [lipid particle]	C4H9NO2	0	lipid particle	C00334	CHEBI:16865	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:1) [lipid particle]	C19H37O7P	0	lipid particle		CHEBI:75070	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-16:1, 2-18:1) [lipid particle]	C37H69O8P	0	lipid particle			 
+farnesyl diphosphate [lipid particle]	C15H25O7P2	-3	lipid particle	C00448	CHEBI:175763	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+geranylgeranyl diphosphate [lipid particle]	C20H33O7P2	-3	lipid particle	C00353	CHEBI:58756	based on kegg
+Acyl-CoA [lipid particle]	C22H31N7O17P3SR	-4	lipid particle	C00040	CHEBI:58342	based on kegg
+1-acyl-sn-glycerol 3-phosphate [lipid particle]	C4H6O7PR	-2	lipid particle	C00681	CHEBI:57970	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1,2-diacyl-sn-glycerol 3-phosphate [lipid particle]	C5H5O8PR2	-2	lipid particle	C00416	CHEBI:58608	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-16:0, 2-18:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:134594	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-18:1) [lipid particle]	C57H104O6	0	lipid particle		CHEBI:88970	based on chebi
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-18:0, 2-16:1) [lipid particle]	C42H82NO8P	0	lipid particle		CHEBI:86097	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+nonadecaprenyl diphosphate [lipid particle]	C95H153O7P2	-3	lipid particle		CHEBI:53034	based on chebi
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+icosaprenyl diphosphate [lipid particle]	C100H161O7P2	-3	lipid particle		CHEBI:53033	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+Perillyl aldehyde [lipid particle]	C10H14O	0	lipid particle	C02576	CHEBI:15421	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+Perillic acid [lipid particle]	C10H13O2	-1	lipid particle	C11924	CHEBI:36999	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (16:0) [lipid particle]	C19H37O7P	0	lipid particle	C01192	CHEBI:17868	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+nonaprenyl diphosphate [lipid particle]	C45H73O7P2	-3	lipid particle	C04145	CHEBI:53044	based on kegg
+decaprenyl diphosphate [lipid particle]	C50H81O7P2	-3	lipid particle	C17432	CHEBI:53043	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-16:1, 2-16:1) [lipid particle]	C40H76NO8P	0	lipid particle		CHEBI:83717	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-16:1, 2-18:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:90464	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:88984	based on chebi
+1-acylglycerophosphoethanolamine (16:1) [lipid particle]	C21H42NO7P	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-18:0, 2-18:1) [lipid particle]	C44H86NO8P	0	lipid particle		CHEBI:75034	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (18:0) [lipid particle]	C26H54NO7P	0	lipid particle		CHEBI:73858	based on chebi
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-monoglyceride (18:0) [lipid particle]	C21H42O4	0	lipid particle		CHEBI:134129	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-16:1, 3-16:0) [lipid particle]	C53H98O6	0	lipid particle			 
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+tyrosol [lipid particle]	C8H10O2	0	lipid particle	C06044	CHEBI:1879	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+tyrosyl acetate [lipid particle]	C10H12O3	0	lipid particle			 
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:1) [lipid particle]	C19H37O7P	0	lipid particle		CHEBI:75070	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-16:1, 2-18:1) [lipid particle]	C37H69O8P	0	lipid particle			 
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-18:0, 2-16:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle		CHEBI:90053	based on chebi
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-18:0) [lipid particle]	C57H108O6	0	lipid particle		CHEBI:90305	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+Imidazole-4-acetaldehyde [lipid particle]	C5H6N2O	0	lipid particle	C05130	CHEBI:27398	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+Imidazole-4-acetate [lipid particle]	C5H5N2O2	-1	lipid particle	C02835	CHEBI:16974	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (18:1) [lipid particle]	C21H39O7P	0	lipid particle	C03630	CHEBI:36475	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:1, 2-18:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:84811	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (18:0) [lipid particle]	C21H41O7P	0	lipid particle	C03805	CHEBI:36476	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+sn-glycero-3-phosphocholine [lipid particle]	C8H20NO6P	0	lipid particle	C00670	CHEBI:16870	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+diglyceride (1-18:1, 2-16:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:89229	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-18:1, 2-16:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+laurate [lipid particle]	C12H23O2	-1	lipid particle	C02679	CHEBI:18262	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+lauroyl-CoA [lipid particle]	C33H54N7O17P3S	-4	lipid particle	C01832	CHEBI:57375	based on kegg
+S-adenosyl-L-methionine [lipid particle]	C15H23N6O5S	1	lipid particle	C00019	CHEBI:15414	based on kegg
+zymosterol [lipid particle]	C27H44O	0	lipid particle	C05437	CHEBI:18252	based on kegg
+fecosterol [lipid particle]	C28H46O	0	lipid particle	C04525	CHEBI:17038	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+S-adenosyl-L-homocysteine [lipid particle]	C14H20N6O5S	0	lipid particle	C00021	CHEBI:16680	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:1) [lipid particle]	C21H41O7P	0	lipid particle		CHEBI:62837	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-18:1, 2-18:1) [lipid particle]	C39H73O8P	0	lipid particle		CHEBI:83775	based on chebi
+acetyl-CoA [lipid particle]	C23H34N7O17P3S	-4	lipid particle	C00024	CHEBI:57288	based on kegg
+isoamylol [lipid particle]	C5H12O	0	lipid particle	C07328	CHEBI:15837	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+isoamyl acetate [lipid particle]	C7H14O2	0	lipid particle	C12296	CHEBI:31725	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (16:1) [lipid particle]	C19H35O7P	0	lipid particle			 
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+trans-3-Chloroallyl aldehyde [lipid particle]	C3H3ClO	0	lipid particle	C06613	CHEBI:28452	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+trans-3-Chloroacrylic acid [lipid particle]	C3H2ClO2	-1	lipid particle	C06614	CHEBI:19982	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+lignoceric acid [lipid particle]	C24H47O2	-1	lipid particle	C08320	CHEBI:31014	based on kegg
+tetracosanoyl-CoA [lipid particle]	C45H78N7O17P3S	-4	lipid particle	C16529	CHEBI:52974	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-16:0) [lipid particle]	C53H100O6	0	lipid particle			 
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-18:1) [lipid particle]	C53H96O6	0	lipid particle		CHEBI:90051	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylethanolamine (1-18:1, 2-18:1) [lipid particle]	C41H78NO8P	0	lipid particle		CHEBI:136170	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:1) [lipid particle]	C55H100O6	0	lipid particle		CHEBI:90048	based on chebi
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-18:1, 2-16:1) [lipid particle]	C42H80NO8P	0	lipid particle		CHEBI:86100	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+decaprenyl diphosphate [lipid particle]	C50H81O7P2	-3	lipid particle	C17432	CHEBI:53043	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+undecaprenyl diphosphate [lipid particle]	C55H89O7P2	-3	lipid particle	C03543	CHEBI:53042	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-18:0) [lipid particle]	C53H98O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+hexaprenyl diphosphate [lipid particle]	C30H49O7P2	-3	lipid particle	C01230	CHEBI:53047	based on kegg
+isopentenyl diphosphate [lipid particle]	C5H9O7P2	-3	lipid particle	C00129	CHEBI:128769	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+heptaprenyl diphosphate [lipid particle]	C35H57O7P2	-3	lipid particle	C04216	CHEBI:53046	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-18:1, 3-16:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:89755	based on chebi
+palmitoleoyl-CoA(4-) [lipid particle]	C37H60N7O17P3S	-4	lipid particle	C21072	CHEBI:61540	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-16:1) [lipid particle]	C53H96O6	0	lipid particle			 
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+phosphatidylethanolamine (1-16:0, 2-16:1) [lipid particle]	C37H72NO8P	0	lipid particle		CHEBI:136147	based on chebi
+triglyceride (1-16:1, 2-16:1, 3-16:1) [lipid particle]	C51H92O6	0	lipid particle		CHEBI:75841	based on chebi
+1-acylglycerophosphoethanolamine (16:0) [lipid particle]	C21H44NO7P	0	lipid particle		CHEBI:90452	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidate (1-16:0, 2-18:1) [lipid particle]	C37H71O8P	0	lipid particle	C13889	CHEBI:64844	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-18:1, 3-16:0) [lipid particle]	C53H98O6	0	lipid particle			 
+triglyceride (1-16:0, 2-16:1, 3-16:0) [lipid particle]	C51H96O6	0	lipid particle		CHEBI:85427	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+oleate [lipid particle]	C18H33O2	-1	lipid particle	C00712	CHEBI:30823	based on kegg
+1-monoglyceride (18:0) [lipid particle]	C21H42O4	0	lipid particle		CHEBI:134129	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+acylglycerone phosphate (18:1) [lipid particle]	C21H39O7P	0	lipid particle	C03630	CHEBI:36475	based on kegg
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:1) [lipid particle]	C21H41O7P	0	lipid particle		CHEBI:62837	based on chebi
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+zymosteryl palmitoleate [lipid particle]	C43H72O2	0	lipid particle		CHEBI:52385	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+zymosterol [lipid particle]	C27H44O	0	lipid particle	C05437	CHEBI:18252	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+1-acyl-sn-glycerol 3-phosphate (18:0) [lipid particle]	C21H43O7P	0	lipid particle		CHEBI:74850	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+phosphatidate (1-18:0, 2-18:1) [lipid particle]	C39H75O8P	0	lipid particle		CHEBI:74847	based on chebi
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylethanolamine (1-18:0, 2-16:1) [lipid particle]	C39H76NO8P	0	lipid particle		CHEBI:136155	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+triglyceride (1-16:1, 2-18:1, 3-18:0) [lipid particle]	C55H102O6	0	lipid particle			 
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearate [lipid particle]	C18H35O2	-1	lipid particle	C01530	CHEBI:25629	based on kegg
+diglyceride (1-16:1, 2-18:1) [lipid particle]	C37H68O5	0	lipid particle		CHEBI:88500	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+laurate [lipid particle]	C12H23O2	-1	lipid particle	C02679	CHEBI:18262	based on kegg
+lauroyl-CoA [lipid particle]	C33H54N7O17P3S	-4	lipid particle	C01832	CHEBI:57375	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:0) [lipid particle]	C19H39O7P	0	lipid particle	C04036	CHEBI:15799	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+1-acylglycerophosphocholine (16:1) [lipid particle]	C24H48NO7P	0	lipid particle		CHEBI:73851	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+sn-glycero-3-phosphocholine [lipid particle]	C8H20NO6P	0	lipid particle	C00670	CHEBI:16870	based on kegg
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylglycerol (1-16:0, 2-18:1) [lipid particle]	C40H77O10P	0	lipid particle	C13833	CHEBI:34080	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+glyceraldehyde 3-phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00661	CHEBI:58027	based on kegg
+NAD [lipid particle]	C21H26N7O14P2	-1	lipid particle	C00003	CHEBI:57540	based on kegg
+phosphate [lipid particle]	HO4P	-2	lipid particle	C00009	CHEBI:43474	based on kegg
+1,3-bisphospho-D-glycerate [lipid particle]	C3H4O10P2	-4	lipid particle	C00236	CHEBI:57604	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+NADH [lipid particle]	C21H27N7O14P2	-2	lipid particle	C00004	CHEBI:57945	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-16:1, 2-16:1, 3-18:0) [lipid particle]	C53H98O6	0	lipid particle			 
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylethanolamine (1-18:1, 2-16:1) [lipid particle]	C39H74NO8P	0	lipid particle		CHEBI:82837	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-16:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:1) [lipid particle]	C23H46NO7P	0	lipid particle		CHEBI:64575	based on chebi
+diglyceride (1-16:0, 2-16:1) [lipid particle]	C35H66O5	0	lipid particle		CHEBI:84394	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-16:0, 2-16:1, 3-18:1) [lipid particle]	C53H98O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+acylglycerone phosphate (16:1) [lipid particle]	C19H35O7P	0	lipid particle			 
+NADPH [lipid particle]	C21H26N7O17P3	-4	lipid particle	C00005	CHEBI:57783	based on kegg
+1-acyl-sn-glycerol 3-phosphate (16:1) [lipid particle]	C19H37O7P	0	lipid particle		CHEBI:75070	based on chebi
+NADP(+) [lipid particle]	C21H25N7O17P3	-3	lipid particle	C00006	CHEBI:58349	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-16:0) [lipid particle]	C53H100O6	0	lipid particle			 
+oleoyl-CoA [lipid particle]	C39H64N7O17P3S	-4	lipid particle	C00510	CHEBI:57387	based on kegg
+diglyceride (1-18:0, 2-16:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88527	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:0, 2-16:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+diglyceride (1-16:0, 2-18:1) [lipid particle]	C37H70O5	0	lipid particle		CHEBI:88454	based on chebi
+phosphatidylcholine (1-18:1, 2-18:1) [lipid particle]	C44H84NO8P	0	lipid particle		CHEBI:74669	based on chebi
+triglyceride (1-16:0, 2-18:1, 3-18:1) [lipid particle]	C55H102O6	0	lipid particle			 
+1-acylglycerophosphocholine (18:1) [lipid particle]	C26H52NO7P	0	lipid particle	C03916	CHEBI:28610	based on kegg
+palmitoyl-CoA [lipid particle]	C37H62N7O17P3S	-4	lipid particle	C00154	CHEBI:57379	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+triglyceride (1-18:1, 2-18:1, 3-16:0) [lipid particle]	C55H102O6	0	lipid particle		CHEBI:88999	based on chebi
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+phosphatidylethanolamine (1-18:0, 2-18:1) [lipid particle]	C41H80NO8P	0	lipid particle		CHEBI:136162	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-18:1) [lipid particle]	C57H106O6	0	lipid particle			 
+1-acylglycerophosphoethanolamine (18:0) [lipid particle]	C23H48NO7P	0	lipid particle		CHEBI:64576	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylglycerol (1-16:1, 2-16:1) [lipid particle]	C38H71O10P	0	lipid particle			 
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+glycerol 3-phosphate [lipid particle]	C3H7O6P	-2	lipid particle	C00093	CHEBI:57597	based on kegg
+diglyceride (1-16:1, 2-16:1) [lipid particle]	C35H64O5	0	lipid particle		CHEBI:84417	based on chebi
+triglyceride (1-18:0, 2-18:1, 3-16:0) [lipid particle]	C55H104O6	0	lipid particle		CHEBI:89755	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitate [lipid particle]	C16H31O2	-1	lipid particle	C00249	CHEBI:7896	based on kegg
+diglyceride (1-18:0, 2-18:1) [lipid particle]	C39H74O5	0	lipid particle		CHEBI:75468	based on chebi
+H2O [lipid particle]	H2O	0	lipid particle	C00001	CHEBI:15377	based on kegg
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+palmitoleate [lipid particle]	C16H29O2	-1	lipid particle	C08362	CHEBI:32372	based on kegg
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+dihydroxyacetone phosphate [lipid particle]	C3H5O6P	-2	lipid particle	C00111	CHEBI:57642	based on kegg
+H+ [lipid particle]	H	1	lipid particle	C00080	CHEBI:24636	based on kegg
+stearoyl-CoA [lipid particle]	C39H66N7O17P3S	-4	lipid particle	C00412	CHEBI:57394	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+acylglycerone phosphate (18:0) [lipid particle]	C21H41O7P	0	lipid particle	C03805	CHEBI:36476	based on kegg
+diglyceride (1-18:1, 2-18:1) [lipid particle]	C39H72O5	0	lipid particle		CHEBI:52333	based on chebi
+phosphatidylcholine (1-16:0, 2-16:1) [lipid particle]	C40H78NO8P	0	lipid particle		CHEBI:134592	based on chebi
+triglyceride (1-18:1, 2-18:1, 3-16:1) [lipid particle]	C55H100O6	0	lipid particle			 
+1-acylglycerophosphocholine (16:0) [lipid particle]	C24H50NO7P	0	lipid particle	C04102	CHEBI:72998	based on kegg
+ATP [lipid particle]	C10H12N5O13P3	-4	lipid particle	C00002	CHEBI:30616	based on kegg
+coenzyme A [lipid particle]	C21H32N7O16P3S	-4	lipid particle	C00010	CHEBI:57287	based on kegg
+arachidate [lipid particle]	C20H39O2	-1	lipid particle	C06425	CHEBI:32360	based on kegg
+AMP [lipid particle]	C10H12N5O7P	-2	lipid particle	C00020	CHEBI:456215	based on kegg
+diphosphate [lipid particle]	HO7P2	-3	lipid particle	C00013	CHEBI:33019	based on kegg
+icosanoyl-CoA [lipid particle]	C41H70N7O17P3S	-4	lipid particle	C02041	CHEBI:15527	based on kegg

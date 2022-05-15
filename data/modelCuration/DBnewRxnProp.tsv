@@ -1,0 +1,411 @@
+RxnID	REV	GPR	RxnName	EC	Subsystems	RxnKEGGid
+r_3319_lp	0	YKR089C	PC phospholipase A2 (1-18:1, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_3280_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-18:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2951_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3297_lp	0	YMR313C	DAG lipase (1-16:1, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_3325_lp	0	YKR089C	PE phospholipase A2 (1-16:1, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_3326_lp	0	YKR089C	PE phospholipase A2 (1-18:0, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_2379_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3023_lp	0	YML059C	PC phospholipase B (1-16:1, 2-16:1), ER membrane_lipid particle	3.1.1.5		
+r_2462_lp	1	YBR042C	lysoPI acyltransferase (1-18:0, 2-16:1), ER membrane_lipid particle	2.3.-.-		
+r_2890_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2970_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3300_lp	0	YMR313C	DAG lipase (1-16:0, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2990_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2213_lp	1	YBR041W	fatty-acid--CoA ligase (behenate), ER membrane_lipid particle			
+r_2932_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2368_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2898_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2377_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3025_lp	0	YML059C	PC phospholipase B (1-18:1, 2-16:1), ER membrane_lipid particle	3.1.1.5		
+r_4633_lp	1	YBR177C	alcohol acyltransferase (decanoyl-CoA)_lipid particle	2.3.1.84		R00627
+r_2323_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (18:1), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_2939_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_1011_lp	0	YGR175C	squalene epoxidase (NADP)_lipid particle	1.14.14.17		R02874
+r_2387_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2949_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3287_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-18:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3284_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-18:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3330_lp	0	YKR089C	PE phospholipase A2 (1-18:0, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2885_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2382_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3296_lp	0	YMR313C	DAG lipase (1-16:0, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_2934_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2935_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2994_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2993_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2927_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0041_lp	0	YBR265W	3-dehydrosphinganine reductase_lipid particle	1.1.1.102		R02978
+r_2415_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_3320_lp	0	YKR089C	PC phospholipase A2 (1-16:0, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2218_lp	1	YBR041W	fatty-acid--CoA ligase (cerotic acid), lipid particle_lipid particle			
+r_4629_lp	1	YBR177C	alcohol acyltransferase (hexanoyl-CoA)_lipid particle	2.3.1.84		R00627
+r_2400_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2408_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_3005_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2211_lp	1	YIL009W	fatty-acid--CoA ligase (lignoceric acid), cell envelope_lipid particle	6.2.1.3		
+r_2895_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4298_lp	1	YMR110C	(S)-Methylmalonate semialdehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R03869
+r_2215_lp	1	YBR041W	fatty-acid--CoA ligase (cerotic acid), ER membrane_lipid particle			
+r_2887_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2406_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2426_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_0296_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 16_lipid particle	2.5.1.87		
+r_4296_lp	0	YMR110C	D-Glucuronolactone:NAD+ oxidoreductase_lipid particle	1.2.1.3		R02957
+r_2381_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3294_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-18:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_4630_lp	1	YBR177C	alcohol acyltransferase (octanoyl-CoA)_lipid particle	2.3.1.84		R00627
+r_2912_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2393_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2327_lp	0	YIL124W	acyl dhap reductase (18:1), ER membrane_lipid particle	1.1.1.101		
+r_3315_lp	0	YMR313C	lysoPE (1-18:1) oleoyl-CoA acyltransferase, lipid particle_lipid particle	3.1.1.3		
+r_3285_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-18:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_4690_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (methionol)_lipid particle	2.3.1.84		
+r_2410_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2962_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2917_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2947_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3002_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3310_lp	0	YKL094W	MAG lipase (1-18:0), lipid particle_lipid particle	3.1.1.23		
+r_2216_lp	1	YBR041W	fatty-acid--CoA ligase (behenate), lipid particle_lipid particle			
+r_2928_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2422_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2369_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_0299_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 19_lipid particle	2.5.1.87		
+r_3269_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-16:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3276_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-16:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2416_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2376_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_0162_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (phenylethanol alcohol)_lipid particle	2.3.1.84		
+r_2402_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2349_lp	0	YMR165C	PA phosphatase (1-18:0, 2-18:1), ER membrane_lipid particle	3.1.3.4		
+r_2428_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_3277_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-16:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2380_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_4301_lp	1	YMR110C	5-Hydroxyindoleacetaldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R04903
+r_2958_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2317_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (16:1), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_2957_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0295_lp	1	YBR002C or YMR101C	cis-prenyltransferase step 15_lipid particle	2.5.1.87		
+r_2914_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2915_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2961_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2347_lp	0	YMR165C	PA phosphatase (1-16:1, 2-18:1), ER membrane_lipid particle	3.1.3.4		
+r_2923_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2925_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2392_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2321_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (16:1), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_3011_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0161_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (isobutyl alcohol)_lipid particle	2.3.1.84		
+r_2429_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_0282_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 02_lipid particle	2.5.1.87		R07475
+r_3331_lp	0	YKR089C	PE phospholipase A2 (1-18:1, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2399_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3314_lp	0	YMR313C	lysoPE (1-18:0) oleoyl-CoA acyltransferase, lipid particle_lipid particle	3.1.1.3		
+r_3318_lp	0	YKR089C	PC phospholipase A2 (1-18:0, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_2902_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3268_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-16:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3282_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-18:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2967_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2326_lp	0	YIL124W	acyl dhap reductase (18:0), ER membrane_lipid particle	1.1.1.101		
+r_2344_lp	0	YMR165C	PA phosphatase (1-16:0, 2-16:1), ER membrane_lipid particle	3.1.3.4		
+r_3281_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-18:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3299_lp	0	YMR313C	DAG lipase (1-18:1, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_2196_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (hexadecanoate), ER membrane_lipid particle	6.2.1.3		R01280
+r_2964_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2909_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2975_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2203_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (hexadecenoate), lipid particle_lipid particle	6.2.1.3		
+r_3266_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-16:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2342_lp	0	YDL052C or YKR089C or YOR081C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-18:0, 2-18:1), lipid particle_lipid particle	2.3.1.51;3.1.1.3		
+r_0298_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 18_lipid particle	2.5.1.87		
+r_0290_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 10_lipid particle	2.5.1.87		
+r_3291_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-18:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3267_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-16:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_0283_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 03_lipid particle	2.5.1.87		R05613
+r_2894_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2926_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2350_lp	0	YMR165C	PA phosphatase (1-18:1, 2-16:1), ER membrane_lipid particle	3.1.3.4		
+r_2319_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (18:1), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_2900_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2423_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_3032_lp	0	YML059C	LPC phospholipase B (18:0), ER membrane_lipid particle	3.1.1.5		
+r_2427_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2390_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2333_lp	0	YDL052C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-16:0, 2-18:1), ER membrane_lipid particle	2.3.1.23;2.3.1.51		
+r_3253_lp	0	YKL140W or YLL012W	ergosteryl ester hydrolase (18:1), lipid particle_lipid particle	3.1.1.13		
+r_2391_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_0292_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 12_lipid particle	2.5.1.87		
+r_2893_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3259_lp	0	YLL012W	lanosteryl ester hydrolase (18:1), lipid particle_lipid particle	3.1.1.13		
+r_3030_lp	0	YML059C	LPC phospholipase B (16:0), ER membrane_lipid particle	3.1.1.5		
+r_2318_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (18:0), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_0293_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 13_lipid particle	2.5.1.87		
+r_2413_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_3098_lp	0	YPL206C	PG phospholipase C (1-16:0, 2-16:1), mitochondrial membrane_lipid particle	3.1.4.-		
+r_2948_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4307_lp	1	YMR110C	farnesal:NAD+ oxidoreductase_lipid particle	1.2.1.3		R08146
+r_2936_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0285_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 05_lipid particle	2.5.1.87		R05611
+r_0289_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 09_lipid particle	2.5.1.87		
+r_2409_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2945_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2954_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3001_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3272_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-16:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2397_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3255_lp	0	YLL012W	episteryl ester hydrolase (18:1), lipid particle_lipid particle	3.1.1.13		
+r_2419_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2944_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3329_lp	0	YKR089C	PE phospholipase A2 (1-16:1, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2431_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2974_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3324_lp	0	YKR089C	PE phospholipase A2 (1-16:0, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_4302_lp	1	YMR110C	N4-Acetylaminobutanal:NAD+ oxidoreductase_lipid particle	1.2.1.3		R05050
+r_3254_lp	0	YLL012W	episteryl ester hydrolase (16:1), lipid particle_lipid particle	3.1.1.13		
+r_0237_lp	0	YLR100W	C-3 sterol keto reductase (zymosterol)_lipid particle	1.1.1.270		
+r_0286_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 06_lipid particle	2.5.1.87		R07267
+r_2197_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (hexadecenoate), ER membrane_lipid particle	6.2.1.3		
+r_2937_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2417_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2407_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2924_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3303_lp	0	YMR313C	DAG lipase (1-18:1, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_4632_lp	1	YGR177C or YOR377W	alcohol acetyltransferase (hexanol)_lipid particle	2.3.1.84		R00627
+r_2385_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_1010_lp	0	YGR175C	squalene epoxidase (NAD)_lipid particle	1.14.14.17		
+r_2370_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2325_lp	0	YIL124W	acyl dhap reductase (16:1), ER membrane_lipid particle	1.1.1.101		
+r_4304_lp	1	YMR110C	Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)_lipid particle	1.2.1.3		R05238
+r_2351_lp	0	YMR165C	PA phosphatase (1-18:1, 2-18:1), ER membrane_lipid particle	3.1.3.4		
+r_2405_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_3009_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3261_lp	0	YLL012W	zymosteryl ester hydrolase (18:1), lipid particle_lipid particle	3.1.1.13		
+r_2116_lp	0	YMR110C	acetaldehyde dehydrogenase_lipid particle	1.2.1.3		R00710
+r_2884_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2330_lp	0	YIL124W	acyl dhap reductase (18:0), lipid particle_lipid particle	1.1.1.101		
+r_2430_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2901_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3292_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-18:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2978_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3278_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-16:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2996_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2941_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3311_lp	0	YKL094W	MAG lipase (1-18:1), lipid particle_lipid particle	3.1.1.23		
+r_2309_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (16:1), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_2311_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (18:1), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_2929_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2906_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3308_lp	0	YKL094W	MAG lipase (1-16:0), lipid particle_lipid particle	3.1.1.23		
+r_0172_lp	0	YMR110C	aldehyde dehydrogenase (3-aminopropanal, NAD)_lipid particle	1.2.1.3		R00904
+r_3309_lp	0	YKL094W	MAG lipase (1-16:1), lipid particle_lipid particle	3.1.1.23		
+r_2205_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (octadecenoate), lipid particle_lipid particle	6.2.1.3		
+r_2897_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2204_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (octadecanoate), lipid particle_lipid particle	6.2.1.3		
+r_3317_lp	0	YKR089C	PC phospholipase A2 (1-16:1, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_2198_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (octadecanoate), ER membrane_lipid particle	6.2.1.3		
+r_0334_lp	0	YDR196C	dephospho-CoA kinase_lipid particle	2.7.1.24		R00130
+r_2384_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2463_lp	1	YBR042C	lysoPI acyltransferase (1-18:0, 2-18:1), ER membrane_lipid particle	2.3.-.-		
+r_3256_lp	0	YLL012W	fecosteryl ester hydrolase (16:1), lipid particle_lipid particle	3.1.1.13		
+r_2424_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-16:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_0698_lp	0	YHR072W	lanosterol synthase_lipid particle	5.4.99.7		R03199
+r_2886_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2425_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-18:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_4291_lp	1	YMR110C	D-Glyceraldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R01752
+r_2988_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2977_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2904_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2979_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2414_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2310_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (18:0), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_4631_lp	1	YBR177C	alcohol acyltransferase (butyryl-CoA)_lipid particle	2.3.1.84		R00627
+r_3273_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-16:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3257_lp	0	YLL012W	fecosteryl ester hydrolase (18:1), lipid particle_lipid particle	3.1.1.13		
+r_2899_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4295_lp	1	YMR110C	2-Propyn-1-al:NAD+ oxidoreductase_lipid particle	1.2.1.3		R02940
+r_3327_lp	0	YKR089C	PE phospholipase A2 (1-18:1, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_3010_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2412_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_3275_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-16:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2992_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4300_lp	1	YMR110C	3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al:NAD+ oxidoreductase_lipid particle	1.2.1.3		R04506
+r_3312_lp	0	YMR313C	lysoPE (1-16:0) oleoyl-CoA acyltransferase, lipid particle_lipid particle	3.1.1.3		
+r_4294_lp	0	YMR110C	Indole-3-acetaldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R02678
+r_2973_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2966_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2389_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2985_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3026_lp	0	YML059C	PC phospholipase B (1-16:0, 2-18:1), ER membrane_lipid particle	3.1.1.5		
+r_2401_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:0, 2-18:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2420_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2918_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2324_lp	0	YIL124W	acyl dhap reductase (16:0), ER membrane_lipid particle	1.1.1.101		
+r_2328_lp	0	YIL124W	acyl dhap reductase (16:0), lipid particle_lipid particle	1.1.1.101		
+r_2383_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3006_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3295_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-18:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3000_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2195_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (tetradecanoate), ER membrane_lipid particle	6.2.1.3		
+r_3279_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-16:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2905_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2889_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3283_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-18:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2403_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_4292_lp	1	YMR110C	4-Aminobutyraldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R01986
+r_2999_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3265_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-16:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2968_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4693_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (propanol)_lipid particle	2.3.1.84		
+r_3029_lp	0	YML059C	PC phospholipase B (1-18:1, 2-18:1), ER membrane_lipid particle	3.1.1.5		
+r_3289_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-18:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_4297_lp	1	YMR110C	4-Trimethylammoniobutanal:NAD+ 1-oxidoreductase; 4-Trimethylammoniobutanal:NAD+ oxidoreductase_lipid particle	1.2.1.3		R03283
+r_2398_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2388_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2952_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2308_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (16:0), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_2210_lp	1	YIL009W	fatty-acid--CoA ligase (behenate), cell envelope_lipid particle	6.2.1.3		
+r_2339_lp	0	YDL052C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-18:1, 2-18:1), ER membrane_lipid particle	2.3.1.23;2.3.1.51		
+r_3100_lp	0	YPL206C	PG phospholipase C (1-18:0, 2-16:1), mitochondrial membrane_lipid particle	3.1.4.-		
+r_2920_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2891_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2969_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2998_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0158_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (2-methylbutanol)_lipid particle	2.3.1.84		
+r_2212_lp	1	YIL009W	fatty-acid--CoA ligase (cerotic acid), cell envelope_lipid particle	6.2.1.3		
+r_2930_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4680_lp	1	YBR177C	alcohol acyltransferase (propionyl-CoA)_lipid particle	2.3.1.84		
+r_2320_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (16:0), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_0294_lp	1	YBR002C or YMR101C	cis-prenyltransferase step 14_lipid particle	2.5.1.87		
+r_2386_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-18:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2956_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2921_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3328_lp	0	YKR089C	PE phospholipase A2 (1-16:0, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_0159_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (ethanol)_lipid particle	2.3.1.84		
+r_3258_lp	0	YLL012W	lanosteryl ester hydrolase (16:1), lipid particle_lipid particle	3.1.1.13		
+r_3101_lp	0	YPL206C	PG phospholipase C (1-18:1, 2-16:1), mitochondrial membrane_lipid particle	3.1.4.-		
+r_3290_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-18:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2888_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2965_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3301_lp	0	YMR313C	DAG lipase (1-16:1, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2217_lp	1	YBR041W	fatty-acid--CoA ligase (lignoceric acid), lipid particle_lipid particle			
+r_0236_lp	0	YLR100W	C-3 sterol keto reductase (4-methylzymosterol)_lipid particle	1.1.1.270		R07495
+r_2960_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2348_lp	0	YMR165C	PA phosphatase (1-18:0, 2-16:1), ER membrane_lipid particle	3.1.3.4		
+r_2896_lp	1	YNR008W	PE (1-16:0, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2946_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3103_lp	0	YPL206C	PG phospholipase C (1-16:1, 2-18:1), mitochondrial membrane_lipid particle	3.1.4.-		
+r_3274_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-16:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2950_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2981_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2976_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3024_lp	0	YML059C	PC phospholipase B (1-18:0, 2-16:1), ER membrane_lipid particle	3.1.1.5		
+r_2933_lp	1	YNR008W	PE (1-16:1, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2346_lp	0	YMR165C	PA phosphatase (1-16:1, 2-16:1), ER membrane_lipid particle	3.1.3.4		
+r_2340_lp	0	YDL052C or YKR089C or YOR081C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-16:0, 2-18:1), lipid particle_lipid particle	2.3.1.51;3.1.1.3		
+r_2986_lp	1	YNR008W	PC (1-18:0, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0291_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 11_lipid particle	2.5.1.87		
+r_2907_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2201_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (tetradecanoate), lipid particle_lipid particle	6.2.1.3		
+r_3293_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:1, 2-18:1, 3-16:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_4305_lp	1	YMR110C	Chloroacetaldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R05286
+r_2916_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3252_lp	0	YKL140W or YLL012W	ergosteryl ester hydrolase (16:1), lipid particle_lipid particle	3.1.1.13		
+r_2984_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4293_lp	0	YMR110C	4-aminobutanal:NAD+ 1-oxidoreductase; 4-aminobutyraldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R02549
+r_2335_lp	0	YDL052C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-16:1, 2-18:1), ER membrane_lipid particle	2.3.1.23;2.3.1.51		
+r_0281_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 01_lipid particle	2.5.1.87		R02061
+r_4277_lp	1	YPR139C	acyl-CoA:sn-glycerol-3-phosphate 1-O-acyltransferase_lipid particle	2.3.1.51		R00851
+r_2989_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2940_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2953_lp	1	YNR008W	PC (1-16:1, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2972_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3008_lp	1	YNR008W	PC (1-16:0, 2-18:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2982_lp	1	YNR008W	PC (1-18:0, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2199_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (octadecenoate), ER membrane_lipid particle	6.2.1.3		
+r_0297_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 17_lipid particle	2.5.1.87		
+r_4306_lp	1	YMR110C	Aldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R06366
+r_3321_lp	0	YKR089C	PC phospholipase A2 (1-16:1, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_3313_lp	0	YMR313C	lysoPE (1-16:1) oleoyl-CoA acyltransferase, lipid particle_lipid particle	3.1.1.3		
+r_2908_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2963_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2971_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3322_lp	0	YKR089C	PC phospholipase A2 (1-18:0, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2995_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2312_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (16:0), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_3007_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0287_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 07_lipid particle	2.5.1.87		R08747
+r_2997_lp	1	YNR008W	PC (1-16:1, 2-16:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2913_lp	1	YNR008W	PE (1-16:1, 2-18:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3323_lp	0	YKR089C	PC phospholipase A2 (1-18:1, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_3028_lp	0	YML059C	PC phospholipase B (1-18:0, 2-18:1), ER membrane_lipid particle	3.1.1.5		
+r_3298_lp	0	YMR313C	DAG lipase (1-18:0, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_2374_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-16:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_4687_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (tyrosol)_lipid particle	2.3.1.84		
+r_2341_lp	0	YDL052C or YKR089C or YOR081C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-16:1, 2-18:1), lipid particle_lipid particle	2.3.1.51;3.1.1.3		
+r_2903_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-18:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2421_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_4299_lp	1	YMR110C	Imidazole acetaldehyde:NAD+ oxidoreductase_lipid particle	1.2.1.3		R04065
+r_2395_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2315_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (18:1), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_2959_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3027_lp	0	YML059C	PC phospholipase B (1-16:1, 2-18:1), ER membrane_lipid particle	3.1.1.5		
+r_2910_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2314_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (18:0), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_3271_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-16:1, 3-18:1), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3033_lp	0	YML059C	LPC phospholipase B (18:1), ER membrane_lipid particle	3.1.1.5		
+r_2922_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2911_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-18:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2200_lp	1	YOR317W	fatty-acid--CoA ligase (dodecanoate), lipid particle_lipid particle	6.2.1.3		
+r_0986_lp	0	YML008C	S-adenosyl-methionine delta-24-sterol-c-methyltransferase_lipid particle	2.1.1.41		R04427
+r_2343_lp	0	YDL052C or YKR089C or YOR081C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-18:1, 2-18:1), lipid particle_lipid particle	2.3.1.51;3.1.1.3		
+r_0160_lp	0	YGR177C or YOR377W	alcohol acetyltransferase (isoamyl alcohol)_lipid particle	2.3.1.84		
+r_2378_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-16:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2943_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2313_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (16:1), ER membrane_lipid particle	2.3.1.15;2.3.1.42		
+r_3003_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_4303_lp	1	YMR110C	Fatty aldehyde dehydrogenase HFD1 (EC 1.2.1.3)_lipid particle	1.2.1.3		R05237
+r_2214_lp	1	YBR041W	fatty-acid--CoA ligase (lignoceric acid), ER membrane_lipid particle			
+r_3316_lp	0	YKR089C	PC phospholipase A2 (1-16:0, 2-16:1), lipid particle_lipid particle	3.1.1.3		
+r_2372_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2394_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2931_lp	1	YNR008W	PE (1-18:1, 2-18:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2991_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-16:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2983_lp	1	YNR008W	PC (1-18:1, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_0288_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 08_lipid particle	2.5.1.87		
+r_3270_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-16:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_0284_lp	0	YBR002C or YMR101C	cis-prenyltransferase step 04_lipid particle	2.5.1.87		R05612
+r_2373_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-18:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2411_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-16:1), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2892_lp	1	YNR008W	PE (1-16:0, 2-16:1) diacylglycerol (1-16:1, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2345_lp	0	YMR165C	PA phosphatase (1-16:0, 2-18:1), ER membrane_lipid particle	3.1.3.4		
+r_2371_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-18:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_3264_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:0, 2-16:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3302_lp	0	YMR313C	DAG lipase (1-18:0, 2-18:1), lipid particle_lipid particle	3.1.1.3		
+r_2202_lp	1	YMR246W or YOR317W	fatty-acid--CoA ligase (hexadecanoate), lipid particle_lipid particle	6.2.1.3		R01280
+r_2331_lp	0	YIL124W	acyl dhap reductase (18:1), lipid particle_lipid particle	1.1.1.101		
+r_3260_lp	0	YLL012W	zymosteryl ester hydrolase (16:1), lipid particle_lipid particle	3.1.1.13		
+r_2337_lp	0	YDL052C	1-acyl-sn-glycerol-3-phosphate acyltransferase (1-18:0, 2-18:1), ER membrane_lipid particle	2.3.1.23;2.3.1.51		
+r_2942_lp	1	YNR008W	PE (1-18:0, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3286_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-16:1, 2-18:1, 3-18:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_2194_lp	1	YOR317W	fatty-acid--CoA ligase (dodecanoate), ER membrane_lipid particle	6.2.1.3		
+r_2980_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2316_lp	0	YKR067W	glycerol-3-phosphate acyltransferase (16:0), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_3031_lp	0	YML059C	LPC phospholipase B (16:1), ER membrane_lipid particle	3.1.1.5		
+r_3102_lp	0	YPL206C	PG phospholipase C (1-16:0, 2-18:1), mitochondrial membrane_lipid particle	3.1.4.-		
+r_0486_lp	1	YGR192C or YJL052W or YJR009C	glyceraldehyde-3-phosphate dehydrogenase_lipid particle	1.2.1.12		R01061
+r_2418_lp	0	YOR245C	diacylglycerol acyltransferase (1-16:1, 2-16:1, 3-18:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2919_lp	1	YNR008W	PE (1-18:1, 2-16:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2955_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-16:0, 2-16:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2329_lp	0	YIL124W	acyl dhap reductase (16:1), lipid particle_lipid particle	1.1.1.101		
+r_2404_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-16:0), lipid particle_lipid particle	2.3.1.20;2.3.1.22		
+r_2396_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:0, 2-16:1, 3-18:1), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2987_lp	1	YNR008W	PC (1-18:1, 2-18:1) diacylglycerol (1-16:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2375_lp	0	YOR245C	diacylglycerol acyltransferase (1-18:1, 2-18:1, 3-16:0), ER membrane_lipid particle	2.3.1.202.3.1.222.3.1.26		
+r_2938_lp	1	YNR008W	PE (1-18:0, 2-18:1) diacylglycerol (1-18:0, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_3099_lp	0	YPL206C	PG phospholipase C (1-16:1, 2-16:1), mitochondrial membrane_lipid particle	3.1.4.-		
+r_3288_lp	0	YBR204C or YKR089C or YMR313C or YOR081C	TAG lipase (1-18:0, 2-18:1, 3-16:0), lipid particle_lipid particle	3.1.1.-;3.1.1.3		
+r_3022_lp	0	YML059C	PC phospholipase B (1-16:0, 2-16:1), ER membrane_lipid particle	3.1.1.5		
+r_2322_lp	0	YKR067W	dihydroxyacetone phosphate acyltransferase (18:0), lipid particle_lipid particle	2.3.1.15;2.3.1.42		
+r_3004_lp	1	YNR008W	PC (1-16:0, 2-16:1) diacylglycerol (1-18:1, 2-18:1) acyltransferase, ER membrane_lipid particle	2.3.1.158		
+r_2209_lp	1	YIL009W	fatty-acid--CoA ligase (arachidate), cell envelope_lipid particle	6.2.1.3		

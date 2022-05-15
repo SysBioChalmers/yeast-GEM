@@ -1,0 +1,1854 @@
+rxnID	coefficient	Metabolite standard name	Metabolite_type	compartment
+r_3319_lp	1.0	H2O	reactant	lipid particle
+r_3319_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_3319_lp	1.0	H+	product	lipid particle
+r_3319_lp	1.0	palmitoleate	product	lipid particle
+r_3319_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_3280_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:0)	reactant	lipid particle
+r_3280_lp	1.0	H2O	reactant	lipid particle
+r_3280_lp	1.0	H+	product	lipid particle
+r_3280_lp	1.0	palmitate	product	lipid particle
+r_3280_lp	1.0	diglyceride (1-16:0, 2-18:1)	product	lipid particle
+r_2951_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2951_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2951_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2951_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_3297_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_3297_lp	1.0	H2O	reactant	lipid particle
+r_3297_lp	1.0	H+	product	lipid particle
+r_3297_lp	1.0	palmitoleate	product	lipid particle
+r_3297_lp	1.0	1-monoglyceride (16:1)	product	lipid particle
+r_3325_lp	1.0	H2O	reactant	lipid particle
+r_3325_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_3325_lp	1.0	H+	product	lipid particle
+r_3325_lp	1.0	palmitoleate	product	lipid particle
+r_3325_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_3326_lp	1.0	H2O	reactant	lipid particle
+r_3326_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_3326_lp	1.0	H+	product	lipid particle
+r_3326_lp	1.0	palmitoleate	product	lipid particle
+r_3326_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2379_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2379_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2379_lp	1.0	coenzyme A	product	lipid particle
+r_2379_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_3023_lp	1.0	H2O	reactant	lipid particle
+r_3023_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_3023_lp	1.0	H+	product	lipid particle
+r_3023_lp	1.0	palmitoleate	product	lipid particle
+r_3023_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2462_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2462_lp	1.0	sn-2-acyl-1-lysophosphatidylinositol (16:1)	reactant	lipid particle
+r_2462_lp	1.0	coenzyme A	product	lipid particle
+r_2462_lp	1.0	1-phosphatidyl-1D-myo-inositol (1-18:0, 2-16:1)	product	lipid particle
+r_2890_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2890_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2890_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2890_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2970_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2970_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2970_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2970_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_3300_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_3300_lp	1.0	H2O	reactant	lipid particle
+r_3300_lp	1.0	H+	product	lipid particle
+r_3300_lp	1.0	oleate	product	lipid particle
+r_3300_lp	1.0	1-monoglyceride (16:0)	product	lipid particle
+r_2990_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2990_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2990_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2990_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2213_lp	1.0	coenzyme A	reactant	lipid particle
+r_2213_lp	1.0	ATP	reactant	lipid particle
+r_2213_lp	1.0	behenate	reactant	lipid particle
+r_2213_lp	1.0	docosanoyl-CoA	product	lipid particle
+r_2213_lp	1.0	AMP	product	lipid particle
+r_2213_lp	1.0	diphosphate	product	lipid particle
+r_2932_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2932_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2932_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2932_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2368_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2368_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2368_lp	1.0	coenzyme A	product	lipid particle
+r_2368_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:0)	product	lipid particle
+r_2898_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2898_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2898_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2898_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2377_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2377_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2377_lp	1.0	coenzyme A	product	lipid particle
+r_2377_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_3025_lp	1.0	H2O	reactant	lipid particle
+r_3025_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_3025_lp	1.0	H+	product	lipid particle
+r_3025_lp	1.0	palmitoleate	product	lipid particle
+r_3025_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_4633_lp	1.0	ethanol	reactant	lipid particle
+r_4633_lp	1.0	decanoyl-CoA	reactant	lipid particle
+r_4633_lp	1.0	coenzyme A	product	lipid particle
+r_4633_lp	1.0	ethyl decanoate	product	lipid particle
+r_2323_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2323_lp	2.0	H+	reactant	lipid particle
+r_2323_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2323_lp	1.0	coenzyme A	product	lipid particle
+r_2323_lp	1.0	acylglycerone phosphate (18:1)	product	lipid particle
+r_2939_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2939_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2939_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2939_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_1011_lp	1.0	H+	reactant	lipid particle
+r_1011_lp	1.0	NADPH	reactant	lipid particle
+r_1011_lp	1.0	oxygen	reactant	lipid particle
+r_1011_lp	1.0	squalene	reactant	lipid particle
+r_1011_lp	1.0	(S)-2,3-epoxysqualene	product	lipid particle
+r_1011_lp	1.0	H2O	product	lipid particle
+r_1011_lp	1.0	NADP(+)	product	lipid particle
+r_2387_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2387_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2387_lp	1.0	coenzyme A	product	lipid particle
+r_2387_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:0)	product	lipid particle
+r_2949_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2949_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2949_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2949_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_3287_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	reactant	lipid particle
+r_3287_lp	1.0	H2O	reactant	lipid particle
+r_3287_lp	1.0	H+	product	lipid particle
+r_3287_lp	1.0	oleate	product	lipid particle
+r_3287_lp	1.0	diglyceride (1-16:1, 2-18:1)	product	lipid particle
+r_3284_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:0)	reactant	lipid particle
+r_3284_lp	1.0	H2O	reactant	lipid particle
+r_3284_lp	1.0	H+	product	lipid particle
+r_3284_lp	1.0	palmitate	product	lipid particle
+r_3284_lp	1.0	diglyceride (1-16:1, 2-18:1)	product	lipid particle
+r_3330_lp	1.0	H2O	reactant	lipid particle
+r_3330_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_3330_lp	1.0	H+	product	lipid particle
+r_3330_lp	1.0	oleate	product	lipid particle
+r_3330_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2885_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2885_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2885_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2885_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2382_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2382_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2382_lp	1.0	coenzyme A	product	lipid particle
+r_2382_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_3296_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_3296_lp	1.0	H2O	reactant	lipid particle
+r_3296_lp	1.0	H+	product	lipid particle
+r_3296_lp	1.0	palmitoleate	product	lipid particle
+r_3296_lp	1.0	1-monoglyceride (16:0)	product	lipid particle
+r_2934_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2934_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2934_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2934_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2935_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2935_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2935_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2935_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2994_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2994_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2994_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2994_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2993_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2993_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2993_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2993_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2927_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2927_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2927_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2927_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_0041_lp	1.0	3-ketosphinganine	reactant	lipid particle
+r_0041_lp	1.0	H+	reactant	lipid particle
+r_0041_lp	1.0	NADPH	reactant	lipid particle
+r_0041_lp	1.0	NADP(+)	product	lipid particle
+r_0041_lp	1.0	sphinganine	product	lipid particle
+r_2415_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2415_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2415_lp	1.0	coenzyme A	product	lipid particle
+r_2415_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_3320_lp	1.0	H2O	reactant	lipid particle
+r_3320_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_3320_lp	1.0	H+	product	lipid particle
+r_3320_lp	1.0	oleate	product	lipid particle
+r_3320_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2218_lp	1.0	coenzyme A	reactant	lipid particle
+r_2218_lp	1.0	ATP	reactant	lipid particle
+r_2218_lp	1.0	cerotic acid	reactant	lipid particle
+r_2218_lp	1.0	diphosphate	product	lipid particle
+r_2218_lp	1.0	AMP	product	lipid particle
+r_2218_lp	1.0	hexacosanoyl-CoA	product	lipid particle
+r_4629_lp	1.0	ethanol	reactant	lipid particle
+r_4629_lp	1.0	hexanoyl-CoA	reactant	lipid particle
+r_4629_lp	1.0	coenzyme A	product	lipid particle
+r_4629_lp	1.0	ethyl hexanoate	product	lipid particle
+r_2400_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2400_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2400_lp	1.0	coenzyme A	product	lipid particle
+r_2400_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:0)	product	lipid particle
+r_2408_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2408_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2408_lp	1.0	coenzyme A	product	lipid particle
+r_2408_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_3005_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3005_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_3005_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_3005_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2211_lp	1.0	ATP	reactant	lipid particle
+r_2211_lp	1.0	coenzyme A	reactant	lipid particle
+r_2211_lp	1.0	lignoceric acid	reactant	lipid particle
+r_2211_lp	1.0	AMP	product	lipid particle
+r_2211_lp	1.0	diphosphate	product	lipid particle
+r_2211_lp	1.0	tetracosanoyl-CoA	product	lipid particle
+r_2895_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2895_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2895_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2895_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_4298_lp	1.0	H2O	reactant	lipid particle
+r_4298_lp	1.0	NAD	reactant	lipid particle
+r_4298_lp	1.0	(S)-Methylmalonate semialdehyde	reactant	lipid particle
+r_4298_lp	2.0	H+	product	lipid particle
+r_4298_lp	1.0	NADH	product	lipid particle
+r_4298_lp	1.0	Methylmalonate	product	lipid particle
+r_2215_lp	1.0	coenzyme A	reactant	lipid particle
+r_2215_lp	1.0	ATP	reactant	lipid particle
+r_2215_lp	1.0	cerotic acid	reactant	lipid particle
+r_2215_lp	1.0	hexacosanoyl-CoA	product	lipid particle
+r_2215_lp	1.0	AMP	product	lipid particle
+r_2215_lp	1.0	diphosphate	product	lipid particle
+r_2887_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2887_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2887_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2887_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2406_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2406_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2406_lp	1.0	coenzyme A	product	lipid particle
+r_2406_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:0)	product	lipid particle
+r_2426_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2426_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2426_lp	1.0	coenzyme A	product	lipid particle
+r_2426_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_0296_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0296_lp	1.0	octadecaprenyl diphosphate	reactant	lipid particle
+r_0296_lp	1.0	diphosphate	product	lipid particle
+r_0296_lp	1.0	nonadecaprenyl diphosphate	product	lipid particle
+r_4296_lp	2.0	H2O	reactant	lipid particle
+r_4296_lp	1.0	NAD	reactant	lipid particle
+r_4296_lp	1.0	D-Glucuronolactone	reactant	lipid particle
+r_4296_lp	3.0	H+	product	lipid particle
+r_4296_lp	1.0	NADH	product	lipid particle
+r_4296_lp	1.0	D-Glucarate	product	lipid particle
+r_2381_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2381_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2381_lp	1.0	coenzyme A	product	lipid particle
+r_2381_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_3294_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:0)	reactant	lipid particle
+r_3294_lp	1.0	H2O	reactant	lipid particle
+r_3294_lp	1.0	H+	product	lipid particle
+r_3294_lp	1.0	stearate	product	lipid particle
+r_3294_lp	1.0	diglyceride (1-18:1, 2-18:1)	product	lipid particle
+r_4630_lp	1.0	ethanol	reactant	lipid particle
+r_4630_lp	1.0	octanoyl-CoA	reactant	lipid particle
+r_4630_lp	1.0	coenzyme A	product	lipid particle
+r_4630_lp	1.0	ethyl octanoate	product	lipid particle
+r_2912_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2912_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2912_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2912_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2393_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2393_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2393_lp	1.0	coenzyme A	product	lipid particle
+r_2393_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2327_lp	1.0	H+	reactant	lipid particle
+r_2327_lp	1.0	NADPH	reactant	lipid particle
+r_2327_lp	1.0	acylglycerone phosphate (18:1)	reactant	lipid particle
+r_2327_lp	1.0	NADP(+)	product	lipid particle
+r_2327_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:1)	product	lipid particle
+r_3315_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_3315_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	reactant	lipid particle
+r_3315_lp	1.0	coenzyme A	product	lipid particle
+r_3315_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	product	lipid particle
+r_3285_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	reactant	lipid particle
+r_3285_lp	1.0	H2O	reactant	lipid particle
+r_3285_lp	1.0	H+	product	lipid particle
+r_3285_lp	1.0	palmitoleate	product	lipid particle
+r_3285_lp	1.0	diglyceride (1-16:1, 2-18:1)	product	lipid particle
+r_4690_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_4690_lp	1.0	methionol	reactant	lipid particle
+r_4690_lp	1.0	coenzyme A	product	lipid particle
+r_4690_lp	1.0	methionyl acetate	product	lipid particle
+r_2410_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2410_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2410_lp	1.0	coenzyme A	product	lipid particle
+r_2410_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2962_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2962_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2962_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2962_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2917_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2917_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2917_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2917_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2947_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2947_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2947_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2947_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_3002_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_3002_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_3002_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_3002_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_3310_lp	1.0	H2O	reactant	lipid particle
+r_3310_lp	1.0	1-monoglyceride (18:0)	reactant	lipid particle
+r_3310_lp	1.0	H+	product	lipid particle
+r_3310_lp	1.0	stearate	product	lipid particle
+r_3310_lp	1.0	glycerol	product	lipid particle
+r_2216_lp	1.0	coenzyme A	reactant	lipid particle
+r_2216_lp	1.0	ATP	reactant	lipid particle
+r_2216_lp	1.0	behenate	reactant	lipid particle
+r_2216_lp	1.0	diphosphate	product	lipid particle
+r_2216_lp	1.0	AMP	product	lipid particle
+r_2216_lp	1.0	docosanoyl-CoA	product	lipid particle
+r_2928_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2928_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2928_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2928_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2422_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2422_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2422_lp	1.0	coenzyme A	product	lipid particle
+r_2422_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:0)	product	lipid particle
+r_2369_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2369_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2369_lp	1.0	coenzyme A	product	lipid particle
+r_2369_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:0)	product	lipid particle
+r_0299_lp	1.0	henicosaprenyl diphosphate	reactant	lipid particle
+r_0299_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0299_lp	1.0	diphosphate	product	lipid particle
+r_0299_lp	1.0	docosaprenyl diphosphate	product	lipid particle
+r_3269_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	reactant	lipid particle
+r_3269_lp	1.0	H2O	reactant	lipid particle
+r_3269_lp	1.0	H+	product	lipid particle
+r_3269_lp	1.0	palmitoleate	product	lipid particle
+r_3269_lp	1.0	diglyceride (1-16:1, 2-16:1)	product	lipid particle
+r_3276_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:0)	reactant	lipid particle
+r_3276_lp	1.0	H2O	reactant	lipid particle
+r_3276_lp	1.0	H+	product	lipid particle
+r_3276_lp	1.0	palmitate	product	lipid particle
+r_3276_lp	1.0	diglyceride (1-18:1, 2-16:1)	product	lipid particle
+r_2416_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2416_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2416_lp	1.0	coenzyme A	product	lipid particle
+r_2416_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:0)	product	lipid particle
+r_2376_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2376_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2376_lp	1.0	coenzyme A	product	lipid particle
+r_2376_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_0162_lp	1.0	2-phenylethanol	reactant	lipid particle
+r_0162_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_0162_lp	1.0	coenzyme A	product	lipid particle
+r_0162_lp	1.0	phenethyl acetate	product	lipid particle
+r_2402_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2402_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2402_lp	1.0	coenzyme A	product	lipid particle
+r_2402_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:0)	product	lipid particle
+r_2349_lp	1.0	H2O	reactant	lipid particle
+r_2349_lp	1.0	phosphatidate (1-18:0, 2-18:1)	reactant	lipid particle
+r_2349_lp	2.0	H+	product	lipid particle
+r_2349_lp	1.0	phosphate	product	lipid particle
+r_2349_lp	1.0	diglyceride (1-18:0, 2-18:1)	product	lipid particle
+r_2428_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2428_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2428_lp	1.0	coenzyme A	product	lipid particle
+r_2428_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_3277_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	reactant	lipid particle
+r_3277_lp	1.0	H2O	reactant	lipid particle
+r_3277_lp	1.0	H+	product	lipid particle
+r_3277_lp	1.0	palmitoleate	product	lipid particle
+r_3277_lp	1.0	diglyceride (1-18:1, 2-16:1)	product	lipid particle
+r_2380_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2380_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2380_lp	1.0	coenzyme A	product	lipid particle
+r_2380_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_4301_lp	1.0	H2O	reactant	lipid particle
+r_4301_lp	1.0	NAD	reactant	lipid particle
+r_4301_lp	1.0	5-Hydroxyindoleacetaldehyde	reactant	lipid particle
+r_4301_lp	2.0	H+	product	lipid particle
+r_4301_lp	1.0	NADH	product	lipid particle
+r_4301_lp	1.0	5-Hydroxyindoleacetate	product	lipid particle
+r_2958_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2958_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2958_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2958_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2317_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2317_lp	2.0	H+	reactant	lipid particle
+r_2317_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2317_lp	1.0	coenzyme A	product	lipid particle
+r_2317_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:1)	product	lipid particle
+r_2957_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2957_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2957_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2957_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_0295_lp	1.0	heptadecaprenyl diphosphate	reactant	lipid particle
+r_0295_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0295_lp	1.0	diphosphate	product	lipid particle
+r_0295_lp	1.0	octadecaprenyl diphosphate	product	lipid particle
+r_2914_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2914_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2914_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2914_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2915_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2915_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2915_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2915_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2961_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2961_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2961_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2961_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2347_lp	1.0	H2O	reactant	lipid particle
+r_2347_lp	1.0	phosphatidate (1-16:1, 2-18:1)	reactant	lipid particle
+r_2347_lp	2.0	H+	product	lipid particle
+r_2347_lp	1.0	phosphate	product	lipid particle
+r_2347_lp	1.0	diglyceride (1-16:1, 2-18:1)	product	lipid particle
+r_2923_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2923_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2923_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2923_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2925_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2925_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2925_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2925_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2392_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2392_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2392_lp	1.0	coenzyme A	product	lipid particle
+r_2392_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2321_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2321_lp	2.0	H+	reactant	lipid particle
+r_2321_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2321_lp	1.0	coenzyme A	product	lipid particle
+r_2321_lp	1.0	acylglycerone phosphate (16:1)	product	lipid particle
+r_3011_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3011_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_3011_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_3011_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_0161_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_0161_lp	1.0	isobutanol	reactant	lipid particle
+r_0161_lp	1.0	coenzyme A	product	lipid particle
+r_0161_lp	1.0	isobutyl acetate	product	lipid particle
+r_2429_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2429_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2429_lp	1.0	coenzyme A	product	lipid particle
+r_2429_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_0282_lp	1.0	geranylgeranyl diphosphate	reactant	lipid particle
+r_0282_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0282_lp	1.0	diphosphate	product	lipid particle
+r_0282_lp	1.0	pentaprenyl diphosphate	product	lipid particle
+r_3331_lp	1.0	H2O	reactant	lipid particle
+r_3331_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_3331_lp	1.0	H+	product	lipid particle
+r_3331_lp	1.0	oleate	product	lipid particle
+r_3331_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2399_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2399_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2399_lp	1.0	coenzyme A	product	lipid particle
+r_2399_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_3314_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_3314_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	reactant	lipid particle
+r_3314_lp	1.0	coenzyme A	product	lipid particle
+r_3314_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	product	lipid particle
+r_3318_lp	1.0	H2O	reactant	lipid particle
+r_3318_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_3318_lp	1.0	H+	product	lipid particle
+r_3318_lp	1.0	palmitoleate	product	lipid particle
+r_3318_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2902_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2902_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2902_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2902_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_3268_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:0)	reactant	lipid particle
+r_3268_lp	1.0	H2O	reactant	lipid particle
+r_3268_lp	1.0	H+	product	lipid particle
+r_3268_lp	1.0	palmitate	product	lipid particle
+r_3268_lp	1.0	diglyceride (1-16:1, 2-16:1)	product	lipid particle
+r_3282_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:0)	reactant	lipid particle
+r_3282_lp	1.0	H2O	reactant	lipid particle
+r_3282_lp	1.0	H+	product	lipid particle
+r_3282_lp	1.0	stearate	product	lipid particle
+r_3282_lp	1.0	diglyceride (1-16:0, 2-18:1)	product	lipid particle
+r_2967_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2967_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2967_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2967_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2326_lp	1.0	H+	reactant	lipid particle
+r_2326_lp	1.0	NADPH	reactant	lipid particle
+r_2326_lp	1.0	acylglycerone phosphate (18:0)	reactant	lipid particle
+r_2326_lp	1.0	NADP(+)	product	lipid particle
+r_2326_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:0)	product	lipid particle
+r_2344_lp	1.0	H2O	reactant	lipid particle
+r_2344_lp	1.0	phosphatidate (1-16:0, 2-16:1)	reactant	lipid particle
+r_2344_lp	2.0	H+	product	lipid particle
+r_2344_lp	1.0	phosphate	product	lipid particle
+r_2344_lp	1.0	diglyceride (1-16:0, 2-16:1)	product	lipid particle
+r_3281_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	reactant	lipid particle
+r_3281_lp	1.0	H2O	reactant	lipid particle
+r_3281_lp	1.0	H+	product	lipid particle
+r_3281_lp	1.0	palmitoleate	product	lipid particle
+r_3281_lp	1.0	diglyceride (1-16:0, 2-18:1)	product	lipid particle
+r_3299_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_3299_lp	1.0	H2O	reactant	lipid particle
+r_3299_lp	1.0	H+	product	lipid particle
+r_3299_lp	1.0	palmitoleate	product	lipid particle
+r_3299_lp	1.0	1-monoglyceride (18:1)	product	lipid particle
+r_2196_lp	1.0	coenzyme A	reactant	lipid particle
+r_2196_lp	1.0	ATP	reactant	lipid particle
+r_2196_lp	1.0	palmitate	reactant	lipid particle
+r_2196_lp	1.0	palmitoyl-CoA	product	lipid particle
+r_2196_lp	1.0	AMP	product	lipid particle
+r_2196_lp	1.0	diphosphate	product	lipid particle
+r_2964_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2964_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2964_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2964_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2909_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2909_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2909_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2909_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2975_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2975_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2975_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2975_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2203_lp	1.0	coenzyme A	reactant	lipid particle
+r_2203_lp	1.0	ATP	reactant	lipid particle
+r_2203_lp	1.0	palmitoleate	reactant	lipid particle
+r_2203_lp	1.0	diphosphate	product	lipid particle
+r_2203_lp	1.0	AMP	product	lipid particle
+r_2203_lp	1.0	palmitoleoyl-CoA(4-)	product	lipid particle
+r_3266_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:0)	reactant	lipid particle
+r_3266_lp	1.0	H2O	reactant	lipid particle
+r_3266_lp	1.0	H+	product	lipid particle
+r_3266_lp	1.0	stearate	product	lipid particle
+r_3266_lp	1.0	diglyceride (1-16:0, 2-16:1)	product	lipid particle
+r_2342_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2342_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:0)	reactant	lipid particle
+r_2342_lp	1.0	coenzyme A	product	lipid particle
+r_2342_lp	1.0	phosphatidate (1-18:0, 2-18:1)	product	lipid particle
+r_0298_lp	1.0	icosaprenyl diphosphate	reactant	lipid particle
+r_0298_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0298_lp	1.0	diphosphate	product	lipid particle
+r_0298_lp	1.0	henicosaprenyl diphosphate	product	lipid particle
+r_0290_lp	1.0	dodecaprenyl diphosphate	reactant	lipid particle
+r_0290_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0290_lp	1.0	diphosphate	product	lipid particle
+r_0290_lp	1.0	tridecaprenyl diphosphate	product	lipid particle
+r_3291_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	reactant	lipid particle
+r_3291_lp	1.0	H2O	reactant	lipid particle
+r_3291_lp	1.0	H+	product	lipid particle
+r_3291_lp	1.0	oleate	product	lipid particle
+r_3291_lp	1.0	diglyceride (1-18:0, 2-18:1)	product	lipid particle
+r_3267_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	reactant	lipid particle
+r_3267_lp	1.0	H2O	reactant	lipid particle
+r_3267_lp	1.0	H+	product	lipid particle
+r_3267_lp	1.0	oleate	product	lipid particle
+r_3267_lp	1.0	diglyceride (1-16:0, 2-16:1)	product	lipid particle
+r_0283_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0283_lp	1.0	pentaprenyl diphosphate	reactant	lipid particle
+r_0283_lp	1.0	diphosphate	product	lipid particle
+r_0283_lp	1.0	hexaprenyl diphosphate	product	lipid particle
+r_2894_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2894_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2894_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2894_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2926_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2926_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2926_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2926_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2350_lp	1.0	H2O	reactant	lipid particle
+r_2350_lp	1.0	phosphatidate (1-18:1, 2-16:1)	reactant	lipid particle
+r_2350_lp	2.0	H+	product	lipid particle
+r_2350_lp	1.0	phosphate	product	lipid particle
+r_2350_lp	1.0	diglyceride (1-18:1, 2-16:1)	product	lipid particle
+r_2319_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2319_lp	2.0	H+	reactant	lipid particle
+r_2319_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2319_lp	1.0	coenzyme A	product	lipid particle
+r_2319_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:1)	product	lipid particle
+r_2900_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2900_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2900_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2900_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2423_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2423_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2423_lp	1.0	coenzyme A	product	lipid particle
+r_2423_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:0)	product	lipid particle
+r_3032_lp	1.0	H2O	reactant	lipid particle
+r_3032_lp	1.0	1-acylglycerophosphocholine (18:0)	reactant	lipid particle
+r_3032_lp	1.0	H+	product	lipid particle
+r_3032_lp	1.0	stearate	product	lipid particle
+r_3032_lp	1.0	sn-glycero-3-phosphocholine	product	lipid particle
+r_2427_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2427_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2427_lp	1.0	coenzyme A	product	lipid particle
+r_2427_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2390_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2390_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2390_lp	1.0	coenzyme A	product	lipid particle
+r_2390_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:0)	product	lipid particle
+r_2333_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2333_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:0)	reactant	lipid particle
+r_2333_lp	1.0	coenzyme A	product	lipid particle
+r_2333_lp	1.0	phosphatidate (1-16:0, 2-18:1)	product	lipid particle
+r_3253_lp	1.0	H2O	reactant	lipid particle
+r_3253_lp	1.0	ergosteryl oleate	reactant	lipid particle
+r_3253_lp	1.0	ergosterol	product	lipid particle
+r_3253_lp	1.0	H+	product	lipid particle
+r_3253_lp	1.0	oleate	product	lipid particle
+r_2391_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2391_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2391_lp	1.0	coenzyme A	product	lipid particle
+r_2391_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:0)	product	lipid particle
+r_0292_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0292_lp	1.0	tetradecaprenyl diphosphate	reactant	lipid particle
+r_0292_lp	1.0	diphosphate	product	lipid particle
+r_0292_lp	1.0	pentadecaprenyl diphosphate	product	lipid particle
+r_2893_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2893_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2893_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2893_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_3259_lp	1.0	H2O	reactant	lipid particle
+r_3259_lp	1.0	lanosteryl oleate	reactant	lipid particle
+r_3259_lp	1.0	H+	product	lipid particle
+r_3259_lp	1.0	oleate	product	lipid particle
+r_3259_lp	1.0	lanosterol	product	lipid particle
+r_3030_lp	1.0	H2O	reactant	lipid particle
+r_3030_lp	1.0	1-acylglycerophosphocholine (16:0)	reactant	lipid particle
+r_3030_lp	1.0	H+	product	lipid particle
+r_3030_lp	1.0	palmitate	product	lipid particle
+r_3030_lp	1.0	sn-glycero-3-phosphocholine	product	lipid particle
+r_2318_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2318_lp	2.0	H+	reactant	lipid particle
+r_2318_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2318_lp	1.0	coenzyme A	product	lipid particle
+r_2318_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:0)	product	lipid particle
+r_0293_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0293_lp	1.0	pentadecaprenyl diphosphate	reactant	lipid particle
+r_0293_lp	1.0	diphosphate	product	lipid particle
+r_0293_lp	1.0	hexadecaprenyl diphosphate	product	lipid particle
+r_2413_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2413_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2413_lp	1.0	coenzyme A	product	lipid particle
+r_2413_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_3098_lp	1.0	H2O	reactant	lipid particle
+r_3098_lp	1.0	phosphatidylglycerol (1-16:0, 2-16:1)	reactant	lipid particle
+r_3098_lp	2.0	H+	product	lipid particle
+r_3098_lp	1.0	glycerol 3-phosphate	product	lipid particle
+r_3098_lp	1.0	diglyceride (1-16:0, 2-16:1)	product	lipid particle
+r_2948_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2948_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2948_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2948_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_4307_lp	1.0	H2O	reactant	lipid particle
+r_4307_lp	1.0	NAD	reactant	lipid particle
+r_4307_lp	1.0	2-trans,6-trans-Farnesal	reactant	lipid particle
+r_4307_lp	2.0	H+	product	lipid particle
+r_4307_lp	1.0	NADH	product	lipid particle
+r_4307_lp	1.0	Farnesoic acid	product	lipid particle
+r_2936_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2936_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2936_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2936_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_0285_lp	1.0	heptaprenyl diphosphate	reactant	lipid particle
+r_0285_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0285_lp	1.0	diphosphate	product	lipid particle
+r_0285_lp	1.0	octaprenyl diphosphate	product	lipid particle
+r_0289_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0289_lp	1.0	undecaprenyl diphosphate	reactant	lipid particle
+r_0289_lp	1.0	diphosphate	product	lipid particle
+r_0289_lp	1.0	dodecaprenyl diphosphate	product	lipid particle
+r_2409_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2409_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2409_lp	1.0	coenzyme A	product	lipid particle
+r_2409_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2945_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2945_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2945_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2945_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2954_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2954_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2954_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2954_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_3001_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_3001_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_3001_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_3001_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_3272_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:0)	reactant	lipid particle
+r_3272_lp	1.0	H2O	reactant	lipid particle
+r_3272_lp	1.0	H+	product	lipid particle
+r_3272_lp	1.0	palmitate	product	lipid particle
+r_3272_lp	1.0	diglyceride (1-18:0, 2-16:1)	product	lipid particle
+r_2397_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2397_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2397_lp	1.0	coenzyme A	product	lipid particle
+r_2397_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_3255_lp	1.0	H2O	reactant	lipid particle
+r_3255_lp	1.0	episteryl oleate	reactant	lipid particle
+r_3255_lp	1.0	H+	product	lipid particle
+r_3255_lp	1.0	oleate	product	lipid particle
+r_3255_lp	1.0	episterol	product	lipid particle
+r_2419_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2419_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2419_lp	1.0	coenzyme A	product	lipid particle
+r_2419_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:0)	product	lipid particle
+r_2944_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2944_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2944_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2944_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_3329_lp	1.0	H2O	reactant	lipid particle
+r_3329_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_3329_lp	1.0	H+	product	lipid particle
+r_3329_lp	1.0	oleate	product	lipid particle
+r_3329_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2431_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2431_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2431_lp	1.0	coenzyme A	product	lipid particle
+r_2431_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2974_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2974_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2974_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2974_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_3324_lp	1.0	H2O	reactant	lipid particle
+r_3324_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_3324_lp	1.0	H+	product	lipid particle
+r_3324_lp	1.0	palmitoleate	product	lipid particle
+r_3324_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_4302_lp	1.0	H2O	reactant	lipid particle
+r_4302_lp	1.0	NAD	reactant	lipid particle
+r_4302_lp	1.0	N4-Acetylaminobutanal	reactant	lipid particle
+r_4302_lp	2.0	H+	product	lipid particle
+r_4302_lp	1.0	NADH	product	lipid particle
+r_4302_lp	1.0	4-Acetamidobutanoate	product	lipid particle
+r_3254_lp	1.0	H2O	reactant	lipid particle
+r_3254_lp	1.0	episteryl palmitoleate	reactant	lipid particle
+r_3254_lp	1.0	H+	product	lipid particle
+r_3254_lp	1.0	palmitoleate	product	lipid particle
+r_3254_lp	1.0	episterol	product	lipid particle
+r_0237_lp	1.0	H+	reactant	lipid particle
+r_0237_lp	1.0	NADPH	reactant	lipid particle
+r_0237_lp	1.0	zymosterol intermediate 2	reactant	lipid particle
+r_0237_lp	1.0	NADP(+)	product	lipid particle
+r_0237_lp	1.0	zymosterol	product	lipid particle
+r_0286_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0286_lp	1.0	octaprenyl diphosphate	reactant	lipid particle
+r_0286_lp	1.0	diphosphate	product	lipid particle
+r_0286_lp	1.0	nonaprenyl diphosphate	product	lipid particle
+r_2197_lp	1.0	coenzyme A	reactant	lipid particle
+r_2197_lp	1.0	ATP	reactant	lipid particle
+r_2197_lp	1.0	palmitoleate	reactant	lipid particle
+r_2197_lp	1.0	palmitoleoyl-CoA(4-)	product	lipid particle
+r_2197_lp	1.0	AMP	product	lipid particle
+r_2197_lp	1.0	diphosphate	product	lipid particle
+r_2937_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2937_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2937_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2937_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2417_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2417_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2417_lp	1.0	coenzyme A	product	lipid particle
+r_2417_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:0)	product	lipid particle
+r_2407_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2407_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2407_lp	1.0	coenzyme A	product	lipid particle
+r_2407_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:0)	product	lipid particle
+r_2924_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2924_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2924_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2924_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_3303_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3303_lp	1.0	H2O	reactant	lipid particle
+r_3303_lp	1.0	H+	product	lipid particle
+r_3303_lp	1.0	oleate	product	lipid particle
+r_3303_lp	1.0	1-monoglyceride (18:1)	product	lipid particle
+r_4632_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_4632_lp	1.0	hexanol	reactant	lipid particle
+r_4632_lp	1.0	coenzyme A	product	lipid particle
+r_4632_lp	1.0	hexyl acetate	product	lipid particle
+r_2385_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2385_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2385_lp	1.0	coenzyme A	product	lipid particle
+r_2385_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:0)	product	lipid particle
+r_1010_lp	1.0	H+	reactant	lipid particle
+r_1010_lp	1.0	NADH	reactant	lipid particle
+r_1010_lp	1.0	oxygen	reactant	lipid particle
+r_1010_lp	1.0	squalene	reactant	lipid particle
+r_1010_lp	1.0	(S)-2,3-epoxysqualene	product	lipid particle
+r_1010_lp	1.0	H2O	product	lipid particle
+r_1010_lp	1.0	NAD	product	lipid particle
+r_2370_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2370_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2370_lp	1.0	coenzyme A	product	lipid particle
+r_2370_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:0)	product	lipid particle
+r_2325_lp	1.0	H+	reactant	lipid particle
+r_2325_lp	1.0	NADPH	reactant	lipid particle
+r_2325_lp	1.0	acylglycerone phosphate (16:1)	reactant	lipid particle
+r_2325_lp	1.0	NADP(+)	product	lipid particle
+r_2325_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:1)	product	lipid particle
+r_4304_lp	1.0	H2O	reactant	lipid particle
+r_4304_lp	1.0	NAD	reactant	lipid particle
+r_4304_lp	1.0	cis-3-Chloroallyl aldehyde	reactant	lipid particle
+r_4304_lp	2.0	H+	product	lipid particle
+r_4304_lp	1.0	NADH	product	lipid particle
+r_4304_lp	1.0	cis-3-Chloroacrylic acid	product	lipid particle
+r_2351_lp	1.0	H2O	reactant	lipid particle
+r_2351_lp	1.0	phosphatidate (1-18:1, 2-18:1)	reactant	lipid particle
+r_2351_lp	2.0	H+	product	lipid particle
+r_2351_lp	1.0	phosphate	product	lipid particle
+r_2351_lp	1.0	diglyceride (1-18:1, 2-18:1)	product	lipid particle
+r_2405_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2405_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2405_lp	1.0	coenzyme A	product	lipid particle
+r_2405_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:0)	product	lipid particle
+r_3009_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3009_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_3009_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_3009_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_3261_lp	1.0	H2O	reactant	lipid particle
+r_3261_lp	1.0	zymosteryl oleate	reactant	lipid particle
+r_3261_lp	1.0	H+	product	lipid particle
+r_3261_lp	1.0	zymosterol	product	lipid particle
+r_3261_lp	1.0	oleate	product	lipid particle
+r_2116_lp	1.0	acetaldehyde	reactant	lipid particle
+r_2116_lp	1.0	H2O	reactant	lipid particle
+r_2116_lp	1.0	NAD	reactant	lipid particle
+r_2116_lp	1.0	acetate	product	lipid particle
+r_2116_lp	2.0	H+	product	lipid particle
+r_2116_lp	1.0	NADH	product	lipid particle
+r_2884_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2884_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2884_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2884_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2330_lp	1.0	H+	reactant	lipid particle
+r_2330_lp	1.0	acylglycerone phosphate (18:0)	reactant	lipid particle
+r_2330_lp	1.0	NADPH	reactant	lipid particle
+r_2330_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:0)	product	lipid particle
+r_2330_lp	1.0	NADP(+)	product	lipid particle
+r_2430_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2430_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2430_lp	1.0	coenzyme A	product	lipid particle
+r_2430_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2901_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2901_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2901_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2901_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_3292_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:0)	reactant	lipid particle
+r_3292_lp	1.0	H2O	reactant	lipid particle
+r_3292_lp	1.0	H+	product	lipid particle
+r_3292_lp	1.0	palmitate	product	lipid particle
+r_3292_lp	1.0	diglyceride (1-18:1, 2-18:1)	product	lipid particle
+r_2978_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2978_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2978_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2978_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_3278_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:0)	reactant	lipid particle
+r_3278_lp	1.0	H2O	reactant	lipid particle
+r_3278_lp	1.0	H+	product	lipid particle
+r_3278_lp	1.0	stearate	product	lipid particle
+r_3278_lp	1.0	diglyceride (1-18:1, 2-16:1)	product	lipid particle
+r_2996_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2996_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2996_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2996_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2941_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2941_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2941_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2941_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_3311_lp	1.0	H2O	reactant	lipid particle
+r_3311_lp	1.0	1-monoglyceride (18:1)	reactant	lipid particle
+r_3311_lp	1.0	H+	product	lipid particle
+r_3311_lp	1.0	oleate	product	lipid particle
+r_3311_lp	1.0	glycerol	product	lipid particle
+r_2309_lp	2.0	H+	reactant	lipid particle
+r_2309_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2309_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2309_lp	1.0	coenzyme A	product	lipid particle
+r_2309_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:1)	product	lipid particle
+r_2311_lp	2.0	H+	reactant	lipid particle
+r_2311_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2311_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2311_lp	1.0	coenzyme A	product	lipid particle
+r_2311_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:1)	product	lipid particle
+r_2929_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2929_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2929_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2929_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2906_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2906_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2906_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2906_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_3308_lp	1.0	H2O	reactant	lipid particle
+r_3308_lp	1.0	1-monoglyceride (16:0)	reactant	lipid particle
+r_3308_lp	1.0	H+	product	lipid particle
+r_3308_lp	1.0	palmitate	product	lipid particle
+r_3308_lp	1.0	glycerol	product	lipid particle
+r_0172_lp	1.0	3-aminopropanal	reactant	lipid particle
+r_0172_lp	1.0	H2O	reactant	lipid particle
+r_0172_lp	1.0	NAD	reactant	lipid particle
+r_0172_lp	1.0	beta-alanine	product	lipid particle
+r_0172_lp	2.0	H+	product	lipid particle
+r_0172_lp	1.0	NADH	product	lipid particle
+r_3309_lp	1.0	H2O	reactant	lipid particle
+r_3309_lp	1.0	1-monoglyceride (16:1)	reactant	lipid particle
+r_3309_lp	1.0	H+	product	lipid particle
+r_3309_lp	1.0	palmitoleate	product	lipid particle
+r_3309_lp	1.0	glycerol	product	lipid particle
+r_2205_lp	1.0	coenzyme A	reactant	lipid particle
+r_2205_lp	1.0	ATP	reactant	lipid particle
+r_2205_lp	1.0	oleate	reactant	lipid particle
+r_2205_lp	1.0	diphosphate	product	lipid particle
+r_2205_lp	1.0	AMP	product	lipid particle
+r_2205_lp	1.0	oleoyl-CoA	product	lipid particle
+r_2897_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2897_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2897_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2897_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2204_lp	1.0	coenzyme A	reactant	lipid particle
+r_2204_lp	1.0	ATP	reactant	lipid particle
+r_2204_lp	1.0	stearate	reactant	lipid particle
+r_2204_lp	1.0	diphosphate	product	lipid particle
+r_2204_lp	1.0	AMP	product	lipid particle
+r_2204_lp	1.0	stearoyl-CoA	product	lipid particle
+r_3317_lp	1.0	H2O	reactant	lipid particle
+r_3317_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_3317_lp	1.0	H+	product	lipid particle
+r_3317_lp	1.0	palmitoleate	product	lipid particle
+r_3317_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2198_lp	1.0	coenzyme A	reactant	lipid particle
+r_2198_lp	1.0	ATP	reactant	lipid particle
+r_2198_lp	1.0	stearate	reactant	lipid particle
+r_2198_lp	1.0	stearoyl-CoA	product	lipid particle
+r_2198_lp	1.0	AMP	product	lipid particle
+r_2198_lp	1.0	diphosphate	product	lipid particle
+r_0334_lp	1.0	3'-dephospho-CoA	reactant	lipid particle
+r_0334_lp	1.0	ATP	reactant	lipid particle
+r_0334_lp	1.0	ADP	product	lipid particle
+r_0334_lp	1.0	coenzyme A	product	lipid particle
+r_0334_lp	1.0	H+	product	lipid particle
+r_2384_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2384_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2384_lp	1.0	coenzyme A	product	lipid particle
+r_2384_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:0)	product	lipid particle
+r_2463_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2463_lp	1.0	sn-2-acyl-1-lysophosphatidylinositol (18:1)	reactant	lipid particle
+r_2463_lp	1.0	coenzyme A	product	lipid particle
+r_2463_lp	1.0	1-phosphatidyl-1D-myo-inositol (1-18:0, 2-18:1)	product	lipid particle
+r_3256_lp	1.0	H2O	reactant	lipid particle
+r_3256_lp	1.0	fecosteryl palmitoleate	reactant	lipid particle
+r_3256_lp	1.0	fecosterol	product	lipid particle
+r_3256_lp	1.0	H+	product	lipid particle
+r_3256_lp	1.0	palmitoleate	product	lipid particle
+r_2424_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2424_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2424_lp	1.0	coenzyme A	product	lipid particle
+r_2424_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_0698_lp	1.0	(S)-2,3-epoxysqualene	reactant	lipid particle
+r_0698_lp	1.0	lanosterol	product	lipid particle
+r_2886_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2886_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2886_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2886_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2425_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2425_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2425_lp	1.0	coenzyme A	product	lipid particle
+r_2425_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_4291_lp	1.0	D-glyceraldehyde	reactant	lipid particle
+r_4291_lp	1.0	H2O	reactant	lipid particle
+r_4291_lp	1.0	NAD	reactant	lipid particle
+r_4291_lp	2.0	H+	product	lipid particle
+r_4291_lp	1.0	NADH	product	lipid particle
+r_4291_lp	1.0	D-Glycerate	product	lipid particle
+r_2988_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2988_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2988_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2988_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2977_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2977_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2977_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2977_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2904_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2904_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2904_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2904_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2979_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2979_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2979_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2979_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2414_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2414_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2414_lp	1.0	coenzyme A	product	lipid particle
+r_2414_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2310_lp	2.0	H+	reactant	lipid particle
+r_2310_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2310_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2310_lp	1.0	coenzyme A	product	lipid particle
+r_2310_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:0)	product	lipid particle
+r_4631_lp	1.0	ethanol	reactant	lipid particle
+r_4631_lp	1.0	butanoyl-CoA	reactant	lipid particle
+r_4631_lp	1.0	coenzyme A	product	lipid particle
+r_4631_lp	1.0	ethyl butanoate	product	lipid particle
+r_3273_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	reactant	lipid particle
+r_3273_lp	1.0	H2O	reactant	lipid particle
+r_3273_lp	1.0	H+	product	lipid particle
+r_3273_lp	1.0	palmitoleate	product	lipid particle
+r_3273_lp	1.0	diglyceride (1-18:0, 2-16:1)	product	lipid particle
+r_3257_lp	1.0	H2O	reactant	lipid particle
+r_3257_lp	1.0	fecosteryl oleate	reactant	lipid particle
+r_3257_lp	1.0	fecosterol	product	lipid particle
+r_3257_lp	1.0	H+	product	lipid particle
+r_3257_lp	1.0	oleate	product	lipid particle
+r_2899_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2899_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2899_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2899_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_4295_lp	1.0	H2O	reactant	lipid particle
+r_4295_lp	1.0	NAD	reactant	lipid particle
+r_4295_lp	1.0	2-Propynal	reactant	lipid particle
+r_4295_lp	2.0	H+	product	lipid particle
+r_4295_lp	1.0	NADH	product	lipid particle
+r_4295_lp	1.0	Propynoate	product	lipid particle
+r_3327_lp	1.0	H2O	reactant	lipid particle
+r_3327_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_3327_lp	1.0	H+	product	lipid particle
+r_3327_lp	1.0	palmitoleate	product	lipid particle
+r_3327_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_3010_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3010_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_3010_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_3010_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2412_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2412_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2412_lp	1.0	coenzyme A	product	lipid particle
+r_2412_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_3275_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	reactant	lipid particle
+r_3275_lp	1.0	H2O	reactant	lipid particle
+r_3275_lp	1.0	H+	product	lipid particle
+r_3275_lp	1.0	oleate	product	lipid particle
+r_3275_lp	1.0	diglyceride (1-18:0, 2-16:1)	product	lipid particle
+r_2992_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2992_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2992_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2992_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_4300_lp	1.0	H2O	reactant	lipid particle
+r_4300_lp	1.0	NAD	reactant	lipid particle
+r_4300_lp	1.0	3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al	reactant	lipid particle
+r_4300_lp	2.0	H+	product	lipid particle
+r_4300_lp	1.0	NADH	product	lipid particle
+r_4300_lp	1.0	3alpha,7alpha-Dihydroxy-5beta-cholestanate	product	lipid particle
+r_3312_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_3312_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	reactant	lipid particle
+r_3312_lp	1.0	coenzyme A	product	lipid particle
+r_3312_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	product	lipid particle
+r_4294_lp	1.0	H2O	reactant	lipid particle
+r_4294_lp	1.0	indol-3-ylacetaldehyde	reactant	lipid particle
+r_4294_lp	1.0	NAD	reactant	lipid particle
+r_4294_lp	2.0	H+	product	lipid particle
+r_4294_lp	1.0	indole-3-acetate	product	lipid particle
+r_4294_lp	1.0	NADH	product	lipid particle
+r_2973_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2973_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2973_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2973_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2966_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2966_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2966_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2966_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2389_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2389_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2389_lp	1.0	coenzyme A	product	lipid particle
+r_2389_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:0)	product	lipid particle
+r_2985_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2985_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2985_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2985_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_3026_lp	1.0	H2O	reactant	lipid particle
+r_3026_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_3026_lp	1.0	H+	product	lipid particle
+r_3026_lp	1.0	oleate	product	lipid particle
+r_3026_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2401_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2401_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2401_lp	1.0	coenzyme A	product	lipid particle
+r_2401_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:0)	product	lipid particle
+r_2420_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2420_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2420_lp	1.0	coenzyme A	product	lipid particle
+r_2420_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:0)	product	lipid particle
+r_2918_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2918_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2918_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2918_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2324_lp	1.0	H+	reactant	lipid particle
+r_2324_lp	1.0	NADPH	reactant	lipid particle
+r_2324_lp	1.0	acylglycerone phosphate (16:0)	reactant	lipid particle
+r_2324_lp	1.0	NADP(+)	product	lipid particle
+r_2324_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:0)	product	lipid particle
+r_2328_lp	1.0	H+	reactant	lipid particle
+r_2328_lp	1.0	acylglycerone phosphate (16:0)	reactant	lipid particle
+r_2328_lp	1.0	NADPH	reactant	lipid particle
+r_2328_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:0)	product	lipid particle
+r_2328_lp	1.0	NADP(+)	product	lipid particle
+r_2383_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2383_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2383_lp	1.0	coenzyme A	product	lipid particle
+r_2383_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_3006_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3006_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_3006_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_3006_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_3295_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	reactant	lipid particle
+r_3295_lp	1.0	H2O	reactant	lipid particle
+r_3295_lp	1.0	H+	product	lipid particle
+r_3295_lp	1.0	oleate	product	lipid particle
+r_3295_lp	1.0	diglyceride (1-18:1, 2-18:1)	product	lipid particle
+r_3000_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_3000_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_3000_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_3000_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2195_lp	1.0	coenzyme A	reactant	lipid particle
+r_2195_lp	1.0	ATP	reactant	lipid particle
+r_2195_lp	1.0	myristate	reactant	lipid particle
+r_2195_lp	1.0	myristoyl-CoA	product	lipid particle
+r_2195_lp	1.0	AMP	product	lipid particle
+r_2195_lp	1.0	diphosphate	product	lipid particle
+r_3279_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	reactant	lipid particle
+r_3279_lp	1.0	H2O	reactant	lipid particle
+r_3279_lp	1.0	H+	product	lipid particle
+r_3279_lp	1.0	oleate	product	lipid particle
+r_3279_lp	1.0	diglyceride (1-18:1, 2-16:1)	product	lipid particle
+r_2905_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2905_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2905_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2905_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2889_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2889_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2889_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2889_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_3283_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	reactant	lipid particle
+r_3283_lp	1.0	H2O	reactant	lipid particle
+r_3283_lp	1.0	H+	product	lipid particle
+r_3283_lp	1.0	oleate	product	lipid particle
+r_3283_lp	1.0	diglyceride (1-16:0, 2-18:1)	product	lipid particle
+r_2403_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2403_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2403_lp	1.0	coenzyme A	product	lipid particle
+r_2403_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:0)	product	lipid particle
+r_4292_lp	1.0	4-aminobutanal	reactant	lipid particle
+r_4292_lp	1.0	H2O	reactant	lipid particle
+r_4292_lp	1.0	NADP(+)	reactant	lipid particle
+r_4292_lp	1.0	gamma-aminobutyrate	product	lipid particle
+r_4292_lp	2.0	H+	product	lipid particle
+r_4292_lp	1.0	NADPH	product	lipid particle
+r_2999_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2999_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2999_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2999_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_3265_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	reactant	lipid particle
+r_3265_lp	1.0	H2O	reactant	lipid particle
+r_3265_lp	1.0	H+	product	lipid particle
+r_3265_lp	1.0	palmitoleate	product	lipid particle
+r_3265_lp	1.0	diglyceride (1-16:0, 2-16:1)	product	lipid particle
+r_2968_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2968_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2968_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2968_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_4693_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_4693_lp	1.0	propanol	reactant	lipid particle
+r_4693_lp	1.0	coenzyme A	product	lipid particle
+r_4693_lp	1.0	propyl acetate	product	lipid particle
+r_3029_lp	1.0	H2O	reactant	lipid particle
+r_3029_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_3029_lp	1.0	H+	product	lipid particle
+r_3029_lp	1.0	oleate	product	lipid particle
+r_3029_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_3289_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	reactant	lipid particle
+r_3289_lp	1.0	H2O	reactant	lipid particle
+r_3289_lp	1.0	H+	product	lipid particle
+r_3289_lp	1.0	palmitoleate	product	lipid particle
+r_3289_lp	1.0	diglyceride (1-18:0, 2-18:1)	product	lipid particle
+r_4297_lp	1.0	H2O	reactant	lipid particle
+r_4297_lp	1.0	NAD	reactant	lipid particle
+r_4297_lp	1.0	4-Trimethylammoniobutanal	reactant	lipid particle
+r_4297_lp	2.0	H+	product	lipid particle
+r_4297_lp	1.0	NADH	product	lipid particle
+r_4297_lp	1.0	4-Trimethylammoniobutanoate	product	lipid particle
+r_2398_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2398_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2398_lp	1.0	coenzyme A	product	lipid particle
+r_2398_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2388_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2388_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2388_lp	1.0	coenzyme A	product	lipid particle
+r_2388_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:0)	product	lipid particle
+r_2952_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2952_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2952_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2952_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2308_lp	2.0	H+	reactant	lipid particle
+r_2308_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2308_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2308_lp	1.0	coenzyme A	product	lipid particle
+r_2308_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:0)	product	lipid particle
+r_2210_lp	1.0	ATP	reactant	lipid particle
+r_2210_lp	1.0	coenzyme A	reactant	lipid particle
+r_2210_lp	1.0	behenate	reactant	lipid particle
+r_2210_lp	1.0	AMP	product	lipid particle
+r_2210_lp	1.0	diphosphate	product	lipid particle
+r_2210_lp	1.0	docosanoyl-CoA	product	lipid particle
+r_2339_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2339_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:1)	reactant	lipid particle
+r_2339_lp	1.0	coenzyme A	product	lipid particle
+r_2339_lp	1.0	phosphatidate (1-18:1, 2-18:1)	product	lipid particle
+r_3100_lp	1.0	H2O	reactant	lipid particle
+r_3100_lp	1.0	phosphatidylglycerol (1-18:0, 2-16:1)	reactant	lipid particle
+r_3100_lp	2.0	H+	product	lipid particle
+r_3100_lp	1.0	glycerol 3-phosphate	product	lipid particle
+r_3100_lp	1.0	diglyceride (1-18:0, 2-16:1)	product	lipid particle
+r_2920_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2920_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2920_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2920_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2891_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2891_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2891_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2891_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2969_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2969_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2969_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2969_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2998_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2998_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2998_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2998_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_0158_lp	1.0	2-methylbutanol	reactant	lipid particle
+r_0158_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_0158_lp	1.0	2-methylbutyl acetate	product	lipid particle
+r_0158_lp	1.0	coenzyme A	product	lipid particle
+r_2212_lp	1.0	ATP	reactant	lipid particle
+r_2212_lp	1.0	coenzyme A	reactant	lipid particle
+r_2212_lp	1.0	cerotic acid	reactant	lipid particle
+r_2212_lp	1.0	AMP	product	lipid particle
+r_2212_lp	1.0	diphosphate	product	lipid particle
+r_2212_lp	1.0	hexacosanoyl-CoA	product	lipid particle
+r_2930_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2930_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2930_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2930_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_4680_lp	1.0	ethanol	reactant	lipid particle
+r_4680_lp	1.0	propionyl-CoA	reactant	lipid particle
+r_4680_lp	1.0	coenzyme A	product	lipid particle
+r_4680_lp	1.0	ethyl propionate	product	lipid particle
+r_2320_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2320_lp	2.0	H+	reactant	lipid particle
+r_2320_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2320_lp	1.0	coenzyme A	product	lipid particle
+r_2320_lp	1.0	acylglycerone phosphate (16:0)	product	lipid particle
+r_0294_lp	1.0	hexadecaprenyl diphosphate	reactant	lipid particle
+r_0294_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0294_lp	1.0	diphosphate	product	lipid particle
+r_0294_lp	1.0	heptadecaprenyl diphosphate	product	lipid particle
+r_2386_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2386_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2386_lp	1.0	coenzyme A	product	lipid particle
+r_2386_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:0)	product	lipid particle
+r_2956_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2956_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2956_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2956_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2921_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2921_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2921_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2921_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_3328_lp	1.0	H2O	reactant	lipid particle
+r_3328_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_3328_lp	1.0	H+	product	lipid particle
+r_3328_lp	1.0	oleate	product	lipid particle
+r_3328_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_0159_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_0159_lp	1.0	ethanol	reactant	lipid particle
+r_0159_lp	1.0	coenzyme A	product	lipid particle
+r_0159_lp	1.0	ethyl acetate	product	lipid particle
+r_3258_lp	1.0	H2O	reactant	lipid particle
+r_3258_lp	1.0	lanosteryl palmitoleate	reactant	lipid particle
+r_3258_lp	1.0	H+	product	lipid particle
+r_3258_lp	1.0	palmitoleate	product	lipid particle
+r_3258_lp	1.0	lanosterol	product	lipid particle
+r_3101_lp	1.0	H2O	reactant	lipid particle
+r_3101_lp	1.0	phosphatidylglycerol (1-18:1, 2-16:1)	reactant	lipid particle
+r_3101_lp	2.0	H+	product	lipid particle
+r_3101_lp	1.0	glycerol 3-phosphate	product	lipid particle
+r_3101_lp	1.0	diglyceride (1-18:1, 2-16:1)	product	lipid particle
+r_3290_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:0)	reactant	lipid particle
+r_3290_lp	1.0	H2O	reactant	lipid particle
+r_3290_lp	1.0	H+	product	lipid particle
+r_3290_lp	1.0	stearate	product	lipid particle
+r_3290_lp	1.0	diglyceride (1-18:0, 2-18:1)	product	lipid particle
+r_2888_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2888_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2888_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2888_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2965_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2965_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2965_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2965_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_3301_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_3301_lp	1.0	H2O	reactant	lipid particle
+r_3301_lp	1.0	H+	product	lipid particle
+r_3301_lp	1.0	oleate	product	lipid particle
+r_3301_lp	1.0	1-monoglyceride (16:1)	product	lipid particle
+r_2217_lp	1.0	coenzyme A	reactant	lipid particle
+r_2217_lp	1.0	ATP	reactant	lipid particle
+r_2217_lp	1.0	lignoceric acid	reactant	lipid particle
+r_2217_lp	1.0	diphosphate	product	lipid particle
+r_2217_lp	1.0	AMP	product	lipid particle
+r_2217_lp	1.0	tetracosanoyl-CoA	product	lipid particle
+r_0236_lp	1.0	3-dehydro-4-methylzymosterol	reactant	lipid particle
+r_0236_lp	1.0	H+	reactant	lipid particle
+r_0236_lp	1.0	NADPH	reactant	lipid particle
+r_0236_lp	1.0	4alpha-methylzymosterol	product	lipid particle
+r_0236_lp	1.0	NADP(+)	product	lipid particle
+r_2960_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2960_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2960_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2960_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2348_lp	1.0	H2O	reactant	lipid particle
+r_2348_lp	1.0	phosphatidate (1-18:0, 2-16:1)	reactant	lipid particle
+r_2348_lp	2.0	H+	product	lipid particle
+r_2348_lp	1.0	phosphate	product	lipid particle
+r_2348_lp	1.0	diglyceride (1-18:0, 2-16:1)	product	lipid particle
+r_2896_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2896_lp	1.0	phosphatidylethanolamine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2896_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2896_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2946_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2946_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2946_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2946_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_3103_lp	1.0	H2O	reactant	lipid particle
+r_3103_lp	1.0	phosphatidylglycerol (1-16:1, 2-18:1)	reactant	lipid particle
+r_3103_lp	2.0	H+	product	lipid particle
+r_3103_lp	1.0	glycerol 3-phosphate	product	lipid particle
+r_3103_lp	1.0	diglyceride (1-16:1, 2-18:1)	product	lipid particle
+r_3274_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:0)	reactant	lipid particle
+r_3274_lp	1.0	H2O	reactant	lipid particle
+r_3274_lp	1.0	H+	product	lipid particle
+r_3274_lp	1.0	stearate	product	lipid particle
+r_3274_lp	1.0	diglyceride (1-18:0, 2-16:1)	product	lipid particle
+r_2950_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2950_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2950_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2950_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2981_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2981_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2981_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2981_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2976_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2976_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2976_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2976_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_3024_lp	1.0	H2O	reactant	lipid particle
+r_3024_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_3024_lp	1.0	H+	product	lipid particle
+r_3024_lp	1.0	palmitoleate	product	lipid particle
+r_3024_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2933_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2933_lp	1.0	phosphatidylethanolamine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2933_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2933_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_2346_lp	1.0	H2O	reactant	lipid particle
+r_2346_lp	1.0	phosphatidate (1-16:1, 2-16:1)	reactant	lipid particle
+r_2346_lp	2.0	H+	product	lipid particle
+r_2346_lp	1.0	phosphate	product	lipid particle
+r_2346_lp	1.0	diglyceride (1-16:1, 2-16:1)	product	lipid particle
+r_2340_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2340_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:0)	reactant	lipid particle
+r_2340_lp	1.0	coenzyme A	product	lipid particle
+r_2340_lp	1.0	phosphatidate (1-16:0, 2-18:1)	product	lipid particle
+r_2986_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2986_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2986_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2986_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_0291_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0291_lp	1.0	tridecaprenyl diphosphate	reactant	lipid particle
+r_0291_lp	1.0	diphosphate	product	lipid particle
+r_0291_lp	1.0	tetradecaprenyl diphosphate	product	lipid particle
+r_2907_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2907_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2907_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2907_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2201_lp	1.0	coenzyme A	reactant	lipid particle
+r_2201_lp	1.0	ATP	reactant	lipid particle
+r_2201_lp	1.0	myristate	reactant	lipid particle
+r_2201_lp	1.0	diphosphate	product	lipid particle
+r_2201_lp	1.0	AMP	product	lipid particle
+r_2201_lp	1.0	myristoyl-CoA	product	lipid particle
+r_3293_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	reactant	lipid particle
+r_3293_lp	1.0	H2O	reactant	lipid particle
+r_3293_lp	1.0	H+	product	lipid particle
+r_3293_lp	1.0	palmitoleate	product	lipid particle
+r_3293_lp	1.0	diglyceride (1-18:1, 2-18:1)	product	lipid particle
+r_4305_lp	1.0	H2O	reactant	lipid particle
+r_4305_lp	1.0	NAD	reactant	lipid particle
+r_4305_lp	1.0	Chloroacetaldehyde	reactant	lipid particle
+r_4305_lp	2.0	H+	product	lipid particle
+r_4305_lp	1.0	NADH	product	lipid particle
+r_4305_lp	1.0	Chloroacetic acid	product	lipid particle
+r_2916_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2916_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2916_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2916_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_3252_lp	1.0	ergosteryl palmitoleate	reactant	lipid particle
+r_3252_lp	1.0	H2O	reactant	lipid particle
+r_3252_lp	1.0	ergosterol	product	lipid particle
+r_3252_lp	1.0	H+	product	lipid particle
+r_3252_lp	1.0	palmitoleate	product	lipid particle
+r_2984_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2984_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_2984_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2984_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_4293_lp	1.0	4-aminobutanal	reactant	lipid particle
+r_4293_lp	1.0	H2O	reactant	lipid particle
+r_4293_lp	1.0	NAD	reactant	lipid particle
+r_4293_lp	1.0	gamma-aminobutyrate	product	lipid particle
+r_4293_lp	2.0	H+	product	lipid particle
+r_4293_lp	1.0	NADH	product	lipid particle
+r_2335_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2335_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:1)	reactant	lipid particle
+r_2335_lp	1.0	coenzyme A	product	lipid particle
+r_2335_lp	1.0	phosphatidate (1-16:1, 2-18:1)	product	lipid particle
+r_0281_lp	1.0	farnesyl diphosphate	reactant	lipid particle
+r_0281_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0281_lp	1.0	diphosphate	product	lipid particle
+r_0281_lp	1.0	geranylgeranyl diphosphate	product	lipid particle
+r_4277_lp	1.0	Acyl-CoA	reactant	lipid particle
+r_4277_lp	1.0	1-acyl-sn-glycerol 3-phosphate	reactant	lipid particle
+r_4277_lp	1.0	coenzyme A	product	lipid particle
+r_4277_lp	1.0	1,2-diacyl-sn-glycerol 3-phosphate	product	lipid particle
+r_2989_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2989_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2989_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2989_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2940_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2940_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2940_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2940_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2953_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2953_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2953_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2953_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2972_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2972_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2972_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2972_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_3008_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3008_lp	1.0	phosphatidylcholine (1-16:0, 2-18:1)	reactant	lipid particle
+r_3008_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-18:1)	product	lipid particle
+r_3008_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2982_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2982_lp	1.0	phosphatidylcholine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2982_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2982_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2199_lp	1.0	coenzyme A	reactant	lipid particle
+r_2199_lp	1.0	ATP	reactant	lipid particle
+r_2199_lp	1.0	oleate	reactant	lipid particle
+r_2199_lp	1.0	oleoyl-CoA	product	lipid particle
+r_2199_lp	1.0	AMP	product	lipid particle
+r_2199_lp	1.0	diphosphate	product	lipid particle
+r_0297_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0297_lp	1.0	nonadecaprenyl diphosphate	reactant	lipid particle
+r_0297_lp	1.0	diphosphate	product	lipid particle
+r_0297_lp	1.0	icosaprenyl diphosphate	product	lipid particle
+r_4306_lp	1.0	H2O	reactant	lipid particle
+r_4306_lp	1.0	NAD	reactant	lipid particle
+r_4306_lp	1.0	Perillyl aldehyde	reactant	lipid particle
+r_4306_lp	2.0	H+	product	lipid particle
+r_4306_lp	1.0	NADH	product	lipid particle
+r_4306_lp	1.0	Perillic acid	product	lipid particle
+r_3321_lp	1.0	H2O	reactant	lipid particle
+r_3321_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_3321_lp	1.0	H+	product	lipid particle
+r_3321_lp	1.0	oleate	product	lipid particle
+r_3321_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_3313_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_3313_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	reactant	lipid particle
+r_3313_lp	1.0	coenzyme A	product	lipid particle
+r_3313_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	product	lipid particle
+r_2908_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2908_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2908_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2908_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2963_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2963_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2963_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2963_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2971_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2971_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2971_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2971_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_3322_lp	1.0	H2O	reactant	lipid particle
+r_3322_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_3322_lp	1.0	H+	product	lipid particle
+r_3322_lp	1.0	oleate	product	lipid particle
+r_3322_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_2995_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2995_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2995_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2995_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2312_lp	2.0	H+	reactant	lipid particle
+r_2312_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2312_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2312_lp	1.0	coenzyme A	product	lipid particle
+r_2312_lp	1.0	acylglycerone phosphate (16:0)	product	lipid particle
+r_3007_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3007_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_3007_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_3007_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_0287_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0287_lp	1.0	nonaprenyl diphosphate	reactant	lipid particle
+r_0287_lp	1.0	decaprenyl diphosphate	product	lipid particle
+r_0287_lp	1.0	diphosphate	product	lipid particle
+r_2997_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2997_lp	1.0	phosphatidylcholine (1-16:1, 2-16:1)	reactant	lipid particle
+r_2997_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2997_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2913_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2913_lp	1.0	phosphatidylethanolamine (1-16:1, 2-18:1)	reactant	lipid particle
+r_2913_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2913_lp	1.0	1-acylglycerophosphoethanolamine (16:1)	product	lipid particle
+r_3323_lp	1.0	H2O	reactant	lipid particle
+r_3323_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_3323_lp	1.0	H+	product	lipid particle
+r_3323_lp	1.0	oleate	product	lipid particle
+r_3323_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_3028_lp	1.0	H2O	reactant	lipid particle
+r_3028_lp	1.0	phosphatidylcholine (1-18:0, 2-18:1)	reactant	lipid particle
+r_3028_lp	1.0	H+	product	lipid particle
+r_3028_lp	1.0	oleate	product	lipid particle
+r_3028_lp	1.0	1-acylglycerophosphocholine (18:0)	product	lipid particle
+r_3298_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_3298_lp	1.0	H2O	reactant	lipid particle
+r_3298_lp	1.0	H+	product	lipid particle
+r_3298_lp	1.0	palmitoleate	product	lipid particle
+r_3298_lp	1.0	1-monoglyceride (18:0)	product	lipid particle
+r_2374_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2374_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2374_lp	1.0	coenzyme A	product	lipid particle
+r_2374_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:0)	product	lipid particle
+r_4687_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_4687_lp	1.0	tyrosol	reactant	lipid particle
+r_4687_lp	1.0	coenzyme A	product	lipid particle
+r_4687_lp	1.0	tyrosyl acetate	product	lipid particle
+r_2341_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2341_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:1)	reactant	lipid particle
+r_2341_lp	1.0	coenzyme A	product	lipid particle
+r_2341_lp	1.0	phosphatidate (1-16:1, 2-18:1)	product	lipid particle
+r_2903_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2903_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2903_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:1)	product	lipid particle
+r_2903_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2421_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2421_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2421_lp	1.0	coenzyme A	product	lipid particle
+r_2421_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:0)	product	lipid particle
+r_4299_lp	1.0	H2O	reactant	lipid particle
+r_4299_lp	1.0	NAD	reactant	lipid particle
+r_4299_lp	1.0	Imidazole-4-acetaldehyde	reactant	lipid particle
+r_4299_lp	2.0	H+	product	lipid particle
+r_4299_lp	1.0	NADH	product	lipid particle
+r_4299_lp	1.0	Imidazole-4-acetate	product	lipid particle
+r_2395_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2395_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2395_lp	1.0	coenzyme A	product	lipid particle
+r_2395_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2315_lp	2.0	H+	reactant	lipid particle
+r_2315_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2315_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2315_lp	1.0	coenzyme A	product	lipid particle
+r_2315_lp	1.0	acylglycerone phosphate (18:1)	product	lipid particle
+r_2959_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2959_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2959_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2959_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_3027_lp	1.0	H2O	reactant	lipid particle
+r_3027_lp	1.0	phosphatidylcholine (1-16:1, 2-18:1)	reactant	lipid particle
+r_3027_lp	1.0	H+	product	lipid particle
+r_3027_lp	1.0	oleate	product	lipid particle
+r_3027_lp	1.0	1-acylglycerophosphocholine (16:1)	product	lipid particle
+r_2910_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2910_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2910_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2910_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2314_lp	2.0	H+	reactant	lipid particle
+r_2314_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2314_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2314_lp	1.0	coenzyme A	product	lipid particle
+r_2314_lp	1.0	acylglycerone phosphate (18:0)	product	lipid particle
+r_3271_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	reactant	lipid particle
+r_3271_lp	1.0	H2O	reactant	lipid particle
+r_3271_lp	1.0	H+	product	lipid particle
+r_3271_lp	1.0	oleate	product	lipid particle
+r_3271_lp	1.0	diglyceride (1-16:1, 2-16:1)	product	lipid particle
+r_3033_lp	1.0	H2O	reactant	lipid particle
+r_3033_lp	1.0	1-acylglycerophosphocholine (18:1)	reactant	lipid particle
+r_3033_lp	1.0	H+	product	lipid particle
+r_3033_lp	1.0	oleate	product	lipid particle
+r_3033_lp	1.0	sn-glycero-3-phosphocholine	product	lipid particle
+r_2922_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2922_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2922_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2922_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_2911_lp	1.0	diglyceride (1-18:1, 2-16:1)	reactant	lipid particle
+r_2911_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2911_lp	1.0	triglyceride (1-18:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2911_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2200_lp	1.0	coenzyme A	reactant	lipid particle
+r_2200_lp	1.0	ATP	reactant	lipid particle
+r_2200_lp	1.0	laurate	reactant	lipid particle
+r_2200_lp	1.0	diphosphate	product	lipid particle
+r_2200_lp	1.0	AMP	product	lipid particle
+r_2200_lp	1.0	lauroyl-CoA	product	lipid particle
+r_0986_lp	1.0	S-adenosyl-L-methionine	reactant	lipid particle
+r_0986_lp	1.0	zymosterol	reactant	lipid particle
+r_0986_lp	1.0	fecosterol	product	lipid particle
+r_0986_lp	1.0	H+	product	lipid particle
+r_0986_lp	1.0	S-adenosyl-L-homocysteine	product	lipid particle
+r_2343_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2343_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:1)	reactant	lipid particle
+r_2343_lp	1.0	coenzyme A	product	lipid particle
+r_2343_lp	1.0	phosphatidate (1-18:1, 2-18:1)	product	lipid particle
+r_0160_lp	1.0	acetyl-CoA	reactant	lipid particle
+r_0160_lp	1.0	isoamylol	reactant	lipid particle
+r_0160_lp	1.0	coenzyme A	product	lipid particle
+r_0160_lp	1.0	isoamyl acetate	product	lipid particle
+r_2378_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2378_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2378_lp	1.0	coenzyme A	product	lipid particle
+r_2378_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2943_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2943_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2943_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2943_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2313_lp	2.0	H+	reactant	lipid particle
+r_2313_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2313_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2313_lp	1.0	coenzyme A	product	lipid particle
+r_2313_lp	1.0	acylglycerone phosphate (16:1)	product	lipid particle
+r_3003_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_3003_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_3003_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_3003_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_4303_lp	1.0	H2O	reactant	lipid particle
+r_4303_lp	1.0	NAD	reactant	lipid particle
+r_4303_lp	1.0	trans-3-Chloroallyl aldehyde	reactant	lipid particle
+r_4303_lp	2.0	H+	product	lipid particle
+r_4303_lp	1.0	NADH	product	lipid particle
+r_4303_lp	1.0	trans-3-Chloroacrylic acid	product	lipid particle
+r_2214_lp	1.0	coenzyme A	reactant	lipid particle
+r_2214_lp	1.0	ATP	reactant	lipid particle
+r_2214_lp	1.0	lignoceric acid	reactant	lipid particle
+r_2214_lp	1.0	tetracosanoyl-CoA	product	lipid particle
+r_2214_lp	1.0	AMP	product	lipid particle
+r_2214_lp	1.0	diphosphate	product	lipid particle
+r_3316_lp	1.0	H2O	reactant	lipid particle
+r_3316_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_3316_lp	1.0	H+	product	lipid particle
+r_3316_lp	1.0	palmitoleate	product	lipid particle
+r_3316_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2372_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2372_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2372_lp	1.0	coenzyme A	product	lipid particle
+r_2372_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:0)	product	lipid particle
+r_2394_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2394_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2394_lp	1.0	coenzyme A	product	lipid particle
+r_2394_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:1)	product	lipid particle
+r_2931_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2931_lp	1.0	phosphatidylethanolamine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2931_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:1)	product	lipid particle
+r_2931_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2991_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2991_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2991_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2991_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2983_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2983_lp	1.0	phosphatidylcholine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2983_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2983_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_0288_lp	1.0	decaprenyl diphosphate	reactant	lipid particle
+r_0288_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0288_lp	1.0	diphosphate	product	lipid particle
+r_0288_lp	1.0	undecaprenyl diphosphate	product	lipid particle
+r_3270_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:0)	reactant	lipid particle
+r_3270_lp	1.0	H2O	reactant	lipid particle
+r_3270_lp	1.0	H+	product	lipid particle
+r_3270_lp	1.0	stearate	product	lipid particle
+r_3270_lp	1.0	diglyceride (1-16:1, 2-16:1)	product	lipid particle
+r_0284_lp	1.0	hexaprenyl diphosphate	reactant	lipid particle
+r_0284_lp	1.0	isopentenyl diphosphate	reactant	lipid particle
+r_0284_lp	1.0	diphosphate	product	lipid particle
+r_0284_lp	1.0	heptaprenyl diphosphate	product	lipid particle
+r_2373_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2373_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2373_lp	1.0	coenzyme A	product	lipid particle
+r_2373_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:0)	product	lipid particle
+r_2411_lp	1.0	palmitoleoyl-CoA(4-)	reactant	lipid particle
+r_2411_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2411_lp	1.0	coenzyme A	product	lipid particle
+r_2411_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2892_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2892_lp	1.0	phosphatidylethanolamine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2892_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-16:1)	product	lipid particle
+r_2892_lp	1.0	1-acylglycerophosphoethanolamine (16:0)	product	lipid particle
+r_2345_lp	1.0	H2O	reactant	lipid particle
+r_2345_lp	1.0	phosphatidate (1-16:0, 2-18:1)	reactant	lipid particle
+r_2345_lp	2.0	H+	product	lipid particle
+r_2345_lp	1.0	phosphate	product	lipid particle
+r_2345_lp	1.0	diglyceride (1-16:0, 2-18:1)	product	lipid particle
+r_2371_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2371_lp	1.0	diglyceride (1-16:1, 2-18:1)	reactant	lipid particle
+r_2371_lp	1.0	coenzyme A	product	lipid particle
+r_2371_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-16:0)	product	lipid particle
+r_3264_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-16:0)	reactant	lipid particle
+r_3264_lp	1.0	H2O	reactant	lipid particle
+r_3264_lp	1.0	H+	product	lipid particle
+r_3264_lp	1.0	palmitate	product	lipid particle
+r_3264_lp	1.0	diglyceride (1-16:0, 2-16:1)	product	lipid particle
+r_3302_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_3302_lp	1.0	H2O	reactant	lipid particle
+r_3302_lp	1.0	H+	product	lipid particle
+r_3302_lp	1.0	oleate	product	lipid particle
+r_3302_lp	1.0	1-monoglyceride (18:0)	product	lipid particle
+r_2202_lp	1.0	coenzyme A	reactant	lipid particle
+r_2202_lp	1.0	ATP	reactant	lipid particle
+r_2202_lp	1.0	palmitate	reactant	lipid particle
+r_2202_lp	1.0	diphosphate	product	lipid particle
+r_2202_lp	1.0	AMP	product	lipid particle
+r_2202_lp	1.0	palmitoyl-CoA	product	lipid particle
+r_2331_lp	1.0	H+	reactant	lipid particle
+r_2331_lp	1.0	acylglycerone phosphate (18:1)	reactant	lipid particle
+r_2331_lp	1.0	NADPH	reactant	lipid particle
+r_2331_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:1)	product	lipid particle
+r_2331_lp	1.0	NADP(+)	product	lipid particle
+r_3260_lp	1.0	H2O	reactant	lipid particle
+r_3260_lp	1.0	zymosteryl palmitoleate	reactant	lipid particle
+r_3260_lp	1.0	H+	product	lipid particle
+r_3260_lp	1.0	zymosterol	product	lipid particle
+r_3260_lp	1.0	palmitoleate	product	lipid particle
+r_2337_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2337_lp	1.0	1-acyl-sn-glycerol 3-phosphate (18:0)	reactant	lipid particle
+r_2337_lp	1.0	coenzyme A	product	lipid particle
+r_2337_lp	1.0	phosphatidate (1-18:0, 2-18:1)	product	lipid particle
+r_2942_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2942_lp	1.0	phosphatidylethanolamine (1-18:0, 2-16:1)	reactant	lipid particle
+r_2942_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_2942_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_3286_lp	1.0	triglyceride (1-16:1, 2-18:1, 3-18:0)	reactant	lipid particle
+r_3286_lp	1.0	H2O	reactant	lipid particle
+r_3286_lp	1.0	H+	product	lipid particle
+r_3286_lp	1.0	stearate	product	lipid particle
+r_3286_lp	1.0	diglyceride (1-16:1, 2-18:1)	product	lipid particle
+r_2194_lp	1.0	coenzyme A	reactant	lipid particle
+r_2194_lp	1.0	ATP	reactant	lipid particle
+r_2194_lp	1.0	laurate	reactant	lipid particle
+r_2194_lp	1.0	lauroyl-CoA	product	lipid particle
+r_2194_lp	1.0	AMP	product	lipid particle
+r_2194_lp	1.0	diphosphate	product	lipid particle
+r_2980_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2980_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_2980_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2980_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2316_lp	1.0	glycerol 3-phosphate	reactant	lipid particle
+r_2316_lp	2.0	H+	reactant	lipid particle
+r_2316_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2316_lp	1.0	coenzyme A	product	lipid particle
+r_2316_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:0)	product	lipid particle
+r_3031_lp	1.0	H2O	reactant	lipid particle
+r_3031_lp	1.0	1-acylglycerophosphocholine (16:1)	reactant	lipid particle
+r_3031_lp	1.0	H+	product	lipid particle
+r_3031_lp	1.0	palmitoleate	product	lipid particle
+r_3031_lp	1.0	sn-glycero-3-phosphocholine	product	lipid particle
+r_3102_lp	1.0	H2O	reactant	lipid particle
+r_3102_lp	1.0	phosphatidylglycerol (1-16:0, 2-18:1)	reactant	lipid particle
+r_3102_lp	2.0	H+	product	lipid particle
+r_3102_lp	1.0	glycerol 3-phosphate	product	lipid particle
+r_3102_lp	1.0	diglyceride (1-16:0, 2-18:1)	product	lipid particle
+r_0486_lp	1.0	glyceraldehyde 3-phosphate	reactant	lipid particle
+r_0486_lp	1.0	NAD	reactant	lipid particle
+r_0486_lp	1.0	phosphate	reactant	lipid particle
+r_0486_lp	1.0	1,3-bisphospho-D-glycerate	product	lipid particle
+r_0486_lp	1.0	H+	product	lipid particle
+r_0486_lp	1.0	NADH	product	lipid particle
+r_2418_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2418_lp	1.0	diglyceride (1-16:1, 2-16:1)	reactant	lipid particle
+r_2418_lp	1.0	coenzyme A	product	lipid particle
+r_2418_lp	1.0	triglyceride (1-16:1, 2-16:1, 3-18:0)	product	lipid particle
+r_2919_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2919_lp	1.0	phosphatidylethanolamine (1-18:1, 2-16:1)	reactant	lipid particle
+r_2919_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-16:1)	product	lipid particle
+r_2919_lp	1.0	1-acylglycerophosphoethanolamine (18:1)	product	lipid particle
+r_2955_lp	1.0	diglyceride (1-16:0, 2-16:1)	reactant	lipid particle
+r_2955_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2955_lp	1.0	triglyceride (1-16:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2955_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2329_lp	1.0	H+	reactant	lipid particle
+r_2329_lp	1.0	acylglycerone phosphate (16:1)	reactant	lipid particle
+r_2329_lp	1.0	NADPH	reactant	lipid particle
+r_2329_lp	1.0	1-acyl-sn-glycerol 3-phosphate (16:1)	product	lipid particle
+r_2329_lp	1.0	NADP(+)	product	lipid particle
+r_2404_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2404_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2404_lp	1.0	coenzyme A	product	lipid particle
+r_2404_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-16:0)	product	lipid particle
+r_2396_lp	1.0	oleoyl-CoA	reactant	lipid particle
+r_2396_lp	1.0	diglyceride (1-18:0, 2-16:1)	reactant	lipid particle
+r_2396_lp	1.0	coenzyme A	product	lipid particle
+r_2396_lp	1.0	triglyceride (1-18:0, 2-16:1, 3-18:1)	product	lipid particle
+r_2987_lp	1.0	diglyceride (1-16:0, 2-18:1)	reactant	lipid particle
+r_2987_lp	1.0	phosphatidylcholine (1-18:1, 2-18:1)	reactant	lipid particle
+r_2987_lp	1.0	triglyceride (1-16:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2987_lp	1.0	1-acylglycerophosphocholine (18:1)	product	lipid particle
+r_2375_lp	1.0	palmitoyl-CoA	reactant	lipid particle
+r_2375_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_2375_lp	1.0	coenzyme A	product	lipid particle
+r_2375_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:0)	product	lipid particle
+r_2938_lp	1.0	diglyceride (1-18:0, 2-18:1)	reactant	lipid particle
+r_2938_lp	1.0	phosphatidylethanolamine (1-18:0, 2-18:1)	reactant	lipid particle
+r_2938_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-18:1)	product	lipid particle
+r_2938_lp	1.0	1-acylglycerophosphoethanolamine (18:0)	product	lipid particle
+r_3099_lp	1.0	H2O	reactant	lipid particle
+r_3099_lp	1.0	phosphatidylglycerol (1-16:1, 2-16:1)	reactant	lipid particle
+r_3099_lp	2.0	H+	product	lipid particle
+r_3099_lp	1.0	glycerol 3-phosphate	product	lipid particle
+r_3099_lp	1.0	diglyceride (1-16:1, 2-16:1)	product	lipid particle
+r_3288_lp	1.0	triglyceride (1-18:0, 2-18:1, 3-16:0)	reactant	lipid particle
+r_3288_lp	1.0	H2O	reactant	lipid particle
+r_3288_lp	1.0	H+	product	lipid particle
+r_3288_lp	1.0	palmitate	product	lipid particle
+r_3288_lp	1.0	diglyceride (1-18:0, 2-18:1)	product	lipid particle
+r_3022_lp	1.0	H2O	reactant	lipid particle
+r_3022_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_3022_lp	1.0	H+	product	lipid particle
+r_3022_lp	1.0	palmitoleate	product	lipid particle
+r_3022_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2322_lp	1.0	dihydroxyacetone phosphate	reactant	lipid particle
+r_2322_lp	2.0	H+	reactant	lipid particle
+r_2322_lp	1.0	stearoyl-CoA	reactant	lipid particle
+r_2322_lp	1.0	coenzyme A	product	lipid particle
+r_2322_lp	1.0	acylglycerone phosphate (18:0)	product	lipid particle
+r_3004_lp	1.0	diglyceride (1-18:1, 2-18:1)	reactant	lipid particle
+r_3004_lp	1.0	phosphatidylcholine (1-16:0, 2-16:1)	reactant	lipid particle
+r_3004_lp	1.0	triglyceride (1-18:1, 2-18:1, 3-16:1)	product	lipid particle
+r_3004_lp	1.0	1-acylglycerophosphocholine (16:0)	product	lipid particle
+r_2209_lp	1.0	ATP	reactant	lipid particle
+r_2209_lp	1.0	coenzyme A	reactant	lipid particle
+r_2209_lp	1.0	arachidate	reactant	lipid particle
+r_2209_lp	1.0	AMP	product	lipid particle
+r_2209_lp	1.0	diphosphate	product	lipid particle
+r_2209_lp	1.0	icosanoyl-CoA	product	lipid particle
