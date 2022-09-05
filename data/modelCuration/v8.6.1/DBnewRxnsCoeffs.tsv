@@ -24,12 +24,12 @@ index	rxnNames	metNames	comps	coefficient
 5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	NADH	m	1
 5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	L-glutamate	m	1
 5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	H+	m	2
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	H2O	c	-1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	NADP(+)	c	-1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	"2,5-Dioxopentanoate"	c	-1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	NADPH	c	1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	2-oxoglutarate	c	1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	H+	c	2
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	H2O	c	-1
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	NADP(+)	c	-1
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	"2,5-Dioxopentanoate"	c	-1
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	NADPH	c	1
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	2-oxoglutarate	c	1
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	H+	c	2
 7	"GTP 8,9-hydrolase"	H2O	c	-1
 7	"GTP 8,9-hydrolase"	GTP	c	-1
 7	"GTP 8,9-hydrolase"	H+	c	-1

@@ -4,7 +4,7 @@ index	rxnNames	grRules	lb	ub	rev	subSystems	eccodes	rxnNotes	rxnReferences	rxnCo
 3	FAD nucleotidohydrolase	(YCR026C or YEL016C)	-1000	1000	1	Riboflavin metabolism	3.6.1.9; 3.6.1.18	New rxns from databases curation (PR #304)			R00160									
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	(YCR026C or YEL016C)	0	1000	0	Purine metabolism	3.6.1.29	New rxns from databases curation (PR #304)			R00187									
 5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	YHR037W	-1000	1000	1	Arginine and proline metabolism	1.2.1.88	New rxns from databases curation (PR #304)			R00245									
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"""	YHR039C	-1000	1000	1	Ascorbate and aldarate metabolism	1.2.1.3; 1.2.1.26	New rxns from databases curation (PR #304)			R00264									
+6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	YHR039C	-1000	1000	1	Ascorbate and aldarate metabolism	1.2.1.3; 1.2.1.26	New rxns from databases curation (PR #304)			R00264									
 7	"GTP 8,9-hydrolase"	YGR267C	-1000	1000	1	Folate biosynthesis	3.5.4.16	New rxns from databases curation (PR #304)			R00428									
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	YJL005W	0	1000	0	Purine metabolism	4.6.1.1; 4.6.1.2	New rxns from databases curation (PR #304)			R00434									
 9	ATP:cytidine 5'-phosphotransferase	YNR012W	-1000	1000	1	Pyrimidine metabolism	2.7.1.48; 2.7.1.213	New rxns from databases curation (PR #304)			R00513									
