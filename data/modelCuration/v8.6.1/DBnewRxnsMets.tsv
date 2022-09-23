@@ -1,184 +1,116 @@
 metNames	comps	formula	charge	inchi	metNotes	kegg.compound	chebi	pubchem.compound	metanetx.chemical	seed.compound	bigg.metabolite	biocyc	envipath	lipidmaps	reactome	sabiork.compound	slm
-FAD	n	C27H30N9O15P2	-3		based on kegg	C00016	CHEBI:57692	46906035	MNXM33	cpd00015	fad	FAD					
 FAD	p	C27H30N9O15P2	-3		based on kegg	C00016	CHEBI:57692	46906035	MNXM33	cpd00015	fad	FAD					
 FADH2	p	C27H33N9O15P2	-2		based on kegg	C01352	CHEBI:58307	46931118	MNXM38	cpd00982	fadh2	FADH2					
-FMN	n	C17H18N4O9P	-3		based on kegg	C00061	CHEBI:58210	44229199	MNXM119	cpd00050	fmn	FMN			73524		
-"P1,P3-Bis(5'-adenosyl) triphosphate"	m	C20H24N10O16P3	-3		based on kegg	C06197	CHEBI:27775	25201180	MNXM3683	cpd03705		ADENOSINE5TRIPHOSPHO5ADENOSINE					
-"P1,P3-Bis(5'-adenosyl) triphosphate"	n	C20H24N10O16P3	-3		based on kegg	C06197	CHEBI:27775	25201180	MNXM3683	cpd03705		ADENOSINE5TRIPHOSPHO5ADENOSINE					
-"2,5-Dioxopentanoate"	c	C5H5O4	-1		based on kegg	C00433	CHEBI:17415	523	MNXM770								
-Formamidopyrimidine nucleoside triphosphate	c	C10H15N5O15P3	-3		based on kegg	C05922		135398719	MNXM1103590								
-Formamidopyrimidine nucleoside triphosphate	n	C10H15N5O15P3	-3		based on kegg	C05922		135398719	MNXM1103590								
-S-Ureidoglycolate	c	C3H5N2O4	-1		based on kegg	C00603	CHEBI:15412	23615273	MNXM490		urdglyc	CPD-1091					
-Acetyl adenylate	c	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
-Acetyl adenylate	n	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
-2'-Deoxy-5-hydroxymethylcytidine-5'-diphosphate	c	C10H14N3O11P2	-2		based on kegg	C11038 	CHEBI:835	21145194	MNXM56896			CPD0-1345					
-2'-Deoxy-5-hydroxymethylcytidine-5'-diphosphate	m	C10H14N3O11P2	-2		based on kegg	C11038 	CHEBI:835	21145194	MNXM56896			CPD0-1345					
-2'-Deoxy-5-hydroxymethylcytidine-5'-triphosphate	c	C10H14N3O14P3	-3		based on kegg	C11039	CHEBI:836	90659324	MNXM56897	cpd07924		DEOXY-OH-METHYLCYTIDINE-TRIPHOSPHATE					
-2'-Deoxy-5-hydroxymethylcytidine-5'-triphosphate	m	C10H14N3O14P3	-3		based on kegg	C11039	CHEBI:836	90659324	MNXM56897	cpd07924		DEOXY-OH-METHYLCYTIDINE-TRIPHOSPHATE					
+"P(1),P(3)-bis(5'-adenosyl) triphosphate"	m	C20H24N10O16P3	-3		based on kegg	C06197	CHEBI:27775	25201180	MNXM3683	cpd03705		ADENOSINE5TRIPHOSPHO5ADENOSINE					
+"P(1),P(3)-bis(5'-adenosyl) triphosphate"	n	C20H24N10O16P3	-3		based on kegg	C06197	CHEBI:27775	25201180	MNXM3683	cpd03705		ADENOSINE5TRIPHOSPHO5ADENOSINE					
+formamidopyrimidine nucleoside triphosphate	c	C10H15N5O15P3	-3		based on kegg	C05922		135398719	MNXM1103590								
+formamidopyrimidine nucleoside triphosphate	n	C10H15N5O15P3	-3		based on kegg	C05922		135398719	MNXM1103590								
+S-ureidoglycolate	c	C3H5N2O4	-1		based on kegg	C00603	CHEBI:15412	23615273	MNXM490		urdglyc	CPD-1091					
+acetyl adenylate	c	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
+acetyl adenylate	n	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
+2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate	c	C10H14N3O11P2	-2		based on kegg	C11038 	CHEBI:835	21145194	MNXM56896			CPD0-1345					
+2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate	m	C10H14N3O11P2	-2		based on kegg	C11038 	CHEBI:835	21145194	MNXM56896			CPD0-1345					
+2'-deoxy-5-hydroxymethylcytidine-5'-triphosphate	c	C10H14N3O14P3	-3		based on kegg	C11039	CHEBI:836	90659324	MNXM56897	cpd07924		DEOXY-OH-METHYLCYTIDINE-TRIPHOSPHATE					
+2'-deoxy-5-hydroxymethylcytidine-5'-triphosphate	m	C10H14N3O14P3	-3		based on kegg	C11039	CHEBI:836	90659324	MNXM56897	cpd07924		DEOXY-OH-METHYLCYTIDINE-TRIPHOSPHATE					
 L-glutamic 5-semialdehyde	m	C5H9NO3	0		based on kegg	C01165	CHEBI:17232	49791979	MNXM245	cpd00858	glu5sa	L-GLUTAMATE_GAMMA-SEMIALDEHYDE			31339		
-L-glutamic 5-semialdehyde	n	C5H9NO3	0		based on kegg	C01165	CHEBI:17232	49791979	MNXM245	cpd00858	glu5sa	L-GLUTAMATE_GAMMA-SEMIALDEHYDE			31339		
 GTP	n	C10H12N5O14P3	-4		based on kegg	C00044	CHEBI:57600	135398632	MNXM51	cpd00038	gtp	GTP					
 "3',5'-cyclic GMP"	m	C10H11N5O7P	-1		based on kegg	C00942	CHEBI:57746	135398569	MNXM665	cpd00697		CGMP					
-"3',5'-cyclic GMP"	n	C10H11N5O7P	-1		based on kegg	C00942	CHEBI:57746	135398569	MNXM665	cpd00697		CGMP					
+"3',5'-cyclic GMP"	erm	C10H11N5O7P	-1		based on kegg	C00942	CHEBI:57746	135398569	MNXM665	cpd00697		CGMP					
 CMP	n	C9H12N3O8P	-2		based on kegg	C00055	CHEBI:60377	7058165	MNXM31	cpd00046	cmp	CMP					
 cytidine	n	C9H13N3O5	0		based on kegg	C00475	CHEBI:17562	6175	MNXM338	cpd00367	cytd	CYTIDINE					
-propanoyl-CoA	p	C24H40N7O17P3S	-4		based on kegg	C00100	CHEBI:15539	45266613	MNXM86		ppcoa	PROPIONYL-COA					
-propanoyl-CoA	m	C24H40N7O17P3S	-4		based on kegg	C00100	CHEBI:15539	45266613	MNXM86		ppcoa	PROPIONYL-COA					
-2-Methylacetoacetyl-CoA	p	C26H42N7O18P3S	-4		based on kegg	C03344	CHEBI:15476	193425	MNXM1104585								
-2-Methylacetoacetyl-CoA	m	C26H42N7O18P3S	-4		based on kegg	C03344	CHEBI:15476	193425	MNXM1104585								
-D-ribose 5-phosphate	c	C5H9O8P	-2		based on kegg	C00117	CHEBI:17797	439167	MNXM1104056			RIBOSE-5P					
-5-Phospho-alpha-D-ribose 1-diphosphate	c	C5H8O14P3	-5		based on kegg	C00119	CHEBI:17111	20848918	MNXM91	cpd00103	prpp	PRPP			73566		
-crotonoyl-CoA	p	C25H36N7O17P3S	-4		based on kegg	C00877	CHEBI:15473	45266565	MNXM214	cpd00650	b2coa	CROTONYL-COA					
-alpha-D-Ribose-1-phosphate	c	C5H9O8P	-2		based on kegg	C00620	CHEBI:16300	23615443	MNXM295	cpd00475	r1p	RIBOSE-1P			112016		
-"P1,P4-Bis(5'-adenosyl)tetraphosphate"	c	C20H24N10O19P4	-4		based on kegg	C01260	CHEBI:17422	25243905	MNXM1089	cpd00924	ap4a	ADENOSYL-P4					
-"P1,P4-Bis(5'-adenosyl)tetraphosphate"	n	C20H24N10O19P4	-4		based on kegg	C01260	CHEBI:17422	25243905	MNXM1089	cpd00924	ap4a	ADENOSYL-P4					
+2-methylacetoacetyl-CoA	p	C26H42N7O18P3S	-4		based on kegg	C03344	CHEBI:15476	193425	MNXM1104585								
+2-methylacetoacetyl-CoA	m	C26H42N7O18P3S	-4		based on kegg	C03344	CHEBI:15476	193425	MNXM1104585								
 ammonium	n	H4N	1		based on kegg	C01342	CHEBI:28938	223			nh4	AMMONIUM					
-NADPH	n	C21H26N7O17P3	-4		based on kegg	C00005	CHEBI:57783	15983949	MNXM6	cpd00005	nadph	NADPH					
-NADPH	v	C21H26N7O17P3	-4		based on kegg	C00005	CHEBI:57783	15983949	MNXM6	cpd00005	nadph	NADPH					
-acetaldehyde	n	C2H4O	0		based on kegg	C00084	CHEBI:15343	177	MNXM75	cpd00071	acald	ACETALD					
-5'-adenylyl sulfate	n	C10H12N5O10PS	-2		based on kegg	C00224	CHEBI:58243	49852317	MNXM287	cpd00193	aps	APS			174370		
-Sulfate	n	O4S	-2		based on kegg	C00059	CHEBI:16189	1117	MNXM58		so4	SULFATE					
-Sulfate	c	O4S	-2		based on kegg	C00059	CHEBI:16189	1117	MNXM58		so4	SULFATE					
-NADP(+)	n	C21H25N7O17P3	-3		based on kegg	C00006	CHEBI:58349	15938972	MNXM5	cpd00006	nadp	NADP					
-NADP(+)	v	C21H25N7O17P3	-3		based on kegg	C00006	CHEBI:58349	15938972	MNXM5	cpd00006	nadp	NADP					
 L-homoserine	n	C4H9NO3	0		based on kegg	C00263	CHEBI:15699	6971022	MNXM353	cpd00227	hom__L	HOMO-SER					
 L-aspartate 4-semialdehyde	n	C4H7NO3	0		based on kegg	C00441	CHEBI:18051	5287708	MNXM361	cpd00346	aspsa	L-ASPARTATE-SEMIALDEHYDE					
-"4-(2-Aminophenyl)-2,4-dioxobutanoate"	m	C10H8NO4	-1		based on kegg	C01252	CHEBI:17442	23615302	MNXM466	cpd00920		CPD-476					
-"4-(2-Aminophenyl)-2,4-dioxobutanoate"	c	C10H8NO4	-1		based on kegg	C01252	CHEBI:17442	23615302	MNXM466	cpd00920		CPD-476					
-Amylose	c	C12H22O11	0		based on kegg	C00718	CHEBI:28102		MNXM2905	cpd21754	14glucan	1-4-alpha-D-Glucan					
-Retinol	c	C20H30O	0		based on kegg	C00473	CHEBI:17336	445354	MNXM1102094								
-Retinal	c	C20H28O	0		based on kegg	C00376	CHEBI:17898	638015	MNXM425	cpd00304		RETINAL					
-S-(hydroxymethyl)glutathione	c	C11H18N3O7S	-1		based on chebi	C14180	CHEBI:58758	25244017	MNXM1051		hmgth	S-HYDROXYMETHYLGLUTATHIONE			5692221		
-Tetrahydrofolate	n	C19H21N7O6	-2		based on kegg	C00101	CHEBI:20506	135398649	MNXM79	cpd29254	thf	THF					
-Dihydrofolate	n	C19H19N7O6	-2		based on kegg	C00415	CHEBI:15633	135398603	MNXM281	cpd00330	dhf	DIHYDROFOLATE			73604		
-Nicotinamide D-ribonucleotide	c	C11H15N2O8P	0		based on kegg	C00455	CHEBI:16171	23617374	MNXM355	cpd00355	nmn	NICOTINAMIDE_NUCLEOTIDE					
-Nicotinamide-beta-riboside	c	C11H15N2O5	1		based on kegg	C03150	CHEBI:15927	439924	MNXM1115	cpd02016		NICOTINAMIDE_RIBOSE					
-Betaine aldehyde	m	C5H12NO	1		based on kegg	C00576 	CHEBI:15710	249	MNXM457	cpd00447	betald	BETAINE_ALDEHYDE			6798194		
-Betaine	m	C5H11NO2	0		based on kegg	C00719	CHEBI:17750	247	MNXM289	cpd00540	glyb	BETAINE					
+"4-(2-aminophenyl)-2,4-dioxobutanoate"	m	C10H8NO4	-1		based on kegg	C01252	CHEBI:17442	23615302	MNXM466	cpd00920		CPD-476					
+"4-(2-aminophenyl)-2,4-dioxobutanoate"	c	C10H8NO4	-1		based on kegg	C01252	CHEBI:17442	23615302	MNXM466	cpd00920		CPD-476					
+amylose	c	C12H22O11	0		based on kegg	C00718	CHEBI:28102		MNXM2905	cpd21754	14glucan	1-4-alpha-D-Glucan					
 L-kynurenine	m	C10H12N2O3	0		based on kegg	C00328	CHEBI:16946	161166	MNXM733142								
-kynurenate	m	C10H5NO3	-2		based on kegg	C01717	CHEBI:18344	25201402	MNXM1113	cpd01182		KYNURENATE					
-kynurenate	c	C10H5NO3	-2		based on kegg	C01717	CHEBI:18344	25201402	MNXM1113	cpd01182		KYNURENATE					
-phosphate	n	HO4P	-2		based on kegg	C00009	CHEBI:43474	3681305			pi	Pi					
-phenylacetaldehyde	v	C8H8O	0		based on kegg	C00601	CHEBI:16424	998	MNXM473	cpd00464	pacald	PHENYLACETALDEHYDE					
-phenylacetic acid	v	C8H7O2	-1		based on kegg	C07086	CHEBI:18401	4409936			pac	PHENYLACETATE					
-propionate	m	C3H6O2	0		based on kegg	C00163	CHEBI:30768	104745	MNXM356	cpd00141	ppa	PROPIONATE					
 dimethylallyl phosphate	m	C5H9O4P	-2		based on kegg	C21214	CHEBI:1883	18619099	MNXM101100	cpd17040		CPD-14332					
 L-2-aminoadipateadenylate	c	C16H22N6O10P	-1		based on kegg	C00956 	CHEBI:37023	6992111	MNXM268	cpd00705		CPD-468					
-Guanosine-3'-diphosphate 5'-triphosphate	c	C10H11N5O20P5	-7		based on kegg	C04494	CHEBI:16690	135696843	MNXM1561	cpd02740	gdptp	GDP-TP					
-"Guanosine-3',5'-bis(diphosphate)"	c	C10H11N5O17P4	-6		based on kegg	C01228	CHEBI:17633	135823789	MNXM1189	cpd00905	ppgpp	GUANOSINE-5DP-3DP					
-Glycogenin	c	C10H10N2O3R2	0		based on kegg	C01702		4842	MNXM93437								
-alpha-D-Glucosylglycogenin	c	C16H20N2O8R2	0		based on kegg	C02687		5656	MNXM7056								
-alpha-D-glucosyl-L-tyrosine	c	C15H19NO7	0		based on chebi		CHEBI:140573	85340251	MNXM8658								
+guanosine-3'-diphosphate 5'-triphosphate	c	C10H11N5O20P5	-7		based on kegg	C04494	CHEBI:16690	135696843	MNXM1561	cpd02740	gdptp	GDP-TP					
+"guanosine-3',5'-bis(diphosphate)"	c	C10H11N5O17P4	-6		based on kegg	C01228	CHEBI:17633	135823789	MNXM1189	cpd00905	ppgpp	GUANOSINE-5DP-3DP					
 D-phenylalanine	c	C9H11NO2	0		based on kegg	C02265	CHEBI:16998	6919011	MNXM2365	cpd01526		CPD-216					
 N-acetyl-D-phenylalanine	c	C11H13NO3	0		based on kegg	C05620	CHEBI:28203	101184	MNXM8908								
-1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide	n	C9H13N4O8P	-2		based on kegg	C04677 	CHEBI:18406	45266657	MNXM365	cpd02851	aicar	AICAR			111409		
-5-Phospho-alpha-D-ribose 1-diphosphate	n	C5H8O14P3	-5		based on kegg	C00119	CHEBI:17111	20848918	MNXM91	cpd00103	prpp	PRPP			73566		
-S-2-amino-6-oxohexanoate	c	C6H11NO3	0		based on chebi		CHEBI:58321	36688062	MNXM1108542								
-3-Hydroxypropanoate	m	C3H5O3	-1		based on kegg	C01013	CHEBI:16510	5459847	MNXM872	cpd00745		3-HYDROXY-PROPIONATE					
-3-Hydroxypropionyl-CoA	m	C24H36N7O18P3S	-4		based on kegg	C05668 	CHEBI:27762	11966171	MNXM1103908								
-O-Phospho-4-hydroxy-L-threonine	c	C4H8NO7P	-2		based on kegg	C06055 	CHEBI:18336	45480653	MNXM759		phthr	4-PHOSPHONOOXY-THREONINE					
-2-Oxo-3-hydroxy-4-phosphobutanoate	c	C4H4O8P	-3		based on kegg	C06054	CHEBI:27951	45266680	MNXM1514	cpd03606	ohpb	3OH-4P-OH-ALPHA-KETOBUTYRATE					
+1-(5'-phosphoribosyl)-5-amino-4-imidazolecarboxamide	n	C9H13N4O8P	-2		based on kegg	C04677 	CHEBI:18406	45266657	MNXM365	cpd02851	aicar	AICAR			111409		
+PRPP	n	C5H8O14P3	-5		based on kegg	C00119	CHEBI:17111	20848918	MNXM91	cpd00103	prpp	PRPP			73566		
+O-phospho-4-hydroxy-L-threonine	c	C4H8NO7P	-2		based on kegg	C06055 	CHEBI:18336	45480653	MNXM759		phthr	4-PHOSPHONOOXY-THREONINE					
+2-oxo-3-hydroxy-4-phosphobutanoate	c	C4H4O8P	-3		based on kegg	C06054	CHEBI:27951	45266680	MNXM1514	cpd03606	ohpb	3OH-4P-OH-ALPHA-KETOBUTYRATE					
 FMNH2	m	C17H21N4O9P	-2		based on kegg	C01847	CHEBI:57618	44229161	MNXM208	cpd01270	fmnh2	FMNH2					
-5-Amino-4-imidazolecarboxyamide	n	C4H6N4O	0		based on kegg	C04051	CHEBI:2030	9679	MNXM736125								
-adenine	n	C5H5N5	0		based on kegg	C00147	CHEBI:16708	190			ade	ADENINE					
-Phytic acid	c	C6H6O24P6	-12		based on kegg	C01204	CHEBI:17401	21584050	MNXM491	cpd00885	minohp	MI-HEXAKISPHOSPHATE					
-1-Diphosinositol pentakisphosphate	c	C6H6O27P7	-13		based on kegg	C11174	CHEBI:62919	13356	MNXM737968								
-3-Sulfolactate	m	C3H6O6S	0		based on kegg	C11537	CHEBI:48291	443250	MNXM530								
-3-Sulfopyruvate	m	C3H4O6S	0		based on kegg	C05528	CHEBI:16894	440717	MNXM594								
-Cycloartenol	m	C30H50O	0		based on kegg	C01902	CHEBI:17030	92110	MNXM1107765								
-24-Methylenecycloartanol	m	C31H52O	0		based on kegg	C08830	CHEBI:1307	94204	MNXM1108276								
-4alpha-Methylzymosterol-4-carboxylate	p	C29H45O3	-1		based on kegg	C15808	CHEBI:50591	47205133	MNXM732410								
-4alpha-Methylzymosterol-4-carboxylate	er	C29H45O3	-1		based on kegg	C15808	CHEBI:50591	47205133	MNXM732410								
-3-Keto-4-methylzymosterol	p	C28H44O	0		based on kegg	C15816	CHEBI:50593	23724597	MNXM730540								
-3-Keto-4-methylzymosterol	er	C28H44O	0		based on kegg	C15816	CHEBI:50593	23724597	MNXM730540								
-6-Thioinosine-5'-phosphate	c	C10H11N4O7PS	-2		based on kegg	C04646	CHEBI:2332	3034391	MNXM3196								
-6-Thioxanthine 5'-phosphate	c	C10H11N4O8PS	-2		based on kegg	C16618 	CHEBI:80612	3081384	MNXM6955								
-Cadaverine	c	C5H16N2	2		based on kegg	C01672	CHEBI:18127	3718401	MNXM943	cpd01155	15dap	CADAVERINE					
-Cadaverine	n	C5H16N2	2		based on kegg	C01672	CHEBI:18127	3718401	MNXM943	cpd01155	15dap	CADAVERINE					
-5'-Methylthioadenosine	c	C11H15N5O3S	0		based on kegg	C00170	CHEBI:180963	439176	MNXM150	cpd00147	5mta	5-METHYLTHIOADENOSINE					
-5'-Methylthioadenosine	n	C11H15N5O3S	0		based on kegg	C00170	CHEBI:180963	439176	MNXM150	cpd00147	5mta	5-METHYLTHIOADENOSINE					
+5-amino-4-imidazolecarboxyamide	n	C4H6N4O	0		based on kegg	C04051	CHEBI:2030	9679	MNXM736125								
+3-sulfolactate	m	C3H6O6S	0		based on kegg	C11537	CHEBI:48291	443250	MNXM530								
+3-sulfopyruvate	m	C3H4O6S	0		based on kegg	C05528	CHEBI:16894	440717	MNXM594								
+cadaverine	c	C5H16N2	2		based on kegg	C01672	CHEBI:18127	3718401	MNXM943	cpd01155	15dap	CADAVERINE					
+cadaverine	n	C5H16N2	2		based on kegg	C01672	CHEBI:18127	3718401	MNXM943	cpd01155	15dap	CADAVERINE					
+5'-S-methyl-5'-thioadenosine	n	C11H15N5O3S	0		based on kegg	C00170	CHEBI:180963	439176	MNXM150	cpd00147	5mta	5-METHYLTHIOADENOSINE					
 5-methyltetrahydrofolate	m	C20H23N7O6	-2		based on kegg	C00440	CHEBI:18608	135398560	MNXM318	cpd00345	5mthf	5-METHYL-THF					
 S-adenosylmethioninamine	n	C14H24N6O3S	2		based on kegg	C01137	CHEBI:57443	25203490	MNXM321	cpd00837	ametam	S-ADENOSYLMETHIONINAMINE					
-Aminopropylcadaverine	n	C8H24N3	3		based on kegg	C16565	CHEBI:64858	25246266	MNXM6170	cpd16379		CPD0-1065					
-Aminopropylcadaverine	c	C8H24N3	3		based on kegg	C16565	CHEBI:64858	25246266	MNXM6170	cpd16379		CPD0-1065					
-alpha-isopropylmalate	c	C7H10O5	-2		based on kegg	C02504	CHEBI:1178	6419727	MNXM985	cpd01646	3c3hmp	3-CARBOXY-3-HYDROXY-ISOCAPROATE					
-4-Amino-5-hydroxymethyl-2-methylpyrimidine diphosphate	c	C6H8N3O7P2	-3		based on kegg	C04752	CHEBI:16629	25245586	MNXM1135	cpd02894	2mahmp	AMINO-HYDROXYMETHYL-METHYLPYRIMIDINE-PP					
-2-(2-Carboxy-4-methylthiazol-5-yl)ethyl phosphate	c	C7H7NO6PS	-3		based on kegg	C20247		46942369	MNXM4961								
-Thiamin phosphate	c	C12H16N4O4PS	-1		based on kegg	C01081	CHEBI:9533	15942892	MNXM662	cpd00793	thmmp	THIAMINE-P					
-N-acetyl-L-glutamic 5-semialdehyde	n	C7H11NO4	0		based on kegg	C01250	CHEBI:16319	6857435	MNXM1062	cpd00918	acg5sa	CPD-469					
+aminopropylcadaverine	n	C8H24N3	3		based on kegg	C16565	CHEBI:64858	25246266	MNXM6170	cpd16379		CPD0-1065					
+aminopropylcadaverine	c	C8H24N3	3		based on kegg	C16565	CHEBI:64858	25246266	MNXM6170	cpd16379		CPD0-1065					
+2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate	c	C7H7NO6PS	-3		based on kegg	C20247		46942369	MNXM4961								
 2-hydroxyglutarate	m	C5H6O5	-2		based on kegg	C02630	CHEBI:11596	4609868	MNXM1210			2-HYDROXYGLUTARIC_ACID					
-Dehydroalanine	m	C3H5NO2	0		based on kegg	C02218 	CHEBI:17123	123991	MNXM3414	cpd01495		2-AMINOACRYLATE					
-D-Ribofuranose	c	C5H10O5	0		based on chebi		ChEBI:47013	5779	MNXM1108051			D-Ribofuranose					
-D-Ribofuranose	n	C5H10O5	0		based on chebi		ChEBI:47013	5779	MNXM1108051			D-Ribofuranose					
+dehydroalanine	m	C3H5NO2	0		based on kegg	C02218 	CHEBI:17123	123991	MNXM3414	cpd01495		2-AMINOACRYLATE					
+D-ribofuranose	c	C5H10O5	0		based on chebi		ChEBI:47013	5779	MNXM1108051			D-Ribofuranose					
+D-ribofuranose	n	C5H10O5	0		based on chebi		ChEBI:47013	5779	MNXM1108051			D-Ribofuranose					
 farnesyl diphosphate	v	C15H25O7P2	-3		based on kegg	C00448	ChEBI:175763	445713	MNXM1103344								
 farnesol	c	C15H26O	0		based on kegg	C01126		445070	MNXM727075								
 farnesol	v	C15H26O	0		based on kegg	C01126		445070	MNXM727075								
 D-ribulose	c	C5H10O5	0		based on kegg	C00309	ChEBI:17173	151261	MNXM41271	cpd00258		D-RIBULOSE					
-NADHX	c	C21H29N7O15P2	-2		based on kegg	C04856	ChEBI:64074	25203523	MNXM1964	"	cpd02951"		CPD-653					
 cytosine	n	C4H5N3O	0		based on metacyc	C00380	ChEBI:16040	597	MNXM761	cpd00307	csn	CYTOSINE					
 diphosphate	v	HO7P2	-3		based on metacyc	C00013	ChEBI:33019	1023			ppi	PPI					
 3-demethylubiquinol-6	m	C38H58O4	0		based on metacyc		ChEBI:64253	25246205	MNXM740444								
-1-Pyrroline-5-carboxylate	m	C5H6NO2	-1		based on kegg	C03912	CHEBI:17388	11966181	MNXM1617		1pyr5c	L-DELTA1-PYRROLINE_5-CARBOXYLATE					
-1-Pyrroline-5-carboxylate	c	C5H6NO2	-1		based on kegg	C03912	CHEBI:17388	11966181	MNXM1617		1pyr5c	L-DELTA1-PYRROLINE_5-CARBOXYLATE					
-Galactitol	c	C6H14O6	0		based on kegg	C01697	CHEBI:16813	11850	MNXM1233	cpd01171	galt	GALACTITOL					
-L-Gulonate	c	C6H11O7	-1		based on kegg	C00800	CHEBI:13115	6857680	MNXM1927	cpd00594		L-GULONATE			5661268		
-L-Gulonate	n	C6H11O7	-1		based on kegg	C00800	CHEBI:13115	6857680	MNXM1927	cpd00594		L-GULONATE			5661268		
-D-Glucuronate	c	C6H9O7	-1		based on kegg	C00191 	CHEBI:15748	16740916			glcur	GLUCURONATE					
-D-Glucuronate	n	C6H9O7	-1		based on kegg	C00191 	CHEBI:15748	16740916			glcur	GLUCURONATE					
-Oxalosuccinate	m	C6H3O7	-3		based on kegg	C05379	CHEBI:7815	25244267	MNXM1289	cpd03187		OXALO-SUCCINATE					
-2-Oxoadipate	m	C6H6O5	-2		based on kegg	C00322	CHEBI:15753										
-Guacnine	c	C5H5N5O	0		based on kegg	C00242	CHEBI:16235	135398634	MNXM259	cpd00207	gua	GUANINE			83956		
-2-Deoxy-D-ribose 1-phosphate	c	C5H9O7P	-2		based on kegg	C00672	CHEBI:11563	23419734	MNXM789		2dr1p	DEOXY-D-RIBOSE-1-PHOSPHATE			112032		
-Serotonin	c	C10H13N2O	1		based on kegg	C00780	CHEBI:28790	4048638	MNXM357	cpd00579		SEROTONIN					
-5-Methoxytryptamine	c	C11H15N2O	1		based on kegg	C05659	CHEBI:2089	1833	MNXM6360								
-succinate	n	C4H4O4	-2		based on kegg	C00042	CHEBI:30031	160419	MNXM25								
-ITP	n	C10H11N4O14P3	-4		based on kegg	C00081	CHEBI:61402	160419	MNXM25	cpd00036	succ	SUC					
-succinyl-CoA	n	C25H35N7O19P3S	-5		based on kegg	C00091	CHEBI:57292	45266545	MNXM92	cpd00078	succoa	SUC-COA			70958		
-succinyl-CoA	c	C25H35N7O19P3S	-5		based on kegg	C00091	CHEBI:57292	45266545	MNXM92	cpd00078	succoa	SUC-COA			70958		
-trans-hexadec-2-enoyl-CoA	p	C37H60N7O17P3S	-4		based on kegg	C05272		46173176	MNXM581	cpd03126	hdd2coa	CPD0-2117					
-Glutaryl-CoA	m	C26H37N7O19P3S	-5		based on kegg	C00527	CHEBI:57378	45266604	MNXM1104451								
-dTTP	g	C10H13N2O14P3	-4		based on kegg	C00459	CHEBI:58370	11988283	MNXM394	cpd00357	"	dttp"	TTP					
-dTDP	g	C10H13N2O11P2	-3		based on kegg	C00363	CHEBI:58369	21124327	MNXM152	cpd00297	dtdp	TDP					
-Tetrahydrofolate	c	C19H21N7O6	-2		based on kegg	C00101	CHEBI:57453	135398649	MNXM79	cpd29254	thf	THF					
+oxalosuccinate	m	C6H3O7	-3		based on kegg	C05379	CHEBI:7815	25244267	MNXM1289	cpd03187		OXALO-SUCCINATE					
+2-deoxy-D-ribose 1-phosphate	c	C5H9O7P	-2		based on kegg	C00672	CHEBI:11563	23419734	MNXM789		2dr1p	DEOXY-D-RIBOSE-1-PHOSPHATE			112032		
+glutaryl-CoA	m	C26H37N7O19P3S	-5		based on kegg	C00527	CHEBI:57378	45266604	MNXM1104451								
 UTP	n	C9H11N2O15P3	-4		based on kegg	C00075	CHEBI:46398	7058168	MNXM121	cpd00062	utp	UTP			29494		
-Nicotinate D-ribonucleotide	c	C11H12NO9P	-2		based on kegg	C01185	CHEBI:15763	46878382	MNXM194	cpd00873	nicrnt	NICOTINATE_NUCLEOTIDE					
-D-Tagatose 6-phosphate	c	C6H13O9P	0		based on kegg	C01097	CHEBI:4251	25245410	MNXM795	cpd00805	tag6p__D	TAGATOSE-6-PHOSPHATE					
-D-Tagatose 6-phosphate	m	C6H13O9P	0		based on kegg	C01097	CHEBI:4251	25245410	MNXM795	cpd00805	tag6p__D	TAGATOSE-6-PHOSPHATE					
-"D-Tagatose 1,6-bisphosphate"	c	C6H14O12P2	0		based on kegg	C03785	CHEBI:4250	15043189	MNXM1324		tagdp__D	TAGATOSE-1-6-DIPHOSPHATE					
-"D-Tagatose 1,6-bisphosphate"	m	C6H14O12P2	0		based on kegg	C03785	CHEBI:4250	15043189	MNXM1324		tagdp__D	TAGATOSE-1-6-DIPHOSPHATE					
-Nicotinate D-ribonucleoside	c	C11H13NO6	0		based on kegg	C01185	CHEBI:15763	46878382	MNXM194	cpd00873	nicrnt	NICOTINATE_NUCLEOTIDE					
-Caffeate	m	C9H8O4	0		based on kegg	C01197	CHEBI:16433	689043	MNXM726800								
-"3,4-Dihydroxystyrene"	m	C8H8O2	0		based on kegg	C06224	CHEBI:1390	151398	MNXM9958								
-Sucrose 6-phosphate	c	C12H21O14P	-2		based on kegg	C16688	CHEBI:131603	644101	MNXM725920								
-"4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	c	C10H8NO5	-1		based on kegg	C05645	CHEBI:27593	440741	MNXM4997								
-"4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	m	C10H8NO5	-1		based on kegg	C05645	CHEBI:27593	440741	MNXM4997								
-Thiamin diphosphate	m	C12H16N4O7P2S	-2		based on kegg	C00068	CHEBI:9532	15938963	MNXM256	cpd00056	thmpp	THIAMINE-PYROPHOSPHATE					
-2-(alpha-Hydroxyethyl)thiamine diphosphate	m	C14H20N4O8P2S	-2		based on kegg	C05125 	CHEBI:978	46878487	MNXM1705	cpd03049		2-ALPHA-HYDROXYETHYL-THPP					
-Deamino-NAD(+)	c	C21H24N6O15P2	-2		based on kegg	C00857	CHEBI:58437	45266646	MNXM309	cpd00638	dnad	DEAMIDO-NAD					
-CDP	m	C9H12N3O11P2	-3		based on kegg	C00112	CHEBI:58069	20056867	MNXM220	cpd00096	cdp	CDP					
+sucrose 6-phosphate	c	C12H21O14P	-2		based on kegg	C16688	CHEBI:131603	644101	MNXM725920								
+"4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	c	C10H8NO5	-1		based on kegg	C05645	CHEBI:27593	440741	MNXM4997								
+"4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	m	C10H8NO5	-1		based on kegg	C05645	CHEBI:27593	440741	MNXM4997								
 trans-oct-2-enoyl-CoA	m	C29H44N7O17P3S	-4		based on kegg	C05276 	CHEBI:27537	46173358	MNXM784	cpd03130	oc2coa	CPD0-2108					
 3-hydroxy-L-kynurenine	m	C10H12N2O4	0		based on kegg	C03227 	CHEBI:17380	11811									
-(2S)-2-acetolactate	m	C5H7O4	-1		based on kegg	C06010 	CHEBI:58476	13999770	MNXM114079	cpd19047	alac__S	2-ACETO-LACTATE					
-3-Hydroxyisobutyryl-CoA	m	C25H38N7O18P3S	-4		based on kegg	C06000	CHEBI:28259		MNXM728564								
-3-Hydroxyisobutyrate	m	C4H7O3	-1		based on kegg	C06001	CHEBI:62638	18637352	MNXM114176			CPD-12175					
-"meso-2,3-Butanediol"	c	C4H10O2	0		based on kegg	C20657		220010	MNXM9502								
-"meso-2,3-Butanediol"	n	C4H10O2	0		based on kegg	C20657		220010	MNXM9502								
-Acetoin	c	C4H8O2	0		based on kegg	C01769 	CHEBI:15687	447765	MNXM1967	cpd01221		CPD-255					
-Acetoin	n	C4H8O2	0		based on kegg	C01769 	CHEBI:15687	447765	MNXM1967	cpd01221		CPD-255					
+3-hydroxyisobutyryl-CoA	m	C25H38N7O18P3S	-4		based on kegg	C06000	CHEBI:28259		MNXM728564								
+3-hydroxyisobutyrate	m	C4H7O3	-1		based on kegg	C06001	CHEBI:62638	18637352	MNXM114176			CPD-12175					
+"meso-2,3-butanediol"	c	C4H10O2	0		based on kegg	C20657		220010	MNXM9502								
+"meso-2,3-butanediol"	n	C4H10O2	0		based on kegg	C20657		220010	MNXM9502								
+acetoin	c	C4H8O2	0		based on kegg	C01769 	CHEBI:15687	447765	MNXM1967	cpd01221		CPD-255					
+acetoin	n	C4H8O2	0		based on kegg	C01769 	CHEBI:15687	447765	MNXM1967	cpd01221		CPD-255					
 5-methylcytosine	c	C5H7N3O	0		based on kegg	C02376	ChEBI:27551	65040	MNXM3509	cpd01587		CPD0-2018					
 5-methylcytosine	n	C5H7N3O	0		based on kegg	C02376	ChEBI:27551	65041	MNXM3510	cpd01588		CPD0-2019					
 thymine	n	C5H6N2O2	0		based on kegg	C00178	CHEBI:17821	1135	MNXM386	cpd00151	thym	THYMINE			83960		
 thymine	c	C5H6N2O2	0		based on kegg	C00178	CHEBI:17821	1135	MNXM386	cpd00151	thym	THYMINE			83960		
-uroporphyrinogen-I	c	C40H36N4O16	-8		based on kegg	C05766	ChEBI:62626	25201940	MNXM1123	cpd03414		CPD-11444			190157		
-coproporphyrinogen I	c	C36H40N4O8	-4		based on metanetx			440776	MNXM1322								
 prenylated FMNH2	m	C22H29N4O9P	-2		based on kegg	C21215		102515050	MNXM165083			CPD-18260					
-D-Galactose	c	C6H12O6	0		based on kegg	C00124 	CHEBI:4139	6036	MNXM1108176			D-galactopyranose					
-3-Sulfinylpyruvate	c	C3H2O5S	-2		based on kegg	C05527	CHEBI:1665	110	MNXM2484								
-3-Sulfinylpyruvate	p	C3H2O5S	-2		based on kegg	C05527	CHEBI:1665	110	MNXM2484								
-folate	n	C19H17N7O6	-2		based on kegg	C00504 	CHEBI:62501	135761165	MNXM617	cpd00393		CPD-12826					
-IDP	n	C10H11N4O11P2	-3		based on kegg	C00104 	CHEBI:58280	135573953	MNXM495	cpd00090	idp	IDP					
+3-sulfinylpyruvate	c	C3H2O5S	-2		based on kegg	C05527	CHEBI:1665	110	MNXM2484								
+3-sulfinylpyruvate	p	C3H2O5S	-2		based on kegg	C05527	CHEBI:1665	110	MNXM2484								
+folate	m	C19H17N7O6	-2		based on kegg	C00504 	CHEBI:62501	135761165	MNXM617	cpd00393		CPD-12826					
 3-sulfino-L-alanine	p	C3H6NO4S	-1		based on kegg	C00606 	CHEBI:61085	1549097	MNXM498	cpd00467	3sala	3-SULFINOALANINE			1614519		
-2-trans-Dodecenoyl-CoA	m	C33H52N7O17P3S	-4		based on kegg	C03221	CHEBI:15471	45266564	MNXM642	cpd02060	dd2coa	CPD-7222					
-L-1-Pyrroline-3-hydroxy-5-carboxylate	m	C5H7NO3	0		based on kegg	C04281 	CHEBI:6151	11966267	MNXM848								
+2-trans-dodecenoyl-CoA	m	C33H52N7O17P3S	-4		based on kegg	C03221	CHEBI:15471	45266564	MNXM642	cpd02060	dd2coa	CPD-7222					
+L-1-pyrroline-3-hydroxy-5-carboxylate	m	C5H7NO3	0		based on kegg	C04281 	CHEBI:6151	11966267	MNXM848								
 lauroyl-CoA	m	C33H54N7O17P3S	-4		based on kegg	C01832	ChEBI:57375	25113193	MNXM363	cpd01260	ddcacoa	LAUROYLCOA-CPD					
-ethanol	n	C2H6O	0		based on kegg	C00469	ChEBI:16236	702	MNXM303	cpd00363	etoh	ETOH					
+ITP	m	C10H11N4O14P3	-4		based on kegg	C00081	CHEBI:61402	160419	MNXM25	cpd00036	succ	SUC					
+IDP	m	C10H11N4O11P2	-3		based on kegg	C00104 	CHEBI:58280	135573953	MNXM495	cpd00090	idp	IDP					
+dTTP	gm	C10H13N2O14P3	-4		based on kegg	C00459	CHEBI:58370	11988283	MNXM394	cpd00357	"	dttp"	TTP					
+dTDP	gm	C10H13N2O11P2	-3		based on kegg	C00363	CHEBI:58369	21124327	MNXM152	cpd00297	dtdp	TDP					
+deamido-NAD(+)	p	C21H24N6O15P2	-2		based on kegg	C00857	CHEBI:58437	45266646	MNXM309	cpd00638	dnad	DEAMIDO-NAD					
+nicotinic acid D-ribonucleotide	p	C11H12NO9P	-2		based on kegg	C01185	CHEBI:15763	46878382	MNXM194	cpd00873	nicrnt	NICOTINATE_NUCLEOTIDE					
+GTP	erm	C10H12N5O14P3	-4		based on kegg	C00044	CHEBI:57600	135398632	MNXM51	cpd00038	gtp	GTP					
+"P(1),P(3)-bis(5'-adenosyl) triphosphate"	c	C20H24N10O16P3	-3		based on kegg	C06197	CHEBI:27775	25201180	MNXM3683	cpd03705		ADENOSINE5TRIPHOSPHO5ADENOSINE					
+acetyl adenylate	m	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
+D-phenylalanine	n	C9H11NO2	0		based on kegg	C02265	CHEBI:16998	6919011	MNXM2365	cpd01526		CPD-216					
+N-acetyl-D-phenylalanine	n	C11H13NO3	0		based on kegg	C05620	CHEBI:28203	101184	MNXM8908								
+3-sulfolactate	c	C3H6O6S	0		based on kegg	C11537	CHEBI:48291	443250	MNXM530								
+3-sulfopyruvate	c	C3H4O6S	0		based on kegg	C05528	CHEBI:16894	440717	MNXM594								
+3-sulfolactate	p	C3H6O6S	0		based on kegg	C11537	CHEBI:48291	443250	MNXM530								
+3-sulfopyruvate	p	C3H4O6S	0		based on kegg	C05528	CHEBI:16894	440717	MNXM594								
+dATP	m	C10H12N5O12P3	-4		based on kegg	C00131	CHEBI:61404		MNXM286		datp						
+dADP	m	C10H12N5O9P2	-3		based on kegg	C00206	CHEBI:57667		MNXM374		dadp						
+oxalosuccinate	c	C6H3O7	-3		based on kegg	C05379	CHEBI:7815	25244267	MNXM1289	cpd03187		OXALO-SUCCINATE					
+oxalosuccinate	p	C6H3O7	-3		based on kegg	C05379	CHEBI:7815	25244267	MNXM1289	cpd03187		OXALO-SUCCINATE					
+pyruvate	p	C3H3O3	-1		based on kegg	C00022	CHEBI:15361		MNXM23		pyr						
+dGTP	p	C10H12N5O13P3	-4		based on kegg	C00286	CHEBI:57794		MNXM344		dgtp						
+phosphoenolpyruvate	p	C3H2O6P	-3		based on kegg	C00074	CHEBI:58702		MNXM73		pep						
+dGDP	p	C10H12N5O10P2	-3		based on kegg	C00361	CHEBI:58595		MNXM436		dgdp						
+dGTP	m	C10H12N5O13P3	-4		based on kegg	C00286	CHEBI:57794		MNXM344		dgtp						
+dGDP	m	C10H12N5O10P2	-3		based on kegg	C00361	CHEBI:58595		MNXM436		dgdp						
+3-sulfino-L-alanine	m	C3H6NO4S	-1		based on kegg	C00606 	CHEBI:61085	1549097	MNXM498	cpd00467	3sala	3-SULFINOALANINE			1614519		
+3-sulfinylpyruvate	m	C3H2O5S	-2		based on kegg	C05527	CHEBI:1665	110	MNXM2484								

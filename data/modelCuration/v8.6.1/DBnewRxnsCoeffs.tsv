@@ -1,20 +1,10 @@
 index	rxnNames	metNames	comps	coefficient
-1	glutathione:NAD+ oxidoreductase	NAD	c	-1
-1	glutathione:NAD+ oxidoreductase	glutathione	c	-2
-1	glutathione:NAD+ oxidoreductase	NADH	c	1
-1	glutathione:NAD+ oxidoreductase	H+	c	1
-1	glutathione:NAD+ oxidoreductase	glutathione disulfide	c	1
 2	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	ATP	c	-1
-2	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-Deoxy-5-hydroxymethylcytidine-5'-diphosphate	c	-1
+2	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate	c	-1
 2	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	ADP	c	1
-2	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-Deoxy-5-hydroxymethylcytidine-5'-triphosphate	c	1
-3	FAD nucleotidohydrolase	H2O	c	-1
-3	FAD nucleotidohydrolase	FAD	c	-1
-3	FAD nucleotidohydrolase	AMP	c	1
-3	FAD nucleotidohydrolase	FMN	c	1
-3	FAD nucleotidohydrolase	H+	c	2
+2	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-deoxy-5-hydroxymethylcytidine-5'-triphosphate	c	1
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	H2O	m	-1
-4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	"P1,P3-Bis(5'-adenosyl) triphosphate"	m	-1
+4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	"P(1),P(3)-bis(5'-adenosyl) triphosphate"	m	-1
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	ADP	m	1
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	AMP	m	1
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	H+	m	2
@@ -24,16 +14,10 @@ index	rxnNames	metNames	comps	coefficient
 5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	NADH	m	1
 5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	L-glutamate	m	1
 5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	H+	m	2
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	H2O	c	-1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	NADP(+)	c	-1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	"2,5-Dioxopentanoate"	c	-1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	NADPH	c	1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	2-oxoglutarate	c	1
-6	"2,5-dioxopentanoate:NADP+ 5-oxidoreductase"	H+	c	2
 7	"GTP 8,9-hydrolase"	H2O	c	-1
 7	"GTP 8,9-hydrolase"	GTP	c	-1
 7	"GTP 8,9-hydrolase"	H+	c	-1
-7	"GTP 8,9-hydrolase"	Formamidopyrimidine nucleoside triphosphate	c	1
+7	"GTP 8,9-hydrolase"	formamidopyrimidine nucleoside triphosphate	c	1
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	GTP	m	-1
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	diphosphate	m	1
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	"3',5'-cyclic GMP"	m	1
@@ -42,33 +26,23 @@ index	rxnNames	metNames	comps	coefficient
 9	ATP:cytidine 5'-phosphotransferase	ADP	c	1
 9	ATP:cytidine 5'-phosphotransferase	CMP	c	1
 9	ATP:cytidine 5'-phosphotransferase	H+	c	1
-10	(S)-ureidoglycolate urea-lyase (glyoxylate-forming)	S-Ureidoglycolate	c	-1
+10	(S)-ureidoglycolate urea-lyase (glyoxylate-forming)	S-ureidoglycolate	c	-1
 10	(S)-ureidoglycolate urea-lyase (glyoxylate-forming)	glyoxylate	c	1
 10	(S)-ureidoglycolate urea-lyase (glyoxylate-forming)	urea	c	1
 11	acetyl adenylate:CoA acetyltransferase	coenzyme A	c	-1
-11	acetyl adenylate:CoA acetyltransferase	Acetyl adenylate	c	-1
+11	acetyl adenylate:CoA acetyltransferase	acetyl adenylate	c	-1
 11	acetyl adenylate:CoA acetyltransferase	AMP	c	1
 11	acetyl adenylate:CoA acetyltransferase	acetyl-CoA	c	1
 11	acetyl adenylate:CoA acetyltransferase	H+	c	1
 12	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	acetyl-CoA	m	-1
-12	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	propanoyl-CoA	m	-1
+12	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	propionyl-CoA	m	-1
 12	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	coenzyme A	m	1
-12	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	2-Methylacetoacetyl-CoA	m	1
-13	ATP:D-ribose-5-phosphate diphosphotransferase	ATP	c	-1
-13	ATP:D-ribose-5-phosphate diphosphotransferase	D-ribose 5-phosphate	c	-1
-13	ATP:D-ribose-5-phosphate diphosphotransferase	AMP	c	1
-13	ATP:D-ribose-5-phosphate diphosphotransferase	5-Phospho-alpha-D-ribose 1-diphosphate	c	1
-13	ATP:D-ribose-5-phosphate diphosphotransferase	H+	c	1
+12	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	2-methylacetoacetyl-CoA	m	1
 14	ATP:D-glyceraldehyde 3-phosphotransferase	ATP	c	-1
 14	ATP:D-glyceraldehyde 3-phosphotransferase	D-glyceraldehyde	c	-1
 14	ATP:D-glyceraldehyde 3-phosphotransferase	ADP	c	1
 14	ATP:D-glyceraldehyde 3-phosphotransferase	glyceraldehyde 3-phosphate	c	1
 14	ATP:D-glyceraldehyde 3-phosphotransferase	H+	c	1
-15	"butanoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	FAD	p	-1
-15	"butanoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	H+	p	-1
-15	"butanoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	butanoyl-CoA	p	-1
-15	"butanoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	crotonoyl-CoA	p	1
-15	"butanoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	FADH2	p	1
 16	5-Methylcytosine aminohydrolase	H2O	n	-1
 16	5-Methylcytosine aminohydrolase	H+	n	-1
 16	5-Methylcytosine aminohydrolase	5-methylcytosine	n	-1
@@ -77,13 +51,9 @@ index	rxnNames	metNames	comps	coefficient
 17	adenosine:phosphate alpha-D-ribosyltransferase	phosphate	c	-1
 17	adenosine:phosphate alpha-D-ribosyltransferase	adenosine	c	-1
 17	adenosine:phosphate alpha-D-ribosyltransferase	adenine	c	1
-17	adenosine:phosphate alpha-D-ribosyltransferase	alpha-D-Ribose-1-phosphate	c	1
+17	adenosine:phosphate alpha-D-ribosyltransferase	alpha-D-ribose 1-phosphate(2-)	c	1
 18	D-glucose 1-epimerase	alpha-D-Glucose	c	-1
 18	D-glucose 1-epimerase	beta-D-Glucose	c	1
-19	APS:ATP adenylyltransferase	ATP	c	-1
-19	APS:ATP adenylyltransferase	5'-adenylyl sulfate	c	-1
-19	APS:ATP adenylyltransferase	Sulfate	c	1
-19	APS:ATP adenylyltransferase	"P1,P4-Bis(5'-adenosyl)tetraphosphate"	c	1
 20	Glycerol:NAD+ oxidoreductase	NAD	c	-1
 20	Glycerol:NAD+ oxidoreductase	glycerol	c	-1
 20	Glycerol:NAD+ oxidoreductase	NADH	c	1
@@ -94,153 +64,67 @@ index	rxnNames	metNames	comps	coefficient
 21	L-Homoserine:NAD+ oxidoreductase	NADH	n	1
 21	L-Homoserine:NAD+ oxidoreductase	H+	n	1
 21	L-Homoserine:NAD+ oxidoreductase	L-aspartate 4-semialdehyde	n	1
-22	L-Homoserine:NAD+ oxidoreductase	NADP(+)	n	-1
-22	L-Homoserine:NAD+ oxidoreductase	L-homoserine	n	-1
-22	L-Homoserine:NAD+ oxidoreductase	NADPH	n	1
-22	L-Homoserine:NAD+ oxidoreductase	H+	n	1
-22	L-Homoserine:NAD+ oxidoreductase	L-aspartate 4-semialdehyde	n	1
 23	L-Kynurenine:2-oxoglutarate aminotransferase	2-oxoglutarate	m	-1
 23	L-Kynurenine:2-oxoglutarate aminotransferase	L-kynurenine	m	-1
 23	L-Kynurenine:2-oxoglutarate aminotransferase	L-glutamate	m	1
-23	L-Kynurenine:2-oxoglutarate aminotransferase	"4-(2-Aminophenyl)-2,4-dioxobutanoate"	m	1
-24	L-Kynurenine:2-oxoglutarate aminotransferase	2-oxoglutarate	m	-1
-24	L-Kynurenine:2-oxoglutarate aminotransferase	L-kynurenine	m	-1
-24	L-Kynurenine:2-oxoglutarate aminotransferase	H2O	m	1
-24	L-Kynurenine:2-oxoglutarate aminotransferase	kynurenate	m	1
-24	L-Kynurenine:2-oxoglutarate aminotransferase	L-glutamate	m	1
-24	L-Kynurenine:2-oxoglutarate aminotransferase	H+	m	1
-25	"1,4-alpha-D-Glucan:1,4-alpha-D-glucan 6-alpha-D-(1,4-alpha-D-glucano)-transferase"	Amylose	c	-1
+23	L-Kynurenine:2-oxoglutarate aminotransferase	"4-(2-aminophenyl)-2,4-dioxobutanoate"	m	1
+25	"1,4-alpha-D-Glucan:1,4-alpha-D-glucan 6-alpha-D-(1,4-alpha-D-glucano)-transferase"	amylose	c	-1
 25	"1,4-alpha-D-Glucan:1,4-alpha-D-glucan 6-alpha-D-(1,4-alpha-D-glucano)-transferase"	Starch	c	1
-26	retinol:NAD+ oxidoreductase	NAD	c	-1
-26	retinol:NAD+ oxidoreductase	Retinol	c	-1
-26	retinol:NAD+ oxidoreductase	NADH	c	1
-26	retinol:NAD+ oxidoreductase	H+	c	1
-26	retinol:NAD+ oxidoreductase	Retinal	c	1
-27	retinol:NAD+ oxidoreductase	NADP(+)	c	-1
-27	retinol:NAD+ oxidoreductase	S-(hydroxymethyl)glutathione	c	-1
-27	retinol:NAD+ oxidoreductase	H+	c	1
-27	retinol:NAD+ oxidoreductase	NADPH	c	1
-27	retinol:NAD+ oxidoreductase	S-formylglutathione	c	1
-28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	NAD	n	-1
-28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	Tetrahydrofolate	n	-1
-28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	NADH	n	1
-28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	H+	n	1
-28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	Dihydrofolate	n	1
-29	nicotinamide ribonucleotide phosphohydrolase	H2O	c	-1
-29	nicotinamide ribonucleotide phosphohydrolase	Nicotinamide D-ribonucleotide	c	-1
-29	nicotinamide ribonucleotide phosphohydrolase	phosphate	c	1
-29	nicotinamide ribonucleotide phosphohydrolase	Nicotinamide-beta-riboside	c	1
-29	nicotinamide ribonucleotide phosphohydrolase	H+	c	1
-30	Aldehyde:NADP+ oxidoreductase	H2O	v	-1
-30	Aldehyde:NADP+ oxidoreductase	NADP(+)	v	-1
-30	Aldehyde:NADP+ oxidoreductase	phenylacetaldehyde	v	-1
-30	Aldehyde:NADP+ oxidoreductase	NADPH	v	1
-30	Aldehyde:NADP+ oxidoreductase	H+	v	2
-30	Aldehyde:NADP+ oxidoreductase	phenylacetic acid	v	1
-31	p-cumic alcohol:NAD+ oxidoreductase	H2O	m	-1
-31	p-cumic alcohol:NAD+ oxidoreductase	NAD	m	-1
-31	p-cumic alcohol:NAD+ oxidoreductase	Betaine aldehyde	m	-1
-31	p-cumic alcohol:NAD+ oxidoreductase	NADH	m	1
-31	p-cumic alcohol:NAD+ oxidoreductase	H+	m	2
-31	p-cumic alcohol:NAD+ oxidoreductase	Betaine	m	1
-32	p-cumic alcohol:NAD+ oxidoreductase	H2O	m	-1
-32	p-cumic alcohol:NAD+ oxidoreductase	NADP(+)	m	-1
-32	p-cumic alcohol:NAD+ oxidoreductase	propanal	m	-1
-32	p-cumic alcohol:NAD+ oxidoreductase	H+	m	1
-32	p-cumic alcohol:NAD+ oxidoreductase	NADPH	m	1
-32	p-cumic alcohol:NAD+ oxidoreductase	propionate	m	1
+28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	NAD	c	-1
+28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	THF	c	-1
+28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	NADH	c	1
+28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	H+	c	1
+28	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	dihydrofolic acid	c	1
 36	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	ATP	c	-1
 36	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	H+	c	-1
 36	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	L-2-aminoadipate	c	-1
 36	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	diphosphate	c	1
 36	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	L-2-aminoadipateadenylate	c	1
 37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	H2O	c	-1
-37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	Guanosine-3'-diphosphate 5'-triphosphate	c	-1
+37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	guanosine-3'-diphosphate 5'-triphosphate	c	-1
 37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	phosphate	c	1
-37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	"Guanosine-3',5'-bis(diphosphate)"	c	1
+37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	"guanosine-3',5'-bis(diphosphate)"	c	1
 37	guanosine 3'-diphosphate 5'-triphosphate 5'-phosphohydrolase	H+	c	1
-38	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	UDP-D-glucose	c	-1
-38	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	Glycogenin	c	-1
-38	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	UDP	c	1
-38	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	alpha-D-Glucosylglycogenin	c	1
-38	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	H+	c	1
-39	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	L-tyrosine	c	-1
-39	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	UDP-D-glucose	c	-1
-39	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	alpha-D-glucosyl-L-tyrosine	c	1
-39	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	H+	c	1
-39	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	UDP	c	1
-39	UDP-alpha-D-glucose:glycogenin alpha-D-glucosyltransferase	H2O	c	1
 40	acetyl-CoA:D-amino-acid N-acetyltransferase	acetyl-CoA	c	-1
 40	acetyl-CoA:D-amino-acid N-acetyltransferase	D-phenylalanine	c	-1
 40	acetyl-CoA:D-amino-acid N-acetyltransferase	coenzyme A	c	1
 40	acetyl-CoA:D-amino-acid N-acetyltransferase	N-acetyl-D-phenylalanine	c	1
 42	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	AMP	c	-1
 42	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	diphosphate	c	-1
-42	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	5-Phospho-alpha-D-ribose 1-diphosphate	c	1
+42	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	PRPP	c	1
 42	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	adenine	c	1
-43	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	S-2-amino-6-oxohexanoate	c	-1
-43	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	H2O	c	-1
-43	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	NADP(+)	c	-1
-43	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	H+	c	2
-43	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	L-2-aminoadipate	c	1
-43	L-2-aminoadipate-6-semialdehyde:NADP+ 6-oxidoreductase;	NADPH	c	1
-46	R03158	coenzyme A	m	-1
-46	R03158	H+	m	-1
-46	R03158	3-Hydroxypropanoate	m	-1
-46	R03158	H2O	m	1
-46	R03158	3-Hydroxypropionyl-CoA	m	1
 47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	2-oxoglutarate	c	-1
-47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	O-Phospho-4-hydroxy-L-threonine	c	-1
+47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	O-phospho-4-hydroxy-L-threonine	c	-1
 47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	L-glutamate	c	1
-47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	2-Oxo-3-hydroxy-4-phosphobutanoate	c	1
-48	ATP:1D-myo-inositol-hexakisphosphate phosphotransferase	ATP	c	-1
-48	ATP:1D-myo-inositol-hexakisphosphate phosphotransferase	Phytic acid	c	-1
-48	ATP:1D-myo-inositol-hexakisphosphate phosphotransferase	ADP	c	1
-48	ATP:1D-myo-inositol-hexakisphosphate phosphotransferase	1-Diphosinositol pentakisphosphate	c	1
+47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	2-oxo-3-hydroxy-4-phosphobutanoate	c	1
 49	(2R)-3-sulfolactate:NAD+ oxidoreductase	NAD	m	-1
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-Sulfolactate	m	-1
+49	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfolactate	m	-1
 49	(2R)-3-sulfolactate:NAD+ oxidoreductase	NADH	m	1
 49	(2R)-3-sulfolactate:NAD+ oxidoreductase	H+	m	1
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-Sulfopyruvate	m	1
+49	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfopyruvate	m	1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	NAD	c	-1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	5-methyltetrahydrofolate	c	-1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	NADH	c	1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	H+	c	1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	"5,10-methylenetetrahydrofolate"	c	1
-52	R07481	S-adenosyl-L-methionine	m	-1
-52	R07481	Cycloartenol	m	-1
-52	R07481	S-adenosyl-L-homocysteine	m	1
-52	R07481	24-Methylenecycloartanol	m	1
-52	R07481	H+	m	1
-53	R07494	NADP(+)	er	-1
-53	R07494	4alpha-Methylzymosterol-4-carboxylate	er	-1
-53	R07494	NADPH	er	1
-53	R07494	carbon dioxide	er	1
-53	R07494	3-Keto-4-methylzymosterol	er	1
-55	6-thioinosine 5'-monophosphate:NAD+ oxidoreductase	H2O	c	-1
-55	6-thioinosine 5'-monophosphate:NAD+ oxidoreductase	NAD	c	-1
-55	6-thioinosine 5'-monophosphate:NAD+ oxidoreductase	6-Thioinosine-5'-phosphate	c	-1
-55	6-thioinosine 5'-monophosphate:NAD+ oxidoreductase	NADH	c	1
-55	6-thioinosine 5'-monophosphate:NAD+ oxidoreductase	H+	c	1
-55	6-thioinosine 5'-monophosphate:NAD+ oxidoreductase	6-Thioxanthine 5'-phosphate	c	1
 56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	S-adenosylmethioninamine	c	-1
-56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	Cadaverine	c	-1
-56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	5'-Methylthioadenosine	c	1
-56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	Aminopropylcadaverine	c	1
+56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	cadaverine	c	-1
+56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	5'-S-methyl-5'-thioadenosine	c	1
+56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	aminopropylcadaverine	c	1
 56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	H+	c	1
 60	"(2R,3S)-3-isopropylmalate:NAD+ oxidoreductase"	NAD	c	-1
 60	"(2R,3S)-3-isopropylmalate:NAD+ oxidoreductase"	"(2R,3S)-3-isopropylmalate"	c	-1
 60	"(2R,3S)-3-isopropylmalate:NAD+ oxidoreductase"	NADH	c	1
 60	"(2R,3S)-3-isopropylmalate:NAD+ oxidoreductase"	carbon dioxide	c	1
 60	"(2R,3S)-3-isopropylmalate:NAD+ oxidoreductase"	4-methyl-2-oxopentanoate	c	1
-61	"(2R,3S)-3-isopropylmalate hydro-lyase (2-isopropylmaleate-forming)"	alpha-isopropylmalate	c	-1
+61	"(2R,3S)-3-isopropylmalate hydro-lyase (2-isopropylmaleate-forming)"	2-isopropylmalate	c	-1
 61	"(2R,3S)-3-isopropylmalate hydro-lyase (2-isopropylmaleate-forming)"	"(2R,3S)-3-isopropylmalate"	c	1
-63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	4-Amino-5-hydroxymethyl-2-methylpyrimidine diphosphate	c	-1
+63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	4-amino-2-methyl-5-diphosphomethylpyrimidine	c	-1
 63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	H+	c	-2
-63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	2-(2-Carboxy-4-methylthiazol-5-yl)ethyl phosphate	c	-1
+63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate	c	-1
 63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	carbon dioxide	c	1
 63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	diphosphate	c	1
-63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	Thiamin phosphate	c	1
+63	2-methyl-4-amino-5-hydroxymethylpyrimidine-diphosphate:2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate 2-methyl-4-aminopyrimidine-5-methenyltransferase	TMP	c	1
 65	dimethylallyl-phosphate:FMNH2 prenyltransferase	FMNH2	m	-1
 65	dimethylallyl-phosphate:FMNH2 prenyltransferase	dimethylallyl phosphate	m	-1
 65	dimethylallyl-phosphate:FMNH2 prenyltransferase	phosphate	m	1
@@ -249,42 +133,17 @@ index	rxnNames	metNames	comps	coefficient
 66	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	2-hydroxyglutarate	m	-1
 66	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	2-oxoglutarate	m	1
 66	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	(R)-lactate	m	1
-67	acetyl-CoA:L-glutamate-5-semialdehyde N-acetyltransferase	acetyl-CoA	n	-1
-67	acetyl-CoA:L-glutamate-5-semialdehyde N-acetyltransferase	L-glutamic 5-semialdehyde	n	-1
-67	acetyl-CoA:L-glutamate-5-semialdehyde N-acetyltransferase	coenzyme A	n	1
-67	acetyl-CoA:L-glutamate-5-semialdehyde N-acetyltransferase	N-acetyl-L-glutamic 5-semialdehyde	n	1
 68	L-serine hydro-lyase	L-serine	m	-1
 68	L-serine hydro-lyase	H2O	m	1
-68	L-serine hydro-lyase	Dehydroalanine	m	1
+68	L-serine hydro-lyase	dehydroalanine	m	1
 70	cytidine nucleosidase	cytidine	c	-1
 70	cytidine nucleosidase	H2O	c	-1
 70	cytidine nucleosidase	cytosine	c	1
-70	cytidine nucleosidase	D-Ribofuranose	c	1
-71	L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase	ammonium	c	-1
-71	L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase	ATP	c	-1
-71	L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase	L-aspartate	c	-1
-71	L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase	AMP	c	1
-71	L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase	L-asparagine	c	1
-71	L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase	diphosphate	c	1
-71	L-aspartate:ammonia ligase (AMP-forming);asparagine synthetase	H+	c	1
+70	cytidine nucleosidase	D-ribofuranose	c	1
 72	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	farnesyl diphosphate	v	-1
 72	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	H2O	v	-1
 72	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	farnesol	v	1
 72	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	diphosphate	v	1
-73	saccharopine dehydrogenase	NAD	c	-1
-73	saccharopine dehydrogenase	L-saccharopine	c	-1
-73	saccharopine dehydrogenase	H2O	c	-1
-73	saccharopine dehydrogenase	S-2-amino-6-oxohexanoate	c	1
-73	saccharopine dehydrogenase	L-glutamate	c	1
-73	saccharopine dehydrogenase	NADH	c	1
-73	saccharopine dehydrogenase	H+	c	1
-74	lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase	2-oxoglutarate	c	-1
-74	lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase	L-lysine	c	-1
-74	lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase	NADPH	c	-1
-74	lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase	H+	c	-1
-74	lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase	NADP(+)	c	1
-74	lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase	L-saccharopine	c	1
-74	lysine-ketoglutarate reductase;L-lysine-alpha-ketoglutarate reductase	H2O	c	1
 75	"2-hexaprenyl-3-methyl-5-hydroxy-6-methoxy-1,4-benzoquinol O-methyltransferase"	3-demethylubiquinol-6	m	-1
 75	"2-hexaprenyl-3-methyl-5-hydroxy-6-methoxy-1,4-benzoquinol O-methyltransferase"	S-adenosyl-L-methionine	m	-1
 75	"2-hexaprenyl-3-methyl-5-hydroxy-6-methoxy-1,4-benzoquinol O-methyltransferase"	S-adenosyl-L-homocysteine	m	1
@@ -295,23 +154,11 @@ index	rxnNames	metNames	comps	coefficient
 77	D-ribulokinase	ADP	c	1
 77	D-ribulokinase	H+	c	1
 77	D-ribulokinase	D-ribulose 5-phosphate	c	1
-78	ATP-dependent NADH-hydrate dehydratase	ATP	c	-1
-78	ATP-dependent NADH-hydrate dehydratase	NADHX	c	-1
-78	ATP-dependent NADH-hydrate dehydratase	ADP	c	1
-78	ATP-dependent NADH-hydrate dehydratase	NADH	c	1
-78	ATP-dependent NADH-hydrate dehydratase	H+	c	1
-78	ATP-dependent NADH-hydrate dehydratase	phosphate	c	1
-80	2-ketoglutarate dehydrogenase;dihydrolipoamide dehydrogenase;2-oxoglutarate dehydrogenase	2-oxoglutarate	m	-1
-80	2-ketoglutarate dehydrogenase;dihydrolipoamide dehydrogenase;2-oxoglutarate dehydrogenase	coenzyme A	m	-1
-80	2-ketoglutarate dehydrogenase;dihydrolipoamide dehydrogenase;2-oxoglutarate dehydrogenase	NAD	m	-1
-80	2-ketoglutarate dehydrogenase;dihydrolipoamide dehydrogenase;2-oxoglutarate dehydrogenase	carbon dioxide	m	1
-80	2-ketoglutarate dehydrogenase;dihydrolipoamide dehydrogenase;2-oxoglutarate dehydrogenase	NADH	m	1
-80	2-ketoglutarate dehydrogenase;dihydrolipoamide dehydrogenase;2-oxoglutarate dehydrogenase	succinyl-CoA	m	1
 86	ATP:acetate adenylyltransferase	ATP	c	-1
 86	ATP:acetate adenylyltransferase	H+	c	-1
 86	ATP:acetate adenylyltransferase	acetate	c	-1
 86	ATP:acetate adenylyltransferase	diphosphate	c	1
-86	ATP:acetate adenylyltransferase	Acetyl adenylate	c	1
+86	ATP:acetate adenylyltransferase	acetyl adenylate	c	1
 87	UTP:cytidine 5'-phosphotransferase	UTP	c	-1
 87	UTP:cytidine 5'-phosphotransferase	cytidine	c	-1
 87	UTP:cytidine 5'-phosphotransferase	UDP	c	1
@@ -319,21 +166,16 @@ index	rxnNames	metNames	comps	coefficient
 87	UTP:cytidine 5'-phosphotransferase	H+	c	1
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	H2O	m	-2
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	NADP(+)	m	-1
-88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	1-Pyrroline-5-carboxylate	m	-1
+88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	1-pyrroline-5-carboxylate	m	-1
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	NADPH	m	1
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	L-glutamate	m	1
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	H+	m	1
-89	Succinate:CoA ligase (IDP-forming)	coenzyme A	c	-1
-89	Succinate:CoA ligase (IDP-forming)	succinate	c	-1
-89	Succinate:CoA ligase (IDP-forming)	ITP	c	-1
-89	Succinate:CoA ligase (IDP-forming)	phosphate	c	1
-89	Succinate:CoA ligase (IDP-forming)	succinyl-CoA	c	1
-89	Succinate:CoA ligase (IDP-forming)	IDP	c	1
-90	galactitol:NAD+ 1-oxidoreductase	NADH	c	-1
-90	galactitol:NAD+ 1-oxidoreductase	H+	c	-1
-90	galactitol:NAD+ 1-oxidoreductase	D-galactose	c	-1
-90	galactitol:NAD+ 1-oxidoreductase	NAD	c	1
-90	galactitol:NAD+ 1-oxidoreductase	Galactitol	c	1
+89	Succinate:CoA ligase (IDP-forming)	coenzyme A	m	-1
+89	Succinate:CoA ligase (IDP-forming)	succinate	m	-1
+89	Succinate:CoA ligase (IDP-forming)	ITP	m	-1
+89	Succinate:CoA ligase (IDP-forming)	phosphate	m	1
+89	Succinate:CoA ligase (IDP-forming)	succinyl-CoA	m	1
+89	Succinate:CoA ligase (IDP-forming)	IDP	m	1
 91	dATP:pyruvate 2-O-phosphotransferase	pyruvate	c	-1
 91	dATP:pyruvate 2-O-phosphotransferase	dATP	c	-1
 91	dATP:pyruvate 2-O-phosphotransferase	phosphoenolpyruvate	c	1
@@ -343,104 +185,69 @@ index	rxnNames	metNames	comps	coefficient
 92	"palmitoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	H+	p	-1
 92	"palmitoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	palmitoyl-CoA	p	-1
 92	"palmitoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	FADH2	p	1
-92	"palmitoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	trans-hexadec-2-enoyl-CoA	p	1
-93	L-gulonate:NADP+ 6-oxidoreductase	NADP(+)	c	-1
-93	L-gulonate:NADP+ 6-oxidoreductase	L-Gulonate	c	-1
-93	L-gulonate:NADP+ 6-oxidoreductase	NADPH	c	1
-93	L-gulonate:NADP+ 6-oxidoreductase	H+	c	1
-93	L-gulonate:NADP+ 6-oxidoreductase	D-Glucuronate	c	1
+92	"palmitoyl-CoA:electron-transfer flavoprotein 2,3-oxidoreductase"	hexadec-2-enoyl-CoA	p	1
 94	Isocitrate:NADP+ oxidoreductase	NADP(+)	m	-1
 94	Isocitrate:NADP+ oxidoreductase	isocitrate	m	-1
 94	Isocitrate:NADP+ oxidoreductase	NADPH	m	1
 94	Isocitrate:NADP+ oxidoreductase	H+	m	1
-94	Isocitrate:NADP+ oxidoreductase	Oxalosuccinate	m	1
+94	Isocitrate:NADP+ oxidoreductase	oxalosuccinate	m	1
 95	2-oxoadipate dehydrogenase complex	NAD	m	-1
 95	2-oxoadipate dehydrogenase complex	coenzyme A	m	-1
-95	2-oxoadipate dehydrogenase complex	2-Oxoadipate	m	-1
+95	2-oxoadipate dehydrogenase complex	2-oxoadipic acid	m	-1
 95	2-oxoadipate dehydrogenase complex	NADH	m	1
 95	2-oxoadipate dehydrogenase complex	carbon dioxide	m	1
-95	2-oxoadipate dehydrogenase complex	Glutaryl-CoA	m	1
+95	2-oxoadipate dehydrogenase complex	glutaryl-CoA	m	1
 96	Deoxyguanosine:orthophosphate ribosyltransferase	phosphate	c	-1
 96	Deoxyguanosine:orthophosphate ribosyltransferase	2'-deoxyguanosine	c	-1
-96	Deoxyguanosine:orthophosphate ribosyltransferase	Guacnine	c	1
-96	Deoxyguanosine:orthophosphate ribosyltransferase	2-Deoxy-D-ribose 1-phosphate	c	1
-97	dTTP nucleotidohydrolase	H2O	g	-1
-97	dTTP nucleotidohydrolase	dTTP	g	-1
-97	dTTP nucleotidohydrolase	phosphate	g	1
-97	dTTP nucleotidohydrolase	dTDP	g	1
-97	dTTP nucleotidohydrolase	H+	g	1
+96	Deoxyguanosine:orthophosphate ribosyltransferase	guanine	c	1
+96	Deoxyguanosine:orthophosphate ribosyltransferase	2-deoxy-D-ribose 1-phosphate	c	1
+97	dTTP nucleotidohydrolase	H2O	gm	-1
+97	dTTP nucleotidohydrolase	dTTP	gm	-1
+97	dTTP nucleotidohydrolase	phosphate	gm	1
+97	dTTP nucleotidohydrolase	dTDP	gm	1
+97	dTTP nucleotidohydrolase	H+	gm	1
 98	3-sulfino-L-alanine carboxy-lyase	3-sulfino-L-alanine	c	-1
 98	3-sulfino-L-alanine carboxy-lyase	H+	c	-1
 98	3-sulfino-L-alanine carboxy-lyase	carbon dioxide	c	1
 98	3-sulfino-L-alanine carboxy-lyase	hypotaurine	c	1
-99	p-Cumic alcohol:NADP+ oxidoreductase	H2O	m	-1
-99	p-Cumic alcohol:NADP+ oxidoreductase	NADP(+)	m	-1
-99	p-Cumic alcohol:NADP+ oxidoreductase	Betaine aldehyde	m	-1
-99	p-Cumic alcohol:NADP+ oxidoreductase	NADPH	m	1
-99	p-Cumic alcohol:NADP+ oxidoreductase	H+	m	2
-99	p-Cumic alcohol:NADP+ oxidoreductase	Betaine	m	1
-101	serotonin O-methyltransferase	5-methyltetrahydrofolate	c	-1
-101	serotonin O-methyltransferase	Serotonin	c	-1
-101	serotonin O-methyltransferase	Tetrahydrofolate	c	1
-101	serotonin O-methyltransferase	5-Methoxytryptamine	c	1
-102	Deamino-NAD+ nucleotidohydrolase	H2O	c	-1
-102	Deamino-NAD+ nucleotidohydrolase	Deamino-NAD(+)	c	-1
-102	Deamino-NAD+ nucleotidohydrolase	AMP	c	1
-102	Deamino-NAD+ nucleotidohydrolase	H+	c	2
-102	Deamino-NAD+ nucleotidohydrolase	Nicotinate D-ribonucleotide	c	1
-103	CTP:D-tagatose 6-phosphate 1-phosphotransferase	CTP	c	-1
-103	CTP:D-tagatose 6-phosphate 1-phosphotransferase	H+	c	-1
-103	CTP:D-tagatose 6-phosphate 1-phosphotransferase	D-Tagatose 6-phosphate	c	-1
-103	CTP:D-tagatose 6-phosphate 1-phosphotransferase	CDP	c	1
-103	CTP:D-tagatose 6-phosphate 1-phosphotransferase	"D-Tagatose 1,6-bisphosphate"	c	1
+102	Deamino-NAD+ nucleotidohydrolase	H2O	p	-1
+102	Deamino-NAD+ nucleotidohydrolase	deamido-NAD(+)	p	-1
+102	Deamino-NAD+ nucleotidohydrolase	AMP	p	1
+102	Deamino-NAD+ nucleotidohydrolase	H+	p	2
+102	Deamino-NAD+ nucleotidohydrolase	nicotinic acid D-ribonucleotide	p	1
 104	trans-4-Hydroxy-L-proline:NAD+ 5-oxidoreductase	NAD	c	-1
 104	trans-4-Hydroxy-L-proline:NAD+ 5-oxidoreductase	trans-4-hydroxy-L-proline	c	-1
 104	trans-4-Hydroxy-L-proline:NAD+ 5-oxidoreductase	NADH	c	1
 104	trans-4-Hydroxy-L-proline:NAD+ 5-oxidoreductase	H+	c	2
 104	trans-4-Hydroxy-L-proline:NAD+ 5-oxidoreductase	1-pyrroline-3-hydroxy-5-carboxylic acid	c	1
-105	nicotinate D-ribonucleotide phosphohydrolase	H2O	c	-1
-105	nicotinate D-ribonucleotide phosphohydrolase	Nicotinate D-ribonucleotide	c	-1
-105	nicotinate D-ribonucleotide phosphohydrolase	phosphate	c	1
-105	nicotinate D-ribonucleotide phosphohydrolase	Nicotinate D-ribonucleoside	c	1
-106	R03367	Caffeate	m	-1
-106	R03367	carbon dioxide	m	1
-106	R03367	"3,4-Dihydroxystyrene"	m	1
 107	trans-Oct-2-enoyl-CoA reductase	NADP(+)	m	-1
 107	trans-Oct-2-enoyl-CoA reductase	octanoyl-CoA	m	-1
 107	trans-Oct-2-enoyl-CoA reductase	NADPH	m	1
 107	trans-Oct-2-enoyl-CoA reductase	H+	m	1
 107	trans-Oct-2-enoyl-CoA reductase	trans-oct-2-enoyl-CoA	m	1
 108	Sucrose 6-phosphate fructohydrolase	H2O	c	-1
-108	Sucrose 6-phosphate fructohydrolase	Sucrose 6-phosphate	c	-1
+108	Sucrose 6-phosphate fructohydrolase	sucrose 6-phosphate	c	-1
 108	Sucrose 6-phosphate fructohydrolase	D-glucose 6-phosphate	c	1
 108	Sucrose 6-phosphate fructohydrolase	D-fructose	c	1
 109	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	2-oxoglutarate	c	-1
 109	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	3-hydroxy-L-kynurenine	c	-1
 109	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	L-glutamate	c	1
-109	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	"4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	c	1
-110	(S)-2-Acetolactate pyruvate-lyase (carboxylating)	Thiamin diphosphate	m	-1
-110	(S)-2-Acetolactate pyruvate-lyase (carboxylating)	(2S)-2-acetolactate	m	-1
-110	(S)-2-Acetolactate pyruvate-lyase (carboxylating)	pyruvate	m	1
-110	(S)-2-Acetolactate pyruvate-lyase (carboxylating)	2-(alpha-Hydroxyethyl)thiamine diphosphate	m	1
+109	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	"4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	c	1
 113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	H2O	m	-1
-113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	3-Hydroxyisobutyryl-CoA	m	-1
+113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	3-hydroxyisobutyryl-CoA	m	-1
 113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	coenzyme A	m	1
-113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	3-Hydroxyisobutyrate	m	1
+113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	3-hydroxyisobutyrate	m	1
 113	(S)-3-Hydroxyisobutyryl-CoA hydrolase	H+	m	1
 116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	NAD	c	-1
-116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	"meso-2,3-Butanediol"	c	-1
+116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	"meso-2,3-butanediol"	c	-1
 116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	NADH	c	1
 116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	H+	c	1
-116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	Acetoin	c	1
+116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	acetoin	c	1
 121	5-methylcytosine deaminase	5-methylcytosine	c	-1
 121	5-methylcytosine deaminase	H+	c	-1
 121	5-methylcytosine deaminase	H2O	c	-1
 121	5-methylcytosine deaminase	ammonium	c	1
 121	5-methylcytosine deaminase	thymine	c	1
-129	uroporphyrinogen-I decarboxylase;uroporphyrinogen I decarboxylase;uroporphyrinogen decarboxylase	uroporphyrinogen-I	c	-1
-129	uroporphyrinogen-I decarboxylase;uroporphyrinogen I decarboxylase;uroporphyrinogen decarboxylase	H+	c	-4
-129	uroporphyrinogen-I decarboxylase;uroporphyrinogen I decarboxylase;uroporphyrinogen decarboxylase	carbon dioxide	c	4
-129	uroporphyrinogen-I decarboxylase;uroporphyrinogen I decarboxylase;uroporphyrinogen decarboxylase	coproporphyrinogen I	c	1
 130	ureidoglycolate urea-lyase;ureidoglycolate lyase	ureidoglycolic acid	c	-1
 130	ureidoglycolate urea-lyase;ureidoglycolate lyase	glyoxylate	c	1
 130	ureidoglycolate urea-lyase;ureidoglycolate lyase	urea	c	1
@@ -448,45 +255,21 @@ index	rxnNames	metNames	comps	coefficient
 132	flavin prenyltransferase;FMN prenyltransferase	FMNH2	m	-1
 132	flavin prenyltransferase;FMN prenyltransferase	prenylated FMNH2	m	1
 132	flavin prenyltransferase;FMN prenyltransferase	phosphate	m	1
-138	pyrroline-5-carboxylate reductase;PCA reductase	1-Pyrroline-5-carboxylate	c	-1
-138	pyrroline-5-carboxylate reductase;PCA reductase	NADPH	c	-1
-138	pyrroline-5-carboxylate reductase;PCA reductase	H+	c	-2
-138	pyrroline-5-carboxylate reductase;PCA reductase	NADP(+)	c	1
-138	pyrroline-5-carboxylate reductase;PCA reductase	L-proline	c	1
-139	pyrroline-5-carboxylate reductase;PCA reductase	1-Pyrroline-5-carboxylate	c	-1
-139	pyrroline-5-carboxylate reductase;PCA reductase	NADH	c	-1
-139	pyrroline-5-carboxylate reductase;PCA reductase	H+	c	-2
-139	pyrroline-5-carboxylate reductase;PCA reductase	NAD	c	1
-139	pyrroline-5-carboxylate reductase;PCA reductase	L-proline	c	1
+138	pyrroline-5-carboxylate reductase;PCA reductase	1-pyrroline-5-carboxylate	c	-1
 155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	ATP	m	-1
-155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-Deoxy-5-hydroxymethylcytidine-5'-diphosphate	m	-1
+155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate	m	-1
 155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	ADP	m	1
-155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-Deoxy-5-hydroxymethylcytidine-5'-triphosphate	m	1
-156	FAD nucleotidohydrolase	H2O	n	-1
-156	FAD nucleotidohydrolase	FAD	n	-1
-156	FAD nucleotidohydrolase	AMP	n	1
-156	FAD nucleotidohydrolase	FMN	n	1
-156	FAD nucleotidohydrolase	H+	n	2
+155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-deoxy-5-hydroxymethylcytidine-5'-triphosphate	m	1
 157	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	H2O	n	-1
-157	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	"P1,P3-Bis(5'-adenosyl) triphosphate"	n	-1
+157	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	"P(1),P(3)-bis(5'-adenosyl) triphosphate"	n	-1
 157	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	ADP	n	1
 157	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	AMP	n	1
 157	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	H+	n	2
-140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	NADP(+)	n	-2
-140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	Tetrahydrofolate	n	-1
-140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	NADPH	n	2
-140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	H+	n	2
-140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	folate	n	1
-141	ITP:cytidine 5'-phosphotransferase	ITP	c	-1
-141	ITP:cytidine 5'-phosphotransferase	cytidine	c	-1
-141	ITP:cytidine 5'-phosphotransferase	CMP	c	1
-141	ITP:cytidine 5'-phosphotransferase	IDP	c	1
-141	ITP:cytidine 5'-phosphotransferase	H+	c	1
-142	galactitol:NADP+ 1-oxidoreductase	NADPH	c	-1
-142	galactitol:NADP+ 1-oxidoreductase	H+	c	-1
-142	galactitol:NADP+ 1-oxidoreductase	D-Galactose	c	-1
-142	galactitol:NADP+ 1-oxidoreductase	NADP(+)	c	1
-142	galactitol:NADP+ 1-oxidoreductase	Galactitol	c	1
+140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	NADP(+)	c	-2
+140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	THF	c	-1
+140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	NADPH	c	2
+140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	H+	c	2
+140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	folate	c	1
 143	dGTP:pyruvate 2-O-phosphotransferase	pyruvate	c	-1
 143	dGTP:pyruvate 2-O-phosphotransferase	dGTP	c	-1
 143	dGTP:pyruvate 2-O-phosphotransferase	phosphoenolpyruvate	c	1
@@ -495,7 +278,7 @@ index	rxnNames	metNames	comps	coefficient
 144	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	2-oxoglutarate	c	-1
 144	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-sulfino-L-alanine	c	-1
 144	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	L-glutamate	c	1
-144	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-Sulfinylpyruvate	c	1
+144	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-sulfinylpyruvate	c	1
 146	octanoyl-CoA:electron-transfer flavoprotein 2-oxidoreductase	FAD	p	-1
 146	octanoyl-CoA:electron-transfer flavoprotein 2-oxidoreductase	H+	p	-1
 146	octanoyl-CoA:electron-transfer flavoprotein 2-oxidoreductase	octanoyl-CoA	p	-1
@@ -505,20 +288,20 @@ index	rxnNames	metNames	comps	coefficient
 147	trans-Dodec-2-enoyl-CoA reductase	lauroyl-CoA	m	-1
 147	trans-Dodec-2-enoyl-CoA reductase	NADPH	m	1
 147	trans-Dodec-2-enoyl-CoA reductase	H+	m	1
-147	trans-Dodec-2-enoyl-CoA reductase	2-trans-Dodecenoyl-CoA	m	1
+147	trans-Dodec-2-enoyl-CoA reductase	2-trans-dodecenoyl-CoA	m	1
 149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	H2O	m	-2
 149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	NADP(+)	m	-1
-149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	L-1-Pyrroline-3-hydroxy-5-carboxylate	m	-1
+149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	L-1-pyrroline-3-hydroxy-5-carboxylate	m	-1
 149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	NADPH	m	1
 149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	H+	m	2
 149	L-1-pyrroline-3-hydroxy-5-carboxylate:NADP+ oxidoreductase	erythro-4-hydroxy-L-glutamic acid	m	1
 158	"GTP 8,9-hydrolase"	H2O	n	-1
 158	"GTP 8,9-hydrolase"	GTP	n	-1
 158	"GTP 8,9-hydrolase"	H+	n	-1
-158	"GTP 8,9-hydrolase"	Formamidopyrimidine nucleoside triphosphate	n	1
-159	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	GTP	n	-1
-159	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	diphosphate	n	1
-159	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	"3',5'-cyclic GMP"	n	1
+158	"GTP 8,9-hydrolase"	formamidopyrimidine nucleoside triphosphate	n	1
+159	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	GTP	erm	-1
+159	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	diphosphate	erm	1
+159	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	"3',5'-cyclic GMP"	erm	1
 160	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	GTP	c	-1
 160	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	diphosphate	c	1
 160	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	"3',5'-cyclic GMP"	c	1
@@ -528,28 +311,19 @@ index	rxnNames	metNames	comps	coefficient
 161	ATP:cytidine 5'-phosphotransferase	CMP	n	1
 161	ATP:cytidine 5'-phosphotransferase	H+	n	1
 162	acetyl adenylate:CoA acetyltransferase	coenzyme A	n	-1
-162	acetyl adenylate:CoA acetyltransferase	Acetyl adenylate	n	-1
+162	acetyl adenylate:CoA acetyltransferase	acetyl adenylate	n	-1
 162	acetyl adenylate:CoA acetyltransferase	AMP	n	1
 162	acetyl adenylate:CoA acetyltransferase	acetyl-CoA	n	1
 162	acetyl adenylate:CoA acetyltransferase	H+	n	1
 163	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	acetyl-CoA	p	-1
-163	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	propanoyl-CoA	p	-1
+163	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	propionyl-CoA	p	-1
 163	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	coenzyme A	p	1
-163	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	2-Methylacetoacetyl-CoA	p	1
+163	acetyl-CoA:propanoyl-CoA 2-C-acetyltransferase;	2-methylacetoacetyl-CoA	p	1
 164	5-Methylcytosine aminohydrolase	H2O	c	-1
 164	5-Methylcytosine aminohydrolase	H+	c	-1
 164	5-Methylcytosine aminohydrolase	5-methylcytosine	c	-1
 164	5-Methylcytosine aminohydrolase	ammonium	c	1
 164	5-Methylcytosine aminohydrolase	thymine	c	1
-165	Ethanol:NADP+ oxidoreductase	NADP(+)	n	-1
-165	Ethanol:NADP+ oxidoreductase	ethanol	n	-1
-165	Ethanol:NADP+ oxidoreductase	NADPH	n	1
-165	Ethanol:NADP+ oxidoreductase	H+	n	1
-165	Ethanol:NADP+ oxidoreductase	acetaldehyde	n	1
-166	APS:ATP adenylyltransferase	ATP	n	-1
-166	APS:ATP adenylyltransferase	5'-adenylyl sulfate	n	-1
-166	APS:ATP adenylyltransferase	Sulfate	n	1
-166	APS:ATP adenylyltransferase	"P1,P4-Bis(5'-adenosyl)tetraphosphate"	n	1
 167	L-Homoserine:NAD+ oxidoreductase	NAD	c	-1
 167	L-Homoserine:NAD+ oxidoreductase	L-homoserine	c	-1
 167	L-Homoserine:NAD+ oxidoreductase	NADH	c	1
@@ -558,55 +332,29 @@ index	rxnNames	metNames	comps	coefficient
 168	L-Kynurenine:2-oxoglutarate aminotransferase	2-oxoglutarate	c	-1
 168	L-Kynurenine:2-oxoglutarate aminotransferase	L-kynurenine	c	-1
 168	L-Kynurenine:2-oxoglutarate aminotransferase	L-glutamate	c	1
-168	L-Kynurenine:2-oxoglutarate aminotransferase	"4-(2-Aminophenyl)-2,4-dioxobutanoate"	c	1
-169	L-Kynurenine:2-oxoglutarate aminotransferase	2-oxoglutarate	c	-1
-169	L-Kynurenine:2-oxoglutarate aminotransferase	L-kynurenine	c	-1
-169	L-Kynurenine:2-oxoglutarate aminotransferase	H2O	c	1
-169	L-Kynurenine:2-oxoglutarate aminotransferase	kynurenate	c	1
-169	L-Kynurenine:2-oxoglutarate aminotransferase	L-glutamate	c	1
-169	L-Kynurenine:2-oxoglutarate aminotransferase	H+	c	1
+168	L-Kynurenine:2-oxoglutarate aminotransferase	"4-(2-aminophenyl)-2,4-dioxobutanoate"	c	1
 174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	diphosphate	n	-1
-174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide	n	-1
-174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	5-Phospho-alpha-D-ribose 1-diphosphate	n	1
-174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	5-Amino-4-imidazolecarboxyamide	n	1
-175	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	AMP	n	-1
-175	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	diphosphate	n	-1
-175	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	5-Phospho-alpha-D-ribose 1-diphosphate	n	1
-175	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	adenine	n	1
+174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	1-(5'-phosphoribosyl)-5-amino-4-imidazolecarboxamide	n	-1
+174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	PRPP	n	1
+174	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	5-amino-4-imidazolecarboxyamide	n	1
 179	5-methyltetrahydrofolate:NAD+ oxidoreductase	NAD	m	-1
 179	5-methyltetrahydrofolate:NAD+ oxidoreductase	5-methyltetrahydrofolate	m	-1
 179	5-methyltetrahydrofolate:NAD+ oxidoreductase	NADH	m	1
 179	5-methyltetrahydrofolate:NAD+ oxidoreductase	H+	m	1
 179	5-methyltetrahydrofolate:NAD+ oxidoreductase	"5,10-methylenetetrahydrofolate"	m	1
-181	R07494	NADP(+)	p	-1
-181	R07494	4alpha-Methylzymosterol-4-carboxylate	p	-1
-181	R07494	NADPH	p	1
-181	R07494	carbon dioxide	p	1
-181	R07494	3-Keto-4-methylzymosterol	p	1
 182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	S-adenosylmethioninamine	n	-1
-182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	Cadaverine	n	-1
-182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	5'-Methylthioadenosine	n	1
-182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	Aminopropylcadaverine	n	1
+182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	cadaverine	n	-1
+182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	5'-S-methyl-5'-thioadenosine	n	1
+182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	aminopropylcadaverine	n	1
 182	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	H+	n	1
 183	cytidine nucleosidase	cytidine	n	-1
 183	cytidine nucleosidase	H2O	n	-1
 183	cytidine nucleosidase	cytosine	n	1
-183	cytidine nucleosidase	D-Ribofuranose	n	1
+183	cytidine nucleosidase	D-ribofuranose	n	1
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	farnesyl diphosphate	c	-1
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	H2O	c	-1
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	farnesol	c	1
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	diphosphate	c	1
-190	L-gulonate:NADP+ 6-oxidoreductase	NADP(+)	n	-1
-190	L-gulonate:NADP+ 6-oxidoreductase	L-Gulonate	n	-1
-190	L-gulonate:NADP+ 6-oxidoreductase	NADPH	n	1
-190	L-gulonate:NADP+ 6-oxidoreductase	H+	n	1
-190	L-gulonate:NADP+ 6-oxidoreductase	D-Glucuronate	n	1
-189	Succinate:CoA ligase (IDP-forming)	coenzyme A	n	-1
-189	Succinate:CoA ligase (IDP-forming)	succinate	n	-1
-189	Succinate:CoA ligase (IDP-forming)	ITP	n	-1
-189	Succinate:CoA ligase (IDP-forming)	phosphate	n	1
-189	Succinate:CoA ligase (IDP-forming)	succinyl-CoA	n	1
-189	Succinate:CoA ligase (IDP-forming)	IDP	n	1
 188	UTP:cytidine 5'-phosphotransferase	UTP	n	-1
 188	UTP:cytidine 5'-phosphotransferase	cytidine	n	-1
 188	UTP:cytidine 5'-phosphotransferase	UDP	n	1
@@ -616,33 +364,94 @@ index	rxnNames	metNames	comps	coefficient
 187	ATP:acetate adenylyltransferase	H+	n	-1
 187	ATP:acetate adenylyltransferase	acetate	n	-1
 187	ATP:acetate adenylyltransferase	diphosphate	n	1
-187	ATP:acetate adenylyltransferase	Acetyl adenylate	n	1
+187	ATP:acetate adenylyltransferase	acetyl adenylate	n	1
 192	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	2-oxoglutarate	m	-1
 192	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	3-hydroxy-L-kynurenine	m	-1
 192	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	L-glutamate	m	1
-192	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	"4-(2-Amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	m	1
-191	CTP:D-tagatose 6-phosphate 1-phosphotransferase	CTP	m	-1
-191	CTP:D-tagatose 6-phosphate 1-phosphotransferase	H+	m	-1
-191	CTP:D-tagatose 6-phosphate 1-phosphotransferase	D-Tagatose 6-phosphate	m	-1
-191	CTP:D-tagatose 6-phosphate 1-phosphotransferase	CDP	m	1
-191	CTP:D-tagatose 6-phosphate 1-phosphotransferase	"D-Tagatose 1,6-bisphosphate"	m	1
+192	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	"4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	m	1
 195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	NAD	n	-1
-195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	"meso-2,3-Butanediol"	n	-1
+195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	"meso-2,3-butanediol"	n	-1
 195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	NADH	n	1
 195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	H+	n	1
-195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	Acetoin	n	1
+195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	acetoin	n	1
 197	5-methylcytosine deaminase	5-methylcytosine	n	-1
 197	5-methylcytosine deaminase	H+	n	-1
 197	5-methylcytosine deaminase	H2O	n	-1
 197	5-methylcytosine deaminase	ammonium	n	1
 197	5-methylcytosine deaminase	thymine	n	1
-203	ITP:cytidine 5'-phosphotransferase	ITP	n	-1
-203	ITP:cytidine 5'-phosphotransferase	cytidine	n	-1
-203	ITP:cytidine 5'-phosphotransferase	CMP	n	1
-203	ITP:cytidine 5'-phosphotransferase	IDP	n	1
-203	ITP:cytidine 5'-phosphotransferase	H+	n	1
 204	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	2-oxoglutarate	p	-1
 204	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-sulfino-L-alanine	p	-1
 204	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	L-glutamate	p	1
-204	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-Sulfinylpyruvate	p	1
-202	S-nitrosoglutathione dehydrogenase;S-nitrosoglutathione reductase	NADH	m	-1
+204	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-sulfinylpyruvate	p	1
+205	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	H2O	c	-1
+205	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	"P(1),P(3)-bis(5'-adenosyl) triphosphate"	c	-1
+205	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	ADP	c	1
+205	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	AMP	c	1
+205	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	H+	c	2
+206	acetyl adenylate:CoA acetyltransferase	coenzyme A	m	-1
+206	acetyl adenylate:CoA acetyltransferase	acetyl adenylate	m	-1
+206	acetyl adenylate:CoA acetyltransferase	AMP	m	1
+206	acetyl adenylate:CoA acetyltransferase	acetyl-CoA	m	1
+206	acetyl adenylate:CoA acetyltransferase	H+	m	1
+207	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	NAD	m	-1
+207	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	THF	m	-1
+207	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	NADH	m	1
+207	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	H+	m	1
+207	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	dihydrofolic acid	m	1
+208	acetyl-CoA:D-amino-acid N-acetyltransferase	acetyl-CoA	n	-1
+208	acetyl-CoA:D-amino-acid N-acetyltransferase	D-phenylalanine	n	-1
+208	acetyl-CoA:D-amino-acid N-acetyltransferase	coenzyme A	n	1
+208	acetyl-CoA:D-amino-acid N-acetyltransferase	N-acetyl-D-phenylalanine	n	1
+209	(2R)-3-sulfolactate:NAD+ oxidoreductase	NAD	c	-1
+209	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfolactate	c	-1
+209	(2R)-3-sulfolactate:NAD+ oxidoreductase	NADH	c	1
+209	(2R)-3-sulfolactate:NAD+ oxidoreductase	H+	c	1
+209	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfopyruvate	c	1
+210	(2R)-3-sulfolactate:NAD+ oxidoreductase	NAD	p	-1
+210	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfolactate	p	-1
+210	(2R)-3-sulfolactate:NAD+ oxidoreductase	NADH	p	1
+210	(2R)-3-sulfolactate:NAD+ oxidoreductase	H+	p	1
+210	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfopyruvate	p	1
+211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	pyruvate	c	-1
+211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	2-hydroxyglutarate	c	-1
+211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	2-oxoglutarate	c	1
+211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	(R)-lactate	c	1
+212	ATP:acetate adenylyltransferase	ATP	m	-1
+212	ATP:acetate adenylyltransferase	H+	m	-1
+212	ATP:acetate adenylyltransferase	acetate	m	-1
+212	ATP:acetate adenylyltransferase	diphosphate	m	1
+212	ATP:acetate adenylyltransferase	acetyl adenylate	m	1
+213	dATP:pyruvate 2-O-phosphotransferase	pyruvate	m	-1
+213	dATP:pyruvate 2-O-phosphotransferase	dATP	m	-1
+213	dATP:pyruvate 2-O-phosphotransferase	phosphoenolpyruvate	m	1
+213	dATP:pyruvate 2-O-phosphotransferase	H+	m	1
+213	dATP:pyruvate 2-O-phosphotransferase	dADP	m	1
+214	Isocitrate:NADP+ oxidoreductase	NADP(+)	c	-1
+214	Isocitrate:NADP+ oxidoreductase	isocitrate	c	-1
+214	Isocitrate:NADP+ oxidoreductase	NADPH	c	1
+214	Isocitrate:NADP+ oxidoreductase	H+	c	1
+214	Isocitrate:NADP+ oxidoreductase	oxalosuccinate	c	1
+215	Isocitrate:NADP+ oxidoreductase	NADP(+)	p	-1
+215	Isocitrate:NADP+ oxidoreductase	isocitrate	p	-1
+215	Isocitrate:NADP+ oxidoreductase	NADPH	p	1
+215	Isocitrate:NADP+ oxidoreductase	H+	p	1
+215	Isocitrate:NADP+ oxidoreductase	oxalosuccinate	p	1
+216	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	NADP(+)	m	-2
+216	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	THF	m	-1
+216	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	NADPH	m	2
+216	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	H+	m	2
+216	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	folate	m	1
+217	dGTP:pyruvate 2-O-phosphotransferase	pyruvate	p	-1
+217	dGTP:pyruvate 2-O-phosphotransferase	dGTP	p	-1
+217	dGTP:pyruvate 2-O-phosphotransferase	phosphoenolpyruvate	p	1
+217	dGTP:pyruvate 2-O-phosphotransferase	dGDP	p	1
+217	dGTP:pyruvate 2-O-phosphotransferase	H+	p	1
+218	dGTP:pyruvate 2-O-phosphotransferase	pyruvate	m	-1
+218	dGTP:pyruvate 2-O-phosphotransferase	dGTP	m	-1
+218	dGTP:pyruvate 2-O-phosphotransferase	phosphoenolpyruvate	m	1
+218	dGTP:pyruvate 2-O-phosphotransferase	dGDP	m	1
+218	dGTP:pyruvate 2-O-phosphotransferase	H+	m	1
+219	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	2-oxoglutarate	m	-1
+219	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-sulfino-L-alanine	m	-1
+219	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	L-glutamate	m	1
+219	3-sulfino-L-alanine:2-oxoglutarate aminotransferase	3-sulfinylpyruvate	m	1
