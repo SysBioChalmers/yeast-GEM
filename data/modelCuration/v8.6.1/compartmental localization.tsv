@@ -22,7 +22,6 @@ index	rxnNames	grRules	location
 40	acetyl-CoA:D-amino-acid N-acetyltransferase	(YEL066W or YPR193C)	https://www.uniprot.org/uniprotkb/P39979/entry;https://www.uniprot.org/uniprotkb/Q06592/entry#subcellular_location
 42	1-(5'-Phosphoribosyl)-5-amino-4-imidazolecarboxamide:pyrophosphate phosphoribosyltransferase	(YML022W or YDR441C)	https://www.uniprot.org/uniprotkb/P49435/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P36973/entry#subcellular_location
 47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	YOR184W	https://www.uniprot.org/uniprotkb/P33330/entry#subcellular_location
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	(YKL085W or YDL078C or YOL126C)	https://www.uniprot.org/uniprotkb/P17505/entry;https://www.uniprot.org/uniprotkb/P32419/entry
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	(YGL125W or YPL023C)	https://www.uniprot.org/uniprotkb/P53128/entry#subcellular_location;https://www.uniprot.org/uniprotkb?query=YPL023C
 56	S-adenosylmethioninamine:cadaverine 3-aminopropyltransferase	(YPR069C or YLR146C)	https://www.uniprot.org/uniprotkb/Q12074/entry#subcellular_location;https://www.uniprot.org/uniprotkb/Q12455/entry#subcellular_location
 60	"(2R,3S)-3-isopropylmalate:NAD+ oxidoreductase"	YCL018W	https://www.uniprot.org/uniprotkb/P04173/entry#subcellular_location
@@ -36,7 +35,6 @@ index	rxnNames	grRules	location
 75	"2-hexaprenyl-3-methyl-5-hydroxy-6-methoxy-1,4-benzoquinol O-methyltransferase"	YOL096C	https://www.uniprot.org/uniprotkb/P27680/entry#subcellular_location
 77	D-ribulokinase	YDR109C	https://www.uniprot.org/uniprotkb/Q04585/entry#subcellular_location
 86	ATP:acetate adenylyltransferase	(YLR153C or YAL054C)	https://www.uniprot.org/uniprotkb/P52910/entry#subcellular_location;https://www.uniprot.org/uniprotkb/Q01574/entry#subcellular_location
-87	UTP:cytidine 5'-phosphotransferase	YNR012W	https://www.uniprot.org/uniprotkb/P27515/entry#subcellular_location
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	YHR037W	https://www.uniprot.org/uniprotkb/P07275/entry#subcellular_location
 89	Succinate:CoA ligase (IDP-forming)	(YOR142W or YGR244C)	https://www.uniprot.org/uniprotkb/P53598/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P53312/entry#subcellular_location
 91	dATP:pyruvate 2-O-phosphotransferase	(YAL038W or YKL067W or YOR347C)	https://www.uniprot.org/uniprotkb/P00549/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P36010/entry#subcellular_location;YOR347C
@@ -55,7 +53,6 @@ index	rxnNames	grRules	location
 116	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	(YAL061W or YAL060W)	https://www.uniprot.org/uniprotkb/P39713/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P39714/entry#subcellular_location
 121	5-methylcytosine deaminase	YPR062W	https://www.uniprot.org/uniprotkb/Q12178/entry#subcellular_location
 130	ureidoglycolate urea-lyase;ureidoglycolate lyase	YIR032C	https://www.uniprot.org/uniprotkb/P32459/entry#subcellular_location
-132	flavin prenyltransferase;FMN prenyltransferase	YDR538W	https://www.uniprot.org/uniprotkb/P33751/entry#subcellular_location
 138	pyrroline-5-carboxylate reductase;PCA reductase	YER023W	https://www.uniprot.org/uniprotkb/P32263/entry#subcellular_location
 140	"5,6,7,8-tetrahydrofolate:NADP+ oxidoreductase"	YOR236W	https://www.uniprot.org/uniprotkb/P07807/entry#subcellular_location
 143	dGTP:pyruvate 2-O-phosphotransferase	(YAL038W or YOR347C or YKL067W)	https://www.uniprot.org/uniprotkb/P00549/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P52489/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P36010/entry#subcellular_location
@@ -80,7 +77,6 @@ index	rxnNames	grRules	location
 183	cytidine nucleosidase	YDR400W	https://www.uniprot.org/uniprotkb/Q04179/entry#subcellular_location
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	YDR481C	https://www.uniprot.org/uniprotkb/P11491/entry#subcellular_location
 187	ATP:acetate adenylyltransferase	(YLR153C or YAL054C)	https://www.uniprot.org/uniprotkb/P52910/entry#subcellular_location;https://www.uniprot.org/uniprotkb/Q01574/entry#subcellular_location
-188	UTP:cytidine 5'-phosphotransferase	YNR012W	https://www.uniprot.org/uniprotkb/P27515/entry#subcellular_location
 192	3-Hydroxy-L-kynurenine:2-oxoglutarate aminotransferase	YJL060W	https://www.uniprot.org/uniprotkb/P47039/entry#subcellular_location
 195	"meso-2,3-butanediol:NAD+ oxidoreductase [(S)-acetoin forming]"	(YAL061W or YAL060W)	https://www.uniprot.org/uniprotkb/P39713/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P39714/entry#subcellular_location
 197	5-methylcytosine deaminase	YPR062W	https://www.uniprot.org/uniprotkb/Q12178/entry#subcellular_location
@@ -89,8 +85,6 @@ index	rxnNames	grRules	location
 206	acetyl adenylate:CoA acetyltransferase	(YLR153C or YAL054C)	https://www.uniprot.org/uniprotkb/P52910/entry#subcellular_location;https://www.uniprot.org/uniprotkb/Q01574/entry#subcellular_location
 207	"5,6,7,8-tetrahydrofolate:NAD+ oxidoreductase"	YOR236W	https://www.uniprot.org/uniprotkb/P07807/entry#subcellular_location
 208	acetyl-CoA:D-amino-acid N-acetyltransferase	(YEL066W or YPR193C)	https://www.uniprot.org/uniprotkb/P39979/entry;https://www.uniprot.org/uniprotkb/Q06592/entry#subcellular_location
-209	(2R)-3-sulfolactate:NAD+ oxidoreductase	(YKL085W or YDL078C or YOL126C)	https://www.uniprot.org/uniprotkb/P17505/entry;https://www.uniprot.org/uniprotkb/P32419/entry
-210	(2R)-3-sulfolactate:NAD+ oxidoreductase	(YKL085W or YDL078C or YOL126C)	https://www.uniprot.org/uniprotkb/P17505/entry;https://www.uniprot.org/uniprotkb/P32419/entry
 211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	(YDL178W or YEL071W)	https://www.uniprot.org/uniprotkb/P46681/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P39976/entry#subcellular_location
 212	ATP:acetate adenylyltransferase	(YLR153C or YAL054C)	https://www.uniprot.org/uniprotkb/P52910/entry#subcellular_location;https://www.uniprot.org/uniprotkb/Q01574/entry#subcellular_location
 213	dATP:pyruvate 2-O-phosphotransferase	(YAL038W or YKL067W or YOR347C)	https://www.uniprot.org/uniprotkb/P00549/entry#subcellular_location;https://www.uniprot.org/uniprotkb/P36010/entry#subcellular_location;YOR347C

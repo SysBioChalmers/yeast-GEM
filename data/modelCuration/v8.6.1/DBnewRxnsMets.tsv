@@ -39,8 +39,6 @@ O-phospho-4-hydroxy-L-threonine	c	C4H8NO7P	-2		based on kegg	C06055 	CHEBI:18336
 2-oxo-3-hydroxy-4-phosphobutanoate	c	C4H4O8P	-3		based on kegg	C06054	CHEBI:27951	45266680	MNXM1514	cpd03606	ohpb	3OH-4P-OH-ALPHA-KETOBUTYRATE					
 FMNH2	m	C17H21N4O9P	-2		based on kegg	C01847	CHEBI:57618	44229161	MNXM208	cpd01270	fmnh2	FMNH2					
 5-amino-4-imidazolecarboxyamide	n	C4H6N4O	0		based on kegg	C04051	CHEBI:2030	9679	MNXM736125								
-3-sulfolactate	m	C3H6O6S	0		based on kegg	C11537	CHEBI:48291	443250	MNXM530								
-3-sulfopyruvate	m	C3H4O6S	0		based on kegg	C05528	CHEBI:16894	440717	MNXM594								
 cadaverine	c	C5H16N2	2		based on kegg	C01672	CHEBI:18127	3718401	MNXM943	cpd01155	15dap	CADAVERINE					
 cadaverine	n	C5H16N2	2		based on kegg	C01672	CHEBI:18127	3718401	MNXM943	cpd01155	15dap	CADAVERINE					
 5'-S-methyl-5'-thioadenosine	n	C11H15N5O3S	0		based on kegg	C00170	CHEBI:180963	439176	MNXM150	cpd00147	5mta	5-METHYLTHIOADENOSINE					
@@ -63,7 +61,6 @@ diphosphate	v	HO7P2	-3		based on metacyc	C00013	ChEBI:33019	1023			ppi	PPI
 oxalosuccinate	m	C6H3O7	-3		based on kegg	C05379	CHEBI:7815	25244267	MNXM1289	cpd03187		OXALO-SUCCINATE					
 2-deoxy-D-ribose 1-phosphate	c	C5H9O7P	-2		based on kegg	C00672	CHEBI:11563	23419734	MNXM789		2dr1p	DEOXY-D-RIBOSE-1-PHOSPHATE			112032		
 glutaryl-CoA	m	C26H37N7O19P3S	-5		based on kegg	C00527	CHEBI:57378	45266604	MNXM1104451								
-UTP	n	C9H11N2O15P3	-4		based on kegg	C00075	CHEBI:46398	7058168	MNXM121	cpd00062	utp	UTP			29494		
 sucrose 6-phosphate	c	C12H21O14P	-2		based on kegg	C16688	CHEBI:131603	644101	MNXM725920								
 "4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	c	C10H8NO5	-1		based on kegg	C05645	CHEBI:27593	440741	MNXM4997								
 "4-(2-amino-3-hydroxyphenyl)-2,4-dioxobutanoate"	m	C10H8NO5	-1		based on kegg	C05645	CHEBI:27593	440741	MNXM4997								
@@ -98,10 +95,6 @@ GTP	erm	C10H12N5O14P3	-4		based on kegg	C00044	CHEBI:57600	135398632	MNXM51	cpd0
 acetyl adenylate	m	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
 D-phenylalanine	n	C9H11NO2	0		based on kegg	C02265	CHEBI:16998	6919011	MNXM2365	cpd01526		CPD-216					
 N-acetyl-D-phenylalanine	n	C11H13NO3	0		based on kegg	C05620	CHEBI:28203	101184	MNXM8908								
-3-sulfolactate	c	C3H6O6S	0		based on kegg	C11537	CHEBI:48291	443250	MNXM530								
-3-sulfopyruvate	c	C3H4O6S	0		based on kegg	C05528	CHEBI:16894	440717	MNXM594								
-3-sulfolactate	p	C3H6O6S	0		based on kegg	C11537	CHEBI:48291	443250	MNXM530								
-3-sulfopyruvate	p	C3H4O6S	0		based on kegg	C05528	CHEBI:16894	440717	MNXM594								
 dATP	m	C10H12N5O12P3	-4		based on kegg	C00131	CHEBI:61404		MNXM286		datp						
 dADP	m	C10H12N5O9P2	-3		based on kegg	C00206	CHEBI:57667		MNXM374		dadp						
 oxalosuccinate	c	C6H3O7	-3		based on kegg	C05379	CHEBI:7815	25244267	MNXM1289	cpd03187		OXALO-SUCCINATE					

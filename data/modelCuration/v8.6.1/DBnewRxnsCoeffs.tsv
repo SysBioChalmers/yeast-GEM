@@ -97,11 +97,6 @@ index	rxnNames	metNames	comps	coefficient
 47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	O-phospho-4-hydroxy-L-threonine	c	-1
 47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	L-glutamate	c	1
 47	O-Phospho-4-hydroxy-L-threonine:2-oxoglutarate aminotransferase	2-oxo-3-hydroxy-4-phosphobutanoate	c	1
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	NAD	m	-1
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfolactate	m	-1
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	NADH	m	1
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	H+	m	1
-49	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfopyruvate	m	1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	NAD	c	-1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	5-methyltetrahydrofolate	c	-1
 50	5-methyltetrahydrofolate:NAD+ oxidoreductase	NADH	c	1
@@ -159,11 +154,6 @@ index	rxnNames	metNames	comps	coefficient
 86	ATP:acetate adenylyltransferase	acetate	c	-1
 86	ATP:acetate adenylyltransferase	diphosphate	c	1
 86	ATP:acetate adenylyltransferase	acetyl adenylate	c	1
-87	UTP:cytidine 5'-phosphotransferase	UTP	c	-1
-87	UTP:cytidine 5'-phosphotransferase	cytidine	c	-1
-87	UTP:cytidine 5'-phosphotransferase	UDP	c	1
-87	UTP:cytidine 5'-phosphotransferase	CMP	c	1
-87	UTP:cytidine 5'-phosphotransferase	H+	c	1
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	H2O	m	-2
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	NADP(+)	m	-1
 88	(S)-1-pyrroline-5-carboxylate:NADP+ oxidoreductase	1-pyrroline-5-carboxylate	m	-1
@@ -251,10 +241,6 @@ index	rxnNames	metNames	comps	coefficient
 130	ureidoglycolate urea-lyase;ureidoglycolate lyase	ureidoglycolic acid	c	-1
 130	ureidoglycolate urea-lyase;ureidoglycolate lyase	glyoxylate	c	1
 130	ureidoglycolate urea-lyase;ureidoglycolate lyase	urea	c	1
-132	flavin prenyltransferase;FMN prenyltransferase	dimethylallyl phosphate	m	-1
-132	flavin prenyltransferase;FMN prenyltransferase	FMNH2	m	-1
-132	flavin prenyltransferase;FMN prenyltransferase	prenylated FMNH2	m	1
-132	flavin prenyltransferase;FMN prenyltransferase	phosphate	m	1
 138	pyrroline-5-carboxylate reductase;PCA reductase	1-pyrroline-5-carboxylate	c	-1
 155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	ATP	m	-1
 155	ATP:2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate phosphotransferase	2'-deoxy-5-hydroxymethylcytidine-5'-diphosphate	m	-1
@@ -355,11 +341,6 @@ index	rxnNames	metNames	comps	coefficient
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	H2O	c	-1
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	farnesol	c	1
 184	"(E,E,)-farnesol synthase;(2E,6E)-farnesyl diphosphate phosphatase"	diphosphate	c	1
-188	UTP:cytidine 5'-phosphotransferase	UTP	n	-1
-188	UTP:cytidine 5'-phosphotransferase	cytidine	n	-1
-188	UTP:cytidine 5'-phosphotransferase	UDP	n	1
-188	UTP:cytidine 5'-phosphotransferase	CMP	n	1
-188	UTP:cytidine 5'-phosphotransferase	H+	n	1
 187	ATP:acetate adenylyltransferase	ATP	n	-1
 187	ATP:acetate adenylyltransferase	H+	n	-1
 187	ATP:acetate adenylyltransferase	acetate	n	-1
@@ -402,16 +383,6 @@ index	rxnNames	metNames	comps	coefficient
 208	acetyl-CoA:D-amino-acid N-acetyltransferase	D-phenylalanine	n	-1
 208	acetyl-CoA:D-amino-acid N-acetyltransferase	coenzyme A	n	1
 208	acetyl-CoA:D-amino-acid N-acetyltransferase	N-acetyl-D-phenylalanine	n	1
-209	(2R)-3-sulfolactate:NAD+ oxidoreductase	NAD	c	-1
-209	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfolactate	c	-1
-209	(2R)-3-sulfolactate:NAD+ oxidoreductase	NADH	c	1
-209	(2R)-3-sulfolactate:NAD+ oxidoreductase	H+	c	1
-209	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfopyruvate	c	1
-210	(2R)-3-sulfolactate:NAD+ oxidoreductase	NAD	p	-1
-210	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfolactate	p	-1
-210	(2R)-3-sulfolactate:NAD+ oxidoreductase	NADH	p	1
-210	(2R)-3-sulfolactate:NAD+ oxidoreductase	H+	p	1
-210	(2R)-3-sulfolactate:NAD+ oxidoreductase	3-sulfopyruvate	p	1
 211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	pyruvate	c	-1
 211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	2-hydroxyglutarate	c	-1
 211	(R)-2-hydroxyglutarate:pyruvate oxidoreductase [(R)-lactate-forming]	2-oxoglutarate	c	1
