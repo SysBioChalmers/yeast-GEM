@@ -32,7 +32,7 @@ jobs:
           memote report snapshot --solver-timeout 30 --filename="gh-pages-repo/release_report.html"
 
       - name: Auto-commit results
-        uses: stefanzweifel/git-auto-commit-action@v4.4.0
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_user_name: memote-bot
           commit_message: "chore: update memote release report"
