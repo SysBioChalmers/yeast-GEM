@@ -8,6 +8,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
       - name: Set up Python 3
         uses: actions/setup-python@v4
@@ -47,7 +49,7 @@ jobs:
           memote report history --filename="${{ steps.setup.outputs.other-repo }}/${{ steps.setup.outputs.history }}"
 
       - name: Auto-commit results
-        uses: stefanzweifel/git-auto-commit-action@v4.4.0
+        uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_user_name: memote-bot
           commit_message: "chore: update memote history report"
