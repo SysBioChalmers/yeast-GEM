@@ -6,24 +6,17 @@ jobs:
   memote-run:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
 
-    - name: Checkout
-      uses: actions/checkout@v2
-
-    - name: Set up Python 3
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9.7'
-
-    - name: Install memote
-      run: pip install -r code/requirements/ci-requirements.txt
-
-    - name: Convert model
-      run: |
-        touch .env
-        python -c 'import code.io as io; model = io.read_yeast_model(make_bigg_compliant=True); io.write_yeast_model(model)'
-
-    - name: Memote on PR
-      run: |
-        # Untracked build, skip saving to gh-pages
-        memote run --ignore-git --solver-timeout 30
+      - name: Memote on PR
+        uses: addnab/docker-run-action@v3
+        with:
+          image: ghcr.io/metabolicatlas/memote-docker:0.13
+          options: -v ${{ github.workspace }}:/opt
+          shell: bash
+          run: |
+            cd /opt
+            touch .env
+            python -c 'import code.io as io; model = io.read_yeast_model(make_bigg_compliant=True); io.write_yeast_model(model)'
+            memote run --ignore-git --solver-timeout 30
