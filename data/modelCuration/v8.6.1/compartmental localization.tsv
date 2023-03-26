@@ -1,6 +1,5 @@
 index	rxnNames	grRules	location
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	YDR305C	https://www.uniprot.org/uniprotkb/P49775/entry#subcellular_location
-5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	YHR037W	https://www.uniprot.org/uniprotkb/P07275/entry#subcellular_location
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	YJL005W	https://www.uniprot.org/uniprotkb/P08678/entry#subcellular_location
 9	ATP:cytidine 5'-phosphotransferase	YNR012W	https://www.uniprot.org/uniprotkb/P27515/entry#subcellular_location
 10	(S)-ureidoglycolate urea-lyase (glyoxylate-forming)	YIR032C	https://www.uniprot.org/uniprotkb/P32459/entry#subcellular_location

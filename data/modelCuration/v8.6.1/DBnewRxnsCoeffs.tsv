@@ -4,12 +4,6 @@ index	rxnNames	metNames	comps	coefficient
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	ADP	m	1		
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	AMP	m	1		
 4	"P1,P3-bis(5'-adenosyl)-triphosphate adenylohydrolase"	H+	m	2		
-5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	H2O	m	-1		
-5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	NAD	m	-1		
-5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	L-glutamic 5-semialdehyde	m	-1		
-5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	NADH	m	1		
-5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	L-glutamate	m	1		
-5	L-glutamate gamma-semialdehyde:NAD+ oxidoreductase	H+	m	2		
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	GTP	m	-1		
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	diphosphate	m	1		
 8	"GTP diphosphate-lyase (cyclizing; 3',5'-cyclic-GMP-forming)"	"3',5'-cyclic GMP"	m	1		

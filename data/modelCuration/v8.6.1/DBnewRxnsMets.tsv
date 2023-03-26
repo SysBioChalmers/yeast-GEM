@@ -7,7 +7,6 @@ formamidopyrimidine nucleoside triphosphate	n	C10H15N5O15P3	-3		based on kegg	C0
 S-ureidoglycolate	c	C3H5N2O4	-1		based on kegg	C00603	CHEBI:15412	23615273	MNXM490		urdglyc	CPD-1091					
 acetyl adenylate	c	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
 acetyl adenylate	n	C12H15N5O8P	-1		based on kegg	C05993	CHEBI:37666	440867	MNXM1103443								
-L-glutamic 5-semialdehyde	m	C5H9NO3	0		based on kegg	C01165	CHEBI:17232	49791979	MNXM245	cpd00858	glu5sa	L-GLUTAMATE_GAMMA-SEMIALDEHYDE			31339		
 GTP	n	C10H12N5O14P3	-4		based on kegg	C00044	CHEBI:57600	135398632	MNXM51	cpd00038	gtp	GTP					
 "3',5'-cyclic GMP"	m	C10H11N5O7P	-1		based on kegg	C00942	CHEBI:57746	135398569	MNXM665	cpd00697		CGMP					
 "3',5'-cyclic GMP"	erm	C10H11N5O7P	-1		based on kegg	C00942	CHEBI:57746	135398569	MNXM665	cpd00697		CGMP					
