@@ -109640,7 +109640,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4712"
       - name: "ethyl-(2R)-lactate esterase, c"
@@ -109660,7 +109660,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4713"
       - name: "diethyl-succinate esterase, c"
@@ -109680,7 +109680,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4714"
       - name: "monoethyl-succinate esterase, c"
@@ -109700,7 +109700,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4715"
       - name: "ethyl-benzoate esterase, c"
@@ -109720,7 +109720,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4716"
       - name: "ethyl-pyruvate esterase, c"
@@ -109740,7 +109740,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4717"
       - name: "benzyl-acetate esterase, c"
@@ -109760,7 +109760,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4718"
       - name: "isobutyraldehyde dehydrogenase, c"
@@ -109782,7 +109782,7 @@
           - kegg.reaction: "R00538"
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4719"
       - name: "2-methylbutanal dehydrogenase, c"
@@ -109804,7 +109804,7 @@
           - kegg.reaction: "R00538"
           - sbo: "SBO:0000176"
       - confidence_score: 1
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4720"
       - name: "ethyl-isobutyrate esterase, c"
@@ -109824,7 +109824,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4721"
       - name: "ethyl-2-methylbutyrate esterase, c"
@@ -109844,7 +109844,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4722"
       - name: "polyphosphate polymerase, c"
@@ -109864,7 +109864,7 @@
           - kegg.reaction: "R02184"
           - sbo: "SBO:0000176"
       - confidence_score: 3
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4723"
       - name: "polyphosphate phosphohydrolase, v"
@@ -109887,7 +109887,7 @@
           - metanetx.reaction: "MNXR107906"
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4724"
       - name: "polyphosphate phosphohydrolase, m"
@@ -109909,7 +109909,7 @@
           - kegg.reaction: "R03042"
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4725"
       - name: "polyphosphate phosphohydrolase, n"
@@ -109931,7 +109931,7 @@
           - kegg.reaction: "R03042"
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4726"
       - name: "ethyl-(2S)-lactate transport"
@@ -109945,7 +109945,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4727"
       - name: "ethyl-(2S)-lactate exchange"
@@ -109958,7 +109958,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4728"
       - name: "ethyl-(2R)-lactate transport"
@@ -109972,7 +109972,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4729"
       - name: "ethyl-(2R)-lactate exchange"
@@ -109985,7 +109985,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4730"
       - name: "diethyl-succinate transport"
@@ -109999,7 +109999,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4731"
       - name: "diethyl-succinate exchange"
@@ -110012,7 +110012,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4732"
       - name: "monoethyl-succinate transport"
@@ -110026,7 +110026,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4733"
       - name: "monoethyl-succinate exchange"
@@ -110039,7 +110039,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4734"
       - name: "ethyl-benzoate transport"
@@ -110053,7 +110053,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4735"
       - name: "ethyl-benzoate exchange"
@@ -110066,7 +110066,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4736"
       - name: "ethyl-pyruvate transport"
@@ -110080,7 +110080,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4737"
       - name: "ethyl-pyruvate exchange"
@@ -110093,7 +110093,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4738"
       - name: "benzyl-acetate transport"
@@ -110107,7 +110107,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4739"
       - name: "benzyl-acetate exchange"
@@ -110120,7 +110120,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4740"
       - name: "ethyl-isobutyrate transport"
@@ -110134,7 +110134,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4741"
       - name: "ethyl-isobutyrate exchange"
@@ -110147,7 +110147,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4742"
       - name: "ethyl-2-methylbutyrate transport"
@@ -110161,7 +110161,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4743"
       - name: "ethyl-2-methylbutyrate exchange"
@@ -110174,7 +110174,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4744"
       - name: "polyphosphate transport, v-c"
@@ -110190,7 +110190,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 1
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4745"
       - name: "polyphosphate transport, c-m"
@@ -110206,7 +110206,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 1
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
     - !!omap
       - id: "r_4746"
       - name: "polyphosphate transport, c-n"
@@ -110222,7 +110222,7 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 1
-      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #337)"
 - genes:
     - !!omap
       - id: "Q0045"
