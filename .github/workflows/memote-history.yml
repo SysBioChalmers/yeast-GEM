@@ -6,56 +6,55 @@ jobs:
   memote-history:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
 
-    - name: Checkout
-      uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
+      - name: Set up Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
 
-    - name: Set up Python 3
-      uses: actions/setup-python@v2
-      with:
-        python-version: '3.9.7'
+      - name: Install memote
+        run: pip install -r code/requirements/ci-requirements.txt
 
-    - name: Install memote
-      run: pip install -r code/requirements/ci-requirements.txt
-        
-    - name: Setup variables
-      id: setup
-      run: |
-        echo "::set-output name=history::history_report.html"
-        echo "::set-output name=deployment::$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' memote.ini | tr -d ' ')"
-        echo "::set-output name=other-repo::gh-pages-repo"
+      - name: Setup variables
+        id: setup
+        run: |
+          echo "::set-output name=history::history_report.html"
+          echo "::set-output name=deployment::$(awk -F '=' '{if (! ($0 ~ /^;/) && $0 ~ /deployment/) print $2}' memote.ini | tr -d ' ')"
+          echo "::set-output name=other-repo::gh-pages-repo"
 
-    - name: Checkout repo for gh-pages branch
-      uses: actions/checkout@v2
-      with:
-        repository: ${{ github.repository }}
-        ref: ${{ steps.setup.outputs.deployment }}
-        path: ${{ steps.setup.outputs.other-repo }}
+      - name: Checkout repo for gh-pages branch
+        uses: actions/checkout@v2
+        with:
+          repository: ${{ github.repository }}
+          ref: ${{ steps.setup.outputs.deployment }}
+          path: ${{ steps.setup.outputs.other-repo }}
 
-    # - name: Convert model
-    #   run: |
-    #     touch .env
-    #     python -c 'import code.io as io; model = io.read_yeast_model(make_bigg_compliant=True); io.write_yeast_model(model)'
+      # - name: Convert model
+      #   run: |
+      #     touch .env
+      #     python -c 'import code.io as io; model = io.read_yeast_model(make_bigg_compliant=True); io.write_yeast_model(model)'
 
-    - name: Memote short run
-      run: |
-        git config --global user.name "memote-bot"
-        memote run --skip-unchanged --solver-timeout 30
+      - name: Memote short run
+        run: |
+          git config --global user.name "memote-bot"
+          memote run --skip-unchanged --solver-timeout 30
 
-    - name: Compute Memote history on push
-      run: |
-        # Generate the history report on the deployment branch
-        memote report history --filename="${{ steps.setup.outputs.other-repo }}/${{ steps.setup.outputs.history }}"
+      - name: Compute Memote history on push
+        run: |
+          # Generate the history report on the deployment branch
+          memote report history --filename="${{ steps.setup.outputs.other-repo }}/${{ steps.setup.outputs.history }}"
 
-    - name: Auto-commit results
-      uses: stefanzweifel/git-auto-commit-action@v4.4.0
-      with:
-        commit_user_name: memote-bot
-        commit_message: "chore: update memote history report"
-        file_pattern: ${{ steps.setup.outputs.history }}
-        branch: ${{ steps.setup.outputs.deployment }}
-        repository: ${{ steps.setup.outputs.other-repo }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Auto-commit results
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_user_name: memote-bot
+          commit_message: "chore: update memote history report"
+          file_pattern: ${{ steps.setup.outputs.history }}
+          branch: ${{ steps.setup.outputs.deployment }}
+          repository: ${{ steps.setup.outputs.other-repo }}
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

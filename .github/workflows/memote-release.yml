@@ -1,0 +1,43 @@
+name: memote release
+
+on:
+  release:
+    type: [published]
+
+jobs:
+  memote:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout main branch
+        uses: actions/checkout@v3
+        with:
+          ref: main
+
+      - name: Checkout gh-pages branch
+        uses: actions/checkout@v3
+        with:
+          ref: gh-pages
+          path: gh-pages-repo
+
+      - name: Set up Python 3
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.9"
+
+      - name: Install memote
+        run: pip install -r code/requirements/requirements.txt
+
+      - name: Memote run
+        run: |
+          memote report snapshot --solver-timeout 30 --filename="gh-pages-repo/release_report.html"
+
+      - name: Auto-commit results
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_user_name: memote-bot
+          commit_message: "chore: update memote release report"
+          file_pattern: release_report.html
+          branch: gh-pages
+          repository: gh-pages-repo
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
