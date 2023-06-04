@@ -1,37 +1,37 @@
 rxnNames	grRules	lb	ub	rev	subSystems	eccodes	rxnNotes	rxnReferences	rxnConfidenceScores	kegg.reaction	kegg.pathway	bigg.reaction	metanetx.reaction	brenda	biocyc	reactome	sabiork.reaction	seed.reactions	rhea
-ethyl-(2S)-lactate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	ester volatiles and polyphosphate curation	10.1006/fmic.1999.0272,10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z	2										
-ethyl-(2R)-lactate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1006/fmic.1999.0272,10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z	2										
-diethyl-succinate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1016/S0889-1575(03)00021-8,10.1006/fmic.1999.0272,10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z	2										
-monoethyl-succinate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1016/S0889-1575(03)00021-8, 10.1038/s41598-022-16554-z	2										
-ethyl-benzoate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z	2										
-ethyl-pyruvate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1006/fmic.1999.0272, 10.1038/s41598-022-16554-z	2										
-benzyl-acetate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z	2										
-isobutyraldehyde dehydrogenase, c	YOR374W or YPL061W	-1000	1000	1		1.2.1.3	volatile esters and polyphosphate curation	10.1042/BSR20160529	2	R00538	ec00010								
-2-methylbutanal dehydrogenase, c	YOR374W or YPL061W	-1000	1000	1		1.2.1.3	volatile esters and polyphosphate curation	10.1042/BSR20160529	1	R00538	ec00010								
-ethyl-isobutyrate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1038/s41598-022-16554-z	2										
-ethyl-2-methylbutyrate esterase, c	YOR126C	-1000	1000	1		3.1.-.-	volatile esters and polyphosphate curation	10.1038/s41598-022-16554-z	2										
-polyphosphate polymerase, c	YJL012C	0	1000	0		2.7.4.1	volatile esters and polyphosphate curation	10.1126/science.1168120, 10.3390/biology10060487	3	R02184	ec00190		MNXR103113						
-Polyphosphate phosphohydrolase, v	YHR201C or YDR452W	-1000	1000	1		3.6.1.10; 3.6.1.-; 3.6.1.11	volatile esters and polyphosphate curation	10.1007/s10540-006-9003-2	2	R03042			MNXR107906						
-Polyphosphate phosphohydrolase, m	YHR201C or YDR452W	-1000	1000	1		3.6.1.10; 3.6.1.-; 3.6.1.11	volatile esters and polyphosphate curation	10.1016/0014-5793(89)80882-8, 10.1023/a:1023648509241											
-Polyphosphate phosphohydrolase, n	YHR201C or YDR452W	-1000	1000	1		3.6.1.10; 3.6.1.-; 3.6.1.11	volatile esters and polyphosphate curation	10.1002/yea.1391, 10.1007/s10540-006-9003-2											
-ethyl-(2S)-lactate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-(2S)-lactate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-(2R)-lactate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-(2R)-lactate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-diethyl-succinate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-diethyl-succinate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-monoethyl-succinate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-monoethyl-succinate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-benzoate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-benzoate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-pyruvate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-pyruvate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-benzyl-acetate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-benzyl-acetate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-isobutyrate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-isobutyrate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-2-methylbutyrate transport		-1000	1000	1			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-ethyl-2-methylbutyrate exchange		0	1000	0			volatile esters and polyphosphate curation	NOTES: added for FA ester pathways (PR #190)	2										
-polyphosphate transport, v-c		-1000	1000	1			volatile esters and polyphosphate curation	Required to account for polyphosphate in compartments, a production by membrane complex Vtc4p is unlikely for the mitochondria and nucleus	1										
-polyphosphate transport, c-m		-1000	1000	1			volatile esters and polyphosphate curation	Required to account for polyphosphate in compartments, a production by membrane complex Vtc4p is unlikely for the mitochondria and nucleus	1										
-polyphosphate transport, c-n		-1000	1000	1			volatile esters and polyphosphate curation	Required to account for polyphosphate in compartments, a production by membrane complex Vtc4p is unlikely for the mitochondria and nucleus	1										
+ethyl-(2S)-lactate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	"10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"	2										
+ethyl-(2R)-lactate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	"10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"	2										
+diethyl-succinate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	"10.1016/S0889-1575(03)00021-8; 10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"	2										
+monoethyl-succinate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	"10.1016/S0889-1575(03)00021-8; 10.1038/s41598-022-16554-z"	2										
+ethyl-benzoate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	"10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"	2										
+ethyl-pyruvate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	"10.1006/fmic.1999.0272; 10.1038/s41598-022-16554-z"	2										
+benzyl-acetate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	"10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"	2										
+isobutyraldehyde dehydrogenase, c	YOR374W or YPL061W	-1000	1000	1	Other	1.2.1.3	Volatile esters and polyphosphate curation (PR #336)	10.1042/BSR20160529	2	R00538									
+2-methylbutanal dehydrogenase, c	YOR374W or YPL061W	-1000	1000	1	Other	1.2.1.3	Volatile esters and polyphosphate curation (PR #336)	10.1042/BSR20160529	1	R00538									
+ethyl-isobutyrate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	10.1038/s41598-022-16554-z	2										
+ethyl-2-methylbutyrate esterase, c	YOR126C	-1000	1000	1	Other	3.1.-.-	Volatile esters and polyphosphate curation (PR #336)	10.1038/s41598-022-16554-z	2										
+polyphosphate polymerase, c	YJL012C	0	1000	0	Oxidative phosphorylation	2.7.4.1	Volatile esters and polyphosphate curation (PR #336)	"10.1126/science.1168120; 10.3390/biology10060487"	3	R02184									
+polyphosphate phosphohydrolase, v	YHR201C or YDR452W	-1000	1000	1	Oxidative phosphorylation	"3.6.1.10; 3.6.1.11"	Volatile esters and polyphosphate curation (PR #336)	10.1007/s10540-006-9003-2	2	R03042			MNXR107906						
+polyphosphate phosphohydrolase, m	YHR201C or YDR452W	-1000	1000	1	Oxidative phosphorylation	"3.6.1.10; 3.6.1.11"	Volatile esters and polyphosphate curation (PR #336)	"10.1016/0014-5793(89)80882-8; 10.1023/a:1023648509241"	2	R03042									
+polyphosphate phosphohydrolase, n	YHR201C or YDR452W	-1000	1000	1	Oxidative phosphorylation	"3.6.1.10; 3.6.1.11"	Volatile esters and polyphosphate curation (PR #336)	"10.1002/yea.1391; 10.1007/s10540-006-9003-2"	2	R03042									
+ethyl-(2S)-lactate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-(2S)-lactate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-(2R)-lactate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-(2R)-lactate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+diethyl-succinate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+diethyl-succinate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+monoethyl-succinate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+monoethyl-succinate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-benzoate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-benzoate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-pyruvate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-pyruvate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+benzyl-acetate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+benzyl-acetate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-isobutyrate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-isobutyrate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-2-methylbutyrate transport		-1000	1000	1	Transport [c, e]		Volatile esters and polyphosphate curation (PR #336)		2										
+ethyl-2-methylbutyrate exchange		0	1000	0	Exchange reaction		Volatile esters and polyphosphate curation (PR #336)		2										
+polyphosphate transport, v-c		-1000	1000	1	Transport [c, v]		Volatile esters and polyphosphate curation (PR #336)		1										
+polyphosphate transport, c-m		-1000	1000	1	Transport [c, m]		Volatile esters and polyphosphate curation (PR #336)		1										
+polyphosphate transport, c-n		-1000	1000	1	Transport [c, n]		Volatile esters and polyphosphate curation (PR #336)		1										

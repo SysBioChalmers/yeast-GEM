@@ -1,26 +1,26 @@
 metNames	comps	formula	charge	inchi	metNotes	kegg.compound	chebi	pubchem.compound	metanetx.chemical	seed.compound	bigg.metabolite	biocyc	envipath	lipidmaps	reactome	sabiork.compound	slm
-ethyl (2S)-lactate	e	C5H10O3	0				ChEBI:78322		MNXM155838								
-ethyl (2S)-lactate	c	C5H10O3	0				ChEBI:78322		MNXM155838								
-ethyl (2R)-lactate	e	C5H10O3	0				ChEBI:78323		MNXM155836								
-ethyl (2R)-lactate	c	C5H10O3	0				ChEBI:78323		MNXM155836								
-diethyl succinate	c	C8H14O4	0				ChEBI:169507		MNXM124844								
-diethyl succinate	e	C8H14O4	0				ChEBI:169507		MNXM124844								
-monoethyl succinate	c	C6H9O4	-1				ChEBI:88827		MNXM151146								
-monoethyl succinate	e	C6H9O4	-1				ChEBI:88827		MNXM151146								
-ethyl benzoate	c	C9H10O2	0				ChEBI:156074		MNXM125514								
-ethyl benzoate	e	C9H10O2	0				ChEBI:156074		MNXM125514								
-ethyl pyruvate	c	C5H8O3	0				ChEBI:173421		MNXM52836								
-ethyl pyruvate	e	C5H8O3	0				ChEBI:173421		MNXM52836								
-2-methylbutyrate	c	C5H9O2	-1				ChEBI:37070		MNXM9859								
-2-methylbutyrate	e	C5H9O2	-1				ChEBI:37070		MNXM9859								
-ethyl 2-methylbutyrate	c	C7H14O2	0				ChEBI:88452		MNXM99666								
-ethyl 2-methylbutyrate	e	C7H14O2	0				ChEBI:88452		MNXM99666								
-isobutyrate	c	C4H7O2	-1				ChEBI:48944		MNXM1137661		ibt						
-isobutyrate	e	C4H7O2	-1				ChEBI:48944		MNXM1137661		ibt						
-ethyl isobutyrate	c	C6H12O2	0				ChEBI:87303		MNXM99814								
-ethyl isobutyrate	e	C6H12O2	0				ChEBI:87303		MNXM99814								
-benzyl acetate	c	C9H10O2	0				ChEBI:52051		MNXM3217								
-benzyl acetate	e	C9H10O2	0				ChEBI:52051		MNXM3217								
+ethyl (2S)-lactate	e	C5H10O3	0				CHEBI:78322		MNXM155838								
+ethyl (2S)-lactate	c	C5H10O3	0				CHEBI:78322		MNXM155838								
+ethyl (2R)-lactate	e	C5H10O3	0				CHEBI:78323		MNXM155836								
+ethyl (2R)-lactate	c	C5H10O3	0				CHEBI:78323		MNXM155836								
+diethyl succinate	c	C8H14O4	0				CHEBI:169507		MNXM124844								
+diethyl succinate	e	C8H14O4	0				CHEBI:169507		MNXM124844								
+monoethyl succinate	c	C6H9O4	-1				CHEBI:88827		MNXM151146								
+monoethyl succinate	e	C6H9O4	-1				CHEBI:88827		MNXM151146								
+ethyl benzoate	c	C9H10O2	0				CHEBI:156074		MNXM125514								
+ethyl benzoate	e	C9H10O2	0				CHEBI:156074		MNXM125514								
+ethyl pyruvate	c	C5H8O3	0				CHEBI:173421		MNXM52836								
+ethyl pyruvate	e	C5H8O3	0				CHEBI:173421		MNXM52836								
+2-methylbutyrate	c	C5H9O2	-1			C18319	CHEBI:37070		MNXM9859								
+2-methylbutyrate	e	C5H9O2	-1			C18319	CHEBI:37070		MNXM9859								
+ethyl 2-methylbutyrate	c	C7H14O2	0				CHEBI:88452		MNXM99666								
+ethyl 2-methylbutyrate	e	C7H14O2	0				CHEBI:88452		MNXM99666								
+isobutyrate	c	C4H7O2	-1				CHEBI:48944		MNXM1137661		ibt						
+isobutyrate	e	C4H7O2	-1				CHEBI:48944		MNXM1137661		ibt						
+ethyl isobutyrate	c	C6H12O2	0				CHEBI:87303		MNXM99814								
+ethyl isobutyrate	e	C6H12O2	0				CHEBI:87303		MNXM99814								
+benzyl acetate	c	C9H10O2	0			C15513	CHEBI:52051		MNXM3217								
+benzyl acetate	e	C9H10O2	0			C15513	CHEBI:52051		MNXM3217								
 polyphosphate	v	HO7P2	-3			C00404	CHEBI:16838		MNXM77738								
 polyphosphate	m	HO7P2	-3			C00404	CHEBI:16838		MNXM77738								
 polyphosphate	n	HO7P2	-3			C00404	CHEBI:16838		MNXM77738								
