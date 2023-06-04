@@ -3,7 +3,7 @@
 - metaData:
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
-    date: "2023-05-25"
+    date: "2023-06-04"
     givenName: "Eduard"
     familyName: "Kerkhoven"
     email: "eduardk@chalmers.se"
@@ -29854,7 +29854,7 @@
       - formula: "C5H10O3"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:78322"
+          - chebi: "CHEBI:78322"
           - metanetx.chemical: "MNXM155838"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29864,7 +29864,7 @@
       - formula: "C5H10O3"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:78322"
+          - chebi: "CHEBI:78322"
           - metanetx.chemical: "MNXM155838"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29874,7 +29874,7 @@
       - formula: "C5H10O3"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:78323"
+          - chebi: "CHEBI:78323"
           - metanetx.chemical: "MNXM155836"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29884,7 +29884,7 @@
       - formula: "C5H10O3"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:78323"
+          - chebi: "CHEBI:78323"
           - metanetx.chemical: "MNXM155836"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29894,7 +29894,7 @@
       - formula: "C8H14O4"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:169507"
+          - chebi: "CHEBI:169507"
           - metanetx.chemical: "MNXM124844"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29904,7 +29904,7 @@
       - formula: "C8H14O4"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:169507"
+          - chebi: "CHEBI:169507"
           - metanetx.chemical: "MNXM124844"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29914,7 +29914,7 @@
       - formula: "C6H9O4"
       - charge: -1
       - annotation: !!omap
-          - chebi: "ChEBI:88827"
+          - chebi: "CHEBI:88827"
           - metanetx.chemical: "MNXM151146"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29924,7 +29924,7 @@
       - formula: "C6H9O4"
       - charge: -1
       - annotation: !!omap
-          - chebi: "ChEBI:88827"
+          - chebi: "CHEBI:88827"
           - metanetx.chemical: "MNXM151146"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29934,7 +29934,7 @@
       - formula: "C9H10O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:156074"
+          - chebi: "CHEBI:156074"
           - metanetx.chemical: "MNXM125514"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29944,7 +29944,7 @@
       - formula: "C9H10O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:156074"
+          - chebi: "CHEBI:156074"
           - metanetx.chemical: "MNXM125514"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29954,7 +29954,7 @@
       - formula: "C5H8O3"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:173421"
+          - chebi: "CHEBI:173421"
           - metanetx.chemical: "MNXM52836"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29964,7 +29964,7 @@
       - formula: "C5H8O3"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:173421"
+          - chebi: "CHEBI:173421"
           - metanetx.chemical: "MNXM52836"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29974,7 +29974,8 @@
       - formula: "C5H9O2"
       - charge: -1
       - annotation: !!omap
-          - chebi: "ChEBI:37070"
+          - chebi: "CHEBI:37070"
+          - kegg.compound: "C18319"
           - metanetx.chemical: "MNXM9859"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29984,7 +29985,8 @@
       - formula: "C5H9O2"
       - charge: -1
       - annotation: !!omap
-          - chebi: "ChEBI:37070"
+          - chebi: "CHEBI:37070"
+          - kegg.compound: "C18319"
           - metanetx.chemical: "MNXM9859"
           - sbo: "SBO:0000247"
     - !!omap
@@ -29994,7 +29996,7 @@
       - formula: "C7H14O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:88452"
+          - chebi: "CHEBI:88452"
           - metanetx.chemical: "MNXM99666"
           - sbo: "SBO:0000247"
     - !!omap
@@ -30004,7 +30006,7 @@
       - formula: "C7H14O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:88452"
+          - chebi: "CHEBI:88452"
           - metanetx.chemical: "MNXM99666"
           - sbo: "SBO:0000247"
     - !!omap
@@ -30015,7 +30017,7 @@
       - charge: -1
       - annotation: !!omap
           - bigg.metabolite: "ibt"
-          - chebi: "ChEBI:48944"
+          - chebi: "CHEBI:48944"
           - metanetx.chemical: "MNXM1137661"
           - sbo: "SBO:0000247"
     - !!omap
@@ -30026,7 +30028,7 @@
       - charge: -1
       - annotation: !!omap
           - bigg.metabolite: "ibt"
-          - chebi: "ChEBI:48944"
+          - chebi: "CHEBI:48944"
           - metanetx.chemical: "MNXM1137661"
           - sbo: "SBO:0000247"
     - !!omap
@@ -30036,7 +30038,7 @@
       - formula: "C6H12O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:87303"
+          - chebi: "CHEBI:87303"
           - metanetx.chemical: "MNXM99814"
           - sbo: "SBO:0000247"
     - !!omap
@@ -30046,7 +30048,7 @@
       - formula: "C6H12O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:87303"
+          - chebi: "CHEBI:87303"
           - metanetx.chemical: "MNXM99814"
           - sbo: "SBO:0000247"
     - !!omap
@@ -30056,7 +30058,8 @@
       - formula: "C9H10O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:52051"
+          - chebi: "CHEBI:52051"
+          - kegg.compound: "C15513"
           - metanetx.chemical: "MNXM3217"
           - sbo: "SBO:0000247"
     - !!omap
@@ -30066,7 +30069,8 @@
       - formula: "C9H10O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "ChEBI:52051"
+          - chebi: "CHEBI:52051"
+          - kegg.compound: "C15513"
           - metanetx.chemical: "MNXM3217"
           - sbo: "SBO:0000247"
     - !!omap
@@ -35254,7 +35258,7 @@
           - s_1326: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "(Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR322C-A and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W) or (Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W and YPR020W) or (Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR322C-A and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W and YJL180C and YLR393W and YNL315C and YOL077W-A and YCL005W-A)"
+      - gene_reaction_rule: "Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W and YDR322C-A and YPR020W and YOL077W-A"
       - eccodes: "3.6.3.14"
       - subsystem:
           - "Oxidative phosphorylation"
@@ -109630,12 +109634,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
-      - references: "10.1006/fmic.1999.0272,10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z"
+      - references: "10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "ester volatiles and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4712"
       - name: "ethyl-(2R)-lactate esterase, c"
@@ -109649,12 +109654,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
-      - references: "10.1006/fmic.1999.0272,10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z"
+      - references: "10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4713"
       - name: "diethyl-succinate esterase, c"
@@ -109668,12 +109674,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
-      - references: "10.1016/S0889-1575(03)00021-8,10.1006/fmic.1999.0272,10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z"
+      - references: "10.1016/S0889-1575(03)00021-8; 10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4714"
       - name: "monoethyl-succinate esterase, c"
@@ -109687,12 +109694,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
-      - references: "10.1016/S0889-1575(03)00021-8, 10.1038/s41598-022-16554-z"
+      - references: "10.1016/S0889-1575(03)00021-8; 10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4715"
       - name: "ethyl-benzoate esterase, c"
@@ -109706,12 +109714,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
-      - references: "10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z"
+      - references: "10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4716"
       - name: "ethyl-pyruvate esterase, c"
@@ -109725,12 +109734,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
-      - references: "10.1006/fmic.1999.0272, 10.1038/s41598-022-16554-z"
+      - references: "10.1006/fmic.1999.0272; 10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4717"
       - name: "benzyl-acetate esterase, c"
@@ -109744,12 +109754,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
-      - references: "10.1016/j.aca.2009.09.040, 10.1038/s41598-022-16554-z"
+      - references: "10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4718"
       - name: "isobutyraldehyde dehydrogenase, c"
@@ -109766,12 +109777,12 @@
       - eccodes: "1.2.1.3"
       - references: "10.1042/BSR20160529"
       - subsystem:
+          - "Other"
       - annotation: !!omap
-          - kegg.pathway: "ec00010"
           - kegg.reaction: "R00538"
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4719"
       - name: "2-methylbutanal dehydrogenase, c"
@@ -109788,12 +109799,12 @@
       - eccodes: "1.2.1.3"
       - references: "10.1042/BSR20160529"
       - subsystem:
+          - "Other"
       - annotation: !!omap
-          - kegg.pathway: "ec00010"
           - kegg.reaction: "R00538"
           - sbo: "SBO:0000176"
       - confidence_score: 1
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4720"
       - name: "ethyl-isobutyrate esterase, c"
@@ -109809,10 +109820,11 @@
       - eccodes: "3.1.-.-"
       - references: "10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4721"
       - name: "ethyl-2-methylbutyrate esterase, c"
@@ -109828,10 +109840,11 @@
       - eccodes: "3.1.-.-"
       - references: "10.1038/s41598-022-16554-z"
       - subsystem:
+          - "Other"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4722"
       - name: "polyphosphate polymerase, c"
@@ -109844,18 +109857,17 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YJL012C"
       - eccodes: "2.7.4.1"
-      - references: "10.1126/science.1168120, 10.3390/biology10060487"
+      - references: "10.1126/science.1168120; 10.3390/biology10060487"
       - subsystem:
+          - "Oxidative phosphorylation"
       - annotation: !!omap
-          - kegg.pathway: "ec00190"
           - kegg.reaction: "R02184"
-          - metanetx.reaction: "MNXR103113"
           - sbo: "SBO:0000176"
       - confidence_score: 3
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4723"
-      - name: "Polyphosphate phosphohydrolase, v"
+      - name: "polyphosphate phosphohydrolase, v"
       - metabolites: !!omap
           - s_0802: 1
           - s_0810: -1
@@ -109866,19 +109878,19 @@
       - gene_reaction_rule: "YHR201C or YDR452W"
       - eccodes:
           - "3.6.1.10"
-          - "3.6.1.-"
           - "3.6.1.11"
       - references: "10.1007/s10540-006-9003-2"
       - subsystem:
+          - "Oxidative phosphorylation"
       - annotation: !!omap
           - kegg.reaction: "R03042"
           - metanetx.reaction: "MNXR107906"
           - sbo: "SBO:0000176"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4724"
-      - name: "Polyphosphate phosphohydrolase, m"
+      - name: "polyphosphate phosphohydrolase, m"
       - metabolites: !!omap
           - s_0799: 1
           - s_0807: -1
@@ -109889,17 +109901,18 @@
       - gene_reaction_rule: "YHR201C or YDR452W"
       - eccodes:
           - "3.6.1.10"
-          - "3.6.1.-"
           - "3.6.1.11"
-      - references: "10.1016/0014-5793(89)80882-8, 10.1023/a:1023648509241"
+      - references: "10.1016/0014-5793(89)80882-8; 10.1023/a:1023648509241"
       - subsystem:
+          - "Oxidative phosphorylation"
       - annotation: !!omap
+          - kegg.reaction: "R03042"
           - sbo: "SBO:0000176"
-      - confidence_score: 0
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - confidence_score: 2
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4725"
-      - name: "Polyphosphate phosphohydrolase, n"
+      - name: "polyphosphate phosphohydrolase, n"
       - metabolites: !!omap
           - s_0800: 1
           - s_0808: -1
@@ -109910,14 +109923,15 @@
       - gene_reaction_rule: "YHR201C or YDR452W"
       - eccodes:
           - "3.6.1.10"
-          - "3.6.1.-"
           - "3.6.1.11"
-      - references: "10.1002/yea.1391, 10.1007/s10540-006-9003-2"
+      - references: "10.1002/yea.1391; 10.1007/s10540-006-9003-2"
       - subsystem:
+          - "Oxidative phosphorylation"
       - annotation: !!omap
+          - kegg.reaction: "R03042"
           - sbo: "SBO:0000176"
-      - confidence_score: 0
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - confidence_score: 2
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4726"
       - name: "ethyl-(2S)-lactate transport"
@@ -109926,12 +109940,12 @@
           - s_4271: -1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4727"
       - name: "ethyl-(2S)-lactate exchange"
@@ -109939,12 +109953,12 @@
           - s_4270: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4728"
       - name: "ethyl-(2R)-lactate transport"
@@ -109953,12 +109967,12 @@
           - s_4273: -1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4729"
       - name: "ethyl-(2R)-lactate exchange"
@@ -109966,12 +109980,12 @@
           - s_4272: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4730"
       - name: "diethyl-succinate transport"
@@ -109980,12 +109994,12 @@
           - s_4275: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4731"
       - name: "diethyl-succinate exchange"
@@ -109993,12 +110007,12 @@
           - s_4275: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4732"
       - name: "monoethyl-succinate transport"
@@ -110007,12 +110021,12 @@
           - s_4277: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4733"
       - name: "monoethyl-succinate exchange"
@@ -110020,12 +110034,12 @@
           - s_4277: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4734"
       - name: "ethyl-benzoate transport"
@@ -110034,12 +110048,12 @@
           - s_4279: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4735"
       - name: "ethyl-benzoate exchange"
@@ -110047,12 +110061,12 @@
           - s_4279: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4736"
       - name: "ethyl-pyruvate transport"
@@ -110061,12 +110075,12 @@
           - s_4281: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4737"
       - name: "ethyl-pyruvate exchange"
@@ -110074,12 +110088,12 @@
           - s_4281: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4738"
       - name: "benzyl-acetate transport"
@@ -110088,12 +110102,12 @@
           - s_4291: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4739"
       - name: "benzyl-acetate exchange"
@@ -110101,12 +110115,12 @@
           - s_4291: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4740"
       - name: "ethyl-isobutyrate transport"
@@ -110115,12 +110129,12 @@
           - s_4289: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4741"
       - name: "ethyl-isobutyrate exchange"
@@ -110128,12 +110142,12 @@
           - s_4289: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4742"
       - name: "ethyl-2-methylbutyrate transport"
@@ -110142,12 +110156,12 @@
           - s_4285: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Transport [c, e]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4743"
       - name: "ethyl-2-methylbutyrate exchange"
@@ -110155,12 +110169,12 @@
           - s_4285: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - references: "NOTES: added for FA ester pathways (PR #190)"
       - subsystem:
+          - "Exchange reaction"
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - confidence_score: 2
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4744"
       - name: "polyphosphate transport, v-c"
@@ -110171,12 +110185,12 @@
           - s_4292: -1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "Required to account for polyphosphate in compartments, a production by membrane complex Vtc4p is unlikely for the mitochondria"
       - subsystem:
+          - "Transport [c, v]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 1
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4745"
       - name: "polyphosphate transport, c-m"
@@ -110187,12 +110201,12 @@
           - s_4293: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "Required to account for polyphosphate in compartments, a production by membrane complex Vtc4p is unlikely for the mitochondria"
       - subsystem:
+          - "Transport [c, m]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 1
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
     - !!omap
       - id: "r_4746"
       - name: "polyphosphate transport, c-n"
@@ -110203,12 +110217,12 @@
           - s_4294: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - references: "Required to account for polyphosphate in compartments, a production by membrane complex Vtc4p is unlikely for the mitochondria"
       - subsystem:
+          - "Transport [c, n]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 1
-      - rxnNotes: "volatile esters and polyphosphate curation"
+      - rxnNotes: "Volatile esters and polyphosphate curation (PR #336)"
 - genes:
     - !!omap
       - id: "Q0045"
@@ -112015,11 +112029,13 @@
       - name: "CYR1"
     - !!omap
       - id: "YJL012C"
-      - name: "Vtc4p"
+      - name: "VTC4"
       - annotation: !!omap
-          - ncbigene: "FN393075.2"
-          - ncbiprotein: "CAY80765"
-          - uniprot: "C8ZBJ9"
+          - kegg.genes: "sce:YJL012C"
+          - ncbigene: "853441"
+          - ncbiprotein: "NP_012522"
+          - refseq: "NM_001181446"
+          - uniprot: "P47075"
     - !!omap
       - id: "YJL026W"
       - name: "RNR2"
@@ -112095,9 +112111,6 @@
     - !!omap
       - id: "YJL168C"
       - name: "SET2"
-    - !!omap
-      - id: "YJL180C"
-      - name: "ATP12"
     - !!omap
       - id: "YJL196C"
       - name: "ELO1"
@@ -112720,9 +112733,6 @@
       - id: "YLR386W"
       - name: "VAC14"
     - !!omap
-      - id: "YLR393W"
-      - name: "ATP10"
-    - !!omap
       - id: "YLR395C"
       - name: "COX8"
     - !!omap
@@ -113118,9 +113128,6 @@
     - !!omap
       - id: "YNL292W"
       - name: "PUS4"
-    - !!omap
-      - id: "YNL315C"
-      - name: "ATP11"
     - !!omap
       - id: "YNL316C"
       - name: "PHA2"
