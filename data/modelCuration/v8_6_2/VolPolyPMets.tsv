@@ -12,11 +12,9 @@ ethyl benzoate	e	C9H10O2	0				CHEBI:156074		MNXM125514
 ethyl pyruvate	c	C5H8O3	0				CHEBI:173421		MNXM52836								
 ethyl pyruvate	e	C5H8O3	0				CHEBI:173421		MNXM52836								
 2-methylbutyrate	c	C5H9O2	-1			C18319	CHEBI:37070		MNXM9859								
-2-methylbutyrate	e	C5H9O2	-1			C18319	CHEBI:37070		MNXM9859								
 ethyl 2-methylbutyrate	c	C7H14O2	0				CHEBI:88452		MNXM99666								
 ethyl 2-methylbutyrate	e	C7H14O2	0				CHEBI:88452		MNXM99666								
 isobutyrate	c	C4H7O2	-1				CHEBI:48944		MNXM1137661		ibt						
-isobutyrate	e	C4H7O2	-1				CHEBI:48944		MNXM1137661		ibt						
 ethyl isobutyrate	c	C6H12O2	0				CHEBI:87303		MNXM99814								
 ethyl isobutyrate	e	C6H12O2	0				CHEBI:87303		MNXM99814								
 benzyl acetate	c	C9H10O2	0			C15513	CHEBI:52051		MNXM3217								

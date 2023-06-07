@@ -3,7 +3,7 @@
 - metaData:
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
-    date: "2023-06-04"
+    date: "2023-06-07"
     givenName: "Eduard"
     familyName: "Kerkhoven"
     email: "eduardk@chalmers.se"
@@ -29980,19 +29980,18 @@
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4283"
-      - name: "2-methylbutyrate"
-      - compartment: "e"
-      - formula: "C5H9O2"
-      - charge: -1
+      - name: "ethyl 2-methylbutyrate"
+      - compartment: "c"
+      - formula: "C7H14O2"
+      - charge: 0
       - annotation: !!omap
-          - chebi: "CHEBI:37070"
-          - kegg.compound: "C18319"
-          - metanetx.chemical: "MNXM9859"
+          - chebi: "CHEBI:88452"
+          - metanetx.chemical: "MNXM99666"
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4284"
       - name: "ethyl 2-methylbutyrate"
-      - compartment: "c"
+      - compartment: "e"
       - formula: "C7H14O2"
       - charge: 0
       - annotation: !!omap
@@ -30001,80 +30000,59 @@
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4285"
-      - name: "ethyl 2-methylbutyrate"
-      - compartment: "e"
-      - formula: "C7H14O2"
-      - charge: 0
+      - name: "isobutyrate"
+      - compartment: "c"
+      - formula: "C4H7O2"
+      - charge: -1
       - annotation: !!omap
-          - chebi: "CHEBI:88452"
-          - metanetx.chemical: "MNXM99666"
+          - bigg.metabolite: "ibt"
+          - chebi: "CHEBI:48944"
+          - metanetx.chemical: "MNXM1137661"
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4286"
-      - name: "isobutyrate"
+      - name: "ethyl isobutyrate"
       - compartment: "c"
-      - formula: "C4H7O2"
-      - charge: -1
+      - formula: "C6H12O2"
+      - charge: 0
       - annotation: !!omap
-          - bigg.metabolite: "ibt"
-          - chebi: "CHEBI:48944"
-          - metanetx.chemical: "MNXM1137661"
+          - chebi: "CHEBI:87303"
+          - metanetx.chemical: "MNXM99814"
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4287"
-      - name: "isobutyrate"
+      - name: "ethyl isobutyrate"
       - compartment: "e"
-      - formula: "C4H7O2"
-      - charge: -1
+      - formula: "C6H12O2"
+      - charge: 0
       - annotation: !!omap
-          - bigg.metabolite: "ibt"
-          - chebi: "CHEBI:48944"
-          - metanetx.chemical: "MNXM1137661"
+          - chebi: "CHEBI:87303"
+          - metanetx.chemical: "MNXM99814"
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4288"
-      - name: "ethyl isobutyrate"
+      - name: "benzyl acetate"
       - compartment: "c"
-      - formula: "C6H12O2"
+      - formula: "C9H10O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "CHEBI:87303"
-          - metanetx.chemical: "MNXM99814"
+          - chebi: "CHEBI:52051"
+          - kegg.compound: "C15513"
+          - metanetx.chemical: "MNXM3217"
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4289"
-      - name: "ethyl isobutyrate"
+      - name: "benzyl acetate"
       - compartment: "e"
-      - formula: "C6H12O2"
+      - formula: "C9H10O2"
       - charge: 0
       - annotation: !!omap
-          - chebi: "CHEBI:87303"
-          - metanetx.chemical: "MNXM99814"
+          - chebi: "CHEBI:52051"
+          - kegg.compound: "C15513"
+          - metanetx.chemical: "MNXM3217"
           - sbo: "SBO:0000247"
     - !!omap
       - id: "s_4290"
-      - name: "benzyl acetate"
-      - compartment: "c"
-      - formula: "C9H10O2"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:52051"
-          - kegg.compound: "C15513"
-          - metanetx.chemical: "MNXM3217"
-          - sbo: "SBO:0000247"
-    - !!omap
-      - id: "s_4291"
-      - name: "benzyl acetate"
-      - compartment: "e"
-      - formula: "C9H10O2"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:52051"
-          - kegg.compound: "C15513"
-          - metanetx.chemical: "MNXM3217"
-          - sbo: "SBO:0000247"
-    - !!omap
-      - id: "s_4292"
       - name: "polyphosphate"
       - compartment: "v"
       - formula: "HO7P2"
@@ -30085,7 +30063,7 @@
           - metanetx.chemical: "MNXM77738"
           - sbo: "SBO:0000247"
     - !!omap
-      - id: "s_4293"
+      - id: "s_4291"
       - name: "polyphosphate"
       - compartment: "m"
       - formula: "HO7P2"
@@ -30096,7 +30074,7 @@
           - metanetx.chemical: "MNXM77738"
           - sbo: "SBO:0000247"
     - !!omap
-      - id: "s_4294"
+      - id: "s_4292"
       - name: "polyphosphate"
       - compartment: "n"
       - formula: "HO7P2"
@@ -30107,7 +30085,7 @@
           - metanetx.chemical: "MNXM77738"
           - sbo: "SBO:0000247"
     - !!omap
-      - id: "s_4295"
+      - id: "s_4293"
       - name: "phosphate"
       - compartment: "n"
       - formula: "HO4P"
@@ -109636,7 +109614,7 @@
       - eccodes: "3.1.-.-"
       - references: "10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109656,7 +109634,7 @@
       - eccodes: "3.1.-.-"
       - references: "10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109676,7 +109654,7 @@
       - eccodes: "3.1.-.-"
       - references: "10.1016/S0889-1575(03)00021-8; 10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109696,7 +109674,7 @@
       - eccodes: "3.1.-.-"
       - references: "10.1016/S0889-1575(03)00021-8; 10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109716,7 +109694,7 @@
       - eccodes: "3.1.-.-"
       - references: "10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109736,7 +109714,7 @@
       - eccodes: "3.1.-.-"
       - references: "10.1006/fmic.1999.0272; 10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109749,14 +109727,14 @@
           - s_0794: -1
           - s_0803: 1
           - s_3799: -1
-          - s_4290: 1
+          - s_4288: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
       - references: "10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109770,14 +109748,14 @@
           - s_0937: -1
           - s_1198: -1
           - s_1203: 1
-          - s_4286: 1
+          - s_4285: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YOR374W or YPL061W"
       - eccodes: "1.2.1.3"
       - references: "10.1042/BSR20160529"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - kegg.reaction: "R00538"
           - sbo: "SBO:0000176"
@@ -109799,7 +109777,7 @@
       - eccodes: "1.2.1.3"
       - references: "10.1042/BSR20160529"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - kegg.reaction: "R00538"
           - sbo: "SBO:0000176"
@@ -109812,15 +109790,15 @@
           - s_0680: -1
           - s_0794: -1
           - s_0803: 1
-          - s_4286: -1
-          - s_4288: 1
+          - s_4285: -1
+          - s_4286: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
       - references: "10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109833,14 +109811,14 @@
           - s_0794: -1
           - s_0803: 1
           - s_4282: -1
-          - s_4284: 1
+          - s_4283: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
       - references: "10.1038/s41598-022-16554-z"
       - subsystem:
-          - "Other"
+          - "Fatty acid ester pathway"
       - annotation: !!omap
           - sbo: "SBO:0000176"
       - confidence_score: 2
@@ -109852,7 +109830,7 @@
           - s_0434: -2
           - s_0794: 1
           - s_0803: -1
-          - s_4292: 1
+          - s_4290: 1
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJL012C"
@@ -109872,7 +109850,7 @@
           - s_0802: 1
           - s_0810: -1
           - s_1329: 2
-          - s_4292: -1
+          - s_4290: -1
       - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YHR201C or YDR452W"
@@ -109895,7 +109873,7 @@
           - s_0799: 1
           - s_0807: -1
           - s_1326: 2
-          - s_4293: -1
+          - s_4291: -1
       - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YHR201C or YDR452W"
@@ -109916,8 +109894,8 @@
       - metabolites: !!omap
           - s_0800: 1
           - s_0808: -1
-          - s_4294: -1
-          - s_4295: 2
+          - s_4292: -1
+          - s_4293: 2
       - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YHR201C or YDR452W"
@@ -110098,8 +110076,8 @@
       - id: "r_4738"
       - name: "benzyl-acetate transport"
       - metabolites: !!omap
-          - s_4290: -1
-          - s_4291: 1
+          - s_4288: -1
+          - s_4289: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - subsystem:
@@ -110112,7 +110090,7 @@
       - id: "r_4739"
       - name: "benzyl-acetate exchange"
       - metabolites: !!omap
-          - s_4291: -1
+          - s_4289: -1
       - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
@@ -110125,8 +110103,8 @@
       - id: "r_4740"
       - name: "ethyl-isobutyrate transport"
       - metabolites: !!omap
-          - s_4288: -1
-          - s_4289: 1
+          - s_4286: -1
+          - s_4287: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - subsystem:
@@ -110139,7 +110117,7 @@
       - id: "r_4741"
       - name: "ethyl-isobutyrate exchange"
       - metabolites: !!omap
-          - s_4289: -1
+          - s_4287: -1
       - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
@@ -110152,8 +110130,8 @@
       - id: "r_4742"
       - name: "ethyl-2-methylbutyrate transport"
       - metabolites: !!omap
-          - s_4284: -1
-          - s_4285: 1
+          - s_4283: -1
+          - s_4284: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - subsystem:
@@ -110166,7 +110144,7 @@
       - id: "r_4743"
       - name: "ethyl-2-methylbutyrate exchange"
       - metabolites: !!omap
-          - s_4285: -1
+          - s_4284: -1
       - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
@@ -110182,7 +110160,7 @@
           - s_0794: 1
           - s_0802: -1
           - s_4018: 1
-          - s_4292: -1
+          - s_4290: -1
       - lower_bound: -1000
       - upper_bound: 1000
       - subsystem:
@@ -110198,7 +110176,7 @@
           - s_0794: -1
           - s_0799: 1
           - s_4018: -1
-          - s_4293: 1
+          - s_4291: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - subsystem:
@@ -110214,7 +110192,7 @@
           - s_0794: -1
           - s_0800: 1
           - s_4018: -1
-          - s_4294: 1
+          - s_4292: 1
       - lower_bound: -1000
       - upper_bound: 1000
       - subsystem:
