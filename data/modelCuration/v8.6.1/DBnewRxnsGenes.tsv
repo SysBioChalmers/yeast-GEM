@@ -1,4 +1,3 @@
 genes	geneShortName	ncbigene	refseq	uniprot	kegg.genes	ecogene	hprd	asap	ccds	ncbiprotein
-YEL011W	GLC3	856705	NM_001178826	P32775	sce:YEL011W					NP_010905
 YPR193C	HPA2	856323	NM_001184290	Q06592	sce:YPR193C					NP_015519
 YDR109C		851687	NM_001180417		sce:YDR109C					NP_010394
