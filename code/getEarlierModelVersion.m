@@ -11,8 +11,8 @@ function model = getEarlierModelVersion(version,verbose)
 %   verbose     if true, the model version (as obtained from model.id) is
 %               printed (opt, default true).
 %
-%   Usage: getEarlierModelVersion(bumpType)
-%
+% Usage:
+%   model = getEarlierModelVersion(version,verbose)
 
 if nargin<2
     verbose=true;
@@ -48,5 +48,4 @@ delete '_earlierModel.xml'
 if verbose
     disp(['Loaded model version: ''' regexprep(model.id,'yeastGEM_v?','') ''''])
 end
-
 end
