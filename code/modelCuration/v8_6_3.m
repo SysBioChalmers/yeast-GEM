@@ -8,7 +8,7 @@
 
 %% Load yeast-GEM 8.6.3 (requires local yeast-GEM git repository)
 cd ..
-model = getEarlierModelVersion('8.6.3');
+model = getEarlierModelVersion('develop');
 model.id='yeastGEM_develop';
 dataDir=fullfile(pwd(),'..','data','modelCuration','v8_6_3');
 cd modelCuration
