@@ -1,2 +1,0 @@
-#	ID	DESCRIPTION	DEFAULT LOWER	DEFAULT UPPER	CONTACT GIVEN NAME	CONTACT FAMILY NAME	CONTACT EMAIL	ORGANIZATION	TAXONOMY	NOTES
-	Saccharomyces_cerevisiae.fasta	Automatically generated from KEGG Release 87.1	-1000	1000	Rasmus	Agren	rasmus.agren@scilifelab.se	Chalmers University of Technology		
