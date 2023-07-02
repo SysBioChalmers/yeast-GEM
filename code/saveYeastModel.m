@@ -75,6 +75,11 @@ else
     exportForGit(model,'yeast-GEM','../model',{'yml','txt','xlsx','mat'},false,false);
 end
 
+%Write deltaG fields to file
+cd missingFields
+saveDeltaG(model,false);
+cd ..
+
 %Update README file: date + size of model
 modelVersion = regexprep(model.id,'yeastGEM_v?','');
 nGenes=num2str(numel(model.genes));
@@ -116,11 +121,9 @@ delete('backup.xml');
 
 %Switch back to original folder
 cd(currentDir)
-
 end
 
 %%
-
 function checkGrowth(model,condition,allowNoGrowth)
 %Function that checks if the model can grow or not using COBRA under a
 %given condition (aerobic or anaerobic). Will either return warnings or
@@ -151,5 +154,4 @@ if exist('dispText','var')
         error([dispText ' before committing.'])
     end
 end
-
 end

@@ -7,8 +7,9 @@
 % can do many types of curation.
 
 %% Load yeast-GEM develop (requires local yeast-GEM git repository)
+codeDir = pwd;
 cd ..
-model = getEarlierModelVersion('develop');
+model = getEarlierModelVersion('662cdefcb2e8af2594f8c30ce62a75ef6f4ef0de');
 model.id='yeastGEM_develop';
 dataDir=fullfile(pwd(),'..','data','modelCuration','v8_6_4');
 cd modelCuration
@@ -17,7 +18,7 @@ cd modelCuration
 cd(dataDir)
 %% Gather yETFL data
 % First-time run:
-websave('input_models.zip','https://zenodo.org/record/4778047/files/input_models.zip?download=1')
+websave('input_models.zip','https://zenodo.org/record/4778047/files/input_models.zip?download=1');
 unzip('input_models.zip');
 modelYETFL = load('input_models/yeast8_thermo_curated.mat');
 modelYETFL = modelYETFL.model;
@@ -32,8 +33,8 @@ clear modelYETFL idx
 rmdir input_models s
 delete input_models.zip
 % Repeated runs can reuse this file, but will not submit to GitHub
-% yetfl_metG = readtable('yetfl_metG.csv');
-% yetfl_rxnG = readtable('yetfl_rxnG.csv');
+yetfl_metG = readtable('yetfl_metG.csv');
+yetfl_rxnG = readtable('yetfl_rxnG.csv');
 
 %% Gather ModelSEED data via get_seed_data.py, CSV obtained how?
 seed_metG = readtable('modelseed_metG.csv');
@@ -46,7 +47,7 @@ model.metDeltaG = nan(numel(model.mets),1);
 
 % Map to yETFL by metNames
 [a,b] = ismember(model.metNames,yetfl_metG.Var1);
-model.metDeltaG(a) = yetfl_metG.Var2(b(a));
+model.metDeltaG(a) = round(yetfl_metG.Var2(b(a)),2);
 
 % If no deltaG is assigned, map to ModelSEED by KEGG IDs
 noDeltaG = isnan(model.metDeltaG);
@@ -56,21 +57,21 @@ hasKEGG = ~cellfun(@isempty,kegg);
 toCheck = find(hasKEGG & noDeltaG);
 
 [a,b] = ismember(kegg(toCheck),seed_metG.kegg);
-model.metDeltaG(toCheck(a)) = seed_metG.deltag(b(a));
+model.metDeltaG(toCheck(a)) = round(seed_metG.deltag(b(a)),2);
 
 %% Assign rxnDeltaG, preferred source: yETFL > dG-predictor
 model.rxnDeltaG = nan(numel(model.rxns),1);
 
 % Map to yETFL by reaction IDs
 [a,b] = ismember(model.rxns,yetfl_rxnG.Var1);
-model.rxnDeltaG(a) = yetfl_rxnG.Var2(b(a));
+model.rxnDeltaG(a) = round(yetfl_rxnG.Var2(b(a)),2);
 
 % If no deltaG is assigned, calculate by dG-predictor
 noDeltaG = isnan(model.rxnDeltaG);
-% Actually, no deltaG is found for model.rxns(3983:4099). Current
+% Actually, no deltaG is found for model.rxns(3983:4131). Current
 % dG-predictor dataset has data for model.rxns(1:4062). For now, use the
 % deltaGs for model.rxns(3983:4062).
-model.rxnDeltaG(3983:4062) = dgpred_rxnG.detaG(3983:4062);
+model.rxnDeltaG(3983:4062) = round(dgpred_rxnG.detaG(3983:4062),2);
 
 %% RAVEN does not yet support .rxnDeltaG and .metDeltaG fields.
 % For now, write these two tables. RAVEN will soon support I/O of deltaG in
@@ -99,6 +100,6 @@ cd(dataDir)
 % fprintf('R2 of growth prediction: %.4f\n', R2);
 % 
 % % Save model:
-% cd ..
-% saveYeastModel(model)
-% cd modelCuration
+cd(fullfile(codeDir,'..'))
+saveYeastModel(model)
+cd modelCuration

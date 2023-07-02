@@ -37,7 +37,6 @@ else
     end
 end
 cd missingFields
-model = addDeltaG(model);
-
-disp('If there is only 1 warning and no errors, it can savely be ignored.')
+model = loadDeltaG(model);
+cd(currentDir)
 end

@@ -1,8 +1,8 @@
-function model = addDeltaG(model)
-% addDeltaG
-%   Add metDeltaG and rxnDeltaG fields, based on datafiles in the yeast-GEM
-%   repository (data/databases/model_*DeltaG.csv). Metabolites and
-%   reactions are matched by their identifiers (i.e. model.mets and
+function model = loadDeltaG(model)
+% loadDeltaG
+%   Add metDeltaG and rxnDeltaG fields to a model, based on datafiles saved at
+%   /data/databases (model_rxnDeltaG.csv and model_metDeltaG.csv). Metabolites
+%   and reactions are matched by their identifiers (i.e. model.mets and
 %   model.rxns). If changes are made that affect the identifiers or what
 %   metabolites or reactions they refer to, the deltaG values will not be
 %   correct.
@@ -13,7 +13,7 @@ function model = addDeltaG(model)
 % Output:
 %   model   yeast-GEM with metDeltaG and rxnDeltaG fields
 %
-% Usage: model = addDeltaG(model)
+% Usage: model = loadDeltaG(model)
 
 if isfield(model,'metDeltaG')
     disp('Existing metDeltaG field will be overwritten.')
