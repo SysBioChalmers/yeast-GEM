@@ -1,3 +1,8 @@
+# yeast-GEM specific #
+###################
+yetfl_metG.csv
+yetfl_rxnG.csv
+
 # Compiled source #
 ###################
 *.com
