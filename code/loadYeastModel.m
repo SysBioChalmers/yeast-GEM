@@ -36,5 +36,8 @@ else
         model = ravenCobraWrapper(model);
     end
 end
+cd missingFields
+model = addDeltaG(model);
+
 disp('If there is only 1 warning and no errors, it can savely be ignored.')
 end

@@ -76,10 +76,12 @@ model.rxnDeltaG(3983:4062) = dgpred_rxnG.detaG(3983:4062);
 % For now, write these two tables. RAVEN will soon support I/O of deltaG in
 % YAML files, and a custom function could be written to add the field after
 % loading SBML file as well. Otherwise, the current script can be run
+cd ../../databases/
 metG = array2table([model.mets, num2cell(model.metDeltaG)]);
 writetable(metG,'model_metDeltaG.csv');
 rxnG = array2table([model.rxns, num2cell(model.rxnDeltaG)]);
 writetable(rxnG,'model_rxnDeltaG.csv');
+cd(dataDir)
 
 % %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % % Show some metrics:
