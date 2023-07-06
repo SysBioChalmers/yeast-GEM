@@ -17,6 +17,7 @@ jobs:
           shell: bash
           run: |
             cd /opt
+            pip install -r code/requirements/ci-requirements.txt
             touch .env
             python -c 'import code.io as io; model = io.read_yeast_model(make_bigg_compliant=True); io.write_yeast_model(model)'
             memote run --ignore-git --solver-timeout 30
