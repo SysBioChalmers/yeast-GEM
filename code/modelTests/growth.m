@@ -53,8 +53,9 @@ plot(x,y,'--','MarkerSize',6,'Color',[64,64,64]/256)
 xlabel('Experimental growth rate [1/h]','FontSize',14,'FontName','Helvetica')
 ylabel('In silico growth rate [1/h]','FontSize',14,'FontName','Helvetica')
 legend(b,'N-limited aerobic','C-limited aerobic','C-limited anaerobic','N-limited anaerobic','Location','northwest')
-meanerror = sum(([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)]-[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]).^2)/32;
-text(0.25,0.1,['meanerror:',num2str(meanerror*100),'%'])
+
+meanerror = sqrt(sum(([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)]-[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]).^2)/32)/sqrt(32);
+text(0.25,0.1,['SEM:',num2str(meanerror)])
 hold off
 R2=corrcoef([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)],[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]);
 R2=R2(2)^2;
