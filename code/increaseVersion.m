@@ -99,7 +99,7 @@ while still_reading
   inline = fgets(fin);
   if ~ischar(inline)
       still_reading = false;
-  elseif ~startsWith(inline,'*.mat') && ~startsWith(inline,'*.xlsx')
+  elseif ~startsWith(inline,'*.mat') && ~startsWith(inline,'*.xls')
       fwrite(fout,inline);
   end
 end
