@@ -50,7 +50,7 @@ You can obtained the model by any of the following methods:
 
 If you want to use the model for your own model simulations, you can use **any software** that accepts SBML L3V1 FBCv3 formatted model files. This includes any of the following:
 * MATLAB-based
-  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.7.1 or later (recommended)  
+  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later (recommended)  
   * [COBRA Toolbox](https://github.com/opencobra/cobratoolbox)
 
 * Python-based
@@ -62,7 +62,7 @@ Please see the installation instructions for each software package.
 
 * MATLAB-based  
   If you want to contribute to the development of yeast-GEM, or otherwise want to run any of the [provided](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code) MATLAB functions, then the following software is required:
-  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.7.1 or later
+  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later
 
 * Python-based  
   Contribution via python (cobrapy) is not yet functional. In essence, if you can retain the same format of the model files, you can still contribute to the development of yeast-GEM. However, you cannot use the MATLAB functions.
