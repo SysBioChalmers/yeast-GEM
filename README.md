@@ -69,15 +69,15 @@ Please see the installation instructions for each software package.
 
   If you want to use any of the [provided](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code) Python functions, you may create an environment with all requirements:
   ```bash
-  pip install -r code/requirements/requirements.txt  # installs all dependencies
-  touch .env                                    # creates a .env file for locating the root
+  pip install -r code/requirements/requirements.txt  # install all dependencies
+  touch .env # create a .env file for locating the root
   ```
 
 If you want to locally run `memote run` or `memote report history`, you should also install [git lfs](https://git-lfs.github.com/), as `results.db` (the database that stores all memote results) is tracked with git lfs.
 
 ## Model usage
 
-Make sure to load/save the model with the corresponding wrapper functions
+Make sure to load/save the model with the corresponding wrapper functions:
 * In Matlab:
   ```matlab
   cd ./code
@@ -85,7 +85,12 @@ Make sure to load/save the model with the corresponding wrapper functions
   saveYeastModel(model);    % saving
   ```
   * If RAVEN is not installed, you can also use COBRA-native functions (`readCbModel`, `writeCbModel`), but these model-files cannot be committed back to the GitHub repository.
-* In Python:
+* In Python:  
+Before opening Python, the following command should (once) be run in the yeast-GEM root folder:  
+  ```bash
+  touch .env # create a .env file for locating the root
+  ```
+  Afterwards, the model can be loaded in Python with:
   ```python
   import code.io as io
   model = io.read_yeast_model() # loading
