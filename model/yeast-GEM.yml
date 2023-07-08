@@ -3,7 +3,7 @@
 - metaData:
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
-    date: "2023-07-01"
+    date: "2023-07-08"
     givenName: "Eduard"
     familyName: "Kerkhoven"
     email: "eduardk@chalmers.se"
@@ -30568,10 +30568,10 @@
       - formula: "C10H6NO4"
       - charge: -1
       - annotation: !!omap
-          - bigg.metabolite: "C02470"
+          - bigg.metabolite: "CE2949"
           - biocyc: "XANTHURENATE"
           - chebi: "CHEBI:71201"
-          - kegg.compound: "C02470                      "
+          - kegg.compound: "C02470"
           - metanetx.chemical: "MNXM5989"
           - sbo: "SBO:0000247"
           - seed.compound: "cpd01625"
@@ -110693,7 +110693,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YNR012W or YDR020C"
       - eccodes: "2.7.1.48"
-      - references: "doi: 10.1007/s002940050482;doi: 10.1093/nar/18.17.5279"
+      - references: "doi:10.1007/s002940050482;doi:10.1093/nar/18.17.5279"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
@@ -110702,9 +110702,7 @@
           - kegg.reaction: "R00513"
           - metanetx.reaction: "MNXR190860"
           - rhea: "RHEA:24674"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4748"
@@ -110719,7 +110717,6 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YML070W or YFL053W"
       - eccodes: "2.7.1.28"
-      - references: "By similarity"
       - subsystem:
           - "Fructose and mannose metabolism"
       - annotation: !!omap
@@ -110728,9 +110725,7 @@
           - kegg.reaction: "R01059"
           - metanetx.reaction: "MNXR146589"
           - rhea: "RHEA:13941"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4749"
@@ -110744,7 +110739,6 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YLR209C"
       - eccodes: "2.4.2.1"
-      - references: "By similarity"
       - subsystem:
           - "Purine metabolism"
       - annotation: !!omap
@@ -110753,9 +110747,7 @@
           - kegg.reaction: "R01561"
           - metanetx.reaction: "MNXR133777"
           - rhea: "RHEA:27642"
-          - rxnConfidenceScores: "3"
           - sbo: "SBO:0000176"
-      - confidence_score: 3
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4750"
@@ -110767,7 +110759,6 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YBR019C"
       - eccodes: "5.1.3.3"
-      - references: "By similarity"
       - subsystem:
           - "Glycolysis / gluconeogenesis"
       - annotation: !!omap
@@ -110776,9 +110767,7 @@
           - kegg.reaction: "R01602"
           - metanetx.reaction: "MNXR107082"
           - rhea: "RHEA:10264"
-          - rxnConfidenceScores: "2"
           - sbo: "SBO:0000176"
-      - confidence_score: 2
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4751"
@@ -110792,15 +110781,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YEL066W or YPR193C"
       - eccodes: "2.3.1.36"
-      - references: "doi: 10.1007/s00203-004-0724-y"
+      - references: "doi:10.1007/s00203-004-0724-y"
       - subsystem:
           - "Phenylalanine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Phenylalanine metabolism"
           - kegg.reaction: "R03903"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4752"
@@ -110821,9 +110808,7 @@
           - biocyc: "RXN0-5217"
           - kegg.pathway: "Glutathione metabolism"
           - kegg.reaction: "R08359"
-          - rxnConfidenceScores: "2"
           - sbo: "SBO:0000176"
-      - confidence_score: 2
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4753"
@@ -110839,7 +110824,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YPL214C"
       - eccodes: "2.5.1.3"
-      - references: "Isolation and characterization of the THI6 gene encoding a bifunctional thiamin-phosphate pyrophosphorylase/hydroxyethylthiazole kinase from Saccharomyces cerevisiae"
+      - references: "doi:10.1016/S0021-9258(18)43843-4"
       - subsystem:
           - "Thiamine metabolism"
       - annotation: !!omap
@@ -110848,9 +110833,7 @@
           - kegg.reaction: "R10712"
           - metanetx.reaction: "MNXR114031"
           - rhea: "RHEA:47848"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4754"
@@ -110864,7 +110847,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YDR538W"
       - eccodes: "2.5.1.129"
-      - references: "doi: 10.1021/cb5008103"
+      - references: "doi:10.1021/cb5008103"
       - subsystem:
           - "Riboflavin metabolism"
       - annotation: !!omap
@@ -110872,9 +110855,7 @@
           - kegg.reaction: "R11225"
           - metanetx.reaction: "MNXR114523"
           - rhea: "RHEA:37743"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4755"
@@ -110888,7 +110869,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YDL178W or YEL071W"
       - eccodes: "1.1.99.40"
-      - references: "doi: 10.1002/(SICI)1097-0061(19990930)15:13<1377::AID-YEA473>3.0.CO;2-0"
+      - references: "doi:10.1002/(SICI)1097-0061(19990930)15:13<1377::AID-YEA473>3.0.CO;2-0"
       - subsystem:
           - "Pyruvate metabolism"
       - annotation: !!omap
@@ -110896,9 +110877,7 @@
           - kegg.reaction: "R11593"
           - metanetx.reaction: "MNXR169718"
           - rhea: "RHEA:51608"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4756"
@@ -110912,17 +110891,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YDR400W"
       - eccodes: "3.2.2.3"
-      - references: "doi: 10.1128/AEM.68.3.1336-1343.2002£»doi: 10.1007/s00294-002-0296-9"
+      - references: "doi:10.1128/AEM.68.3.1336-1343.2002; doi:10.1007/s00294-002-0296-9"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - biocyc: "RXN0-361"
           - kegg.pathway: "Pyrimidine metabolism"
           - metanetx.reaction: "MNXR177657"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
           - seed.reactions: "rxn26065"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4757"
@@ -110937,16 +110914,14 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YDR109C"
       - eccodes: "2.7.1.47"
-      - references: "doi: 10.1074/jbc.M116.760744."
+      - references: "doi:10.1074/jbc.M116.760744."
       - subsystem:
           - "Alternate carbon metabolism"
       - annotation: !!omap
           - biocyc: "D-RIBULOKIN-RXN"
           - kegg.pathway: "Alternate carbon metabolism"
           - metanetx.reaction: "MNXR146238"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4758"
@@ -110960,7 +110935,6 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YLR209C"
       - eccodes: "2.4.2.1"
-      - references: "By similarity"
       - subsystem:
           - "Purine metabolism"
       - annotation: !!omap
@@ -110969,9 +110943,7 @@
           - kegg.reaction: "R01969"
           - metanetx.reaction: "MNXR146176"
           - rhea: "RHEA:27738"
-          - rxnConfidenceScores: "3"
           - sbo: "SBO:0000176"
-      - confidence_score: 3
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4759"
@@ -110992,9 +110964,7 @@
           - kegg.pathway: "Nicotinate and nicotinamide metabolism"
           - kegg.reaction: "R03004"
           - metanetx.reaction: "MNXR190936"
-          - rxnConfidenceScores: "2"
           - sbo: "SBO:0000176"
-      - confidence_score: 2
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4760"
@@ -111015,9 +110985,7 @@
           - kegg.pathway: "Arginine and proline metabolism"
           - kegg.reaction: "R03291"
           - metanetx.reaction: "MNXR100698"
-          - rxnConfidenceScores: "2"
           - sbo: "SBO:0000176"
-      - confidence_score: 2
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4761"
@@ -111040,9 +111008,7 @@
           - kegg.reaction: "R04171"
           - metanetx.reaction: "MNXR162468"
           - rhea: "RHEA:65885"
-          - rxnConfidenceScores: "2"
           - sbo: "SBO:0000176"
-      - confidence_score: 2
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4762"
@@ -111057,7 +111023,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YDR036C"
       - eccodes: "3.1.2.4"
-      - references: "doi: 10.1016/S0168-6445(03)00017-2"
+      - references: "doi:10.1016/S0168-6445(03)00017-2"
       - subsystem:
           - "Valine, leucine and isoleucine metabolism"
       - annotation: !!omap
@@ -111065,9 +111031,7 @@
           - kegg.reaction: "R05064"
           - metanetx.reaction: "MNXR190062"
           - rhea: "RHEA:31251"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4763"
@@ -111089,9 +111053,7 @@
           - kegg.pathway: "Butanoate metabolism"
           - kegg.reaction: "R10504"
           - metanetx.reaction: "MNXR195390"
-          - rxnConfidenceScores: "2"
           - sbo: "SBO:0000176"
-      - confidence_score: 2
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4764"
@@ -111106,7 +111068,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YPR062W"
       - eccodes: "3.5.4.1"
-      - references: "doi: 10.1007/s002940050482;doi: 10.1007/s002940050169"
+      - references: "doi:10.1007/s002940050482;doi:10.1007/s002940050169"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
@@ -111115,9 +111077,7 @@
           - kegg.reaction: "R01411"
           - metanetx.reaction: "MNXR101425"
           - rhea: "RHEA:30759"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4765"
@@ -111130,15 +111090,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YIR032C"
       - eccodes: "4.3.2.3"
-      - references: "doi: 10.1128/mcb.5.9.2279-2288.1985"
+      - references: "doi:10.1128/mcb.5.9.2279-2288.1985"
       - subsystem:
           - "Purine metabolism"
       - annotation: !!omap
           - biocyc: "UREIDOGLYCOLATE-LYASE-RXN"
           - kegg.pathway: "Purine metabolism"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4766"
@@ -111151,7 +111109,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YJL005W"
       - eccodes: "4.6.1.2"
-      - references: "doi: 10.1016/0092-8674(85)90179-5"
+      - references: "doi:10.1016/0092-8674(85)90179-5"
       - subsystem:
           - "Purine metabolism"
       - annotation: !!omap
@@ -111160,9 +111118,7 @@
           - kegg.reaction: "R00434"
           - metanetx.reaction: "MNXR189648"
           - rhea: "RHEA:13665"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4767"
@@ -111176,7 +111132,6 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YJL060W"
       - eccodes: "2.6.1.7"
-      - references: "By similarity"
       - subsystem:
           - "Tryptophan metabolism"
       - annotation: !!omap
@@ -111185,9 +111140,7 @@
           - kegg.reaction: "R12688"
           - metanetx.reaction: "MNXR162453"
           - rhea: "RHEA:65561"
-          - rxnConfidenceScores: "3"
           - sbo: "SBO:0000176"
-      - confidence_score: 3
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4768"
@@ -111201,15 +111154,13 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YDR481C"
       - eccodes: "3.1.7.6"
-      - references: "doi: 10.1111/j.1432-1033.1991.tb15803.x"
+      - references: "doi:10.1111/j.1432-1033.1991.tb15803.x"
       - subsystem:
           - "Thiamine metabolism"
       - annotation: !!omap
           - biocyc: "RXN-8617_c"
           - kegg.pathway: "Thiamine metabolism"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4769"
@@ -111224,7 +111175,7 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YDR305C"
       - eccodes: "3.6.1.29"
-      - references: "doi: 10.1186/1471-2199-3-7;doi: 10.1128/JB.180.9.2345-2349.1998"
+      - references: "doi:10.1186/1471-2199-3-7;doi:10.1128/JB.180.9.2345-2349.1998"
       - subsystem:
           - "Purine metabolism"
       - annotation: !!omap
@@ -111232,9 +111183,7 @@
           - kegg.reaction: "R00187"
           - metanetx.reaction: "MNXR96340"
           - rhea: "RHEA:13893"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4770"
@@ -111248,17 +111197,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #304)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4771"
       - name: "nucleoside diphosphate kinase"
@@ -111271,17 +111218,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #305)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4772"
       - name: "nucleoside diphosphate kinase"
@@ -111294,17 +111239,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #306)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4773"
       - name: "nucleoside diphosphate kinase"
@@ -111317,17 +111260,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #307)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4774"
       - name: "nucleoside diphosphate kinase"
@@ -111340,17 +111281,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #308)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4775"
       - name: "nucleoside diphosphate kinase"
@@ -111363,17 +111302,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #309)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4776"
       - name: "nucleoside diphosphate kinase"
@@ -111386,17 +111323,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #310)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4777"
       - name: "nucleoside diphosphate kinase"
@@ -111409,17 +111344,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #311)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
       - id: "r_4778"
       - name: "nucleoside diphosphate kinase"
@@ -111432,17 +111365,15 @@
       - upper_bound: 1000
       - gene_reaction_rule: "YKL067W"
       - eccodes: "2.7.4.6"
-      - references: "doi: 10.1016/0003-9861(91)90129-7;doi: 10.1007/s10863-006-9045-y;doi: 10.1021/bi00830a026"
+      - references: "doi:10.1016/0003-9861(91)90129-7;doi:10.1007/s10863-006-9045-y;doi:10.1021/bi00830a026"
       - subsystem:
           - "Pyrimidine metabolism"
       - annotation: !!omap
           - kegg.pathway: "Pyrimidine metabolism"
           - kegg.reaction: "R00139"
           - metanetx.reaction: "MNXR106405"
-          - rxnConfidenceScores: "5"
           - sbo: "SBO:0000176"
-      - confidence_score: 5
-      - rxnNotes: "old rxns in different compartment (PR #312)"
+      - rxnNotes: "New rxns from databases curation (PR #304)"
 - genes:
     - !!omap
       - id: "Q0045"
