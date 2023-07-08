@@ -9,6 +9,7 @@
 
 %% Load yeast-GEM 8.6.3 (requires local yeast-GEM git repository)
 cd ..
+codeDir=pwd();
 model = getEarlierModelVersion('8.6.3');
 model.id='yeastGEM_develop';
 dataDir=fullfile(pwd(),'..','data','modelCuration','v8_7_0');
@@ -91,11 +92,21 @@ rxnG = array2table([model.rxns, num2cell(model.rxnDeltaG)]);
 writetable(rxnG,'model_rxnDeltaG.csv');
 cd(fullfile(dataDir,'..','..','..','code','modelCuration'))
 
+%% Add metSMILES field (PR #330)
+cd(dataDir)
+% You should install GECKO 3.1.0 or later to use the findMetSmiles function
+% Make fake modelAdapter to be able to use the GECKO function
+modelAdapter.params.path='';
+mkdir data
+
+model = findMetSmiles(model,modelAdapter);
+rmdir data s
+
 checkModelStruct(model,true,false)
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
-cd ../modelTests
+cd(fullfile(codeDir,'modelTests'))
 disp('Run gene essentiality analysis')
 [new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
 fprintf('Genes in model: %d\n',numel(model.genes));
