@@ -1,4 +1,5 @@
-% This scripts applies curations to be applied on yeast-GEM release 8.6.2.
+% This scripts applies curations to be applied on yeast-GEM release 8.6.1, to
+% get to yeast-GEM release 8.6.2.
 % Indicate which Issue/PR are addressed. If multiple curations are performed
 % before a new release is made, just add the required code to this script. If
 % more extensive coding is required, you can write a separate (generic) function
@@ -6,27 +7,20 @@
 % existing functions whenever possible. In particular /code/curateMetsRxnsGenes
 % can do many types of curation.
 
-%% Load yeast-GEM 8.6.2 (requires local yeast-GEM git repository)
+%% Load yeast-GEM 8.6.1 (requires local yeast-GEM git repository)
 cd ..
-model = getEarlierModelVersion('8.6.2');
+model = getEarlierModelVersion('8.6.1');
 model.id='yeastGEM_develop';
 dataDir=fullfile(pwd(),'..','data','modelCuration','v8_6_2');
 cd modelCuration
 
-%% Volatile Esters & Polyphosphate Reactions (PR #336)
-% See https://github.com/SysBioChalmers/yeast-GEM/pull/336 for more detailed
-% explanation of what changes were made by including 8 new distinct ester
-% reactions and  polyphosphate synthesis and transport reactions.
-
-%% Curate gene association for transport rxns (PR #306)
-% Add new reactions and genes
-metsInfo = fullfile(dataDir,'VolPolyPMets.tsv');
-genesInfo = fullfile(dataDir,'VolPolyPGenes.tsv');
-rxnsCoeffs = fullfile(dataDir,'VolPolyPRxnsCoeffs.tsv');
-rxnsInfo = fullfile(dataDir,'VolPolyPRxns.tsv');
-
-model = curateMetsRxnsGenes(model, metsInfo, genesInfo, rxnsCoeffs, rxnsInfo);
-
+%% Correct ATP synthase mitochondrial complex gene associations (PR #323)
+model = changeGrRules(model, 'r_0226', ['Q0080 and Q0085 and Q0130 and ' ...
+        'YBL099W and YBR039W and YDL004W and YDR298C and YDR377W and YJR121W ' ...
+        'and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W and ' ...
+        'YDR322C-A and YPR020W and YOL077W-A'],true);
+model = deleteUnusedGenes(model);
+checkModelStruct(model,true,false)
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
