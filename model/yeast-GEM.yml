@@ -57743,8 +57743,6 @@
       - metabolites: !!omap
           - s_0553: 1
           - s_0554: -1
-          - s_0794: 1
-          - s_0796: -1
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YDL245C or YDR342C or YDR343C or YDR345C or YEL069C or YFL011W or YHR092C or YHR094C or YHR096C or YJL214W or YJL219W or YJR158W or YMR011W or YNR072W or YOL156W"
@@ -57757,6 +57755,7 @@
           - sbo: "SBO:0000655"
       - deltaG: -1.79
       - confidence_score: 2
+      - rxnNotes: "equation curated (Issue #332)"
     - !!omap
       - id: "r_1135"
       - name: "D-galactose transport"
