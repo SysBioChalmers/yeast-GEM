@@ -93,13 +93,14 @@ writetable(rxnG,'model_rxnDeltaG.csv');
 cd(fullfile(dataDir,'..','..','..','code','modelCuration'))
 
 %% Add metSMILES field (PR #330)
-cd(dataDir)
+cd(fullfile(dataDir,'databases'))
 % You should install GECKO 3.1.0 or later to use the findMetSmiles function
 % Make fake modelAdapter to be able to use the GECKO function
 modelAdapter.params.path='';
 mkdir data
 
 model = findMetSmiles(model,modelAdapter);
+movefile('data/smilesDB.tsv','smilesDB.tsv')
 rmdir data s
 
 checkModelStruct(model,true,false)
