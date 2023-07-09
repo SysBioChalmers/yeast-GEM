@@ -1,12 +1,12 @@
 function model = getEarlierModelVersion(version,verbose)
 % getEarlierModelVersion
-%   Loads an earlier model version from the local git repository history,
-%   and removes any mention of its version from model.id.
+%   Loads an earlier model version (8.5.0 or later) from the local git
+%   repository history, and removes any mention of its version from model.id.
 %   Requires that the yeast-GEM repository is cloned via git.
 %
 %   version     either 'main' or 'develop' for the latest model file from
 %               the specified branch. Can alternatively be a specific model
-%               version (e.g. '8.5.1'), to load a the model file from a
+%               version (e.g. '8.6.3'), to load a the model file from a
 %               specific release version, or a commit SHA.
 %   verbose     if true, the model version (as obtained from model.id) is
 %               printed (opt, default true).
@@ -24,9 +24,9 @@ if ~startsWith(out,'git version ')
 end
 
 if strcmp(version,'main')
-    system('git show main:model/yeast-GEM.xml > _earlierModel.xml');
+    system('git show main:model/yeast-GEM.yml > _earlierModel.yml');
 elseif strcmp(version,'develop')
-    system('git show develop:model/yeast-GEM.xml > _earlierModel.xml');
+    system('git show develop:model/yeast-GEM.yml > _earlierModel.yml');
 else
     if ~isempty(regexp(version,'^\d+\.\d+\.\d+$','once'))
         version = ['refs/tags/v' version];
@@ -34,21 +34,16 @@ else
     else
         error('Unclear which earlier model version should be loaded')
     end
-    tagpath= [version ':model/yeast-GEM.xml'];
-    [out,~]=system(['git show ' tagpath ' > _earlierModel.xml']);
+    tagpath= [version ':model/yeast-GEM.yml'];
+    [out,~]=system(['git show ' tagpath ' > _earlierModel.yml']);
     if out==128 % File not found, try older folder structure
-        delete '_earlierModel.xml'
-        tagpath= [version ':ModelFiles/xml/yeastGEM.xml'];
-        [out,~]=system(['git show ' tagpath ' > _earlierModel.xml']);
-        if out==128
-            delete '_earlierModel.xml'
-            error('Cannot find the specified model version')
-        end
+        delete '_earlierModel.yml'
+        error('Cannot find the specified model version')
     end
 end
 
-model=importModel('_earlierModel.xml');
-delete '_earlierModel.xml'
+model=loadYeastModel('_earlierModel.yml');
+delete '_earlierModel.yml'
 if verbose
     disp(['Loaded model version: ''' regexprep(model.id,'yeastGEM_v?','') ''''])
 end
