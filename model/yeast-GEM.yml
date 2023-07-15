@@ -3,7 +3,10 @@
 - metaData:
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
-    date: "2023-07-08"
+    version: ""
+    date: "2023-07-15"
+    defaultLB: "-1000"
+    defaultUB: "1000"
     givenName: "Eduard"
     familyName: "Kerkhoven"
     email: "eduardk@chalmers.se"
@@ -32751,7 +32754,7 @@
       - compartment: "c"
       - formula: "C3H6NO5S"
       - charge: -1
-      - smiles: "C(C(C(=O)O)N)S(=O)(=O)O"
+      - smiles: "C(C(C(=O)[O-])N)S(=O)(=O)O"
       - annotation: !!omap
           - bigg.metabolite: "Lcyst"
           - chebi: "CHEBI:58090"
@@ -32765,7 +32768,7 @@
       - compartment: "e"
       - formula: "C3H6NO5S"
       - charge: -1
-      - smiles: "C(C(C(=O)O)N)S(=O)(=O)O"
+      - smiles: "C(C(C(=O)[O-])N)S(=O)(=O)O"
       - annotation: !!omap
           - bigg.metabolite: "Lcyst"
           - chebi: "CHEBI:58090"
@@ -35783,7 +35786,6 @@
           - s_0794: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YJR148W"
       - eccodes: "2.6.1.42"
       - subsystem:
           - "Valine, leucine and isoleucine metabolism"
@@ -35813,7 +35815,6 @@
           - s_0799: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YHR208W"
       - eccodes: "2.6.1.42"
       - subsystem:
           - "Valine, leucine and isoleucine metabolism"

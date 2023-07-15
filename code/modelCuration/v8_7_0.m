@@ -110,6 +110,9 @@ model.rxnNotes{rxnLoc} = 'equation curated (Issue #332)';
 
 checkModelStruct(model,true,false)
 
+%% Correct Leu2 gene association (Issue #331)
+model = changeGrRules(model,{'r_0029','r_0030'},{'',''},true);
+
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
 cd(fullfile(codeDir,'modelTests'))

@@ -536,7 +536,7 @@ L-aspartate	C(C(C(=O)O)N)C(=O)O
 L-aspartate 4-semialdehyde	C(C=O)C(C(=O)[O-])[NH3+]
 L-citrulline	C(CC(C(=O)O)N)CNC(=O)N
 L-cystathionine	C(CSCC(C(=O)O)N)C(C(=O)O)N
-L-cysteate	C(C(C(=O)O)N)S(=O)(=O)O
+L-cysteate	C(C(C(=O)[O-])N)S(=O)(=O)O
 L-cysteine	C(C(C(=O)O)N)S
 L-cysteinylglycine	C(C(C(=O)NCC(=O)O)N)S
 L-cystine	C(C(C(=O)O)N)SSCC(C(=O)O)N
