@@ -4,7 +4,7 @@
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
     version: ""
-    date: "2023-07-15"
+    date: "2023-08-19"
     defaultLB: "-1000"
     defaultUB: "1000"
     givenName: "Eduard"
@@ -119946,228 +119946,378 @@
     - !!omap
       - id: "Q0045"
       - name: "COX1"
+      - annotation: !!omap
+          - uniprot: "P00401"
     - !!omap
       - id: "Q0080"
       - name: "ATP8"
+      - annotation: !!omap
+          - uniprot: "P00856"
     - !!omap
       - id: "Q0085"
       - name: "ATP6"
+      - annotation: !!omap
+          - uniprot: "P00854"
     - !!omap
       - id: "Q0105"
       - name: "COB"
+      - annotation: !!omap
+          - uniprot: "P00163"
     - !!omap
       - id: "Q0130"
       - name: "OLI1"
+      - annotation: !!omap
+          - uniprot: "P61829"
     - !!omap
       - id: "Q0250"
       - name: "COX2"
+      - annotation: !!omap
+          - uniprot: "P00410"
     - !!omap
       - id: "Q0275"
       - name: "COX3"
+      - annotation: !!omap
+          - uniprot: "P00420"
     - !!omap
       - id: "YAL012W"
       - name: "CYS3"
+      - annotation: !!omap
+          - uniprot: "P31373"
     - !!omap
       - id: "YAL022C"
       - name: "FUN26"
+      - annotation: !!omap
+          - uniprot: "P31381"
     - !!omap
       - id: "YAL023C"
       - name: "PMT2"
+      - annotation: !!omap
+          - uniprot: "P31382"
     - !!omap
       - id: "YAL026C"
       - name: "DRS2"
+      - annotation: !!omap
+          - uniprot: "P39524"
     - !!omap
       - id: "YAL035W"
       - name: "FUN12"
+      - annotation: !!omap
+          - uniprot: "P39730"
     - !!omap
       - id: "YAL038W"
       - name: "CDC19"
+      - annotation: !!omap
+          - uniprot: "P00549"
     - !!omap
       - id: "YAL039C"
       - name: "CYC3"
+      - annotation: !!omap
+          - uniprot: "P06182"
     - !!omap
       - id: "YAL044C"
       - name: "GCV3"
+      - annotation: !!omap
+          - uniprot: "P39726"
     - !!omap
       - id: "YAL054C"
       - name: "ACS1"
+      - annotation: !!omap
+          - uniprot: "Q01574"
     - !!omap
       - id: "YAL060W"
       - name: "BDH1"
+      - annotation: !!omap
+          - uniprot: "P39714"
     - !!omap
       - id: "YAL061W"
       - name: "BDH2"
+      - annotation: !!omap
+          - uniprot: "P39713"
     - !!omap
       - id: "YAL062W"
       - name: "GDH3"
+      - annotation: !!omap
+          - uniprot: "P39708"
     - !!omap
       - id: "YAR015W"
       - name: "ADE1"
+      - annotation: !!omap
+          - uniprot: "P27616"
     - !!omap
       - id: "YAR035W"
       - name: "YAT1"
+      - annotation: !!omap
+          - uniprot: "P80235"
     - !!omap
       - id: "YAR071W"
       - name: "PHO11"
+      - annotation: !!omap
+          - uniprot: "P35842"
     - !!omap
       - id: "YBL011W"
       - name: "SCT1"
+      - annotation: !!omap
+          - uniprot: "P32784"
     - !!omap
       - id: "YBL013W"
       - name: "FMT1"
+      - annotation: !!omap
+          - uniprot: "P32785"
     - !!omap
       - id: "YBL015W"
       - name: "ACH1"
+      - annotation: !!omap
+          - uniprot: "P32316"
     - !!omap
       - id: "YBL030C"
       - name: "PET9"
+      - annotation: !!omap
+          - uniprot: "P18239"
     - !!omap
       - id: "YBL033C"
       - name: "RIB1"
+      - annotation: !!omap
+          - uniprot: "P38066"
     - !!omap
       - id: "YBL039C"
       - name: "URA7"
+      - annotation: !!omap
+          - uniprot: "P28274"
     - !!omap
       - id: "YBL042C"
       - name: "FUI1"
+      - annotation: !!omap
+          - uniprot: "P38196"
     - !!omap
       - id: "YBL045C"
       - name: "COR1"
+      - annotation: !!omap
+          - uniprot: "P07256"
     - !!omap
       - id: "YBL064C"
       - name: "PRX1"
+      - annotation: !!omap
+          - uniprot: "P34227"
     - !!omap
       - id: "YBL068W"
       - name: "PRS4"
+      - annotation: !!omap
+          - uniprot: "P38063"
     - !!omap
       - id: "YBL076C"
       - name: "ILS1"
+      - annotation: !!omap
+          - uniprot: "P09436"
     - !!omap
       - id: "YBL080C"
       - name: "PET112"
+      - annotation: !!omap
+          - uniprot: "P33893"
     - !!omap
       - id: "YBL091C"
       - name: "MAP2"
+      - annotation: !!omap
+          - uniprot: "P38174"
     - !!omap
       - id: "YBL098W"
       - name: "BNA4"
+      - annotation: !!omap
+          - uniprot: "P38169"
     - !!omap
       - id: "YBL099W"
       - name: "ATP1"
+      - annotation: !!omap
+          - uniprot: "P07251"
     - !!omap
       - id: "YBR001C"
       - name: "NTH2"
+      - annotation: !!omap
+          - uniprot: "P35172"
     - !!omap
       - id: "YBR002C"
       - name: "RER2"
+      - annotation: !!omap
+          - uniprot: "P35196"
     - !!omap
       - id: "YBR003W"
       - name: "COQ1"
+      - annotation: !!omap
+          - uniprot: "P18900"
     - !!omap
       - id: "YBR004C"
       - name: "GPI18"
+      - annotation: !!omap
+          - uniprot: "P38211"
     - !!omap
       - id: "YBR006W"
       - name: "UGA2"
+      - annotation: !!omap
+          - uniprot: "P38067"
     - !!omap
       - id: "YBR011C"
       - name: "IPP1"
+      - annotation: !!omap
+          - uniprot: "P00817"
     - !!omap
       - id: "YBR018C"
       - name: "GAL7"
+      - annotation: !!omap
+          - uniprot: "P08431"
     - !!omap
       - id: "YBR019C"
       - name: "GAL10"
+      - annotation: !!omap
+          - uniprot: "P04397"
     - !!omap
       - id: "YBR020W"
       - name: "GAL1"
+      - annotation: !!omap
+          - uniprot: "P04385"
     - !!omap
       - id: "YBR021W"
       - name: "FUR4"
+      - annotation: !!omap
+          - uniprot: "P05316"
     - !!omap
       - id: "YBR022W"
       - name: "POA1"
+      - annotation: !!omap
+          - uniprot: "P38218"
     - !!omap
       - id: "YBR023C"
       - name: "CHS3"
+      - annotation: !!omap
+          - uniprot: "P29465"
     - !!omap
       - id: "YBR026C"
       - name: "ETR1"
+      - annotation: !!omap
+          - uniprot: "P38071"
     - !!omap
       - id: "YBR029C"
       - name: "CDS1"
+      - annotation: !!omap
+          - uniprot: "P38221"
     - !!omap
       - id: "YBR034C"
       - name: "HMT1"
+      - annotation: !!omap
+          - uniprot: "P38074"
     - !!omap
       - id: "YBR035C"
       - name: "PDX3"
+      - annotation: !!omap
+          - uniprot: "P38075"
     - !!omap
       - id: "YBR036C"
       - name: "CSG2"
+      - annotation: !!omap
+          - uniprot: "P35206"
     - !!omap
       - id: "YBR038W"
       - name: "CHS2"
+      - annotation: !!omap
+          - uniprot: "P14180"
     - !!omap
       - id: "YBR039W"
       - name: "ATP3"
+      - annotation: !!omap
+          - uniprot: "P38077"
     - !!omap
       - id: "YBR041W"
       - name: "FAT1"
+      - annotation: !!omap
+          - uniprot: "P38225"
     - !!omap
       - id: "YBR042C"
       - name: "CST26"
+      - annotation: !!omap
+          - uniprot: "P38226"
     - !!omap
       - id: "YBR046C"
       - name: "ZTA1"
+      - annotation: !!omap
+          - uniprot: "P38230"
     - !!omap
       - id: "YBR058C-A"
       - name: "TSC3"
+      - annotation: !!omap
+          - uniprot: "Q3E790"
     - !!omap
       - id: "YBR068C"
       - name: "BAP2"
+      - annotation: !!omap
+          - uniprot: "P38084"
     - !!omap
       - id: "YBR069C"
       - name: "TAT1"
+      - annotation: !!omap
+          - uniprot: "P38085"
     - !!omap
       - id: "YBR070C"
       - name: "ALG14"
+      - annotation: !!omap
+          - uniprot: "P38242"
     - !!omap
       - id: "YBR084W"
       - name: "MIS1"
+      - annotation: !!omap
+          - uniprot: "P09440"
     - !!omap
       - id: "YBR085W"
       - name: "AAC3"
+      - annotation: !!omap
+          - uniprot: "P18238"
     - !!omap
       - id: "YBR092C"
       - name: "PHO3"
+      - annotation: !!omap
+          - uniprot: "P24031"
     - !!omap
       - id: "YBR093C"
       - name: "PHO5"
+      - annotation: !!omap
+          - uniprot: "P00635"
     - !!omap
       - id: "YBR097W"
       - name: "VPS15"
+      - annotation: !!omap
+          - uniprot: "P22219"
     - !!omap
       - id: "YBR110W"
       - name: "ALG1"
+      - annotation: !!omap
+          - uniprot: "P16661"
     - !!omap
       - id: "YBR111C"
       - name: "YSA1"
+      - annotation: !!omap
+          - uniprot: "Q01976"
     - !!omap
       - id: "YBR115C"
       - name: "LYS2"
+      - annotation: !!omap
+          - uniprot: "P07702"
     - !!omap
       - id: "YBR117C"
       - name: "TKL2"
+      - annotation: !!omap
+          - uniprot: "P33315"
     - !!omap
       - id: "YBR121C"
       - name: "GRS1"
+      - annotation: !!omap
+          - uniprot: "P38088"
     - !!omap
       - id: "YBR126C"
       - name: "TPS1"
+      - annotation: !!omap
+          - uniprot: "Q00764"
     - !!omap
       - id: "YBR127C"
       - name: "VMA2"
+      - annotation: !!omap
+          - uniprot: "P16140"
     - !!omap
       - id: "YBR128C"
       - name: "ATG14"
@@ -120180,78 +120330,128 @@
     - !!omap
       - id: "YBR132C"
       - name: "AGP2"
+      - annotation: !!omap
+          - uniprot: "P38090"
     - !!omap
       - id: "YBR145W"
       - name: "ADH5"
+      - annotation: !!omap
+          - uniprot: "P38113"
     - !!omap
       - id: "YBR147W"
       - name: "RTC2"
+      - annotation: !!omap
+          - uniprot: "P38279"
     - !!omap
       - id: "YBR149W"
       - name: "ARA1"
+      - annotation: !!omap
+          - uniprot: "P38115"
     - !!omap
       - id: "YBR153W"
       - name: "RIB7"
+      - annotation: !!omap
+          - uniprot: "P33312"
     - !!omap
       - id: "YBR159W"
       - name: "IFA38"
+      - annotation: !!omap
+          - uniprot: "P38286"
     - !!omap
       - id: "YBR161W"
       - name: "CSH1"
+      - annotation: !!omap
+          - uniprot: "P38287"
     - !!omap
       - id: "YBR166C"
       - name: "TYR1"
+      - annotation: !!omap
+          - uniprot: "P20049"
     - !!omap
       - id: "YBR176W"
       - name: "ECM31"
+      - annotation: !!omap
+          - uniprot: "P38122"
     - !!omap
       - id: "YBR177C"
       - name: "EHT1"
+      - annotation: !!omap
+          - uniprot: "P38295"
     - !!omap
       - id: "YBR180W"
       - name: "DTR1"
+      - annotation: !!omap
+          - uniprot: "P38125"
     - !!omap
       - id: "YBR183W"
       - name: "YPC1"
+      - annotation: !!omap
+          - uniprot: "P38298"
     - !!omap
       - id: "YBR192W"
       - name: "RIM2"
+      - annotation: !!omap
+          - uniprot: "P38127"
     - !!omap
       - id: "YBR196C"
       - name: "PGI1"
+      - annotation: !!omap
+          - uniprot: "P12709"
     - !!omap
       - id: "YBR199W"
       - name: "KTR4"
+      - annotation: !!omap
+          - uniprot: "P38131"
     - !!omap
       - id: "YBR204C"
       - name: "LDH1"
+      - annotation: !!omap
+          - uniprot: "P38139"
     - !!omap
       - id: "YBR205W"
       - name: "KTR3"
+      - annotation: !!omap
+          - uniprot: "P38130"
     - !!omap
       - id: "YBR208C"
       - name: "DUR1,2"
+      - annotation: !!omap
+          - uniprot: "P32528"
     - !!omap
       - id: "YBR213W"
       - name: "MET8"
+      - annotation: !!omap
+          - uniprot: "P15807"
     - !!omap
       - id: "YBR218C"
       - name: "PYC2"
+      - annotation: !!omap
+          - uniprot: "P32327"
     - !!omap
       - id: "YBR221C"
       - name: "PDB1"
+      - annotation: !!omap
+          - uniprot: "P32473"
     - !!omap
       - id: "YBR222C"
       - name: "PCS60"
+      - annotation: !!omap
+          - uniprot: "P38137"
     - !!omap
       - id: "YBR229C"
       - name: "ROT2"
+      - annotation: !!omap
+          - uniprot: "P38138"
     - !!omap
       - id: "YBR235W"
       - name: "VHC1"
+      - annotation: !!omap
+          - uniprot: "P38329"
     - !!omap
       - id: "YBR241C"
       - name: "YBR241C"
+      - annotation: !!omap
+          - uniprot: "P38142"
     - !!omap
       - id: "YBR242W"
       - name: "YBR242W"
@@ -120264,351 +120464,583 @@
     - !!omap
       - id: "YBR243C"
       - name: "ALG7"
+      - annotation: !!omap
+          - uniprot: "P07286"
     - !!omap
       - id: "YBR244W"
       - name: "GPX2"
+      - annotation: !!omap
+          - uniprot: "P38143"
     - !!omap
       - id: "YBR248C"
       - name: "HIS7"
+      - annotation: !!omap
+          - uniprot: "P33734"
     - !!omap
       - id: "YBR249C"
       - name: "ARO4"
+      - annotation: !!omap
+          - uniprot: "P32449"
     - !!omap
       - id: "YBR252W"
       - name: "DUT1"
+      - annotation: !!omap
+          - uniprot: "P33317"
     - !!omap
       - id: "YBR256C"
       - name: "RIB5"
+      - annotation: !!omap
+          - uniprot: "P38145"
     - !!omap
       - id: "YBR263W"
       - name: "SHM1"
+      - annotation: !!omap
+          - uniprot: "P37292"
     - !!omap
       - id: "YBR265W"
       - name: "TSC10"
+      - annotation: !!omap
+          - uniprot: "P38342"
     - !!omap
       - id: "YBR281C"
       - name: "DUG2"
+      - annotation: !!omap
+          - uniprot: "P38149"
     - !!omap
       - id: "YBR291C"
       - name: "CTP1"
+      - annotation: !!omap
+          - uniprot: "P38152"
     - !!omap
       - id: "YBR293W"
       - name: "VBA2"
+      - annotation: !!omap
+          - uniprot: "P38358"
     - !!omap
       - id: "YBR294W"
       - name: "SUL1"
+      - annotation: !!omap
+          - uniprot: "P38359"
     - !!omap
       - id: "YBR295W"
       - name: "PCA1"
+      - annotation: !!omap
+          - uniprot: "P38360"
     - !!omap
       - id: "YBR296C"
       - name: "PHO89"
+      - annotation: !!omap
+          - uniprot: "P38361"
     - !!omap
       - id: "YBR298C"
       - name: "MAL31"
+      - annotation: !!omap
+          - uniprot: "P38156"
     - !!omap
       - id: "YBR299W"
       - name: "MAL32"
+      - annotation: !!omap
+          - uniprot: "P38158"
     - !!omap
       - id: "YCL004W"
       - name: "PGS1"
+      - annotation: !!omap
+          - uniprot: "P25578"
     - !!omap
       - id: "YCL005W-A"
       - name: "VMA9"
+      - annotation: !!omap
+          - uniprot: "Q3E7B6"
     - !!omap
       - id: "YCL009C"
       - name: "ILV6"
+      - annotation: !!omap
+          - uniprot: "P25605"
     - !!omap
       - id: "YCL017C"
       - name: "NFS1"
+      - annotation: !!omap
+          - uniprot: "P25374"
     - !!omap
       - id: "YCL018W"
       - name: "LEU2"
+      - annotation: !!omap
+          - uniprot: "P04173"
     - !!omap
       - id: "YCL025C"
       - name: "AGP1"
+      - annotation: !!omap
+          - uniprot: "P25376"
     - !!omap
       - id: "YCL030C"
       - name: "HIS4"
+      - annotation: !!omap
+          - uniprot: "P00815"
     - !!omap
       - id: "YCL035C"
       - name: "GRX1"
+      - annotation: !!omap
+          - uniprot: "P25373"
     - !!omap
       - id: "YCL038C"
       - name: "ATG22"
+      - annotation: !!omap
+          - uniprot: "P25568"
     - !!omap
       - id: "YCL040W"
       - name: "GLK1"
+      - annotation: !!omap
+          - uniprot: "P17709"
     - !!omap
       - id: "YCL047C"
       - name: "POF1"
+      - annotation: !!omap
+          - uniprot: "P25576"
     - !!omap
       - id: "YCL050C"
       - name: "APA1"
+      - annotation: !!omap
+          - uniprot: "P16550"
     - !!omap
       - id: "YCL052C"
       - name: "PBN1"
+      - annotation: !!omap
+          - uniprot: "P25580"
     - !!omap
       - id: "YCL064C"
       - name: "CHA1"
+      - annotation: !!omap
+          - uniprot: "P25379"
     - !!omap
       - id: "YCL069W"
       - name: "VBA3"
+      - annotation: !!omap
+          - uniprot: "P25594"
     - !!omap
       - id: "YCR005C"
       - name: "CIT2"
+      - annotation: !!omap
+          - uniprot: "P08679"
     - !!omap
       - id: "YCR010C"
       - name: "ADY2"
+      - annotation: !!omap
+          - uniprot: "P25613"
     - !!omap
       - id: "YCR011C"
       - name: "ADP1"
+      - annotation: !!omap
+          - uniprot: "P25371"
     - !!omap
       - id: "YCR012W"
       - name: "PGK1"
+      - annotation: !!omap
+          - uniprot: "P00560"
     - !!omap
       - id: "YCR024C"
       - name: "SLM5"
+      - annotation: !!omap
+          - uniprot: "P32903"
     - !!omap
       - id: "YCR024C-A"
       - name: "PMP1"
+      - annotation: !!omap
+          - uniprot: "P32903"
     - !!omap
       - id: "YCR028C"
       - name: "FEN2"
+      - annotation: !!omap
+          - uniprot: "P25621"
     - !!omap
       - id: "YCR034W"
       - name: "ELO2"
+      - annotation: !!omap
+          - uniprot: "P25358"
     - !!omap
       - id: "YCR036W"
       - name: "RBK1"
+      - annotation: !!omap
+          - uniprot: "P25332"
     - !!omap
       - id: "YCR037C"
       - name: "PHO87"
+      - annotation: !!omap
+          - uniprot: "P25360"
     - !!omap
       - id: "YCR048W"
       - name: "ARE1"
+      - annotation: !!omap
+          - uniprot: "P25628"
     - !!omap
       - id: "YCR053W"
       - name: "THR4"
+      - annotation: !!omap
+          - uniprot: "P16120"
     - !!omap
       - id: "YCR068W"
       - name: "ATG15"
+      - annotation: !!omap
+          - uniprot: "P25641"
     - !!omap
       - id: "YCR075C"
       - name: "ERS1"
+      - annotation: !!omap
+          - uniprot: "P17261"
     - !!omap
       - id: "YCR083W"
       - name: "TRX3"
+      - annotation: !!omap
+          - uniprot: "P25372"
     - !!omap
       - id: "YCR098C"
       - name: "GIT1"
+      - annotation: !!omap
+          - uniprot: "P25346"
     - !!omap
       - id: "YCR105W"
       - name: "ADH7"
+      - annotation: !!omap
+          - uniprot: "P25377"
     - !!omap
       - id: "YCR107W"
       - name: "AAD3"
+      - annotation: !!omap
+          - uniprot: "P25612"
     - !!omap
       - id: "YDL004W"
       - name: "ATP16"
+      - annotation: !!omap
+          - uniprot: "Q12165"
     - !!omap
       - id: "YDL015C"
       - name: "TSC13"
+      - annotation: !!omap
+          - uniprot: "Q99190"
     - !!omap
       - id: "YDL022W"
       - name: "GPD1"
+      - annotation: !!omap
+          - uniprot: "Q00055"
     - !!omap
       - id: "YDL024C"
       - name: "DIA3"
+      - annotation: !!omap
+          - uniprot: "P52290"
     - !!omap
       - id: "YDL040C"
       - name: "NAT1"
+      - annotation: !!omap
+          - uniprot: "P12945"
     - !!omap
       - id: "YDL042C"
       - name: "SIR2"
+      - annotation: !!omap
+          - uniprot: "P06700"
     - !!omap
       - id: "YDL045C"
       - name: "FAD1"
+      - annotation: !!omap
+          - uniprot: "P38913"
     - !!omap
       - id: "YDL052C"
       - name: "SLC1"
+      - annotation: !!omap
+          - uniprot: "P33333"
     - !!omap
       - id: "YDL055C"
       - name: "PSA1"
+      - annotation: !!omap
+          - uniprot: "P41940"
     - !!omap
       - id: "YDL066W"
       - name: "IDP1"
+      - annotation: !!omap
+          - uniprot: "P21954"
     - !!omap
       - id: "YDL067C"
       - name: "COX9"
+      - annotation: !!omap
+          - uniprot: "P07255"
     - !!omap
       - id: "YDL078C"
       - name: "MDH3"
+      - annotation: !!omap
+          - uniprot: "P32419"
     - !!omap
       - id: "YDL080C"
       - name: "THI3"
+      - annotation: !!omap
+          - uniprot: "Q07471"
     - !!omap
       - id: "YDL085W"
       - name: "NDE2"
+      - annotation: !!omap
+          - uniprot: "Q07500"
     - !!omap
       - id: "YDL090C"
       - name: "RAM1"
+      - annotation: !!omap
+          - uniprot: "P22007"
     - !!omap
       - id: "YDL093W"
       - name: "PMT5"
+      - annotation: !!omap
+          - uniprot: "P52867"
     - !!omap
       - id: "YDL095W"
       - name: "PMT1"
+      - annotation: !!omap
+          - uniprot: "P33775"
     - !!omap
       - id: "YDL100C"
       - name: "GET3"
+      - annotation: !!omap
+          - uniprot: "Q12154"
     - !!omap
       - id: "YDL103C"
       - name: "QRI1"
+      - annotation: !!omap
+          - uniprot: "P43123"
     - !!omap
       - id: "YDL120W"
       - name: "YFH1"
+      - annotation: !!omap
+          - uniprot: "Q07540"
     - !!omap
       - id: "YDL131W"
       - name: "LYS21"
+      - annotation: !!omap
+          - uniprot: "Q12122"
     - !!omap
       - id: "YDL141W"
       - name: "BPL1"
+      - annotation: !!omap
+          - uniprot: "P48445"
     - !!omap
       - id: "YDL142C"
       - name: "CRD1"
+      - annotation: !!omap
+          - uniprot: "Q07560"
     - !!omap
       - id: "YDL166C"
       - name: "FAP7"
+      - annotation: !!omap
+          - uniprot: "Q12055"
     - !!omap
       - id: "YDL168W"
       - name: "SFA1"
+      - annotation: !!omap
+          - uniprot: "P32771"
     - !!omap
       - id: "YDL171C"
       - name: "GLT1"
+      - annotation: !!omap
+          - uniprot: "Q12680"
     - !!omap
       - id: "YDL174C"
       - name: "DLD1"
+      - annotation: !!omap
+          - uniprot: "P32891"
     - !!omap
       - id: "YDL178W"
       - name: "DLD2"
+      - annotation: !!omap
+          - uniprot: "P46681"
     - !!omap
       - id: "YDL182W"
       - name: "LYS20"
+      - annotation: !!omap
+          - uniprot: "P48570"
     - !!omap
       - id: "YDL185W"
       - name: "VMA1"
+      - annotation: !!omap
+          - uniprot: "P17255"
     - !!omap
       - id: "YDL198C"
       - name: "GGC1"
+      - annotation: !!omap
+          - uniprot: "P38988"
     - !!omap
       - id: "YDL205C"
       - name: "HEM3"
+      - annotation: !!omap
+          - uniprot: "P28789"
     - !!omap
       - id: "YDL210W"
       - name: "UGA4"
+      - annotation: !!omap
+          - uniprot: "P32837"
     - !!omap
       - id: "YDL215C"
       - name: "GDH2"
+      - annotation: !!omap
+          - uniprot: "P33327"
     - !!omap
       - id: "YDL219W"
       - name: "DTD1"
+      - annotation: !!omap
+          - uniprot: "Q07648"
     - !!omap
       - id: "YDL236W"
       - name: "PHO13"
+      - annotation: !!omap
+          - uniprot: "P19881"
     - !!omap
       - id: "YDL238C"
       - name: "GUD1"
+      - annotation: !!omap
+          - uniprot: "Q07729"
     - !!omap
       - id: "YDL243C"
       - name: "AAD4"
+      - annotation: !!omap
+          - uniprot: "Q07747"
     - !!omap
       - id: "YDL245C"
       - name: "HXT15"
+      - annotation: !!omap
+          - uniprot: "P54854"
     - !!omap
       - id: "YDL246C"
       - name: "SOR2"
+      - annotation: !!omap
+          - uniprot: "Q07786"
     - !!omap
       - id: "YDL247W"
       - name: "MPH2"
+      - annotation: !!omap
+          - uniprot: "P0CD99"
     - !!omap
       - id: "YDR001C"
       - name: "NTH1"
+      - annotation: !!omap
+          - uniprot: "P32356"
     - !!omap
       - id: "YDR007W"
       - name: "TRP1"
+      - annotation: !!omap
+          - uniprot: "P00912"
     - !!omap
       - id: "YDR009W"
       - name: "GAL3"
+      - annotation: !!omap
+          - uniprot: "P13045"
     - !!omap
       - id: "YDR017C"
       - name: "KCS1"
+      - annotation: !!omap
+          - uniprot: "Q12494"
     - !!omap
       - id: "YDR019C"
       - name: "GCV1"
+      - annotation: !!omap
+          - uniprot: "P48015"
     - !!omap
       - id: "YDR020C"
       - name: "DAS2"
+      - annotation: !!omap
+          - uniprot: "Q12084"
     - !!omap
       - id: "YDR023W"
       - name: "SES1"
+      - annotation: !!omap
+          - uniprot: "P07284"
     - !!omap
       - id: "YDR035W"
       - name: "ARO3"
+      - annotation: !!omap
+          - uniprot: "P14843"
     - !!omap
       - id: "YDR036C"
       - name: "EHD3"
+      - annotation: !!omap
+          - uniprot: "P28817"
     - !!omap
       - id: "YDR037W"
       - name: "KRS1"
+      - annotation: !!omap
+          - uniprot: "P15180"
     - !!omap
       - id: "YDR038C"
       - name: "ENA5"
+      - annotation: !!omap
+          - uniprot: "Q12691"
     - !!omap
       - id: "YDR039C"
       - name: "ENA2"
+      - annotation: !!omap
+          - uniprot: "Q01896"
     - !!omap
       - id: "YDR040C"
       - name: "ENA1"
+      - annotation: !!omap
+          - uniprot: "P13587"
     - !!omap
       - id: "YDR044W"
       - name: "HEM13"
+      - annotation: !!omap
+          - uniprot: "P11353"
     - !!omap
       - id: "YDR046C"
       - name: "BAP3"
+      - annotation: !!omap
+          - uniprot: "P41815"
     - !!omap
       - id: "YDR047W"
       - name: "HEM12"
+      - annotation: !!omap
+          - uniprot: "P32347"
     - !!omap
       - id: "YDR050C"
       - name: "TPI1"
+      - annotation: !!omap
+          - uniprot: "P00942"
     - !!omap
       - id: "YDR051C"
       - name: "DET1"
+      - annotation: !!omap
+          - uniprot: "Q99288"
     - !!omap
       - id: "YDR058C"
       - name: "TGL2"
+      - annotation: !!omap
+          - uniprot: "P54857"
     - !!omap
       - id: "YDR062W"
       - name: "LCB2"
+      - annotation: !!omap
+          - uniprot: "P40970"
     - !!omap
       - id: "YDR071C"
       - name: "PAA1"
+      - annotation: !!omap
+          - uniprot: "Q12447"
     - !!omap
       - id: "YDR072C"
       - name: "IPT1"
+      - annotation: !!omap
+          - uniprot: "P38954"
     - !!omap
       - id: "YDR074W"
       - name: "TPS2"
+      - annotation: !!omap
+          - uniprot: "P31688"
     - !!omap
       - id: "YDR093W"
       - name: "DNF2"
+      - annotation: !!omap
+          - uniprot: "Q12675"
     - !!omap
       - id: "YDR098C"
       - name: "GRX3"
+      - annotation: !!omap
+          - uniprot: "Q03835"
     - !!omap
       - id: "YDR105C"
       - name: "TMS1"
+      - annotation: !!omap
+          - uniprot: "Q12116"
     - !!omap
       - id: "YDR109C"
       - annotation: !!omap
@@ -120616,477 +121048,792 @@
           - ncbigene: "851687"
           - ncbiprotein: "NP_010394"
           - refseq: "NM_001180417"
+          - uniprot: "Q04585"
     - !!omap
       - id: "YDR111C"
       - name: "ALT2"
+      - annotation: !!omap
+          - uniprot: "P52892"
     - !!omap
       - id: "YDR127W"
       - name: "ARO1"
+      - annotation: !!omap
+          - uniprot: "P08566"
     - !!omap
       - id: "YDR135C"
       - name: "YCF1"
+      - annotation: !!omap
+          - uniprot: "P39109"
     - !!omap
       - id: "YDR147W"
       - name: "EKI1"
+      - annotation: !!omap
+          - uniprot: "Q03764"
     - !!omap
       - id: "YDR148C"
       - name: "KGD2"
+      - annotation: !!omap
+          - uniprot: "P19262"
     - !!omap
       - id: "YDR158W"
       - name: "HOM2"
+      - annotation: !!omap
+          - uniprot: "P13663"
     - !!omap
       - id: "YDR173C"
       - name: "ARG82"
+      - annotation: !!omap
+          - uniprot: "P07250"
     - !!omap
       - id: "YDR178W"
       - name: "SDH4"
+      - annotation: !!omap
+          - uniprot: "P37298"
     - !!omap
       - id: "YDR191W"
       - name: "HST4"
+      - annotation: !!omap
+          - uniprot: "P53688"
     - !!omap
       - id: "YDR196C"
       - name: "CAB5"
+      - annotation: !!omap
+          - uniprot: "Q03941"
     - !!omap
       - id: "YDR204W"
       - name: "COQ4"
+      - annotation: !!omap
+          - uniprot: "O13525"
     - !!omap
       - id: "YDR208W"
       - name: "MSS4"
+      - annotation: !!omap
+          - uniprot: "P38994"
     - !!omap
       - id: "YDR226W"
       - name: "ADK1"
+      - annotation: !!omap
+          - uniprot: "P07170"
     - !!omap
       - id: "YDR231C"
       - name: "COX20"
+      - annotation: !!omap
+          - uniprot: "Q04935"
     - !!omap
       - id: "YDR232W"
       - name: "HEM1"
+      - annotation: !!omap
+          - uniprot: "P09950"
     - !!omap
       - id: "YDR234W"
       - name: "LYS4"
+      - annotation: !!omap
+          - uniprot: "P49367"
     - !!omap
       - id: "YDR236C"
       - name: "FMN1"
+      - annotation: !!omap
+          - uniprot: "Q03778"
     - !!omap
       - id: "YDR242W"
       - name: "AMD2"
+      - annotation: !!omap
+          - uniprot: "P22580"
     - !!omap
       - id: "YDR248C"
       - name: "YDR248C"
+      - annotation: !!omap
+          - uniprot: "Q03786"
     - !!omap
       - id: "YDR256C"
       - name: "CTA1"
+      - annotation: !!omap
+          - uniprot: "P15202"
     - !!omap
       - id: "YDR261C"
       - name: "EXG2"
+      - annotation: !!omap
+          - uniprot: "Q07793"
     - !!omap
       - id: "YDR268W"
       - name: "MSW1"
+      - annotation: !!omap
+          - uniprot: "P04803"
     - !!omap
       - id: "YDR270W"
       - name: "CCC2"
+      - annotation: !!omap
+          - uniprot: "P38995"
     - !!omap
       - id: "YDR272W"
       - name: "GLO2"
+      - annotation: !!omap
+          - uniprot: "Q05584"
     - !!omap
       - id: "YDR284C"
       - name: "DPP1"
+      - annotation: !!omap
+          - uniprot: "Q05521"
     - !!omap
       - id: "YDR287W"
       - name: "INM2"
+      - annotation: !!omap
+          - uniprot: "Q05533"
     - !!omap
       - id: "YDR294C"
       - name: "DPL1"
+      - annotation: !!omap
+          - uniprot: "Q05567"
     - !!omap
       - id: "YDR297W"
       - name: "SUR2"
+      - annotation: !!omap
+          - uniprot: "P38992"
     - !!omap
       - id: "YDR298C"
       - name: "ATP5"
+      - annotation: !!omap
+          - uniprot: "P09457"
     - !!omap
       - id: "YDR300C"
       - name: "PRO1"
+      - annotation: !!omap
+          - uniprot: "P32264"
     - !!omap
       - id: "YDR302W"
       - name: "GPI11"
+      - annotation: !!omap
+          - uniprot: "Q06636"
     - !!omap
       - id: "YDR305C"
       - name: "HNT2"
+      - annotation: !!omap
+          - uniprot: "P49775"
     - !!omap
       - id: "YDR315C"
       - name: "IPK1"
+      - annotation: !!omap
+          - uniprot: "Q06667"
     - !!omap
       - id: "YDR321W"
       - name: "ASP1"
+      - annotation: !!omap
+          - uniprot: "P38986"
     - !!omap
       - id: "YDR322C-A"
       - name: "TIM11"
+      - annotation: !!omap
+          - uniprot: "P81449"
     - !!omap
       - id: "YDR341C"
       - name: "YDR341C"
+      - annotation: !!omap
+          - uniprot: "Q05506"
     - !!omap
       - id: "YDR342C"
       - name: "HXT7"
+      - annotation: !!omap
+          - uniprot: "P39004"
     - !!omap
       - id: "YDR343C"
       - name: "HXT6"
+      - annotation: !!omap
+          - uniprot: "P39003"
     - !!omap
       - id: "YDR345C"
       - name: "HXT3"
+      - annotation: !!omap
+          - uniprot: "P32466"
     - !!omap
       - id: "YDR352W"
       - name: "YPQ2"
+      - annotation: !!omap
+          - uniprot: "Q06328"
     - !!omap
       - id: "YDR353W"
       - name: "TRR1"
+      - annotation: !!omap
+          - uniprot: "P29509"
     - !!omap
       - id: "YDR354W"
       - name: "TRP4"
+      - annotation: !!omap
+          - uniprot: "P07285"
     - !!omap
       - id: "YDR367W"
       - name: "KEI1"
+      - annotation: !!omap
+          - uniprot: "Q06346"
     - !!omap
       - id: "YDR368W"
       - name: "YPR1"
+      - annotation: !!omap
+          - uniprot: "Q12458"
     - !!omap
       - id: "YDR371W"
       - name: "CTS2"
+      - annotation: !!omap
+          - uniprot: "Q06350"
     - !!omap
       - id: "YDR373W"
       - name: "FRQ1"
+      - annotation: !!omap
+          - uniprot: "Q06389"
     - !!omap
       - id: "YDR376W"
       - name: "ARH1"
+      - annotation: !!omap
+          - uniprot: "P48360"
     - !!omap
       - id: "YDR377W"
       - name: "ATP17"
+      - annotation: !!omap
+          - uniprot: "Q06405"
     - !!omap
       - id: "YDR380W"
       - name: "ARO10"
+      - annotation: !!omap
+          - uniprot: "Q06408"
     - !!omap
       - id: "YDR384C"
       - name: "ATO3"
+      - annotation: !!omap
+          - uniprot: "Q12359"
     - !!omap
       - id: "YDR387C"
       - name: "CIN10"
+      - annotation: !!omap
+          - uniprot: "Q04162"
     - !!omap
       - id: "YDR399W"
       - name: "HPT1"
+      - annotation: !!omap
+          - uniprot: "Q04178"
     - !!omap
       - id: "YDR400W"
       - name: "URH1"
+      - annotation: !!omap
+          - uniprot: "Q04179"
     - !!omap
       - id: "YDR402C"
       - name: "DIT2"
+      - annotation: !!omap
+          - uniprot: "P21595"
     - !!omap
       - id: "YDR403W"
       - name: "DIT1"
+      - annotation: !!omap
+          - uniprot: "P21623"
     - !!omap
       - id: "YDR408C"
       - name: "ADE8"
+      - annotation: !!omap
+          - uniprot: "P04161"
     - !!omap
       - id: "YDR410C"
       - name: "STE14"
+      - annotation: !!omap
+          - uniprot: "P32584"
     - !!omap
       - id: "YDR428C"
       - name: "BNA7"
+      - annotation: !!omap
+          - uniprot: "Q04066"
     - !!omap
       - id: "YDR437W"
       - name: "GPI19"
+      - annotation: !!omap
+          - uniprot: "Q04082"
     - !!omap
       - id: "YDR440W"
       - name: "DOT1"
+      - annotation: !!omap
+          - uniprot: "Q04089"
     - !!omap
       - id: "YDR441C"
       - name: "APT2"
+      - annotation: !!omap
+          - uniprot: "P36973"
     - !!omap
       - id: "YDR452W"
       - name: "PPN1"
+      - annotation: !!omap
+          - uniprot: "Q04119"
     - !!omap
       - id: "YDR453C"
       - name: "TSA2"
+      - annotation: !!omap
+          - uniprot: "Q04120"
     - !!omap
       - id: "YDR454C"
       - name: "GUK1"
+      - annotation: !!omap
+          - uniprot: "P15454"
     - !!omap
       - id: "YDR456W"
       - name: "NHX1"
+      - annotation: !!omap
+          - uniprot: "Q04121"
     - !!omap
       - id: "YDR481C"
       - name: "PHO8"
+      - annotation: !!omap
+          - uniprot: "P11491"
     - !!omap
       - id: "YDR483W"
       - name: "KRE2"
+      - annotation: !!omap
+          - uniprot: "P27809"
     - !!omap
       - id: "YDR487C"
       - name: "RIB3"
+      - annotation: !!omap
+          - uniprot: "Q99258"
     - !!omap
       - id: "YDR497C"
       - name: "ITR1"
+      - annotation: !!omap
+          - uniprot: "P30605"
     - !!omap
       - id: "YDR502C"
       - name: "SAM2"
+      - annotation: !!omap
+          - uniprot: "P19358"
     - !!omap
       - id: "YDR503C"
       - name: "LPP1"
+      - annotation: !!omap
+          - uniprot: "Q04396"
     - !!omap
       - id: "YDR508C"
       - name: "GNP1"
+      - annotation: !!omap
+          - uniprot: "P48813"
     - !!omap
       - id: "YDR513W"
       - name: "GRX2"
+      - annotation: !!omap
+          - uniprot: "P17695"
     - !!omap
       - id: "YDR516C"
       - name: "EMI2"
+      - annotation: !!omap
+          - uniprot: "Q04409"
     - !!omap
       - id: "YDR529C"
       - name: "QCR7"
+      - annotation: !!omap
+          - uniprot: "P00128"
     - !!omap
       - id: "YDR530C"
       - name: "APA2"
+      - annotation: !!omap
+          - uniprot: "P22108"
     - !!omap
       - id: "YDR531W"
       - name: "CAB1"
+      - annotation: !!omap
+          - uniprot: "Q04430"
     - !!omap
       - id: "YDR533C"
       - name: "HSP31"
+      - annotation: !!omap
+          - uniprot: "Q04432"
     - !!omap
       - id: "YDR536W"
       - name: "STL1"
+      - annotation: !!omap
+          - uniprot: "P39932"
     - !!omap
       - id: "YDR538W"
       - name: "PAD1"
+      - annotation: !!omap
+          - uniprot: "P33751"
     - !!omap
       - id: "YDR539W"
       - name: "FDC1"
+      - annotation: !!omap
+          - uniprot: "Q03034"
     - !!omap
       - id: "YEL004W"
       - name: "YEA4"
+      - annotation: !!omap
+          - uniprot: "P40004"
     - !!omap
       - id: "YEL006W"
       - name: "YEA6"
+      - annotation: !!omap
+          - uniprot: "P39953"
     - !!omap
       - id: "YEL017C-A"
       - name: "PMP2"
+      - annotation: !!omap
+          - uniprot: "P40975"
     - !!omap
       - id: "YEL021W"
       - name: "URA3"
+      - annotation: !!omap
+          - uniprot: "P03962"
     - !!omap
       - id: "YEL024W"
       - name: "RIP1"
+      - annotation: !!omap
+          - uniprot: "P08067"
     - !!omap
       - id: "YEL027W"
       - name: "VMA3"
+      - annotation: !!omap
+          - uniprot: "P25515"
     - !!omap
       - id: "YEL029C"
       - name: "BUD16"
+      - annotation: !!omap
+          - uniprot: "P39988"
     - !!omap
       - id: "YEL031W"
       - name: "SPF1"
+      - annotation: !!omap
+          - uniprot: "P39986"
     - !!omap
       - id: "YEL038W"
       - name: "UTR4"
+      - annotation: !!omap
+          - uniprot: "P32626"
     - !!omap
       - id: "YEL039C"
       - name: "CYC7"
+      - annotation: !!omap
+          - uniprot: "P00045"
     - !!omap
       - id: "YEL041W"
       - name: "YEF1"
+      - annotation: !!omap
+          - uniprot: "P32622"
     - !!omap
       - id: "YEL042W"
       - name: "GDA1"
+      - annotation: !!omap
+          - uniprot: "P32621"
     - !!omap
       - id: "YEL046C"
       - name: "GLY1"
+      - annotation: !!omap
+          - uniprot: "P37303"
     - !!omap
       - id: "YEL047C"
       - name: "FRD1"
+      - annotation: !!omap
+          - uniprot: "P32614"
     - !!omap
       - id: "YEL051W"
       - name: "VMA8"
+      - annotation: !!omap
+          - uniprot: "P32610"
     - !!omap
       - id: "YEL058W"
       - name: "PCM1"
+      - annotation: !!omap
+          - uniprot: "P38628"
     - !!omap
       - id: "YEL063C"
       - name: "CAN1"
+      - annotation: !!omap
+          - uniprot: "P04817"
     - !!omap
       - id: "YEL066W"
       - name: "HPA3"
+      - annotation: !!omap
+          - uniprot: "P39979"
     - !!omap
       - id: "YEL069C"
       - name: "HXT13"
+      - annotation: !!omap
+          - uniprot: "P39924"
     - !!omap
       - id: "YEL070W"
       - name: "DSF1"
+      - annotation: !!omap
+          - uniprot: "P0CX08"
     - !!omap
       - id: "YEL071W"
       - name: "DLD3"
+      - annotation: !!omap
+          - uniprot: "P39976"
     - !!omap
       - id: "YER003C"
       - name: "PMI40"
+      - annotation: !!omap
+          - uniprot: "P29952"
     - !!omap
       - id: "YER005W"
       - name: "YND1"
+      - annotation: !!omap
+          - uniprot: "P40009"
     - !!omap
       - id: "YER010C"
       - name: "YER010C"
+      - annotation: !!omap
+          - uniprot: "P40011"
     - !!omap
       - id: "YER014W"
       - name: "HEM14"
+      - annotation: !!omap
+          - uniprot: "P40012"
     - !!omap
       - id: "YER015W"
       - name: "FAA2"
+      - annotation: !!omap
+          - uniprot: "P39518"
     - !!omap
       - id: "YER019W"
       - name: "ISC1"
+      - annotation: !!omap
+          - uniprot: "P40015"
     - !!omap
       - id: "YER023W"
       - name: "PRO3"
+      - annotation: !!omap
+          - uniprot: "P32263"
     - !!omap
       - id: "YER024W"
       - name: "YAT2"
+      - annotation: !!omap
+          - uniprot: "P40017"
     - !!omap
       - id: "YER026C"
       - name: "CHO1"
+      - annotation: !!omap
+          - uniprot: "P08456"
     - !!omap
       - id: "YER037W"
       - name: "PHM8"
+      - annotation: !!omap
+          - uniprot: "P40025"
     - !!omap
       - id: "YER042W"
       - name: "MXR1"
+      - annotation: !!omap
+          - uniprot: "P40029"
     - !!omap
       - id: "YER043C"
       - name: "SAH1"
+      - annotation: !!omap
+          - uniprot: "P39954"
     - !!omap
       - id: "YER052C"
       - name: "HOM3"
+      - annotation: !!omap
+          - uniprot: "P10869"
     - !!omap
       - id: "YER053C"
       - name: "PIC2"
+      - annotation: !!omap
+          - uniprot: "P40035"
     - !!omap
       - id: "YER055C"
       - name: "HIS1"
+      - annotation: !!omap
+          - uniprot: "P00498"
     - !!omap
       - id: "YER056C"
       - name: "FCY2"
+      - annotation: !!omap
+          - uniprot: "P17064"
     - !!omap
       - id: "YER060W"
       - name: "FCY21"
+      - annotation: !!omap
+          - uniprot: "P40039"
     - !!omap
       - id: "YER060W-A"
       - name: "FCY22"
+      - annotation: !!omap
+          - uniprot: "Q12119"
     - !!omap
       - id: "YER061C"
       - name: "CEM1"
+      - annotation: !!omap
+          - uniprot: "P39525"
     - !!omap
       - id: "YER062C"
       - name: "GPP2"
+      - annotation: !!omap
+          - uniprot: "P40106"
     - !!omap
       - id: "YER065C"
       - name: "ICL1"
+      - annotation: !!omap
+          - uniprot: "P28240"
     - !!omap
       - id: "YER069W"
       - name: "ARG5,6"
+      - annotation: !!omap
+          - uniprot: "Q01217"
     - !!omap
       - id: "YER070W"
       - name: "RNR1"
+      - annotation: !!omap
+          - uniprot: "P21524"
     - !!omap
       - id: "YER073W"
       - name: "ALD5"
+      - annotation: !!omap
+          - uniprot: "P40047"
     - !!omap
       - id: "YER081W"
       - name: "SER3"
+      - annotation: !!omap
+          - uniprot: "P40054"
     - !!omap
       - id: "YER086W"
       - name: "ILV1"
+      - annotation: !!omap
+          - uniprot: "P00927"
     - !!omap
       - id: "YER087W"
       - name: "AIM10"
+      - annotation: !!omap
+          - uniprot: "P39965"
     - !!omap
       - id: "YER090W"
       - name: "TRP2"
+      - annotation: !!omap
+          - uniprot: "P00899"
     - !!omap
       - id: "YER091C"
       - name: "MET6"
+      - annotation: !!omap
+          - uniprot: "P05694"
     - !!omap
       - id: "YER099C"
       - name: "PRS2"
+      - annotation: !!omap
+          - uniprot: "P38620"
     - !!omap
       - id: "YER119C"
       - name: "AVT6"
+      - annotation: !!omap
+          - uniprot: "P40074"
     - !!omap
       - id: "YER141W"
       - name: "COX15"
+      - annotation: !!omap
+          - uniprot: "P40086"
     - !!omap
       - id: "YER152C"
       - name: "YER152C"
+      - annotation: !!omap
+          - uniprot: "P10356"
     - !!omap
       - id: "YER163C"
       - name: "GCG1"
+      - annotation: !!omap
+          - uniprot: "P32656"
     - !!omap
       - id: "YER170W"
       - name: "ADK2"
+      - annotation: !!omap
+          - uniprot: "P26364"
     - !!omap
       - id: "YER174C"
       - name: "GRX4"
+      - annotation: !!omap
+          - uniprot: "P32642"
     - !!omap
       - id: "YER175C"
       - name: "TMT1"
+      - annotation: !!omap
+          - uniprot: "P32643"
     - !!omap
       - id: "YER178W"
       - name: "PDA1"
+      - annotation: !!omap
+          - uniprot: "P16387"
     - !!omap
       - id: "YER183C"
       - name: "FAU1"
+      - annotation: !!omap
+          - uniprot: "P40099"
     - !!omap
       - id: "YFL001W"
       - name: "DEG1"
+      - annotation: !!omap
+          - uniprot: "P31115"
     - !!omap
       - id: "YFL011W"
       - name: "HXT10"
+      - annotation: !!omap
+          - uniprot: "P43581"
     - !!omap
       - id: "YFL017C"
       - name: "GNA1"
+      - annotation: !!omap
+          - uniprot: "P43577"
     - !!omap
       - id: "YFL018C"
       - name: "LPD1"
+      - annotation: !!omap
+          - uniprot: "P09624"
     - !!omap
       - id: "YFL022C"
       - name: "FRS2"
+      - annotation: !!omap
+          - uniprot: "P15625"
     - !!omap
       - id: "YFL030W"
       - name: "AGX1"
+      - annotation: !!omap
+          - uniprot: "P43567"
     - !!omap
       - id: "YFL045C"
       - name: "SEC53"
+      - annotation: !!omap
+          - uniprot: "P07283"
     - !!omap
       - id: "YFL053W"
       - name: "DAK2"
+      - annotation: !!omap
+          - uniprot: "P43550"
     - !!omap
       - id: "YFL054C"
       - name: "AQY3"
+      - annotation: !!omap
+          - uniprot: "P43549"
     - !!omap
       - id: "YFL055W"
       - name: "AGP3"
+      - annotation: !!omap
+          - uniprot: "P43548"
     - !!omap
       - id: "YFL058W"
       - name: "THI5"
+      - annotation: !!omap
+          - uniprot: "P43534"
     - !!omap
       - id: "YFL059W"
       - name: "SNZ3"
+      - annotation: !!omap
+          - uniprot: "P43545"
     - !!omap
       - id: "YFL060C"
       - name: "SNO3"
+      - annotation: !!omap
+          - uniprot: "P43544"
     - !!omap
       - id: "YFL061W"
       - name: "DDI2"
+      - annotation: !!omap
+          - uniprot: "P0CH63"
     - !!omap
       - id: "YFR015C"
       - name: "GSY1"
+      - annotation: !!omap
+          - uniprot: "P23337"
     - !!omap
       - id: "YFR019W"
       - name: "FAB1"
+      - annotation: !!omap
+          - uniprot: "P34756"
     - !!omap
       - id: "YFR021W"
       - name: "ATG18"
@@ -121099,18 +121846,28 @@
     - !!omap
       - id: "YFR025C"
       - name: "HIS2"
+      - annotation: !!omap
+          - uniprot: "P38635"
     - !!omap
       - id: "YFR030W"
       - name: "MET10"
+      - annotation: !!omap
+          - uniprot: "P39692"
     - !!omap
       - id: "YFR033C"
       - name: "QCR6"
+      - annotation: !!omap
+          - uniprot: "P00127"
     - !!omap
       - id: "YFR044C"
       - name: "DUG1"
+      - annotation: !!omap
+          - uniprot: "P43616"
     - !!omap
       - id: "YFR047C"
       - name: "BNA6"
+      - annotation: !!omap
+          - uniprot: "P43619"
     - !!omap
       - id: "YFR049W"
       - name: "YMR31"
@@ -121123,72 +121880,118 @@
     - !!omap
       - id: "YFR053C"
       - name: "HXK1"
+      - annotation: !!omap
+          - uniprot: "P04806"
     - !!omap
       - id: "YFR055W"
       - name: "IRC7"
+      - annotation: !!omap
+          - uniprot: "P43623"
     - !!omap
       - id: "YGL001C"
       - name: "ERG26"
+      - annotation: !!omap
+          - uniprot: "P53199"
     - !!omap
       - id: "YGL006W"
       - name: "PMC1"
+      - annotation: !!omap
+          - uniprot: "P38929"
     - !!omap
       - id: "YGL008C"
       - name: "PMA1"
+      - annotation: !!omap
+          - uniprot: "P05030"
     - !!omap
       - id: "YGL009C"
       - name: "LEU1"
+      - annotation: !!omap
+          - uniprot: "P07264"
     - !!omap
       - id: "YGL012W"
       - name: "ERG4"
+      - annotation: !!omap
+          - uniprot: "P25340"
     - !!omap
       - id: "YGL017W"
       - name: "ATE1"
+      - annotation: !!omap
+          - uniprot: "P16639"
     - !!omap
       - id: "YGL022W"
       - name: "STT3"
+      - annotation: !!omap
+          - uniprot: "P39007"
     - !!omap
       - id: "YGL026C"
       - name: "TRP5"
+      - annotation: !!omap
+          - uniprot: "P00931"
     - !!omap
       - id: "YGL027C"
       - name: "CWH41"
+      - annotation: !!omap
+          - uniprot: "P53008"
     - !!omap
       - id: "YGL037C"
       - name: "PNC1"
+      - annotation: !!omap
+          - uniprot: "P53184"
     - !!omap
       - id: "YGL038C"
       - name: "OCH1"
+      - annotation: !!omap
+          - uniprot: "P31755"
     - !!omap
       - id: "YGL040C"
       - name: "HEM2"
+      - annotation: !!omap
+          - uniprot: "P05373"
     - !!omap
       - id: "YGL047W"
       - name: "ALG13"
+      - annotation: !!omap
+          - uniprot: "P53178"
     - !!omap
       - id: "YGL055W"
       - name: "OLE1"
+      - annotation: !!omap
+          - uniprot: "P21147"
     - !!omap
       - id: "YGL062W"
       - name: "PYC1"
+      - annotation: !!omap
+          - uniprot: "P11154"
     - !!omap
       - id: "YGL063W"
       - name: "PUS2"
+      - annotation: !!omap
+          - uniprot: "P53167"
     - !!omap
       - id: "YGL065C"
       - name: "ALG2"
+      - annotation: !!omap
+          - uniprot: "P43636"
     - !!omap
       - id: "YGL067W"
       - name: "NPY1"
+      - annotation: !!omap
+          - uniprot: "P53164"
     - !!omap
       - id: "YGL077C"
       - name: "HNM1"
+      - annotation: !!omap
+          - uniprot: "P19807"
     - !!omap
       - id: "YGL080W"
       - name: "MPC1"
+      - annotation: !!omap
+          - uniprot: "P53157"
     - !!omap
       - id: "YGL084C"
       - name: "GUP1"
+      - annotation: !!omap
+          - uniprot: "P53154"
     - !!omap
       - id: "YGL101W"
       - name: "YGK1"
@@ -121201,93 +122004,153 @@
     - !!omap
       - id: "YGL125W"
       - name: "MET13"
+      - annotation: !!omap
+          - uniprot: "P53128"
     - !!omap
       - id: "YGL142C"
       - name: "GPI10"
+      - annotation: !!omap
+          - uniprot: "P30777"
     - !!omap
       - id: "YGL148W"
       - name: "ARO2"
+      - annotation: !!omap
+          - uniprot: "P28777"
     - !!omap
       - id: "YGL154C"
       - name: "LYS5"
+      - annotation: !!omap
+          - uniprot: "P50113"
     - !!omap
       - id: "YGL156W"
       - name: "AMS1"
+      - annotation: !!omap
+          - uniprot: "P22855"
     - !!omap
       - id: "YGL167C"
       - name: "PMR1"
+      - annotation: !!omap
+          - uniprot: "P13586"
     - !!omap
       - id: "YGL169W"
       - name: "SUA5"
+      - annotation: !!omap
+          - uniprot: "P32579"
     - !!omap
       - id: "YGL184C"
       - name: "STR3"
+      - annotation: !!omap
+          - uniprot: "P53101"
     - !!omap
       - id: "YGL186C"
       - name: "TPN1"
+      - annotation: !!omap
+          - uniprot: "P53099"
     - !!omap
       - id: "YGL187C"
       - name: "COX4"
+      - annotation: !!omap
+          - uniprot: "P04037"
     - !!omap
       - id: "YGL191W"
       - name: "COX13"
+      - annotation: !!omap
+          - uniprot: "P32799"
     - !!omap
       - id: "YGL196W"
       - name: "DSD1"
+      - annotation: !!omap
+          - uniprot: "P53095"
     - !!omap
       - id: "YGL202W"
       - name: "ARO8"
+      - annotation: !!omap
+          - uniprot: "P53090"
     - !!omap
       - id: "YGL205W"
       - name: "POX1"
+      - annotation: !!omap
+          - uniprot: "P13711"
     - !!omap
       - id: "YGL224C"
       - name: "SDT1"
+      - annotation: !!omap
+          - uniprot: "P53078"
     - !!omap
       - id: "YGL225W"
       - name: "VRG4"
+      - annotation: !!omap
+          - uniprot: "P40107"
     - !!omap
       - id: "YGL234W"
       - name: "ADE5,7"
+      - annotation: !!omap
+          - uniprot: "P07244"
     - !!omap
       - id: "YGL245W"
       - name: "GUS1"
+      - annotation: !!omap
+          - uniprot: "P46655"
     - !!omap
       - id: "YGL248W"
       - name: "PDE1"
+      - annotation: !!omap
+          - uniprot: "P22434"
     - !!omap
       - id: "YGL253W"
       - name: "HXK2"
+      - annotation: !!omap
+          - uniprot: "P04807"
     - !!omap
       - id: "YGL255W"
       - name: "ZRT1"
+      - annotation: !!omap
+          - uniprot: "P32804"
     - !!omap
       - id: "YGL256W"
       - name: "ADH4"
+      - annotation: !!omap
+          - uniprot: "P10127"
     - !!omap
       - id: "YGR007W"
       - name: "ECT1"
+      - annotation: !!omap
+          - uniprot: "P33412"
     - !!omap
       - id: "YGR010W"
       - name: "NMA2"
+      - annotation: !!omap
+          - uniprot: "P53204"
     - !!omap
       - id: "YGR012W"
       - name: "MCY1"
+      - annotation: !!omap
+          - uniprot: "P53206"
     - !!omap
       - id: "YGR015C"
       - name: "EAT1"
+      - annotation: !!omap
+          - uniprot: "P53208"
     - !!omap
       - id: "YGR019W"
       - name: "UGA1"
+      - annotation: !!omap
+          - uniprot: "P17649"
     - !!omap
       - id: "YGR020C"
       - name: "VMA7"
+      - annotation: !!omap
+          - uniprot: "P39111"
     - !!omap
       - id: "YGR032W"
       - name: "GSC2"
+      - annotation: !!omap
+          - uniprot: "P40989"
     - !!omap
       - id: "YGR036C"
       - name: "CAX4"
+      - annotation: !!omap
+          - uniprot: "P53223"
     - !!omap
       - id: "YGR038W"
       - name: "ORM1"
@@ -121300,36 +122163,58 @@
     - !!omap
       - id: "YGR043C"
       - name: "NQM1"
+      - annotation: !!omap
+          - uniprot: "P53228"
     - !!omap
       - id: "YGR046W"
       - name: "TAM41"
+      - annotation: !!omap
+          - uniprot: "P53230"
     - !!omap
       - id: "YGR055W"
       - name: "MUP1"
+      - annotation: !!omap
+          - uniprot: "P50276"
     - !!omap
       - id: "YGR060W"
       - name: "ERG25"
+      - annotation: !!omap
+          - uniprot: "P53045"
     - !!omap
       - id: "YGR061C"
       - name: "ADE6"
+      - annotation: !!omap
+          - uniprot: "P38972"
     - !!omap
       - id: "YGR062C"
       - name: "COX18"
+      - annotation: !!omap
+          - uniprot: "P53239"
     - !!omap
       - id: "YGR065C"
       - name: "VHT1"
+      - annotation: !!omap
+          - uniprot: "P53241"
     - !!omap
       - id: "YGR087C"
       - name: "PDC6"
+      - annotation: !!omap
+          - uniprot: "P26263"
     - !!omap
       - id: "YGR088W"
       - name: "CTT1"
+      - annotation: !!omap
+          - uniprot: "P06115"
     - !!omap
       - id: "YGR094W"
       - name: "VAS1"
+      - annotation: !!omap
+          - uniprot: "P07806"
     - !!omap
       - id: "YGR096W"
       - name: "TPC1"
+      - annotation: !!omap
+          - uniprot: "P53257"
     - !!omap
       - id: "YGR106C"
       - name: "VOA1"
@@ -121342,372 +122227,618 @@
     - !!omap
       - id: "YGR110W"
       - name: "CLD1"
+      - annotation: !!omap
+          - uniprot: "P53264"
     - !!omap
       - id: "YGR121C"
       - name: "MEP1"
+      - annotation: !!omap
+          - uniprot: "P40260"
     - !!omap
       - id: "YGR124W"
       - name: "ASN2"
+      - annotation: !!omap
+          - uniprot: "P49090"
     - !!omap
       - id: "YGR138C"
       - name: "TPO2"
+      - annotation: !!omap
+          - uniprot: "P53283"
     - !!omap
       - id: "YGR143W"
       - name: "SKN1"
+      - annotation: !!omap
+          - uniprot: "P33336"
     - !!omap
       - id: "YGR144W"
       - name: "THI4"
+      - annotation: !!omap
+          - uniprot: "P32318"
     - !!omap
       - id: "YGR154C"
       - name: "GTO1"
+      - annotation: !!omap
+          - uniprot: "P48239"
     - !!omap
       - id: "YGR155W"
       - name: "CYS4"
+      - annotation: !!omap
+          - uniprot: "P32582"
     - !!omap
       - id: "YGR157W"
       - name: "CHO2"
+      - annotation: !!omap
+          - uniprot: "P05374"
     - !!omap
       - id: "YGR170W"
       - name: "PSD2"
+      - annotation: !!omap
+          - uniprot: "P53037"
     - !!omap
       - id: "YGR171C"
       - name: "MSM1"
+      - annotation: !!omap
+          - uniprot: "P22438"
     - !!omap
       - id: "YGR175C"
       - name: "ERG1"
+      - annotation: !!omap
+          - uniprot: "P32476"
     - !!omap
       - id: "YGR177C"
       - name: "ATF2"
+      - annotation: !!omap
+          - uniprot: "P53296"
     - !!omap
       - id: "YGR180C"
       - name: "RNR4"
+      - annotation: !!omap
+          - uniprot: "P49723"
     - !!omap
       - id: "YGR183C"
       - name: "QCR9"
+      - annotation: !!omap
+          - uniprot: "P22289"
     - !!omap
       - id: "YGR185C"
       - name: "TYS1"
+      - annotation: !!omap
+          - uniprot: "P36421"
     - !!omap
       - id: "YGR191W"
       - name: "HIP1"
+      - annotation: !!omap
+          - uniprot: "P06775"
     - !!omap
       - id: "YGR192C"
       - name: "TDH3"
+      - annotation: !!omap
+          - uniprot: "P00359"
     - !!omap
       - id: "YGR193C"
       - name: "PDX1"
+      - annotation: !!omap
+          - uniprot: "P16451"
     - !!omap
       - id: "YGR194C"
       - name: "XKS1"
+      - annotation: !!omap
+          - uniprot: "P42826"
     - !!omap
       - id: "YGR202C"
       - name: "PCT1"
+      - annotation: !!omap
+          - uniprot: "P13259"
     - !!omap
       - id: "YGR204W"
       - name: "ADE3"
+      - annotation: !!omap
+          - uniprot: "P07245"
     - !!omap
       - id: "YGR208W"
       - name: "SER2"
+      - annotation: !!omap
+          - uniprot: "P42941"
     - !!omap
       - id: "YGR209C"
       - name: "TRX2"
+      - annotation: !!omap
+          - uniprot: "P22803"
     - !!omap
       - id: "YGR216C"
       - name: "GPI1"
+      - annotation: !!omap
+          - uniprot: "P53306"
     - !!omap
       - id: "YGR227W"
       - name: "DIE2"
+      - annotation: !!omap
+          - uniprot: "P50076"
     - !!omap
       - id: "YGR234W"
       - name: "YHB1"
+      - annotation: !!omap
+          - uniprot: "P39676"
     - !!omap
       - id: "YGR240C"
       - name: "PFK1"
+      - annotation: !!omap
+          - uniprot: "P16861"
     - !!omap
       - id: "YGR243W"
       - name: "MPC3"
+      - annotation: !!omap
+          - uniprot: "P53311"
     - !!omap
       - id: "YGR244C"
       - name: "LSC2"
+      - annotation: !!omap
+          - uniprot: "P53312"
     - !!omap
       - id: "YGR247W"
       - name: "CPD1"
+      - annotation: !!omap
+          - uniprot: "P53314"
     - !!omap
       - id: "YGR248W"
       - name: "SOL4"
+      - annotation: !!omap
+          - uniprot: "P53315"
     - !!omap
       - id: "YGR254W"
       - name: "ENO1"
+      - annotation: !!omap
+          - uniprot: "P00924"
     - !!omap
       - id: "YGR255C"
       - name: "COQ6"
+      - annotation: !!omap
+          - uniprot: "P53318"
     - !!omap
       - id: "YGR256W"
       - name: "GND2"
+      - annotation: !!omap
+          - uniprot: "P53319"
     - !!omap
       - id: "YGR260W"
       - name: "TNA1"
+      - annotation: !!omap
+          - uniprot: "P53322"
     - !!omap
       - id: "YGR264C"
       - name: "MES1"
+      - annotation: !!omap
+          - uniprot: "P00958"
     - !!omap
       - id: "YGR267C"
       - name: "FOL2"
+      - annotation: !!omap
+          - uniprot: "P51601"
     - !!omap
       - id: "YGR277C"
       - name: "CAB4"
+      - annotation: !!omap
+          - uniprot: "P53332"
     - !!omap
       - id: "YGR282C"
       - name: "BGL2"
+      - annotation: !!omap
+          - uniprot: "P15703"
     - !!omap
       - id: "YGR286C"
       - name: "BIO2"
+      - annotation: !!omap
+          - uniprot: "P32451"
     - !!omap
       - id: "YGR287C"
       - name: "IMA1"
+      - annotation: !!omap
+          - uniprot: "P53051"
     - !!omap
       - id: "YGR289C"
       - name: "MAL11"
+      - annotation: !!omap
+          - uniprot: "P53048"
     - !!omap
       - id: "YGR292W"
       - name: "MAL12"
+      - annotation: !!omap
+          - uniprot: "P53341"
     - !!omap
       - id: "YHL003C"
       - name: "LAG1"
+      - annotation: !!omap
+          - uniprot: "P38703"
     - !!omap
       - id: "YHL011C"
       - name: "PRS3"
+      - annotation: !!omap
+          - uniprot: "P38689"
     - !!omap
       - id: "YHL012W"
       - name: "YHL012W"
+      - annotation: !!omap
+          - uniprot: "P38709"
     - !!omap
       - id: "YHL016C"
       - name: "DUR3"
+      - annotation: !!omap
+          - uniprot: "P33413"
     - !!omap
       - id: "YHL018W"
       - name: "YHL018W"
+      - annotation: !!omap
+          - uniprot: "P38744"
     - !!omap
       - id: "YHL032C"
       - name: "GUT1"
+      - annotation: !!omap
+          - uniprot: "P32190"
     - !!omap
       - id: "YHL036W"
       - name: "MUP3"
+      - annotation: !!omap
+          - uniprot: "P38734"
     - !!omap
       - id: "YHR001W-A"
       - name: "QCR10"
+      - annotation: !!omap
+          - uniprot: "P37299"
     - !!omap
       - id: "YHR002W"
       - name: "LEU5"
+      - annotation: !!omap
+          - uniprot: "P38702"
     - !!omap
       - id: "YHR007C"
       - name: "ERG11"
+      - annotation: !!omap
+          - uniprot: "P10614"
     - !!omap
       - id: "YHR008C"
       - name: "SOD2"
+      - annotation: !!omap
+          - uniprot: "P00447"
     - !!omap
       - id: "YHR011W"
       - name: "DIA4"
+      - annotation: !!omap
+          - uniprot: "P38705"
     - !!omap
       - id: "YHR013C"
       - name: "ARD1"
+      - annotation: !!omap
+          - uniprot: "P07347"
     - !!omap
       - id: "YHR018C"
       - name: "ARG4"
+      - annotation: !!omap
+          - uniprot: "P04076"
     - !!omap
       - id: "YHR019C"
       - name: "DED81"
+      - annotation: !!omap
+          - uniprot: "P38707"
     - !!omap
       - id: "YHR020W"
       - name: "YHR020W"
+      - annotation: !!omap
+          - uniprot: "P38708"
     - !!omap
       - id: "YHR025W"
       - name: "THR1"
+      - annotation: !!omap
+          - uniprot: "P17423"
     - !!omap
       - id: "YHR026W"
       - name: "VMA16"
+      - annotation: !!omap
+          - uniprot: "P23968"
     - !!omap
       - id: "YHR037W"
       - name: "PUT2"
+      - annotation: !!omap
+          - uniprot: "P07275"
     - !!omap
       - id: "YHR039C-A"
       - name: "VMA10"
+      - annotation: !!omap
+          - uniprot: "P48836"
     - !!omap
       - id: "YHR042W"
       - name: "NCP1"
+      - annotation: !!omap
+          - uniprot: "P16603"
     - !!omap
       - id: "YHR043C"
       - name: "DOG2"
+      - annotation: !!omap
+          - uniprot: "P38773"
     - !!omap
       - id: "YHR044C"
       - name: "DOG1"
+      - annotation: !!omap
+          - uniprot: "P38774"
     - !!omap
       - id: "YHR046C"
       - name: "INM1"
+      - annotation: !!omap
+          - uniprot: "P38710"
     - !!omap
       - id: "YHR051W"
       - name: "COX6"
+      - annotation: !!omap
+          - uniprot: "P00427"
     - !!omap
       - id: "YHR063C"
       - name: "PAN5"
+      - annotation: !!omap
+          - uniprot: "P38787"
     - !!omap
       - id: "YHR067W"
       - name: "HTD2"
+      - annotation: !!omap
+          - uniprot: "P38790"
     - !!omap
       - id: "YHR068W"
       - name: "DYS1"
+      - annotation: !!omap
+          - uniprot: "P38791"
     - !!omap
       - id: "YHR072W"
       - name: "ERG7"
+      - annotation: !!omap
+          - uniprot: "P38604"
     - !!omap
       - id: "YHR074W"
       - name: "QNS1"
+      - annotation: !!omap
+          - uniprot: "P38795"
     - !!omap
       - id: "YHR091C"
       - name: "MSR1"
+      - annotation: !!omap
+          - uniprot: "P38714"
     - !!omap
       - id: "YHR092C"
       - name: "HXT4"
+      - annotation: !!omap
+          - uniprot: "P32467"
     - !!omap
       - id: "YHR094C"
       - name: "HXT1"
+      - annotation: !!omap
+          - uniprot: "P32465"
     - !!omap
       - id: "YHR096C"
       - name: "HXT5"
+      - annotation: !!omap
+          - uniprot: "P38695"
     - !!omap
       - id: "YHR100C"
       - name: "GEP4"
+      - annotation: !!omap
+          - uniprot: "P38812"
     - !!omap
       - id: "YHR104W"
       - name: "GRE3"
+      - annotation: !!omap
+          - uniprot: "P38715"
     - !!omap
       - id: "YHR106W"
       - name: "TRR2"
+      - annotation: !!omap
+          - uniprot: "P38816"
     - !!omap
       - id: "YHR109W"
       - name: "CTM1"
+      - annotation: !!omap
+          - uniprot: "P38818"
     - !!omap
       - id: "YHR116W"
       - name: "COX23"
+      - annotation: !!omap
+          - uniprot: "P38824"
     - !!omap
       - id: "YHR119W"
       - name: "SET1"
+      - annotation: !!omap
+          - uniprot: "P38827"
     - !!omap
       - id: "YHR123W"
       - name: "EPT1"
+      - annotation: !!omap
+          - uniprot: "P22140"
     - !!omap
       - id: "YHR128W"
       - name: "FUR1"
+      - annotation: !!omap
+          - uniprot: "P18562"
     - !!omap
       - id: "YHR137W"
       - name: "ARO9"
+      - annotation: !!omap
+          - uniprot: "P38840"
     - !!omap
       - id: "YHR144C"
       - name: "DCD1"
+      - annotation: !!omap
+          - uniprot: "P06773"
     - !!omap
       - id: "YHR162W"
       - name: "MPC2"
+      - annotation: !!omap
+          - uniprot: "P38857"
     - !!omap
       - id: "YHR163W"
       - name: "SOL3"
+      - annotation: !!omap
+          - uniprot: "P38858"
     - !!omap
       - id: "YHR174W"
       - name: "ENO2"
+      - annotation: !!omap
+          - uniprot: "P00925"
     - !!omap
       - id: "YHR183W"
       - name: "GND1"
+      - annotation: !!omap
+          - uniprot: "P38720"
     - !!omap
       - id: "YHR190W"
       - name: "ERG9"
+      - annotation: !!omap
+          - uniprot: "P29704"
     - !!omap
       - id: "YHR201C"
       - name: "PPX1"
+      - annotation: !!omap
+          - uniprot: "P38698"
     - !!omap
       - id: "YHR208W"
       - name: "BAT1"
+      - annotation: !!omap
+          - uniprot: "P38891"
     - !!omap
       - id: "YHR215W"
       - name: "PHO12"
+      - annotation: !!omap
+          - uniprot: "P38693"
     - !!omap
       - id: "YHR216W"
       - name: "IMD2"
+      - annotation: !!omap
+          - uniprot: "P38697"
     - !!omap
       - id: "YIL002C"
       - name: "INP51"
+      - annotation: !!omap
+          - uniprot: "P40559"
     - !!omap
       - id: "YIL006W"
       - name: "YIA6"
+      - annotation: !!omap
+          - uniprot: "P40556"
     - !!omap
       - id: "YIL009W"
       - name: "FAA3"
+      - annotation: !!omap
+          - uniprot: "P39002"
     - !!omap
       - id: "YIL010W"
       - name: "DOT5"
+      - annotation: !!omap
+          - uniprot: "P40553"
     - !!omap
       - id: "YIL013C"
       - name: "PDR11"
+      - annotation: !!omap
+          - uniprot: "P40550"
     - !!omap
       - id: "YIL020C"
       - name: "HIS6"
+      - annotation: !!omap
+          - uniprot: "P40545"
     - !!omap
       - id: "YIL023C"
       - name: "YKE4"
+      - annotation: !!omap
+          - uniprot: "P40544"
     - !!omap
       - id: "YIL043C"
       - name: "CBR1"
+      - annotation: !!omap
+          - uniprot: "P38626"
     - !!omap
       - id: "YIL048W"
       - name: "NEO1"
+      - annotation: !!omap
+          - uniprot: "P40527"
     - !!omap
       - id: "YIL053W"
       - name: "GPP1"
+      - annotation: !!omap
+          - uniprot: "P41277"
     - !!omap
       - id: "YIL066C"
       - name: "RNR3"
+      - annotation: !!omap
+          - uniprot: "P21672"
     - !!omap
       - id: "YIL074C"
       - name: "SER33"
+      - annotation: !!omap
+          - uniprot: "P40510"
     - !!omap
       - id: "YIL078W"
       - name: "THS1"
+      - annotation: !!omap
+          - uniprot: "P04801"
     - !!omap
       - id: "YIL083C"
       - name: "CAB2"
+      - annotation: !!omap
+          - uniprot: "P40506"
     - !!omap
       - id: "YIL094C"
       - name: "LYS12"
+      - annotation: !!omap
+          - uniprot: "P40495"
     - !!omap
       - id: "YIL099W"
       - name: "SGA1"
+      - annotation: !!omap
+          - uniprot: "P08019"
     - !!omap
       - id: "YIL107C"
       - name: "PFK26"
+      - annotation: !!omap
+          - uniprot: "P40433"
     - !!omap
       - id: "YIL111W"
       - name: "COX5B"
+      - annotation: !!omap
+          - uniprot: "P00425"
     - !!omap
       - id: "YIL116W"
       - name: "HIS5"
+      - annotation: !!omap
+          - uniprot: "P07172"
     - !!omap
       - id: "YIL124W"
       - name: "AYR1"
+      - annotation: !!omap
+          - uniprot: "P40471"
     - !!omap
       - id: "YIL125W"
       - name: "KGD1"
+      - annotation: !!omap
+          - uniprot: "P20967"
     - !!omap
       - id: "YIL134W"
       - name: "FLX1"
+      - annotation: !!omap
+          - uniprot: "P40464"
     - !!omap
       - id: "YIL145C"
       - name: "PAN6"
+      - annotation: !!omap
+          - uniprot: "P40459"
     - !!omap
       - id: "YIL155C"
       - name: "GUT2"
+      - annotation: !!omap
+          - uniprot: "P32191"
     - !!omap
       - id: "YIL160C"
       - name: "POT1"
+      - annotation: !!omap
+          - uniprot: "P27796"
     - !!omap
       - id: "YIL162W"
       - name: "SUC2"
+      - annotation: !!omap
+          - uniprot: "P00724"
     - !!omap
       - id: "YIL166C"
       - name: "SOA1"
@@ -121720,39 +122851,63 @@
     - !!omap
       - id: "YIL172C"
       - name: "IMA3"
+      - annotation: !!omap
+          - uniprot: "P0CW40"
     - !!omap
       - id: "YIR027C"
       - name: "DAL1"
+      - annotation: !!omap
+          - uniprot: "P32375"
     - !!omap
       - id: "YIR028W"
       - name: "DAL4"
+      - annotation: !!omap
+          - uniprot: "Q04895"
     - !!omap
       - id: "YIR029W"
       - name: "DAL2"
+      - annotation: !!omap
+          - uniprot: "P25335"
     - !!omap
       - id: "YIR031C"
       - name: "DAL7"
+      - annotation: !!omap
+          - uniprot: "P21826"
     - !!omap
       - id: "YIR032C"
       - name: "DAL3"
+      - annotation: !!omap
+          - uniprot: "P32459"
     - !!omap
       - id: "YIR034C"
       - name: "LYS1"
+      - annotation: !!omap
+          - uniprot: "P38998"
     - !!omap
       - id: "YIR036C"
       - name: "IRC24"
+      - annotation: !!omap
+          - uniprot: "P40580"
     - !!omap
       - id: "YIR037W"
       - name: "HYR1"
+      - annotation: !!omap
+          - uniprot: "P40581"
     - !!omap
       - id: "YIR038C"
       - name: "GTT1"
+      - annotation: !!omap
+          - uniprot: "P40582"
     - !!omap
       - id: "YJL003W"
       - name: "COX16"
+      - annotation: !!omap
+          - uniprot: "P47081"
     - !!omap
       - id: "YJL005W"
       - name: "CYR1"
+      - annotation: !!omap
+          - uniprot: "P08678"
     - !!omap
       - id: "YJL012C"
       - name: "VTC4"
@@ -121765,576 +122920,958 @@
     - !!omap
       - id: "YJL026W"
       - name: "RNR2"
+      - annotation: !!omap
+          - uniprot: "P09938"
     - !!omap
       - id: "YJL045W"
       - name: "YJL045W"
+      - annotation: !!omap
+          - uniprot: "P47052"
     - !!omap
       - id: "YJL046W"
       - name: "AIM22"
+      - annotation: !!omap
+          - uniprot: "P47051"
     - !!omap
       - id: "YJL052W"
       - name: "TDH1"
+      - annotation: !!omap
+          - uniprot: "P00360"
     - !!omap
       - id: "YJL060W"
       - name: "BNA3"
+      - annotation: !!omap
+          - uniprot: "P47039"
     - !!omap
       - id: "YJL068C"
       - name: "YJL068C"
+      - annotation: !!omap
+          - uniprot: "P40363"
     - !!omap
       - id: "YJL071W"
       - name: "ARG2"
+      - annotation: !!omap
+          - uniprot: "P40360"
     - !!omap
       - id: "YJL088W"
       - name: "ARG3"
+      - annotation: !!omap
+          - uniprot: "P05150"
     - !!omap
       - id: "YJL091C"
       - name: "GWT1"
+      - annotation: !!omap
+          - uniprot: "P47026"
     - !!omap
       - id: "YJL097W"
       - name: "PHS1"
+      - annotation: !!omap
+          - uniprot: "P40857"
     - !!omap
       - id: "YJL100W"
       - name: "LSB6"
+      - annotation: !!omap
+          - uniprot: "P42951"
     - !!omap
       - id: "YJL101C"
       - name: "GSH1"
+      - annotation: !!omap
+          - uniprot: "P32477"
     - !!omap
       - id: "YJL121C"
       - name: "RPE1"
+      - annotation: !!omap
+          - uniprot: "P46969"
     - !!omap
       - id: "YJL126W"
       - name: "NIT2"
+      - annotation: !!omap
+          - uniprot: "P47016"
     - !!omap
       - id: "YJL129C"
       - name: "TRK1"
+      - annotation: !!omap
+          - uniprot: "P12685"
     - !!omap
       - id: "YJL130C"
       - name: "URA2"
+      - annotation: !!omap
+          - uniprot: "P07259"
     - !!omap
       - id: "YJL133W"
       - name: "MRS3"
+      - annotation: !!omap
+          - uniprot: "P10566"
     - !!omap
       - id: "YJL134W"
       - name: "LCB3"
+      - annotation: !!omap
+          - uniprot: "P47013"
     - !!omap
       - id: "YJL137C"
       - name: "GLG2"
+      - annotation: !!omap
+          - uniprot: "P47011"
     - !!omap
       - id: "YJL139C"
       - name: "YUR1"
+      - annotation: !!omap
+          - uniprot: "P26725"
     - !!omap
       - id: "YJL153C"
       - name: "INO1"
+      - annotation: !!omap
+          - uniprot: "P11986"
     - !!omap
       - id: "YJL155C"
       - name: "FBP26"
+      - annotation: !!omap
+          - uniprot: "P32604"
     - !!omap
       - id: "YJL166W"
       - name: "QCR8"
+      - annotation: !!omap
+          - uniprot: "P08525"
     - !!omap
       - id: "YJL167W"
       - name: "ERG20"
+      - annotation: !!omap
+          - uniprot: "P08524"
     - !!omap
       - id: "YJL168C"
       - name: "SET2"
+      - annotation: !!omap
+          - uniprot: "P46995"
     - !!omap
       - id: "YJL196C"
       - name: "ELO1"
+      - annotation: !!omap
+          - uniprot: "P39540"
     - !!omap
       - id: "YJL198W"
       - name: "PHO90"
+      - annotation: !!omap
+          - uniprot: "P39535"
     - !!omap
       - id: "YJL200C"
       - name: "ACO2"
+      - annotation: !!omap
+          - uniprot: "P39533"
     - !!omap
       - id: "YJL212C"
       - name: "OPT1"
+      - annotation: !!omap
+          - uniprot: "P40897"
     - !!omap
       - id: "YJL214W"
       - name: "HXT8"
+      - annotation: !!omap
+          - uniprot: "P40886"
     - !!omap
       - id: "YJL216C"
       - name: "IMA5"
+      - annotation: !!omap
+          - uniprot: "P40884"
     - !!omap
       - id: "YJL219W"
       - name: "HXT9"
+      - annotation: !!omap
+          - uniprot: "P40885"
     - !!omap
       - id: "YJL221C"
       - name: "IMA4"
+      - annotation: !!omap
+          - uniprot: "P0CW41"
     - !!omap
       - id: "YJR001W"
       - name: "AVT1"
+      - annotation: !!omap
+          - uniprot: "P47082"
     - !!omap
       - id: "YJR009C"
       - name: "TDH2"
+      - annotation: !!omap
+          - uniprot: "P00358"
     - !!omap
       - id: "YJR010W"
       - name: "MET3"
+      - annotation: !!omap
+          - uniprot: "P08536"
     - !!omap
       - id: "YJR013W"
       - name: "GPI14"
+      - annotation: !!omap
+          - uniprot: "P47088"
     - !!omap
       - id: "YJR016C"
       - name: "ILV3"
+      - annotation: !!omap
+          - uniprot: "P39522"
     - !!omap
       - id: "YJR019C"
       - name: "TES1"
+      - annotation: !!omap
+          - uniprot: "P41903"
     - !!omap
       - id: "YJR024C"
       - name: "MDE1"
+      - annotation: !!omap
+          - uniprot: "P47095"
     - !!omap
       - id: "YJR025C"
       - name: "BNA1"
+      - annotation: !!omap
+          - uniprot: "P47096"
     - !!omap
       - id: "YJR040W"
       - name: "GEF1"
+      - annotation: !!omap
+          - uniprot: "P37020"
     - !!omap
       - id: "YJR048W"
       - name: "CYC1"
+      - annotation: !!omap
+          - uniprot: "P00044"
     - !!omap
       - id: "YJR049C"
       - name: "UTR1"
+      - annotation: !!omap
+          - uniprot: "P21373"
     - !!omap
       - id: "YJR051W"
       - name: "OSM1"
+      - annotation: !!omap
+          - uniprot: "P21375"
     - !!omap
       - id: "YJR057W"
       - name: "CDC8"
+      - annotation: !!omap
+          - uniprot: "P00572"
     - !!omap
       - id: "YJR069C"
       - name: "HAM1"
+      - annotation: !!omap
+          - uniprot: "P47119"
     - !!omap
       - id: "YJR073C"
       - name: "OPI3"
+      - annotation: !!omap
+          - uniprot: "P05375"
     - !!omap
       - id: "YJR077C"
       - name: "MIR1"
+      - annotation: !!omap
+          - uniprot: "P23641"
     - !!omap
       - id: "YJR078W"
       - name: "BNA2"
+      - annotation: !!omap
+          - uniprot: "P47125"
     - !!omap
       - id: "YJR095W"
       - name: "SFC1"
+      - annotation: !!omap
+          - uniprot: "P33303"
     - !!omap
       - id: "YJR103W"
       - name: "URA8"
+      - annotation: !!omap
+          - uniprot: "P38627"
     - !!omap
       - id: "YJR104C"
       - name: "SOD1"
+      - annotation: !!omap
+          - uniprot: "P00445"
     - !!omap
       - id: "YJR105W"
       - name: "ADO1"
+      - annotation: !!omap
+          - uniprot: "P47143"
     - !!omap
       - id: "YJR109C"
       - name: "CPA2"
+      - annotation: !!omap
+          - uniprot: "P03965"
     - !!omap
       - id: "YJR110W"
       - name: "YMR1"
+      - annotation: !!omap
+          - uniprot: "P47147"
     - !!omap
       - id: "YJR121W"
       - name: "ATP2"
+      - annotation: !!omap
+          - uniprot: "P00830"
     - !!omap
       - id: "YJR130C"
       - name: "STR2"
+      - annotation: !!omap
+          - uniprot: "P47164"
     - !!omap
       - id: "YJR131W"
       - name: "MNS1"
+      - annotation: !!omap
+          - uniprot: "P32906"
     - !!omap
       - id: "YJR133W"
       - name: "XPT1"
+      - annotation: !!omap
+          - uniprot: "P47165"
     - !!omap
       - id: "YJR137C"
       - name: "MET5"
+      - annotation: !!omap
+          - uniprot: "P47169"
     - !!omap
       - id: "YJR139C"
       - name: "HOM6"
+      - annotation: !!omap
+          - uniprot: "P31116"
     - !!omap
       - id: "YJR143C"
       - name: "PMT4"
+      - annotation: !!omap
+          - uniprot: "P46971"
     - !!omap
       - id: "YJR148W"
       - name: "BAT2"
+      - annotation: !!omap
+          - uniprot: "P47176"
     - !!omap
       - id: "YJR149W"
       - name: "YJR149W"
+      - annotation: !!omap
+          - uniprot: "P47177"
     - !!omap
       - id: "YJR152W"
       - name: "DAL5"
+      - annotation: !!omap
+          - uniprot: "P15365"
     - !!omap
       - id: "YJR153W"
       - name: "PGU1"
+      - annotation: !!omap
+          - uniprot: "P47180"
     - !!omap
       - id: "YJR155W"
       - name: "AAD10"
+      - annotation: !!omap
+          - uniprot: "P47182"
     - !!omap
       - id: "YJR158W"
       - name: "HXT16"
+      - annotation: !!omap
+          - uniprot: "P47185"
     - !!omap
       - id: "YJR159W"
       - name: "SOR1"
+      - annotation: !!omap
+          - uniprot: "P35497"
     - !!omap
       - id: "YJR160C"
       - name: "MPH3"
+      - annotation: !!omap
+          - uniprot: "P0CE00"
     - !!omap
       - id: "YKL001C"
       - name: "MET14"
+      - annotation: !!omap
+          - uniprot: "Q02196"
     - !!omap
       - id: "YKL004W"
       - name: "AUR1"
+      - annotation: !!omap
+          - uniprot: "P36107"
     - !!omap
       - id: "YKL008C"
       - name: "LAC1"
+      - annotation: !!omap
+          - uniprot: "P28496"
     - !!omap
       - id: "YKL016C"
       - name: "ATP7"
+      - annotation: !!omap
+          - uniprot: "P30902"
     - !!omap
       - id: "YKL019W"
       - name: "RAM2"
+      - annotation: !!omap
+          - uniprot: "P29703"
     - !!omap
       - id: "YKL024C"
       - name: "URA6"
+      - annotation: !!omap
+          - uniprot: "P15700"
     - !!omap
       - id: "YKL026C"
       - name: "GPX1"
+      - annotation: !!omap
+          - uniprot: "P36014"
     - !!omap
       - id: "YKL029C"
       - name: "MAE1"
+      - annotation: !!omap
+          - uniprot: "P36013"
     - !!omap
       - id: "YKL035W"
       - name: "UGP1"
+      - annotation: !!omap
+          - uniprot: "P32861"
     - !!omap
       - id: "YKL055C"
       - name: "OAR1"
+      - annotation: !!omap
+          - uniprot: "P35731"
     - !!omap
       - id: "YKL060C"
       - name: "FBA1"
+      - annotation: !!omap
+          - uniprot: "P14540"
     - !!omap
       - id: "YKL067W"
       - name: "YNK1"
+      - annotation: !!omap
+          - uniprot: "P36010"
     - !!omap
       - id: "YKL069W"
       - name: "YKL069W"
+      - annotation: !!omap
+          - uniprot: "P36088"
     - !!omap
       - id: "YKL080W"
       - name: "VMA5"
+      - annotation: !!omap
+          - uniprot: "P31412"
     - !!omap
       - id: "YKL085W"
       - name: "MDH1"
+      - annotation: !!omap
+          - uniprot: "P17505"
     - !!omap
       - id: "YKL087C"
       - name: "CYT2"
+      - annotation: !!omap
+          - uniprot: "Q00873"
     - !!omap
       - id: "YKL088W"
       - name: "CAB3"
+      - annotation: !!omap
+          - uniprot: "P36076"
     - !!omap
       - id: "YKL094W"
       - name: "YJU3"
+      - annotation: !!omap
+          - uniprot: "P28321"
     - !!omap
       - id: "YKL103C"
       - name: "APE1"
+      - annotation: !!omap
+          - uniprot: "P14904"
     - !!omap
       - id: "YKL104C"
       - name: "GFA1"
+      - annotation: !!omap
+          - uniprot: "P14742"
     - !!omap
       - id: "YKL106W"
       - name: "AAT1"
+      - annotation: !!omap
+          - uniprot: "Q01802"
     - !!omap
       - id: "YKL120W"
       - name: "OAC1"
+      - annotation: !!omap
+          - uniprot: "P32332"
     - !!omap
       - id: "YKL127W"
       - name: "PGM1"
+      - annotation: !!omap
+          - uniprot: "P33401"
     - !!omap
       - id: "YKL132C"
       - name: "RMA1"
+      - annotation: !!omap
+          - uniprot: "P36001"
     - !!omap
       - id: "YKL140W"
       - name: "TGL1"
+      - annotation: !!omap
+          - uniprot: "P34163"
     - !!omap
       - id: "YKL141W"
       - name: "SDH3"
+      - annotation: !!omap
+          - uniprot: "P33421"
     - !!omap
       - id: "YKL146W"
       - name: "AVT3"
+      - annotation: !!omap
+          - uniprot: "P36062"
     - !!omap
       - id: "YKL148C"
       - name: "SDH1"
+      - annotation: !!omap
+          - uniprot: "Q00711"
     - !!omap
       - id: "YKL150W"
       - name: "MCR1"
+      - annotation: !!omap
+          - uniprot: "P36060"
     - !!omap
       - id: "YKL152C"
       - name: "GPM1"
+      - annotation: !!omap
+          - uniprot: "P00950"
     - !!omap
       - id: "YKL165C"
       - name: "MCD4"
+      - annotation: !!omap
+          - uniprot: "P36051"
     - !!omap
       - id: "YKL174C"
       - name: "TPO5"
+      - annotation: !!omap
+          - uniprot: "P36029"
     - !!omap
       - id: "YKL181W"
       - name: "PRS1"
+      - annotation: !!omap
+          - uniprot: "P32895"
     - !!omap
       - id: "YKL182W"
       - name: "FAS1"
+      - annotation: !!omap
+          - uniprot: "P07149"
     - !!omap
       - id: "YKL184W"
       - name: "SPE1"
+      - annotation: !!omap
+          - uniprot: "P08432"
     - !!omap
       - id: "YKL188C"
       - name: "PXA2"
+      - annotation: !!omap
+          - uniprot: "P34230"
     - !!omap
       - id: "YKL192C"
       - name: "ACP1"
+      - annotation: !!omap
+          - uniprot: "P32463"
     - !!omap
       - id: "YKL194C"
       - name: "MST1"
+      - annotation: !!omap
+          - uniprot: "P07236"
     - !!omap
       - id: "YKL211C"
       - name: "TRP3"
+      - annotation: !!omap
+          - uniprot: "P00937"
     - !!omap
       - id: "YKL212W"
       - name: "SAC1"
+      - annotation: !!omap
+          - uniprot: "P32368"
     - !!omap
       - id: "YKL215C"
       - name: "OXP1"
+      - annotation: !!omap
+          - uniprot: "P28273"
     - !!omap
       - id: "YKL216W"
       - name: "URA1"
+      - annotation: !!omap
+          - uniprot: "P28272"
     - !!omap
       - id: "YKL217W"
       - name: "JEN1"
+      - annotation: !!omap
+          - uniprot: "P36035"
     - !!omap
       - id: "YKL218C"
       - name: "SRY1"
+      - annotation: !!omap
+          - uniprot: "P36007"
     - !!omap
       - id: "YKL220C"
       - name: "FRE2"
+      - annotation: !!omap
+          - uniprot: "P36033"
     - !!omap
       - id: "YKR009C"
       - name: "FOX2"
+      - annotation: !!omap
+          - uniprot: "Q02207"
     - !!omap
       - id: "YKR031C"
       - name: "SPO14"
+      - annotation: !!omap
+          - uniprot: "P36126"
     - !!omap
       - id: "YKR039W"
       - name: "GAP1"
+      - annotation: !!omap
+          - uniprot: "P19145"
     - !!omap
       - id: "YKR043C"
       - name: "SHB17"
+      - annotation: !!omap
+          - uniprot: "P36136"
     - !!omap
       - id: "YKR052C"
       - name: "MRS4"
+      - annotation: !!omap
+          - uniprot: "P23500"
     - !!omap
       - id: "YKR053C"
       - name: "YSR3"
+      - annotation: !!omap
+          - uniprot: "P23501"
     - !!omap
       - id: "YKR058W"
       - name: "GLG1"
+      - annotation: !!omap
+          - uniprot: "P36143"
     - !!omap
       - id: "YKR061W"
       - name: "KTR2"
+      - annotation: !!omap
+          - uniprot: "P33550"
     - !!omap
       - id: "YKR066C"
       - name: "CCP1"
+      - annotation: !!omap
+          - uniprot: "P00431"
     - !!omap
       - id: "YKR067W"
       - name: "GPT2"
+      - annotation: !!omap
+          - uniprot: "P36148"
     - !!omap
       - id: "YKR069W"
       - name: "MET1"
+      - annotation: !!omap
+          - uniprot: "P36150"
     - !!omap
       - id: "YKR072C"
       - name: "SIS2"
+      - annotation: !!omap
+          - uniprot: "P36024"
     - !!omap
       - id: "YKR076W"
       - name: "ECM4"
+      - annotation: !!omap
+          - uniprot: "P36156"
     - !!omap
       - id: "YKR080W"
       - name: "MTD1"
+      - annotation: !!omap
+          - uniprot: "Q02046"
     - !!omap
       - id: "YKR089C"
       - name: "TGL4"
+      - annotation: !!omap
+          - uniprot: "P36165"
     - !!omap
       - id: "YKR093W"
       - name: "PTR2"
+      - annotation: !!omap
+          - uniprot: "P32901"
     - !!omap
       - id: "YKR097W"
       - name: "PCK1"
+      - annotation: !!omap
+          - uniprot: "P10963"
     - !!omap
       - id: "YLL001W"
       - name: "DNM1"
+      - annotation: !!omap
+          - uniprot: "P54861"
     - !!omap
       - id: "YLL012W"
       - name: "YEH1"
+      - annotation: !!omap
+          - uniprot: "Q07804"
     - !!omap
       - id: "YLL015W"
       - name: "BPT1"
+      - annotation: !!omap
+          - uniprot: "P14772"
     - !!omap
       - id: "YLL018C"
       - name: "DPS1"
+      - annotation: !!omap
+          - uniprot: "P04802"
     - !!omap
       - id: "YLL018C-A"
       - name: "COX19"
+      - annotation: !!omap
+          - uniprot: "Q3E731"
     - !!omap
       - id: "YLL028W"
       - name: "TPO1"
+      - annotation: !!omap
+          - uniprot: "Q07824"
     - !!omap
       - id: "YLL031C"
       - name: "GPI13"
+      - annotation: !!omap
+          - uniprot: "Q07830"
     - !!omap
       - id: "YLL041C"
       - name: "SDH2"
+      - annotation: !!omap
+          - uniprot: "P21801"
     - !!omap
       - id: "YLL043W"
       - name: "FPS1"
+      - annotation: !!omap
+          - uniprot: "P23900"
     - !!omap
       - id: "YLL048C"
       - name: "YBT1"
+      - annotation: !!omap
+          - uniprot: "P32386"
     - !!omap
       - id: "YLL051C"
       - name: "FRE6"
+      - annotation: !!omap
+          - uniprot: "Q12473"
     - !!omap
       - id: "YLL052C"
       - name: "AQY2"
+      - annotation: !!omap
+          - uniprot: "P0CD90"
     - !!omap
       - id: "YLL053C"
       - name: "YLL053C"
+      - annotation: !!omap
+          - uniprot: "P0CD98"
     - !!omap
       - id: "YLL057C"
       - name: "JLP1"
+      - annotation: !!omap
+          - uniprot: "Q12358"
     - !!omap
       - id: "YLL058W"
       - name: "YLL058W"
+      - annotation: !!omap
+          - uniprot: "Q12198"
     - !!omap
       - id: "YLL060C"
       - name: "GTT2"
+      - annotation: !!omap
+          - uniprot: "Q12390"
     - !!omap
       - id: "YLL061W"
       - name: "MMP1"
+      - annotation: !!omap
+          - uniprot: "Q12372"
     - !!omap
       - id: "YLL062C"
       - name: "MHT1"
+      - annotation: !!omap
+          - uniprot: "Q12525"
     - !!omap
       - id: "YLR011W"
       - name: "LOT6"
+      - annotation: !!omap
+          - uniprot: "Q07923"
     - !!omap
       - id: "YLR017W"
       - name: "MEU1"
+      - annotation: !!omap
+          - uniprot: "Q07938"
     - !!omap
       - id: "YLR020C"
       - name: "YEH2"
+      - annotation: !!omap
+          - uniprot: "Q07950"
     - !!omap
       - id: "YLR027C"
       - name: "AAT2"
+      - annotation: !!omap
+          - uniprot: "P23542"
     - !!omap
       - id: "YLR028C"
       - name: "ADE16"
+      - annotation: !!omap
+          - uniprot: "P54113"
     - !!omap
       - id: "YLR038C"
       - name: "COX12"
+      - annotation: !!omap
+          - uniprot: "Q01519"
     - !!omap
       - id: "YLR043C"
       - name: "TRX1"
+      - annotation: !!omap
+          - uniprot: "P22217"
     - !!omap
       - id: "YLR044C"
       - name: "PDC1"
+      - annotation: !!omap
+          - uniprot: "P06169"
     - !!omap
       - id: "YLR047C"
       - name: "FRE8"
+      - annotation: !!omap
+          - uniprot: "Q12209"
     - !!omap
       - id: "YLR056W"
       - name: "ERG3"
+      - annotation: !!omap
+          - uniprot: "P32353"
     - !!omap
       - id: "YLR057W"
       - name: "MNL2"
+      - annotation: !!omap
+          - uniprot: "Q12205"
     - !!omap
       - id: "YLR058C"
       - name: "SHM2"
+      - annotation: !!omap
+          - uniprot: "P37291"
     - !!omap
       - id: "YLR060W"
       - name: "FRS1"
+      - annotation: !!omap
+          - uniprot: "P15624"
     - !!omap
       - id: "YLR070C"
       - name: "XYL2"
+      - annotation: !!omap
+          - uniprot: "Q07993"
     - !!omap
       - id: "YLR081W"
       - name: "GAL2"
+      - annotation: !!omap
+          - uniprot: "P13181"
     - !!omap
       - id: "YLR089C"
       - name: "ALT1"
+      - annotation: !!omap
+          - uniprot: "P52893"
     - !!omap
       - id: "YLR092W"
       - name: "SUL2"
+      - annotation: !!omap
+          - uniprot: "Q12325"
     - !!omap
       - id: "YLR099C"
       - name: "ICT1"
+      - annotation: !!omap
+          - uniprot: "Q12385"
     - !!omap
       - id: "YLR100W"
       - name: "ERG27"
+      - annotation: !!omap
+          - uniprot: "Q12452"
     - !!omap
       - id: "YLR109W"
       - name: "AHP1"
+      - annotation: !!omap
+          - uniprot: "P38013"
     - !!omap
       - id: "YLR130C"
       - name: "ZRT2"
+      - annotation: !!omap
+          - uniprot: "Q12436"
     - !!omap
       - id: "YLR133W"
       - name: "CKI1"
+      - annotation: !!omap
+          - uniprot: "P20485"
     - !!omap
       - id: "YLR134W"
       - name: "PDC5"
+      - annotation: !!omap
+          - uniprot: "P16467"
     - !!omap
       - id: "YLR138W"
       - name: "NHA1"
+      - annotation: !!omap
+          - uniprot: "Q99271"
     - !!omap
       - id: "YLR142W"
       - name: "PUT1"
+      - annotation: !!omap
+          - uniprot: "P09368"
     - !!omap
       - id: "YLR143W"
       - name: "DPH6"
+      - annotation: !!omap
+          - uniprot: "Q12429"
     - !!omap
       - id: "YLR146C"
       - name: "SPE4"
+      - annotation: !!omap
+          - uniprot: "Q12455"
     - !!omap
       - id: "YLR151C"
       - name: "PCD1"
+      - annotation: !!omap
+          - uniprot: "Q12524"
     - !!omap
       - id: "YLR153C"
       - name: "ACS2"
+      - annotation: !!omap
+          - uniprot: "P52910"
     - !!omap
       - id: "YLR155C"
       - name: "ASP3-1"
+      - annotation: !!omap
+          - uniprot: "P0CZ17"
     - !!omap
       - id: "YLR157C"
       - name: "ASP3-2"
+      - annotation: !!omap
+          - uniprot: "P0CX77"
     - !!omap
       - id: "YLR158C"
       - name: "ASP3-3"
+      - annotation: !!omap
+          - uniprot: "P0CX78"
     - !!omap
       - id: "YLR160C"
       - name: "ASP3-4"
+      - annotation: !!omap
+          - uniprot: "P0CX79"
     - !!omap
       - id: "YLR164W"
       - name: "SHH4"
+      - annotation: !!omap
+          - uniprot: "Q06236"
     - !!omap
       - id: "YLR172C"
       - name: "DPH5"
+      - annotation: !!omap
+          - uniprot: "P32469"
     - !!omap
       - id: "YLR174W"
       - name: "IDP2"
+      - annotation: !!omap
+          - uniprot: "P41939"
     - !!omap
       - id: "YLR180W"
       - name: "SAM1"
+      - annotation: !!omap
+          - uniprot: "P10659"
     - !!omap
       - id: "YLR189C"
       - name: "ATG26"
+      - annotation: !!omap
+          - uniprot: "Q06321"
     - !!omap
       - id: "YLR201C"
       - name: "COQ9"
+      - annotation: !!omap
+          - uniprot: "Q05779"
     - !!omap
       - id: "YLR209C"
       - name: "PNP1"
+      - annotation: !!omap
+          - uniprot: "Q05788"
     - !!omap
       - id: "YLR211C"
       - name: "ATG38"
@@ -122347,75 +123884,123 @@
     - !!omap
       - id: "YLR214W"
       - name: "FRE1"
+      - annotation: !!omap
+          - uniprot: "P32791"
     - !!omap
       - id: "YLR231C"
       - name: "BNA5"
+      - annotation: !!omap
+          - uniprot: "Q05979"
     - !!omap
       - id: "YLR237W"
       - name: "THI7"
+      - annotation: !!omap
+          - uniprot: "Q05998"
     - !!omap
       - id: "YLR239C"
       - name: "LIP2"
+      - annotation: !!omap
+          - uniprot: "Q06005"
     - !!omap
       - id: "YLR240W"
       - name: "VPS34"
+      - annotation: !!omap
+          - uniprot: "P22543"
     - !!omap
       - id: "YLR244C"
       - name: "MAP1"
+      - annotation: !!omap
+          - uniprot: "Q01662"
     - !!omap
       - id: "YLR245C"
       - name: "CDD1"
+      - annotation: !!omap
+          - uniprot: "Q06549"
     - !!omap
       - id: "YLR258W"
       - name: "GSY2"
+      - annotation: !!omap
+          - uniprot: "P27472"
     - !!omap
       - id: "YLR260W"
       - name: "LCB5"
+      - annotation: !!omap
+          - uniprot: "Q06147"
     - !!omap
       - id: "YLR284C"
       - name: "ECI1"
+      - annotation: !!omap
+          - uniprot: "Q05871"
     - !!omap
       - id: "YLR285W"
       - name: "NNT1"
+      - annotation: !!omap
+          - uniprot: "Q05874"
     - !!omap
       - id: "YLR286C"
       - name: "CTS1"
+      - annotation: !!omap
+          - uniprot: "P29029"
     - !!omap
       - id: "YLR295C"
       - name: "ATP14"
+      - annotation: !!omap
+          - uniprot: "Q12349"
     - !!omap
       - id: "YLR299W"
       - name: "ECM38"
+      - annotation: !!omap
+          - uniprot: "Q05902"
     - !!omap
       - id: "YLR300W"
       - name: "EXG1"
+      - annotation: !!omap
+          - uniprot: "P23776"
     - !!omap
       - id: "YLR303W"
       - name: "MET17"
+      - annotation: !!omap
+          - uniprot: "P06106"
     - !!omap
       - id: "YLR304C"
       - name: "ACO1"
+      - annotation: !!omap
+          - uniprot: "P19414"
     - !!omap
       - id: "YLR305C"
       - name: "STT4"
+      - annotation: !!omap
+          - uniprot: "P37297"
     - !!omap
       - id: "YLR307W"
       - name: "CDA1"
+      - annotation: !!omap
+          - uniprot: "Q06702"
     - !!omap
       - id: "YLR308W"
       - name: "CDA2"
+      - annotation: !!omap
+          - uniprot: "Q06703"
     - !!omap
       - id: "YLR328W"
       - name: "NMA1"
+      - annotation: !!omap
+          - uniprot: "Q06178"
     - !!omap
       - id: "YLR342W"
       - name: "FKS1"
+      - annotation: !!omap
+          - uniprot: "P38631"
     - !!omap
       - id: "YLR345W"
       - name: "YLR345W"
+      - annotation: !!omap
+          - uniprot: "Q06137"
     - !!omap
       - id: "YLR348C"
       - name: "DIC1"
+      - annotation: !!omap
+          - uniprot: "Q06143"
     - !!omap
       - id: "YLR350W"
       - name: "ORM2"
@@ -122428,15 +124013,23 @@
     - !!omap
       - id: "YLR351C"
       - name: "NIT3"
+      - annotation: !!omap
+          - uniprot: "P49954"
     - !!omap
       - id: "YLR354C"
       - name: "TAL1"
+      - annotation: !!omap
+          - uniprot: "P15019"
     - !!omap
       - id: "YLR355C"
       - name: "ILV5"
+      - annotation: !!omap
+          - uniprot: "P06168"
     - !!omap
       - id: "YLR359W"
       - name: "ADE13"
+      - annotation: !!omap
+          - uniprot: "Q05911"
     - !!omap
       - id: "YLR360W"
       - name: "VPS38"
@@ -122449,312 +124042,518 @@
     - !!omap
       - id: "YLR372W"
       - name: "ELO3"
+      - annotation: !!omap
+          - uniprot: "P40319"
     - !!omap
       - id: "YLR377C"
       - name: "FBP1"
+      - annotation: !!omap
+          - uniprot: "P09201"
     - !!omap
       - id: "YLR382C"
       - name: "NAM2"
+      - annotation: !!omap
+          - uniprot: "P11325"
     - !!omap
       - id: "YLR386W"
       - name: "VAC14"
+      - annotation: !!omap
+          - uniprot: "Q06708"
     - !!omap
       - id: "YLR395C"
       - name: "COX8"
+      - annotation: !!omap
+          - uniprot: "P04039"
     - !!omap
       - id: "YLR410W"
       - name: "VIP1"
+      - annotation: !!omap
+          - uniprot: "Q06685"
     - !!omap
       - id: "YLR420W"
       - name: "URA4"
+      - annotation: !!omap
+          - uniprot: "P20051"
     - !!omap
       - id: "YLR432W"
       - name: "IMD3"
+      - annotation: !!omap
+          - uniprot: "P50095"
     - !!omap
       - id: "YLR438W"
       - name: "CAR2"
+      - annotation: !!omap
+          - uniprot: "P07991"
     - !!omap
       - id: "YLR446W"
       - name: "YLR446W"
+      - annotation: !!omap
+          - uniprot: "Q06204"
     - !!omap
       - id: "YLR447C"
       - name: "VMA6"
+      - annotation: !!omap
+          - uniprot: "P32366"
     - !!omap
       - id: "YLR450W"
       - name: "HMG2"
+      - annotation: !!omap
+          - uniprot: "P12684"
     - !!omap
       - id: "YML004C"
       - name: "GLO1"
+      - annotation: !!omap
+          - uniprot: "P50107"
     - !!omap
       - id: "YML008C"
       - name: "ERG6"
+      - annotation: !!omap
+          - uniprot: "P25087"
     - !!omap
       - id: "YML022W"
       - name: "APT1"
+      - annotation: !!omap
+          - uniprot: "P49435"
     - !!omap
       - id: "YML035C"
       - name: "AMD1"
+      - annotation: !!omap
+          - uniprot: "P15274"
     - !!omap
       - id: "YML042W"
       - name: "CAT2"
+      - annotation: !!omap
+          - uniprot: "P32796"
     - !!omap
       - id: "YML054C"
       - name: "CYB2"
+      - annotation: !!omap
+          - uniprot: "P00175"
     - !!omap
       - id: "YML056C"
       - name: "IMD4"
+      - annotation: !!omap
+          - uniprot: "P50094"
     - !!omap
       - id: "YML059C"
       - name: "NTE1"
+      - annotation: !!omap
+          - uniprot: "Q04958"
     - !!omap
       - id: "YML070W"
       - name: "DAK1"
+      - annotation: !!omap
+          - uniprot: "P54838"
     - !!omap
       - id: "YML075C"
       - name: "HMG1"
+      - annotation: !!omap
+          - uniprot: "P12683"
     - !!omap
       - id: "YML081C-A"
       - name: "ATP18"
+      - annotation: !!omap
+          - uniprot: "P81450"
     - !!omap
       - id: "YML082W"
       - name: "YML082W"
+      - annotation: !!omap
+          - uniprot: "Q04533"
     - !!omap
       - id: "YML086C"
       - name: "ALO1"
+      - annotation: !!omap
+          - uniprot: "P54783"
     - !!omap
       - id: "YML100W"
       - name: "TSL1"
+      - annotation: !!omap
+          - uniprot: "P38427"
     - !!omap
       - id: "YML106W"
       - name: "URA5"
+      - annotation: !!omap
+          - uniprot: "P13298"
     - !!omap
       - id: "YML110C"
       - name: "COQ5"
+      - annotation: !!omap
+          - uniprot: "P49017"
     - !!omap
       - id: "YML120C"
       - name: "NDI1"
+      - annotation: !!omap
+          - uniprot: "P32340"
     - !!omap
       - id: "YML123C"
       - name: "PHO84"
+      - annotation: !!omap
+          - uniprot: "P25297"
     - !!omap
       - id: "YML125C"
       - name: "PGA3"
+      - annotation: !!omap
+          - uniprot: "Q12746"
     - !!omap
       - id: "YML126C"
       - name: "ERG13"
+      - annotation: !!omap
+          - uniprot: "P54839"
     - !!omap
       - id: "YMR006C"
       - name: "PLB2"
+      - annotation: !!omap
+          - uniprot: "Q03674"
     - !!omap
       - id: "YMR008C"
       - name: "PLB1"
+      - annotation: !!omap
+          - uniprot: "P39105"
     - !!omap
       - id: "YMR009W"
       - name: "ADI1"
+      - annotation: !!omap
+          - uniprot: "Q03677"
     - !!omap
       - id: "YMR011W"
       - name: "HXT2"
+      - annotation: !!omap
+          - uniprot: "P23585"
     - !!omap
       - id: "YMR013C"
       - name: "SEC59"
+      - annotation: !!omap
+          - uniprot: "P20048"
     - !!omap
       - id: "YMR015C"
       - name: "ERG5"
+      - annotation: !!omap
+          - uniprot: "P54781"
     - !!omap
       - id: "YMR020W"
       - name: "FMS1"
+      - annotation: !!omap
+          - uniprot: "P50264"
     - !!omap
       - id: "YMR041C"
       - name: "ARA2"
+      - annotation: !!omap
+          - uniprot: "Q04212"
     - !!omap
       - id: "YMR054W"
       - name: "STV1"
+      - annotation: !!omap
+          - uniprot: "P37296"
     - !!omap
       - id: "YMR056C"
       - name: "AAC1"
+      - annotation: !!omap
+          - uniprot: "P04710"
     - !!omap
       - id: "YMR058W"
       - name: "FET3"
+      - annotation: !!omap
+          - uniprot: "P38993"
     - !!omap
       - id: "YMR062C"
       - name: "ARG7"
+      - annotation: !!omap
+          - uniprot: "Q04728"
     - !!omap
       - id: "YMR083W"
       - name: "ADH3"
+      - annotation: !!omap
+          - uniprot: "P07246"
     - !!omap
       - id: "YMR084W"
       - name: "YMR084W"
+      - annotation: !!omap
+          - uniprot: "A2P2R3"
     - !!omap
       - id: "YMR087W"
       - name: "YMR087W"
+      - annotation: !!omap
+          - uniprot: "Q04299"
     - !!omap
       - id: "YMR088C"
       - name: "VBA1"
+      - annotation: !!omap
+          - uniprot: "Q04301"
     - !!omap
       - id: "YMR099C"
       - name: "YMR099C"
+      - annotation: !!omap
+          - uniprot: "Q03161"
     - !!omap
       - id: "YMR101C"
       - name: "SRT1"
+      - annotation: !!omap
+          - uniprot: "Q03175"
     - !!omap
       - id: "YMR105C"
       - name: "PGM2"
+      - annotation: !!omap
+          - uniprot: "P37012"
     - !!omap
       - id: "YMR108W"
       - name: "ILV2"
+      - annotation: !!omap
+          - uniprot: "P07342"
     - !!omap
       - id: "YMR110C"
       - name: "HFD1"
+      - annotation: !!omap
+          - uniprot: "Q04458"
     - !!omap
       - id: "YMR113W"
       - name: "FOL3"
+      - annotation: !!omap
+          - uniprot: "Q12676"
     - !!omap
       - id: "YMR120C"
       - name: "ADE17"
+      - annotation: !!omap
+          - uniprot: "P38009"
     - !!omap
       - id: "YMR145C"
       - name: "NDE1"
+      - annotation: !!omap
+          - uniprot: "P40215"
     - !!omap
       - id: "YMR162C"
       - name: "DNF3"
+      - annotation: !!omap
+          - uniprot: "Q12674"
     - !!omap
       - id: "YMR165C"
       - name: "PAH1"
+      - annotation: !!omap
+          - uniprot: "P32567"
     - !!omap
       - id: "YMR169C"
       - name: "ALD3"
+      - annotation: !!omap
+          - uniprot: "P54114"
     - !!omap
       - id: "YMR170C"
       - name: "ALD2"
+      - annotation: !!omap
+          - uniprot: "P47771"
     - !!omap
       - id: "YMR189W"
       - name: "GCV2"
+      - annotation: !!omap
+          - uniprot: "P49095"
     - !!omap
       - id: "YMR202W"
       - name: "ERG2"
+      - annotation: !!omap
+          - uniprot: "P32352"
     - !!omap
       - id: "YMR205C"
       - name: "PFK2"
+      - annotation: !!omap
+          - uniprot: "P16862"
     - !!omap
       - id: "YMR207C"
       - name: "HFA1"
+      - annotation: !!omap
+          - uniprot: "P32874"
     - !!omap
       - id: "YMR208W"
       - name: "ERG12"
+      - annotation: !!omap
+          - uniprot: "P07277"
     - !!omap
       - id: "YMR210W"
       - name: "MGL2"
+      - annotation: !!omap
+          - uniprot: "Q03649"
     - !!omap
       - id: "YMR217W"
       - name: "GUA1"
+      - annotation: !!omap
+          - uniprot: "P38625"
     - !!omap
       - id: "YMR220W"
       - name: "ERG8"
+      - annotation: !!omap
+          - uniprot: "P24521"
     - !!omap
       - id: "YMR226C"
       - name: "YMR226C"
+      - annotation: !!omap
+          - uniprot: "Q05016"
     - !!omap
       - id: "YMR241W"
       - name: "YHM2"
+      - annotation: !!omap
+          - uniprot: "Q04013"
     - !!omap
       - id: "YMR243C"
       - name: "ZRC1"
+      - annotation: !!omap
+          - uniprot: "P20107"
     - !!omap
       - id: "YMR246W"
       - name: "FAA4"
+      - annotation: !!omap
+          - uniprot: "P47912"
     - !!omap
       - id: "YMR250W"
       - name: "GAD1"
+      - annotation: !!omap
+          - uniprot: "Q04792"
     - !!omap
       - id: "YMR251W"
       - name: "GTO3"
+      - annotation: !!omap
+          - uniprot: "Q05827"
     - !!omap
       - id: "YMR256C"
       - name: "COX7"
+      - annotation: !!omap
+          - uniprot: "P10174"
     - !!omap
       - id: "YMR261C"
       - name: "TPS3"
+      - annotation: !!omap
+          - uniprot: "P38426"
     - !!omap
       - id: "YMR267W"
       - name: "PPA2"
+      - annotation: !!omap
+          - uniprot: "P28239"
     - !!omap
       - id: "YMR271C"
       - name: "URA10"
+      - annotation: !!omap
+          - uniprot: "P30402"
     - !!omap
       - id: "YMR272C"
       - name: "SCS7"
+      - annotation: !!omap
+          - uniprot: "Q03529"
     - !!omap
       - id: "YMR278W"
       - name: "PRM15"
+      - annotation: !!omap
+          - uniprot: "Q03262"
     - !!omap
       - id: "YMR281W"
       - name: "GPI12"
+      - annotation: !!omap
+          - uniprot: "P23797"
     - !!omap
       - id: "YMR289W"
       - name: "ABZ2"
+      - annotation: !!omap
+          - uniprot: "Q03266"
     - !!omap
       - id: "YMR293C"
       - name: "HER2"
+      - annotation: !!omap
+          - uniprot: "Q03557"
     - !!omap
       - id: "YMR296C"
       - name: "LCB1"
+      - annotation: !!omap
+          - uniprot: "P25045"
     - !!omap
       - id: "YMR298W"
       - name: "LIP1"
+      - annotation: !!omap
+          - uniprot: "Q03579"
     - !!omap
       - id: "YMR300C"
       - name: "ADE4"
+      - annotation: !!omap
+          - uniprot: "P04046"
     - !!omap
       - id: "YMR301C"
       - name: "ATM1"
+      - annotation: !!omap
+          - uniprot: "P40416"
     - !!omap
       - id: "YMR303C"
       - name: "ADH2"
+      - annotation: !!omap
+          - uniprot: "P00331"
     - !!omap
       - id: "YMR306W"
       - name: "FKS3"
+      - annotation: !!omap
+          - uniprot: "Q04952"
     - !!omap
       - id: "YMR313C"
       - name: "TGL3"
+      - annotation: !!omap
+          - uniprot: "P40308"
     - !!omap
       - id: "YMR318C"
       - name: "ADH6"
+      - annotation: !!omap
+          - uniprot: "Q04894"
     - !!omap
       - id: "YMR319C"
       - name: "FET4"
+      - annotation: !!omap
+          - uniprot: "P40988"
     - !!omap
       - id: "YMR322C"
       - name: "SNO4"
+      - annotation: !!omap
+          - uniprot: "Q04902"
     - !!omap
       - id: "YMR323W"
       - name: "ERR3"
+      - annotation: !!omap
+          - uniprot: "P42222"
     - !!omap
       - id: "YNL003C"
       - name: "PET8"
+      - annotation: !!omap
+          - uniprot: "P38921"
     - !!omap
       - id: "YNL009W"
       - name: "IDP3"
+      - annotation: !!omap
+          - uniprot: "P53982"
     - !!omap
       - id: "YNL029C"
       - name: "KTR5"
+      - annotation: !!omap
+          - uniprot: "P53966"
     - !!omap
       - id: "YNL036W"
       - name: "NCE103"
+      - annotation: !!omap
+          - uniprot: "P53615"
     - !!omap
       - id: "YNL037C"
       - name: "IDH1"
+      - annotation: !!omap
+          - uniprot: "P28834"
     - !!omap
       - id: "YNL038W"
       - name: "GPI15"
+      - annotation: !!omap
+          - uniprot: "P53961"
     - !!omap
       - id: "YNL045W"
       - name: "LAP2"
+      - annotation: !!omap
+          - uniprot: "Q10740"
     - !!omap
       - id: "YNL048W"
       - name: "ALG11"
+      - annotation: !!omap
+          - uniprot: "P53954"
     - !!omap
       - id: "YNL052W"
       - name: "COX5A"
+      - annotation: !!omap
+          - uniprot: "P00424"
     - !!omap
       - id: "YNL054W"
       - name: "VAC7"
@@ -122767,399 +124566,663 @@
     - !!omap
       - id: "YNL065W"
       - name: "AQR1"
+      - annotation: !!omap
+          - uniprot: "P53943"
     - !!omap
       - id: "YNL071W"
       - name: "LAT1"
+      - annotation: !!omap
+          - uniprot: "P12695"
     - !!omap
       - id: "YNL073W"
       - name: "MSK1"
+      - annotation: !!omap
+          - uniprot: "P32048"
     - !!omap
       - id: "YNL092W"
       - name: "YNL092W"
+      - annotation: !!omap
+          - uniprot: "P53934"
     - !!omap
       - id: "YNL101W"
       - name: "AVT4"
+      - annotation: !!omap
+          - uniprot: "P50944"
     - !!omap
       - id: "YNL104C"
       - name: "LEU4"
+      - annotation: !!omap
+          - uniprot: "P06208"
     - !!omap
       - id: "YNL106C"
       - name: "INP52"
+      - annotation: !!omap
+          - uniprot: "P50942"
     - !!omap
       - id: "YNL117W"
       - name: "MLS1"
+      - annotation: !!omap
+          - uniprot: "P30952"
     - !!omap
       - id: "YNL129W"
       - name: "NRK1"
+      - annotation: !!omap
+          - uniprot: "P53915"
     - !!omap
       - id: "YNL130C"
       - name: "CPT1"
+      - annotation: !!omap
+          - uniprot: "P17898"
     - !!omap
       - id: "YNL141W"
       - name: "AAH1"
+      - annotation: !!omap
+          - uniprot: "P53909"
     - !!omap
       - id: "YNL142W"
       - name: "MEP2"
+      - annotation: !!omap
+          - uniprot: "P41948"
     - !!omap
       - id: "YNL169C"
       - name: "PSD1"
+      - annotation: !!omap
+          - uniprot: "P39006"
     - !!omap
       - id: "YNL191W"
       - name: "DUG3"
+      - annotation: !!omap
+          - uniprot: "P53871"
     - !!omap
       - id: "YNL192W"
       - name: "CHS1"
+      - annotation: !!omap
+          - uniprot: "P08004"
     - !!omap
       - id: "YNL202W"
       - name: "SPS19"
+      - annotation: !!omap
+          - uniprot: "P32573"
     - !!omap
       - id: "YNL219C"
       - name: "ALG9"
+      - annotation: !!omap
+          - uniprot: "P53868"
     - !!omap
       - id: "YNL220W"
       - name: "ADE12"
+      - annotation: !!omap
+          - uniprot: "P80210"
     - !!omap
       - id: "YNL229C"
       - name: "URE2"
+      - annotation: !!omap
+          - uniprot: "P23202"
     - !!omap
       - id: "YNL241C"
       - name: "ZWF1"
+      - annotation: !!omap
+          - uniprot: "P11412"
     - !!omap
       - id: "YNL247W"
       - name: "YNL247W"
+      - annotation: !!omap
+          - uniprot: "P53852"
     - !!omap
       - id: "YNL256W"
       - name: "FOL1"
+      - annotation: !!omap
+          - uniprot: "P53848"
     - !!omap
       - id: "YNL267W"
       - name: "PIK1"
+      - annotation: !!omap
+          - uniprot: "P39104"
     - !!omap
       - id: "YNL268W"
       - name: "LYP1"
+      - annotation: !!omap
+          - uniprot: "P32487"
     - !!omap
       - id: "YNL270C"
       - name: "ALP1"
+      - annotation: !!omap
+          - uniprot: "P38971"
     - !!omap
       - id: "YNL274C"
       - name: "GOR1"
+      - annotation: !!omap
+          - uniprot: "P53839"
     - !!omap
       - id: "YNL275W"
       - name: "BOR1"
+      - annotation: !!omap
+          - uniprot: "P53838"
     - !!omap
       - id: "YNL277W"
       - name: "MET2"
+      - annotation: !!omap
+          - uniprot: "P08465"
     - !!omap
       - id: "YNL280C"
       - name: "ERG24"
+      - annotation: !!omap
+          - uniprot: "P32462"
     - !!omap
       - id: "YNL292W"
       - name: "PUS4"
+      - annotation: !!omap
+          - uniprot: "P48567"
     - !!omap
       - id: "YNL316C"
       - name: "PHA2"
+      - annotation: !!omap
+          - uniprot: "P32452"
     - !!omap
       - id: "YNL318C"
       - name: "HXT14"
+      - annotation: !!omap
+          - uniprot: "P42833"
     - !!omap
       - id: "YNL325C"
       - name: "FIG4"
+      - annotation: !!omap
+          - uniprot: "P42837"
     - !!omap
       - id: "YNL331C"
       - name: "AAD14"
+      - annotation: !!omap
+          - uniprot: "P42884"
     - !!omap
       - id: "YNL333W"
       - name: "SNZ2"
+      - annotation: !!omap
+          - uniprot: "P53824"
     - !!omap
       - id: "YNL334C"
       - name: "SNO2"
+      - annotation: !!omap
+          - uniprot: "P53823"
     - !!omap
       - id: "YNL335W"
       - name: "DDI3"
+      - annotation: !!omap
+          - uniprot: "P0CH64"
     - !!omap
       - id: "YNR001C"
       - name: "CIT1"
+      - annotation: !!omap
+          - uniprot: "P00890"
     - !!omap
       - id: "YNR008W"
       - name: "LRO1"
+      - annotation: !!omap
+          - uniprot: "P40345"
     - !!omap
       - id: "YNR012W"
       - name: "URK1"
+      - annotation: !!omap
+          - uniprot: "P27515"
     - !!omap
       - id: "YNR013C"
       - name: "PHO91"
+      - annotation: !!omap
+          - uniprot: "P27514"
     - !!omap
       - id: "YNR016C"
       - name: "ACC1"
+      - annotation: !!omap
+          - uniprot: "Q00955"
     - !!omap
       - id: "YNR019W"
       - name: "ARE2"
+      - annotation: !!omap
+          - uniprot: "P53629"
     - !!omap
       - id: "YNR027W"
       - name: "BUD17"
+      - annotation: !!omap
+          - uniprot: "P53727"
     - !!omap
       - id: "YNR030W"
       - name: "ALG12"
+      - annotation: !!omap
+          - uniprot: "P53730"
     - !!omap
       - id: "YNR033W"
       - name: "ABZ1"
+      - annotation: !!omap
+          - uniprot: "P37254"
     - !!omap
       - id: "YNR041C"
       - name: "COQ2"
+      - annotation: !!omap
+          - uniprot: "P32378"
     - !!omap
       - id: "YNR043W"
       - name: "MVD1"
+      - annotation: !!omap
+          - uniprot: "P32377"
     - !!omap
       - id: "YNR050C"
       - name: "LYS9"
+      - annotation: !!omap
+          - uniprot: "P38999"
     - !!omap
       - id: "YNR056C"
       - name: "BIO5"
+      - annotation: !!omap
+          - uniprot: "P53744"
     - !!omap
       - id: "YNR057C"
       - name: "BIO4"
+      - annotation: !!omap
+          - uniprot: "P53630"
     - !!omap
       - id: "YNR058W"
       - name: "BIO3"
+      - annotation: !!omap
+          - uniprot: "P50277"
     - !!omap
       - id: "YNR060W"
       - name: "FRE4"
+      - annotation: !!omap
+          - uniprot: "P53746"
     - !!omap
       - id: "YNR067C"
       - name: "DSE4"
+      - annotation: !!omap
+          - uniprot: "P53753"
     - !!omap
       - id: "YNR072W"
       - name: "HXT17"
+      - annotation: !!omap
+          - uniprot: "P53631"
     - !!omap
       - id: "YNR073C"
       - name: "MAN2"
+      - annotation: !!omap
+          - uniprot: "P0CX09"
     - !!omap
       - id: "YOL011W"
       - name: "PLB3"
+      - annotation: !!omap
+          - uniprot: "Q08108"
     - !!omap
       - id: "YOL020W"
       - name: "TAT2"
+      - annotation: !!omap
+          - uniprot: "P38967"
     - !!omap
       - id: "YOL033W"
       - name: "MSE1"
+      - annotation: !!omap
+          - uniprot: "P48525"
     - !!omap
       - id: "YOL049W"
       - name: "GSH2"
+      - annotation: !!omap
+          - uniprot: "Q08220"
     - !!omap
       - id: "YOL052C"
       - name: "SPE2"
+      - annotation: !!omap
+          - uniprot: "P21182"
     - !!omap
       - id: "YOL055C"
       - name: "THI20"
+      - annotation: !!omap
+          - uniprot: "Q08224"
     - !!omap
       - id: "YOL058W"
       - name: "ARG1"
+      - annotation: !!omap
+          - uniprot: "P22768"
     - !!omap
       - id: "YOL059W"
       - name: "GPD2"
+      - annotation: !!omap
+          - uniprot: "P41911"
     - !!omap
       - id: "YOL061W"
       - name: "PRS5"
+      - annotation: !!omap
+          - uniprot: "Q12265"
     - !!omap
       - id: "YOL064C"
       - name: "MET22"
+      - annotation: !!omap
+          - uniprot: "P32179"
     - !!omap
       - id: "YOL065C"
       - name: "INP54"
+      - annotation: !!omap
+          - uniprot: "Q08227"
     - !!omap
       - id: "YOL066C"
       - name: "RIB2"
+      - annotation: !!omap
+          - uniprot: "Q12362"
     - !!omap
       - id: "YOL068C"
       - name: "HST1"
+      - annotation: !!omap
+          - uniprot: "P53685"
     - !!omap
       - id: "YOL075C"
       - name: "YOL075C"
+      - annotation: !!omap
+          - uniprot: "Q08234"
     - !!omap
       - id: "YOL077W-A"
       - name: "ATP19"
+      - annotation: !!omap
+          - uniprot: "P81451"
     - !!omap
       - id: "YOL086C"
       - name: "ADH1"
+      - annotation: !!omap
+          - uniprot: "P00330"
     - !!omap
       - id: "YOL092W"
       - name: "YPQ1"
+      - annotation: !!omap
+          - uniprot: "Q12010"
     - !!omap
       - id: "YOL096C"
       - name: "COQ3"
+      - annotation: !!omap
+          - uniprot: "P27680"
     - !!omap
       - id: "YOL097C"
       - name: "WRS1"
+      - annotation: !!omap
+          - uniprot: "Q12109"
     - !!omap
       - id: "YOL103W"
       - name: "ITR2"
+      - annotation: !!omap
+          - uniprot: "P30606"
     - !!omap
       - id: "YOL122C"
       - name: "SMF1"
+      - annotation: !!omap
+          - uniprot: "P38925"
     - !!omap
       - id: "YOL126C"
       - name: "MDH2"
+      - annotation: !!omap
+          - uniprot: "P22133"
     - !!omap
       - id: "YOL130W"
       - name: "ALR1"
+      - annotation: !!omap
+          - uniprot: "Q08269"
     - !!omap
       - id: "YOL136C"
       - name: "PFK27"
+      - annotation: !!omap
+          - uniprot: "Q12471"
     - !!omap
       - id: "YOL140W"
       - name: "ARG8"
+      - annotation: !!omap
+          - uniprot: "P18544"
     - !!omap
       - id: "YOL143C"
       - name: "RIB4"
+      - annotation: !!omap
+          - uniprot: "P50861"
     - !!omap
       - id: "YOL151W"
       - name: "GRE2"
+      - annotation: !!omap
+          - uniprot: "Q12068"
     - !!omap
       - id: "YOL152W"
       - name: "FRE7"
+      - annotation: !!omap
+          - uniprot: "Q12333"
     - !!omap
       - id: "YOL156W"
       - name: "HXT11"
+      - annotation: !!omap
+          - uniprot: "P54862"
     - !!omap
       - id: "YOL157C"
       - name: "IMA2"
+      - annotation: !!omap
+          - uniprot: "Q08295"
     - !!omap
       - id: "YOL165C"
       - name: "AAD15"
+      - annotation: !!omap
+          - uniprot: "Q08361"
     - !!omap
       - id: "YOR002W"
       - name: "ALG6"
+      - annotation: !!omap
+          - uniprot: "Q12001"
     - !!omap
       - id: "YOR011W"
       - name: "AUS1"
+      - annotation: !!omap
+          - uniprot: "Q08409"
     - !!omap
       - id: "YOR025W"
       - name: "HST3"
+      - annotation: !!omap
+          - uniprot: "P53687"
     - !!omap
       - id: "YOR040W"
       - name: "GLO4"
+      - annotation: !!omap
+          - uniprot: "Q12320"
     - !!omap
       - id: "YOR054C"
       - name: "VHS3"
+      - annotation: !!omap
+          - uniprot: "Q08438"
     - !!omap
       - id: "YOR065W"
       - name: "CYT1"
+      - annotation: !!omap
+          - uniprot: "P07143"
     - !!omap
       - id: "YOR067C"
       - name: "ALG8"
+      - annotation: !!omap
+          - uniprot: "P40351"
     - !!omap
       - id: "YOR071C"
       - name: "NRT1"
+      - annotation: !!omap
+          - uniprot: "Q08485"
     - !!omap
       - id: "YOR074C"
       - name: "CDC21"
+      - annotation: !!omap
+          - uniprot: "P06785"
     - !!omap
       - id: "YOR081C"
       - name: "TGL5"
+      - annotation: !!omap
+          - uniprot: "Q12043"
     - !!omap
       - id: "YOR095C"
       - name: "RKI1"
+      - annotation: !!omap
+          - uniprot: "Q12189"
     - !!omap
       - id: "YOR099W"
       - name: "KTR1"
+      - annotation: !!omap
+          - uniprot: "P27810"
     - !!omap
       - id: "YOR100C"
       - name: "CRC1"
+      - annotation: !!omap
+          - uniprot: "Q12289"
     - !!omap
       - id: "YOR108W"
       - name: "LEU9"
+      - annotation: !!omap
+          - uniprot: "Q12166"
     - !!omap
       - id: "YOR109W"
       - name: "INP53"
+      - annotation: !!omap
+          - uniprot: "Q12271"
     - !!omap
       - id: "YOR120W"
       - name: "GCY1"
+      - annotation: !!omap
+          - uniprot: "P14065"
     - !!omap
       - id: "YOR125C"
       - name: "CAT5"
+      - annotation: !!omap
+          - uniprot: "P41735"
     - !!omap
       - id: "YOR126C"
       - name: "IAH1"
+      - annotation: !!omap
+          - uniprot: "P41734"
     - !!omap
       - id: "YOR128C"
       - name: "ADE2"
+      - annotation: !!omap
+          - uniprot: "P21264"
     - !!omap
       - id: "YOR130C"
       - name: "ORT1"
+      - annotation: !!omap
+          - uniprot: "Q12375"
     - !!omap
       - id: "YOR136W"
       - name: "IDH2"
+      - annotation: !!omap
+          - uniprot: "P28241"
     - !!omap
       - id: "YOR142W"
       - name: "LSC1"
+      - annotation: !!omap
+          - uniprot: "P53598"
     - !!omap
       - id: "YOR143C"
       - name: "THI80"
+      - annotation: !!omap
+          - uniprot: "P35202"
     - !!omap
       - id: "YOR149C"
       - name: "SMP3"
+      - annotation: !!omap
+          - uniprot: "Q04174"
     - !!omap
       - id: "YOR155C"
       - name: "ISN1"
+      - annotation: !!omap
+          - uniprot: "Q99312"
     - !!omap
       - id: "YOR161C"
       - name: "PNS1"
+      - annotation: !!omap
+          - uniprot: "Q12412"
     - !!omap
       - id: "YOR163W"
       - name: "DDP1"
+      - annotation: !!omap
+          - uniprot: "Q99321"
     - !!omap
       - id: "YOR168W"
       - name: "GLN4"
+      - annotation: !!omap
+          - uniprot: "P13188"
     - !!omap
       - id: "YOR171C"
       - name: "LCB4"
+      - annotation: !!omap
+          - uniprot: "Q12246"
     - !!omap
       - id: "YOR175C"
       - name: "ALE1"
+      - annotation: !!omap
+          - uniprot: "Q08548"
     - !!omap
       - id: "YOR176W"
       - name: "HEM15"
+      - annotation: !!omap
+          - uniprot: "P16622"
     - !!omap
       - id: "YOR180C"
       - name: "DCI1"
+      - annotation: !!omap
+          - uniprot: "Q08558"
     - !!omap
       - id: "YOR184W"
       - name: "SER1"
+      - annotation: !!omap
+          - uniprot: "P33330"
     - !!omap
       - id: "YOR190W"
       - name: "SPR1"
+      - annotation: !!omap
+          - uniprot: "P32603"
     - !!omap
       - id: "YOR192C"
       - name: "THI72"
+      - annotation: !!omap
+          - uniprot: "Q08579"
     - !!omap
       - id: "YOR196C"
       - name: "LIP5"
+      - annotation: !!omap
+          - uniprot: "P32875"
     - !!omap
       - id: "YOR202W"
       - name: "HIS3"
+      - annotation: !!omap
+          - uniprot: "P06633"
     - !!omap
       - id: "YOR209C"
       - name: "NPT1"
+      - annotation: !!omap
+          - uniprot: "P39683"
     - !!omap
       - id: "YOR221C"
       - name: "MCT1"
+      - annotation: !!omap
+          - uniprot: "Q12283"
     - !!omap
       - id: "YOR222W"
       - name: "ODC2"
+      - annotation: !!omap
+          - uniprot: "Q99297"
     - !!omap
       - id: "YOR226C"
       - name: "ISU2"
+      - annotation: !!omap
+          - uniprot: "Q12056"
     - !!omap
       - id: "YOR236W"
       - name: "DFR1"
+      - annotation: !!omap
+          - uniprot: "P07807"
     - !!omap
       - id: "YOR241W"
       - name: "MET7"
+      - annotation: !!omap
+          - uniprot: "Q08645"
     - !!omap
       - id: "YOR245C"
       - name: "DGA1"
+      - annotation: !!omap
+          - uniprot: "Q08650"
     - !!omap
       - id: "YOR251C"
       - name: "TUM1"
+      - annotation: !!omap
+          - uniprot: "Q08686"
     - !!omap
       - id: "YOR253W"
       - name: "NAT5"
@@ -123173,156 +125236,258 @@
     - !!omap
       - id: "YOR270C"
       - name: "VPH1"
+      - annotation: !!omap
+          - uniprot: "P32563"
     - !!omap
       - id: "YOR273C"
       - name: "TPO4"
+      - annotation: !!omap
+          - uniprot: "Q12256"
     - !!omap
       - id: "YOR278W"
       - name: "HEM4"
+      - annotation: !!omap
+          - uniprot: "P06174"
     - !!omap
       - id: "YOR283W"
       - name: "YOR283W"
+      - annotation: !!omap
+          - uniprot: "Q12040"
     - !!omap
       - id: "YOR285W"
       - name: "RDL1"
+      - annotation: !!omap
+          - uniprot: "Q12305"
     - !!omap
       - id: "YOR286W"
       - name: "RDL2"
+      - annotation: !!omap
+          - uniprot: "Q08742"
     - !!omap
       - id: "YOR303W"
       - name: "CPA1"
+      - annotation: !!omap
+          - uniprot: "P07258"
     - !!omap
       - id: "YOR306C"
       - name: "MCH5"
+      - annotation: !!omap
+          - uniprot: "Q08777"
     - !!omap
       - id: "YOR311C"
       - name: "DGK1"
+      - annotation: !!omap
+          - uniprot: "Q12382"
     - !!omap
       - id: "YOR316C"
       - name: "COT1"
+      - annotation: !!omap
+          - uniprot: "P32798"
     - !!omap
       - id: "YOR317W"
       - name: "FAA1"
+      - annotation: !!omap
+          - uniprot: "P30624"
     - !!omap
       - id: "YOR321W"
       - name: "PMT3"
+      - annotation: !!omap
+          - uniprot: "P47190"
     - !!omap
       - id: "YOR323C"
       - name: "PRO2"
+      - annotation: !!omap
+          - uniprot: "P54885"
     - !!omap
       - id: "YOR332W"
       - name: "VMA4"
+      - annotation: !!omap
+          - uniprot: "P22203"
     - !!omap
       - id: "YOR334W"
       - name: "MRS2"
+      - annotation: !!omap
+          - uniprot: "Q01926"
     - !!omap
       - id: "YOR335C"
       - name: "ALA1"
+      - annotation: !!omap
+          - uniprot: "P40825"
     - !!omap
       - id: "YOR347C"
       - name: "PYK2"
+      - annotation: !!omap
+          - uniprot: "P52489"
     - !!omap
       - id: "YOR348C"
       - name: "PUT4"
+      - annotation: !!omap
+          - uniprot: "P15380"
     - !!omap
       - id: "YOR360C"
       - name: "PDE2"
+      - annotation: !!omap
+          - uniprot: "P06776"
     - !!omap
       - id: "YOR374W"
       - name: "ALD4"
+      - annotation: !!omap
+          - uniprot: "P46367"
     - !!omap
       - id: "YOR375C"
       - name: "GDH1"
+      - annotation: !!omap
+          - uniprot: "P07262"
     - !!omap
       - id: "YOR377W"
       - name: "ATF1"
+      - annotation: !!omap
+          - uniprot: "P40353"
     - !!omap
       - id: "YOR381W"
       - name: "FRE3"
+      - annotation: !!omap
+          - uniprot: "Q08905"
     - !!omap
       - id: "YOR384W"
       - name: "FRE5"
+      - annotation: !!omap
+          - uniprot: "Q08908"
     - !!omap
       - id: "YOR388C"
       - name: "FDH1"
+      - annotation: !!omap
+          - uniprot: "Q08911"
     - !!omap
       - id: "YOR391C"
       - name: "HSP33"
+      - annotation: !!omap
+          - uniprot: "Q08914"
     - !!omap
       - id: "YOR393W"
       - name: "ERR1"
+      - annotation: !!omap
+          - uniprot: "P0CX10"
     - !!omap
       - id: "YPL015C"
       - name: "HST2"
+      - annotation: !!omap
+          - uniprot: "P53686"
     - !!omap
       - id: "YPL023C"
       - name: "MET12"
+      - annotation: !!omap
+          - uniprot: "P46151"
     - !!omap
       - id: "YPL028W"
       - name: "ERG10"
+      - annotation: !!omap
+          - uniprot: "P41338"
     - !!omap
       - id: "YPL036W"
       - name: "PMA2"
+      - annotation: !!omap
+          - uniprot: "P19657"
     - !!omap
       - id: "YPL040C"
       - name: "ISM1"
+      - annotation: !!omap
+          - uniprot: "P48526"
     - !!omap
       - id: "YPL053C"
       - name: "KTR6"
+      - annotation: !!omap
+          - uniprot: "P54070"
     - !!omap
       - id: "YPL057C"
       - name: "SUR1"
+      - annotation: !!omap
+          - uniprot: "P33300"
     - !!omap
       - id: "YPL059W"
       - name: "GRX5"
+      - annotation: !!omap
+          - uniprot: "Q02784"
     - !!omap
       - id: "YPL060W"
       - name: "MFM1"
+      - annotation: !!omap
+          - uniprot: "Q02783"
     - !!omap
       - id: "YPL061W"
       - name: "ALD6"
+      - annotation: !!omap
+          - uniprot: "P54115"
     - !!omap
       - id: "YPL069C"
       - name: "BTS1"
+      - annotation: !!omap
+          - uniprot: "Q12051"
     - !!omap
       - id: "YPL076W"
       - name: "GPI2"
+      - annotation: !!omap
+          - uniprot: "P46961"
     - !!omap
       - id: "YPL078C"
       - name: "ATP4"
+      - annotation: !!omap
+          - uniprot: "P05626"
     - !!omap
       - id: "YPL087W"
       - name: "YDC1"
+      - annotation: !!omap
+          - uniprot: "Q02896"
     - !!omap
       - id: "YPL088W"
       - name: "YPL088W"
+      - annotation: !!omap
+          - uniprot: "Q02895"
     - !!omap
       - id: "YPL091W"
       - name: "GLR1"
+      - annotation: !!omap
+          - uniprot: "P41921"
     - !!omap
       - id: "YPL092W"
       - name: "SSU1"
+      - annotation: !!omap
+          - uniprot: "P41930"
     - !!omap
       - id: "YPL095C"
       - name: "EEB1"
+      - annotation: !!omap
+          - uniprot: "Q02891"
     - !!omap
       - id: "YPL096C-A"
       - name: "ERI1"
+      - annotation: !!omap
+          - uniprot: "P62651"
     - !!omap
       - id: "YPL097W"
       - name: "MSY1"
+      - annotation: !!omap
+          - uniprot: "P48527"
     - !!omap
       - id: "YPL104W"
       - name: "MSD1"
+      - annotation: !!omap
+          - uniprot: "P15179"
     - !!omap
       - id: "YPL110C"
       - name: "GDE1"
+      - annotation: !!omap
+          - uniprot: "Q02979"
     - !!omap
       - id: "YPL111W"
       - name: "CAR1"
+      - annotation: !!omap
+          - uniprot: "P00812"
     - !!omap
       - id: "YPL117C"
       - name: "IDI1"
+      - annotation: !!omap
+          - uniprot: "P15496"
     - !!omap
       - id: "YPL120W"
       - name: "VPS30"
@@ -123335,174 +125500,288 @@
     - !!omap
       - id: "YPL132W"
       - name: "COX11"
+      - annotation: !!omap
+          - uniprot: "P19516"
     - !!omap
       - id: "YPL134C"
       - name: "ODC1"
+      - annotation: !!omap
+          - uniprot: "Q03028"
     - !!omap
       - id: "YPL135W"
       - name: "ISU1"
+      - annotation: !!omap
+          - uniprot: "Q03020"
     - !!omap
       - id: "YPL147W"
       - name: "PXA1"
+      - annotation: !!omap
+          - uniprot: "P41909"
     - !!omap
       - id: "YPL148C"
       - name: "PPT2"
+      - annotation: !!omap
+          - uniprot: "Q12036"
     - !!omap
       - id: "YPL160W"
       - name: "CDC60"
+      - annotation: !!omap
+          - uniprot: "P26637"
     - !!omap
       - id: "YPL172C"
       - name: "COX10"
+      - annotation: !!omap
+          - uniprot: "P21592"
     - !!omap
       - id: "YPL175W"
       - name: "SPT14"
+      - annotation: !!omap
+          - uniprot: "P32363"
     - !!omap
       - id: "YPL188W"
       - name: "POS5"
+      - annotation: !!omap
+          - uniprot: "Q06892"
     - !!omap
       - id: "YPL189W"
       - name: "GUP2"
+      - annotation: !!omap
+          - uniprot: "Q08929"
     - !!omap
       - id: "YPL206C"
       - name: "PGC1"
+      - annotation: !!omap
+          - uniprot: "Q08959"
     - !!omap
       - id: "YPL212C"
       - name: "PUS1"
+      - annotation: !!omap
+          - uniprot: "Q12211"
     - !!omap
       - id: "YPL214C"
       - name: "THI6"
+      - annotation: !!omap
+          - uniprot: "P41835"
     - !!omap
       - id: "YPL227C"
       - name: "ALG5"
+      - annotation: !!omap
+          - uniprot: "P40350"
     - !!omap
       - id: "YPL231W"
       - name: "FAS2"
+      - annotation: !!omap
+          - uniprot: "P19097"
     - !!omap
       - id: "YPL234C"
       - name: "VMA11"
+      - annotation: !!omap
+          - uniprot: "P32842"
     - !!omap
       - id: "YPL244C"
       - name: "HUT1"
+      - annotation: !!omap
+          - uniprot: "Q12520"
     - !!omap
       - id: "YPL252C"
       - name: "YAH1"
+      - annotation: !!omap
+          - uniprot: "Q12184"
     - !!omap
       - id: "YPL258C"
       - name: "THI21"
+      - annotation: !!omap
+          - uniprot: "Q08975"
     - !!omap
       - id: "YPL262W"
       - name: "FUM1"
+      - annotation: !!omap
+          - uniprot: "P08417"
     - !!omap
       - id: "YPL265W"
       - name: "DIP5"
+      - annotation: !!omap
+          - uniprot: "P53388"
     - !!omap
       - id: "YPL268W"
       - name: "PLC1"
+      - annotation: !!omap
+          - uniprot: "P32383"
     - !!omap
       - id: "YPL271W"
       - name: "ATP15"
+      - annotation: !!omap
+          - uniprot: "P21306"
     - !!omap
       - id: "YPL273W"
       - name: "SAM4"
+      - annotation: !!omap
+          - uniprot: "Q08985"
     - !!omap
       - id: "YPL274W"
       - name: "SAM3"
+      - annotation: !!omap
+          - uniprot: "Q08986"
     - !!omap
       - id: "YPL280W"
       - name: "HSP32"
+      - annotation: !!omap
+          - uniprot: "Q08992"
     - !!omap
       - id: "YPL281C"
       - name: "ERR2"
+      - annotation: !!omap
+          - uniprot: "P0CX11"
     - !!omap
       - id: "YPR001W"
       - name: "CIT3"
+      - annotation: !!omap
+          - uniprot: "P43635"
     - !!omap
       - id: "YPR002W"
       - name: "PDH1"
+      - annotation: !!omap
+          - uniprot: "Q12428"
     - !!omap
       - id: "YPR003C"
       - name: "YPR003C"
+      - annotation: !!omap
+          - uniprot: "P53394"
     - !!omap
       - id: "YPR006C"
       - name: "ICL2"
+      - annotation: !!omap
+          - uniprot: "Q12031"
     - !!omap
       - id: "YPR011C"
       - name: "YPR011C"
+      - annotation: !!omap
+          - uniprot: "Q12251"
     - !!omap
       - id: "YPR020W"
       - name: "ATP20"
+      - annotation: !!omap
+          - uniprot: "Q12233"
     - !!omap
       - id: "YPR021C"
       - name: "AGC1"
+      - annotation: !!omap
+          - uniprot: "Q12482"
     - !!omap
       - id: "YPR026W"
       - name: "ATH1"
+      - annotation: !!omap
+          - uniprot: "P48016"
     - !!omap
       - id: "YPR033C"
       - name: "HTS1"
+      - annotation: !!omap
+          - uniprot: "P07263"
     - !!omap
       - id: "YPR035W"
       - name: "GLN1"
+      - annotation: !!omap
+          - uniprot: "P32288"
     - !!omap
       - id: "YPR036W"
       - name: "VMA13"
+      - annotation: !!omap
+          - uniprot: "P41807"
     - !!omap
       - id: "YPR047W"
       - name: "MSF1"
+      - annotation: !!omap
+          - uniprot: "P08425"
     - !!omap
       - id: "YPR058W"
       - name: "YMC1"
+      - annotation: !!omap
+          - uniprot: "P32331"
     - !!omap
       - id: "YPR060C"
       - name: "ARO7"
+      - annotation: !!omap
+          - uniprot: "P32178"
     - !!omap
       - id: "YPR062W"
       - name: "FCY1"
+      - annotation: !!omap
+          - uniprot: "Q12178"
     - !!omap
       - id: "YPR069C"
       - name: "SPE3"
+      - annotation: !!omap
+          - uniprot: "Q12074"
     - !!omap
       - id: "YPR074C"
       - name: "TKL1"
+      - annotation: !!omap
+          - uniprot: "P23254"
     - !!omap
       - id: "YPR081C"
       - name: "GRS2"
+      - annotation: !!omap
+          - uniprot: "Q06817"
     - !!omap
       - id: "YPR113W"
       - name: "PIS1"
+      - annotation: !!omap
+          - uniprot: "P06197"
     - !!omap
       - id: "YPR118W"
       - name: "MRI1"
+      - annotation: !!omap
+          - uniprot: "Q06489"
     - !!omap
       - id: "YPR121W"
       - name: "THI22"
+      - annotation: !!omap
+          - uniprot: "Q06490"
     - !!omap
       - id: "YPR127W"
       - name: "YPR127W"
+      - annotation: !!omap
+          - uniprot: "Q06494"
     - !!omap
       - id: "YPR128C"
       - name: "ANT1"
+      - annotation: !!omap
+          - uniprot: "Q06497"
     - !!omap
       - id: "YPR138C"
       - name: "MEP3"
+      - annotation: !!omap
+          - uniprot: "P53390"
     - !!omap
       - id: "YPR139C"
       - name: "LOA1"
+      - annotation: !!omap
+          - uniprot: "Q06508"
     - !!omap
       - id: "YPR140W"
       - name: "TAZ1"
+      - annotation: !!omap
+          - uniprot: "Q06510"
     - !!omap
       - id: "YPR145W"
       - name: "ASN1"
+      - annotation: !!omap
+          - uniprot: "P49089"
     - !!omap
       - id: "YPR156C"
       - name: "TPO3"
+      - annotation: !!omap
+          - uniprot: "Q06451"
     - !!omap
       - id: "YPR159W"
       - name: "KRE6"
+      - annotation: !!omap
+          - uniprot: "P32486"
     - !!omap
       - id: "YPR160W"
       - name: "GPH1"
+      - annotation: !!omap
+          - uniprot: "P06738"
     - !!omap
       - id: "YPR165W"
       - name: "RHO1"
@@ -123515,6 +125794,8 @@
     - !!omap
       - id: "YPR167C"
       - name: "MET16"
+      - annotation: !!omap
+          - uniprot: "P18408"
     - !!omap
       - id: "YPR170W-B"
       - name: "YPR170W__45__B"
@@ -123527,15 +125808,23 @@
     - !!omap
       - id: "YPR183W"
       - name: "DPM1"
+      - annotation: !!omap
+          - uniprot: "P14020"
     - !!omap
       - id: "YPR184W"
       - name: "GDB1"
+      - annotation: !!omap
+          - uniprot: "Q06625"
     - !!omap
       - id: "YPR191W"
       - name: "QCR2"
+      - annotation: !!omap
+          - uniprot: "P07257"
     - !!omap
       - id: "YPR192W"
       - name: "AQY1"
+      - annotation: !!omap
+          - uniprot: "P0CD91"
     - !!omap
       - id: "YPR193C"
       - name: "HPA2"
