@@ -4,7 +4,7 @@
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
     version: ""
-    date: "2023-08-19"
+    date: "2023-10-16"
     defaultLB: "-1000"
     defaultUB: "1000"
     givenName: "Eduard"
@@ -55420,7 +55420,7 @@
       - confidence_score: 3
     - !!omap
       - id: "r_1024"
-      - name: "sucrose hydrolyzing enxyme"
+      - name: "sucrose hydrolyzing enzyme"
       - metabolites: !!omap
           - s_0554: 1
           - s_0565: 1

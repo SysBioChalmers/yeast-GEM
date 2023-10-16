@@ -28,6 +28,10 @@ uniprotIDs   = uniprot{1,3};
 isInModel    = ismember(uniprotGenes,model.genes);
 model        = editMiriam(model,'gene',uniprotGenes(isInModel),'uniprot',uniprotIDs(isInModel),'add');
 
+%% Corrent reaction name r_1024
+rxnIdx = getIndexes(model,'r_1024','rxns');
+model.rxnNames{rxnIdx} = 'sucrose hydrolyzing enzyme';
+
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
 cd(fullfile(codeDir,'modelTests'))
