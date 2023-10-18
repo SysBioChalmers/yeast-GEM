@@ -47,7 +47,7 @@ end
 
 %Load model:
 disp('Loading model file')
-model = importModel('../model/yeast-GEM.xml');
+model = readYAMLmodel('../model/yeast-GEM.yml');
 
 %Run tests
 cd modelTests
@@ -109,6 +109,7 @@ delete('backup');
 %Include tag and save model:
 disp('Write model files')
 model.id = ['yeastGEM_v' newVersion];
+model.version = newVersion;
 saveYeastModel(model,true,true,true)   %only save if model can grow
 
 %Check for any unexpected file changes
@@ -127,9 +128,9 @@ for i = 1:length(diff)
                     change = true;
                 end
             case 'model/yeast-GEM.yml'
-                %.yml file: 2 lines should be added & 2 lines should be deleted
-                %(1 with version information, 1 with current date)
-                if eval([diff_i{1} ' > 2']) || eval([diff_i{2} ' > 2'])
+                %.yml file: 3 lines should be added & 3 lines should be deleted
+                %(2 with version information, 1 with current date)
+                if eval([diff_i{1} ' > 3']) || eval([diff_i{2} ' > 3'])
                     disp(['NOTE: File ' diff_i{3} ' is changing more than expected'])
                     change = true;
                 end                
