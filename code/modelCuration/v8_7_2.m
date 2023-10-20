@@ -15,7 +15,7 @@ model.id='yeastGEM_develop';
 dataDir=fullfile(pwd(),'..','data','modelCuration','v8_7_2');
 cd modelCuration
 
-%% Correct dolichol-containing metFormulas
+%% Correct inbalanced reactions, based on metFormulas
 % While dolichol can have any number of isoprenoid units, in yeast-GEM it is
 % defined as 4 units. This means that there is no need to keep R-subgroups as
 % part of dolichol-derived metabolites to indicate that unspecified length.
@@ -23,6 +23,24 @@ cd modelCuration
 % metabolite formula.
 dolMets = getIndexes(model,{'s_3765','s_3767','s_3888','s_3911'},'mets');
 model.metFormulas(dolMets) = regexprep(model.metFormulas(dolMets),'R','');
+
+% r_4722 (polyphosphate polymerase) is unbalanced, 2 ADP is missing as product
+model = changeRxns(model,'r_4722','2 ATP[c] + H2O[c] => H+[c] + polyphosphate[v] + 2 ADP[c]',3);
+
+% r_4240 is unbalanced, but also has a generic reactant (protein asparagine)
+% and describes a process (protein modification) that is out-of-scope of a
+% metabolic model. Remove the reactions to resolve all 3 issues at once.
+model = removeReactions(model,'r_4240',true,true,true);
+
+% Some glycan metFormulas were incorrect absent. They were manually curated
+% by drawing out the structures.
+glycMets = getIndexes(model,{'s_3932','s_4003','s_4002'},'mets');
+model.metFormulas(glycMets) = {'C50H82N4O37R','C38H70N2O36P2R2','C32H60N2O31P2R2'};
+
+% r_0774 and r_0775 are unbalanced due to a missing H2O.
+model = changeRxns(model,{'r_0774','r_0775'},...
+    {'ATP[c] + H+[c] + nicotinate[c] + PRPP[c] => ADP[c] + diphosphate[c] + nicotinic acid D-ribonucleotide[c] + phosphate[c]',...
+     'ATP[m] + H+[m] + nicotinate[m] + PRPP[m] => ADP[m] + diphosphate[m] + nicotinic acid D-ribonucleotide[m] + phosphate[m]'},3);
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
