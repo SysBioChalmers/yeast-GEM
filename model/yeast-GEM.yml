@@ -4,7 +4,7 @@
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
     version: ""
-    date: "2023-10-16"
+    date: "2023-12-02"
     defaultLB: "-1000"
     defaultUB: "1000"
     givenName: "Eduard"
@@ -28091,7 +28091,7 @@
       - id: "s_3765"
       - name: "N-Acetyl-D-glucosaminyldiphosphodolichol"
       - compartment: "er"
-      - formula: "C28H51NO12P2R"
+      - formula: "C28H51NO12P2"
       - charge: 0
       - smiles: "CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OP(=O)(O)OC1C(C(C(C(O1)CO)O)O)NC(=O)C"
       - annotation: !!omap
@@ -28119,7 +28119,7 @@
       - id: "s_3767"
       - name: "N,N'-Chitobiosyldiphosphodolichol"
       - compartment: "er"
-      - formula: "C36H64N2O17P2R"
+      - formula: "C36H64N2O17P2"
       - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000247"
@@ -29576,17 +29576,6 @@
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
-      - id: "s_3886"
-      - name: "Protein asparagine"
-      - compartment: "er"
-      - formula: "C4H6N2O2R"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:50347"
-          - kegg.compound: "C03021"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3887"
       - name: "G00008"
       - compartment: "er"
@@ -29600,7 +29589,7 @@
       - id: "s_3888"
       - name: "Dolichyl diphosphate"
       - compartment: "er"
-      - formula: "C20H35O7P2R"
+      - formula: "C20H35O7P2"
       - charge: -3
       - smiles: "CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OP(=O)(O)O"
       - annotation: !!omap
@@ -29878,7 +29867,7 @@
       - id: "s_3911"
       - name: "Dolichyl beta-D-glucosyl phosphate"
       - compartment: "er"
-      - formula: "C26H46O9PR"
+      - formula: "C26H46O9P"
       - charge: -1
       - smiles: "CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OC1C(C(C(C(O1)CO)O)O)O"
       - annotation: !!omap
@@ -30091,7 +30080,7 @@
       - id: "s_3932"
       - name: "G00012"
       - compartment: "er"
-      - formula: "C50H82N4O37"
+      - formula: "C50H82N4O37R"
       - charge: 0
       - annotation: !!omap
           - metanetx.chemical: "MNXM9328"
@@ -30957,6 +30946,7 @@
       - id: "s_4002"
       - name: "G00149"
       - compartment: "er"
+      - formula: "C32H60N2O31P2R2"
       - charge: 0
       - annotation: !!omap
           - metanetx.chemical: "MNXM7903"
@@ -30966,6 +30956,7 @@
       - id: "s_4003"
       - name: "G00140"
       - compartment: "er"
+      - formula: "C38H70N2O36P2R2"
       - charge: 0
       - annotation: !!omap
           - metanetx.chemical: "MNXM9266"
@@ -109345,6 +109336,7 @@
       - metabolites: !!omap
           - s_2783: 1
           - s_2818: -1
+          - s_2820: 1
           - s_4209: 2
           - s_4210: -2
       - lower_bound: -1000
@@ -110238,28 +110230,6 @@
       - annotation: !!omap
           - kegg.reaction: "R03862"
           - metanetx.reaction: "MNXR108483"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4240"
-      - name: "Dolichyl-diphosphooligosaccharide--protein glycosyltransferase subunit STT3 (Oligosaccharyl transferase subunit STT3) (EC 2.4.99.18)"
-      - metabolites: !!omap
-          - s_0795: 1
-          - s_3886: -1
-          - s_3887: -1
-          - s_3888: 1
-          - s_3889: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGL022W"
-      - eccodes: "2.4.99.18"
-      - subsystem:
-          - "N-glycan biosynthesis"
-      - annotation: !!omap
-          - kegg.reaction: "R05976"
-          - metanetx.reaction: "MNXR109968"
           - sbo: "SBO:0000176"
       - deltaG: 10000000
       - confidence_score: 2
@@ -118874,6 +118844,7 @@
       - id: "r_4722"
       - name: "polyphosphate polymerase, c"
       - metabolites: !!omap
+          - s_0394: 2
           - s_0434: -2
           - s_0794: 1
           - s_0803: -1
@@ -121917,11 +121888,6 @@
       - name: "ATE1"
       - annotation: !!omap
           - uniprot: "P16639"
-    - !!omap
-      - id: "YGL022W"
-      - name: "STT3"
-      - annotation: !!omap
-          - uniprot: "P39007"
     - !!omap
       - id: "YGL026C"
       - name: "TRP5"

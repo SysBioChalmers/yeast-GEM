@@ -12,6 +12,7 @@ cd ..
 codeDir=pwd();
 model = getEarlierModelVersion('8.7.1');
 model.id='yeastGEM_develop';
+model.version='';
 %dataDir=fullfile(pwd(),'..','data','modelCuration','v9.0.0'); % No dataDir required for these curations
 cd modelCuration
 
@@ -43,7 +44,7 @@ model = changeRxns(model,{'r_0774','r_0775'},...
      'ATP[m] + H+[m] + nicotinate[m] + PRPP[m] => ADP[m] + diphosphate[m] + nicotinic acid D-ribonucleotide[m] + phosphate[m]'},3);
 
 % r_4196 (NADH:ferricytochrome-b5 oxidoreductase) is unbalanced, NAD is missing as product
-model = changeRxns(model,'r_4722','NADH[erm] + 2 Ferricytochrome b5[erm] <=> H+[erm] + 2 Ferrocytochrome b5[erm] + NAD[erm]',3);
+model = changeRxns(model,'r_4196','NADH[erm] + 2 Ferricytochrome b5[erm] <=> H+[erm] + 2 Ferrocytochrome b5[erm] + NAD[erm]',3);
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
