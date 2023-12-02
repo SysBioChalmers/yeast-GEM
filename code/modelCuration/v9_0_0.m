@@ -1,5 +1,5 @@
 % This scripts applies curations to be applied on yeast-GEM release 8.7.1, to
-% get to yeast-GEM release 8.7.2.
+% get to yeast-GEM release 9.0.0.
 % Indicate which Issue/PR are addressed. If multiple curations are performed
 % before a new release is made, just add the required code to this script. If
 % more extensive coding is required, you can write a separate (generic) function
@@ -12,7 +12,7 @@ cd ..
 codeDir=pwd();
 model = getEarlierModelVersion('8.7.1');
 model.id='yeastGEM_develop';
-dataDir=fullfile(pwd(),'..','data','modelCuration','v8_7_2');
+%dataDir=fullfile(pwd(),'..','data','modelCuration','v9.0.0'); % No dataDir required for these curations
 cd modelCuration
 
 %% Correct inbalanced reactions, based on metFormulas
@@ -41,6 +41,9 @@ model.metFormulas(glycMets) = {'C50H82N4O37R','C38H70N2O36P2R2','C32H60N2O31P2R2
 model = changeRxns(model,{'r_0774','r_0775'},...
     {'ATP[c] + H+[c] + nicotinate[c] + PRPP[c] => ADP[c] + diphosphate[c] + nicotinic acid D-ribonucleotide[c] + phosphate[c]',...
      'ATP[m] + H+[m] + nicotinate[m] + PRPP[m] => ADP[m] + diphosphate[m] + nicotinic acid D-ribonucleotide[m] + phosphate[m]'},3);
+
+% r_4196 (NADH:ferricytochrome-b5 oxidoreductase) is unbalanced, NAD is missing as product
+model = changeRxns(model,'r_4722','NADH[erm] + 2 Ferricytochrome b5[erm] <=> H+[erm] + 2 Ferrocytochrome b5[erm] + NAD[erm]',3);
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
