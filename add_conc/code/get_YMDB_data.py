@@ -51,7 +51,7 @@ if __name__ == '__main__':
     extract_data(args.i)
     # It is suggested to used parallel arithmetic in matlab.
     # parfor i=1:16338
-    # system(['python main.py -i ',num2str(i)]);
+    # system(['python get_YMDB_data.py -i ',num2str(i)]);
     # end
 
 
