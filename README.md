@@ -1,6 +1,10 @@
 # yeast-GEM: The consensus genome-scale metabolic model of _Saccharomyces cerevisiae_
 
-[![DOI](https://zenodo.org/badge/52777598.svg)](https://zenodo.org/badge/latestdoi/52777598) [![GitHub version](https://badge.fury.io/gh/sysbiochalmers%2Fyeast-gem.svg)](https://badge.fury.io/gh/sysbiochalmers%2Fyeast-gem) [![Join the chat at https://gitter.im/SysBioChalmers/yeast-GEM](https://badges.gitter.im/SysBioChalmers/yeast-GEM.svg)](https://gitter.im/SysBioChalmers/yeast-GEM?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)[![Memote history](https://github.com/SysBioChalmers/yeast-GEM/workflows/Memote%20history/badge.svg)](https://sysbiochalmers.github.io/yeast-GEM/history_report.html)
+[![Current release](img.shields.io/github/release/SysBioChalmers/yeast-GEM/all.svg)](https://github.com/SysBioChalmers/yeast-GEM/releases/)
+[![GitHub Discussions](https://img.shields.io/github/discussions/sysbiochalmers/yeast-gem)](https://github.com/SysBioChalmers/yeast-GEM/discussions)
+[![Memote history](https://github.com/SysBioChalmers/yeast-GEM/workflows/Memote%20history/badge.svg)](https://sysbiochalmers.github.io/yeast-GEM/history_report.html)
+[![DOI](https://zenodo.org/badge/52777598.svg)](https://zenodo.org/badge/latestdoi/52777598)
+
 
 # Description
 
