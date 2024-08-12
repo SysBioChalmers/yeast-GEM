@@ -16,13 +16,13 @@ Instructions on how to use the model (including [load/save](https://github.com/S
 
 ## Feedback / help [![GitHub Discussions](https://img.shields.io/github/discussions/sysbiochalmers/yeast-gem)](https://github.com/SysBioChalmers/yeast-GEM/discussions)
 
-If you have questions, require help or encounter any issue with `yeast-GEM`, you can have a look at the [![GitHub Discussions](https://img.shields.io/github/discussions/sysbiochalmers/yeast-gem)](https://github.com/SysBioChalmers/yeast-GEM/discussions) page. You can also directly report bugs or request specific assistance by opening an [Issue](https://github.com/SysBioChalmers/yeast-GEM/issues) on GitHub.
+If you have questions, require help or encounter any issue with `yeast-GEM`, you can have a look at the [GitHub Discussions](https://github.com/SysBioChalmers/yeast-GEM/discussions) page. You can also directly report bugs or request specific assistance by opening an [Issue](https://github.com/SysBioChalmers/yeast-GEM/issues) on GitHub.
 
 ## Contributing
 As `yeast-GEM` is a community effort, contributions are always welcome! Please read the [contributions guidelines](https://github.com/SysBioChalmers/yeast-GEM/blob/main/.github/CONTRIBUTING.md) to get started.
 
 ## Citation
 * If you use yeast-GEM please cite the yeast9 paper:
-  > Zhang, C. et al. _Yeast9: a consensus genome-scale metabolic model for S. cerevisiae curated by the community._ Molecular Systems Biology (2023) doi:[10.1038/s44320-024-00060-7](https://doi.org/10.1038/s44320-024-00060-7)
+  > Zhang, C. et al. _Yeast9: a consensus genome-scale metabolic model for S. cerevisiae curated by the community._ Molecular Systems Biology (2024) doi:[10.1038/s44320-024-00060-7](https://doi.org/10.1038/s44320-024-00060-7)
 
 More detailed instructions on citing specific versions are given [here](https://github.com/SysBioChalmers/yeast-GEM?tab=readme-ov-file#citation).
