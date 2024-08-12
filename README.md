@@ -9,7 +9,7 @@ This repository contains the current consensus genome-scale metabolic model of _
 # Citation
 
 * If you use yeast-GEM please cite the yeast9 paper:
-  > Zhang, C. et al. _Yeast9: a consensus yeast metabolic model enables quantitative analysis of cellular metabolism by incorporating big data._ bioRxiv (2023) doi:[10.1101/2023.12.03.569754](https://doi.org/10.1101/2023.12.03.569754)
+  > Zhang, C. et al. _Yeast9: a consensus genome-scale metabolic model for S. cerevisiae curated by the community._ Molecular Systems Biology (2023) doi:[10.1038/s44320-024-00060-7](https://doi.org/10.1038/s44320-024-00060-7)
 * For pre-yeast9 versions:
   > Lu, H. et al. _A consensus S. cerevisiae metabolic model Yeast8 and its ecosystem for comprehensively probing cellular metabolism._ Nature Communications 10, 3586 (2019). doi:[10.1038/s41467-019-11581-3](https://doi.org/10.1038/s41467-019-11581-3)
 * Additionally, all yeast-GEM releases are archived in [Zenodo](https://zenodo.org/badge/latestdoi/52777598), for you to cite the specific version of yeast-GEM that you used in your study, to ensure reproducibility. You should always cite the original publication + the specific version, for instance:
