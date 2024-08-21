@@ -1,14 +1,24 @@
-clear;
-close all;
-load('yeast-GEM.mat')
+% This scripts applies curations to be applied on yeast-GEM release 9.0.1, to
+% get to yeast-GEM release 9.0.2.
+% Indicate which Issue/PR are addressed. If multiple curations are performed
+% before a new release is made, just add the required code to this script. If
+% more extensive coding is required, you can write a separate (generic) function
+% that can be kept in the /code/modelCuration folder. Otherwise, try to use
+% existing functions whenever possible. In particular /code/curateMetsRxnsGenes
+% can do many types of curation.
 
-% this script makes corrections that should be applied to *all* models, not
-% just the anaerobic. Adjustments to the anaerobic model are found in the
-% anaerobicModel function
-
+%% Load yeast-GEM 9.0.1 (requires local yeast-GEM git repository)
+model = readYAMLmodel('../../model/yeast-GEM.yml');
+% The above comment is temporary, to be used during development. When PR is made, use below code instead.
+cd ..
+codeDir=pwd();
+% model = getEarlierModelVersion('9.0.1');
+% model.id='yeastGEM_develop';
+% model.version='';
+% %dataDir=fullfile(pwd(),'..','data','modelCuration','v9.0.1'); % No dataDir required for these curations
+cd modelCuration
 
 %=========================================================================
-
 % Create a pathway for anaplerosis. Check alternatives? this one might work
 % on other diacids also? If considered important for "flux reasons", dig 
 % into this transporter literature
@@ -16,8 +26,6 @@ load('yeast-GEM.mat')
 %model.lb(findRxnIDs(model,'r_1264'))=-1000; %DIC1. I am not sure its actually a phosphate/succinate antiport. It not clear from the article. It could also be specific for both phosphate and succinate
 
 %=========================================================================
-
-
 % look for all proton symport/antiport reactions and make sure that they 
 % only enter the cell. 
 
@@ -30,15 +38,13 @@ for i = 1:length(symporterIDs)
     else
         model.ub(symporterIDs(i))=0;
     end
-
-    if find(strcmp(model.rxns,'r_1258'))==symporterIDs(i) % ignore the sodium transporter, without it, the model doesn't work
+    if find(strcmp(model.rxns,'r_1258'))==symporterIDs(i) % ignore the sodium transporter, without it, the model does not work
         model.lb(symporterIDs(i))=-1000;
         model.ub(symporterIDs(i))=1000;
     end
 end
 
 %=========================================================================
-
 % This section balances reactions and ensures that a correct molecular
 % weight can be calculated for the biomass
 
@@ -67,13 +73,11 @@ model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4050')) = -sum(mo
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4598')) = -sum(model.S(:,strcmp(model.rxns,'r_4598')).*model.metCharges,'omitnan'); % Cofactor
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4599')) = -sum(model.S(:,strcmp(model.rxns,'r_4599')).*model.metCharges,'omitnan'); % Ion
 
-
 % Special case for SLIME rxns
 model.metCharges(find(contains(model.metNames,'chain')+contains(model.metNames,'backbone'))) = 0;
 
 % Now, based on the charge balance, find all the reactions that are
 % imbalanced, add or remove hydrogen as necessary
-
 
 % Balance the charge of all imbalanced SLIME reactions by adding the required amount of H+, 
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_3975')) = -sum(model.S(:,strcmp(model.rxns,'r_3975')).*model.metCharges,'omitnan'); % Protein
@@ -84,7 +88,6 @@ model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4076')) = -sum(mo
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4077')) = -sum(model.S(:,strcmp(model.rxns,'r_4077')).*model.metCharges,'omitnan'); % Protein
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4078')) = -sum(model.S(:,strcmp(model.rxns,'r_4078')).*model.metCharges,'omitnan'); % Protein
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4079')) = -sum(model.S(:,strcmp(model.rxns,'r_4079')).*model.metCharges,'omitnan'); % Protein
-
 
 % Make the charge of HS (hydrogen sulfide) -1
 model.metCharges(strcmp(model.mets,'s_0841'))=-1;
@@ -139,73 +142,24 @@ model.ub(strcmp(model.rxns,'r_4714')) = 0; %monoethyl succinate
 % both irreversible
 model = setParam(model,'lb',{'r_4723','r_4724','r_4725'},0);
 model = setParam(model,'lb','r_4460',0);
-
 %=========================================================================
 
-
-% Convert to anaerobic
-model = anaerobicModel(model);
-
-% Glucose uptake rate
-model = setParam(model,'eq','r_1714',-23);
-
-% Solve
-res=solveLP(model,1);
-FLUX=res.x;
-
-v_glc=FLUX(getIndexes(model,'r_1714','rxns'),:);
-v_eth=FLUX(getIndexes(model,'r_1761','rxns'),:);
-v_CO2=FLUX(getIndexes(model,'r_1672','rxns'),:);
-v_gly=FLUX(getIndexes(model,'r_1808','rxns'),:);
-v_growth=FLUX(getIndexes(model,'r_4041','rxns'),:);
-%%
-%glycerol ethanol Co2
-%4.5 ± 0.4  31 ± 2  38 ± 10
-data=[4.5 31 38 0.36];
-sim=[v_gly v_eth v_CO2 v_growth];
-errorVal=[0.4 2 10 0.02];
-b1=bar(data./data,'FaceAlpha',0.5);hold on;b2=bar(sim./data,'FaceAlpha',0.5);
-
-hold on
-
-er = errorbar([1 2 3 4],data./data,errorVal./data,errorVal./data);    
-er.Color = [0 0 0];                            
-er.LineStyle = 'none';  
-
-
-legend({'data','simulation'});
-ylabel('Relative value');
-xticklabels({'Glycerol','Ethanol','CO2','Biomass'})
-
-temp_model=model;
-temp_model.metNames=strcat( model.metNames, repmat('[',length(model.mets),1),model.compNames(temp_model.metComps),repmat(']',length(model.mets),1) ); 
-
-
-% Pack everything into a nice table
-rxns_reacs=printRxnFormula(temp_model,'rxnAbbrList',model.rxns,'metNameFlag',1,'printFlag',0);
-%[massImbalance, imBalancedMass, imBalancedCharge, imBalancedRxnBool, elements, missingFormulaeBool, balancedMetBool] = checkMassChargeBalance(model);
-%tab=table(model.rxns,model.rxnNames,rxns_reacs,abs(FLUX./v_glc),FLUX,model.grRules,imBalancedRxnBool,imBalancedCharge,imBalancedMass);
-tab=table(model.rxns,model.rxnNames,rxns_reacs,abs(FLUX./v_glc),FLUX,model.grRules);
-tab = sortrows(tab,"Var4","descend");
-
-printFluxes(model,FLUX,true)
-
-
-
-
-
-%% Calculate formula and degree of reduciton of biomass
-
-[mwRange,metFormulae,elements,metEle]=computeMetFormulae(model,'metMwRange','s_0450','fillMets','none','printLevel',0);
-mwRange
-
-% Print out the results of the 
-Biomass_index = find(strcmp(model.metNames,'biomass'));
-
-%Degree of reduction per element. Order of the elements 'C', 'H', 'O', 'N'
-DR_per_ele = [4, 1, -2, -3, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
-DR_per_Cmol=sum(metEle(Biomass_index,:).*DR_per_ele)/metEle(Biomass_index,1)
-
-Biomass_formula_Cmol=metEle(Biomass_index,:)/metEle(Biomass_index,1);
-
-MW_per_Cmol_min = mwRange/metEle(Biomass_index,1)
+%% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
+% Show some metrics:
+% cd(fullfile(codeDir,'modelTests'))
+% disp('Run gene essentiality analysis')
+% [new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
+% fprintf('Genes in model: %d\n',numel(model.genes));
+% fprintf('Gene essentiality accuracy: %.4f\n', new.accuracy);
+% fprintf('True non-essential genes: %d\n', numel(new.tp));
+% fprintf('True essential genes: %d\n', numel(new.tn));
+% fprintf('False non-essential genes: %d\n', numel(new.fp));
+% fprintf('False essential genes: %d\n', numel(new.fn));
+% fprintf('\nRun growth analysis\n')
+% R2=growth(model);
+% fprintf('R2 of growth prediction: %.4f\n', R2);
+% 
+% Save model:
+% cd ..
+% saveYeastModel(model)
+% cd modelCuration
