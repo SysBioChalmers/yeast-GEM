@@ -8,12 +8,9 @@ function model = anaerobicModel(model)
 %   Usage: model = anaerobicModel(model)
 %
 
-
-GAM   = 55.2;
-
-
+%GAM   = 55.2; % Remains unchanged, line can be removed
 P     = 0.461;  %Data from Nissen et al. 1997
-NGAM  = 1;    
+NGAM  = 1; % 0.7 in aerobic, should it not remain unchanged?
 
 model = changeGAM(model,GAM,NGAM);
 model = scaleBioMass(model,'protein',P,'carbohydrate',false);
@@ -54,24 +51,12 @@ model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
 model = setParam(model,'lb','r_0714',0);
 model = setParam(model,'ub','r_0714',0);
 
-%Glutamate synthae repressed in excess nitrogen
-model.ub(strcmp(model.rxns,'r_0472'))=0;
-
 % GCY1 has a positive DeltaG and is part of a transhydrogenase cycle NADH -> NADPH
 model.ub(strcmp(model.rxns,'r_0487')) = 0; 
 
-%glycine cleavage respressed by presence of glucose
-model.ub(strcmp(model.rxns,'r_0501'))=0; %glycine cleavage, mitochondrion
-model.lb(strcmp(model.rxns,'r_0501'))=0;
-model.ub(strcmp(model.rxns,'r_0507'))=0; %glycine cleavage complex (lipoylprotein), mitochondrion
-model.lb(strcmp(model.rxns,'r_0507'))=0;
-model.ub(strcmp(model.rxns,'r_0509'))=0; %glycine cleavage complex (lipoamide), mitochondrion
-model.lb(strcmp(model.rxns,'r_0509'))=0;
-
 % MAE1 and IDP are likely not major mitochondrial NADPH sources. 
-% model.ub(strcmp(model.rxns,'r_0719')) = 0; % malic enzyme (MAE1), mitochondrion
-% model.ub(strcmp(model.rxns,'r_2131')) = 0; % isocitrate dehydrogenase (IDP1), mitochondrion
-% %model.ub(strcmp(model.rxns,'r_0659')) = 0; % isocitrate dehydrogenase (IDP2), mitochondrion
+model.ub(strcmp(model.rxns,'r_0719')) = 0; % malic enzyme (MAE1), mitochondrion
+model.ub(strcmp(model.rxns,'r_2131')) = 0; % isocitrate dehydrogenase (IDP1), mitochondrion
 
 %=========================================================================
 %Speculative, this cleans up alternate sources of mitochondrial pyruvate
@@ -118,9 +103,9 @@ model.S(find(strcmp(model.mets,'s_1203')),strcmp(model.rxns,'r_4041'))=model.S(f
 
 %% Adjust Mw of biomass to 1000
 
+% Disabled for now, as it requires COBRA toolbox function. Currently, output is directly given
 % Biomass_MW=computeMetFormulae(model,'metMwRange','s_0450','fillMets','none','printLevel',0);
-% model.S(:,strcmp(model.rxns,'r_4041')) = model.S(:,strcmp(model.rxns,'r_4041'))*1000/mean(Biomass_MW);
-% model.S(find(strcmp(model.mets,'s_0450')),strcmp(model.rxns,'r_4041')) = 1;
-% 
-
+Biomass_MW = [954.343535827233, 954.343535827305];
+model.S(:,strcmp(model.rxns,'r_4041')) = model.S(:,strcmp(model.rxns,'r_4041'))*1000/mean(Biomass_MW);
+model.S(find(strcmp(model.mets,'s_0450')),strcmp(model.rxns,'r_4041')) = 1;
 end

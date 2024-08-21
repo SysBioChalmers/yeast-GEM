@@ -143,6 +143,20 @@ model.ub(strcmp(model.rxns,'r_4714')) = 0; %monoethyl succinate
 model = setParam(model,'lb',{'r_4723','r_4724','r_4725'},0);
 model = setParam(model,'lb','r_4460',0);
 %=========================================================================
+% Condition-specific gene expression. These can be enabled with scripts 
+
+% Glycine cleavage only active when glycine is used as nitrogen source
+model.ub(strcmp(model.rxns,'r_0501'))=0; %glycine cleavage, mitochondrion
+model.lb(strcmp(model.rxns,'r_0501'))=0;
+model.ub(strcmp(model.rxns,'r_0507'))=0; %glycine cleavage complex (lipoylprotein), mitochondrion
+model.lb(strcmp(model.rxns,'r_0507'))=0;
+model.ub(strcmp(model.rxns,'r_0509'))=0; %glycine cleavage complex (lipoamide), mitochondrion
+model.lb(strcmp(model.rxns,'r_0509'))=0;
+
+% Glutamate synthase repressed in excess nitrogen
+model.ub(strcmp(model.rxns,'r_0472'))=0;
+
+%=========================================================================
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
