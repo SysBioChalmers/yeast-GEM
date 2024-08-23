@@ -19,15 +19,37 @@ codeDir=pwd();
 cd modelCuration
 
 %=========================================================================
-% Create a pathway for anaplerosis. Check alternatives? this one might work
-% on other diacids also? If considered important for "flux reasons", dig 
-% into this transporter literature
-% 'r_1264' 'succinate transport'   'phosphate[mitochondrion] + succinate[cytoplasm]  -> phosphate[cytoplasm] + succinate[mitochondrion] '
-%model.lb(findRxnIDs(model,'r_1264'))=-1000; %DIC1. I am not sure its actually a phosphate/succinate antiport. It not clear from the article. It could also be specific for both phosphate and succinate
+% We blocked MDH2 in anaerobic conditions (see details in the anerobicModel script)
+% Experiments suggest that AKG needs to produced inside the mitochondria
+% and exported with ODC1/2 the help or YHM2. After inspecting the kinetics parameters for OAC1, DIC1, YHM2 and
+% ODC1/ODC2 (SFC1 is strongly repressed by glucose) we added sulphate and malate as substrate for the OAC1 transporter.
+    
+%% sulphate[c]	sulphate		bigg.metabolite/so4;chebi/CHEBI:16189;kegg.compound/C00059;metanetx.chemical/MNXM58;sbo/SBO:0000247	O4S		c	s_1467	-2
+%  Add sulphate[m]
+model = addMetabolite(model, 's_xxxxx', 'sulphate');
+model.metComps(end)=9;
+
+%% A proper identifier needs to be added for the metabolite and reaction
+% oxaloacetate[c]	oxaloacetate		c	s_1271	-2
+% oxaloacetate[m]	oxaloacetate		m	s_1273	-2
+% sulfate[m] m	s_xxxxx	-1
+% sulfate[c] c	s_1467	-1
+model = addReaction(model,'rxxS','metaboliteList',{'s_1271','s_xxxxx',...
+    's_1273','s_1467'},'stoichCoeffList',[-1  -1 1 1], 'reversible',true);
+model.rev(end)=1;
+
+% (S)-malate[c]	(S)-malate	c	s_0066	-2
+% (S)-malate[m]	(S)-malate	m	s_0068	-2
+% sulfate[m] m	s_xxxxx	-1
+% sulfate[c] c	s_1467	-1
+model = addReaction(model,'rxxS2','metaboliteList',{'s_0066','s_xxxxx',...
+    's_0068','s_1467'},'stoichCoeffList',[-1  -1 1 1], 'reversible',true);
+model.rev(end)=1;
+
 
 %=========================================================================
-% look for all proton symport/antiport reactions and make sure that they 
-% only enter the cell. 
+% look for all proton symport/antiport reactions and make sure that they
+% only enter the cell.
 
 %'s_0794' H+ cytosol
 %'s_0796' H+ extracellular
@@ -79,7 +101,7 @@ model.metCharges(find(contains(model.metNames,'chain')+contains(model.metNames,'
 % Now, based on the charge balance, find all the reactions that are
 % imbalanced, add or remove hydrogen as necessary
 
-% Balance the charge of all imbalanced SLIME reactions by adding the required amount of H+, 
+% Balance the charge of all imbalanced SLIME reactions by adding the required amount of H+,
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_3975')) = -sum(model.S(:,strcmp(model.rxns,'r_3975')).*model.metCharges,'omitnan'); % Protein
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_3976')) = -sum(model.S(:,strcmp(model.rxns,'r_3976')).*model.metCharges,'omitnan'); % Protein
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_3977')) = -sum(model.S(:,strcmp(model.rxns,'r_3977')).*model.metCharges,'omitnan'); % Protein
@@ -117,7 +139,7 @@ model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0775'))=-1;
 model.rxnNames(strcmp(model.rxns,'r_0227')) = {'ATPase, plasma membrane'};
 
 % make sure both formate-THF ligases are reversible.
-model.lb(strcmp(model.rxns,'r_0446')) = -1000; 
+model.lb(strcmp(model.rxns,'r_0446')) = -1000;
 
 % ADE3 and MIS1, methylenetetrahydrofolate dehydrogenase (NADP+)  [EC 1.5.1.5]
 % make irrevrersible
@@ -126,9 +148,9 @@ model.ub(strcmp(model.rxns,'r_0733')) = 0;
 
 % There is no evidence for this PFK1 side reaction in yeast. Consider
 % removing the reaction completley
-model.ub(strcmp(model.rxns,'r_0887')) = 0; 
+model.ub(strcmp(model.rxns,'r_0887')) = 0;
 
-% TYR1 incorrectly annotated as using NAD, should be NADP 
+% TYR1 incorrectly annotated as using NAD, should be NADP
 model.S(find(strcmp(model.mets,'s_1212')),strcmp(model.rxns,'r_0939'))=0; %NADPH
 model.S(find(strcmp(model.mets,'s_1207')),strcmp(model.rxns,'r_0939'))=0; %NADP
 model.S(find(strcmp(model.mets,'s_1203')),strcmp(model.rxns,'r_0939'))=1; %NADH
@@ -142,19 +164,39 @@ model.ub(strcmp(model.rxns,'r_4714')) = 0; %monoethyl succinate
 % both irreversible
 model = setParam(model,'lb',{'r_4723','r_4724','r_4725'},0);
 model = setParam(model,'lb','r_4460',0);
-%=========================================================================
-% Condition-specific gene expression. These can be enabled with scripts 
 
-% Glycine cleavage only active when glycine is used as nitrogen source
-model.ub(strcmp(model.rxns,'r_0501'))=0; %glycine cleavage, mitochondrion
-model.lb(strcmp(model.rxns,'r_0501'))=0;
-model.ub(strcmp(model.rxns,'r_0507'))=0; %glycine cleavage complex (lipoylprotein), mitochondrion
-model.lb(strcmp(model.rxns,'r_0507'))=0;
-model.ub(strcmp(model.rxns,'r_0509'))=0; %glycine cleavage complex (lipoamide), mitochondrion
-model.lb(strcmp(model.rxns,'r_0509'))=0;
+% In principle only ammonium (not ammonia) can be transported tomitochondria. In the cytosol, NH4+ is the main form. 
+% Additionally, NH3 transport processes between different compartments are assumed to operate close to thermodynamic equilibrium
+% -and since no transport proteins that could translocate NHX between compartments are described in literature, passive diffusion 
+% of NH3 between vacuole and cytosol, as well as between cytosol and mitochondria, are assumed.
+% Cueto-Rojas, Hugo F., et al. "Membrane potential independent transport of NH 3 in the absence of ammonium permeases in Saccharomyces cerevisiae." BMC Systems Biology 11 (2017): 1-13. 
+%'r_1965'	'NH3 transport'	'ammonium[cytoplasm]  <=> ammonium[mitochondrion] '	0.012058369	-0.277342481	'' 
+model = setParam(model,'eq',{'r_1965'},0);
+
+
+% FMN is as tightly bound cofactor of LOT6. In principle quinones are required as substrate/product. Consider deleting reaction
+%  'r_0441'	'FMN reductase'	'FMN[cytoplasm] + 2 H+[cytoplasm] + NADH[cytoplasm]  -> FMNH2[cytoplasm] + NAD[cytoplasm] '	0	0	'YLR011W'
+% 'r_0442'	'FMN reductase'	'FMN[cytoplasm] + 2 H+[cytoplasm] + NADPH[cytoplasm]  -> FMNH2[cytoplasm] + NADP(+)[cytoplasm] '	0	0	'YLR011W'
+model = setParam(model,'eq',{'r_0441'},0);
+model = setParam(model,'eq',{'r_0442'},0);
+
+%=========================================================================
+%% Condition-specific gene expression. These can be enabled with scripts
+
+% % Glycine cleavage only active when glycine is used as nitrogen source
+% model.ub(strcmp(model.rxns,'r_0501'))=0; %glycine cleavage, mitochondrion
+% model.lb(strcmp(model.rxns,'r_0501'))=0;
+% model.ub(strcmp(model.rxns,'r_0507'))=0; %glycine cleavage complex (lipoylprotein), mitochondrion
+% model.lb(strcmp(model.rxns,'r_0507'))=0;
+% model.ub(strcmp(model.rxns,'r_0509'))=0; %glycine cleavage complex (lipoamide), mitochondrion
+% model.lb(strcmp(model.rxns,'r_0509'))=0;
 
 % Glutamate synthase repressed in excess nitrogen
 model.ub(strcmp(model.rxns,'r_0472'))=0;
+
+% The carnitine shuttle requires exogeneous carnitine
+% r_0252	'carnitine O-acetyltransferase'	0	1000	'(R)-carnitine[cytoplasm] + acetyl-CoA[cytoplasm]  -> coenzyme A[cytoplasm] + O-acetylcarnitine[cytoplasm] '	0	0	0	0	0.167350072
+model = setParam(model,'eq',{'r_0252'},0);
 
 %=========================================================================
 
@@ -172,7 +214,7 @@ model.ub(strcmp(model.rxns,'r_0472'))=0;
 % fprintf('\nRun growth analysis\n')
 % R2=growth(model);
 % fprintf('R2 of growth prediction: %.4f\n', R2);
-% 
+%
 % Save model:
 % cd ..
 % saveYeastModel(model)
