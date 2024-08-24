@@ -1,9 +1,9 @@
 function R2=anaerobic_flux_predictions(model)
 
-[vals_flux text_flux]=xlsread('../../data/physiology/anaerobic_flux.xlsx','flux_data');
-
-% %% This is temporary; remove when rxn id is attributed
-% text_flux(strcmp(text_flux(:,7),'rxxS'),7)={'r_1239'};
+fluxTable=  readtable('../../data/physiology/flux_data_anaerobic.txt');
+fluxTable = table2cell(fluxTable);
+vals_flux=fluxTable;
+text_flux=fluxTable;
 
 sim_vals=[];
 
@@ -18,9 +18,10 @@ merged_names=[];
 
 for i=1:length(data_sets)
 
-    index_data_set=find(strcmp(text_flux(:,6),data_sets(i)));
+    index_data_set=find(strcmp(text_flux(:,6),data_sets(i,1)));
     index_glx=strcmp(text_flux(index_data_set,7),'r_1714');
-    model = setParam(model,'eq','r_1714',-vals_flux(index_data_set(index_glx),2) );
+    
+    model = setParam(model,'eq','r_1714',-cell2mat(vals_flux(index_data_set(find(index_glx)),4) ));
 
     %% Solve the LP problem
     res=solveLP(model,1);
@@ -32,7 +33,7 @@ for i=1:length(data_sets)
 
     scaled_sim=abs(-100.*res.x(index_model)./res.x(findRxnIDs(model,'r_1714')));
 
-    data_vals=abs(vals_flux(index_data_set,3));
+    data_vals=abs(cell2mat(vals_flux(index_data_set,5)));
     merged_data=[merged_data data_vals'];
     merged_sim=[merged_sim scaled_sim'];
     merged_names=[merged_names text_flux(index_data_set,7)'];
