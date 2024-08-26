@@ -1,0 +1,126 @@
+GlcV	GlcV	6.3	6.58	100	Jouhten2008	r_1714	D-glucose exchange	D-glucose[extracellular]  <=> 
+G6P	F6P	88	88	88	Jouhten2008	r_0467	glucose-6-phosphate isomerase	D-glucose 6-phosphate[cytoplasm]  <=> D-fructose 6-phosphate[cytoplasm] 
+F6P 	G3P	91	91	91	Jouhten2008	r_0450	fructose-bisphosphate aldolase	D-fructose 1,6-bisphosphate[cytoplasm]  <=> dihydroxyacetone phosphate[cytoplasm] + glyceraldehyde 3-phosphate[cytoplasm] 
+G3P	Pep	163	163	163	Jouhten2008	r_0366	enolase	2-phospho-D-glyceric acid[cytoplasm]  <=> H2O[cytoplasm] + phosphoenolpyruvate[cytoplasm] 
+Pyr	OaaCit	5	5	5	Jouhten2008	r_0958	pyruvate carboxylase	ATP[cytoplasm] + bicarbonate[cytoplasm] + pyruvate[cytoplasm]  -> ADP[cytoplasm] + H+[cytoplasm] + oxaloacetate[cytoplasm] + phosphate[cytoplasm] 
+G3p	Glycerol	17	17	17	Jouhten2008	r_0489	glycerol-3-phosphatase	glycerol 3-phosphate[cytoplasm] + H2O[cytoplasm]  -> glycerol[cytoplasm] + phosphate[cytoplasm] 
+G6P	P5P	5	5	5	Jouhten2008	r_0466	glucose 6-phosphate dehydrogenase	D-glucose 6-phosphate[cytoplasm] + NADP(+)[cytoplasm]  -> 6-O-phosphono-D-glucono-1,5-lactone[cytoplasm] + H+[cytoplasm] + NADPH[cytoplasm] 
+P5P+E4P	F6P+G3P	1	1	1	Jouhten2008	r_1049	transketolase 1	D-xylulose 5-phosphate[cytoplasm] + ribose-5-phosphate[cytoplasm]  <=> glyceraldehyde 3-phosphate[cytoplasm] + sedoheptulose 7-phosphate[cytoplasm] 
+G3P+S7P	F6p+E4P	2	2	2	Jouhten2008	r_1048	transaldolase	glyceraldehyde 3-phosphate[cytoplasm] + sedoheptulose 7-phosphate[cytoplasm]  <=> D-erythrose 4-phosphate[cytoplasm] + D-fructose 6-phosphate[cytoplasm] 
+PyrCyt	AcO	149	148	148.5	Jouhten2008	r_0959	pyruvate decarboxylase	H+[cytoplasm] + pyruvate[cytoplasm]  -> acetaldehyde[cytoplasm] + carbon dioxide[cytoplasm] 
+AcO	Ethanol	147	147	147	Jouhten2008	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	acetaldehyde[cytoplasm] + H+[cytoplasm] + NADH[cytoplasm]  -> ethanol[cytoplasm] + NAD[cytoplasm] 
+Ethanol	Ethanolext	147	147	147	Jouhten2008	r_1761	ethanol exchange	ethanol[extracellular]  -> 
+AcO	Acetate	2	2	2	Jouhten2008	r_0173
+Acetate	Acetateext	0	0	0	Jouhten2008	r_1634	acetate exchange	acetate[extracellular]  -> 
+Pep	PyrCyt	162	162	162	Jouhten2008	r_0962	pyruvate kinase	ADP[cytoplasm] + H+[cytoplasm] + phosphoenolpyruvate[cytoplasm]  -> ATP[cytoplasm] + pyruvate[cytoplasm] 
+PyrCyt	OaaCyt	5	5	5	Jouhten2008	r_0958	pyruvate carboxylase	ATP[cytoplasm] + bicarbonate[cytoplasm] + pyruvate[cytoplasm]  -> ADP[cytoplasm] + H+[cytoplasm] + oxaloacetate[cytoplasm] + phosphate[cytoplasm] 
+OaaCyt+MalMit	OaaMit+MalCyt	3	3	3	Jouhten2008	rxxS	rxxS	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
+OaaMit+MalMit	Cit	3	3	3	Jouhten2008	r_0300	citrate synthase	acetyl-CoA[mitochondrion] + H2O[mitochondrion] + oxaloacetate[mitochondrion]  -> citrate[mitochondrion] + coenzyme A[mitochondrion] + H+[mitochondrion] 
+PyrMit	AcCCoAMit	4	4	4	Jouhten2008	r_0113	acetyl-CoA synthetase	acetate[mitochondrion] + ATP[mitochondrion] + coenzyme A[mitochondrion]  -> acetyl-CoA[mitochondrion] + AMP[mitochondrion] + diphosphate[mitochondrion] 
+PyrCyt	PyrMit	8	8	8	Jouhten2008	r_2034	pyruvate transport	H+[cytoplasm] + pyruvate[cytoplasm]  -> H+[mitochondrion] + pyruvate[mitochondrion] 
+Cit	Oga	3	3	3	Jouhten2008	r_0658	isocitrate dehydrogenase (NAD+)	isocitrate[mitochondrion] + NAD[mitochondrion]  -> 2-oxoglutarate[mitochondrion] + carbon dioxide[mitochondrion] + NADH[mitochondrion] 
+mu	mu	0.1	0.1	1.552795031	Jouhten2008	r_2111	growth	biomass[cytoplasm]  -> 
+Glucose uptake (mmol/gDW/h)			17.8	100	Celton2012	r_1714	D-glucose exchange	D-glucose[extracellular]  <=> 
+Glycolysis				84.7	Celton2012	r_0467	glucose-6-phosphate isomerase	D-glucose 6-phosphate[cytoplasm]  <=> D-fructose 6-phosphate[cytoplasm] 
+PPP				11.4	Celton2012	r_0466	glucose 6-phosphate dehydrogenase	D-glucose 6-phosphate[cytoplasm] + NADP(+)[cytoplasm]  -> 6-O-phosphono-D-glucono-1,5-lactone[cytoplasm] + H+[cytoplasm] + NADPH[cytoplasm] 
+Transketolase				5.6	Celton2012	r_1049	transketolase 1	D-xylulose 5-phosphate[cytoplasm] + ribose-5-phosphate[cytoplasm]  <=> glyceraldehyde 3-phosphate[cytoplasm] + sedoheptulose 7-phosphate[cytoplasm] 
+Pyruvate decarboxylase				164.3	Celton2012	r_0959	pyruvate decarboxylase	H+[cytoplasm] + pyruvate[cytoplasm]  -> acetaldehyde[cytoplasm] + carbon dioxide[cytoplasm] 
+Pyruvate carboxylase				4.2	Celton2012	r_0958	pyruvate carboxylase	ATP[cytoplasm] + bicarbonate[cytoplasm] + pyruvate[cytoplasm]  -> ADP[cytoplasm] + H+[cytoplasm] + oxaloacetate[cytoplasm] + phosphate[cytoplasm] 
+Import of oxaloacetate into the mitochondria				3.4	Celton2012	rxxS	rxxS	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
+Acetaldehyde dehydrogenase				2.4	Celton2012	r_0173
+Acetyl-CoA synthetase				0.3	Celton2012	r_0113	acetyl-CoA synthetase	acetate[mitochondrion] + ATP[mitochondrion] + coenzyme A[mitochondrion]  -> acetyl-CoA[mitochondrion] + AMP[mitochondrion] + diphosphate[mitochondrion] 
+Ethanol production				161.9	Celton2012	r_1761	ethanol exchange	ethanol[extracellular]  -> 
+Glycerol production				17.8	Celton2012	r_1808	glycerol exchange	glycerol[extracellular]  -> 
+Acetate production				2.1	Celton2012	r_1634	acetate exchange	acetate[extracellular]  -> 
+Succinate production				0.3	Celton2012	r_2056	succinate exchange	succinate[extracellular]  -> 
+mu			0.4	2.247191011	Celton2012	r_2111	growth	biomass[cytoplasm]  -> 
+Glucose	Glucose	13.49	13.49	100	Wasylenko2014	r_1714	D-glucose exchange	D-glucose[extracellular]  <=> 
+mu	mu		0.23	1.704966642	Wasylenko2014	r_2111	growth	biomass[cytoplasm]  -> 
+G6P	Ru5P		0.68	5.040770941	Wasylenko2014	r_0466	glucose 6-phosphate dehydrogenase	D-glucose 6-phosphate[cytoplasm] + NADP(+)[cytoplasm]  -> 6-O-phosphono-D-glucono-1,5-lactone[cytoplasm] + H+[cytoplasm] + NADPH[cytoplasm] 
+G6P	F6P		12.42	92.06819867	Wasylenko2014	r_0467	glucose-6-phosphate isomerase	D-glucose 6-phosphate[cytoplasm]  <=> D-fructose 6-phosphate[cytoplasm] 
+F6P	FBP		12.62	93.55077835	Wasylenko2014	r_0886	phosphofructokinase	ATP[cytoplasm] + D-fructose 6-phosphate[cytoplasm]  -> ADP[cytoplasm] + D-fructose 1,6-bisphosphate[cytoplasm] + H+[cytoplasm] 
+Ru5P	X5P		0.38	2.816901408	Wasylenko2014	r_0984	ribulose 5-phosphate 3-epimerase	D-ribulose 5-phosphate[cytoplasm]  <=> D-xylulose 5-phosphate[cytoplasm] 
+Ru5P	R5P		0.3	2.223869533	Wasylenko2014	r_0982	ribose-5-phosphate isomerase	D-ribulose 5-phosphate[cytoplasm]  <=> ribose-5-phosphate[cytoplasm] 
+FBP	DHAP+GAP		12.62	93.55077835	Wasylenko2014	r_0450	fructose-bisphosphate aldolase	D-fructose 1,6-bisphosphate[cytoplasm]  <=> dihydroxyacetone phosphate[cytoplasm] + glyceraldehyde 3-phosphate[cytoplasm] 
+DHAP	Glyc3P		2.99	22.16456635	Wasylenko2014	r_0491	glycerol-3-phosphate dehydrogenase (NAD)	dihydroxyacetone phosphate[cytoplasm] + H+[cytoplasm] + NADH[cytoplasm]  -> glycerol 3-phosphate[cytoplasm] + NAD[cytoplasm] 
+Glyc3P	Glycerol		2.98	22.09043736	Wasylenko2014	r_0489	glycerol-3-phosphatase	glycerol 3-phosphate[cytoplasm] + H2O[cytoplasm]  -> glycerol[cytoplasm] + phosphate[cytoplasm] 
+GAP	3PG		22.42	166.1971831	Wasylenko2014	r_0486	glyceraldehyde-3-phosphate dehydrogenase	glyceraldehyde 3-phosphate[cytoplasm] + NAD[cytoplasm] + phosphate[cytoplasm]  <=> 1,3-bisphospho-D-glycerate[cytoplasm] + H+[cytoplasm] + NADH[cytoplasm] 
+3PG	Ser		0.07	0.518902891	Wasylenko2014	r_0917	phosphoserine phosphatase (L-serine)	3-phospho-serine[cytoplasm] + H2O[cytoplasm]  -> L-serine[cytoplasm] + phosphate[cytoplasm] 
+Ser	Gly+C1		0.07	0.518902891	Wasylenko2014	r_0502	glycine hydroxymethyltransferase	L-serine[cytoplasm] + THF[cytoplasm]  <=> 5,10-methylenetetrahydrofolate[cytoplasm] + H2O[cytoplasm] + L-glycine[cytoplasm] 
+Thr	Gly+AcCHO		0.14	1.037805782	Wasylenko2014	r_1040	threonine aldolase	L-threonine[cytoplasm]  -> acetaldehyde[cytoplasm] + L-glycine[cytoplasm] 
+3PG	PEP		22.35	165.6782802	Wasylenko2014	r_0366	enolase	2-phospho-D-glyceric acid[cytoplasm]  <=> H2O[cytoplasm] + phosphoenolpyruvate[cytoplasm] 
+PEP	PyrCyt		22.23	164.7887324	Wasylenko2014	r_0962	pyruvate kinase	ADP[cytoplasm] + H+[cytoplasm] + phosphoenolpyruvate[cytoplasm]  -> ATP[cytoplasm] + pyruvate[cytoplasm] 
+PyrCyt	AcCHO+CO2		21.24	157.4499629	Wasylenko2014	r_0959	pyruvate decarboxylase	H+[cytoplasm] + pyruvate[cytoplasm]  -> acetaldehyde[cytoplasm] + carbon dioxide[cytoplasm] 
+PyrCyt	OaaCyt		0.77	5.707931801	Wasylenko2014	r_0958	pyruvate carboxylase	ATP[cytoplasm] + bicarbonate[cytoplasm] + pyruvate[cytoplasm]  -> ADP[cytoplasm] + H+[cytoplasm] + oxaloacetate[cytoplasm] + phosphate[cytoplasm] 
+PyrCyt	PyrMit		0.2	1.482579689	Wasylenko2014	r_2034	pyruvate transport	H+[cytoplasm] + pyruvate[cytoplasm]  -> H+[mitochondrion] + pyruvate[mitochondrion] 
+AcCHO	Ethanol		20.64	153.0022239	Wasylenko2014	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	acetaldehyde[cytoplasm] + H+[cytoplasm] + NADH[cytoplasm]  -> ethanol[cytoplasm] + NAD[cytoplasm] 
+AcCHO	Acetate		0.74	5.485544848	Wasylenko2014	r_0173
+Acetate	AcCoaCyt		0.43	3.187546331	Wasylenko2014	r_0113	acetyl-CoA synthetase	acetate[mitochondrion] + ATP[mitochondrion] + coenzyme A[mitochondrion]  -> acetyl-CoA[mitochondrion] + AMP[mitochondrion] + diphosphate[mitochondrion] 
+Acetate	AcetateExt		0.31	2.297998517	Wasylenko2014	r_1634	acetate exchange	acetate[extracellular]  -> 
+OaaCyt	OaaMit		0.32	2.372127502	Wasylenko2014	rxxS	rxxS	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
+MalMit	PyrMit		0.18	1.33432172	Wasylenko2014	r_0718	malic enzyme (NAD)	(S)-malate[mitochondrion] + NAD[mitochondrion]  -> carbon dioxide[mitochondrion] + NADH[mitochondrion] + pyruvate[mitochondrion] 
+MalMit	OaaMit		0.09	0.66716086	Wasylenko2014	r_0713	malate dehydrogenase	(S)-malate[mitochondrion] + NAD[mitochondrion]  <=> H+[mitochondrion] + NADH[mitochondrion] + oxaloacetate[mitochondrion] 
+Fum	MalMit		0.1	0.741289844	Wasylenko2014	r_0451	fumarase	fumarate[mitochondrion] + H2O[mitochondrion]  <=> (S)-malate[mitochondrion] 
+Cit	Akg		0.23	1.704966642	Wasylenko2014	r_0658	isocitrate dehydrogenase (NAD+)	isocitrate[mitochondrion] + NAD[mitochondrion]  -> 2-oxoglutarate[mitochondrion] + carbon dioxide[mitochondrion] + NADH[mitochondrion] 
+OaaMit	Cit		0.23	1.704966642	Wasylenko2014	r_0300	citrate synthase	acetyl-CoA[mitochondrion] + H2O[mitochondrion] + oxaloacetate[mitochondrion]  -> citrate[mitochondrion] + coenzyme A[mitochondrion] + H+[mitochondrion] 
+AcCoaCyt	AcCoaMit		0.3	2.223869533	Wasylenko2014	r_0252	carnitine O-acetyltransferase	(R)-carnitine[cytoplasm] + acetyl-CoA[cytoplasm]  -> coenzyme A[cytoplasm] + O-acetylcarnitine[cytoplasm] 
+mu	out	1	0.1	1.700102006	Nissen01	r_2111	growth	biomass[cytoplasm]  -> 
+glucose_v	out	1	5.882	100	Nissen01	r_1714	D-glucose exchange	D-glucose[extracellular]  <=> 
+CO2_y	out	6	0.272	163.2	Nissen01	r_1672	'carbon dioxide exchange'	'carbon dioxide[extracellular]  -> '
+ethanol_y	out	3	0.497	149.1	Nissen01	r_1761	ethanol exchange	ethanol[extracellular]  -> 
+glycerol_y	out	2	0.086	17.2	Nissen01	r_1808	glycerol exchange	glycerol[extracellular]  -> 
+succinate_y	out	1.5	0.003	0.45	Nissen01	r_2056	succinate exchange	succinate[extracellular]  -> 
+acetic_y	out	3	0.002	0.6	Nissen01			
+pyruvate_y	out	2	0.001	0.2	Nissen01			
+protein	out	1	0.45	45	Nissen01			
+RNA	out	1	0.063	6.3	Nissen01			
+NH4_v	out	1	0.093	9.3	Nissen01			
+mannan	out	1	0.131	13.1	Nissen01			
+trehalose	out	1	0.08	8	Nissen01			
+glycogen	out	1	0.084	8.4	Nissen01			
+other_cs	out	1	0.184	18.4	Nissen01			
+mu	out	1	0.2	1.767721407	Nissen02	r_2111	growth	biomass[cytoplasm]  -> 
+glucose_v	out	1	11.314	100	Nissen02	r_1714	D-glucose exchange	D-glucose[extracellular]  <=> 
+CO2_y	out	6	0.273	163.8	Nissen02	r_1672	'carbon dioxide exchange'	'carbon dioxide[extracellular]  -> '
+ethanol_y	out	3	0.496	148.8	Nissen02	r_1761	ethanol exchange	ethanol[extracellular]  -> 
+glycerol_y	out	2	0.091	18.2	Nissen02	r_1808	glycerol exchange	glycerol[extracellular]  -> 
+succinate_y	out	1.5	0.003	0.45	Nissen02	r_2056	succinate exchange	succinate[extracellular]  -> 
+acetic_y	out	3	0.003	0.9	Nissen02			
+pyruvate_y	out	2	0.002	0.4	Nissen02			
+protein	out	1	0.5	50	Nissen02			
+RNA	out	1	0.082	8.2	Nissen02			
+NH4_v	out	1	0.11	11	Nissen02			
+mannan	out	1	0.129	12.9	Nissen02			
+trehalose	out	1	0.02	2	Nissen02			
+glycogen	out	1	0.042	4.2	Nissen02			
+other_cs	out	1	0.154	15.4	Nissen02			
+mu	out	1	0.3	1.79147259	Nissen03	r_2111	growth	biomass[cytoplasm]  -> 
+glucose_v	out	1	16.746	100	Nissen03	r_1714	D-glucose exchange	D-glucose[extracellular]  <=> 
+CO2_y	out	6	0.267	160.2	Nissen03	r_1672	'carbon dioxide exchange'	'carbon dioxide[extracellular]  -> '
+ethanol_y	out	3	0.494	148.2	Nissen03	r_1761	ethanol exchange	ethanol[extracellular]  -> 
+glycerol_y	out	2	0.095	19	Nissen03	r_1808	glycerol exchange	glycerol[extracellular]  -> 
+succinate_y	out	1.5	0.002	0.3	Nissen03	r_2056	succinate exchange	succinate[extracellular]  -> 
+acetic_y	out	3	0.006	1.8	Nissen03			
+pyruvate_y	out	2	0.003	0.6	Nissen03			
+protein	out	1	0.555	55.5	Nissen03			
+RNA	out	1	0.101	10.1	Nissen03			
+NH4_v	out	1	0.13	13	Nissen03			
+mannan	out	1	0.12	12	Nissen03			
+trehalose	out	1	0	0	Nissen03			
+glycogen	out	1	0.06	6	Nissen03			
+other_cs	out	1	0.126	12.6	Nissen03			
+mu	out	1	0.4	1.803589142	Nissen04	r_2111	growth	biomass[cytoplasm]  -> 
+glucose_v	out	1	22.178	100	Nissen04	r_1714	D-glucose exchange	D-glucose[extracellular]  <=> 
+CO2_y	out	6	0.261	156.6	Nissen04	r_1672	'carbon dioxide exchange'	'carbon dioxide[extracellular]  -> '
+ethanol_y	out	3	0.497	149.1	Nissen04	r_1761	ethanol exchange	ethanol[extracellular]  -> 
+glycerol_y	out	2	0.109	21.8	Nissen04	r_1808	glycerol exchange	glycerol[extracellular]  -> 
+succinate_y	out	1.5	0.002	0.3	Nissen04	r_2056	succinate exchange	succinate[extracellular]  -> 
+acetic_y	out	3	0.01	3	Nissen04			
+pyruvate_y	out	2	0.004	0.8	Nissen04			
+protein	out	1	0.6	60	Nissen04			
+RNA	out	1	0.121	12.1	Nissen04			
+NH4_v	out	1	0.15	15	Nissen04			
+mannan	out	1	0.133	13.3	Nissen04			
+trehalose	out	1	0	0	Nissen04			
+glycogen	out	1	0	0	Nissen04			
+other_cs	out	1	0.037	3.7	Nissen04			
