@@ -112,7 +112,8 @@ model = changeGrRules(model,'r_0080','(YGL125W and YPL023C) or YGL125W',true);
 % To resolve MET17 causing methionine auxotrophy
 model = setParam(model,'lb','r_0815',0);
 
-% THI4-thiamine & HOM2-methionine and threonine...
+% To resolve THI4 causing thiamine auxotrophy and HOM2 causing methionine
+% and threonine auxotrophy
 model = removeReactions(model,'r_2070',true,true);
 model = removeReactions(model,'r_2071',true,true);
 rxnsToAdd.rxns      = generateNewIds(model,'rxns','r_',2);
@@ -134,6 +135,10 @@ model = addRxns(model,rxnsToAdd);
 
 % To resolve URA2 causing uracil auxotrophy
 model = changeGrRules(model,'r_0250','YJL130C or (YJR109C and YOR303W)',true);
+
+%% Issue #372. Correct UniProt identifier of YCR024C and YCR024C-A
+geneIdx = getIndexes(model,'YCR024C','genes');
+model.geneMiriams{geneIdx}.value = {'P25345'};
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:

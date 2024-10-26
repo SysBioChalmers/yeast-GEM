@@ -120621,7 +120621,7 @@
       - id: "YCR024C"
       - name: "SLM5"
       - annotation: !!omap
-          - uniprot: "P32903"
+          - uniprot: "P25345"
     - !!omap
       - id: "YCR024C-A"
       - name: "PMP1"
