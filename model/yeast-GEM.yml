@@ -4,7 +4,7 @@
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
     version: ""
-    date: "2023-12-02"
+    date: "2024-10-27"
     defaultLB: "-1000"
     defaultUB: "1000"
     givenName: "Eduard"
