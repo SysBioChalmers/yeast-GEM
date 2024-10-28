@@ -1,4 +1,4 @@
-function R2 = growth(model_origin)
+function R2 = growth(model_origin,writeOutput)
 % This is for growth test: Fig S4c for yeast8 paper
 % here we use several chemostat data: 'N-limited aerobic' 'C-limited
 % aerobic' 'C-limited anaerobic' 'N-limited anaerobic'
@@ -12,6 +12,9 @@ if nargin<1
     cd otherChanges/
 else
     cd ../otherChanges/
+end
+if nargin<2
+    writeOutput = false;
 end
 
 %Load chemostat data:
@@ -54,11 +57,21 @@ xlabel('Experimental growth rate [1/h]','FontSize',14,'FontName','Helvetica')
 ylabel('In silico growth rate [1/h]','FontSize',14,'FontName','Helvetica')
 legend(b,'N-limited aerobic','C-limited aerobic','C-limited anaerobic','N-limited anaerobic','Location','northwest')
 
-meanerror = sqrt(sum(([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)]-[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]).^2)/32)/sqrt(32);
-text(0.25,0.1,['SEM:',num2str(meanerror)])
+% meanerror = sqrt(sum(([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)]-[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]).^2)/32)/sqrt(32);
+% text(0.25,0.1,['SEM:',num2str(meanerror)])
 hold off
 R2=corrcoef([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)],[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]);
 R2=R2(2)^2;
+
+if writeOutput
+    saveas(gcf,'../../data/testResults/growth.png');
+    fid = fopen('../../data/testResults/growth.md','w');
+    fprintf(fid,'%s\n','## R2 of growth rate prediction');
+    fprintf(fid,'%.4g\n\n',R2);
+    fprintf(fid,'%s\n','![Growth curve](growth.png)');
+    fclose(fid);
+end
+
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

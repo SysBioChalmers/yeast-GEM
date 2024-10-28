@@ -1,4 +1,4 @@
-function [accuracy,tp,tn,fn,fp] = essentialGenes(model)
+function [accuracy,tp,tn,fn,fp] = essentialGenes(model,writeOutput)
 % essentialGenes
 %   Modify media + find essential genes in model. Adapted from:
 %   https://doi.org/10.1371/journal.pcbi.1004530
@@ -12,11 +12,15 @@ function [accuracy,tp,tn,fn,fp] = essentialGenes(model)
 %   Usage: [accurancy,tp,tn,fn,fp] = essentialGenes
 %
 
-if nargin<1;
+if nargin<1 | isempty(model)
     cd ..
     model = loadYeastModel;
     cd modelTests
 end
+if nargin<2
+    writeOutput = false;
+end
+
 ko_tol = 1e-6;
 
 %constraints from genotype: check the genotype of the strains used in deletion experiment
@@ -70,6 +74,19 @@ negativePredictive = (100*n_tn/(n_fn+n_tn));
 mcc = (n_tp * n_tn - n_fp * n_fn)/...
 sqrt((n_tp + n_fp)*(n_tp + n_fn)*(n_tn + n_fp)*(n_tn + n_fn));
 geoMean = (sensitivity * specificity)^.5;
+
+if writeOutput
+    fid = fopen('../../data/testResults/essentialGenes.md','w');
+    fprintf(fid,'%s\n','## False non-essential genes');
+    fprintf(fid,'%s\n',fp{:});
+    fprintf(fid,'%s\n','## False essential genes');
+    fprintf(fid,'%s\n',fn{:});
+    fprintf(fid,'%s\n','## True non-essential genes');
+    fprintf(fid,'%s\n',tp{:});
+    fprintf(fid,'%s\n','## True essential genes');
+    fprintf(fid,'%s\n',tn{:});
+    fclose(fid);
+end
 
 function model = complete_Y7(model)
     % change Y7 model medium to the Kennedy synthetic complete medium
