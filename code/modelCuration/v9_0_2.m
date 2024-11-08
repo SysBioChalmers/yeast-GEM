@@ -174,12 +174,6 @@ model = setParam(model,'lb','r_4460',0);
 model = setParam(model,'eq',{'r_1965'},0);
 
 
-% FMN is as tightly bound cofactor of LOT6. In principle quinones are required as substrate/product. Consider deleting reaction
-%  'r_0441'	'FMN reductase'	'FMN[cytoplasm] + 2 H+[cytoplasm] + NADH[cytoplasm]  -> FMNH2[cytoplasm] + NAD[cytoplasm] '	0	0	'YLR011W'
-% 'r_0442'	'FMN reductase'	'FMN[cytoplasm] + 2 H+[cytoplasm] + NADPH[cytoplasm]  -> FMNH2[cytoplasm] + NADP(+)[cytoplasm] '	0	0	'YLR011W'
-model = setParam(model,'eq',{'r_0441'},0);
-model = setParam(model,'eq',{'r_0442'},0);
-
 %=========================================================================
 %% Condition-specific gene expression. These can be enabled with scripts
 
