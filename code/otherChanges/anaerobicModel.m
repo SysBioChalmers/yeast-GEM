@@ -55,10 +55,6 @@ model = setParam(model,'eq','r_0714',0);
 % GCY1 has a positive DeltaG and is part of a transhydrogenase cycle NADH -> NADPH
 model.ub(strcmp(model.rxns,'r_0487')) = 0; 
 
-% MAE1 and IDP are likely not major mitochondrial NADPH sources. 
-model.ub(strcmp(model.rxns,'r_0719')) = 0; % malic enzyme (MAE1), mitochondrion
-model.ub(strcmp(model.rxns,'r_2131')) = 0; % isocitrate dehydrogenase (IDP1), mitochondrion
-
 % IDP2 Strongly repressed in Tai et al and not in Sjöberg.
 % 'r_0659'	'isocitrate dehydrogenase (NADP)'	'isocitrate[cytoplasm] + NADP(+)[cytoplasm]  <=> 2-oxoglutarate[cytoplasm] + carbon dioxide[cytoplasm] + NADPH[cytoplasm] '	0.014152441	0.325506132	'YLR174W'
 model = setParam(model,'eq',{'r_0659'},0);
