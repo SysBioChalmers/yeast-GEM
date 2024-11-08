@@ -106,7 +106,7 @@ model.S(find(strcmp(model.mets,'s_1198')),strcmp(model.rxns,'r_4041'))=model.S(f
 % FAD[c]	FAD		bigg.metabolite/fad;chebi/CHEBI:57692;kegg.compound/C00016;metanetx.chemical/MNXM33;sbo/SBO:0000247	C27H30N9O15P2		c	s_0687	-3
 % FADH2[c]	FADH2		bigg.metabolite/fadh2;chebi/CHEBI:58307;kegg.compound/C01352;metanetx.chemical/MNXM38;sbo/SBO:0000247	C27H33N9O15P2		c	s_0689	-2
 %'FADH2[cytoplasm] + fumarate[cytoplasm]  ⇔ FAD[cytoplasm] + H+[cytoplasm] + succinate[cytoplasm] '
-FADH2_prod=0.06;
+FADH2_prod=0.08;
 %FAD charge -3 FADH2 -2
 % FADH2
 model.S(find(strcmp(model.mets,'s_0689')),strcmp(model.rxns,'r_4041'))=FADH2_prod;
