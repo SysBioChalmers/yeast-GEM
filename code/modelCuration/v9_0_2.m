@@ -165,25 +165,17 @@ model.ub(strcmp(model.rxns,'r_4714')) = 0; %monoethyl succinate
 model = setParam(model,'lb',{'r_4723','r_4724','r_4725'},0);
 model = setParam(model,'lb','r_4460',0);
 
-% In principle only ammonium (not ammonia) can be transported tomitochondria. In the cytosol, NH4+ is the main form. 
-% Additionally, NH3 transport processes between different compartments are assumed to operate close to thermodynamic equilibrium
-% -and since no transport proteins that could translocate NHX between compartments are described in literature, passive diffusion 
-% of NH3 between vacuole and cytosol, as well as between cytosol and mitochondria, are assumed.
-% Cueto-Rojas, Hugo F., et al. "Membrane potential independent transport of NH 3 in the absence of ammonium permeases in Saccharomyces cerevisiae." BMC Systems Biology 11 (2017): 1-13. 
-%'r_1965'	'NH3 transport'	'ammonium[cytoplasm]  <=> ammonium[mitochondrion] '	0.012058369	-0.277342481	'' 
-model = setParam(model,'eq',{'r_1965'},0);
-
 
 %=========================================================================
 %% Condition-specific gene expression. These can be enabled with scripts
 
-% % Glycine cleavage only active when glycine is used as nitrogen source
-% model.ub(strcmp(model.rxns,'r_0501'))=0; %glycine cleavage, mitochondrion
-% model.lb(strcmp(model.rxns,'r_0501'))=0;
-% model.ub(strcmp(model.rxns,'r_0507'))=0; %glycine cleavage complex (lipoylprotein), mitochondrion
-% model.lb(strcmp(model.rxns,'r_0507'))=0;
-% model.ub(strcmp(model.rxns,'r_0509'))=0; %glycine cleavage complex (lipoamide), mitochondrion
-% model.lb(strcmp(model.rxns,'r_0509'))=0;
+ % Glycine cleavage only active when glycine is used as nitrogen source
+ model.ub(strcmp(model.rxns,'r_0501'))=0; %glycine cleavage, mitochondrion
+ model.lb(strcmp(model.rxns,'r_0501'))=0;
+ model.ub(strcmp(model.rxns,'r_0507'))=0; %glycine cleavage complex (lipoylprotein), mitochondrion
+ model.lb(strcmp(model.rxns,'r_0507'))=0;
+ model.ub(strcmp(model.rxns,'r_0509'))=0; %glycine cleavage complex (lipoamide), mitochondrion
+ model.lb(strcmp(model.rxns,'r_0509'))=0;
 
 % Glutamate synthase repressed in excess nitrogen
 model.ub(strcmp(model.rxns,'r_0472'))=0;
