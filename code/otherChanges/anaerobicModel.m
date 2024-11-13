@@ -46,7 +46,6 @@ model.lb(strcmp(model.rxns,'r_2189')) = -1000;    %oleate
 model.lb(strcmp(model.rxns,'r_1967')) = -1000;    %nicotinate
 model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
 
-
 %% Changes to the model that give correct phenotype for anaerobic batch growht on minimal glucose media
 
 % MDH2 Strongly repressed in Tai et al and Sjöberg et al. 2023.
