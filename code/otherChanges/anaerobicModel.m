@@ -48,7 +48,7 @@ model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
 
 %% Changes to the model that give correct phenotype for anaerobic batch growht on minimal glucose media
 
-% MDH2 Strongly repressed in Tai et al and Sjöberg et al. 2023.
+% MDH2 Strongly repressed in Tai et al and not detected in Sjöberg et al. 2023.
 model = setParam(model,'eq','r_0714',0);
 
 % GCY1 has a positive DeltaG and is part of a transhydrogenase cycle NADH -> NADPH
