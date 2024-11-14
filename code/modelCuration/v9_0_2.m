@@ -144,7 +144,7 @@ model.geneMiriams{geneIdx}.value = {'P25345'};
 % Show some metrics:
 cd(fullfile(codeDir,'modelTests'))
 disp('Run gene essentiality analysis')
-[new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
+[new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model,true);
 fprintf('Genes in model: %d\n',numel(model.genes));
 fprintf('Gene essentiality accuracy: %.4f\n', new.accuracy);
 fprintf('True non-essential genes: %d\n', numel(new.tp));
@@ -152,7 +152,7 @@ fprintf('True essential genes: %d\n', numel(new.tn));
 fprintf('False non-essential genes: %d\n', numel(new.fp));
 fprintf('False essential genes: %d\n', numel(new.fn));
 fprintf('\nRun growth analysis\n')
-R2=growth(model);
+R2=growth(model,true);
 fprintf('R2 of growth prediction: %.4f\n', R2);
 
 % Save model:

@@ -54,9 +54,7 @@ cd modelTests
 disp('Running gene essentiality analysis')
 [new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
 disp('Run growth analysis')
-new.R2=growth(model);
-
-saveas(gcf,'../../growth.png');
+new.R2=growth(model,true);
 
 cd ..
 copyfile('../README.md','backup.md')

@@ -39,7 +39,7 @@ This repository contains the current consensus genome-scale metabolic model of _
 
 | Taxonomy | Latest update | Version | Reactions | Metabolites | Genes |
 |:-------|:--------------|:------|:------|:----------|:-----|
-| _Saccharomyces cerevisiae_ | 27-Oct-2024 | develop | 4131 | 2806 | 1161 |
+| _Saccharomyces cerevisiae_ | 14-Nov-2024 | develop | 4131 | 2806 | 1161 |
 
 # Installation & usage
 
