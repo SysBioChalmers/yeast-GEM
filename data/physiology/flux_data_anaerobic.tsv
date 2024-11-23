@@ -10,11 +10,11 @@ G3P+S7P	F6p+E4P	2	2	2	Jouhten2008	r_1048	transaldolase	glyceraldehyde 3-phosphat
 PyrCyt	AcO	149	148	148.5	Jouhten2008	r_0959	pyruvate decarboxylase	H+[cytoplasm] + pyruvate[cytoplasm]  -> acetaldehyde[cytoplasm] + carbon dioxide[cytoplasm] 
 AcO	Ethanol	147	147	147	Jouhten2008	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	acetaldehyde[cytoplasm] + H+[cytoplasm] + NADH[cytoplasm]  -> ethanol[cytoplasm] + NAD[cytoplasm] 
 Ethanol	Ethanolext	147	147	147	Jouhten2008	r_1761	ethanol exchange	ethanol[extracellular]  -> 
-AcO	Acetate	2	2	2	Jouhten2008	r_0173
+AcO	Acetate	2	2	2	Jouhten2008	r_0173		
 Acetate	Acetateext	0	0	0	Jouhten2008	r_1634	acetate exchange	acetate[extracellular]  -> 
 Pep	PyrCyt	162	162	162	Jouhten2008	r_0962	pyruvate kinase	ADP[cytoplasm] + H+[cytoplasm] + phosphoenolpyruvate[cytoplasm]  -> ATP[cytoplasm] + pyruvate[cytoplasm] 
 PyrCyt	OaaCyt	5	5	5	Jouhten2008	r_0958	pyruvate carboxylase	ATP[cytoplasm] + bicarbonate[cytoplasm] + pyruvate[cytoplasm]  -> ADP[cytoplasm] + H+[cytoplasm] + oxaloacetate[cytoplasm] + phosphate[cytoplasm] 
-OaaCyt+MalMit	OaaMit+MalCyt	3	3	3	Jouhten2008	rxxS	rxxS	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
+OaaCyt+MalMit	OaaMit+MalCyt	3	3	3	Jouhten2008	r_4783	oxaloacetate/sulphate antiport, mitochondrial	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
 OaaMit+MalMit	Cit	3	3	3	Jouhten2008	r_0300	citrate synthase	acetyl-CoA[mitochondrion] + H2O[mitochondrion] + oxaloacetate[mitochondrion]  -> citrate[mitochondrion] + coenzyme A[mitochondrion] + H+[mitochondrion] 
 PyrMit	AcCCoAMit	4	4	4	Jouhten2008	r_0113	acetyl-CoA synthetase	acetate[mitochondrion] + ATP[mitochondrion] + coenzyme A[mitochondrion]  -> acetyl-CoA[mitochondrion] + AMP[mitochondrion] + diphosphate[mitochondrion] 
 PyrCyt	PyrMit	8	8	8	Jouhten2008	r_2034	pyruvate transport	H+[cytoplasm] + pyruvate[cytoplasm]  -> H+[mitochondrion] + pyruvate[mitochondrion] 
@@ -26,8 +26,8 @@ PPP				11.4	Celton2012	r_0466	glucose 6-phosphate dehydrogenase	D-glucose 6-phos
 Transketolase				5.6	Celton2012	r_1049	transketolase 1	D-xylulose 5-phosphate[cytoplasm] + ribose-5-phosphate[cytoplasm]  <=> glyceraldehyde 3-phosphate[cytoplasm] + sedoheptulose 7-phosphate[cytoplasm] 
 Pyruvate decarboxylase				164.3	Celton2012	r_0959	pyruvate decarboxylase	H+[cytoplasm] + pyruvate[cytoplasm]  -> acetaldehyde[cytoplasm] + carbon dioxide[cytoplasm] 
 Pyruvate carboxylase				4.2	Celton2012	r_0958	pyruvate carboxylase	ATP[cytoplasm] + bicarbonate[cytoplasm] + pyruvate[cytoplasm]  -> ADP[cytoplasm] + H+[cytoplasm] + oxaloacetate[cytoplasm] + phosphate[cytoplasm] 
-Import of oxaloacetate into the mitochondria				3.4	Celton2012	rxxS	rxxS	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
-Acetaldehyde dehydrogenase				2.4	Celton2012	r_0173
+Import of oxaloacetate into the mitochondria				3.4	Celton2012	r_4783	oxaloacetate/sulphate antiport, mitochondrial	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
+Acetaldehyde dehydrogenase				2.4	Celton2012	r_0173		
 Acetyl-CoA synthetase				0.3	Celton2012	r_0113	acetyl-CoA synthetase	acetate[mitochondrion] + ATP[mitochondrion] + coenzyme A[mitochondrion]  -> acetyl-CoA[mitochondrion] + AMP[mitochondrion] + diphosphate[mitochondrion] 
 Ethanol production				161.9	Celton2012	r_1761	ethanol exchange	ethanol[extracellular]  -> 
 Glycerol production				17.8	Celton2012	r_1808	glycerol exchange	glycerol[extracellular]  -> 
@@ -54,10 +54,10 @@ PyrCyt	AcCHO+CO2		21.24	157.4499629	Wasylenko2014	r_0959	pyruvate decarboxylase	
 PyrCyt	OaaCyt		0.77	5.707931801	Wasylenko2014	r_0958	pyruvate carboxylase	ATP[cytoplasm] + bicarbonate[cytoplasm] + pyruvate[cytoplasm]  -> ADP[cytoplasm] + H+[cytoplasm] + oxaloacetate[cytoplasm] + phosphate[cytoplasm] 
 PyrCyt	PyrMit		0.2	1.482579689	Wasylenko2014	r_2034	pyruvate transport	H+[cytoplasm] + pyruvate[cytoplasm]  -> H+[mitochondrion] + pyruvate[mitochondrion] 
 AcCHO	Ethanol		20.64	153.0022239	Wasylenko2014	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	acetaldehyde[cytoplasm] + H+[cytoplasm] + NADH[cytoplasm]  -> ethanol[cytoplasm] + NAD[cytoplasm] 
-AcCHO	Acetate		0.74	5.485544848	Wasylenko2014	r_0173
+AcCHO	Acetate		0.74	5.485544848	Wasylenko2014	r_0173		
 Acetate	AcCoaCyt		0.43	3.187546331	Wasylenko2014	r_0113	acetyl-CoA synthetase	acetate[mitochondrion] + ATP[mitochondrion] + coenzyme A[mitochondrion]  -> acetyl-CoA[mitochondrion] + AMP[mitochondrion] + diphosphate[mitochondrion] 
 Acetate	AcetateExt		0.31	2.297998517	Wasylenko2014	r_1634	acetate exchange	acetate[extracellular]  -> 
-OaaCyt	OaaMit		0.32	2.372127502	Wasylenko2014	rxxS	rxxS	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
+OaaCyt	OaaMit		0.32	2.372127502	Wasylenko2014	r_4783	oxaloacetate/sulphate antiport, mitochondrial	oxaloacetate[cytoplasm] + sulphate[mitochondrion]  <=> oxaloacetate[mitochondrion] + sulphate[cytoplasm] 
 MalMit	PyrMit		0.18	1.33432172	Wasylenko2014	r_0718	malic enzyme (NAD)	(S)-malate[mitochondrion] + NAD[mitochondrion]  -> carbon dioxide[mitochondrion] + NADH[mitochondrion] + pyruvate[mitochondrion] 
 MalMit	OaaMit		0.09	0.66716086	Wasylenko2014	r_0713	malate dehydrogenase	(S)-malate[mitochondrion] + NAD[mitochondrion]  <=> H+[mitochondrion] + NADH[mitochondrion] + oxaloacetate[mitochondrion] 
 Fum	MalMit		0.1	0.741289844	Wasylenko2014	r_0451	fumarase	fumarate[mitochondrion] + H2O[mitochondrion]  <=> (S)-malate[mitochondrion] 

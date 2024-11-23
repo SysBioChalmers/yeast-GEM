@@ -54,9 +54,7 @@ cd modelTests
 disp('Running gene essentiality analysis')
 [new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
 disp('Run growth analysis')
-new.R2=growth(model);
-
-saveas(gcf,'../../growth.png');
+new.R2=growth(model,true);
 
 cd ..
 copyfile('../README.md','backup.md')
@@ -134,7 +132,7 @@ for i = 1:length(diff)
                     disp(['NOTE: File ' diff_i{3} ' is changing more than expected'])
                     change = true;
                 end                
-            case {'history.md','README.md','growth.png','model/yeast-GEM.mat'}
+            case {'history.md','README.md','data/testResults/growth.png','model/yeast-GEM.mat','model/yeast-GEM.xlsx'}
             otherwise
                 disp(['NOTE: File ' diff_i{3} ' is changing'])
                 change = true;                

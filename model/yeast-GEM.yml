@@ -4,7 +4,7 @@
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
     version: ""
-    date: "2023-12-02"
+    date: "2024-11-23"
     defaultLB: "-1000"
     defaultUB: "1000"
     givenName: "Eduard"
@@ -35123,6 +35123,20 @@
           - sbo: "SBO:0000247"
           - seed.compound: "cpd01625"
       - deltaG: -63.35
+    - !!omap
+      - id: "s_4332"
+      - name: "heme a"
+      - compartment: "e"
+      - formula: "C49H55FeN4O6"
+      - charge: -3
+      - smiles: "CC1=C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(=C(C(=N5)C=C1[N-]2)C(CCC=C(C)CCC=C(C)CCC=C(C)C)O)C)C=O)CCC(=O)O)C(=C3C)CCC(=O)O)C=C.[Fe]"
+      - annotation: !!omap
+          - bigg.metabolite: "hemeA"
+          - chebi: "CHEBI:24479"
+          - kegg.compound: "C15670"
+          - metanetx.chemical: "MNXM53309"
+          - sbo: "SBO:0000247"
+      - deltaG: 10000000
 - reactions:
     - !!omap
       - id: "r_0001"
@@ -36735,7 +36749,7 @@
           - s_1212: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGL125W or YPL023C"
+      - gene_reaction_rule: "(YGL125W and YPL023C) or YGL125W"
       - eccodes: "1.5.1.20"
       - subsystem:
           - "One carbon pool by folate"
@@ -38962,8 +38976,9 @@
           - s_1203: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YMR110C or YMR169C or YMR170C"
+      - gene_reaction_rule: "YMR170C or YMR169C"
       - eccodes: "1.2.1.3"
+      - references: "10.1093/genetics/163.1.69"
       - subsystem:
           - "Beta-alanine metabolism"
       - annotation: !!omap
@@ -40205,9 +40220,10 @@
           - s_0993: -1
           - s_1273: -1
       - lower_bound: 0
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YKL106W"
       - eccodes: "2.6.1.1"
+      - references: "10.1016/j.femsyr.2004.09.008"
       - subsystem:
           - "Alanine, aspartate and glutamate metabolism"
       - annotation: !!omap
@@ -40231,6 +40247,7 @@
           - sbo: "SBO:0000176"
       - deltaG: 1.14
       - confidence_score: 3
+      - rxnNotes: "No significant mitochondrial flux"
     - !!omap
       - id: "r_0218"
       - name: "aspartate transaminase"
@@ -40386,9 +40403,7 @@
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL050C"
-      - eccodes:
-          - "2.7.7.5"
-          - "2.7.7.53"
+      - eccodes: "2.7.7.53"
       - subsystem:
           - "Purine metabolism"
       - annotation: !!omap
@@ -40412,9 +40427,7 @@
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL050C"
-      - eccodes:
-          - "2.7.7.5"
-          - "2.7.7.53"
+      - eccodes: "2.7.7.53"
       - subsystem:
           - "Purine metabolism"
       - annotation: !!omap
@@ -40946,7 +40959,7 @@
           - s_1322: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YJL130C and YJR109C and YOR303W"
+      - gene_reaction_rule: "YJL130C or (YJR109C and YOR303W)"
       - eccodes:
           - "2.1.3.2"
           - "6.3.5.5"
@@ -42330,11 +42343,12 @@
           - s_0981: 1
           - s_1234: -1
       - lower_bound: 0
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YLR303W"
       - eccodes:
           - "2.5.1.47"
           - "2.5.1.49"
+      - references: "10.1111/j.1574-6968.2003.tb11531.x"
       - subsystem:
           - "Cysteine and methionine metabolism"
       - annotation: !!omap
@@ -42354,7 +42368,7 @@
           - sbo: "SBO:0000176"
       - deltaG: 10000000
       - confidence_score: 3
-      - rxnNotes: "model.S(601,277) curated (PR #222)"
+      - rxnNotes: "Regulatory role only"
     - !!omap
       - id: "r_0313"
       - name: "cysteinyl-tRNA synthetase"
@@ -44714,7 +44728,7 @@
           - s_0999: -1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YMR084W or YKL104C"
+      - gene_reaction_rule: "YKL104C"
       - eccodes: "2.6.1.16"
       - subsystem:
           - "Alanine, aspartate and glutamate metabolism"
@@ -46641,37 +46655,6 @@
       - deltaG: -9.81
       - confidence_score: 2
       - rxnNotes: "alternative MetaNetX ID MNXR100659 (PR #220)"
-    - !!omap
-      - id: "r_0559"
-      - name: "hydroxymethylglutaryl CoA synthase"
-      - metabolites: !!omap
-          - s_0218: 1
-          - s_0367: -1
-          - s_0373: -1
-          - s_0529: 1
-          - s_0794: 1
-          - s_0803: -1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YML126C"
-      - eccodes: "2.3.3.10"
-      - subsystem:
-          - "Terpenoid backbone biosynthesis"
-      - annotation: !!omap
-          - bigg.reaction: "HMGCOAS"
-          - kegg.pathway:
-              - "sce00072"
-              - "sce00280"
-              - "sce00650"
-              - "sce00900"
-              - "sce01110"
-              - "sce01130"
-          - kegg.reaction: "R01978"
-          - metanetx.reaction: "MNXR107257"
-          - sbo: "SBO:0000176"
-      - deltaG: -8.4
-      - confidence_score: 2
-      - rxnNotes: "alternative MetaNetX ID MNXR100660 (PR #220)"
     - !!omap
       - id: "r_0560"
       - name: "hydroxymethylglutaryl CoA synthase"
@@ -51978,7 +51961,7 @@
           - s_0981: -1
           - s_1241: -1
           - s_1458: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YLL058W or YML082W or YAL012W"
       - eccodes: "4.4.1.1"
@@ -55466,17 +55449,15 @@
       - id: "r_1026"
       - name: "sulfate adenylyltransferase (ADP)"
       - metabolites: !!omap
-          - s_0298: 1
-          - s_0394: -1
-          - s_0794: -1
-          - s_1322: 1
-          - s_1467: -1
+          - s_0298: -1
+          - s_0394: 1
+          - s_0794: 1
+          - s_1322: -1
+          - s_1467: 1
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL050C"
-      - eccodes:
-          - "2.7.7.5"
-          - "2.7.7.53"
+      - eccodes: "2.7.7.5"
       - subsystem:
           - "Sulfur metabolism"
       - annotation: !!omap
@@ -67250,58 +67231,6 @@
       - deltaG: 10000000
       - confidence_score: 0
     - !!omap
-      - id: "r_2070"
-      - name: "thiazole phosphate synthesis (ribose 5-phosphate)"
-      - metabolites: !!omap
-          - s_0293: 1
-          - s_0362: 1
-          - s_0419: 1
-          - s_0456: 1
-          - s_0734: 1
-          - s_0794: -1
-          - s_0803: 3
-          - s_0981: -1
-          - s_1003: -1
-          - s_1233: -1
-          - s_1399: 1
-          - s_1408: -1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - subsystem:
-          - "Thiamine metabolism"
-      - annotation: !!omap
-          - bigg.reaction: "THZPSN2_SC"
-          - metanetx.reaction: "MNXR104860"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 0
-    - !!omap
-      - id: "r_2071"
-      - name: "thiazole phosphate synthesis (xylulose 5-phosphate)"
-      - metabolites: !!omap
-          - s_0293: 1
-          - s_0362: 1
-          - s_0419: 1
-          - s_0456: 1
-          - s_0581: -1
-          - s_0734: 1
-          - s_0794: -1
-          - s_0803: 3
-          - s_0981: -1
-          - s_1003: -1
-          - s_1233: -1
-          - s_1399: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - subsystem:
-          - "Thiamine metabolism"
-      - annotation: !!omap
-          - bigg.reaction: "THZPSN1_SC"
-          - metanetx.reaction: "MNXR104859"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 0
-    - !!omap
       - id: "r_2072"
       - name: "threonine transport"
       - metabolites: !!omap
@@ -76463,10 +76392,11 @@
           - s_3184: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -76488,10 +76418,11 @@
           - s_3186: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -76513,10 +76444,11 @@
           - s_3188: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -76538,10 +76470,11 @@
           - s_3190: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -76563,10 +76496,11 @@
           - s_3192: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -76588,10 +76522,11 @@
           - s_3194: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -76613,10 +76548,11 @@
           - s_3196: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -76638,10 +76574,11 @@
           - s_3198: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YGR157W or YJR073C"
+      - gene_reaction_rule: "YGR157W"
       - eccodes:
           - "2.1.1.17"
           - "2.1.1.71"
+      - references: "10.1016/0005-2760(90)90145-N"
       - subsystem:
           - "Glycerophospholipid metabolism"
       - annotation: !!omap
@@ -106687,11 +106624,12 @@
       - id: "r_4048"
       - name: "carbohydrate pseudoreaction"
       - metabolites: !!omap
-          - s_0001: -0.748514964334505
-          - s_0004: -0.25009165448919
-          - s_0773: -0.361414527575564
-          - s_1107: -0.710939625370425
-          - s_1520: -0.138275712087142
+          - s_0001: -0.73914
+          - s_0004: -0.24696
+          - s_0509: -0.02361
+          - s_0773: -0.35689
+          - s_1107: -0.70204
+          - s_1520: -0.13655
           - s_3718: 1
       - lower_bound: 0
       - upper_bound: 1000
@@ -116703,6 +116641,7 @@
       - metabolites: !!omap
           - s_0529: -0.000190000006114133
           - s_0687: -9.99999974737875e-06
+          - s_0750: -1e-06
           - s_1198: -0.00264999992214143
           - s_1203: -0.000150000007124618
           - s_1207: -0.000569999974686652
@@ -118494,7 +118433,7 @@
           - s_1616: -1
           - s_1620: 1
           - s_4264: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YOR251C"
       - eccodes: "2.8.1.2"
@@ -119913,6 +119852,77 @@
           - metanetx.reaction: "MNXR106405"
           - sbo: "SBO:0000176"
       - rxnNotes: "New rxns from databases curation (PR #304)"
+    - !!omap
+      - id: "r_4779"
+      - name: "heme a transport, cytoplasm-extracellular"
+      - metabolites: !!omap
+          - s_3714: -1
+          - s_4332: 1
+      - lower_bound: -1000
+      - upper_bound: 1000
+      - subsystem:
+          - "Transport between c and e"
+      - annotation: !!omap
+          - sbo: "SBO:0000655"
+      - deltaG: 0
+      - confidence_score: 1
+    - !!omap
+      - id: "r_4780"
+      - name: "heme a exchange"
+      - metabolites: !!omap
+          - s_4332: -1
+      - lower_bound: 0
+      - upper_bound: 1000
+      - subsystem:
+          - "Exchange reaction"
+      - annotation: !!omap
+          - sbo: "SBO:0000627"
+    - !!omap
+      - id: "r_4781"
+      - name: "HET-P synthase (thiazole synthase)"
+      - metabolites: !!omap
+          - s_0293: 1
+          - s_0423: 1
+          - s_0456: 1
+          - s_0794: 1
+          - s_0803: -1
+          - s_3910: -1
+      - lower_bound: 0
+      - upper_bound: 1000
+      - gene_reaction_rule: "YGR144W"
+      - references: "10.1021/ja067606t"
+      - subsystem:
+          - "Thiamine metabolism"
+      - annotation: !!omap
+          - kegg.pathway: "sce00730"
+          - kegg.reaction: "R10685"
+          - metanetx.reaction: "MNXR139808"
+          - sbo: "SBO:0000176"
+      - confidence_score: 3
+    - !!omap
+      - id: "r_4782"
+      - name: "adenylated thiazole synthase"
+      - metabolites: !!omap
+          - s_0794: 1
+          - s_0803: 3
+          - s_0841: -1
+          - s_1003: -1
+          - s_1198: -1
+          - s_1216: 1
+          - s_3910: 1
+      - lower_bound: 0
+      - upper_bound: 1000
+      - gene_reaction_rule: "YGR144W"
+      - eccodes: "2.4.2.60"
+      - references: "10.1021/ja067606t"
+      - subsystem:
+          - "Thiamine metabolism"
+      - annotation: !!omap
+          - kegg.pathway: "sce00730"
+          - kegg.reaction: "R10711"
+          - metanetx.reaction: "MNXR139812"
+          - sbo: "SBO:0000176"
+      - confidence_score: 3
 - genes:
     - !!omap
       - id: "Q0045"
@@ -120611,7 +120621,7 @@
       - id: "YCR024C"
       - name: "SLM5"
       - annotation: !!omap
-          - uniprot: "P32903"
+          - uniprot: "P25345"
     - !!omap
       - id: "YCR024C-A"
       - name: "PMP1"
@@ -124230,11 +124240,6 @@
       - name: "ADH3"
       - annotation: !!omap
           - uniprot: "P07246"
-    - !!omap
-      - id: "YMR084W"
-      - name: "YMR084W"
-      - annotation: !!omap
-          - uniprot: "A2P2R3"
     - !!omap
       - id: "YMR087W"
       - name: "YMR087W"

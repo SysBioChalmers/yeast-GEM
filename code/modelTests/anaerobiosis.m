@@ -1,8 +1,7 @@
 clear; close all
 % Load the model and apply the corrections for *all* models
 cd('../modelCuration/')
-% run v_9.0.2.m;
-v9_0_2;
+v9_1_0;
 
 % res=essentialGenes(model);
 % res
