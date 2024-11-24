@@ -1,4 +1,4 @@
-function model = anaerobicModel(model,recalBiomassMW)
+function model = anaerobicModel(model)
 % anaerobicModel
 %   Constrains yeast-GEM to anaerobic conditions. By default yeast-GEM aims
 %   to represent aerobic metabolism (particulary with glucose as carbon
@@ -10,25 +10,13 @@ function model = anaerobicModel(model,recalBiomassMW)
 %
 % Input:
 %   model           model structure, which is aerobic by default
-%   recalBiomassMW  logical, should the biomass molecular weight be
-%                   recalculated before fitting it to 1 g/gDCW. This option
-%                   requires COBRA Toolbox to be installed. (optional,
-%                   default false, a precalculated value will instead be
-%                   used)
 %
 % Output:
 %   model           model structure, modified to match anaerobic conditions
 %
 % Usage: model = anaerobicModel(model)
 
-if nargin<2
-    recalBiomassMW = false;
-end
 
-GAM   = 55.2; % Remains unchanged, line can be removed
-NGAM  = 1; % 0.7 in aerobic, should it not remain unchanged?
-
-model = changeGAM(model,GAM,NGAM);
 
 %% Set environmental conditions
 % Remove heme a from the cofactor pseudoreaction (part of biomass)
@@ -90,15 +78,4 @@ metIdx = getIndexes(model,{'s_0689','s_0687','s_0794'},'mets'); % FADH2[c], FAD[
 
 currCoeff = full(model.S(metIdx,bioIdx)); % Gather the current coefficients
 model.S(metIdx,bioIdx) = currCoeff + [FADH2_prod; -FADH2_prod; -2*FADH2_prod];
-
-%% Adjust Mw of biomass to 1000
-% This function requires COBRA Toolbox to be installed.
-if recalBiomassMW
-    Biomass_MW = computeMetFormulae(model,'metMwRange','s_0450','fillMets','none','printLevel',0);
-else
-    % Default value, calculate for yeast-GEM 9.1.0
-    Biomass_MW = [954.343535827233, 954.343535827305];
-end
-model.S(:,bioIdx) = model.S(:,bioIdx)*1000/mean(Biomass_MW);
-model.S(strcmp(model.mets,'s_0450'),bioIdx) = 1;
 end
