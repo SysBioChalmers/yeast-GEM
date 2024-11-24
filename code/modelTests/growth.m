@@ -53,8 +53,8 @@ ylim([0 lim])
 x=0:0.001:lim;
 y = x;
 plot(x,y,'--','MarkerSize',6,'Color',[64,64,64]/256)
-xlabel('Experimental growth rate [1/h]','FontSize',14,'FontName','Helvetica')
-ylabel('In silico growth rate [1/h]','FontSize',14,'FontName','Helvetica')
+xlabel('In silico growth rate [1/h]','FontSize',14,'FontName','Helvetica')
+ylabel('Experimental growth rate [1/h]','FontSize',14,'FontName','Helvetica')
 legend(b,'N-limited aerobic','C-limited aerobic','C-limited anaerobic','N-limited anaerobic','Location','northwest')
 
 % meanerror = sqrt(sum(([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)]-[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]).^2)/32)/sqrt(32);

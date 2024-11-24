@@ -26,7 +26,6 @@ if nargin<2
 end
 
 GAM   = 55.2; % Remains unchanged, line can be removed
-P     = 0.46;  %Data from Nissen et al. 1997
 NGAM  = 1; % 0.7 in aerobic, should it not remain unchanged?
 
 model = changeGAM(model,GAM,NGAM);
