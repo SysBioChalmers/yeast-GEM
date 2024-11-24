@@ -1,5 +1,6 @@
 clear; close all
 % Load the model and apply the corrections for *all* models
+model = readYAMLmodel('../../model/yeast-GEM.yml');
 cd('../modelCuration/')
 v9_1_0;
 
@@ -9,10 +10,9 @@ v9_1_0;
 %% Run growth tests
 R2 = growth(model);
 
-NLIM=0;
 %% Convert to anaerobic
 cd('../otherChanges/')
-model = anaerobicModel(model,0);
+model = anaerobicModel(model);
 
 cd('../modelTests/');
 %% flux predictions

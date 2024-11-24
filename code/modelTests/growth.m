@@ -89,13 +89,11 @@ if strcmp(mode2,'N')
     model_origin = scaleBioMass(model_origin,'protein',0.289,'',false);
     model_origin = scaleBioMass(model_origin,'lipid',0.048,'',false);
     model_origin = scaleBioMass(model_origin,'RNA',0.077,'carbohydrate',false);
-    NLIM=1;
-else
-    NLIM=0;
+
 end
 
 if mode1 == 2
-    model_origin = anaerobicModel(model_origin,NLIM);
+    model_origin = anaerobicModel(model_origin);
 end
 for i = 1:length(exp_data(:,1))
     model_test= model_origin;

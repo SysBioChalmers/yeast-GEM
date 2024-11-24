@@ -9,7 +9,7 @@ function model = anaerobicModel(model)
 %   This function was updated as part of release v9.1.0.
 %
 % Input:
-%   model           model structure, which is aerobic by default
+%   model           yeast-GEM model structure, which is aerobic by default
 %
 % Output:
 %   model           model structure, modified to match anaerobic conditions
@@ -69,7 +69,7 @@ model = setParam(model,'ub','r_0487',0);
 % (2023) 10.1016/j.ymben.2024.01.007).
 model = setParam(model,'eq',{'r_0659'},0);
 
-%% Fumarate reductase is required for to recycle FADH2 dereived from
+%% Fumarate reductase is required for to recycle FADH2 derived from
 % disulphide bound formation in anaerobic conditions through Ero1 (Camarasa
 % et al (2007) 10.1002/yea.1467; Kim et al (2018) 10.1038/s41467-018-07285-9). 
 

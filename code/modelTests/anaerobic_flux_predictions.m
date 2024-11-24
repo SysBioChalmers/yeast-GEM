@@ -1,6 +1,6 @@
 function R2=anaerobic_flux_predictions(model)
 
-fluxTable=  readtable('../../data/physiology/flux_data_anaerobic.tsv');
+fluxTable = readtable('../../data/physiology/flux_data_anaerobic.tsv','FileType','text');
 fluxTable = table2cell(fluxTable);
 vals_flux=fluxTable;
 text_flux=fluxTable;
