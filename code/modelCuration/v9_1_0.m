@@ -146,6 +146,10 @@ model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0775'))=-1;
 % This section focuses on individual reactions that have the wrong
 % reversibility/direction/cofactor or should be completley removed
 
+% ATP The mitochondrial ATP synthase (r_0226) needs to run in reverse 
+% in anaerobic conditions, especially for biosynthesis.
+model.lb(strcmp(model.rxns,'r_0226')) = -1000;
+
 % rename r_0227, it is the plasma membrane ATPase, not a cytosolic ATPase
 model.rxnNames(strcmp(model.rxns,'r_0227')) = {'ATPase, plasma membrane'};
 
