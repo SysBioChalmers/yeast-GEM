@@ -10,11 +10,9 @@ function model = anaerobicModel(model)
 
 %1st change: Refit GAM and NGAM to exp. data, change biomass composition
 GAM   = 30.49;  %Data from Nissen et al. 1997
-P     = 0.461;  %Data from Nissen et al. 1997
 NGAM  = 0;      %Refit done in Jouthen et al. 2012
 
 model = changeGAM(model,GAM,NGAM);
-model = scaleBioMass(model,'protein',P,'carbohydrate',false);
 
 %2nd change: Removes the requirement of heme a, NAD(PH), coenzyme A in the biomass equation
 %            (not used under anaerobic conditions)
