@@ -23,16 +23,19 @@ if nargin < 2
     dispOutput = true;
 end
 
+funcDir = dbstack('-completenames');
+funcDir = regexprep(funcDir(1).file,[funcDir(1).name '\.m'],'')
+
 %Load original biomass component MWs:
 %TODO: compute MW automatically from chemical formulas (check that all components have them first)
-fid = fopen('../../data/physiology/biomassComposition_Forster2003.tsv');
+fid = fopen(fullfile(funcDir,'../../data/physiology/biomassComposition_Forster2003.tsv'));
 Forster2003 = textscan(fid,'%s %s %f32 %f32 %s','Delimiter','\t','HeaderLines',1);
 data.mets   = Forster2003{1};
 data.MWs    = double(Forster2003{4});
 fclose(fid);
 
 %load additional cofactor/ion MWs:
-fid = fopen('../../data/physiology/biomassComposition_Cofactor_Ion.tsv');
+fid = fopen(fullfile(funcDir,'../../data/physiology/biomassComposition_Cofactor_Ion.tsv'));
 CofactorsIons = textscan(fid,'%s %s %f32 %f32 %s %s','Delimiter','\t','HeaderLines',1);
 data_new.mets = CofactorsIons{1};
 data_new.MWs  = double(CofactorsIons{4});
