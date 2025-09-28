@@ -33,6 +33,8 @@ model.lb(strcmp(model.rxns,'r_2106')) = -1000;    %zymosterol
 model.lb(strcmp(model.rxns,'r_2134')) = -1000;    %14-demethyllanosterol
 model.lb(strcmp(model.rxns,'r_1994')) = -1000;    %palmitoleate
 model.lb(strcmp(model.rxns,'r_2189')) = -1000;    %oleate
+% NEW: remove this due to NADH recycling to ergosterol
+model.lb(strcmp(model.rxns,'r_2137')) = 0;    %ergosta-5,7,22,24(28)-tetraen-3beta-ol
 % Enable uptake of vitamins for NAD(P)H and CoA synthesis
 model.lb(strcmp(model.rxns,'r_1967')) = -1000;    %nicotinate
 model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
@@ -46,7 +48,7 @@ metIdx = getIndexes(model,{'s_1212','s_1207','s_0794'},'mets'); % NADPH[c], NADP
 bioIdx = getIndexes(model,'r_4041','rxns');
 
 currCoeff = full(model.S(metIdx,bioIdx)); % Gather the current coefficients
-model.S(metIdx,bioIdx) = currCoeff + [-DR; +DR; +DR];
+model.S(metIdx,bioIdx) = currCoeff + [-DR; +DR; -DR];
 
 %% Curations that are required to reach correct metabolic phenotypes during
 % anaerobic batch growth on minimal glucose media

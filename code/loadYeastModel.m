@@ -14,19 +14,19 @@ function model = loadYeastModel(filename)
 %
 %   Usage: model = loadYeastModel(filename)
 
+funcDir = dbstack('-completenames');
+funcDir = regexprep(funcDir(1).file,[funcDir(1).name '\.m'],'');
+
 if nargin<1 || isempty(filename)
-    filename = '../model/yeast-GEM.yml';
+    filename = fullfile(funcDir,'..','model','yeast-GEM.yml');
 end
 
-scriptFolder = fileparts(which(mfilename));
-currentDir = cd(scriptFolder);
-cd(currentDir)
 if endsWith(filename,{'.yml','.yaml'})
     model = readYAMLmodel(filename);
 else
     if ~(exist('ravenCobraWrapper.m','file')==2)
         if exist('readCbModel.m','file')==2
-            warning(['RAVEN cannot be found. yeast-GEM will instead be loaded in '...
+            warning(['RAVEN cannot be found. Attempt to load yeast-GEM in '...
                 'COBRA format.\n\nNote that it is recommended to have RAVEN '...
                 'installed, especially when curating yeast-GEM (see README.md for '...
                 'more info).%s'],'')
@@ -38,7 +38,8 @@ else
     else
         model = importModel(filename);
     end
-    cd missingFields
+    currentDir = pwd;
+    cd(fullfile(funcDir,'missingFields'));
     model = loadDeltaG(model);
     cd(currentDir)
 end

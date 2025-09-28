@@ -78,8 +78,7 @@ end
 % This section balances reactions and ensures that a correct molecular
 % weight can be calculated for the biomass
 
-% Set the charge of all biomass components to 0, should be applied to *all*
-% models, not just anaerobic.
+% Set the charge of all biomass components to 0
 model.metCharges(strcmp(model.mets,'s_3717'))=0; % Protein
 model.metCharges(strcmp(model.mets,'s_3718'))=0; % Carbohydrate
 model.metCharges(strcmp(model.mets,'s_3719'))=0; % RNA
@@ -89,8 +88,7 @@ model.metCharges(strcmp(model.mets,'s_3747'))=0; % Lipid chain
 model.metCharges(strcmp(model.mets,'s_4205'))=0; % Cofactor
 model.metCharges(strcmp(model.mets,'s_4206'))=0; % Ion
 
-% Make the charge of K and Na 1+, should be applied to *all* models, not
-% just anaerobic.
+% Make the charge of K and Na 1+
 model.metCharges(strcmp(model.mets,'s_1373'))=1;
 model.metCharges(strcmp(model.mets,'s_1374'))=1;
 model.metCharges(strcmp(model.mets,'s_3776'))=1;
@@ -99,11 +97,32 @@ model.metCharges(strcmp(model.mets,'s_1438'))=1;
 model.metCharges(strcmp(model.mets,'s_3775'))=1;
 
 % Balance the charge of all biomass component pseudo reactions by adding the required amount of H+
-model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4047')) = -sum(model.S(:,strcmp(model.rxns,'r_4047')).*model.metCharges,'omitnan'); % Protein
-model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4049')) = -sum(model.S(:,strcmp(model.rxns,'r_4049')).*model.metCharges,'omitnan'); % RNA
-model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4050')) = -sum(model.S(:,strcmp(model.rxns,'r_4050')).*model.metCharges,'omitnan'); % DNA
-model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4598')) = -sum(model.S(:,strcmp(model.rxns,'r_4598')).*model.metCharges,'omitnan'); % Cofactor
-model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4599')) = -sum(model.S(:,strcmp(model.rxns,'r_4599')).*model.metCharges,'omitnan'); % Ion
+Hidx        = find(strcmp(model.mets,'s_0794'));
+% Protein
+rxnIdx      = strcmp(model.rxns,'r_4047');
+metsStoch   = model.S(:,rxnIdx);
+metsStoch(Hidx) = 0;
+model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
+% RNA
+rxnIdx      = strcmp(model.rxns,'r_4049');
+metsStoch   = model.S(:,rxnIdx);
+metsStoch(Hidx) = 0;
+model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
+% DNA
+rxnIdx      = strcmp(model.rxns,'r_4050');
+metsStoch   = model.S(:,rxnIdx);
+metsStoch(Hidx) = 0;
+model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
+% Cofactor
+rxnIdx      = strcmp(model.rxns,'r_4598');
+metsStoch   = model.S(:,rxnIdx);
+metsStoch(Hidx) = 0;
+model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
+% Ion
+rxnIdx      = strcmp(model.rxns,'r_4599');
+metsStoch   = model.S(:,rxnIdx);
+metsStoch(Hidx) = 0;
+model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
 
 % Special case for SLIME rxns
 model.metCharges(find(contains(model.metNames,'chain')+contains(model.metNames,'backbone'))) = 0;
@@ -146,24 +165,22 @@ model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0775'))=-1;
 % This section focuses on individual reactions that have the wrong
 % reversibility/direction/cofactor or should be completley removed
 
-% ATP The mitochondrial ATP synthase (r_0226) needs to run in reverse 
-% in anaerobic conditions, especially for biosynthesis.
-model.lb(strcmp(model.rxns,'r_0226')) = -1000;
+% The mitochondrial ATP synthase is able to run in reverse, which occurs
+% in anaerobic conditions
+model = setParam(model,'lb','r_0226',-1000);
 
-% rename r_0227, it is the plasma membrane ATPase, not a cytosolic ATPase
+% Rename r_0227, it is the plasma membrane ATPase, not a cytosolic ATPase
 model.rxnNames(strcmp(model.rxns,'r_0227')) = {'ATPase, plasma membrane'};
 
-% make sure both formate-THF ligases are reversible.
-model.lb(strcmp(model.rxns,'r_0446')) = -1000;
+% Make sure both formate-THF ligases are reversible (r_0447 already is).
+model = setParam(model,'lb','r_0446',-1000);
 
-% ADE3 and MIS1, methylenetetrahydrofolate dehydrogenase (NADP+) [EC 1.5.1.5]
-% make irreversible
-model.ub(strcmp(model.rxns,'r_0732')) = 0;
-model.ub(strcmp(model.rxns,'r_0733')) = 0;
+% Make methylenetetrahydrofolate dehydrogenases ADE3 and MIS1 irreversible
+model = setParam(model,'ub',{'r_0732','r_0733'},0);
 
 % There is no evidence for this PFK1 side reaction in yeast. Consider
 % removing the reaction completley
-model.ub(strcmp(model.rxns,'r_0887')) = 0;
+model = setParam(model,'eq','r_0887',0);
 
 % TYR1 incorrectly annotated as using NAD, should be NADP
 model.S(find(strcmp(model.mets,'s_1212')),strcmp(model.rxns,'r_0939'))=0; %NADPH
@@ -183,19 +200,19 @@ model = setParam(model,'lb','r_4460',0);
 %% ========================================================================
 % Condition-specific gene expression. These can be enabled with scripts
 % Glycine cleavage only active when glycine is used as nitrogen source
-model.ub(strcmp(model.rxns,'r_0501'))=0; %glycine cleavage, mitochondrion
-model.lb(strcmp(model.rxns,'r_0501'))=0;
-model.ub(strcmp(model.rxns,'r_0507'))=0; %glycine cleavage complex (lipoylprotein), mitochondrion
-model.lb(strcmp(model.rxns,'r_0507'))=0;
-model.ub(strcmp(model.rxns,'r_0509'))=0; %glycine cleavage complex (lipoamide), mitochondrion
-model.lb(strcmp(model.rxns,'r_0509'))=0;
+model = setParam(model,'eq','r_0501',0); %glycine cleavage, mitochondrion
+model = setParam(model,'eq','r_0507',0); %glycine cleavage complex (lipoylprotein), mitochondrion
+model = setParam(model,'eq','r_0509',0); %glycine cleavage complex (lipoamide), mitochondrion
+model.rxnNotes(ismember(model.rxns,{'r_0501','r_0507','r_0509'})) = {'Only active if glycine is nitrogen source'};
 
 % Glutamate synthase repressed in excess nitrogen
-model.ub(strcmp(model.rxns,'r_0472'))=0;
+model = setParam(model,'eq','r_0472',0);
+model.rxnNotes(ismember(model.rxns,{'r_0472'})) = {'Only active during nitrogen limitation'};
 
-% The carnitine shuttle requires exogeneous carnitine
-% r_0252	'carnitine O-acetyltransferase'	0	1000	'(R)-carnitine[cytoplasm] + acetyl-CoA[cytoplasm]  -> coenzyme A[cytoplasm] + O-acetylcarnitine[cytoplasm] '	0	0	0	0	0.167350072
+% The carnitine shuttle requires exogeneous carnitine, which is absent from
+% defined medium.
 model = setParam(model,'eq',{'r_0252'},0);
+model.rxnNotes(ismember(model.rxns,{'r_0252'})) = {'Only active if growth medium contains carnitine'};
 
 %% ========================================================================
 

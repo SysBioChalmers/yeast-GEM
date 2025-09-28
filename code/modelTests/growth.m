@@ -6,72 +6,69 @@ function R2 = growth(model_origin,writeOutput)
 % when simulate anaerobic condtion, heme NADH NADP NADPH NAD were rescaled
 % to be 0.
 
+funcDir = dbstack('-completenames');
+funcDir = regexprep(funcDir(1).file,[funcDir(1).name '\.m'],'');
+
 if nargin<1
-    cd ..
     model_origin = loadYeastModel;
-    cd otherChanges/
-else
-    cd ../otherChanges/
 end
 if nargin<2
     writeOutput = false;
 end
 
 %Load chemostat data:
-fid = fopen('../../data/physiology/chemostatData_Tobias2013.tsv','r');
+fid = fopen(fullfile(funcDir,'..','..','data','physiology','chemostatData_Tobias2013.tsv'),'r');
 exp_data = textscan(fid,'%f32 %f32 %f32  %f32','Delimiter','\t','HeaderLines',1);
 exp_data = [exp_data{1} exp_data{2} exp_data{3} exp_data{4}];
 fclose(fid);
-%'N-limited aerboic'
 exp_data1 = exp_data(1:9,:);
-%'C-limited aerobic'
 exp_data2 = exp_data(10:20,:);
-%'C-limited anaerobic'
 exp_data3 = exp_data(21:26,:);
-%'N-limited anaerobic'
 exp_data4 = exp_data(27:32,:);
 
-mod_data1 = simulateChemostat(model_origin,exp_data1,1,'N');
-mod_data2 = simulateChemostat(model_origin,exp_data2,1,'C');
-mod_data3 = simulateChemostat(model_origin,exp_data3,2,'C');
-mod_data4 = simulateChemostat(model_origin,exp_data4,2,'N');
+%'N-limited aerobic'
+mod_data(1:9,:) = simulateChemostat(model_origin,exp_data(1:9,:),1,'N');
+%'C-limited aerobic'
+mod_data(10:20,:) = simulateChemostat(model_origin,exp_data(10:20,:),1,'C');
+%'C-limited anaerobic'
+mod_data(21:26,:) = simulateChemostat(model_origin,exp_data(21:26,:),2,'C');
+%'N-limited anaerobic'
+mod_data(27:32,:) = simulateChemostat(model_origin,exp_data(27:32,:),2,'N');
 
-cd ../modelTests/
 % plot the figure
 figure
 hold on
 cols = [215,25,28;253,174,97;171,217,233;44,123,182]/256;
-b(1) = plot(exp_data1(:,4),mod_data1(:,4),'o','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(2,:));
-b(2) = plot(exp_data2(:,4),mod_data2(:,4),'s','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(1,:));
-b(3) = plot(exp_data3(:,4),mod_data3(:,4),'d','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(3,:));
-b(4) = plot(exp_data4(:,4),mod_data4(:,4),'>','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(4,:));
-exp_max = max(exp_data2(:,4));
-mod_max = max(mod_data1(:,4));
+b(1) = plot(exp_data(1:9,4),mod_data(1:9,4),'o','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(2,:));
+b(2) = plot(exp_data(10:20,4),mod_data(10:20,4),'s','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(1,:));
+b(3) = plot(exp_data(21:26,4),mod_data(21:26,4),'d','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(3,:));
+b(4) = plot(exp_data(27:32,4),mod_data(27:32,4),'>','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(4,:));
+exp_max = max(exp_data(:,4));
+mod_max = max(mod_data(:,4));
 lim = max(exp_max,mod_max)+0.05;
 xlim([0 lim])
 ylim([0 lim])
 x=0:0.001:lim;
 y = x;
 plot(x,y,'--','MarkerSize',6,'Color',[64,64,64]/256)
-xlabel('In silico growth rate [1/h]','FontSize',14,'FontName','Helvetica')
-ylabel('Experimental growth rate [1/h]','FontSize',14,'FontName','Helvetica')
+xlabel('Experimental growth rate [1/h]','FontSize',14,'FontName','Helvetica')
+ylabel('In silico growth rate [1/h]','FontSize',14,'FontName','Helvetica')
 legend(b,'N-limited aerobic','C-limited aerobic','C-limited anaerobic','N-limited anaerobic','Location','northwest')
 
 % meanerror = sqrt(sum(([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)]-[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]).^2)/32)/sqrt(32);
 % text(0.25,0.1,['SEM:',num2str(meanerror)])
 hold off
-R2=corrcoef([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)],[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]);
+R2=corrcoef(exp_data(:,4),mod_data(:,4));
 R2=R2(2)^2;
 
 if writeOutput
-    saveas(gcf,'../../data/testResults/growth.png');
-    fid = fopen('../../data/testResults/growth.md','w');
+    saveas(gcf,fullfile(funcDir,'..','..','data','testResults','growth.png'));
+    fid = fopen(fullfile(funcDir,'..','..','data','testResults','growth.md'),'w');
     fprintf(fid,'%s\n','## R2 of growth rate prediction');
     fprintf(fid,'%.4g\n\n',R2);
     fprintf(fid,'%s\n','![Growth curve](growth.png)');
     fclose(fid);
 end
-
 end
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
