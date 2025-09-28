@@ -86,7 +86,7 @@ if strcmp(mode2,'N')
     model_origin = scaleBioMass(model_origin,'protein',0.289,'',false);
     model_origin = scaleBioMass(model_origin,'lipid',0.048,'',false);
     model_origin = scaleBioMass(model_origin,'RNA',0.077,'carbohydrate',false);
-
+    model_origin = setParam(model_origin,'ub','r_0472',1000); %Glutamate synthase repressed in excess nitrogen
 end
 
 if mode1 == 2

@@ -58,21 +58,21 @@ fprintf('Identifier of new reaction "%s": %s\n', newRxn.rxnNames{1}, model.rxns{
 %% ========================================================================
 % Look for all proton symport/antiport reactions and make sure that they
 % only enter the cell.
-HcytIdx = getIndexes(model,'s_0794','mets'); % H+[c]
-HextIdx = getIndexes(model,'s_0796','mets'); % H+[e]
-
-symporterIDs = find(model.S(HcytIdx,:) & model.S(HextIdx,:));
-for i = 1:length(symporterIDs)
-    if strcmp(model.rxns(symporterIDs(i)), 'r_1258')
-        % Ignore the sodium transporter, without it, the model does not work
-        continue
-    end
-    if model.S(HextIdx,symporterIDs(i))<0
-        model.lb(symporterIDs(i))=0;
-    else
-        model.ub(symporterIDs(i))=0;
-    end
-end
+% HcytIdx = getIndexes(model,'s_0794','mets'); % H+[c]
+% HextIdx = getIndexes(model,'s_0796','mets'); % H+[e]
+% 
+% symporterIDs = find(model.S(HcytIdx,:) & model.S(HextIdx,:));
+% for i = 1:length(symporterIDs)
+%     if strcmp(model.rxns(symporterIDs(i)), 'r_1258')
+%         % Ignore the sodium transporter, without it, the model does not work
+%         continue
+%     end
+%     if model.S(HextIdx,symporterIDs(i))<0 % If defined H+[e] => H+[c]
+%         model.lb(symporterIDs(i))=0;
+%     else % If defined H+[c] => H+[e]
+%         model.ub(symporterIDs(i))=0;
+%     end
+% end
 
 %% ========================================================================
 % This section balances reactions and ensures that a correct molecular
@@ -97,32 +97,11 @@ model.metCharges(strcmp(model.mets,'s_1438'))=1;
 model.metCharges(strcmp(model.mets,'s_3775'))=1;
 
 % Balance the charge of all biomass component pseudo reactions by adding the required amount of H+
-Hidx        = find(strcmp(model.mets,'s_0794'));
-% Protein
-rxnIdx      = strcmp(model.rxns,'r_4047');
-metsStoch   = model.S(:,rxnIdx);
-metsStoch(Hidx) = 0;
-model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
-% RNA
-rxnIdx      = strcmp(model.rxns,'r_4049');
-metsStoch   = model.S(:,rxnIdx);
-metsStoch(Hidx) = 0;
-model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
-% DNA
-rxnIdx      = strcmp(model.rxns,'r_4050');
-metsStoch   = model.S(:,rxnIdx);
-metsStoch(Hidx) = 0;
-model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
-% Cofactor
-rxnIdx      = strcmp(model.rxns,'r_4598');
-metsStoch   = model.S(:,rxnIdx);
-metsStoch(Hidx) = 0;
-model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
-% Ion
-rxnIdx      = strcmp(model.rxns,'r_4599');
-metsStoch   = model.S(:,rxnIdx);
-metsStoch(Hidx) = 0;
-model.S(Hidx,rxnIdx) = -sum(metsStoch.*model.metCharges,'omitnan');
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4047')) = -sum(model.S(:,strcmp(model.rxns,'r_4047')).*model.metCharges,'omitnan'); % Protein
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4049')) = -sum(model.S(:,strcmp(model.rxns,'r_4049')).*model.metCharges,'omitnan'); % RNA
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4050')) = -sum(model.S(:,strcmp(model.rxns,'r_4050')).*model.metCharges,'omitnan'); % DNA
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4598')) = -sum(model.S(:,strcmp(model.rxns,'r_4598')).*model.metCharges,'omitnan'); % Cofactor
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4599')) = -sum(model.S(:,strcmp(model.rxns,'r_4599')).*model.metCharges,'omitnan'); % Ion
 
 % Special case for SLIME rxns
 model.metCharges(find(contains(model.metNames,'chain')+contains(model.metNames,'backbone'))) = 0;
@@ -165,6 +144,12 @@ model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0775'))=-1;
 % This section focuses on individual reactions that have the wrong
 % reversibility/direction/cofactor or should be completley removed
 
+% Make GCY1 irreversible. Has a positive DeltaGo' (+20.9) and is part of a
+% transhydrogenase cycle (NADH -> NADPH) at the cost of one ATP. High
+% cytosolic NADPH/NADP ratio makes it thermodynamically infeasible that it
+% runs in reverse direction. 
+model = setParam(model,'ub','r_0487',0);
+
 % The mitochondrial ATP synthase is able to run in reverse, which occurs
 % in anaerobic conditions
 model = setParam(model,'lb','r_0226',-1000);
@@ -197,6 +182,40 @@ model.ub(strcmp(model.rxns,'r_4714')) = 0; %monoethyl succinate
 model = setParam(model,'lb',{'r_4723','r_4724','r_4725'},0);
 model = setParam(model,'lb','r_4460',0);
 
+% While r_0013 was elementary balanced, it was not charged balanced. The
+% reaction mechanism was incorrect. Corrected to mimic a combination of
+% MetaCyc rxns: R83-RXN and R147-RXN; or KEGG rxns: R07364 and R07395.
+model = changeRxns(model,'r_0013','5-(methylsulfanyl)-2,3-dioxopentyl phosphate[c] + H2O[c] + oxygen[c] => 4-methylthio-2-oxobutanoate[c] + formate[c] + 2 H+[c] + phosphate[c]',3);
+
+% Represent ACP with formula "RHS"
+model.metFormulas(getIndexes(model,'s_1845','mets')) = {'RHS'};
+
+% [~,metFormulae] = computeMetFormulae(model,'metMwRange','s_0338','fillMets','none')
+% model.metFormulas(getIndexes(model,'s_0329','mets')) = {'C17H28NO17P'};
+% model.metFormulas(getIndexes(model,'s_0330','mets')) = {'C33H58NO18P'};
+% model.metFormulas(getIndexes(model,'s_0331','mets')) = {'C19H30NO18P'};
+% model.metFormulas(getIndexes(model,'s_0334','mets')) = {'C39H68NO23P'};
+% model.metFormulas(getIndexes(model,'s_0337','mets')) = {'C44H78N2O27P2'};
+% model.metFormulas(getIndexes(model,'s_0338','mets')) = {'C41H38N2O41P3'};
+% model.metFormulas(getIndexes(model,'s_0339','mets')) = {'C50H88N2O32P2'};
+
+% Copy annotations between same metabolites in separate compartments
+model.metFormulas(getIndexes(model,'s_4211','mets')) = model.metFormulas(getIndexes(model,'s_2885','mets'));
+model.metCharges(getIndexes(model,'s_4211','mets')) = model.metCharges(getIndexes(model,'s_2885','mets'));
+model.metFormulas(getIndexes(model,'s_4209','mets')) = model.metFormulas(getIndexes(model,'s_3826','mets'));
+model.metCharges(getIndexes(model,'s_4209','mets')) = model.metCharges(getIndexes(model,'s_3826','mets'));
+model.metMiriams(getIndexes(model,'s_4209','mets')) = model.metMiriams(getIndexes(model,'s_3826','mets'));
+
+% r_4323 is an less precise half-reaction of r_4324 and will be removed
+model = removeReactions(model,'r_4323',true,true,true);
+
+% r_4325 represents scaffolding during [Fe-S]-cluster synthesis, not a
+% metabolic process, and will therefore be removed
+model = removeReactions(model,'r_4325',true,true,true);
+
+% r_0229
+%model = changeRxns(model,'r_0229','dethiobiotin[c] + polysulphur[c]  <=> biotin[c] + 2 H+[c]',2)
+%dethiobiotin[c] + hydrogen sulfide[c] + 2 S-adenosyl-L-methionine[c] + 2 H+[c] <=> biotin[c] + 2 L-methionine[c] + 2 5'-Deoxyadenosine
 %% ========================================================================
 % Condition-specific gene expression. These can be enabled with scripts
 % Glycine cleavage only active when glycine is used as nitrogen source
@@ -213,6 +232,23 @@ model.rxnNotes(ismember(model.rxns,{'r_0472'})) = {'Only active during nitrogen 
 % defined medium.
 model = setParam(model,'eq',{'r_0252'},0);
 model.rxnNotes(ismember(model.rxns,{'r_0252'})) = {'Only active if growth medium contains carnitine'};
+
+%% Rescale protein fraction so that biomass sums up to 1 g/gDCW
+% Protein is the largest fraction, so increasing 
+[X,P]  = sumBioMass(model, false);
+fprintf('Current biomass adds up to %.4f g/g. Protein fraction is scaled from %.4f to %.4f g/g to reach 1 g/g total biomass.\n', X, P, (1-X)+P)
+model = scaleBioMass(model,'biomass',1,'protein');
+
+%% Degree of reduction of biomass
+% To align the degree of reduction of S. cerevisiae biomass to the
+% published value of 4.2 /Cmol (Lange and Heijnen, 2001, 10.1002/bit.10054)
+
+DR = 75; % 3mmol (g CDW)−1s
+metIdx = getIndexes(model,{'s_1212','s_1207','s_0794'},'mets'); % NADPH[c], NADP[c], H+[c]
+bioIdx = getIndexes(model,'r_4041','rxns');
+
+currCoeff = full(model.S(metIdx,bioIdx)); % Gather the current coefficients
+model.S(metIdx,bioIdx) = currCoeff + [-DR; +DR; -DR];
 
 %% ========================================================================
 

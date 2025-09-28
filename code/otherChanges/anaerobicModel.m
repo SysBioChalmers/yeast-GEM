@@ -16,8 +16,6 @@ function model = anaerobicModel(model)
 %
 % Usage: model = anaerobicModel(model)
 
-
-
 %% Set environmental conditions
 % Remove heme a from the cofactor pseudoreaction (part of biomass)
 hemeIdx = getIndexes(model,'s_3714','mets');
@@ -39,17 +37,6 @@ model.lb(strcmp(model.rxns,'r_2137')) = 0;    %ergosta-5,7,22,24(28)-tetraen-3be
 model.lb(strcmp(model.rxns,'r_1967')) = -1000;    %nicotinate
 model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
 
-%% Degree of reduction of biomass
-% To align the degree of reduction of S. cerevisiae biomass to the
-% published value of 4.2 /Cmol (Lange and Heijnen, 2001, 10.1002/bit.10054)
-
-DR = 3; % 3mmol (g CDW)−1s
-metIdx = getIndexes(model,{'s_1212','s_1207','s_0794'},'mets'); % NADPH[c], NADP[c], H+[c]
-bioIdx = getIndexes(model,'r_4041','rxns');
-
-currCoeff = full(model.S(metIdx,bioIdx)); % Gather the current coefficients
-model.S(metIdx,bioIdx) = currCoeff + [-DR; +DR; -DR];
-
 %% Curations that are required to reach correct metabolic phenotypes during
 % anaerobic batch growth on minimal glucose media
 
@@ -59,13 +46,7 @@ model.S(metIdx,bioIdx) = currCoeff + [-DR; +DR; -DR];
 % et al (2005) 10.1074 /jbc.M410573200) and not detected in proteome
 % (Sjöberg et al (2023) 10.1016/j.ymben.2024.01.007).
 model = setParam(model,'eq','r_0714',0);
-
-% Make GCY1 irreversible. Has a positive DeltaGo' (+20.9) and is part of a
-% transhydrogenase cycle (NADH -> NADPH) at the cost of one ATP. High
-% cytosolic NADPH/NADP ratio makes it thermodynamically infeasible that it
-% runs in reverse direction. 
-model = setParam(model,'ub','r_0487',0);
-
+ 
 % Block IDP2.  It is strongly repressed in transcriptome (Tai et al (2005)
 % 10.1074 /jbc.M410573200) and not detected in proteome (Sjöberg et al
 % (2023) 10.1016/j.ymben.2024.01.007).
@@ -77,6 +58,7 @@ model = setParam(model,'eq',{'r_0659'},0);
 
 FADH2_prod=0.08;
 metIdx = getIndexes(model,{'s_0689','s_0687','s_0794'},'mets'); % FADH2[c], FAD[c], H+[c]
+bioIdx = getIndexes(model,'r_4041','rxns');
 
 currCoeff = full(model.S(metIdx,bioIdx)); % Gather the current coefficients
 model.S(metIdx,bioIdx) = currCoeff + [FADH2_prod; -FADH2_prod; -2*FADH2_prod];
