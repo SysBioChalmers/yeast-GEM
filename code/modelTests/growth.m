@@ -82,15 +82,14 @@ pos(4) = find(strcmp(model_origin.rxns,'r_2111')); %growth
 %Simulate chemostats:
 mod_data = zeros(size(exp_data));
 solresult = zeros(length(model_origin.rxns),length(exp_data(:,1)));
+if mode1 == 2
+    model_origin = anaerobicModel(model_origin);
+end
 if strcmp(mode2,'N')
     model_origin = scaleBioMass(model_origin,'protein',0.289,'',false);
     model_origin = scaleBioMass(model_origin,'lipid',0.048,'',false);
     model_origin = scaleBioMass(model_origin,'RNA',0.077,'carbohydrate',false);
     model_origin = setParam(model_origin,'ub','r_0472',1000); %Glutamate synthase repressed in excess nitrogen
-end
-
-if mode1 == 2
-    model_origin = anaerobicModel(model_origin);
 end
 for i = 1:length(exp_data(:,1))
     model_test= model_origin;

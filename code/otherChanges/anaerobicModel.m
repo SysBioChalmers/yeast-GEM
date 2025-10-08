@@ -43,7 +43,7 @@ model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
 % Block MDH2. Involved in growth on two-carbon substrates. Down regulated
 % and proteolytically degraded during growth on glucose (Hung et al (2004)
 % 10.1074/jbc.M404544200). It is strongly repressed in transcriptome (Tai
-% et al (2005) 10.1074 /jbc.M410573200) and not detected in proteome
+% et al (2005) 10.1074/jbc.M410573200) and not detected in proteome
 % (Sjöberg et al (2023) 10.1016/j.ymben.2024.01.007).
 model = setParam(model,'eq','r_0714',0);
  
@@ -52,8 +52,8 @@ model = setParam(model,'eq','r_0714',0);
 % (2023) 10.1016/j.ymben.2024.01.007).
 model = setParam(model,'eq',{'r_0659'},0);
 
-%% Fumarate reductase is required for to recycle FADH2 derived from
-% disulphide bound formation in anaerobic conditions through Ero1 (Camarasa
+%% Fumarate reductase is required to recycle FADH2 derived from disulphide
+% bound formation by growth in anaerobic conditions through Ero1 (Camarasa
 % et al (2007) 10.1002/yea.1467; Kim et al (2018) 10.1038/s41467-018-07285-9). 
 
 FADH2_prod=0.08;

@@ -25,18 +25,19 @@ for i=1:length(data_sets)
 
     %% Solve the LP problem
     res=solveLP(model,1);
-
-    index_model=findRxnIDs(model,text_flux(index_data_set,7));
+    rxns = text_flux(index_data_set,7);
+    rxns(cellfun(@isempty,rxns)) = [];
+    index_model=getIndexes(model,rxns,'rxns');
     exclude_data=(index_model==0);
     index_model(exclude_data)=[];
     index_data_set(exclude_data)=[];
 
-    scaled_sim=abs(-100.*res.x(index_model)./res.x(findRxnIDs(model,'r_1714')));
+    scaled_sim=abs(-100.*res.x(index_model)./res.x(getIndexes(model,'r_1714','rxns')));
 
     data_vals=abs(cell2mat(vals_flux(index_data_set,5)));
     merged_data=[merged_data data_vals'];
     merged_sim=[merged_sim scaled_sim'];
-    merged_names=[merged_names text_flux(index_data_set,7)'];
+    merged_names=[merged_names rxns'];
     plot(data_vals,scaled_sim,'^','MarkerFaceColor',colors(i,:),'MarkerEdgeColor',colors(i,:));
     hold on;
 

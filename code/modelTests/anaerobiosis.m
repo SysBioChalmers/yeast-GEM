@@ -20,10 +20,10 @@ plotAnaerobic(modelAn)
 %% Set glucose uptake rate and solve pFBA
 modelAn = setParam(modelAn,'eq','r_1714',-23);
 res=solveLP(modelAn,1);
-
+FLUX = res.x;
 v_AStr = res.x(getIndexes(modelAn,'r_1115','rxns'))
 v_ATPase = res.x(getIndexes(modelAn,'r_0227','rxns'))
-
+v_glc = res.x(getIndexes(modelAn,'r_1714','rxns'))
 
 %% Pack flux results into table
 temp_model=modelAn;
@@ -42,6 +42,7 @@ tabImbalance(contains(tabImbalance.Var2,'SLIME'),:) = [];
 
 
 
+out
 
 
 

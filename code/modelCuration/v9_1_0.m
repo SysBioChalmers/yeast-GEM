@@ -190,6 +190,20 @@ model = changeRxns(model,'r_0013','5-(methylsulfanyl)-2,3-dioxopentyl phosphate[
 % Represent ACP with formula "RHS"
 model.metFormulas(getIndexes(model,'s_1845','mets')) = {'RHS'};
 
+% Set formula of ferr(i/o)cytochrome b3
+idx_mit = getIndexes(model,{'s_3826','s_3827'},'mets');
+idx_erm = getIndexes(model,{'s_4210','s_4209'},'mets');
+model.metFormulas(idx_erm) = model.metFormulas(idx_mit);
+model.metCharges(idx_erm) = model.metCharges(idx_mit);
+model.metMiriams(idx_erm) = model.metMiriams(idx_mit);
+model.metNames([idx_mit; idx_erm]) = regexprep(model.metNames([idx_mit; idx_erm]),'F','f');
+
+% Correct metFormula and metCharge
+idx = getIndexes(model,{'s_4265','s_4266'},'mets');
+model.metFormulas(idx) = {'CH2O3S'};
+model.metCharges(idx) = -1;
+
+
 % [~,metFormulae] = computeMetFormulae(model,'metMwRange','s_0338','fillMets','none')
 % model.metFormulas(getIndexes(model,'s_0329','mets')) = {'C17H28NO17P'};
 % model.metFormulas(getIndexes(model,'s_0330','mets')) = {'C33H58NO18P'};
@@ -216,6 +230,8 @@ model = removeReactions(model,'r_4325',true,true,true);
 % r_0229
 %model = changeRxns(model,'r_0229','dethiobiotin[c] + polysulphur[c]  <=> biotin[c] + 2 H+[c]',2)
 %dethiobiotin[c] + hydrogen sulfide[c] + 2 S-adenosyl-L-methionine[c] + 2 H+[c] <=> biotin[c] + 2 L-methionine[c] + 2 5'-Deoxyadenosine
+
+
 %% ========================================================================
 % Condition-specific gene expression. These can be enabled with scripts
 % Glycine cleavage only active when glycine is used as nitrogen source
@@ -243,7 +259,7 @@ model = scaleBioMass(model,'biomass',1,'protein');
 % To align the degree of reduction of S. cerevisiae biomass to the
 % published value of 4.2 /Cmol (Lange and Heijnen, 2001, 10.1002/bit.10054)
 
-DR = 75; % 3mmol (g CDW)−1s
+DR = 3; % 3mmol (g CDW)−1s
 metIdx = getIndexes(model,{'s_1212','s_1207','s_0794'},'mets'); % NADPH[c], NADP[c], H+[c]
 bioIdx = getIndexes(model,'r_4041','rxns');
 
