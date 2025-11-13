@@ -7,7 +7,6 @@ text_flux=fluxTable;
 
 sim_vals=[];
 
-
 colors = orderedcolors("glow12");
 
 figure;
@@ -17,31 +16,31 @@ merged_sim=[];
 merged_names=[];
 
 for i=1:length(data_sets)
-
-    index_data_set=find(strcmp(text_flux(:,6),data_sets(i,1)));
-    index_glx=strcmp(text_flux(index_data_set,7),'r_1714');
-    
-    model = setParam(model,'eq','r_1714',-cell2mat(vals_flux(index_data_set(find(index_glx)),4) ));
-
-    %% Solve the LP problem
+    % Gather single data set
+    idx_data_set = find(strcmp(text_flux(:,6),data_sets(i,1)));
+    idx_glc = idx_data_set(strcmp(text_flux(idx_data_set,7),'r_1714'));
+    % Set glucose uptake
+    model = setParam(model,'eq','r_1714',-cell2mat(vals_flux(idx_glc,4)));
+    % Solve the LP problem
     res=solveLP(model,1);
-    rxns = text_flux(index_data_set,7);
-    rxns(cellfun(@isempty,rxns)) = [];
-    index_model=getIndexes(model,rxns,'rxns');
-    exclude_data=(index_model==0);
-    index_model(exclude_data)=[];
-    index_data_set(exclude_data)=[];
+    % Organize data and output
+    rxns                        = text_flux(idx_data_set,7);
+    include_data                = ismember(rxns,model.rxns);
 
-    scaled_sim=abs(-100.*res.x(index_model)./res.x(getIndexes(model,'r_1714','rxns')));
+    rxns(~include_data)         = [];
+    idx_data_set(~include_data) = [];
+    
+    idx_model = getIndexes(model,rxns,'rxns');
+    
+    scaled_sim=abs(-100.*res.x(idx_model)./res.x(getIndexes(model,'r_1714','rxns')));
 
-    data_vals=abs(cell2mat(vals_flux(index_data_set,5)));
+    data_vals=abs(cell2mat(vals_flux(idx_data_set,5)));
     merged_data=[merged_data data_vals'];
     merged_sim=[merged_sim scaled_sim'];
     merged_names=[merged_names rxns'];
     plot(data_vals,scaled_sim,'^','MarkerFaceColor',colors(i,:),'MarkerEdgeColor',colors(i,:));
     hold on;
 
-    % res.x()
 end
 
 

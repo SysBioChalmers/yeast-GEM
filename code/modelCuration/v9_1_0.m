@@ -61,9 +61,9 @@ fprintf('Identifier of new reaction "%s": %s\n', newRxn.rxnNames{1}, model.rxns{
 % HcytIdx = getIndexes(model,'s_0794','mets'); % H+[c]
 % HextIdx = getIndexes(model,'s_0796','mets'); % H+[e]
 % 
-% symporterIDs = find(model.S(HcytIdx,:) & model.S(HextIdx,:));
+% symporterIDs = transpose(find(model.S(HcytIdx,:) & model.S(HextIdx,:)));
 % for i = 1:length(symporterIDs)
-%     if strcmp(model.rxns(symporterIDs(i)), 'r_1258')
+%     if ismember(model.rxns(symporterIDs(i)), {'r_1258'})
 %         % Ignore the sodium transporter, without it, the model does not work
 %         continue
 %     end
@@ -125,20 +125,76 @@ model.metCharges(strcmp(model.mets,'s_0841'))=-1;
 model.metCharges(strcmp(model.mets,'s_3906'))=-1;
 model.metCharges(strcmp(model.mets,'s_4263'))=-1;
 
+% Balance the reactions 'r_0774' and 'r_0775', 'NAPRtase' by removing H+
+% consumption and adding a H2O as a reactant
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_0774'))=0; % Cytosolic
+model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0774'))=-1; % Cytosolic
+model.S(find(strcmp(model.mets,'s_0799')),strcmp(model.rxns,'r_0775'))=0; % Mitochondrial
+model.S(find(strcmp(model.mets,'s_0807')),strcmp(model.rxns,'r_0775'))=-1; % Mitochondrial
+
+% Balance the reaction r_0721, 'malonyl-CoA-ACP transacylase' by adding a
+% proton as reactant
+model.S(find(strcmp(model.mets,'s_0799')),strcmp(model.rxns,'r_0721'))=-1;
+
+% Balance the reaction r_1603, '4-amino-5-hydroxymethyl-2-methylpyrimidine synthetase'
+% by adding a proton as reactant
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_1603'))=-1;
+
+% Balance the reactions r_2142-2144, 'B-ketoacyl-ACP synthase' by removing
+% proton as reactant
+model.S(find(strcmp(model.mets,'s_0799')),ismember(model.rxns,{'r_2142','r_2143','r_2144'}))=0;
+
+% Balance the reactions r_2232, 'peroxisomal acyl-CoA thioesterase (4:0)'
+% by correcting H+ 
+model.S(find(strcmp(model.mets,'s_0801')),strcmp(model.rxns,'r_2232')) = 1;
+
+% Correct product and reactant of r_2236 and r_2254, part of peroxisomal
+% beta-oxidation, where the intermediate metabolite should be
+% trans-but-2-enoyl-CoA, not but-2-enoyl-CoA
+metsToAdd.metNames      = 'trans-but-2-enoyl-CoA';
+metsToAdd.compartments  = 'p';
+metsToAdd.metSmiles     = 'C/C=C/C(=O)SCCNC(=O)CCNC(=O)[C@@H](C(C)(C)COP(=O)(O)OP(=O)(O)OC[C@@H]1[C@H]([C@H]([C@@H](O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O';
+metsToAdd.metFormulas   = 'C25H36N7O17P3S';
+metsToAdd.metCharges    = -4;
+metsToAdd.metMiriams{1} = struct('name',{{'chebi';'metanetx.chemical'}},...
+      'value',{{'CHEBI:50998';'MNXM1364409'}});
+
+model = addMets(model,metsToAdd,false,'s_');
+model = removeMets(model, {'but-2-enoyl-CoA'}, true, true, true, true);
+model.S(end,ismember(model.rxns,'r_2236')) = 1;
+model.S(end,ismember(model.rxns,'r_2254')) = -1;
+model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2236')) = 0;
+model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2254')) = 0;
+model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2284')) = +4;
+
+% Balance the reaction r_4629, 'alcohol acyltransferase (hexanoyl-CoA)'
+% by adding a proton as product
+model.S(find(strcmp(model.mets,'s_0799')),strcmp(model.rxns,'r_4629')) = +4;
+
+% Balance the reaction r_4322, 'GPI mannosyltransferase 4'
+% by removing proton
+model.S(find(strcmp(model.mets,'s_0795')),strcmp(model.rxns,'r_4322')) = 0;
+
+% Balance the reaction r_4679, 'short-chain-fatty-acid-CoA ligase (propionate)'
+% by adding a proton as product
+model.S(find(strcmp(model.mets,'s_0801')),strcmp(model.rxns,'r_4679')) = 1;
+
+% Balance the reaction r_4701, 'L-cysteine hydrogen-sulfide-lyase'
+% by adding a proton as product
+model.S(find(strcmp(model.mets,'s_0799')),strcmp(model.rxns,'r_4701')) = 1;
+
 % Balance the reaction r_4702, 'L-cysteine:2-oxoglutarate aminotransferase'
 % by adding a proton as reactant
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4702'))=-1;
 
-% Balance the reaction r_4703, 'L-cysteine:2-oxoglutarate aminotransferase'
+% Balance the reaction r_4703, '3-mercaptopyruvate sulfurtransferase'
 % by adding a proton as product
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4703'))=1;
 
-% Balance the reactions 'r_0774' and 'r_0775', 'NAPRtase' by removing H+
-% consumption and adding a H2O as a reactant
-model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_0774'))=0;
-model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0774'))=-1;
-model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_0775'))=0;
-model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0775'))=-1;
+% Balance the reaction r_4707, 'trithionate thiosulfohydrolase'
+% by adding a proton as product
+model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4707'))=1;
+
 
 %% ========================================================================
 % This section focuses on individual reactions that have the wrong
@@ -147,25 +203,33 @@ model.S(find(strcmp(model.mets,'s_0803')),strcmp(model.rxns,'r_0775'))=-1;
 % Make GCY1 irreversible. Has a positive DeltaGo' (+20.9) and is part of a
 % transhydrogenase cycle (NADH -> NADPH) at the cost of one ATP. High
 % cytosolic NADPH/NADP ratio makes it thermodynamically infeasible that it
-% runs in reverse direction. 
-model = setParam(model,'ub','r_0487',0);
+% runs in reverse direction. First swap direction, then make irreversible
+model.S(:,strcmp(model.rxns,'r_0487')) = -model.S(:,strcmp(model.rxns,'r_0487'));
+model = setParam(model,'lb','r_0487',0);
+model = setParam(model,'rev','r_0226',0);
 
 % The mitochondrial ATP synthase is able to run in reverse, which occurs
 % in anaerobic conditions
 model = setParam(model,'lb','r_0226',-1000);
+model = setParam(model,'rev','r_0226',1);
 
 % Rename r_0227, it is the plasma membrane ATPase, not a cytosolic ATPase
 model.rxnNames(strcmp(model.rxns,'r_0227')) = {'ATPase, plasma membrane'};
 
 % Make sure both formate-THF ligases are reversible (r_0447 already is).
 model = setParam(model,'lb','r_0446',-1000);
+model = setParam(model,'rev','r_0446',1);
 
 % Make methylenetetrahydrofolate dehydrogenases ADE3 and MIS1 irreversible
-model = setParam(model,'ub',{'r_0732','r_0733'},0);
+% First swap direction, then make irreversible
+model.S(:,strcmp(model.rxns,'r_0732')) = -model.S(:,strcmp(model.rxns,'r_0732'));
+model.S(:,strcmp(model.rxns,'r_0733')) = -model.S(:,strcmp(model.rxns,'r_0733'));
+model = setParam(model,'lb',{'r_0732','r_0733'},0);
+model = setParam(model,'rev',{'r_0732','r_0733'},1);
+%model = setParam(model,'lb','r_0731',-1000);
 
-% There is no evidence for this PFK1 side reaction in yeast. Consider
-% removing the reaction completley
-model = setParam(model,'eq','r_0887',0);
+% There is no evidence for this PFK1 side reaction in yeast
+model = removeReactions(model,'r_0887',true,true,true);
 
 % TYR1 incorrectly annotated as using NAD, should be NADP
 model.S(find(strcmp(model.mets,'s_1212')),strcmp(model.rxns,'r_0939'))=0; %NADPH
@@ -180,7 +244,6 @@ model.ub(strcmp(model.rxns,'r_4714')) = 0; %monoethyl succinate
 % Make polyphosphate hydrolase and diphosphate transport over cell membrane
 % both irreversible
 model = setParam(model,'lb',{'r_4723','r_4724','r_4725'},0);
-model = setParam(model,'lb','r_4460',0);
 
 % While r_0013 was elementary balanced, it was not charged balanced. The
 % reaction mechanism was incorrect. Corrected to mimic a combination of
@@ -203,16 +266,6 @@ idx = getIndexes(model,{'s_4265','s_4266'},'mets');
 model.metFormulas(idx) = {'CH2O3S'};
 model.metCharges(idx) = -1;
 
-
-% [~,metFormulae] = computeMetFormulae(model,'metMwRange','s_0338','fillMets','none')
-% model.metFormulas(getIndexes(model,'s_0329','mets')) = {'C17H28NO17P'};
-% model.metFormulas(getIndexes(model,'s_0330','mets')) = {'C33H58NO18P'};
-% model.metFormulas(getIndexes(model,'s_0331','mets')) = {'C19H30NO18P'};
-% model.metFormulas(getIndexes(model,'s_0334','mets')) = {'C39H68NO23P'};
-% model.metFormulas(getIndexes(model,'s_0337','mets')) = {'C44H78N2O27P2'};
-% model.metFormulas(getIndexes(model,'s_0338','mets')) = {'C41H38N2O41P3'};
-% model.metFormulas(getIndexes(model,'s_0339','mets')) = {'C50H88N2O32P2'};
-
 % Copy annotations between same metabolites in separate compartments
 model.metFormulas(getIndexes(model,'s_4211','mets')) = model.metFormulas(getIndexes(model,'s_2885','mets'));
 model.metCharges(getIndexes(model,'s_4211','mets')) = model.metCharges(getIndexes(model,'s_2885','mets'));
@@ -227,10 +280,17 @@ model = removeReactions(model,'r_4323',true,true,true);
 % metabolic process, and will therefore be removed
 model = removeReactions(model,'r_4325',true,true,true);
 
+% r_4568 is an unbalanced, dead-end, non-gene-associated reaction without
+% known reaction mechanism
+model = removeReactions(model,'r_4568',true,true,true);
+
+% r_4704, r_4706 and r_4709 revolve around the unspecific metabolite
+% alkanesulfonate, with unbalanced r_4706
+model = removeReactions(model,{'r_4704','r_4706','r_4709'},true,true,true);
+
 % r_0229
 %model = changeRxns(model,'r_0229','dethiobiotin[c] + polysulphur[c]  <=> biotin[c] + 2 H+[c]',2)
 %dethiobiotin[c] + hydrogen sulfide[c] + 2 S-adenosyl-L-methionine[c] + 2 H+[c] <=> biotin[c] + 2 L-methionine[c] + 2 5'-Deoxyadenosine
-
 
 %% ========================================================================
 % Condition-specific gene expression. These can be enabled with scripts
