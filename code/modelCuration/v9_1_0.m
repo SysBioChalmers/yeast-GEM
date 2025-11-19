@@ -19,6 +19,12 @@ codeDir=pwd();
 % %dataDir=fullfile(pwd(),'..','data','modelCuration','v9.1.0'); % No dataDir required for these curations
 cd modelCuration
 
+GAM   = 55;
+    % P     = 0.461;  %Data from Nissen et al. 1997
+    % NGAM  = 1;
+    % 
+    % model_an = changeGAM(model_an,GAM,NGAM);
+
 %% ========================================================================
 % We blocked MDH2 in anaerobic conditions (see details in the anerobicModel
 % script) Experiments suggest that AKG needs to produced inside the
@@ -226,7 +232,6 @@ model.S(:,strcmp(model.rxns,'r_0732')) = -model.S(:,strcmp(model.rxns,'r_0732'))
 model.S(:,strcmp(model.rxns,'r_0733')) = -model.S(:,strcmp(model.rxns,'r_0733'));
 model = setParam(model,'lb',{'r_0732','r_0733'},0);
 model = setParam(model,'rev',{'r_0732','r_0733'},1);
-%model = setParam(model,'lb','r_0731',-1000);
 
 % There is no evidence for this PFK1 side reaction in yeast
 model = removeReactions(model,'r_0887',true,true,true);

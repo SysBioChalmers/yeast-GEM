@@ -1,19 +1,36 @@
 clear; close all
 % Load the model and apply the corrections for *all* models
-%model = loadYeastModel;
+model902 = loadYeastModel;
 cd('../modelCuration/')
 v9_1_0;
 
 %% Run growth tests
-R2 = growth(model);
+R2new = growth(model);
+R2old = growthOld(model);
+% R decreased from 0.9177 to 0.9077
+
+% Repeat with the model *before* generic 9.1.0 curations were done
+R2new902 = growth(model902);
+R2old902 = growthOld(model902);
+% R decreased from 0.9087 to 0.8985
+% So the generic 9.1.0 curations improved, but the new anaerobic function
+% actually gives worse predictions
 
 %% Convert to anaerobic
 cd('../otherChanges/')
 modelAn = anaerobicModel(model);
+modelAnOld = anaerobicModelOld(model);
+modelAn902 = anaerobicModel(model902);
+modelAnOld902 = anaerobicModelOld(model902);
 
 cd('../modelTests/');
 %% flux predictions
-R2=anaerobic_flux_predictions(modelAn);
+R2fluxnew = anaerobic_flux_predictions(modelAn);
+R2fluxold = anaerobic_flux_predictions(modelAnOld);
+R2fluxnew902 = anaerobic_flux_predictions(modelAn902);
+R2fluxold902 = anaerobic_flux_predictions(modelAnOld902);
+% R 
+
 
 %% Plot
 plotAnaerobic(modelAn)
