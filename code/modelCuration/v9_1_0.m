@@ -19,12 +19,6 @@ codeDir=pwd();
 % %dataDir=fullfile(pwd(),'..','data','modelCuration','v9.1.0'); % No dataDir required for these curations
 cd modelCuration
 
-GAM   = 55;
-    % P     = 0.461;  %Data from Nissen et al. 1997
-    % NGAM  = 1;
-    % 
-    % model_an = changeGAM(model_an,GAM,NGAM);
-
 %% ========================================================================
 % We blocked MDH2 in anaerobic conditions (see details in the anerobicModel
 % script) Experiments suggest that AKG needs to produced inside the
@@ -64,21 +58,21 @@ fprintf('Identifier of new reaction "%s": %s\n', newRxn.rxnNames{1}, model.rxns{
 %% ========================================================================
 % Look for all proton symport/antiport reactions and make sure that they
 % only enter the cell.
-% HcytIdx = getIndexes(model,'s_0794','mets'); % H+[c]
-% HextIdx = getIndexes(model,'s_0796','mets'); % H+[e]
-% 
-% symporterIDs = transpose(find(model.S(HcytIdx,:) & model.S(HextIdx,:)));
-% for i = 1:length(symporterIDs)
-%     if ismember(model.rxns(symporterIDs(i)), {'r_1258'})
-%         % Ignore the sodium transporter, without it, the model does not work
-%         continue
-%     end
-%     if model.S(HextIdx,symporterIDs(i))<0 % If defined H+[e] => H+[c]
-%         model.lb(symporterIDs(i))=0;
-%     else % If defined H+[c] => H+[e]
-%         model.ub(symporterIDs(i))=0;
-%     end
-% end
+HcytIdx = getIndexes(model,'s_0794','mets'); % H+[c]
+HextIdx = getIndexes(model,'s_0796','mets'); % H+[e]
+
+symporterIDs = transpose(find(model.S(HcytIdx,:) & model.S(HextIdx,:)));
+for i = 1:length(symporterIDs)
+    if ismember(model.rxns(symporterIDs(i)), {'r_1258'})
+        % Ignore the sodium transporter, without it, the model does not work
+        continue
+    end
+    if model.S(HextIdx,symporterIDs(i))<0 % If defined H+[e] => H+[c]
+        model.lb(symporterIDs(i))=0;
+    else % If defined H+[c] => H+[e]
+        model.ub(symporterIDs(i))=0;
+    end
+end
 
 %% ========================================================================
 % This section balances reactions and ensures that a correct molecular
@@ -131,6 +125,8 @@ model.metCharges(strcmp(model.mets,'s_0841'))=-1;
 model.metCharges(strcmp(model.mets,'s_3906'))=-1;
 model.metCharges(strcmp(model.mets,'s_4263'))=-1;
 
+% Now manually balance some additional reactions
+
 % Balance the reactions 'r_0774' and 'r_0775', 'NAPRtase' by removing H+
 % consumption and adding a H2O as a reactant
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_0774'))=0; % Cytosolic
@@ -153,25 +149,6 @@ model.S(find(strcmp(model.mets,'s_0799')),ismember(model.rxns,{'r_2142','r_2143'
 % Balance the reactions r_2232, 'peroxisomal acyl-CoA thioesterase (4:0)'
 % by correcting H+ 
 model.S(find(strcmp(model.mets,'s_0801')),strcmp(model.rxns,'r_2232')) = 1;
-
-% Correct product and reactant of r_2236 and r_2254, part of peroxisomal
-% beta-oxidation, where the intermediate metabolite should be
-% trans-but-2-enoyl-CoA, not but-2-enoyl-CoA
-metsToAdd.metNames      = 'trans-but-2-enoyl-CoA';
-metsToAdd.compartments  = 'p';
-metsToAdd.metSmiles     = 'C/C=C/C(=O)SCCNC(=O)CCNC(=O)[C@@H](C(C)(C)COP(=O)(O)OP(=O)(O)OC[C@@H]1[C@H]([C@H]([C@@H](O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O';
-metsToAdd.metFormulas   = 'C25H36N7O17P3S';
-metsToAdd.metCharges    = -4;
-metsToAdd.metMiriams{1} = struct('name',{{'chebi';'metanetx.chemical'}},...
-      'value',{{'CHEBI:50998';'MNXM1364409'}});
-
-model = addMets(model,metsToAdd,false,'s_');
-model = removeMets(model, {'but-2-enoyl-CoA'}, true, true, true, true);
-model.S(end,ismember(model.rxns,'r_2236')) = 1;
-model.S(end,ismember(model.rxns,'r_2254')) = -1;
-model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2236')) = 0;
-model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2254')) = 0;
-model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2284')) = +4;
 
 % Balance the reaction r_4629, 'alcohol acyltransferase (hexanoyl-CoA)'
 % by adding a proton as product
@@ -200,7 +177,6 @@ model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4703'))=1;
 % Balance the reaction r_4707, 'trithionate thiosulfohydrolase'
 % by adding a proton as product
 model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4707'))=1;
-
 
 %% ========================================================================
 % This section focuses on individual reactions that have the wrong
@@ -255,6 +231,25 @@ model = setParam(model,'lb',{'r_4723','r_4724','r_4725'},0);
 % MetaCyc rxns: R83-RXN and R147-RXN; or KEGG rxns: R07364 and R07395.
 model = changeRxns(model,'r_0013','5-(methylsulfanyl)-2,3-dioxopentyl phosphate[c] + H2O[c] + oxygen[c] => 4-methylthio-2-oxobutanoate[c] + formate[c] + 2 H+[c] + phosphate[c]',3);
 
+% Correct product and reactant of r_2236 and r_2254, part of peroxisomal
+% beta-oxidation, where the intermediate metabolite should be
+% trans-but-2-enoyl-CoA, not but-2-enoyl-CoA
+metsToAdd.metNames      = 'trans-but-2-enoyl-CoA';
+metsToAdd.compartments  = 'p';
+metsToAdd.metSmiles     = 'C/C=C/C(=O)SCCNC(=O)CCNC(=O)[C@@H](C(C)(C)COP(=O)(O)OP(=O)(O)OC[C@@H]1[C@H]([C@H]([C@@H](O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O';
+metsToAdd.metFormulas   = 'C25H36N7O17P3S';
+metsToAdd.metCharges    = -4;
+metsToAdd.metMiriams{1} = struct('name',{{'chebi';'metanetx.chemical'}},...
+      'value',{{'CHEBI:50998';'MNXM1364409'}});
+
+model = addMets(model,metsToAdd,false,'s_');
+model = removeMets(model, {'but-2-enoyl-CoA'}, true, true, true, true);
+model.S(end,ismember(model.rxns,'r_2236')) = 1;
+model.S(end,ismember(model.rxns,'r_2254')) = -1;
+model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2236')) = 0;
+model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2254')) = 0;
+model.S(find(strcmp(model.mets,'s_0801')),ismember(model.rxns,'r_2284')) = +4;
+
 % Represent ACP with formula "RHS"
 model.metFormulas(getIndexes(model,'s_1845','mets')) = {'RHS'};
 
@@ -293,10 +288,6 @@ model = removeReactions(model,'r_4568',true,true,true);
 % alkanesulfonate, with unbalanced r_4706
 model = removeReactions(model,{'r_4704','r_4706','r_4709'},true,true,true);
 
-% r_0229
-%model = changeRxns(model,'r_0229','dethiobiotin[c] + polysulphur[c]  <=> biotin[c] + 2 H+[c]',2)
-%dethiobiotin[c] + hydrogen sulfide[c] + 2 S-adenosyl-L-methionine[c] + 2 H+[c] <=> biotin[c] + 2 L-methionine[c] + 2 5'-Deoxyadenosine
-
 %% ========================================================================
 % Condition-specific gene expression. These can be enabled with scripts
 % Glycine cleavage only active when glycine is used as nitrogen source
@@ -318,7 +309,7 @@ model.rxnNotes(ismember(model.rxns,{'r_0252'})) = {'Only active if growth medium
 % Protein is the largest fraction, so increasing 
 [X,P]  = sumBioMass(model, false);
 fprintf('Current biomass adds up to %.4f g/g. Protein fraction is scaled from %.4f to %.4f g/g to reach 1 g/g total biomass.\n', X, P, (1-X)+P)
-model = scaleBioMass(model,'biomass',1,'protein');
+model = scaleBioMass(model,'protein',(1-X)+P);
 
 %% Degree of reduction of biomass
 % To align the degree of reduction of S. cerevisiae biomass to the

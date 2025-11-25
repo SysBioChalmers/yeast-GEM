@@ -92,7 +92,11 @@ if strcmp(mode2,'N')
     model_origin = scaleBioMass(model_origin,'protein',0.28,'',false);
     % Assume that RNA decreased by the same amount (40%)
     model_origin = scaleBioMass(model_origin,'RNA',0.0329,'carbohydrate',false);
-    model_origin = setParam(model_origin,'ub','r_0472',1000); %Glutamate synthase repressed in excess nitrogen
+    % Glutamate synthase derepressed under nitrogen limitation
+    model_origin = setParam(model_origin,'ub','r_0472',1000);
+    % Glycine cleavage system is derepressed under nitrogen limitation
+    model_origin = setParam(model_origin,'ub',{'r_0501','r_0507','r_0509'},1000);
+
 end
 
 for i = 1:length(exp_data(:,1))
