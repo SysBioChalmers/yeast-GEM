@@ -28,7 +28,7 @@ jobs:
       - name: Import with cobrapy
         uses: addnab/docker-run-action@v3
         with:
-          image: ghcr.io/metabolicatlas/memote-docker:0.13
+          image: ghcr.io/metabolicatlas/memote-docker:0.17
           options: -v ${{ github.workspace }}:/opt
           shell: bash
           run: |
