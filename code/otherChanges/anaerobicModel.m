@@ -22,6 +22,8 @@ hemeIdx = getIndexes(model,'s_3714','mets');
 cofacIdx = getIndexes(model,'r_4598','rxns');
 model.S(hemeIdx,cofacIdx) = 0;
 
+model = changeAminoAcidRatio(model,2);
+
 % Change exchange reactions (block O2 uptake and allow sterol and fatty
 % acid exchanges, as these are essential supplements for anaerobic growth).
 model.lb(strcmp(model.rxns,'r_1992')) = 0;        %O2
