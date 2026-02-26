@@ -4,7 +4,7 @@
     id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
     version: ""
-    date: "2024-11-23"
+    date: "2026-02-26"
     defaultLB: "-1000"
     defaultUB: "1000"
     givenName: "Eduard"
@@ -906,7 +906,7 @@
       - name: "1-phosphatidyl-1D-myo-inositol backbone"
       - compartment: "c"
       - formula: "C9H15O9P"
-      - charge: -1
+      - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "pail_cho"
           - chebi: "CHEBI:57880"
@@ -6525,6 +6525,7 @@
       - name: "diglyceride backbone"
       - compartment: "er"
       - formula: "C3H4O"
+      - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "dag_hs"
           - chebi: "CHEBI:18035"
@@ -8813,7 +8814,7 @@
       - name: "hydrogen sulfide"
       - compartment: "c"
       - formula: "HS"
-      - charge: 0
+      - charge: -1
       - smiles: "S"
       - annotation: !!omap
           - bigg.metabolite: "h2s"
@@ -9405,6 +9406,7 @@
       - name: "inositol-P-ceramide backbone"
       - compartment: "g"
       - formula: "C6H12NO10P"
+      - charge: 0
       - annotation: !!omap
           - chebi: "CHEBI:60245"
           - metanetx.chemical: "MNXM57446"
@@ -11998,6 +12000,7 @@
       - name: "mannosylinositol phosphorylceramide backbone"
       - compartment: "g"
       - formula: "C12H22NO15P"
+      - charge: 0
       - annotation: !!omap
           - chebi: "CHEBI:25168"
           - metanetx.chemical: "MNXM12216"
@@ -14192,7 +14195,7 @@
       - name: "phosphatidylcholine backbone"
       - compartment: "c"
       - formula: "C8H16NO3P"
-      - charge: 1
+      - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "pchol_cho"
           - chebi: "CHEBI:49183"
@@ -14353,7 +14356,7 @@
       - name: "potassium"
       - compartment: "c"
       - formula: "K"
-      - charge: 0
+      - charge: 1
       - smiles: "[K]"
       - annotation: !!omap
           - bigg.metabolite: "k"
@@ -14367,7 +14370,7 @@
       - name: "potassium"
       - compartment: "e"
       - formula: "K"
-      - charge: 0
+      - charge: 1
       - smiles: "[K]"
       - annotation: !!omap
           - bigg.metabolite: "k"
@@ -15146,7 +15149,7 @@
       - name: "sodium"
       - compartment: "c"
       - formula: "Na"
-      - charge: 0
+      - charge: 1
       - smiles: "[Na]"
       - annotation: !!omap
           - bigg.metabolite: "na1"
@@ -15160,7 +15163,7 @@
       - name: "sodium"
       - compartment: "e"
       - formula: "Na"
-      - charge: 0
+      - charge: 1
       - smiles: "[Na]"
       - annotation: !!omap
           - bigg.metabolite: "na1"
@@ -17205,6 +17208,7 @@
       - id: "s_1845"
       - name: "ACP1"
       - compartment: "m"
+      - formula: "RHS"
       - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "ACP"
@@ -18791,20 +18795,6 @@
           - metanetx.chemical: "MNXM553"
           - sbo: "SBO:0000247"
       - deltaG: -320.52
-    - !!omap
-      - id: "s_2886"
-      - name: "but-2-enoyl-CoA"
-      - compartment: "p"
-      - formula: "C25H40N7O17P3S"
-      - charge: 0
-      - smiles: "CC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O"
-      - annotation: !!omap
-          - bigg.metabolite: "b2coa"
-          - chebi: "CHEBI:36926"
-          - kegg.compound: "C00877"
-          - metanetx.chemical: "MNXM214"
-          - sbo: "SBO:0000247"
-      - deltaG: -370.03
     - !!omap
       - id: "s_2887"
       - name: "trans-hex-2-enoyl-CoA"
@@ -27537,7 +27527,7 @@
       - name: "phosphatidylcholine backbone"
       - compartment: "erm"
       - formula: "C8H16NO3P"
-      - charge: 1
+      - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "pchol_cho"
           - kegg.compound: "C00157"
@@ -27614,6 +27604,7 @@
       - id: "s_3717"
       - name: "protein"
       - compartment: "c"
+      - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "protein"
           - kegg.compound: "C00492"
@@ -27624,6 +27615,7 @@
       - id: "s_3718"
       - name: "carbohydrate"
       - compartment: "c"
+      - charge: 0
       - annotation: !!omap
           - kegg.compound: "C05402"
           - metanetx.chemical: "MNXM1434"
@@ -27633,6 +27625,7 @@
       - id: "s_3719"
       - name: "RNA"
       - compartment: "c"
+      - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "rna"
           - sbo: "SBO:0000649"
@@ -27641,6 +27634,7 @@
       - id: "s_3720"
       - name: "DNA"
       - compartment: "c"
+      - charge: 0
       - annotation: !!omap
           - bigg.metabolite: "dna"
           - sbo: "SBO:0000649"
@@ -27650,6 +27644,7 @@
       - name: "ceramide backbone"
       - compartment: "g"
       - formula: "HNO2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27658,6 +27653,7 @@
       - name: "ceramide backbone"
       - compartment: "c"
       - formula: "HNO2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27666,6 +27662,7 @@
       - name: "inositol phosphomannosylinositol phosphoceramide backbone"
       - compartment: "c"
       - formula: "C18H33NO23P2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27674,6 +27671,7 @@
       - name: "inositol-P-ceramide backbone"
       - compartment: "c"
       - formula: "C6H12NO10P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27682,6 +27680,7 @@
       - name: "mannosylinositol phosphorylceramide backbone"
       - compartment: "c"
       - formula: "C12H22NO15P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27690,6 +27689,7 @@
       - name: "long-chain base backbone"
       - compartment: "er"
       - formula: "H4N"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27698,6 +27698,7 @@
       - name: "long-chain base backbone"
       - compartment: "c"
       - formula: "H4N"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27706,6 +27707,7 @@
       - name: "long-chain base phosphate backbone"
       - compartment: "er"
       - formula: "H3NO3P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27714,6 +27716,7 @@
       - name: "long-chain base phosphate backbone"
       - compartment: "c"
       - formula: "H3NO3P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27722,6 +27725,7 @@
       - name: "phosphatidate backbone"
       - compartment: "erm"
       - formula: "C3H5O4P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27730,6 +27734,7 @@
       - name: "phosphatidate backbone"
       - compartment: "c"
       - formula: "C3H5O4P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27738,6 +27743,7 @@
       - name: "diglyceride backbone"
       - compartment: "erm"
       - formula: "C3H4O"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27746,6 +27752,7 @@
       - name: "diglyceride backbone"
       - compartment: "c"
       - formula: "C3H4O"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27754,6 +27761,7 @@
       - name: "sn-2-acyl-1-lysophosphatidylinositol backbone"
       - compartment: "erm"
       - formula: "C9H11O10P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27762,6 +27770,7 @@
       - name: "sn-2-acyl-1-lysophosphatidylinositol backbone"
       - compartment: "c"
       - formula: "C9H11O10P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27770,6 +27779,7 @@
       - name: "phosphatidylglycerol backbone"
       - compartment: "mm"
       - formula: "C6H11O6P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27778,6 +27788,7 @@
       - name: "phosphatidylglycerol backbone"
       - compartment: "c"
       - formula: "C6H11O6P"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27786,6 +27797,7 @@
       - name: "cardiolipin backbone"
       - compartment: "mm"
       - formula: "C9H14O9P2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27794,6 +27806,7 @@
       - name: "cardiolipin backbone"
       - compartment: "c"
       - formula: "C9H14O9P2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27802,6 +27815,7 @@
       - name: "C16:0 chain"
       - compartment: "c"
       - formula: "C16H32O2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27810,6 +27824,7 @@
       - name: "C16:1 chain"
       - compartment: "c"
       - formula: "C16H30O2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27818,6 +27833,7 @@
       - name: "C18:0 chain"
       - compartment: "c"
       - formula: "C18H36O2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27826,6 +27842,7 @@
       - name: "C18:1 chain"
       - compartment: "c"
       - formula: "C18H34O2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27834,6 +27851,7 @@
       - name: "C24:0 chain"
       - compartment: "c"
       - formula: "C24H48O2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27842,6 +27860,7 @@
       - name: "C26:0 chain"
       - compartment: "c"
       - formula: "C26H52O2"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27849,6 +27868,7 @@
       - id: "s_3746"
       - name: "lipid backbone"
       - compartment: "c"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -27856,6 +27876,7 @@
       - id: "s_3747"
       - name: "lipid chain"
       - compartment: "c"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -28334,15 +28355,6 @@
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
-      - id: "s_3784"
-      - name: "(sulfur carrier)-H"
-      - compartment: "m"
-      - formula: "R"
-      - charge: 0
-      - annotation: !!omap
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3785"
       - name: "L-cysteine"
       - compartment: "m"
@@ -28356,15 +28368,6 @@
           - metanetx.chemical: "MNXM55"
           - sbo: "SBO:0000247"
       - deltaG: -15.24
-    - !!omap
-      - id: "s_3786"
-      - name: "(sulfur carrier)-SH"
-      - compartment: "m"
-      - formula: "SR"
-      - charge: 0
-      - annotation: !!omap
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_3787"
       - name: "cholesterol"
@@ -28762,42 +28765,6 @@
           - sbo: "SBO:0000247"
       - deltaG: 147.48
     - !!omap
-      - id: "s_3819"
-      - name: "L-lysine-[histone]"
-      - compartment: "n"
-      - formula: "C6H13N2OR2"
-      - charge: 1
-      - annotation: !!omap
-          - chebi: "CHEBI:29969"
-          - metanetx.chemical: "MNXM59465"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3820"
-      - name: "S-adenosyl-L-homocysteine"
-      - compartment: "n"
-      - formula: "C14H20N6O5S"
-      - charge: 0
-      - smiles: "C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)CSCCC(C(=O)O)N)O)O)N"
-      - annotation: !!omap
-          - bigg.metabolite: "ahcys"
-          - chebi: "CHEBI:16680"
-          - kegg.compound: "C00021"
-          - metanetx.chemical: "MNXM19"
-          - sbo: "SBO:0000247"
-      - deltaG: 109.37
-    - !!omap
-      - id: "s_3821"
-      - name: "N6-methyl-L-lysine-[histone]"
-      - compartment: "n"
-      - formula: "C7H15N2OR2"
-      - charge: 1
-      - annotation: !!omap
-          - chebi: "CHEBI:61929"
-          - metanetx.chemical: "MNXM63025"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3822"
       - name: "Zn(2+)"
       - compartment: "c"
@@ -28827,7 +28794,7 @@
       - deltaG: 10000000
     - !!omap
       - id: "s_3826"
-      - name: "Ferricytochrome b5"
+      - name: "ferricytochrome b5"
       - compartment: "m"
       - formula: "Fe"
       - charge: 3
@@ -28840,7 +28807,7 @@
       - deltaG: 10000000
     - !!omap
       - id: "s_3827"
-      - name: "Ferrocytochrome b5"
+      - name: "ferrocytochrome b5"
       - compartment: "m"
       - formula: "Fe"
       - charge: 2
@@ -28875,18 +28842,6 @@
           - sbo: "SBO:0000247"
       - deltaG: 103.13
     - !!omap
-      - id: "s_3830"
-      - name: "RX"
-      - compartment: "er"
-      - formula: "RX"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17792"
-          - kegg.compound: "C01322"
-          - metanetx.chemical: "MNXM6428"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3831"
       - name: "glutathione"
       - compartment: "er"
@@ -28900,68 +28855,6 @@
           - metanetx.chemical: "MNXM57"
           - sbo: "SBO:0000247"
       - deltaG: -70.58
-    - !!omap
-      - id: "s_3832"
-      - name: "HX"
-      - compartment: "er"
-      - formula: "X"
-      - charge: -1
-      - smiles: "C1=NC2=C(N1)C(=O)NC=N2"
-      - annotation: !!omap
-          - chebi: "CHEBI:16042"
-          - kegg.compound: "C00462"
-          - metanetx.chemical: "MNXM55844"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3833"
-      - name: "R-S-glutathione"
-      - compartment: "er"
-      - formula: "C10H16N3O6SR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17021"
-          - kegg.compound: "C02320"
-          - metanetx.chemical: "MNXM3350"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3834"
-      - name: "RX"
-      - compartment: "c"
-      - formula: "RX"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17792"
-          - kegg.compound: "C01322"
-          - metanetx.chemical: "MNXM6428"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3835"
-      - name: "HX"
-      - compartment: "c"
-      - formula: "X"
-      - charge: -1
-      - smiles: "C1=NC2=C(N1)C(=O)NC=N2"
-      - annotation: !!omap
-          - chebi: "CHEBI:16042"
-          - kegg.compound: "C00462"
-          - metanetx.chemical: "MNXM55844"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3836"
-      - name: "R-S-glutathione"
-      - compartment: "c"
-      - formula: "C10H16N3O6SR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17021"
-          - kegg.compound: "C02320"
-          - metanetx.chemical: "MNXM3350"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_3837"
       - name: "L-Methionine S-oxide"
@@ -29030,18 +28923,6 @@
           - sbo: "SBO:0000247"
       - deltaG: -151.3
     - !!omap
-      - id: "s_3842"
-      - name: "RX"
-      - compartment: "p"
-      - formula: "RX"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17792"
-          - kegg.compound: "C01322"
-          - metanetx.chemical: "MNXM6428"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3843"
       - name: "glutathione"
       - compartment: "p"
@@ -29055,31 +28936,6 @@
           - metanetx.chemical: "MNXM57"
           - sbo: "SBO:0000247"
       - deltaG: -70.58
-    - !!omap
-      - id: "s_3844"
-      - name: "HX"
-      - compartment: "p"
-      - formula: "X"
-      - charge: -1
-      - smiles: "C1=NC2=C(N1)C(=O)NC=N2"
-      - annotation: !!omap
-          - chebi: "CHEBI:16042"
-          - kegg.compound: "C00462"
-          - metanetx.chemical: "MNXM55844"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3845"
-      - name: "R-S-glutathione"
-      - compartment: "p"
-      - formula: "C10H16N3O6SR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17021"
-          - kegg.compound: "C02320"
-          - metanetx.chemical: "MNXM3350"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_3846"
       - name: "dehydroascorbate"
@@ -29176,30 +29032,6 @@
           - metanetx.chemical: "MNXM722712"
           - sbo: "SBO:0000247"
       - deltaG: -307.29
-    - !!omap
-      - id: "s_3853"
-      - name: "R-S-Cysteinylglycine"
-      - compartment: "c"
-      - formula: "C5H9N2O3SR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:8744"
-          - kegg.compound: "C05729"
-          - metanetx.chemical: "MNXM7734"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3854"
-      - name: "S-Substituted L-cysteine"
-      - compartment: "c"
-      - formula: "C3H6NO2SR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:47910"
-          - kegg.compound: "C05726"
-          - metanetx.chemical: "MNXM96107"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_3855"
       - name: "iron(3+)"
@@ -29329,30 +29161,6 @@
           - sbo: "SBO:0000247"
       - deltaG: -48.81
     - !!omap
-      - id: "s_3865"
-      - name: "sterols"
-      - compartment: "e"
-      - formula: "C19H31OR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:15889"
-          - kegg.compound: "C00370"
-          - metanetx.chemical: "MNXM82761"
-          - sbo: "SBO:0000247"
-      - deltaG: 201.61
-    - !!omap
-      - id: "s_3866"
-      - name: "sterols"
-      - compartment: "c"
-      - formula: "C19H31OR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:15889"
-          - kegg.compound: "C00370"
-          - metanetx.chemical: "MNXM82761"
-          - sbo: "SBO:0000247"
-      - deltaG: 201.61
-    - !!omap
       - id: "s_3867"
       - name: "2-Phenylacetamide"
       - compartment: "c"
@@ -29450,30 +29258,6 @@
           - sbo: "SBO:0000247"
       - deltaG: -161.75
     - !!omap
-      - id: "s_3876"
-      - name: "Protein C-terminal S-farnesyl-L-cysteine"
-      - compartment: "c"
-      - formula: "C20H32N2O3SR"
-      - charge: -1
-      - annotation: !!omap
-          - chebi: "CHEBI:17171"
-          - kegg.compound: "C04506"
-          - metanetx.chemical: "MNXM5285"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3877"
-      - name: "Protein C-terminal S-farnesyl-L-cysteine methyl ester"
-      - compartment: "c"
-      - formula: "C21H35N2O3SR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:15818"
-          - kegg.compound: "C04748"
-          - metanetx.chemical: "MNXM6400"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3878"
       - name: "1-phosphatidyl-1D-myo-inositol"
       - compartment: "er"
@@ -29553,28 +29337,6 @@
           - metanetx.chemical: "MNXM7"
           - sbo: "SBO:0000247"
       - deltaG: -356.59
-    - !!omap
-      - id: "s_3884"
-      - name: "generic protein"
-      - compartment: "c"
-      - formula: "C2H4NOR"
-      - charge: 1
-      - annotation: !!omap
-          - kegg.compound: "C00017"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3885"
-      - name: "L-Arginyl-protein"
-      - compartment: "c"
-      - formula: "C8H17N5O2R"
-      - charge: 2
-      - annotation: !!omap
-          - chebi: "CHEBI:17518"
-          - kegg.compound: "C16739"
-          - metanetx.chemical: "MNXM73312"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_3887"
       - name: "G00008"
@@ -29724,41 +29486,6 @@
           - sbo: "SBO:0000247"
       - deltaG: -117.34
     - !!omap
-      - id: "s_3900"
-      - name: "alpha-D-mannoside"
-      - compartment: "v"
-      - formula: "C6H11O6R"
-      - charge: 0
-      - smiles: "C(C1C(C(C(C(O1)O)O)O)O)O"
-      - annotation: !!omap
-          - chebi: "CHEBI:27535"
-          - kegg.compound: "C02603"
-          - metanetx.chemical: "MNXM3535"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3901"
-      - name: "alpha-D-mannopyranose"
-      - compartment: "v"
-      - formula: "C6H12O6"
-      - charge: 0
-      - smiles: "C(C1C(C(C(C(O1)O)O)O)O)O"
-      - annotation: !!omap
-          - chebi: "CHEBI:28729"
-          - kegg.compound: "C00936"
-          - metanetx.chemical: "MNXM919"
-          - sbo: "SBO:0000247"
-      - deltaG: -117.34
-    - !!omap
-      - id: "s_3902"
-      - name: "non glycosylated sugar acceptor"
-      - compartment: "v"
-      - formula: "HOR"
-      - charge: 0
-      - annotation: !!omap
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3903"
       - name: "L-Threonylcarbamoyladenylate"
       - compartment: "c"
@@ -29803,7 +29530,7 @@
       - name: "hydrogen sulfide"
       - compartment: "m"
       - formula: "HS"
-      - charge: 0
+      - charge: -1
       - smiles: "S"
       - annotation: !!omap
           - bigg.metabolite: "h2s"
@@ -29811,43 +29538,6 @@
           - chebi: "CHEBI:16136"
           - kegg.compound: "C00283"
           - metanetx.chemical: "MNXM124865"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3907"
-      - name: "phosphatidate"
-      - compartment: "m"
-      - formula: "C5H7O8PR2"
-      - charge: 0
-      - annotation: !!omap
-          - bigg.metabolite: "pa_EC"
-          - chebi: "CHEBI:16337"
-          - kegg.compound: "C00416"
-          - metanetx.chemical: "MNXM96054"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3908"
-      - name: "CDP-diacylglycerol"
-      - compartment: "m"
-      - formula: "C14H19N3O15P2R2"
-      - charge: 0
-      - annotation: !!omap
-          - bigg.metabolite: "cdpdag_cho"
-          - chebi: "CHEBI:17962"
-          - kegg.compound: "C00269"
-          - metanetx.chemical: "MNXM201"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3909"
-      - name: "Sulfur donor"
-      - compartment: "c"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:80867"
-          - kegg.compound: "C17023"
-          - metanetx.chemical: "MNXM4111"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
@@ -29915,58 +29605,6 @@
           - sbo: "SBO:0000247"
       - deltaG: -26.8
     - !!omap
-      - id: "s_3915"
-      - name: "(R)-Lipoate"
-      - compartment: "c"
-      - formula: "C8H13O2S2"
-      - charge: -1
-      - smiles: "C1CSSC1CCCCC(=O)[O-]"
-      - annotation: !!omap
-          - bigg.metabolite: "lipoate"
-          - chebi: "CHEBI:83088"
-          - kegg.compound: "C16241"
-          - metanetx.chemical: "MNXM1484"
-          - sbo: "SBO:0000247"
-      - deltaG: 62.4
-    - !!omap
-      - id: "s_3916"
-      - name: "Lipoyl-AMP"
-      - compartment: "c"
-      - formula: "C18H25N5O8PS2"
-      - charge: -1
-      - smiles: "C1CSSC1CCCCC(=O)OP(=O)(O)OCC2C(C(C(O2)N3C=NC4=C(N=CN=C43)N)O)O"
-      - annotation: !!omap
-          - bigg.metabolite: "lipoamp"
-          - chebi: "CHEBI:83091"
-          - kegg.compound: "C16238"
-          - metanetx.chemical: "MNXM2392"
-          - sbo: "SBO:0000247"
-      - deltaG: -33.67
-    - !!omap
-      - id: "s_3917"
-      - name: "Apoprotein"
-      - compartment: "c"
-      - formula: "NH2R"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:13850"
-          - kegg.compound: "C16240"
-          - metanetx.chemical: "MNXM91491"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3918"
-      - name: "Protein N6-(lipoyl)lysine"
-      - compartment: "c"
-      - formula: "C8H14NOS2R"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:80399"
-          - kegg.compound: "C16237"
-          - metanetx.chemical: "MNXM96070"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3923"
       - name: "N-(4-oxoglutarate)-L-cysteinylglycine"
       - compartment: "c"
@@ -30014,30 +29652,6 @@
           - metanetx.chemical: "MNXM43"
           - sbo: "SBO:0000247"
       - deltaG: -31.38
-    - !!omap
-      - id: "s_3927"
-      - name: "ribonucleoside 5'-triphosphate"
-      - compartment: "c"
-      - formula: "C5H8O13P3R"
-      - charge: -4
-      - annotation: !!omap
-          - chebi: "CHEBI:61557"
-          - kegg.compound: "C03802"
-          - metanetx.chemical: "MNXM96380"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3928"
-      - name: "ribonucleoside 5'-phosphate"
-      - compartment: "c"
-      - formula: "C5H8O7PR"
-      - charge: -2
-      - annotation: !!omap
-          - chebi: "CHEBI:58043"
-          - kegg.compound: "C00171"
-          - metanetx.chemical: "MNXM80910"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_3929"
       - name: "2'-deoxyribonucleoside 5'-triphosphate"
@@ -30141,70 +29755,6 @@
           - sbo: "SBO:0000247"
       - deltaG: -45.17
     - !!omap
-      - id: "s_3937"
-      - name: "Acyl-CoA"
-      - compartment: "er"
-      - formula: "C22H31N7O17P3SR"
-      - charge: -4
-      - annotation: !!omap
-          - bigg.metabolite: "acoa"
-          - chebi: "CHEBI:58342"
-          - kegg.compound: "C00040"
-          - metanetx.chemical: "MNXM44"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3938"
-      - name: "1-acyl-sn-glycerol 3-phosphate"
-      - compartment: "er"
-      - formula: "C4H6O7PR"
-      - charge: -2
-      - annotation: !!omap
-          - bigg.metabolite: "1ag3p_SC"
-          - chebi: "CHEBI:57970"
-          - kegg.compound: "C00681"
-          - metanetx.chemical: "MNXM145527"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3939"
-      - name: "1,2-diacyl-sn-glycerol 3-phosphate"
-      - compartment: "er"
-      - formula: "C5H5O8PR2"
-      - charge: -2
-      - smiles: "CCCCCCCCCCCCCCCC(=O)OCC(COP(=O)([O-])[O-])OC(=O)CCCCCCCCCCCCCCC.[Na+].[Na+]"
-      - annotation: !!omap
-          - bigg.metabolite: "pa_EC"
-          - chebi: "CHEBI:58608"
-          - kegg.compound: "C00416"
-          - metanetx.chemical: "MNXM96054"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3940"
-      - name: "Peptide diphthine"
-      - compartment: "c"
-      - formula: "C13H20N4O3R2"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:18054"
-          - kegg.compound: "C01573"
-          - metanetx.chemical: "MNXM3980"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3941"
-      - name: "Peptide diphthamide"
-      - compartment: "c"
-      - formula: "C13H22N5O2R2"
-      - charge: 1
-      - annotation: !!omap
-          - chebi: "CHEBI:82696"
-          - kegg.compound: "C02872"
-          - metanetx.chemical: "MNXM51194"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3942"
       - name: "8-oxo-dGTP"
       - compartment: "p"
@@ -30228,55 +29778,6 @@
           - metanetx.chemical: "MNXM2497"
           - sbo: "SBO:0000247"
       - deltaG: -184.19
-    - !!omap
-      - id: "s_3944"
-      - name: "Apoprotein"
-      - compartment: "m"
-      - formula: "NH2R"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:13850"
-          - kegg.compound: "C16240"
-          - metanetx.chemical: "MNXM91491"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3945"
-      - name: "Protein N6-(octanoyl)lysine"
-      - compartment: "m"
-      - formula: "C8H16NOR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:80398"
-          - kegg.compound: "C16236"
-          - metanetx.chemical: "MNXM4090"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3946"
-      - name: "Lipoyl-[acp]"
-      - compartment: "m"
-      - formula: "C8H13OS3R"
-      - charge: 0
-      - annotation: !!omap
-          - bigg.metabolite: "lipACP"
-          - chebi: "CHEBI:80400"
-          - kegg.compound: "C16239"
-          - metanetx.chemical: "MNXM19093"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3947"
-      - name: "Protein N6-(lipoyl)lysine"
-      - compartment: "m"
-      - formula: "C8H14NOS2R"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:80399"
-          - kegg.compound: "C16237"
-          - metanetx.chemical: "MNXM96070"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_3948"
       - name: "beta-D-Fructose 6-phosphate"
@@ -30742,28 +30243,6 @@
           - sbo: "SBO:0000247"
       - deltaG: 216.48
     - !!omap
-      - id: "s_3985"
-      - name: "phospholipid"
-      - compartment: "erm"
-      - formula: "C5H6O8PR3"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:16247"
-          - kegg.compound: "C00865"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_3986"
-      - name: "phospholipid"
-      - compartment: "gm"
-      - formula: "C5H6O8PR3"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:16247"
-          - kegg.compound: "C00865"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_3987"
       - name: "ADP"
       - compartment: "erm"
@@ -30960,55 +30439,6 @@
       - charge: 0
       - annotation: !!omap
           - metanetx.chemical: "MNXM9266"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4004"
-      - name: "Sulfur donor"
-      - compartment: "m"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:80867"
-          - kegg.compound: "C17023"
-          - metanetx.chemical: "MNXM4111"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4005"
-      - name: "5'-Deoxyadenosine"
-      - compartment: "m"
-      - formula: "C10H13N5O3"
-      - charge: 0
-      - smiles: "CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O"
-      - annotation: !!omap
-          - bigg.metabolite: "dad_5"
-          - chebi: "CHEBI:17319"
-          - kegg.compound: "C05198"
-          - metanetx.chemical: "MNXM316"
-          - sbo: "SBO:0000247"
-      - deltaG: 117.75
-    - !!omap
-      - id: "s_4006"
-      - name: "S-sulfanyl-[L-cysteine desulfurase]"
-      - compartment: "m"
-      - charge: 0
-      - annotation: !!omap
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4007"
-      - name: "[disordered-form [Fe-S] cluster scaffold protein]"
-      - compartment: "m"
-      - charge: 0
-      - annotation: !!omap
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4008"
-      - name: "S-sulfanyl-[cysteine desulfurase]-[disordered-form scaffold protein] complex"
-      - compartment: "m"
-      - charge: 0
-      - annotation: !!omap
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
@@ -31267,43 +30697,6 @@
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
-      - id: "s_4028"
-      - name: "RX"
-      - compartment: "m"
-      - formula: "RX"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17792"
-          - kegg.compound: "C01322"
-          - metanetx.chemical: "MNXM6428"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4029"
-      - name: "HX"
-      - compartment: "m"
-      - formula: "X"
-      - charge: -1
-      - smiles: "C1=NC2=C(N1)C(=O)NC=N2"
-      - annotation: !!omap
-          - chebi: "CHEBI:16042"
-          - kegg.compound: "C00462"
-          - metanetx.chemical: "MNXM55844"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4030"
-      - name: "R-S-glutathione"
-      - compartment: "m"
-      - formula: "C10H16N3O6SR"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:17021"
-          - kegg.compound: "C02320"
-          - metanetx.chemical: "MNXM3350"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
       - id: "s_4031"
       - name: "iron(3+)"
       - compartment: "v"
@@ -31317,28 +30710,6 @@
           - metanetx.chemical: "MNXM196"
           - sbo: "SBO:0000247"
       - deltaG: -45.17
-    - !!omap
-      - id: "s_4032"
-      - name: "[protein]-L-lysine"
-      - compartment: "c"
-      - formula: "C6H13N2O"
-      - charge: 1
-      - annotation: !!omap
-          - bigg.metabolite: "pcollglys"
-          - chebi: "CHEBI:29969"
-          - kegg.compound: "C02188"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4033"
-      - name: "[protein]-N(6)-acetyl-L-lysine"
-      - compartment: "c"
-      - formula: "C8H14N2O2"
-      - charge: 0
-      - annotation: !!omap
-          - chebi: "CHEBI:61930"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_4034"
       - name: "Ala-Gln"
@@ -33617,6 +32988,7 @@
       - id: "s_4205"
       - name: "cofactor"
       - compartment: "c"
+      - charge: 0
       - smiles: "C1C2CN(CN2C3=C(N1)N=C(NC3=O)N)C4=CC=C(C=C4)C(=O)NC(CCC(=O)[O-])C(=O)[O-].[Ca+2]"
       - annotation: !!omap
           - sbo: "SBO:0000649"
@@ -33625,6 +32997,7 @@
       - id: "s_4206"
       - name: "ion"
       - compartment: "c"
+      - charge: 0
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -33643,22 +33016,36 @@
       - deltaG: -32.21
     - !!omap
       - id: "s_4209"
-      - name: "Ferrocytochrome b5"
+      - name: "ferrocytochrome b5"
       - compartment: "erm"
+      - formula: "Fe"
+      - charge: 3
       - annotation: !!omap
+          - bigg.metabolite: "ficytb5"
+          - chebi: "CHEBI:18097"
+          - kegg.compound: "C00996"
+          - metanetx.chemical: "MNXM1083"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
       - id: "s_4210"
-      - name: "Ferricytochrome b5"
+      - name: "ferricytochrome b5"
       - compartment: "erm"
+      - formula: "Fe"
+      - charge: 3
       - annotation: !!omap
+          - bigg.metabolite: "ficytb5"
+          - chebi: "CHEBI:18097"
+          - kegg.compound: "C00996"
+          - metanetx.chemical: "MNXM1083"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
       - id: "s_4211"
       - name: "hexanoyl-CoA"
       - compartment: "m"
+      - formula: "C27H46N7O17P3S"
+      - charge: 0
       - smiles: "CCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O"
       - annotation: !!omap
           - sbo: "SBO:0000247"
@@ -34200,7 +33587,7 @@
       - name: "hydrogen sulfide"
       - compartment: "e"
       - formula: "HS"
-      - charge: 0
+      - charge: -1
       - smiles: "S"
       - annotation: !!omap
           - bigg.metabolite: "h2s"
@@ -34225,32 +33612,6 @@
           - metanetx.chemical: "MNXM1214"
           - sbo: "SBO:0000247"
       - deltaG: -79.97
-    - !!omap
-      - id: "s_4265"
-      - name: "alkanesulfonate"
-      - compartment: "c"
-      - formula: "CH3O3SR"
-      - charge: 0
-      - annotation: !!omap
-          - biocyc: "Alkanesulfonates"
-          - chebi: "CHEBI:62081"
-          - kegg.compound: "C15521"
-          - metanetx.chemical: "MNXM729199"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
-    - !!omap
-      - id: "s_4266"
-      - name: "alkanesulfonate"
-      - compartment: "e"
-      - formula: "CH3O3SR"
-      - charge: 0
-      - annotation: !!omap
-          - biocyc: "Alkanesulfonates"
-          - chebi: "CHEBI:62081"
-          - kegg.compound: "C15521"
-          - metanetx.chemical: "MNXM729199"
-          - sbo: "SBO:0000247"
-      - deltaG: 10000000
     - !!omap
       - id: "s_4267"
       - name: "taurocholate"
@@ -34895,40 +34256,6 @@
           - seed.compound: "cpd00090"
       - deltaG: -424.2
     - !!omap
-      - id: "s_4315"
-      - name: "deamido-NAD(+)"
-      - compartment: "p"
-      - formula: "C21H24N6O15P2"
-      - charge: -2
-      - smiles: "C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)O"
-      - annotation: !!omap
-          - bigg.metabolite: "dnad"
-          - biocyc: "DEAMIDO-NAD"
-          - chebi: "CHEBI:58437"
-          - kegg.compound: "C00857"
-          - metanetx.chemical: "MNXM309"
-          - pubchem.compound: "45266646"
-          - sbo: "SBO:0000247"
-          - seed.compound: "cpd00638"
-      - deltaG: -361.56
-    - !!omap
-      - id: "s_4316"
-      - name: "nicotinic acid D-ribonucleotide"
-      - compartment: "p"
-      - formula: "C11H12NO9P"
-      - charge: -2
-      - smiles: "C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)O)O)O)C(=O)O"
-      - annotation: !!omap
-          - bigg.metabolite: "nicrnt"
-          - biocyc: "NICOTINATE_NUCLEOTIDE"
-          - chebi: "CHEBI:15763"
-          - kegg.compound: "C01185"
-          - metanetx.chemical: "MNXM194"
-          - pubchem.compound: "46878382"
-          - sbo: "SBO:0000247"
-          - seed.compound: "cpd00873"
-      - deltaG: -266.32
-    - !!omap
       - id: "s_4317"
       - name: "P(1),P(3)-bis(5'-adenosyl) triphosphate"
       - compartment: "c"
@@ -35137,6 +34464,31 @@
           - metanetx.chemical: "MNXM53309"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
+    - !!omap
+      - id: "s_4333"
+      - name: "sulphate"
+      - compartment: "m"
+      - formula: "O4S"
+      - charge: -2
+      - smiles: "[O-]S(=O)(=O)[O-]"
+      - annotation: !!omap
+          - bigg.metabolite: "so4"
+          - chebi: "CHEBI:16189"
+          - kegg.compound: "C00059"
+          - metanetx.chemical: "MNXM58"
+          - sbo: "SBO:0000247"
+      - deltaG: -178.74
+    - !!omap
+      - id: "s_4334"
+      - name: "trans-but-2-enoyl-CoA"
+      - compartment: "p"
+      - formula: "C25H36N7O17P3S"
+      - charge: -4
+      - smiles: "C/C=C/C(=O)SCCNC(=O)CCNC(=O)[C@@H](C(C)(C)COP(=O)(O)OP(=O)(O)OC[C@@H]1[C@H]([C@H]([C@@H](O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O"
+      - annotation: !!omap
+          - chebi: "CHEBI:50998"
+          - metanetx.chemical: "MNXM1364409"
+          - sbo: "SBO:0000247"
 - reactions:
     - !!omap
       - id: "r_0001"
@@ -35341,8 +34693,9 @@
           - s_0294: 1
           - s_0311: -1
           - s_0722: 1
-          - s_0794: 6
-          - s_0803: -3
+          - s_0794: 2
+          - s_0803: -1
+          - s_1275: -1
           - s_1322: 1
       - lower_bound: 0
       - upper_bound: 1000
@@ -40474,7 +39827,7 @@
           - s_0799: 2
           - s_0807: 1
           - s_1326: -1
-      - lower_bound: 0
+      - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "Q0080 and Q0085 and Q0130 and YBL099W and YBR039W and YDL004W and YDR298C and YDR377W and YJR121W and YKL016C and YLR295C and YML081C-A and YPL078C and YPL271W and YDR322C-A and YPR020W and YOL077W-A"
       - eccodes: "3.6.3.14"
@@ -40492,7 +39845,7 @@
       - confidence_score: 3
     - !!omap
       - id: "r_0227"
-      - name: "ATPase, cytosolic"
+      - name: "ATPase, plasma membrane"
       - metabolites: !!omap
           - s_0394: 1
           - s_0434: -1
@@ -40984,7 +40337,7 @@
           - s_0529: 1
           - s_1235: 1
       - lower_bound: 0
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YAR035W or YER024W"
       - eccodes: "2.3.1.7"
       - subsystem:
@@ -40998,6 +40351,7 @@
           - sbo: "SBO:0000176"
       - deltaG: -3.76
       - confidence_score: 3
+      - rxnNotes: "Only active if growth medium contains carnitine"
     - !!omap
       - id: "r_0253"
       - name: "carnitine O-acetyltransferase"
@@ -43962,7 +43316,7 @@
           - s_0722: -1
           - s_1322: 1
           - s_1487: -1
-      - lower_bound: 0
+      - lower_bound: -1000
       - upper_bound: 1000
       - gene_reaction_rule: "YGR204W"
       - eccodes:
@@ -44618,7 +43972,7 @@
           - s_1198: 1
           - s_1203: -1
       - lower_bound: 0
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YDL171C"
       - eccodes: "1.4.1.14"
       - subsystem:
@@ -44637,6 +43991,7 @@
           - sbo: "SBO:0000176"
       - deltaG: -21.62
       - confidence_score: 3
+      - rxnNotes: "Only active during nitrogen restriction"
     - !!omap
       - id: "r_0473"
       - name: "glutamate-5-semialdehyde dehydrogenase"
@@ -44980,11 +44335,11 @@
       - id: "r_0487"
       - name: "glycerol dehydrogenase (NADP-dependent)"
       - metabolites: !!omap
-          - s_0765: -1
-          - s_0771: 1
-          - s_0794: 1
-          - s_1207: -1
-          - s_1212: 1
+          - s_0765: 1
+          - s_0771: -1
+          - s_0794: -1
+          - s_1207: 1
+          - s_1212: -1
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YOR120W"
@@ -45207,7 +44562,7 @@
           - s_1205: 1
           - s_1488: -1
       - lower_bound: 0
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YAL044C and YDR019C and YFL018C and YMR189W"
       - eccodes:
           - "1.4.4.2"
@@ -45232,6 +44587,7 @@
           - sbo: "SBO:0000176"
       - deltaG: 1.69
       - confidence_score: 2
+      - rxnNotes: "Only active if glycine is nitrogen source, or under nitrogen restriction"
     - !!omap
       - id: "r_0502"
       - name: "glycine hydroxymethyltransferase"
@@ -45423,7 +44779,7 @@
           - s_1410: -1
           - s_1488: -1
       - lower_bound: 0
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YAL044C and YDR019C and YFL018C and YMR189W"
       - eccodes:
           - "1.4.4.2"
@@ -45450,7 +44806,7 @@
           - sbo: "SBO:0000176"
       - deltaG: 10000000
       - confidence_score: 2
-      - rxnNotes: "MetaNetX ID curated (PR #220) | KEGG ID curated (PR #220) | model.S(606,396) curated (PR #222)"
+      - rxnNotes: "Only active if glycine is nitrogen source, or under nitrogen restriction"
     - !!omap
       - id: "r_0508"
       - name: "glycine-cleavage complex (lipoylprotein)"
@@ -45498,7 +44854,7 @@
           - s_1409: -1
           - s_1488: -1
       - lower_bound: 0
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YAL044C and YDR019C and YFL018C and YMR189W"
       - eccodes:
           - "1.4.4.2"
@@ -45523,6 +44879,7 @@
           - sbo: "SBO:0000176"
       - deltaG: -3.54
       - confidence_score: 2
+      - rxnNotes: "Only active if glycine is nitrogen source, or under nitrogen restriction"
     - !!omap
       - id: "r_0510"
       - name: "glycogen (starch) synthase"
@@ -49955,6 +49312,7 @@
       - metabolites: !!omap
           - s_0465: 1
           - s_0532: 1
+          - s_0799: -1
           - s_1104: -1
           - s_1845: -1
       - lower_bound: -1000
@@ -50239,11 +49597,11 @@
       - id: "r_0732"
       - name: "methylenetetrahydrofolate dehydrogenase (NADP)"
       - metabolites: !!omap
-          - s_0304: 1
-          - s_0306: -1
-          - s_1207: -1
-          - s_1212: 1
-      - lower_bound: -1000
+          - s_0304: -1
+          - s_0306: 1
+          - s_1207: 1
+          - s_1212: -1
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YGR204W"
       - eccodes:
@@ -50264,11 +49622,11 @@
       - id: "r_0733"
       - name: "methylenetetrahydrofolate dehydrogenase (NADP)"
       - metabolites: !!omap
-          - s_0305: 1
-          - s_0307: -1
-          - s_1210: -1
-          - s_1214: 1
-      - lower_bound: -1000
+          - s_0305: -1
+          - s_0307: 1
+          - s_1210: 1
+          - s_1214: -1
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR084W"
       - eccodes:
@@ -51137,7 +50495,7 @@
           - s_0394: 1
           - s_0434: -1
           - s_0633: 1
-          - s_0794: -1
+          - s_0803: -1
           - s_1219: -1
           - s_1222: 1
           - s_1322: 1
@@ -51163,7 +50521,7 @@
           - s_0397: 1
           - s_0437: -1
           - s_0636: 1
-          - s_0799: -1
+          - s_0807: -1
           - s_1221: -1
           - s_1223: 1
           - s_1326: 1
@@ -51826,7 +51184,7 @@
           - s_1322: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YER005W"
+      - gene_reaction_rule: "YJR069C"
       - eccodes: "3.6.1.5"
       - subsystem:
           - "Purine metabolism"
@@ -52719,38 +52077,6 @@
       - deltaG: -16.73
       - confidence_score: 3
     - !!omap
-      - id: "r_0887"
-      - name: "phosphofructokinase (s7p)"
-      - metabolites: !!omap
-          - s_0394: 1
-          - s_0434: -1
-          - s_0794: 1
-          - s_1426: 1
-          - s_1427: -1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGR240C and YMR205C"
-      - eccodes: "2.7.1.11"
-      - subsystem:
-          - "Glycolysis / gluconeogenesis"
-      - annotation: !!omap
-          - bigg.reaction: "PFK_3"
-          - kegg.pathway:
-              - "sce00010"
-              - "sce00030"
-              - "sce00051"
-              - "sce00052"
-              - "sce01110"
-              - "sce01130"
-              - "sce01200"
-              - "sce01230"
-              - "sce03018"
-          - kegg.reaction: "R01843"
-          - metanetx.reaction: "MNXR102510"
-          - sbo: "SBO:0000176"
-      - deltaG: -16.72
-      - confidence_score: 2
-    - !!omap
       - id: "r_0888"
       - name: "phosphoglucomutase"
       - metabolites: !!omap
@@ -53610,8 +52936,8 @@
       - metabolites: !!omap
           - s_0204: 1
           - s_0456: 1
-          - s_1207: -1
-          - s_1212: 1
+          - s_1198: -1
+          - s_1203: 1
           - s_1377: -1
       - lower_bound: 0
       - upper_bound: 1000
@@ -57195,7 +56521,7 @@
           - s_0354: -1
           - s_0794: 1
           - s_0796: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YNR056C"
       - subsystem:
@@ -57757,7 +57083,7 @@
           - s_0026: -1
           - s_0794: 1
           - s_0796: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YKL217W"
       - subsystem:
@@ -58183,7 +57509,7 @@
           - s_0788: -1
           - s_0794: 1
           - s_0796: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YER056C or YER060W or YER060W-A"
       - subsystem:
@@ -58308,7 +57634,7 @@
           - s_0796: -1
           - s_0955: 1
           - s_0956: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL025C or YKR039W or YOR348C or YPL265W"
       - subsystem:
@@ -58330,7 +57656,7 @@
           - s_0796: -1
           - s_0965: 1
           - s_0966: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YEL063C or YKR039W or YNL270C"
       - subsystem:
@@ -58369,7 +57695,7 @@
           - s_0796: -1
           - s_0969: 1
           - s_0970: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL025C or YDR508C or YKR039W or YPL265W"
       - subsystem:
@@ -58450,7 +57776,7 @@
           - s_0796: -1
           - s_0973: 1
           - s_0974: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YFL055W or YKR039W or YPL265W"
       - subsystem:
@@ -58486,7 +57812,7 @@
           - s_0796: -1
           - s_0981: 1
           - s_0982: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YBR069C or YCL025C or YDR046C or YDR508C or YKR039W or YOL020W"
       - subsystem:
@@ -58564,7 +57890,7 @@
           - s_0796: -1
           - s_0991: 1
           - s_0992: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL025C or YFL055W or YKR039W or YPL265W"
       - subsystem:
@@ -58624,7 +57950,7 @@
           - s_0796: -1
           - s_0999: 1
           - s_1000: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL025C or YDR508C or YKR039W or YPL265W"
       - subsystem:
@@ -58663,7 +57989,7 @@
           - s_0796: -1
           - s_1006: 1
           - s_1007: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR069C or YGR191W or YKR039W"
       - subsystem:
@@ -58741,7 +58067,7 @@
           - s_0796: -1
           - s_1016: 1
           - s_1017: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YBR069C or YCL025C or YDR046C or YKR039W"
       - subsystem:
@@ -58857,7 +58183,7 @@
           - s_0796: -1
           - s_1021: 1
           - s_1022: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YBR069C or YCL025C or YDR046C or YDR508C or YKR039W"
       - subsystem:
@@ -58896,7 +58222,7 @@
           - s_0796: -1
           - s_1025: 1
           - s_1026: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YKR039W or YNL268W"
       - subsystem:
@@ -58915,7 +58241,7 @@
           - s_0796: -1
           - s_1029: 1
           - s_1030: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YCL025C or YDR046C or YDR508C or YGR055W or YHL036W or YKR039W"
       - subsystem:
@@ -58934,7 +58260,7 @@
           - s_0796: -1
           - s_1032: 1
           - s_1033: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YCL025C or YDR046C or YKR039W or YOL020W"
       - subsystem:
@@ -58953,7 +58279,7 @@
           - s_0796: -1
           - s_1035: 1
           - s_1036: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YKR039W or YOR348C"
       - subsystem:
@@ -58972,7 +58298,7 @@
           - s_0796: -1
           - s_1039: 1
           - s_1041: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL025C or YDR508C or YFL055W or YKR039W or YPL265W or YDR105C"
       - subsystem:
@@ -58991,7 +58317,7 @@
           - s_0796: -1
           - s_1045: 1
           - s_1046: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCL025C or YDR508C or YKR039W"
       - subsystem:
@@ -59011,7 +58337,7 @@
           - s_0796: -1
           - s_1048: 1
           - s_1049: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YBR069C or YDR046C or YKR039W or YOL020W"
       - subsystem:
@@ -59090,7 +58416,7 @@
           - s_0796: -1
           - s_1051: 1
           - s_1052: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YBR069C or YCL025C or YDR046C or YKR039W or YOL020W"
       - subsystem:
@@ -59109,7 +58435,7 @@
           - s_0796: -1
           - s_1056: 1
           - s_1057: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR068C or YBR069C or YCL025C or YDR046C or YKR039W"
       - subsystem:
@@ -59330,7 +58656,7 @@
           - s_0796: -1
           - s_1266: 1
           - s_1267: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YKR039W"
       - subsystem:
@@ -59368,7 +58694,7 @@
           - s_0032: -1
           - s_0794: 1
           - s_0796: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YCR028C"
       - subsystem:
@@ -59421,7 +58747,7 @@
           - s_0796: -1
           - s_1322: 1
           - s_1324: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YBR296C or YCR037C or YJL198W or YML123C or YNR013C"
       - subsystem:
@@ -59459,7 +58785,7 @@
           - s_0796: -1
           - s_1373: 1
           - s_1374: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YDR456W or YJL129C"
       - subsystem:
@@ -59497,7 +58823,7 @@
           - s_1389: 1
           - s_1390: -1
       - lower_bound: -1000
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YLL028W or YOR273C"
       - subsystem:
           - "Transport [c, e]"
@@ -59535,7 +58861,7 @@
           - s_0796: -1
           - s_1396: 1
           - s_1397: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YGL186C"
       - subsystem:
@@ -59553,7 +58879,7 @@
           - s_0796: -1
           - s_1399: 1
           - s_1400: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YKL217W"
       - subsystem:
@@ -59665,7 +58991,7 @@
           - s_1439: 1
           - s_1440: -1
       - lower_bound: -1000
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YBR132C or YHL016C or YKR039W or YLL028W or YOR273C or YPL274W"
       - subsystem:
           - "Transport [c, e]"
@@ -59706,7 +59032,7 @@
           - s_1442: 1
           - s_1443: -1
       - lower_bound: -1000
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YGR138C or YLL028W or YOR273C or YPR156C"
       - subsystem:
           - "Transport [c, e]"
@@ -59910,7 +59236,7 @@
           - s_0796: -2
           - s_1552: 1
           - s_1553: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YHL016C"
       - subsystem:
@@ -61206,7 +60532,7 @@
           - s_0270: 1
           - s_0300: -1
           - s_0775: 1
-          - s_0794: 1
+          - s_0794: -1
           - s_1322: 1
       - lower_bound: 0
       - upper_bound: 1000
@@ -67305,7 +66631,7 @@
           - s_1520: -1
           - s_1521: 1
       - lower_bound: -1000
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YGR289C"
       - subsystem:
           - "Transport [c, e]"
@@ -68196,7 +67522,6 @@
           - s_0372: -1
           - s_0460: 1
           - s_0465: -1
-          - s_0799: -1
           - s_1845: 1
           - s_2770: 1
       - lower_bound: 0
@@ -68222,7 +67547,6 @@
       - metabolites: !!omap
           - s_0460: 1
           - s_0465: -1
-          - s_0799: -1
           - s_1845: 1
           - s_2771: -1
           - s_2772: 1
@@ -68248,7 +67572,6 @@
       - metabolites: !!omap
           - s_0460: 1
           - s_0465: -1
-          - s_0799: -1
           - s_1845: 1
           - s_2773: -1
           - s_2774: 1
@@ -70328,7 +69651,7 @@
       - name: "peroxisomal acyl-CoA thioesterase (4:0)"
       - metabolites: !!omap
           - s_0534: 1
-          - s_0801: 5
+          - s_0801: 1
           - s_0809: -1
           - s_2882: 1
           - s_2884: -1
@@ -70433,7 +69756,7 @@
           - s_0840: 1
           - s_1279: -1
           - s_2884: -1
-          - s_2886: 1
+          - s_4334: 1
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YGL205W"
@@ -70876,10 +70199,9 @@
       - id: "r_2254"
       - name: "2-enoyl-CoA hydratase (3-hydroxybutanoyl-CoA)"
       - metabolites: !!omap
-          - s_0801: 4
           - s_0809: -1
-          - s_2886: -1
           - s_2902: 1
+          - s_4334: -1
       - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YKR009C"
@@ -71541,6 +70863,7 @@
       - metabolites: !!omap
           - s_0378: 1
           - s_0534: -1
+          - s_0801: 4
           - s_2884: 1
           - s_2915: -1
       - lower_bound: 0
@@ -72706,7 +72029,7 @@
           - s_2955: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YDL052C or YOR175C"
+      - gene_reaction_rule: "YOR175C or YPR139C"
       - eccodes:
           - "2.3.1.23"
           - "2.3.1.51"
@@ -72756,7 +72079,7 @@
           - s_2957: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YDL052C or YOR175C"
+      - gene_reaction_rule: "YOR175C or YPR139C"
       - eccodes:
           - "2.3.1.23"
           - "2.3.1.51"
@@ -72806,7 +72129,7 @@
           - s_2959: 1
       - lower_bound: 0
       - upper_bound: 1000
-      - gene_reaction_rule: "YDL052C or YOR175C"
+      - gene_reaction_rule: "YOR175C or YPR139C"
       - eccodes:
           - "2.3.1.23"
           - "2.3.1.51"
@@ -75306,7 +74629,7 @@
           - s_3098: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - gene_reaction_rule: "YBR029C"
+      - gene_reaction_rule: "YGR046W"
       - eccodes: "2.7.7.41"
       - subsystem:
           - "Glycerophospholipid metabolism"
@@ -75330,7 +74653,7 @@
           - s_3100: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - gene_reaction_rule: "YBR029C"
+      - gene_reaction_rule: "YGR046W"
       - eccodes: "2.7.7.41"
       - subsystem:
           - "Glycerophospholipid metabolism"
@@ -75354,7 +74677,7 @@
           - s_3102: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - gene_reaction_rule: "YBR029C"
+      - gene_reaction_rule: "YGR046W"
       - eccodes: "2.7.7.41"
       - subsystem:
           - "Glycerophospholipid metabolism"
@@ -75378,7 +74701,7 @@
           - s_3104: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - gene_reaction_rule: "YBR029C"
+      - gene_reaction_rule: "YGR046W"
       - eccodes: "2.7.7.41"
       - subsystem:
           - "Glycerophospholipid metabolism"
@@ -75402,7 +74725,7 @@
           - s_3106: 1
       - lower_bound: -1000
       - upper_bound: 1000
-      - gene_reaction_rule: "YBR029C"
+      - gene_reaction_rule: "YGR046W"
       - eccodes: "2.7.7.41"
       - subsystem:
           - "Glycerophospholipid metabolism"
@@ -105337,6 +104660,7 @@
       - name: "palmitate [cytoplasm] SLIME rxn"
       - metabolites: !!omap
           - s_0694: 0.25542094
+          - s_0794: -1
           - s_1286: -1
           - s_3740: 0.25642888
       - lower_bound: 0
@@ -105353,6 +104677,7 @@
       - name: "palmitoleate [cytoplasm] SLIME rxn"
       - metabolites: !!omap
           - s_0694: 0.25340506
+          - s_0794: -1
           - s_1293: -1
           - s_3741: 0.254413
       - lower_bound: 0
@@ -105369,6 +104694,7 @@
       - name: "stearate [cytoplasm] SLIME rxn"
       - metabolites: !!omap
           - s_0694: 0.2834747
+          - s_0794: -1
           - s_1449: -1
           - s_3742: 0.28448264
       - lower_bound: 0
@@ -105385,6 +104711,7 @@
       - name: "oleate [cytoplasm] SLIME rxn"
       - metabolites: !!omap
           - s_0694: 0.28145882
+          - s_0794: -1
           - s_1260: -1
           - s_3743: 0.28246676
       - lower_bound: 0
@@ -106459,9 +105786,11 @@
           - s_0394: 55.3
           - s_0434: -55.3
           - s_0450: 1
-          - s_0794: 55.3
+          - s_0794: 52.3
           - s_0803: -55.3
           - s_1096: -1
+          - s_1207: 3
+          - s_1212: -3
           - s_1322: 55.3
           - s_3717: -1
           - s_3718: -1
@@ -106571,46 +105900,47 @@
       - id: "r_4047"
       - name: "protein pseudoreaction"
       - metabolites: !!omap
-          - s_0404: -0.527012401964609
-          - s_0428: -0.184592178971158
-          - s_0430: -0.116820320233205
-          - s_0432: -0.341731040134025
-          - s_0542: -0.00758125964441183
-          - s_0747: -0.121070423838014
-          - s_0748: -0.346670343714861
-          - s_0757: -0.33357542435412
-          - s_0832: -0.0761571964321321
-          - s_0847: -0.221349807713738
-          - s_1077: -0.340467492580805
-          - s_1099: -0.328750973172121
-          - s_1148: -0.0582378601225956
-          - s_1314: -0.15380767944836
-          - s_1379: -0.189186891122282
-          - s_1428: -0.212964470019559
-          - s_1491: -0.219856538246244
-          - s_1527: -0.0326223903740585
-          - s_1533: -0.117164920221219
-          - s_1561: -0.303939602869103
-          - s_1582: 0.527012401964609
-          - s_1583: 0.184592178971158
-          - s_1585: 0.116820320233205
-          - s_1587: 0.341731040134025
-          - s_1589: 0.00758125964441183
-          - s_1590: 0.121070423838014
-          - s_1591: 0.346670343714861
-          - s_1593: 0.33357542435412
-          - s_1594: 0.0761571964321321
-          - s_1596: 0.221349807713738
-          - s_1598: 0.340467492580805
-          - s_1600: 0.328750973172121
-          - s_1602: 0.0582378601225956
-          - s_1604: 0.15380767944836
-          - s_1606: 0.189186891122282
-          - s_1607: 0.212964470019559
-          - s_1608: 0.219856538246244
-          - s_1610: 0.0326223903740585
-          - s_1612: 0.117164920221219
-          - s_1614: 0.303939602869103
+          - s_0404: -0.347736630768556
+          - s_0428: -0.194296205196944
+          - s_0430: -0.191468067207859
+          - s_0432: -0.240359946744132
+          - s_0542: -0.0375594996568427
+          - s_0747: -0.141160332291015
+          - s_0748: -0.296487312016288
+          - s_0757: -0.283748983111195
+          - s_0794: 0.170091131972326
+          - s_0832: -0.08356708763266
+          - s_0847: -0.265490320174191
+          - s_1077: -0.362523293945085
+          - s_1099: -0.32939964005654
+          - s_1148: -0.0814974664727417
+          - s_1314: -0.166795958026717
+          - s_1379: -0.179821149401597
+          - s_1428: -0.277725658983052
+          - s_1491: -0.235173028298401
+          - s_1527: -0.0385698144584582
+          - s_1533: -0.123025660792855
+          - s_1561: -0.31460454977486
+          - s_1582: 0.347736630768556
+          - s_1583: 0.194296205196944
+          - s_1585: 0.191468067207859
+          - s_1587: 0.240359946744132
+          - s_1589: 0.0375594996568427
+          - s_1590: 0.141160332291015
+          - s_1591: 0.296487312016288
+          - s_1593: 0.283748983111195
+          - s_1594: 0.08356708763266
+          - s_1596: 0.265490320174191
+          - s_1598: 0.362523293945085
+          - s_1600: 0.32939964005654
+          - s_1602: 0.0814974664727417
+          - s_1604: 0.166795958026717
+          - s_1606: 0.179821149401597
+          - s_1607: 0.277725658983052
+          - s_1608: 0.235173028298401
+          - s_1610: 0.0385698144584582
+          - s_1612: 0.123025660792855
+          - s_1614: 0.31460454977486
           - s_3717: 1
       - lower_bound: 0
       - upper_bound: 1000
@@ -106646,6 +105976,7 @@
           - s_0423: -0.0445348319234424
           - s_0526: -0.043276239184487
           - s_0782: -0.0445348319234424
+          - s_0794: -0.380675999881061
           - s_1545: -0.0579920969091588
           - s_3719: 1
       - lower_bound: 0
@@ -106664,6 +105995,7 @@
           - s_0589: -0.00240000011399388
           - s_0615: -0.00240000011399388
           - s_0649: -0.00359999993816018
+          - s_0794: -0.0240000002086162
           - s_3720: 1
       - lower_bound: 0
       - upper_bound: 1000
@@ -107078,6 +106410,7 @@
       - id: "r_4076"
       - name: "phytosphingosine [endoplasmic reticulum] SLIME rxn"
       - metabolites: !!omap
+          - s_0794: 1
           - s_1366: -1
           - s_3726: 0.3175126
           - s_3742: 0.28448264
@@ -107094,6 +106427,7 @@
       - id: "r_4077"
       - name: "phytosphingosine 1-phosphate [endoplasmic reticulum] SLIME rxn"
       - metabolites: !!omap
+          - s_0794: -1
           - s_1367: -1
           - s_3728: 0.397492502
           - s_3742: 0.28448264
@@ -107110,6 +106444,7 @@
       - id: "r_4078"
       - name: "sphinganine [endoplasmic reticulum] SLIME rxn"
       - metabolites: !!omap
+          - s_0794: 1
           - s_1445: -1
           - s_3726: 0.30252114
           - s_3742: 0.28448264
@@ -107126,6 +106461,7 @@
       - id: "r_4079"
       - name: "sphinganine 1-phosphate [endoplasmic reticulum] SLIME rxn"
       - metabolites: !!omap
+          - s_0794: -1
           - s_1446: -1
           - s_3728: 0.380485162
           - s_3742: 0.28448264
@@ -108809,27 +108145,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
-      - id: "r_4173"
-      - name: "L-cysteine:sulfur-acceptor sulfurtransferase"
-      - metabolites: !!omap
-          - s_0957: 1
-          - s_3784: -1
-          - s_3785: -1
-          - s_3786: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YCL017C"
-      - eccodes: "2.8.1.7"
-      - subsystem:
-          - "Thiamine metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R11528"
-          - metanetx.reaction: "MNXR114822"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4174"
       - name: "Probable ATP-dependent permease"
       - metabolites: !!omap
@@ -109215,28 +108530,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
-      - id: "r_4193"
-      - name: "S-Adenosyl-L-methionine:histone-L-lysine N6-methyltransferase"
-      - metabolites: !!omap
-          - s_0800: 1
-          - s_3818: -1
-          - s_3819: -1
-          - s_3820: 1
-          - s_3821: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YHR119W or YDR440W or YJL168C"
-      - eccodes: "2.1.1.43"
-      - subsystem:
-          - "Lysine metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R03938"
-          - metanetx.reaction: "MNXR108541"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4194"
       - name: "Zinc transporter YKE4"
       - metabolites: !!omap
@@ -109333,69 +108626,6 @@
       - deltaG: 9.76
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4199"
-      - name: "Glutathione S-transferase 1 (EC 2.5.1.18) (GST-I)"
-      - metabolites: !!omap
-          - s_3830: -1
-          - s_3831: -1
-          - s_3832: 1
-          - s_3833: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YIR038C"
-      - eccodes: "2.5.1.18"
-      - subsystem:
-          - "Glutathione metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R03522"
-          - metanetx.reaction: "MNXR125877"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142) | MetaNetX ID curated (PR #220)"
-    - !!omap
-      - id: "r_4200"
-      - name: "Glutathione S-transferase 1 (EC 2.5.1.18) (GST-I)"
-      - metabolites: !!omap
-          - s_0750: -1
-          - s_3834: -1
-          - s_3835: 1
-          - s_3836: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YMR251W or YKR076W"
-      - eccodes: "2.5.1.18"
-      - subsystem:
-          - "Glutathione metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R03522"
-          - metanetx.reaction: "MNXR125877"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142) | MetaNetX ID curated (PR #220)"
-    - !!omap
-      - id: "r_4201"
-      - name: "Glutathione S-transferase 1 (EC 2.5.1.18) (GST-I)"
-      - metabolites: !!omap
-          - s_0752: -1
-          - s_4028: -1
-          - s_4029: 1
-          - s_4030: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YLL060C"
-      - eccodes: "2.5.1.18"
-      - subsystem:
-          - "Glutathione metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R03522"
-          - metanetx.reaction: "MNXR125877"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142) | MetaNetX ID curated (PR #220)"
     - !!omap
       - id: "r_4202"
       - name: "L-methionine:oxidized-thioredoxin S-oxidoreductase"
@@ -109503,27 +108733,6 @@
       - deltaG: -0.74
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4207"
-      - name: "Glutathione S-transferase omega-like 2 (EC 2.5.1.18) (Extracellular mutant protein 4) (Glutathione-dependent dehydroascorbate reductase) (EC 1.8.5.1)"
-      - metabolites: !!omap
-          - s_3842: -1
-          - s_3843: -1
-          - s_3844: 1
-          - s_3845: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGR154C"
-      - eccodes: "2.5.1.18"
-      - subsystem:
-          - "Glutathione metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R03522"
-          - metanetx.reaction: "MNXR125877"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142) | MetaNetX ID curated (PR #220)"
     - !!omap
       - id: "r_4208"
       - name: "glutathione:dehydroascorbate oxidoreductase"
@@ -109666,27 +108875,6 @@
           - metanetx.reaction: "MNXR95828"
           - sbo: "SBO:0000176"
       - deltaG: 4.56
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4215"
-      - name: "Cys-Gly metallodipeptidase DUG1 (EC 3.4.13.-) (Deficient in utilization of glutathione protein 1) (GSH degradosomal complex subunit DUG1)"
-      - metabolites: !!omap
-          - s_0803: -1
-          - s_1003: 1
-          - s_3853: -1
-          - s_3854: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YFR044C"
-      - eccodes: "3.4.13.-"
-      - subsystem:
-          - "Glutathione metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R04951"
-          - metanetx.reaction: "MNXR109244"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
@@ -109890,28 +109078,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
-      - id: "r_4225"
-      - name: "Broad-range acid phosphatase DET1 (EC 3.1.3.-) (Decreased ergosterol transport protein 1)"
-      - metabolites: !!omap
-          - s_0394: 1
-          - s_0434: -1
-          - s_0794: 1
-          - s_0803: -1
-          - s_1322: 1
-          - s_3865: -1
-          - s_3866: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YDR051C or YOL075C"
-      - eccodes: "3.1.3.-"
-      - subsystem:
-          - "Transport [c, e]"
-      - annotation: !!omap
-          - sbo: "SBO:0000655"
-      - deltaG: -2.69
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4226"
       - name: "L-Alanine:2-oxoglutarate aminotransferase"
       - metabolites: !!omap
@@ -110042,27 +109208,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
-      - id: "r_4233"
-      - name: "S-Adenosyl-L-methionine:protein-C-terminal-S-farnesyl-L-cysteine O-methyltransferase"
-      - metabolites: !!omap
-          - s_1413: 1
-          - s_1416: -1
-          - s_3876: -1
-          - s_3877: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YDR410C"
-      - eccodes: "2.1.1.100"
-      - subsystem:
-          - "Terpenoid backbone biosynthesis"
-      - annotation: !!omap
-          - kegg.reaction: "R04496"
-          - metanetx.reaction: "MNXR108926"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4234"
       - name: "Phosphatidylinositol N-acetylglucosaminyltransferase subunit GPI19 (GPI-GlcNAc transferase complex subunit GPI19) (GPI-GnT subunit GPI19) (EC 2.4.1.198)"
       - metabolites: !!omap
@@ -110147,28 +109292,6 @@
           - "Transport [c, g]"
       - annotation: !!omap
           - sbo: "SBO:0000655"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4239"
-      - name: "L-arginyl-tRNA(Arg):protein arginyltransferase"
-      - metabolites: !!omap
-          - s_0428: -1
-          - s_0794: 1
-          - s_1583: 1
-          - s_3884: -1
-          - s_3885: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGL017W"
-      - eccodes: "2.3.2.8"
-      - subsystem:
-          - "tRNA metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R03862"
-          - metanetx.reaction: "MNXR108483"
-          - sbo: "SBO:0000176"
       - deltaG: 10000000
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
@@ -110285,25 +109408,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142) | KEGG ID curated (PR #220)"
     - !!omap
-      - id: "r_4246"
-      - name: "Alpha-mannosidase (EC 3.2.1.24) (Alpha-D-mannoside mannohydrolase)"
-      - metabolites: !!omap
-          - s_0810: -1
-          - s_3900: -1
-          - s_3901: 1
-          - s_3902: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGL156W"
-      - eccodes: "3.2.1.24"
-      - subsystem:
-          - "Fructose and mannose metabolism"
-      - annotation: !!omap
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4247"
       - name: "ATP:L-threonyl,bicarbonate adenylyltransferase"
       - metabolites: !!omap
@@ -110392,50 +109496,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142) | model.S(602,3615) curated (PR #222)"
     - !!omap
-      - id: "r_4251"
-      - name: "CTP:phosphatidate cytidyltransferase"
-      - metabolites: !!omap
-          - s_0541: -1
-          - s_0636: 1
-          - s_0799: -1
-          - s_3907: -1
-          - s_3908: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGR046W"
-      - eccodes: "2.7.7.41"
-      - subsystem:
-          - "Glycerophospholipid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R01799"
-          - metanetx.reaction: "MNXR107177"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142) | model.S(606,3616) curated (PR #222)"
-    - !!omap
-      - id: "r_4252"
-      - name: "Thiamine thiazole synthase (Thiazole biosynthetic enzyme)"
-      - metabolites: !!omap
-          - s_0803: 3
-          - s_1003: -1
-          - s_1198: -1
-          - s_1216: 1
-          - s_3909: -1
-          - s_3910: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGR144W"
-      - subsystem:
-          - "Thiamine metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R10685"
-          - metanetx.reaction: "MNXR139808"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142) | MetaNetX ID curated (PR #220)"
-    - !!omap
       - id: "r_4253"
       - name: "dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,2-glucosyltransferase"
       - metabolites: !!omap
@@ -110501,51 +109561,6 @@
           - bigg.reaction: "NODOy"
           - kegg.reaction: "R05725"
           - metanetx.reaction: "MNXR101997"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4256"
-      - name: "Putative lipoate-protein ligase A (EC 6.3.1.20) (Altered inheritance rate of mitochondria protein 22)"
-      - metabolites: !!omap
-          - s_0434: -1
-          - s_0633: 1
-          - s_0794: -1
-          - s_3915: -1
-          - s_3916: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YJL046W"
-      - eccodes: "6.3.1.20"
-      - subsystem:
-          - "Lipoic acid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R07770"
-          - metanetx.reaction: "MNXR101081"
-          - sbo: "SBO:0000176"
-      - deltaG: -5.03
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4258"
-      - name: "[lipoyl-carrier protein]-L-lysine:lipoate ligase (AMP-forming)"
-      - metabolites: !!omap
-          - s_0423: 1
-          - s_0434: -1
-          - s_0633: 1
-          - s_3915: -1
-          - s_3917: -1
-          - s_3918: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YJL046W"
-      - eccodes: "6.3.1.20"
-      - subsystem:
-          - "Lipoic acid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R11143"
-          - metanetx.reaction: "MNXR114442"
           - sbo: "SBO:0000176"
       - deltaG: 10000000
       - confidence_score: 2
@@ -110648,28 +109663,6 @@
       - deltaG: 13.92
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142) | rxnDirection curated (PR #227)"
-    - !!omap
-      - id: "r_4265"
-      - name: "nucleoside-triphosphate diphosphohydrolase"
-      - metabolites: !!omap
-          - s_0633: 1
-          - s_0794: 1
-          - s_0803: -1
-          - s_3927: -1
-          - s_3928: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YJR069C"
-      - eccodes: "3.6.1.9"
-      - subsystem:
-          - "Purine metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R01532"
-          - metanetx.reaction: "MNXR107043"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
       - id: "r_4266"
       - name: "Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)"
@@ -110919,51 +109912,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
-      - id: "r_4277"
-      - name: "acyl-CoA:sn-glycerol-3-phosphate 1-O-acyltransferase"
-      - metabolites: !!omap
-          - s_0530: 1
-          - s_3937: -1
-          - s_3938: -1
-          - s_3939: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YLR099C or YPR139C"
-      - eccodes: "2.3.1.51"
-      - subsystem:
-          - "Glycerolipid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R00851"
-          - metanetx.reaction: "MNXR106715"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4278"
-      - name: "diphthine:ammonia ligase (AMP-forming)"
-      - metabolites: !!omap
-          - s_0419: -1
-          - s_0423: 1
-          - s_0434: -1
-          - s_0633: 1
-          - s_0794: 1
-          - s_3940: -1
-          - s_3941: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YLR143W"
-      - eccodes: "6.3.1.14"
-      - subsystem:
-          - "Peptidyl-diphthamide biosynthetic process"
-      - annotation: !!omap
-          - kegg.reaction: "R03613"
-          - metanetx.reaction: "MNXR108295"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4279"
       - name: "8-oxo-dGTP diphosphohydrolase"
       - metabolites: !!omap
@@ -110985,48 +109933,6 @@
       - deltaG: -5.68
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142) | model.S(608,3642) curated (PR #222) | rxnDirection curated (PR #227)"
-    - !!omap
-      - id: "r_4280"
-      - name: "octanoyl-[acp]:protein N6-octanoyltransferase"
-      - metabolites: !!omap
-          - s_1254: -1
-          - s_1845: 1
-          - s_3944: -1
-          - s_3945: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YLR239C"
-      - eccodes: "2.3.1.181"
-      - subsystem:
-          - "Lipoic acid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R07766"
-          - metanetx.reaction: "MNXR111354"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4281"
-      - name: "lipoyl-[acp]:protein N6-lipoyltransferase"
-      - metabolites: !!omap
-          - s_1845: 1
-          - s_3944: -1
-          - s_3946: -1
-          - s_3947: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YLR239C"
-      - eccodes: "2.3.1.181"
-      - subsystem:
-          - "Lipoic acid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R07769"
-          - metanetx.reaction: "MNXR111357"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
       - id: "r_4282"
       - name: "ATP:D-fructose-6-phosphate 2-phosphotransferase"
@@ -111585,28 +110491,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142) | model.S(601,3668) curated (PR #222)"
     - !!omap
-      - id: "r_4308"
-      - name: "Probable phospholipid-transporting ATPase DNF3 (EC 3.6.3.1) (Aminophospholipid translocase) (APT) (Phospholipid translocase) (PLT)"
-      - metabolites: !!omap
-          - s_2783: 1
-          - s_2808: -1
-          - s_2831: -1
-          - s_2966: 1
-          - s_3985: -1
-          - s_3986: 1
-          - s_3987: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YMR162C"
-      - eccodes: "3.6.3.1"
-      - subsystem:
-          - "Transport [erm, gm]"
-      - annotation: !!omap
-          - sbo: "SBO:0000655"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4309"
       - name: "Putative esterase YMR210W (EC 3.1.1.-)"
       - metabolites: !!omap
@@ -111895,7 +110779,6 @@
       - metabolites: !!omap
           - s_0644: -1
           - s_0646: 1
-          - s_0795: 1
           - s_4002: -1
           - s_4003: 1
       - lower_bound: -1000
@@ -111907,69 +110790,6 @@
       - annotation: !!omap
           - kegg.reaction: "R07129"
           - metanetx.reaction: "MNXR110833"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4323"
-      - name: "protein N6-(octanoyl)lysine:sulfur sulfurtransferase"
-      - metabolites: !!omap
-          - s_1031: 2
-          - s_1419: -2
-          - s_3945: -1
-          - s_3947: 1
-          - s_4004: -2
-          - s_4005: 2
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YOR196C"
-      - eccodes: "2.8.1.8"
-      - subsystem:
-          - "Lipoic acid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R07767"
-          - metanetx.reaction: "MNXR111355"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4324"
-      - name: "octanoyl-[acp]:sulfur sulfurtransferase"
-      - metabolites: !!omap
-          - s_1031: 2
-          - s_1254: -1
-          - s_1419: -2
-          - s_3946: 1
-          - s_4004: -2
-          - s_4005: 2
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YOR196C"
-      - eccodes: "2.8.1.8"
-      - subsystem:
-          - "Lipoic acid metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R07768"
-          - metanetx.reaction: "MNXR111356"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
-      - id: "r_4325"
-      - name: "Iron sulfur cluster assembly protein 2, mitochondrial (Iron sulfur cluster scaffold protein 2)"
-      - metabolites: !!omap
-          - s_4006: -1
-          - s_4007: -1
-          - s_4008: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YOR226C or YPL135W"
-      - subsystem:
-          - "Cysteine and methionine metabolism"
-      - annotation: !!omap
           - sbo: "SBO:0000176"
       - deltaG: 10000000
       - confidence_score: 2
@@ -112264,28 +111084,6 @@
       - confidence_score: 2
       - rxnNotes: "added after new annotation (PR #142)"
     - !!omap
-      - id: "r_4340"
-      - name: "D-amino-acid N-acetyltransferase HPA3 (DNT) (EC 2.3.1.36) (EC 2.3.1.48) (Histone and other protein acetyltransferase 3)"
-      - metabolites: !!omap
-          - s_0373: -1
-          - s_0529: 1
-          - s_0794: 1
-          - s_4032: -1
-          - s_4033: 1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YEL066W"
-      - eccodes:
-          - "2.3.1.36"
-          - "2.3.1.48"
-      - subsystem:
-          - "Phenylalanine metabolism"
-      - annotation: !!omap
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 2
-      - rxnNotes: "added after new annotation (PR #142)"
-    - !!omap
       - id: "r_4341"
       - name: "glycerol 2-phosphate(2-) transport"
       - metabolites: !!omap
@@ -112330,7 +111128,7 @@
           - s_0796: -1
           - s_4064: 1
           - s_4065: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112386,7 +111184,7 @@
           - s_0796: -1
           - s_4066: 1
           - s_4067: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112424,7 +111222,7 @@
           - s_0796: -1
           - s_4068: 1
           - s_4069: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112442,7 +111240,7 @@
           - s_0796: -1
           - s_4070: -1
           - s_4071: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112579,7 +111377,7 @@
           - s_0796: -1
           - s_4079: 1
           - s_4080: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112615,7 +111413,7 @@
           - s_0796: -1
           - s_4081: 1
           - s_4082: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112654,7 +111452,7 @@
           - s_0796: -1
           - s_4083: 1
           - s_4084: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112673,7 +111471,7 @@
           - s_0796: -1
           - s_4085: -1
           - s_4086: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -112729,7 +111527,7 @@
           - s_0796: -1
           - s_4088: 1
           - s_4090: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112746,7 +111544,7 @@
           - s_0796: -1
           - s_4089: 1
           - s_4091: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112785,7 +111583,7 @@
           - s_0796: -1
           - s_4092: 1
           - s_4093: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112822,7 +111620,7 @@
           - s_0796: -1
           - s_4098: 1
           - s_4099: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112859,7 +111657,7 @@
           - s_0796: -1
           - s_4100: 1
           - s_4101: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112897,7 +111695,7 @@
           - s_0796: -1
           - s_4102: 1
           - s_4103: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -112936,7 +111734,7 @@
           - s_0796: -1
           - s_4104: 1
           - s_4105: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113010,7 +111808,7 @@
           - s_0796: -1
           - s_4108: 1
           - s_4109: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113048,7 +111846,7 @@
           - s_0796: -1
           - s_4110: 1
           - s_4111: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113126,7 +111924,7 @@
           - s_0796: -1
           - s_4117: 1
           - s_4118: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113163,7 +111961,7 @@
           - s_0796: -1
           - s_4119: -1
           - s_4120: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -113202,7 +112000,7 @@
           - s_0796: -1
           - s_4126: 1
           - s_4127: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113256,7 +112054,7 @@
           - s_0796: -1
           - s_4122: 1
           - s_4125: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113371,7 +112169,7 @@
           - s_0796: -1
           - s_4034: -1
           - s_4035: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -113447,7 +112245,7 @@
           - s_0796: -1
           - s_4040: -1
           - s_4041: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -113486,7 +112284,7 @@
           - s_0796: -1
           - s_4053: -1
           - s_4054: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -113519,7 +112317,7 @@
           - s_0796: -1
           - s_4077: 1
           - s_4078: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113559,7 +112357,7 @@
           - s_0796: -1
           - s_4037: -1
           - s_4038: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -113772,7 +112570,7 @@
           - s_0796: -1
           - s_4138: 1
           - s_4139: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113810,7 +112608,7 @@
           - s_0796: -1
           - s_4115: 1
           - s_4116: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113828,7 +112626,7 @@
           - s_0796: -1
           - s_4136: 1
           - s_4137: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113864,7 +112662,7 @@
           - s_0796: -1
           - s_4056: -1
           - s_4057: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -113919,7 +112717,7 @@
           - s_0796: -1
           - s_4134: 1
           - s_4135: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113937,7 +112735,7 @@
           - s_0796: -1
           - s_4096: 1
           - s_4097: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -113955,7 +112753,7 @@
           - s_0796: -1
           - s_4050: -1
           - s_4051: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -114101,7 +112899,7 @@
           - s_0796: -1
           - s_4059: -1
           - s_4060: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -114215,7 +113013,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4141: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114234,7 +113032,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4142: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114285,7 +113083,7 @@
           - s_0796: -1
           - s_4143: -1
           - s_4144: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -114320,7 +113118,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4147: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114339,7 +113137,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4148: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114406,7 +113204,7 @@
           - s_0796: -1
           - s_1360: 1
           - s_4152: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114441,7 +113239,7 @@
           - s_0796: -1
           - s_1239: 1
           - s_4154: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YDR093W"
       - subsystem:
@@ -114460,7 +113258,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4155: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114479,7 +113277,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4156: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114498,7 +113296,7 @@
           - s_0794: 2
           - s_0796: -2
           - s_4157: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114550,7 +113348,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4160: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114585,7 +113383,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4162: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114603,7 +113401,7 @@
           - s_0794: 1
           - s_0796: -1
           - s_4163: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114656,7 +113454,7 @@
           - s_0796: -1
           - s_0979: 1
           - s_4166: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YKR039W"
       - subsystem:
@@ -114693,7 +113491,7 @@
           - s_0796: -1
           - s_4168: -1
           - s_4169: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -114728,7 +113526,7 @@
           - s_0796: -1
           - s_4170: -1
           - s_4171: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YJR152W or YKR093W"
       - subsystem:
@@ -114797,7 +113595,7 @@
           - s_0796: -1
           - s_4174: -1
           - s_4175: 1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -114849,7 +113647,7 @@
           - s_0796: -1
           - s_4073: 1
           - s_4074: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - subsystem:
           - "Transport [c, e]"
@@ -116143,24 +114941,6 @@
       - confidence_score: 0
       - rxnNotes: "metabolites observed in metabolomics data (PR #156) | model.S(610,3928) curated (PR #222)"
     - !!omap
-      - id: "r_4568"
-      - name: "R06790"
-      - metabolites: !!omap
-          - s_0794: -1
-          - s_1321: -1
-          - s_4194: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - subsystem:
-          - "Phenylalanine metabolism"
-      - annotation: !!omap
-          - kegg.reaction: "R06790"
-          - metanetx.reaction: "MNXR139469"
-          - sbo: "SBO:0000176"
-      - deltaG: 10000000
-      - confidence_score: 0
-      - rxnNotes: "metabolites observed in metabolomics data (PR #156) | MetaNetX ID curated (PR #220)"
-    - !!omap
       - id: "r_4569"
       - name: "Carboxylic ester hydrolases"
       - metabolites: !!omap
@@ -116458,7 +115238,7 @@
           - s_0796: -1
           - s_3880: 1
           - s_4199: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YOL122C"
       - subsystem:
@@ -116495,7 +115275,7 @@
           - s_0796: -1
           - s_4019: 1
           - s_4201: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YOL122C"
       - subsystem:
@@ -116514,7 +115294,7 @@
           - s_0796: -1
           - s_3801: 1
           - s_4202: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YOL130W"
       - subsystem:
@@ -116534,7 +115314,7 @@
           - s_0796: -1
           - s_3822: 1
           - s_4203: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YGL255W or YLR130C"
       - subsystem:
@@ -116554,7 +115334,7 @@
           - s_0796: -1
           - s_4013: 1
           - s_4204: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YGR191W or YOL130W"
       - subsystem:
@@ -116642,6 +115422,7 @@
           - s_0529: -0.000190000006114133
           - s_0687: -9.99999974737875e-06
           - s_0750: -1e-06
+          - s_0794: -0.0173732001408123
           - s_1198: -0.00264999992214143
           - s_1203: -0.000150000007124618
           - s_1207: -0.000569999974686652
@@ -116664,6 +115445,7 @@
       - id: "r_4599"
       - name: "ion pseudoreaction"
       - metabolites: !!omap
+          - s_0794: -0.0224361131513434
           - s_0924: -3.04000004689442e-05
           - s_1373: -0.00362999993376434
           - s_1437: -0.003969999961555
@@ -117182,6 +115964,7 @@
       - metabolites: !!omap
           - s_0532: 1
           - s_0682: -1
+          - s_0799: 4
           - s_4211: -1
           - s_4212: 1
       - lower_bound: -1000
@@ -118064,6 +116847,7 @@
           - s_0439: -1
           - s_0534: -1
           - s_0638: 1
+          - s_0801: 1
           - s_4251: -1
           - s_4252: 1
       - lower_bound: -1000
@@ -118387,6 +117171,7 @@
       - name: "L-cysteine hydrogen-sulfide-lyase (deaminating; pyruvate-forming)"
       - metabolites: !!omap
           - s_0421: 1
+          - s_0799: 1
           - s_0807: -1
           - s_1401: 1
           - s_3785: -1
@@ -118409,6 +117194,7 @@
       - name: "L-cysteine:2-oxoglutarate aminotransferase"
       - metabolites: !!omap
           - s_0180: -1
+          - s_0794: -1
           - s_0981: -1
           - s_0991: 1
           - s_4264: 1
@@ -118428,6 +117214,7 @@
       - id: "r_4703"
       - name: "3-mercaptopyruvate sulfurtransferase"
       - metabolites: !!omap
+          - s_0794: 1
           - s_0841: 1
           - s_1399: 1
           - s_1616: -1
@@ -118446,21 +117233,6 @@
       - deltaG: -12.45
       - rxnNotes: "Sulfur volatiles curation (PR #296)"
     - !!omap
-      - id: "r_4704"
-      - name: "alkanesulfonate transport"
-      - metabolites: !!omap
-          - s_4265: 1
-          - s_4266: -1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YIL166C"
-      - references: "10.1093/femsyr/foy046"
-      - subsystem:
-          - "Transport[c, e]"
-      - annotation: !!omap
-          - sbo: "SBO:0000655"
-      - rxnNotes: "Sulfur volatiles curation (PR #296)"
-    - !!omap
       - id: "r_4705"
       - name: "taurocholate transport"
       - metabolites: !!omap
@@ -118477,29 +117249,10 @@
       - deltaG: 0
       - rxnNotes: "Sulfur volatiles curation (PR #296)"
     - !!omap
-      - id: "r_4706"
-      - name: "alkanesulfonate dioxygenase"
-      - metabolites: !!omap
-          - s_0180: -1
-          - s_0417: 1
-          - s_0456: 1
-          - s_1275: -1
-          - s_1458: 1
-          - s_1469: 1
-          - s_4265: -1
-      - lower_bound: -1000
-      - upper_bound: 1000
-      - gene_reaction_rule: "YLL057C"
-      - references: "10.1093/femsyr/foy046"
-      - subsystem:
-          - "Sulfur metabolism"
-      - annotation: !!omap
-          - sbo: "SBO:0000176"
-      - rxnNotes: "Sulfur volatiles curation (PR #296)"
-    - !!omap
       - id: "r_4707"
       - name: "trithionate thiosulfohydrolase"
       - metabolites: !!omap
+          - s_0794: 1
           - s_0803: -1
           - s_1467: 1
           - s_4113: 1
@@ -118528,19 +117281,6 @@
       - annotation: !!omap
           - sbo: "SBO:0000627"
       - deltaG: -51.44
-      - rxnNotes: "Sulfur volatiles curation (PR #296)"
-    - !!omap
-      - id: "r_4709"
-      - name: "alkanesulfonate exchange"
-      - metabolites: !!omap
-          - s_4266: -1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - references: "10.1093/femsyr/foy046"
-      - subsystem:
-          - "Exchange reaction"
-      - annotation: !!omap
-          - sbo: "SBO:0000627"
       - rxnNotes: "Sulfur volatiles curation (PR #296)"
     - !!omap
       - id: "r_4710"
@@ -118605,7 +117345,7 @@
           - s_1458: -1
           - s_4274: 1
       - lower_bound: -1000
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
       - references: "10.1016/S0889-1575(03)00021-8; 10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z"
@@ -118625,7 +117365,7 @@
           - s_1458: -1
           - s_4276: 1
       - lower_bound: -1000
-      - upper_bound: 1000
+      - upper_bound: 0
       - gene_reaction_rule: "YOR126C"
       - eccodes: "3.1.-.-"
       - references: "10.1016/S0889-1575(03)00021-8; 10.1038/s41598-022-16554-z"
@@ -118808,7 +117548,7 @@
           - s_0810: -1
           - s_1329: 2
           - s_4290: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YHR201C or YDR452W"
       - eccodes:
@@ -118831,7 +117571,7 @@
           - s_0807: -1
           - s_1326: 2
           - s_4291: -1
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YHR201C or YDR452W"
       - eccodes:
@@ -118853,7 +117593,7 @@
           - s_0808: -1
           - s_4292: -1
           - s_4293: 2
-      - lower_bound: -1000
+      - lower_bound: 0
       - upper_bound: 1000
       - gene_reaction_rule: "YHR201C or YDR452W"
       - eccodes:
@@ -119424,27 +118164,6 @@
           - sbo: "SBO:0000176"
       - rxnNotes: "New rxns from databases curation (PR #304)"
     - !!omap
-      - id: "r_4759"
-      - name: "deamino-NAD diphosphatase"
-      - metabolites: !!omap
-          - s_0426: 1
-          - s_0801: 2
-          - s_0809: -1
-          - s_4315: -1
-          - s_4316: 1
-      - lower_bound: 0
-      - upper_bound: 1000
-      - gene_reaction_rule: "YGL067W"
-      - eccodes: "3.6.1.22"
-      - subsystem:
-          - "Nicotinate and nicotinamide metabolism"
-      - annotation: !!omap
-          - kegg.pathway: "Nicotinate and nicotinamide metabolism"
-          - kegg.reaction: "R03004"
-          - metanetx.reaction: "MNXR190936"
-          - sbo: "SBO:0000176"
-      - rxnNotes: "New rxns from databases curation (PR #304)"
-    - !!omap
       - id: "r_4760"
       - name: "trans-4-hydroxy-L-proline dehydrogenase"
       - metabolites: !!omap
@@ -119922,6 +118641,40 @@
           - kegg.reaction: "R10711"
           - metanetx.reaction: "MNXR139812"
           - sbo: "SBO:0000176"
+      - confidence_score: 3
+    - !!omap
+      - id: "r_4783"
+      - name: "oxaloacetate/sulphate antiport, mitochondrial"
+      - metabolites: !!omap
+          - s_1271: -1
+          - s_1273: 1
+          - s_1467: 1
+          - s_4333: -1
+      - lower_bound: -1000
+      - upper_bound: 1000
+      - gene_reaction_rule: "YKL120W"
+      - references: "10.1074/jbc.274.32.22184"
+      - subsystem:
+          - "Transport [c, m]"
+      - annotation: !!omap
+          - sbo: "SBO:0000655"
+      - confidence_score: 3
+    - !!omap
+      - id: "r_4784"
+      - name: "malate/sulphate antiport, mitochondrial"
+      - metabolites: !!omap
+          - s_0066: -1
+          - s_0068: 1
+          - s_1467: 1
+          - s_4333: -1
+      - lower_bound: -1000
+      - upper_bound: 1000
+      - gene_reaction_rule: "YKL120W"
+      - references: "10.1074/jbc.274.32.22184"
+      - subsystem:
+          - "Transport [c, m]"
+      - annotation: !!omap
+          - sbo: "SBO:0000655"
       - confidence_score: 3
 - genes:
     - !!omap
@@ -120538,11 +119291,6 @@
       - annotation: !!omap
           - uniprot: "P25605"
     - !!omap
-      - id: "YCL017C"
-      - name: "NFS1"
-      - annotation: !!omap
-          - uniprot: "P25374"
-    - !!omap
       - id: "YCL018W"
       - name: "LEU2"
       - annotation: !!omap
@@ -120978,11 +119726,6 @@
       - annotation: !!omap
           - uniprot: "P00942"
     - !!omap
-      - id: "YDR051C"
-      - name: "DET1"
-      - annotation: !!omap
-          - uniprot: "Q99288"
-    - !!omap
       - id: "YDR058C"
       - name: "TGL2"
       - annotation: !!omap
@@ -121311,11 +120054,6 @@
       - annotation: !!omap
           - uniprot: "P04161"
     - !!omap
-      - id: "YDR410C"
-      - name: "STE14"
-      - annotation: !!omap
-          - uniprot: "P32584"
-    - !!omap
       - id: "YDR428C"
       - name: "BNA7"
       - annotation: !!omap
@@ -121325,11 +120063,6 @@
       - name: "GPI19"
       - annotation: !!omap
           - uniprot: "Q04082"
-    - !!omap
-      - id: "YDR440W"
-      - name: "DOT1"
-      - annotation: !!omap
-          - uniprot: "Q04089"
     - !!omap
       - id: "YDR441C"
       - name: "APT2"
@@ -121893,11 +120626,6 @@
       - name: "ERG4"
       - annotation: !!omap
           - uniprot: "P25340"
-    - !!omap
-      - id: "YGL017W"
-      - name: "ATE1"
-      - annotation: !!omap
-          - uniprot: "P16639"
     - !!omap
       - id: "YGL026C"
       - name: "TRP5"
@@ -122616,11 +121344,6 @@
       - annotation: !!omap
           - uniprot: "P38824"
     - !!omap
-      - id: "YHR119W"
-      - name: "SET1"
-      - annotation: !!omap
-          - uniprot: "P38827"
-    - !!omap
       - id: "YHR123W"
       - name: "EPT1"
       - annotation: !!omap
@@ -122870,11 +121593,6 @@
       - annotation: !!omap
           - uniprot: "P40581"
     - !!omap
-      - id: "YIR038C"
-      - name: "GTT1"
-      - annotation: !!omap
-          - uniprot: "P40582"
-    - !!omap
       - id: "YJL003W"
       - name: "COX16"
       - annotation: !!omap
@@ -122903,11 +121621,6 @@
       - name: "YJL045W"
       - annotation: !!omap
           - uniprot: "P47052"
-    - !!omap
-      - id: "YJL046W"
-      - name: "AIM22"
-      - annotation: !!omap
-          - uniprot: "P47051"
     - !!omap
       - id: "YJL052W"
       - name: "TDH1"
@@ -123013,11 +121726,6 @@
       - name: "ERG20"
       - annotation: !!omap
           - uniprot: "P08524"
-    - !!omap
-      - id: "YJL168C"
-      - name: "SET2"
-      - annotation: !!omap
-          - uniprot: "P46995"
     - !!omap
       - id: "YJL196C"
       - name: "ELO1"
@@ -123634,11 +122342,6 @@
       - annotation: !!omap
           - uniprot: "Q12198"
     - !!omap
-      - id: "YLL060C"
-      - name: "GTT2"
-      - annotation: !!omap
-          - uniprot: "Q12390"
-    - !!omap
       - id: "YLL061W"
       - name: "MMP1"
       - annotation: !!omap
@@ -123734,11 +122437,6 @@
       - annotation: !!omap
           - uniprot: "Q12325"
     - !!omap
-      - id: "YLR099C"
-      - name: "ICT1"
-      - annotation: !!omap
-          - uniprot: "Q12385"
-    - !!omap
       - id: "YLR100W"
       - name: "ERG27"
       - annotation: !!omap
@@ -123773,11 +122471,6 @@
       - name: "PUT1"
       - annotation: !!omap
           - uniprot: "P09368"
-    - !!omap
-      - id: "YLR143W"
-      - name: "DPH6"
-      - annotation: !!omap
-          - uniprot: "Q12429"
     - !!omap
       - id: "YLR146C"
       - name: "SPE4"
@@ -123872,11 +122565,6 @@
       - name: "THI7"
       - annotation: !!omap
           - uniprot: "Q05998"
-    - !!omap
-      - id: "YLR239C"
-      - name: "LIP2"
-      - annotation: !!omap
-          - uniprot: "Q06005"
     - !!omap
       - id: "YLR240W"
       - name: "VPS34"
@@ -124375,11 +123063,6 @@
       - name: "GAD1"
       - annotation: !!omap
           - uniprot: "Q04792"
-    - !!omap
-      - id: "YMR251W"
-      - name: "GTO3"
-      - annotation: !!omap
-          - uniprot: "Q05827"
     - !!omap
       - id: "YMR256C"
       - name: "COX7"
@@ -124880,11 +123563,6 @@
       - annotation: !!omap
           - uniprot: "P53685"
     - !!omap
-      - id: "YOL075C"
-      - name: "YOL075C"
-      - annotation: !!omap
-          - uniprot: "Q08234"
-    - !!omap
       - id: "YOL077W-A"
       - name: "ATP19"
       - annotation: !!omap
@@ -125145,11 +123823,6 @@
       - annotation: !!omap
           - uniprot: "Q08579"
     - !!omap
-      - id: "YOR196C"
-      - name: "LIP5"
-      - annotation: !!omap
-          - uniprot: "P32875"
-    - !!omap
       - id: "YOR202W"
       - name: "HIS3"
       - annotation: !!omap
@@ -125169,11 +123842,6 @@
       - name: "ODC2"
       - annotation: !!omap
           - uniprot: "Q99297"
-    - !!omap
-      - id: "YOR226C"
-      - name: "ISU2"
-      - annotation: !!omap
-          - uniprot: "Q12056"
     - !!omap
       - id: "YOR236W"
       - name: "DFR1"
@@ -125478,11 +124146,6 @@
       - name: "ODC1"
       - annotation: !!omap
           - uniprot: "Q03028"
-    - !!omap
-      - id: "YPL135W"
-      - name: "ISU1"
-      - annotation: !!omap
-          - uniprot: "Q03020"
     - !!omap
       - id: "YPL147W"
       - name: "PXA1"

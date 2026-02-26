@@ -7,14 +7,12 @@ v9_1_0;
 %% Run growth tests
 R2new = growth(model);
 R2old = growthOld(model);
-% R decreased from 0.9177 to 0.9077
+% R increased from 0.8528 to 0.9085
 
 % Repeat with the model *before* generic 9.1.0 curations were done
 R2new902 = growth(model902);
 R2old902 = growthOld(model902);
-% R decreased from 0.9087 to 0.8985
-% So the generic 9.1.0 curations improved, but the new anaerobic function
-% actually gives worse predictions
+% R decreased from 0.8256 to 0.9001
 
 %% Convert to anaerobic
 cd('../otherChanges/')

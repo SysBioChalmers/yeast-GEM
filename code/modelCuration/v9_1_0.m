@@ -1,22 +1,16 @@
 % This scripts applies curations to be applied on yeast-GEM release 9.0.2,
-% to get to yeast-GEM release 9.1.0. Indicate which Issue/PR are addressed.
-% If multiple curations are performed before a new release is made, just
-% add the required code to this script. If more extensive coding is
-% required, you can write a separate (generic) function that can be kept in
-% the /code/modelCuration folder. Otherwise, try to use existing functions
-% whenever possible. In particular /code/curateMetsRxnsGenes can do many
-% types of curation.
+% to get to yeast-GEM release 9.1.0.
+%
+% Most curations in this lrease are related to improving the model
+% performance in anaerobic conditions.
 
 %% Load yeast-GEM 9.0.2 (requires local yeast-GEM git repository)
-model = readYAMLmodel('../../model/yeast-GEM.yml');
-% The above comment is temporary, to be used during development. When PR is
-% made, use below code instead.
 cd ..
 codeDir=pwd();
-% model = getEarlierModelVersion('9.0.2');
-% model.id='yeastGEM_develop';
-% model.version='';
-% %dataDir=fullfile(pwd(),'..','data','modelCuration','v9.1.0'); % No dataDir required for these curations
+model = getEarlierModelVersion('9.0.2');
+model.id='yeastGEM_develop';
+model.version='';
+% dataDir=fullfile(pwd(),'..','data','modelCuration','v9.1.0'); % No dataDir required for these curations
 cd modelCuration
 
 %% ========================================================================
@@ -180,7 +174,7 @@ model.S(find(strcmp(model.mets,'s_0794')),strcmp(model.rxns,'r_4707'))=1;
 
 %% ========================================================================
 % This section focuses on individual reactions that have the wrong
-% reversibility/direction/cofactor or should be completley removed
+% reversibility/direction/cofactor or should be completely removed
 
 % Make GCY1 irreversible. Has a positive DeltaGo' (+20.9) and is part of a
 % transhydrogenase cycle (NADH -> NADPH) at the cost of one ATP. High
@@ -288,6 +282,41 @@ model = removeReactions(model,'r_4568',true,true,true);
 % alkanesulfonate, with unbalanced r_4706
 model = removeReactions(model,{'r_4704','r_4706','r_4709'},true,true,true);
 
+% r_4225, is a generic sterol transport reaction with YDR051C and YOL075C
+% genes that are not proven to have sterol transport activity
+model = removeReactions(model,'r_4225',true,true,true);
+
+% r_4199, r_4200, r_4201, r_4207, r_4215 are unspecific glutathione S-transferase
+% reactions
+model = removeReactions(model,{'r_4199','r_4200','r_4201','r_4207','r_4215'},true,true,true);
+
+% r_2441-r_2445 are catalyzed by YGR046W, remove general YGR046W reaction
+model = changeGrRules(model,{'r_2441','r_2442','r_2443','r_2444','r_2445'},'YGR046W',true);
+model = removeReactions(model,'r_4251');
+
+% YDL052C/SLC1 (1-acyl-sn-glycerol-3-phosphate acyltransferase) should only
+% be in lipid particles, not ER. Instead, YPR139C has 18:1 specificity
+model = changeGrRules(model,{'r_2333', 'r_2335', 'r_2337'},'YOR175C or YPR139C', true);
+% r_4277 is generic reaction, and above curations replace it
+model = removeReactions(model,'r_4277',true,true,true);
+
+% r_4233, r_4239, r_4256, r_4258, r_4278', r_4280, r_4281, r_4324 and r_4340
+% act on protein pseudometabolites, but protein modifications are outside
+% of the scope of a metabolic model
+model = removeReactions(model,{'r_4233','r_4239','r_4256','r_4258','r_4278','r_4280','r_4281','r_4324','r_4340'},true,true,true);
+
+% r_4173, r_4246, r_4252 and r_4308 are generic (sulfur) reactions, unconnected to
+% the rest of the network
+model = removeReactions(model,{'r_4173','r_4246','r_4252','r_4308'},true,true,true);
+
+% remove generic riboNTP hydrolase r_4265 and replace with curation of r_0807
+model = removeReactions(model,'r_4265',true,true,true);
+model = changeGrRules(model,'r_0807','YJR069C', true);
+
+% remove r_4759 mRNA decapping protein, r_4193 histone deacetylase, outside
+% of metabolic scope
+model = removeReactions(model,{'r_4759','r_4193'},true,true,true);
+
 %% ========================================================================
 % Condition-specific gene expression. These can be enabled with scripts
 % Glycine cleavage only active when glycine is used as nitrogen source
@@ -333,25 +362,24 @@ model.S(metIdx,bioIdx) = currCoeff + [-DR; +DR; -DR];
 % non-glycine nitrogen sources).
 model = setParam(model,'lb',{'r_1173'},-1000);
 
-
 %% ========================================================================
 
 %% DO NOT CHANGE OR REMOVE THE CODE BELOW THIS LINE.
 % Show some metrics:
-% cd(fullfile(codeDir,'modelTests'))
-% disp('Run gene essentiality analysis')
-% [new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
-% fprintf('Genes in model: %d\n',numel(model.genes));
-% fprintf('Gene essentiality accuracy: %.4f\n', new.accuracy);
-% fprintf('True non-essential genes: %d\n', numel(new.tp));
-% fprintf('True essential genes: %d\n', numel(new.tn));
-% fprintf('False non-essential genes: %d\n', numel(new.fp));
-% fprintf('False essential genes: %d\n', numel(new.fn));
-% fprintf('\nRun growth analysis\n')
-% R2=growth(model);
-% fprintf('R2 of growth prediction: %.4f\n', R2);
-%
+cd(fullfile(codeDir,'modelTests'))
+disp('Run gene essentiality analysis')
+[new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
+fprintf('Genes in model: %d\n',numel(model.genes));
+fprintf('Gene essentiality accuracy: %.4f\n', new.accuracy);
+fprintf('True non-essential genes: %d\n', numel(new.tp));
+fprintf('True essential genes: %d\n', numel(new.tn));
+fprintf('False non-essential genes: %d\n', numel(new.fp));
+fprintf('False essential genes: %d\n', numel(new.fn));
+fprintf('\nRun growth analysis\n')
+R2=growth(model);
+fprintf('R2 of growth prediction: %.4f\n', R2);
+
 % Save model:
-% cd ..
-% saveYeastModel(model)
-% cd modelCuration
+cd ..
+saveYeastModel(model)
+cd modelCuration
