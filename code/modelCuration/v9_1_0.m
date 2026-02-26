@@ -294,11 +294,11 @@ model = removeReactions(model,{'r_4704','r_4706','r_4709'},true,true,true);
 model = setParam(model,'eq','r_0501',0); %glycine cleavage, mitochondrion
 model = setParam(model,'eq','r_0507',0); %glycine cleavage complex (lipoylprotein), mitochondrion
 model = setParam(model,'eq','r_0509',0); %glycine cleavage complex (lipoamide), mitochondrion
-model.rxnNotes(ismember(model.rxns,{'r_0501','r_0507','r_0509'})) = {'Only active if glycine is nitrogen source'};
+model.rxnNotes(ismember(model.rxns,{'r_0501','r_0507','r_0509'})) = {'Only active if glycine is nitrogen source, or under nitrogen restriction'};
 
 % Glutamate synthase repressed in excess nitrogen
 model = setParam(model,'eq','r_0472',0);
-model.rxnNotes(ismember(model.rxns,{'r_0472'})) = {'Only active during nitrogen limitation'};
+model.rxnNotes(ismember(model.rxns,{'r_0472'})) = {'Only active during nitrogen restriction'};
 
 % The carnitine shuttle requires exogeneous carnitine, which is absent from
 % defined medium.
@@ -325,6 +325,14 @@ bioIdx = getIndexes(model,'r_4041','rxns');
 
 currCoeff = full(model.S(metIdx,bioIdx)); % Gather the current coefficients
 model.S(metIdx,bioIdx) = currCoeff + [-DR; +DR; -DR];
+
+%% Enable glycine secretion to allow anaerobic growth
+% WORKAROUND: anaerobiosis is only allowed if a small amount of glycine
+% secretion is allowed, as overflow from THF produce by methionine synthase
+% if glycine cleavage system is inactive (= in nitrogen-excess and with
+% non-glycine nitrogen sources).
+model = setParam(model,'lb',{'r_1173'},-1000);
+
 
 %% ========================================================================
 

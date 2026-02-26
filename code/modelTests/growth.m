@@ -96,7 +96,6 @@ if strcmp(mode2,'N')
     model_origin = setParam(model_origin,'ub','r_0472',1000);
     % Glycine cleavage system is derepressed under nitrogen limitation
     model_origin = setParam(model_origin,'ub',{'r_0501','r_0507','r_0509'},1000);
-
 end
 
 for i = 1:length(exp_data(:,1))
