@@ -1,6 +1,6 @@
 clear; close all
 % Load the model and apply the corrections for *all* models
-model902 = loadYeastModel;
+model902 = getEarlierModelVersion('9.0.2');
 cd('../modelCuration/')
 v9_1_0;
 
