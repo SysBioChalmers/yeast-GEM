@@ -9,7 +9,6 @@ sim_vals=[];
 
 colors = orderedcolors("glow12");
 
-figure;
 data_sets=unique(text_flux(:,6));
 merged_data=[];
 merged_sim=[];
@@ -55,8 +54,8 @@ y = x;
 plot(x,y,'--','MarkerSize',6,'Color',[64,64,64]/256)
 ylim([0 threshold])
 xlim([0 threshold])
-text(5,threshold/2,['mean relative error: ' num2str(mean_relative_error)]);
-text(5,threshold/2-10,['R^2: ' num2str(R2)]);
+text(12,threshold/2-10,['mean relative error: ' num2str(mean_relative_error)]);
+text(12,threshold/2-5,['R^2: ' num2str(R2)]);
 
 legend(data_sets);
 xlabel('Experimental 100 \cdot v_i/v_{Glx}','FontSize',14,'FontName','Helvetica')

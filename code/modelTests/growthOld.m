@@ -36,7 +36,6 @@ mod_data(21:26,:) = simulateChemostat(model_origin,exp_data(21:26,:),2,'C');
 mod_data(27:32,:) = simulateChemostat(model_origin,exp_data(27:32,:),2,'N');
 
 % plot the figure
-figure
 hold on
 cols = [215,25,28;253,174,97;171,217,233;44,123,182]/256;
 b(1) = plot(exp_data(1:9,4),mod_data(1:9,4),'o','MarkerSize',10,'MarkerEdgeColor','k','MarkerFaceColor',cols(2,:));
@@ -60,6 +59,7 @@ legend(b,'N-limited aerobic','C-limited aerobic','C-limited anaerobic','N-limite
 hold off
 R2=corrcoef(exp_data(:,4),mod_data(:,4));
 R2=R2(2)^2;
+text(0.25,0.1,['R2:',num2str(R2)])
 
 if writeOutput
     saveas(gcf,fullfile(funcDir,'..','..','data','testResults','growth.png'));

@@ -1,4 +1,4 @@
-MATLAB	24.2.0.2923080 (R2024b) Update 6
+MATLAB	24.2.0.3157250 (R2024b) Update 8
 libSBML	5.20.2
-RAVEN_toolbox	commit 49ebab6
-COBRA_toolbox	commit 859ee5a
+RAVEN_toolbox	2.11.1
+COBRA_toolbox	commit a02e4a0

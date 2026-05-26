@@ -1,51 +1,83 @@
 clear; close all
-% Load the model and apply the corrections for *all* models
+% Load the old and new model
 model902 = getEarlierModelVersion('9.0.2');
-cd('../modelCuration/')
-v9_1_0;
+model910 = loadYeastModel();
 
 %% Run growth tests
-R2new = growth(model);
-R2old = growthOld(model);
-% R increased from 0.8528 to 0.9085
+funcs   = {@growth, @growthOld, @growth, @growthOld};
+models  = {model910, model910, model902, model902};
+titles  = {'v9.1.0 model, new anaerobic script', ...
+           'v9.1.0 model, old anaerobic script', ...
+           'v9.0.2 model, new anaerobic script', ...
+           'v9.0.2 model, old anaerobic script'};
 
-% Repeat with the model *before* generic 9.1.0 curations were done
-R2new902 = growth(model902);
-R2old902 = growthOld(model902);
-% R decreased from 0.8256 to 0.9001
+fig1 = figure('Name', 'Growth Comparison', 'Position', [100 100 1000 800]);
+for k = 1:4
+    subplot(2,2,k);
+    funcs{k}(models{k});
+    title(titles{k});
+end
+sgtitle('Growth: v9.1.0 vs v9.0.2, new vs old anaerobic script');
+saveas(fig1, '..\..\data\testResults\v910_growth.png');
+
+% R2 of growth prediction increased from 0.8256 to 0.9085 as result of all
+% curations.
 
 %% Convert to anaerobic
 cd('../otherChanges/')
-modelAn = anaerobicModel(model);
-modelAnOld = anaerobicModelOld(model);
+modelAn910 = anaerobicModel(model910);
+modelAnOld910 = anaerobicModelOld(model910);
 modelAn902 = anaerobicModel(model902);
 modelAnOld902 = anaerobicModelOld(model902);
 
+%% Anaerobic flux predictions
 cd('../modelTests/');
-%% flux predictions
-R2fluxnew = anaerobic_flux_predictions(modelAn);
-R2fluxold = anaerobic_flux_predictions(modelAnOld);
-R2fluxnew902 = anaerobic_flux_predictions(modelAn902);
-R2fluxold902 = anaerobic_flux_predictions(modelAnOld902);
-% R 
+models = {modelAn910, modelAnOld910, modelAn902, modelAnOld902};
+titles  = {'v9.1.0 model, new anaerobic script', ...
+           'v9.1.0 model, old anaerobic script', ...
+           'v9.0.2 model, new anaerobic script', ...
+           'v9.0.2 model, old anaerobic script'};
+fig2 = figure('Name', 'Anaerobic Comparison', 'Position', [100 100 1000 800]);
+for k = 1:4
+    subplot(2,2,k);
+    anaerobic_flux_predictions(models{k});
+    title(titles{k});
+end
+sgtitle('Anaerobic flux predictions: v9.1.0 vs v9.0.2, new vs old anaerobic script');
+saveas(fig2, '..\..\data\testResults\v910_anaerobic_fluxes.png');
 
+% R2 of flux predictions increased from 0.7858 to 0.9175 as a response to
+% all curations
 
 %% Plot
-plotAnaerobic(modelAn)
+models = {modelAn910, modelAnOld910, modelAn902, modelAnOld902};
+titles  = {'v9.1.0 model, new anaerobic script', ...
+           'v9.1.0 model, old anaerobic script', ...
+           'v9.0.2 model, new anaerobic script', ...
+           'v9.0.2 model, old anaerobic script'};
+fig3 = figure('Name', 'Anaerobic Comparison', 'Position', [100 100 1000 800]);
+for k = 1:4
+    subplot(2,2,k);
+    plotAnaerobic(models{k});
+    title(titles{k});
+end
+sgtitle('Anaerobic fluxes (Sjöberg data): v9.1.0 vs v9.0.2, new vs old anaerobic script');
+saveas(fig3, '..\..\data\testResults\v910_anaerobic_sjoberg.png');
+
 %% Set glucose uptake rate and solve pFBA
-modelAn = setParam(modelAn,'eq','r_1714',-23);
-res=solveLP(modelAn,1);
-FLUX = res.x;
-v_AStr = res.x(getIndexes(modelAn,'r_1115','rxns'));
-v_ATPase = res.x(getIndexes(modelAn,'r_0227','rxns'));
-v_glc = res.x(getIndexes(modelAn,'r_1714','rxns'));
+temp_model = setParam(modelAn910,'eq','r_1714',-23);
+res=solveLP(temp_model,1); FLUX = res.x;
+
+v_AStr = res.x(getIndexes(temp_model,'r_1115','rxns')); % Ammonium exchange
+v_ATPase = res.x(getIndexes(temp_model,'r_0227','rxns')); % ATPase
+v_glc = res.x(getIndexes(temp_model,'r_1714','rxns')); % Glucose uptake
+[v_AStr, v_ATPase, v_glc]
 
 %% Pack flux results into table
-temp_model=modelAn;
-rxns_reacs=constructEquations(temp_model,modelAn.rxns);
-tab=table(modelAn.rxns,modelAn.rxnNames,rxns_reacs,abs(FLUX./v_glc),FLUX,modelAn.grRules);
+rxns_reacs=constructEquations(temp_model,temp_model.rxns);
+tab=table(temp_model.rxns,temp_model.rxnNames,rxns_reacs,abs(FLUX./v_glc),FLUX,temp_model.grRules);
 
-[massImbalance, imBalancedMass, imBalancedCharge, imBalancedRxnBool, elements, missingFormulaeBool, balancedMetBool] = checkMassChargeBalance(modelAn);
+[massImbalance, imBalancedMass, imBalancedCharge, imBalancedRxnBool, elements, missingFormulaeBool, balancedMetBool] = checkMassChargeBalance(temp_model);
 
 tabImbalance = [tab,table(imBalancedRxnBool,imBalancedCharge,imBalancedMass)];
 tabImbalance(~imBalancedRxnBool,:) = [];

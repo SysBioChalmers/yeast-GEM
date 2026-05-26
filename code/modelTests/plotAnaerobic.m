@@ -12,7 +12,7 @@ v_growth=FLUX(getIndexes(modelAn,'r_4041','rxns'),:);
 v_AStr = FLUX(getIndexes(modelAn,'r_1115','rxns'));
 v_ATPase = FLUX(getIndexes(modelAn,'r_0227','rxns'));
 %% Show relative accuracy of main extracellular products
-figure;
+%figure;
 %glycerol ethanol Co2
 %4.5 ± 0.4  31 ± 2  38 ± 10
 data=[4.5 31 38 0.36];
