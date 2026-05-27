@@ -1,7 +1,25 @@
-function model = changeAminoAcidRatio(model,col)
+function model = changeAminoAcidRatio(model,aerobic)
+% changeAminoAcidRatio
+%   Updates the amino acid ratio in the biomass equation, based on data by
+%   Björkeroth et al. (2020, PNAS, doi:10.1073/pnas.1921890117). 
+%
+% Input:
+%   model   (struct)  the yeast GEM
+%   aerobic (logical) true if ratios should be set for aerobic condition,
+%                     false for anaerobic conditions. Default is true.
+%
+% Output:
+%   model   (struct)  the updated yeast GEM
+%
+% Usage: model = changeAminoAcidRatio(model,aerobic)
+%
 
-if nargin < 2 || isempty(col)
+if nargin < 2 || isempty(aerobic)
     col = 1;
+elseif aerobic % First column is aerobic, second column anaerobic
+    col = 1;
+else
+    col = 2;
 end
 
 funcDir = dbstack('-completenames');
@@ -18,10 +36,8 @@ aaRatio = aaRatio(:,col);
 aaRatio = [-aaRatio; aaRatio];
 
 [~, P] = sumBioMass(model,false);
-
 protRxn  = getIndexes(model,'r_4047','rxns');
 [~, tRNAidxs] = ismember(tRNAids,model.mets);
 model.S(tRNAidxs,protRxn) = aaRatio;
-
 model = scaleBioMass(model,'protein',P,[],false);
 end

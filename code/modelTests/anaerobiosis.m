@@ -71,7 +71,11 @@ res=solveLP(temp_model,1); FLUX = res.x;
 v_AStr = res.x(getIndexes(temp_model,'r_1115','rxns')); % Ammonium exchange
 v_ATPase = res.x(getIndexes(temp_model,'r_0227','rxns')); % ATPase
 v_glc = res.x(getIndexes(temp_model,'r_1714','rxns')); % Glucose uptake
-[v_AStr, v_ATPase, v_glc]
+[v_AStr, v_ATPase, v_glc];
+
+fprintf("Ratio of ammonium sulfate exchange / ATPase: %.02f\n", v_AStr / v_ATPase)
+
+% Ratio of ammonium sulfate / ATPase is 1.072, close to the measured 1.
 
 %% Pack flux results into table
 rxns_reacs=constructEquations(temp_model,temp_model.rxns);

@@ -24,10 +24,10 @@
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-05-26T15:30:02Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-05-27T23:08:53Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-05-26T15:30:02Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-05-27T23:08:53Z</dcterms:W3CDTF>
           </dcterms:modified>
           <bqbiol:is>
             <rdf:Bag>
@@ -147648,7 +147648,7 @@
           <speciesReference species="s_1561" stoichiometry="0.31460454977486" constant="true"/>
         </listOfReactants>
         <listOfProducts>
-          <speciesReference species="s_0794" stoichiometry="0.170091131972326" constant="true"/>
+          <speciesReference species="s_0794" stoichiometry="4.17785919150305" constant="true"/>
           <speciesReference species="s_1582" stoichiometry="0.347736630768556" constant="true"/>
           <speciesReference species="s_1583" stoichiometry="0.194296205196944" constant="true"/>
           <speciesReference species="s_1585" stoichiometry="0.191468067207859" constant="true"/>

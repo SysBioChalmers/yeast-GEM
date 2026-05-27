@@ -1,15 +1,15 @@
 function model = rescalePseudoReaction(model,metName,f)
-  % rescalePseudoReaction
-  %   Rescales a specific pseudoreaction by a given factor
-  %
-  %   model      (struct) the yeast GEM
-  %   metName    (str) name of the component to rescale (e.g. "protein")
-  %   f          (float) fraction to use for rescaling
-  %
-  %   model    (struct) the (rescaled) yeast GEM
-  %
-  %   Usage: model = rescalePseudoReaction(model,metName,f)
-  %
+% rescalePseudoReaction
+%   Rescales a specific pseudoreaction by a given factor
+%
+%   model      (struct) the yeast GEM
+%   metName    (str) name of the component to rescale (e.g. "protein")
+%   f          (float) fraction to use for rescaling
+%
+%   model    (struct) the (rescaled) yeast GEM
+%
+%   Usage: model = rescalePseudoReaction(model,metName,f)
+%
 
 if strcmp(metName,'lipid')
     model = rescalePseudoReaction(model,'lipid backbone',f);
@@ -24,6 +24,9 @@ else
             model.S(i,rxnPos) = f*S_ir;
         end
     end
+    % Correct H+
+    Hc = find(strcmp(model.mets,'s_0794'));
+    model.S(Hc,rxnPos) = 0;
+    model.S(Hc,rxnPos) = -sum(model.S(:,rxnPos).*model.metCharges,'omitnan');
 end
-
 end

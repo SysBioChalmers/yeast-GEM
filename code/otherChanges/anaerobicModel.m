@@ -21,8 +21,12 @@ function model = anaerobicModel(model)
 hemeIdx = getIndexes(model,'s_3714','mets');
 cofacIdx = getIndexes(model,'r_4598','rxns');
 model.S(hemeIdx,cofacIdx) = 0;
+% Correct H+
+Hc = find(strcmp(model.mets,'s_0794'));
+model.S(Hc,cofacIdx) = 0;
+model.S(Hc,cofacIdx) = -sum(model.S(:,cofacIdx).*model.metCharges,'omitnan');
 
-model = changeAminoAcidRatio(model,2);
+model = changeAminoAcidRatio(model,false);
 
 % Change exchange reactions (block O2 uptake and allow sterol and fatty
 % acid exchanges, as these are essential supplements for anaerobic growth).

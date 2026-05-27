@@ -344,6 +344,30 @@ model = changeAminoAcidRatio(model,1);
 fprintf('Current biomass adds up to %.4f g/g. Protein fraction is scaled from %.4f to %.4f g/g to reach 1 g/g total biomass.\n', X, P, (1-X)+P)
 model = scaleBioMass(model,'protein',(1-X)+P);
 
+%% Correct H+ balance in biomass component pseudoreactions
+% Set the charge of all biomass components to 0
+model.metCharges(strcmp(model.mets,'s_3717'))=0; % Protein
+model.metCharges(strcmp(model.mets,'s_3718'))=0; % Carbohydrate
+model.metCharges(strcmp(model.mets,'s_3719'))=0; % RNA
+model.metCharges(strcmp(model.mets,'s_3720'))=0; % DNA
+model.metCharges(strcmp(model.mets,'s_3746'))=0; % Lipid backbone
+model.metCharges(strcmp(model.mets,'s_3747'))=0; % Lipid chain
+model.metCharges(strcmp(model.mets,'s_4205'))=0; % Cofactor
+model.metCharges(strcmp(model.mets,'s_4206'))=0; % Ion
+
+% Balance the charge of all biomass component pseudo reactions by adding the required amount of H+
+Hc = find(strcmp(model.mets,'s_0794')); % H+[c]
+model.S(Hc,strcmp(model.rxns,'r_4047')) = 0;
+model.S(Hc,strcmp(model.rxns,'r_4047')) = -sum(model.S(:,strcmp(model.rxns,'r_4047')).*model.metCharges,'omitnan'); % Protein
+model.S(Hc,strcmp(model.rxns,'r_4049')) = 0;
+model.S(Hc,strcmp(model.rxns,'r_4049')) = -sum(model.S(:,strcmp(model.rxns,'r_4049')).*model.metCharges,'omitnan'); % RNA
+model.S(Hc,strcmp(model.rxns,'r_4050')) = 0;
+model.S(Hc,strcmp(model.rxns,'r_4050')) = -sum(model.S(:,strcmp(model.rxns,'r_4050')).*model.metCharges,'omitnan'); % DNA
+model.S(Hc,strcmp(model.rxns,'r_4598')) = 0;
+model.S(Hc,strcmp(model.rxns,'r_4598')) = -sum(model.S(:,strcmp(model.rxns,'r_4598')).*model.metCharges,'omitnan'); % Cofactor
+model.S(Hc,strcmp(model.rxns,'r_4599')) = 0;
+model.S(Hc,strcmp(model.rxns,'r_4599')) = -sum(model.S(:,strcmp(model.rxns,'r_4599')).*model.metCharges,'omitnan'); % Ion
+
 %% Degree of reduction of biomass
 % To align the degree of reduction of S. cerevisiae biomass to the
 % published value of 4.2 /Cmol (Lange and Heijnen, 2001, 10.1002/bit.10054)
