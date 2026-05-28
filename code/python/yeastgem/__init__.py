@@ -7,7 +7,9 @@ upstream later.
 """
 from __future__ import annotations
 
+from yeastgem import conditions
 from yeastgem.compare import ComparisonReport, compare_models
+from yeastgem.config import YeastIDs, load_ids
 from yeastgem.io import (
     MODEL_PATH,
     REPO_PATH,
@@ -19,7 +21,10 @@ __all__ = [
     "MODEL_PATH",
     "REPO_PATH",
     "ComparisonReport",
+    "YeastIDs",
     "compare_models",
+    "conditions",
+    "load_ids",
     "read_yeast_model",
     "write_yeast_model",
 ]

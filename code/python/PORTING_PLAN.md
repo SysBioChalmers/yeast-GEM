@@ -11,9 +11,9 @@ saved and validated entirely from Python.
 | Phase | Status | Notes |
 |---|---|---|
 | 1. Scaffold + comparator + reference fixture | **done** | `yeastgem` package importable, `read/write_yeast_model` ported, level-1 comparator + 15-test pytest suite passing, CI workflow in place (`matlab-reference-compare` job parked behind `if: false` until the reference bundle is seeded), reference-bundle scaffold + MATLAB regeneration stub. `code/io.py` is now a deprecated forwarding shim. |
-| 2. Config-as-code refactor (both languages) | not started | |
+| 2. Config-as-code refactor (both languages) | **mostly done** | Data files (`data/yeastgem/ids.yml`, `data/conditions/{minimal_Y6,anaerobic,glycine_nitrogen,nitrogen_limitation}.yml`) created. MATLAB: `applyCondition.m`, `applyIDs.m`, `readYAML.m`; four legacy functions converted to one-line shims. Python: `yeastgem.config.load_ids()`, `yeastgem.conditions.apply()` cover prelude, cofactor-pseudoreaction edits, biomass-stoichiometry deltas, and bounds (33 tests passing). The `amino_acid_ratio` step in `anaerobic` is deferred to phase 4 (Tier 2) — calling `conditions.apply(model, 'anaerobic')` raises `NotImplementedError` with a clear pointer. **Open:** MATLAB before-vs-after model equivalence not yet verified in CI; requires running MATLAB on the same git SHA (see `tests/reference/README.md`). |
 | 3. Tier 1 — load/save parity (`commit_yeast_model`) | not started | |
-| 4. Tier 2 — biomass + conditions in Python | not started | |
+| 4. Tier 2 — biomass + conditions in Python | not started | Includes the deferred `amino_acid_ratio` step in `conditions.apply`. |
 | 5. Tier 3 — test suite | not started | |
 | 6. Tier 4 — curation framework | not started | |
 | 7. Docs + CI | partial | Python CI workflow added; README "not yet functional" note still to update. |

@@ -69,3 +69,34 @@ reference bundle locks in "this is what MATLAB produces" so the Python
 port can be validated independently. When both toolchains have full
 parity and a single-language production owner is chosen, this
 direction may flip — until then, MATLAB seeds, Python verifies.
+
+## Phase-2 specific: the refactor equivalence check
+
+Phase 2 of [PORTING_PLAN.md](../../PORTING_PLAN.md) is a pure refactor
+of the MATLAB condition functions (`minimal_Y6`, `anaerobicModel`,
+`glycineNitrogenSource`, `nitrogenLimitation`) into data-as-code with
+shim functions. Before merging phase 2, run the following equivalence
+check in MATLAB on the same git SHA to confirm the refactor changed no
+model state:
+
+```matlab
+% pre-refactor: checkout HEAD~1, save reference
+model_pre = loadYeastModel;
+model_pre = minimal_Y6(model_pre);       % or anaerobicModel(model_pre);
+                                         % glycineNitrogenSource(...);
+                                         % nitrogenLimitation(...);
+exportModel(model_pre, 'model_pre.xml');
+
+% post-refactor: checkout the phase-2 commit
+model_post = loadYeastModel;
+model_post = minimal_Y6(model_post);     % calls applyCondition under the hood
+exportModel(model_post, 'model_post.xml');
+
+% compare with the Python comparator (requires `pip install -e code/python/`)
+% in a shell:
+%   python -m yeastgem.compare model_pre.xml model_post.xml
+```
+
+The expected outcome is **"Models are semantically equal"** for each
+of the four conditions. Any difference is a phase-2 regression and
+must be resolved before the branch merges.
