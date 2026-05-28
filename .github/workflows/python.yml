@@ -1,0 +1,71 @@
+name: Python
+
+on:
+  push:
+    branches: [main, develop]
+    paths:
+      - 'code/python/**'
+      - 'code/io.py'
+      - 'model/**'
+      - '.github/workflows/python.yml'
+  pull_request:
+    branches: [main, develop]
+    paths:
+      - 'code/python/**'
+      - 'code/io.py'
+      - 'model/**'
+      - '.github/workflows/python.yml'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.10', '3.11', '3.12']
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python ${{ matrix.python-version }}
+        uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+          cache: pip
+          cache-dependency-path: code/python/pyproject.toml
+
+      - name: Install yeastgem (editable, with dev deps)
+        run: pip install -e "code/python/[dev]"
+
+      - name: Lint with ruff
+        run: ruff check code/python
+
+      - name: Run pytest
+        working-directory: code/python
+        run: pytest -v
+
+  # Level-1 semantic-equality gate vs. the committed MATLAB reference
+  # artifact. Skipped until the reference bundle is seeded (see
+  # code/python/tests/reference/README.md). When enabled, this becomes
+  # a required check per the lock-step parity policy.
+  matlab-reference-compare:
+    if: false  # enable once reference bundle is committed
+    runs-on: ubuntu-latest
+    needs: test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install yeastgem
+        run: pip install -e code/python/
+
+      - name: Compare Python-loaded model against MATLAB reference
+        run: |
+          python -m yeastgem.compare \
+            model/yeast-GEM.xml \
+            code/python/tests/reference/yeast-GEM.xml
