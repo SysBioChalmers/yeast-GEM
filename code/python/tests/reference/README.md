@@ -75,28 +75,59 @@ direction may flip — until then, MATLAB seeds, Python verifies.
 Phase 2 of [PORTING_PLAN.md](../../PORTING_PLAN.md) is a pure refactor
 of the MATLAB condition functions (`minimal_Y6`, `anaerobicModel`,
 `glycineNitrogenSource`, `nitrogenLimitation`) into data-as-code with
-shim functions. Before merging phase 2, run the following equivalence
-check in MATLAB on the same git SHA to confirm the refactor changed no
-model state:
+shim functions. The verification is automated by two MATLAB scripts in
+this directory:
 
-```matlab
-% pre-refactor: checkout HEAD~1, save reference
-model_pre = loadYeastModel;
-model_pre = minimal_Y6(model_pre);       % or anaerobicModel(model_pre);
-                                         % glycineNitrogenSource(...);
-                                         % nitrogenLimitation(...);
-exportModel(model_pre, 'model_pre.xml');
+- [`runPhase2Equivalence.m`](runPhase2Equivalence.m) — apply the four
+  conditions to the model loaded from a given checkout, and save the
+  result as both `.mat` (always works) and `.xml` (when bounds are
+  feasible; SBML export fails for `glycineNitrogenSource` and
+  `nitrogenLimitation` because the legacy code intentionally produces
+  `lb > ub` on the glycine cleavage reactions).
+- [`comparePhase2.m`](comparePhase2.m) — load the pre/post `.mat`
+  files and check `rxns`, `mets`, `lb`, `ub` and `S` for equality.
 
-% post-refactor: checkout the phase-2 commit
-model_post = loadYeastModel;
-model_post = minimal_Y6(model_post);     % calls applyCondition under the hood
-exportModel(model_post, 'model_post.xml');
+Recipe (worktree-based; non-destructive to your current checkout):
 
-% compare with the Python comparator (requires `pip install -e code/python/`)
-% in a shell:
-%   python -m yeastgem.compare model_pre.xml model_post.xml
+```bash
+# 1. Set up a worktree pinned to the pre-refactor commit.
+git worktree add /mnt/c/Work/GitHub/yeast-gem-pre <pre-refactor-SHA>
+
+# 2. Produce the pre- and post-refactor model dumps.
+mkdir -p /tmp/phase2-pre /tmp/phase2-post
+matlab -batch "addpath('code/python/tests/reference'); \
+    runPhase2Equivalence('/mnt/c/Work/GitHub/yeast-gem-pre', '/tmp/phase2-pre')"
+matlab -batch "addpath('code/python/tests/reference'); \
+    runPhase2Equivalence('.', '/tmp/phase2-post')"
+
+# 3. Compare model state with the MATLAB comparator.
+matlab -batch "addpath('code/python/tests/reference'); \
+    comparePhase2('/tmp/phase2-pre', '/tmp/phase2-post')"
+
+# 4. Belt-and-suspenders: compare the SBML files of the two feasible
+#    conditions with the Python comparator.
+for c in minimal_Y6 anaerobicModel; do
+    python -m yeastgem.compare /tmp/phase2-pre/$c.xml /tmp/phase2-post/$c.xml
+done
+
+# 5. Tear down the worktree.
+git worktree remove /mnt/c/Work/GitHub/yeast-gem-pre
 ```
 
-The expected outcome is **"Models are semantically equal"** for each
-of the four conditions. Any difference is a phase-2 regression and
-must be resolved before the branch merges.
+Expected output of step 3:
+```
+OVERALL: all four conditions semantically equal (pre vs post).
+```
+
+Expected output of step 4: `Models are semantically equal.` for both.
+
+### Result of the verification run (commit 812151c → c74afed)
+
+All four conditions are byte-identical pre vs post on the MATLAB side
+(`rxns`, `mets`, `lb`, `ub`, `S` all match exactly). The two
+SBML-exportable conditions also pass the Python-side semantic
+comparator. The MATLAB-vs-Python cross-language parity check
+(`yeastgem.conditions.apply` vs MATLAB-saved `.mat`) shows zero `lb`/`ub`
+differences for `minimal_Y6`, `glycine_nitrogen` and
+`nitrogen_limitation`. The `anaerobic` Python path remains gated on
+the Tier-2 `amino_acid_ratio` implementation.
