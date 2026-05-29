@@ -131,3 +131,54 @@ comparator. The MATLAB-vs-Python cross-language parity check
 differences for `minimal_Y6`, `glycine_nitrogen` and
 `nitrogen_limitation`. The `anaerobic` Python path remains gated on
 the Tier-2 `amino_acid_ratio` implementation.
+
+## Phase-3 specific: the commit-pipeline equivalence check
+
+Phase 3 renames `saveYeastModel` to `commitYeastModel` (with a
+deprecation shim), swaps the in-pipeline `cd modelCuration; minimal_Y6;
+cd otherChanges; anaerobicModel; cd ..` dance for direct
+`applyCondition` calls, and adds the Python `commit_yeast_model`
+release pipeline. The verification driver
+[`runPhase3.m`](runPhase3.m) takes a yeast-GEM checkout path and a
+function name (either `saveYeastModel` or `commitYeastModel`) and
+writes the resulting SBML to a target path:
+
+```bash
+# 1. Worktree pinned to the pre-rename commit (i.e. just before phase 3).
+git worktree add --detach /tmp/yeast-gem-pre3 <pre-rename-SHA>
+
+# 2. Produce the pre-rename and post-rename SBMLs.
+matlab -batch "addpath('code/python/tests/reference'); \
+    runPhase3('/tmp/yeast-gem-pre3', '/tmp/phase3-pre.xml', 'saveYeastModel')"
+matlab -batch "addpath('code/python/tests/reference'); \
+    runPhase3('.', '/tmp/phase3-post.xml', 'commitYeastModel')"
+
+# 3. Verify the rename + applyCondition swap preserved behaviour.
+python -m yeastgem.compare /tmp/phase3-pre.xml /tmp/phase3-post.xml
+
+# 4. Python-vs-MATLAB parity for commit_yeast_model.
+YEAST_GEM_PATH=/tmp/yeast-gem-pre3 python -c \
+    "from yeastgem import read_yeast_model, commit_yeast_model; \
+     m = read_yeast_model(); commit_yeast_model(m, update_readme=False)"
+cp /tmp/yeast-gem-pre3/model/yeast-GEM.xml /tmp/phase3-py.xml
+python -m yeastgem.compare /tmp/phase3-post.xml /tmp/phase3-py.xml
+
+# 5. Tear down.
+git worktree remove /tmp/yeast-gem-pre3
+```
+
+`runPhase3` always copies the freshly written `model/yeast-GEM.xml`
+even when the surrounding `exportForGit` step fails — that helper
+requires a COBRA-Toolbox-only `COBRAver` variable that is not present
+on a pure-RAVEN MATLAB install, but the SBML write itself precedes it,
+so the comparison still works.
+
+### Result of the verification run (commit c74afed → phase-3 HEAD)
+
+Both checks pass:
+- `runPhase3(...saveYeastModel)` vs `runPhase3(...commitYeastModel)`:
+  *Models are semantically equal* — the rename plus the cd→applyCondition
+  swap preserved behaviour exactly.
+- MATLAB `commitYeastModel` vs Python `commit_yeast_model`:
+  *Models are semantically equal* — the Python release pipeline lands
+  on the same canonical model as the MATLAB pipeline.

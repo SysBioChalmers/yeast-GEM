@@ -13,19 +13,25 @@ from yeastgem.config import YeastIDs, load_ids
 from yeastgem.io import (
     MODEL_PATH,
     REPO_PATH,
+    commit_yeast_model,
     read_yeast_model,
     write_yeast_model,
 )
+from yeastgem.missing_fields import add_sbo_terms, load_delta_g, save_delta_g
 
 __all__ = [
     "MODEL_PATH",
     "REPO_PATH",
     "ComparisonReport",
     "YeastIDs",
+    "add_sbo_terms",
+    "commit_yeast_model",
     "compare_models",
     "conditions",
+    "load_delta_g",
     "load_ids",
     "read_yeast_model",
+    "save_delta_g",
     "write_yeast_model",
 ]
 
