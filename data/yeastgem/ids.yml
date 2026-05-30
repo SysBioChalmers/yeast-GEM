@@ -31,6 +31,24 @@ pseudoreaction_names:
   ion: ion pseudoreaction
   cofactor: cofactor pseudoreaction
 
+# Per-component config for the raven_python.biomass module (sum_biomass,
+# scale_biomass, rescale_pseudoreaction). Only the components that the
+# legacy sumBioMass.m summed are listed here — lipid_chain is rescaled
+# alongside lipid_backbone but does NOT contribute to the mass total.
+# mass_strategy:
+#   mw                — plain MW from chemical formula
+#   mw_minus_2h       — MW − 2.016 g/mol per substrate (charged tRNAs)
+#   mw_minus_water    — MW − 18.015 g/mol per substrate (polymerisation)
+#   grams             — stoichiometry already in g/gDW
+biomass_components:
+  - { name: protein,        mass_strategy: mw_minus_2h }
+  - { name: carbohydrate,   mass_strategy: mw }
+  - { name: RNA,            mass_strategy: mw_minus_water }
+  - { name: DNA,            mass_strategy: mw_minus_water }
+  - { name: lipid_backbone, mass_strategy: grams }
+  - { name: ion,            mass_strategy: mw }
+  - { name: cofactor,       mass_strategy: mw }
+
 # Metabolite NAMES scaled by GAM in the biomass pseudoreaction. Mirrors
 # the hardcoded list in changeGAM.m. Matching is by `metNames`.
 gam_cofactors:

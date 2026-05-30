@@ -23,6 +23,7 @@ The following were extracted from yeast-GEM into upstream branches
 | `yeastgem.conditions.apply` internals (prelude / cofactor / biomass-delta / bounds) | `raven_python.conditions` | `apply_condition`, `load_condition`, `set_reaction_bounds` |
 | `code/readYAML.m` | RAVEN `io/readYAML.m` | unchanged signature |
 | `code/applyCondition.m` (generic core) | RAVEN `core/applyCondition.m` | takes YAML path or struct |
+| biomass subsystem (`sumBioMass`/`scaleBioMass`/`rescalePseudoReaction`/`changeGAM`) | `raven_python.biomass` | `BiomassConfig`/`BiomassComponent`, `sum_biomass`, `scale_biomass`, `rescale_pseudoreaction`, `set_gam` |
 
 yeast-GEM now keeps:
 - `yeastgem.compare` — re-export of the upstream `diff_models` under
@@ -31,8 +32,12 @@ yeast-GEM now keeps:
   paths (`data/databases/model_metDeltaG.csv` etc.) and the legacy
   `only_last_reaction_for_pseudo=True` bug-compat flag.
 - `yeastgem.conditions.apply` — resolves a name to `data/conditions/<name>.yml`,
-  raises `NotImplementedError` on `amino_acid_ratio` (Tier 2), then
-  delegates to upstream.
+  runs `change_amino_acid_ratio` when the YAML asks for it (since
+  phase 4), then delegates to upstream.
+- `yeastgem.biomass` — wraps the upstream biomass API with the yeast
+  `BiomassConfig` (built from `data/yeastgem/ids.yml`) and ships one
+  yeast-only function, `change_amino_acid_ratio`, reading
+  `data/physiology/aminoAcid_Bjorkeroth2020.tsv`.
 - `code/applyYeastCondition.m` — same shape, in MATLAB.
 
 ## Pending — not yet moved

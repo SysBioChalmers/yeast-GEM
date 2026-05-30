@@ -85,12 +85,19 @@ def test_apply_minimal_Y6_resets_all_exchanges(model):
     assert untouched_exchange.upper_bound == 1000
 
 
-def test_apply_anaerobic_raises_until_tier2(model):
-    """Anaerobic uses amino_acid_ratio; Python implementation deferred to
-    Tier 2. The error message must point to the plan."""
+def test_apply_anaerobic_runs_end_to_end(model):
+    """Phase 4: anaerobic application now succeeds (amino_acid_ratio +
+    upstream apply_condition). The resulting model must have O2 uptake
+    blocked, ergosterol uptake allowed, MDH2 blocked, and the cofactor
+    pseudoreaction's heme coefficient set to zero."""
     mutated = model.copy()
-    with pytest.raises(NotImplementedError, match="amino_acid_ratio"):
-        conditions.apply(mutated, "anaerobic")
+    conditions.apply(mutated, "anaerobic")
+    assert mutated.reactions.get_by_id("r_1992").lower_bound == 0   # O2 blocked
+    assert mutated.reactions.get_by_id("r_1757").lower_bound == -1000  # ergosterol
+    assert mutated.reactions.get_by_id("r_0714").bounds == (0, 0)   # MDH2
+    cofac = mutated.reactions.get_by_id("r_4598")
+    heme = mutated.metabolites.get_by_id("s_3714")
+    assert cofac.metabolites.get(heme, 0) == 0
 
 
 def test_apply_is_idempotent_for_glycine(model):

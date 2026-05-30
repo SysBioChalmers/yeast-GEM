@@ -130,10 +130,10 @@ def commit_yeast_model(
     3. Validate that the model writes as valid SBML (cobrapy's
        ``validate_sbml_model``).
     4. Aerobic growth check — fail (or warn) if the model cannot grow.
-    5. (Anaerobic growth check is **deferred** to phase 4; it requires
-       the ``amino_acid_ratio`` step in ``conditions.apply('anaerobic')``
-       which currently raises ``NotImplementedError``. A warning is
-       emitted in its place.)
+    5. Anaerobic growth check — apply the ``anaerobic`` condition on a
+       *copy* and confirm the resulting model still grows. (Phase 4
+       activated this once the biomass / amino-acid-ratio plumbing
+       landed.)
     6. Write SBML to ``model/yeast-GEM.xml``.
     7. Persist ΔG annotations via :func:`save_delta_g`.
     8. Update ``README.md`` with the current date and model size
@@ -170,7 +170,7 @@ def commit_yeast_model(
 
     _check_sbml_validity(model)
     _check_growth(model, "aerobic", allow_no_growth)
-    _check_growth_anaerobic_deferred(allow_no_growth)
+    _check_growth_anaerobic(model, allow_no_growth)
 
     write_sbml_model(model, str(MODEL_PATH))
     save_delta_g(model)
@@ -222,23 +222,18 @@ def _check_growth(model: cobra.Model, condition: str, allow_no_growth: bool) -> 
         raise RuntimeError(msg)
 
 
-def _check_growth_anaerobic_deferred(allow_no_growth: bool) -> None:
-    """Placeholder for the anaerobic growth check.
+def _check_growth_anaerobic(model: cobra.Model, allow_no_growth: bool) -> None:
+    """Apply the anaerobic condition on a copy and confirm FBA growth.
 
-    The anaerobic condition uses ``amino_acid_ratio``, which depends on
-    the biomass module that lands in phase 4. Until then, the Python
-    pipeline warns instead of running the check. ``allow_no_growth=False``
-    is honoured by raising ``NotImplementedError``.
+    Mirrors the MATLAB ``checkGrowth(model, 'anaerobic', ...)`` step in
+    ``commitYeastModel.m``. The copy keeps the input model intact for
+    the SBML write that follows.
     """
-    msg = (
-        "Anaerobic growth check is deferred to phase 4 of the Python port "
-        "(see code/python/PORTING_PLAN.md). Use MATLAB commitYeastModel "
-        "to validate anaerobic growth until then."
-    )
-    if allow_no_growth:
-        warnings.warn(msg, stacklevel=3)
-    else:
-        raise NotImplementedError(msg)
+    from yeastgem import conditions
+
+    anaerobic = model.copy()
+    conditions.apply(anaerobic, "anaerobic")
+    _check_growth(anaerobic, "anaerobic", allow_no_growth)
 
 
 def _update_readme(model: cobra.Model) -> None:

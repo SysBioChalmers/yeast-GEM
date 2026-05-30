@@ -98,18 +98,19 @@ def test_commit_applies_canonical_state(model, isolated_paths):
         assert rxn.annotation.get("sbo")
 
 
-def test_commit_anaerobic_check_warns(model, isolated_paths):
-    """Anaerobic growth check is deferred — must emit a warning by default."""
+def test_commit_runs_anaerobic_growth_check(model, isolated_paths):
+    """Phase 4 turned the anaerobic check on. The deferred-warning
+    message must no longer appear (and the pipeline must finish)."""
     with warnings.catch_warnings(record=True) as caught:
         warnings.simplefilter("always")
         commit_yeast_model(model.copy())
-    assert any("Anaerobic growth check is deferred" in str(w.message) for w in caught)
+    assert not any("deferred to phase" in str(w.message) for w in caught)
 
 
-def test_commit_anaerobic_strict_raises(model, isolated_paths):
-    """With allow_no_growth=False the anaerobic gap must raise."""
-    with pytest.raises(NotImplementedError, match="Anaerobic growth check"):
-        commit_yeast_model(model.copy(), allow_no_growth=False)
+def test_commit_anaerobic_strict_succeeds(model, isolated_paths):
+    """With allow_no_growth=False the anaerobic check now runs end-to-end."""
+    commit_yeast_model(model.copy(), allow_no_growth=False)
+    # Pipeline returns normally; bombing out would have raised.
 
 
 def test_commit_returns_model(model, isolated_paths):
