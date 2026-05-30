@@ -1,36 +1,21 @@
-function model = saveDeltaG(model,verbose)
-% saveDeltaG
-%   Saves the metDeltaG and rxnDeltaG fields as tables to /data/databases/...
-%   model_rxnDeltaG.csv and /data/databases/model_metDeltaG.csv. When
-%   loadYeastModel is run, these tables will be read to reconstruct the
-%   metDeltaG and rxnDeltaG fields.
+function model = saveDeltaG(model, verbose)
+% saveDeltaG  yeast-GEM shim — delegates to RAVEN's saveDeltaGtoCSV.
 %
-% Input:
-%   model       yeast-GEM with deltaG fields
-%   verbose     true or false
+%   Persists model.metDeltaG and model.rxnDeltaG to the project
+%   CSVs at data/databases/model_metDeltaG.csv and
+%   data/databases/model_rxnDeltaG.csv. Returns the model unchanged
+%   (kept as an output for backward compatibility with callers that
+%   chain saveDeltaG into a pipeline).
 %
-% Output:
-%   model   yeast-GEM with metDeltaG and rxnDeltaG fields
-%
-% Usage: model = saveDeltaG(model,verbose)
+% Usage: model = saveDeltaG(model)
+%        model = saveDeltaG(model, verbose)
 
-if nargin<2
-    verbose=false;
+if nargin < 2
+    verbose = false;
 end
-if ~isfield(model,'metDeltaG')
-    if verbose
-        disp('No metDeltaG field found, model_metDeltaG.csv will not be changed.')
-    end
-else
-    metG = array2table([model.mets, num2cell(model.metDeltaG)]);
-    writetable(metG,'../../data/databases/model_metDeltaG.csv');
-end
-if ~isfield(model,'rxnDeltaG')
-    if verbose
-        disp('No rxnDeltaG field found, model_rxnDeltaG.csv will not be changed')
-    end
-else
-    rxnG = array2table([model.rxns, num2cell(model.rxnDeltaG)]);
-    writetable(rxnG,'../../data/databases/model_rxnDeltaG.csv');
-end
+
+funcDir = fileparts(mfilename('fullpath'));
+metCsv  = fullfile(funcDir, '..', '..', 'data', 'databases', 'model_metDeltaG.csv');
+rxnCsv  = fullfile(funcDir, '..', '..', 'data', 'databases', 'model_rxnDeltaG.csv');
+saveDeltaGtoCSV(model, metCsv, rxnCsv, verbose);
 end

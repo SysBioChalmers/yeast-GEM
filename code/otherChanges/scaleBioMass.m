@@ -1,24 +1,13 @@
-function model = scaleBioMass(model,component,new_value,balance_out,dispOutput)
-% scaleBioMass
-%   Scales the biomass composition
+function model = scaleBioMass(model, component, new_value, balance_out, dispOutput)
+% scaleBioMass  yeast-GEM shim — delegates to RAVEN's scaleBiomassFraction.
 %
-% Input:
-%   model           (struct) yeast-GEM model
-%   component       (string) biomass component to change (options are:
-%                   'carbohydrate', 'protein', 'lipid', 'RNA', 'DNA',
-%                   'ion', 'cofactor')
-%   new_value       (num) new total fraction for the specified biomass
-%                   component
-%   balance_out     (string, optional) biomass component that will be used
-%                   to balance out the biomass composition, so that the
-%                   total mass adds up to 1 g/gDCW. This is highly
-%                   recommended (default = empty, no scaling takes place)
-%   dispOutput      (bool, optional) displayed outoupt (default = true)
+%   Scales `component` to `new_value` g/gDW, optionally adjusting
+%   `balance_out` so the biomass total stays at 1 g/gDW. yeast-GEM's
+%   'lipid' aggregation (rescale both backbone + chain in lock-step)
+%   is preserved via the legacy rescalePseudoReaction shim, which
+%   dispatches the lipid special case.
 %
-% Output:
-%   model          (struct) modified yeast-GEM model
-%
-% Usage: model = scaleBioMass(model,component,new_value,balance_out,dispOutput)
+% Usage: model = scaleBioMass(model, component, new_value, balance_out, dispOutput)
 
 if nargin < 5
     dispOutput = true;
@@ -26,23 +15,22 @@ end
 if nargin < 4
     balance_out = '';
 end
-  
-%Measure current composition and rescale:
-[X,P,C,R,D,L,I,F] = sumBioMass(model,false);
+
+% Current fractions (uses the shared yeast biomass config).
+[X, P, C, R, D, L, I, F] = sumBioMass(model, false);
 content_all = {'biomass','carbohydrate','protein','lipid','RNA','DNA','ion','cofactor'};
 content_Cap = {'X','C','P','L','R','D','I','F'};
-pos         = strcmp(content_all,component);
-old_value   = eval(content_Cap{pos});
-f           = new_value / old_value;
-model       = rescalePseudoReaction(model,component,f);
+pos       = strcmp(content_all, component);
+old_value = eval(content_Cap{pos});
+f         = new_value / old_value;
+model     = rescalePseudoReaction(model, component, f);
 
-%Balance out (if desired):
 if ~isempty(balance_out)
-    X             = sumBioMass(model,false);
-    pos           = strcmp(content_all,balance_out);
+    X             = sumBioMass(model, false);
+    pos           = strcmp(content_all, balance_out);
     balance_value = eval(content_Cap{pos});
-    f             = (balance_value + (1-X)) / balance_value;
-    model         = rescalePseudoReaction(model,balance_out,f);
+    f             = (balance_value + (1 - X)) / balance_value;
+    model         = rescalePseudoReaction(model, balance_out, f);
 end
-sumBioMass(model,dispOutput);
+sumBioMass(model, dispOutput);
 end

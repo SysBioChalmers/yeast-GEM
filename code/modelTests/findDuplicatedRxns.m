@@ -1,23 +1,23 @@
 function findDuplicatedRxns(model)
-% findDuplicatedRxns
-%   Find and print reactions that have the same stoichiometry (forwards or
-%   backwards).
+% findDuplicatedRxns  yeast-GEM shim — delegates to RAVEN's
+% findDuplicateRxns and prints each pair in the legacy format.
 %
-%   Input:
-%   model   genome-scale model
+%   For every (i, j) pair of reactions sharing stoichiometry (in
+%   either direction), prints two lines with name / GPR / lb / ub —
+%   matching the pre-refactor output verbatim.
 %
-%   Usage: findDuplicatedRxns(model)
-%
+% Usage: findDuplicatedRxns(model)
 
-for i = 1:length(model.rxns)-1
-    for j = i+1:length(model.rxns)
-        if isequal(model.S(:,i),model.S(:,j)) || isequal(model.S(:,i),-model.S(:,j))
-            constructEquations(model,model.rxns(i));
-            disp(['Name: ' model.rxnNames{i} ' - GPR: ' model.grRules{i} ' - LB=' num2str(model.lb(i)) ' - UB=' num2str(model.ub(i))])
-            constructEquations(model,model.rxns(j));
-            disp(['Name: ' model.rxnNames{j} ' - GPR: ' model.grRules{j} ' - LB=' num2str(model.lb(j)) ' - UB=' num2str(model.ub(j))])
-            disp(" ")
-        end
-    end
+pairs = findDuplicateRxns(model);
+for k = 1:size(pairs, 1)
+    i = pairs(k, 1);
+    j = pairs(k, 2);
+    constructEquations(model, model.rxns(i));
+    disp(['Name: ' model.rxnNames{i} ' - GPR: ' model.grRules{i} ...
+          ' - LB=' num2str(model.lb(i)) ' - UB=' num2str(model.ub(i))])
+    constructEquations(model, model.rxns(j));
+    disp(['Name: ' model.rxnNames{j} ' - GPR: ' model.grRules{j} ...
+          ' - LB=' num2str(model.lb(j)) ' - UB=' num2str(model.ub(j))])
+    disp(" ")
 end
 end
