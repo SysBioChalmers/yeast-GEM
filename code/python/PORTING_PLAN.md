@@ -13,7 +13,8 @@ saved and validated entirely from Python.
 | 1. Scaffold + comparator + reference fixture | **done** | `yeastgem` package importable, `read/write_yeast_model` ported, level-1 comparator + 15-test pytest suite passing, CI workflow in place (`matlab-reference-compare` job parked behind `if: false` until the reference bundle is seeded), reference-bundle scaffold + MATLAB regeneration stub. `code/io.py` is now a deprecated forwarding shim. |
 | 2. Config-as-code refactor (both languages) | **done** | Data files (`data/yeastgem/ids.yml`, `data/conditions/{minimal_Y6,anaerobic,glycine_nitrogen,nitrogen_limitation}.yml`) created. MATLAB: `applyCondition.m`, `applyIDs.m`, `readYAML.m`; four legacy functions converted to one-line shims. Python: `yeastgem.config.load_ids()`, `yeastgem.conditions.apply()` cover prelude, cofactor-pseudoreaction edits, biomass-stoichiometry deltas, and bounds (33 tests passing). The `amino_acid_ratio` step in `anaerobic` is deferred to phase 4 (Tier 2) — calling `conditions.apply(model, 'anaerobic')` raises `NotImplementedError` with a clear pointer. **Verified end-to-end on MATLAB R2024b + RAVEN:** pre-refactor (`feat/anaerobic`) vs post-refactor (`feat/python-port`) is byte-identical on `rxns`, `mets`, `lb`, `ub`, `S` for all four conditions; Python `apply` matches MATLAB `lb`/`ub` for the three supported conditions; the two feasible SBML round-trips pass `yeastgem.compare`. Recipe + verification scripts in [tests/reference/README.md](tests/reference/README.md). |
 | 3. Tier 1 — load/save parity (`commit_yeast_model`) | **done** | MATLAB: `saveYeastModel.m` → `commitYeastModel.m` (with deprecation shim); the cd-dance inside the pipeline replaced by `applyCondition('minimal_Y6')` / `applyCondition('anaerobic')`. Python: `yeastgem.io.commit_yeast_model` ports the release pipeline (apply minimal_Y6 → add SBO terms → SBML-validity gate → aerobic growth check → write SBML → ΔG CSVs → README update); `write_yeast_model` is a deprecated forwarding shim. Companion ports: `yeastgem.missing_fields.add_sbo_terms`, `load_delta_g`, `save_delta_g`. **20 new tests, 53 total passing.** `addSBOterms` faithfully replicates the legacy MATLAB pseudoreaction-loop bug (`for i=numel(model.rxns)` iterating only the last reaction); a fix is tracked as a future behaviour-change PR. Anaerobic growth check is deferred to phase 4 — emits a warning by default, raises `NotImplementedError` when `allow_no_growth=False`. Multi-format export (`.yml`/`.txt`/`.xlsx`/`.mat`) stays MATLAB-only for now; `.xml` is the contract. **Verified end-to-end:** pre-rename `saveYeastModel` vs post-rename `commitYeastModel` semantically equal; MATLAB `commitYeastModel` vs Python `commit_yeast_model` semantically equal. Recipe + verification driver in [tests/reference/README.md](tests/reference/README.md) and [`runPhase3.m`](tests/reference/runPhase3.m). |
-| 4. Tier 2 — biomass + conditions in Python | not started | Includes the deferred `amino_acid_ratio` step in `conditions.apply`. |
+| 3.5. Upstream restructure (raven-python + RAVEN) | **done** | Decision #1 reversed: generic helpers move upstream rather than living locally. Moved to raven-python (on `feat/yeast-gem-shared`): `raven_python.comparison.diff_models` + `DiffReport` (renamed from the local `compare_models`/`ComparisonReport`), `raven_python.annotation.{add_sbo_terms, load_delta_g_csv, save_delta_g_csv}`, `raven_python.conditions.{apply_condition, load_condition, set_reaction_bounds}`. Moved to RAVEN (on `feat/yeast-gem-shared`): `io/readYAML.m`, `core/applyCondition.m`. yeast-GEM now: depends on `raven-python` (git URL pinned to the feature branch), `yeastgem.compare`/`yeastgem.missing_fields`/`yeastgem.conditions` become thin wrappers that configure upstream defaults with yeast-specific data; MATLAB `code/readYAML.m` deleted, `code/applyCondition.m` → `code/applyYeastCondition.m` (handles the `amino_acid_ratio` pre-step then delegates to RAVEN). yeast-GEM uses the legacy `only_last_reaction_for_pseudo=True` flag on the upstream `add_sbo_terms` to stay byte-equivalent during the transition. **46 new raven-python tests + 46 yeast-GEM tests passing.** Verified: all 4 conditions byte-equivalent pre vs post restructure on MATLAB; Python `commit_yeast_model` (now through raven-python) semantically equal to MATLAB `commitYeastModel`. |
+| 4. Tier 2 — biomass + conditions in Python | not started | Includes the deferred `amino_acid_ratio` step in `conditions.apply`. Biomass / GAM / chemostat / fit_gam should land directly upstream in `raven-python` (and RAVEN) given the new dependency posture. |
 | 5. Tier 3 — test suite | not started | |
 | 6. Tier 4 — curation framework | not started | |
 | 7. Docs + CI | partial | Python CI workflow added; README "not yet functional" note still to update. |
@@ -23,15 +24,17 @@ saved and validated entirely from Python.
 - **Canonical object is `cobra.Model`** (ravengem's convention). No parallel
   RAVEN-style struct. RAVEN-only fields (`metDeltaG`, `rxnConfidenceScores`,
   SBO terms, MIRIAM) live in cobra `annotation`/`notes`.
-- **Reuse the existing baseline, do not deepen it.** In MATLAB, yeast-GEM
-  already builds on RAVEN (`importModel`, `exportModel`, `solveLP`, …); that
-  stays as-is. In Python, the equivalent baseline is **cobrapy alone** — its
-  SBML I/O, FBA/FVA, gene deletion, mass-balance helper, model manipulation
-  primitives are fair game. We do **not** add ravengem (or any other
-  RAVEN-derived package) as a dependency, even when ravengem already
-  implements something we need; we re-do it locally in yeastgem and record
-  it in [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md). Symmetrically, we
-  do not add new RAVEN-only requirements on the MATLAB side.
+- **Depend on the upstream toolboxes; do not duplicate.** *Revised after
+  phase 3.* In MATLAB, yeast-GEM builds on RAVEN (`importModel`,
+  `exportModel`, `solveLP`, the new `readYAML` / `applyCondition`, …). In
+  Python, yeast-GEM builds on `raven-python` (which itself builds on
+  cobrapy) — `diff_models`, `add_sbo_terms`, `apply_condition`, ΔG CSV
+  helpers all live upstream. yeastgem keeps only the *yeast-specific
+  configuration* of those generics: the data files under `data/`, the
+  `applyYeastCondition` wrapper that handles the yeast-only
+  `amino_acid_ratio` step, the legacy-bug-compat flag on
+  `add_sbo_terms`, and the repo orchestration in `commit_yeast_model`
+  (paths, README rewrite).
 - **Package layout:** a proper importable package under `code/python/`
   (working name `yeastgem`), with flat submodules. The existing `code/io.py`
   is folded into `yeastgem.io`.
@@ -43,7 +46,17 @@ saved and validated entirely from Python.
 
 These four choices shape every section below:
 
-1. **Upstream stance — keep everything in yeast-GEM for now.** No new
+1. **Upstream stance — generic helpers live upstream (revised after phase 3).**
+   yeast-GEM depends on RAVEN (MATLAB) and `raven-python` (Python), and
+   contributes the organism-agnostic helpers there rather than keeping
+   them in-tree. Phase 3.5 moved the first batch (`diff_models`,
+   `add_sbo_terms`, ΔG CSV persistence, `apply_condition`, `readYAML`).
+   yeastgem keeps only the yeast-specific configuration / wrappers.
+   See [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md) for the
+   remaining tracked items.
+
+   *(Earlier, pre-phase-3 stance:)* keep everything in yeast-GEM for now;
+   no new
    dependencies on RAVEN (MATLAB) or ravengem (Python) beyond what yeast-GEM
    already uses. Existing RAVEN usage in MATLAB stays; Python remains on a
    plain cobrapy baseline (no ravengem dependency added). Generic-looking

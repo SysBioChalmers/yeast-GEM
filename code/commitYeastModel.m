@@ -52,7 +52,7 @@ scriptFolder = fileparts(which(mfilename));
 currentDir = cd(scriptFolder);
 
 %Set minimal media (data-driven since phase 2 of the Python port)
-model = applyCondition(model, 'minimal_Y6');
+model = applyYeastCondition(model, 'minimal_Y6');
 
 %Update SBO terms in model:
 cd missingFields
@@ -139,7 +139,7 @@ function checkGrowth(model,condition,allowNoGrowth)
 %errors depending on allowNoGrowth.
 
 if strcmp(condition,'anaerobic')
-    model = applyCondition(model, 'anaerobic');
+    model = applyYeastCondition(model, 'anaerobic');
 end
 try
     xPos = strcmp(model.rxnNames,'growth');

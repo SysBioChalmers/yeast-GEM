@@ -4,12 +4,10 @@ from __future__ import annotations
 import math
 
 import pandas as pd
+from raven_python.annotation.sbo import _default_transport_detector
 
 from yeastgem import add_sbo_terms, load_delta_g, save_delta_g
-from yeastgem.missing_fields import (
-    _DELTA_G_NOTE_KEY,
-    _transport_reaction_ids,
-)
+from yeastgem.missing_fields import _DELTA_G_NOTE_KEY
 
 # --- add_sbo_terms ---------------------------------------------------
 
@@ -70,9 +68,10 @@ def test_fill_semantic_preserves_existing(model):
 
 
 def test_transport_reaction_detection(model):
-    """A reaction with the same metabolite name in two compartments
-    should be flagged as transport."""
-    transport_ids = _transport_reaction_ids(model)
+    """The upstream default transport detector classifies same-met-name
+    in two compartments as transport. Verified here on the real yeast-
+    GEM model as a smoke test."""
+    transport_ids = _default_transport_detector(model)
     assert transport_ids, "expected at least some transport reactions"
     # Sanity: an exchange reaction is NOT a transport reaction.
     exchange_ids = {r.id for r in model.exchanges}

@@ -9,5 +9,5 @@ function model = minimal_Y6(model)
 %
 % Usage: model = minimal_Y6(model)
 
-model = applyCondition(model, 'minimal_Y6');
+model = applyYeastCondition(model, 'minimal_Y6');
 end

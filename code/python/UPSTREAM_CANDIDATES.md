@@ -1,20 +1,48 @@
 # Upstream candidates
 
-This document tracks yeast-GEM helpers that, while currently implemented
-**locally** in yeast-GEM (per Decision #1 in
-[PORTING_PLAN.md](PORTING_PLAN.md)), are organism-agnostic enough that they
-should eventually move into an upstream toolbox:
+This document tracks helpers that should live upstream
+(**raven-python** for Python, **RAVEN** for MATLAB) so yeast-GEM does not
+duplicate organism-agnostic logic. The "done" section records what
+already moved; the "pending" section records what remains and the API
+shape we want it to land with.
 
-- **ravengem** (Python) — the natural home for generic GEM utilities that
-  build on cobrapy.
-- **RAVEN** (MATLAB) — for the MATLAB counterparts of the same algorithms,
-  when they don't already exist there.
+**Decision #1 was revised after phase 3** (see [PORTING_PLAN.md](PORTING_PLAN.md)):
+generic helpers move upstream now and yeast-GEM declares a dependency
+on those toolboxes, rather than implementing locally first.
 
-Listing a function here does **not** create an upstream PR or a dependency.
-It records the abstraction we'd want, the proposed signature, the rationale,
-and what would trigger actually doing the move. When a candidate's local
-implementation is touched, this document is updated alongside so the API
-shape stays aligned with the proposed upstream signature.
+## Done — moved upstream in phase 3.5
+
+The following were extracted from yeast-GEM into upstream branches
+`feat/yeast-gem-shared` on both repos:
+
+| yeast-GEM module (was) | Upstream home | Public API |
+|---|---|---|
+| `yeastgem.compare.compare_models` / `ComparisonReport` | `raven_python.comparison` | `diff_models`, `DiffReport` |
+| `yeastgem.missing_fields.add_sbo_terms` | `raven_python.annotation.sbo` | `add_sbo_terms` (with `only_last_reaction_for_pseudo` legacy flag) |
+| `yeastgem.missing_fields.{load,save}_delta_g` mechanism | `raven_python.annotation.delta_g` | `load_delta_g_csv`, `save_delta_g_csv` (column / note-key params) |
+| `yeastgem.conditions.apply` internals (prelude / cofactor / biomass-delta / bounds) | `raven_python.conditions` | `apply_condition`, `load_condition`, `set_reaction_bounds` |
+| `code/readYAML.m` | RAVEN `io/readYAML.m` | unchanged signature |
+| `code/applyCondition.m` (generic core) | RAVEN `core/applyCondition.m` | takes YAML path or struct |
+
+yeast-GEM now keeps:
+- `yeastgem.compare` — re-export of the upstream `diff_models` under
+  the historical names `compare_models` / `ComparisonReport`.
+- `yeastgem.missing_fields` — thin wrappers passing the yeast CSV
+  paths (`data/databases/model_metDeltaG.csv` etc.) and the legacy
+  `only_last_reaction_for_pseudo=True` bug-compat flag.
+- `yeastgem.conditions.apply` — resolves a name to `data/conditions/<name>.yml`,
+  raises `NotImplementedError` on `amino_acid_ratio` (Tier 2), then
+  delegates to upstream.
+- `code/applyYeastCondition.m` — same shape, in MATLAB.
+
+## Pending — not yet moved
+
+Listing a function here does **not** create an upstream PR or a
+dependency. It records the abstraction we'd want, the proposed
+signature, the rationale, and what would trigger actually doing the
+move. When a candidate's local implementation is touched, this
+document is updated alongside so the API shape stays aligned with the
+proposed upstream signature.
 
 ## How to read each entry
 

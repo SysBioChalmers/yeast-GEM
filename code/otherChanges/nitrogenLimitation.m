@@ -9,5 +9,5 @@ function model = nitrogenLimitation(model)
 %
 % Usage: model = nitrogenLimitation(model)
 
-model = applyCondition(model, 'nitrogen_limitation');
+model = applyYeastCondition(model, 'nitrogen_limitation');
 end

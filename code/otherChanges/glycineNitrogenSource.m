@@ -12,5 +12,5 @@ function model = glycineNitrogenSource(model)
 %
 % Usage: model = glycineNitrogenSource(model)
 
-model = applyCondition(model, 'glycine_nitrogen');
+model = applyYeastCondition(model, 'glycine_nitrogen');
 end

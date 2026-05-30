@@ -11,5 +11,5 @@ function model = anaerobicModel(model)
 %
 % Usage: model = anaerobicModel(model)
 
-model = applyCondition(model, 'anaerobic');
+model = applyYeastCondition(model, 'anaerobic');
 end

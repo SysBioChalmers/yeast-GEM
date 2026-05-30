@@ -104,26 +104,37 @@ def test_apply_is_idempotent_for_glycine(model):
     assert report.equal, report
 
 
-# --- partial-anaerobic check (everything except amino_acid_ratio) -----
+# --- partial-anaerobic checks on the real model ---------------------
+#
+# The generic application steps moved upstream to
+# raven_python.conditions.apply_condition; they are exercised against
+# tiny synthetic fixtures in raven-python's own test suite. The two
+# tests below run those upstream steps against the real yeast-GEM
+# model with the anaerobic YAML to catch yeast-specific ID-drift
+# regressions (heme-a id, FADH2 / FAD / H+ ids, biomass rxn id, …).
 
-def test_anaerobic_cofactor_delta_changes_S_matrix(model):
-    """Manually invoke the parts of anaerobic Python supports and verify
-    the cofactor pseudoreaction loses heme a (s_3714)."""
+
+def test_anaerobic_cofactor_step_removes_heme_on_real_model(model):
+    """Build a sub-config with only the cofactor step and apply via
+    upstream. The cofactor pseudoreaction (r_4598) should lose heme a
+    (s_3714)."""
+    from raven_python.conditions import apply_condition
+
     mutated = model.copy()
     cofac = mutated.reactions.get_by_id("r_4598")
     heme = mutated.metabolites.get_by_id("s_3714")
-    assert heme in cofac.metabolites  # heme present before
+    assert heme in cofac.metabolites
 
-    # Apply just the cofactor pseudoreaction step
-    conditions._apply_cofactor_pseudoreaction(
-        mutated, conditions.load_condition("anaerobic")
-    )
-    # heme coefficient should now be zero (or removed)
+    full_cfg = conditions.load_condition("anaerobic")
+    sub_cfg = {"cofactor_pseudoreaction": full_cfg["cofactor_pseudoreaction"]}
+    apply_condition(mutated, sub_cfg)
     assert cofac.metabolites.get(heme, 0) == 0
 
 
-def test_anaerobic_biomass_delta_adds_fadh2(model):
-    """The biomass delta block adds 0.08 FADH2, -0.08 FAD, -0.16 H+ to r_4041."""
+def test_anaerobic_biomass_step_adds_fadh2_on_real_model(model):
+    """Same idea for the biomass stoichiometry delta block."""
+    from raven_python.conditions import apply_condition
+
     mutated = model.copy()
     bio = mutated.reactions.get_by_id("r_4041")
     fadh2 = mutated.metabolites.get_by_id("s_0689")
@@ -136,9 +147,9 @@ def test_anaerobic_biomass_delta_adds_fadh2(model):
         proton.id: bio.metabolites.get(proton, 0),
     }
 
-    conditions._apply_biomass_stoichiometry_delta(
-        mutated, conditions.load_condition("anaerobic")
-    )
+    full_cfg = conditions.load_condition("anaerobic")
+    sub_cfg = {"biomass_stoichiometry_delta": full_cfg["biomass_stoichiometry_delta"]}
+    apply_condition(mutated, sub_cfg)
 
     after = bio.metabolites
     assert after[fadh2] == pytest.approx(before[fadh2.id] + 0.08)

@@ -12,10 +12,13 @@ license = { text = "CC-BY-4.0" }
 authors = [{ name = "SysBioChalmers", email = "info@sysbiochalmers.se" }]
 keywords = ["systems biology", "metabolic model", "yeast", "Saccharomyces cerevisiae", "cobra"]
 
-# Per Decision #1 in PORTING_PLAN.md: no ravengem dependency. cobrapy is
-# the baseline. Generic helpers that could live upstream are tracked in
-# UPSTREAM_CANDIDATES.md and implemented locally for now.
+# Decision #1 was revised after phase 3: generic helpers MOVE to
+# raven-python (Python) / RAVEN (MATLAB) rather than living locally
+# in yeast-GEM. PORTING_PLAN.md reflects the change. yeast-GEM Python
+# now depends on raven-python; the local yeastgem package is just the
+# yeast-specific repo orchestration on top.
 dependencies = [
+    "raven-python @ git+https://github.com/SysBioChalmers/raven-python@feat/yeast-gem-shared",
     "cobra>=0.29",
     "pandas>=2.0",
     "pyyaml>=6.0",
