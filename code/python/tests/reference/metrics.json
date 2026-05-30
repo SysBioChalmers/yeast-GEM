@@ -1,0 +1,24 @@
+{
+  "_comment": "MATLAB-produced reference metrics for the level-2 parity CI gate. Regenerate with code/python/tests/reference/runPhase5Metrics.m (see tests/reference/README.md). The 'Phase-5 specific' verification recorded these values from MATLAB R2024b + Gurobi 13.0 + RAVEN feat/yeast-gem-shared on the committed yeast-GEM.xml.",
+  "source_branch": "feat/python-port",
+  "source_commit": "b4d3769",
+  "growth_r2": 0.906163752,
+  "essential_genes": {
+    "accuracy": 0.9024390243902439,
+    "sensitivity_percent": 98.52320675105486,
+    "specificity_percent": 40.880503144654085,
+    "mcc": 0.5368213017169351,
+    "tp": 934,
+    "tn": 65,
+    "fp": 94,
+    "fn": 14
+  },
+  "anaerobic_flux_r2": 0.9047649385569187,
+  "tolerances": {
+    "r2_abs": 5e-3,
+    "accuracy_abs": 5e-3,
+    "mcc_abs": 5e-2,
+    "gene_count_abs": 2,
+    "_rationale": "Gurobi (MATLAB) vs HiGHS (cobrapy default in CI) solver drift around the 1e-6 growth-ratio threshold accounts for ~1-gene differences in the essential-gene confusion matrix and ~1e-3 differences in R^2 metrics."
+  }
+}

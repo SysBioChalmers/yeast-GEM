@@ -71,13 +71,25 @@ Please see the installation instructions for each software package.
   * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later
 
 * Python-based  
-  Contribution via python (cobrapy) is not yet functional. In essence, if you can retain the same format of the model files, you can still contribute to the development of yeast-GEM. However, you cannot use the MATLAB functions.
+  Contribution via Python is supported through the `yeastgem` package
+  under [code/python/](code/python/) and its
+  [PORTING_PLAN.md](code/python/PORTING_PLAN.md). The package builds
+  on [cobrapy](https://github.com/opencobra/cobrapy) and
+  [raven-python](https://github.com/SysBioChalmers/raven-python) (the
+  Python port of RAVEN) — the latter provides the generic GEM
+  utilities (`diff_models`, `add_sbo_terms`, condition / biomass /
+  curation helpers) that `yeastgem` configures with the yeast-specific
+  data files under [data/](data/).
 
-  If you want to use any of the [provided](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code) Python functions, you may create an environment with all requirements:
+  Install from a checkout:
   ```bash
-  pip install -r code/requirements/requirements.txt  # install all dependencies
-  touch .env # create a .env file for locating the root
+  pip install -e code/python/[dev]
   ```
+
+  The release pipeline equivalent to the MATLAB `commitYeastModel`
+  is `yeastgem.commit_yeast_model`. The historical
+  [code/io.py](code/io.py) is kept as a deprecated forwarding shim
+  that re-exports from the new package.
 
 If you want to locally run `memote run` or `memote report history`, you should also install [git lfs](https://git-lfs.github.com/), as `results.db` (the database that stores all memote results) is tracked with git lfs.
 
@@ -87,21 +99,26 @@ Make sure to load/save the model with the corresponding wrapper functions:
 * In Matlab:
   ```matlab
   cd ./code
-  model = loadYeastModel(); % loading
-  saveYeastModel(model);    % saving
+  model = loadYeastModel();   % loading
+  commitYeastModel(model);    % saving — release pipeline (was saveYeastModel)
   ```
   * If RAVEN is not installed, you can also use COBRA-native functions (`readCbModel`, `writeCbModel`), but these model-files cannot be committed back to the GitHub repository.
-* In Python:  
-Before opening Python, the following command should (once) be run in the yeast-GEM root folder:  
-  ```bash
-  touch .env # create a .env file for locating the root
-  ```
-  Afterwards, the model can be loaded in Python with:
+  * `saveYeastModel` is kept as a deprecated shim that forwards to `commitYeastModel`; it emits a deprecation warning.
+* In Python (after `pip install -e code/python/`):
   ```python
-  import code.io as io
-  model = io.read_yeast_model() # loading
-  io.write_yeast_model(model)   # saving
+  from yeastgem import read_yeast_model, commit_yeast_model
+  model = read_yeast_model()    # loading
+  commit_yeast_model(model)     # saving — release pipeline (validates,
+                                # applies canonical state, writes SBML +
+                                # ΔG CSVs, updates README)
   ```
+  The Python release pipeline currently writes the `.xml` artifact and
+  the ΔG side-car CSVs; the `.yml` / `.txt` companion exports still
+  require running the MATLAB `commitYeastModel`. Anaerobic growth and
+  the model_tests benchmarks are wired in
+  [`yeastgem.model_tests`](code/python/yeastgem/model_tests/); batch
+  curation from TSV inputs is available via
+  [`yeastgem.curation`](code/python/yeastgem/curation.py).
 
 ### Online visualization
 
