@@ -7,7 +7,7 @@ upstream later.
 """
 from __future__ import annotations
 
-from yeastgem import biomass, conditions, model_tests
+from yeastgem import biomass, conditions, curation, model_tests
 from yeastgem.compare import ComparisonReport, compare_models
 from yeastgem.config import YeastIDs, load_ids
 from yeastgem.io import (
@@ -29,6 +29,7 @@ __all__ = [
     "commit_yeast_model",
     "compare_models",
     "conditions",
+    "curation",
     "load_delta_g",
     "load_ids",
     "model_tests",
