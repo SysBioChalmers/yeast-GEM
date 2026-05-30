@@ -24,6 +24,7 @@ The following were extracted from yeast-GEM into upstream branches
 | `code/readYAML.m` | RAVEN `io/readYAML.m` | unchanged signature |
 | `code/applyCondition.m` (generic core) | RAVEN `core/applyCondition.m` | takes YAML path or struct |
 | biomass subsystem (`sumBioMass`/`scaleBioMass`/`rescalePseudoReaction`/`changeGAM`) | `raven_python.biomass` | `BiomassConfig`/`BiomassComponent`, `sum_biomass`, `scale_biomass`, `rescale_pseudoreaction`, `set_gam` |
+| `findDuplicatedRxns` (detection only) | `raven_python.manipulation` | `find_duplicate_reactions(model, *, ignore_direction=True)` |
 
 yeast-GEM now keeps:
 - `yeastgem.compare` — re-export of the upstream `diff_models` under
