@@ -14,12 +14,12 @@ function ids = applyIDs()
 %   sumBioMass.m. Those functions are kept as legacy shims; new code
 %   should call applyIDs and read from the returned struct.
 %
-%   Requires RAVEN's readYAML (any RAVEN release ≥ the commit that
-%   added io/readYAML.m, currently the feat/yeast-gem-shared branch).
+%   Requires RAVEN's parseYAML (any RAVEN release ≥ the commit that
+%   added io/parseYAML.m, currently the feat/yeast-gem-shared branch).
 %
 % Usage: ids = applyIDs()
 
 funcDir = fileparts(mfilename('fullpath'));
 yamlPath = fullfile(funcDir, '..', 'data', 'yeastgem', 'ids.yml');
-ids = readYAML(yamlPath);
+ids = parseYAML(yamlPath);
 end

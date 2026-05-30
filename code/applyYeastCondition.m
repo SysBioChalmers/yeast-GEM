@@ -16,7 +16,7 @@ function model = applyYeastCondition(model, name)
 %       'glycine_nitrogen'   glycine as sole N source
 %       'nitrogen_limitation' N-limited
 %
-%   Requires RAVEN with the applyCondition / readYAML helpers (commit
+%   Requires RAVEN with the applyCondition / parseYAML helpers (commit
 %   on the feat/yeast-gem-shared branch or any later release that
 %   incorporates them).
 %
@@ -28,7 +28,7 @@ if ~isfile(yamlPath)
     error('applyYeastCondition:unknownCondition', ...
         'No such condition: %s (looked for %s)', name, yamlPath);
 end
-cond = readYAML(yamlPath);
+cond = parseYAML(yamlPath);
 
 % Yeast-specific pre-step: amino_acid_ratio rewrites the protein
 % pseudoreaction's stoichiometry from data/physiology/. The generic
