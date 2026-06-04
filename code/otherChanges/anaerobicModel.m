@@ -18,8 +18,8 @@ function model = anaerobicModel(model)
 
 %% Set environmental conditions
 % Remove heme a from the cofactor pseudoreaction (part of biomass)
-hemeIdx = getIndexes(model,'s_3714','mets');
-cofacIdx = getIndexes(model,'r_4598','rxns');
+hemeIdx = find(strcmp(model.mets,'s_3714'));
+cofacIdx = find(strcmp(model.rxns,'r_4598'));
 model.S(hemeIdx,cofacIdx) = 0;
 % Correct H+
 Hc = find(strcmp(model.mets,'s_0794'));
@@ -51,20 +51,22 @@ model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
 % 10.1074/jbc.M404544200). It is strongly repressed in transcriptome (Tai
 % et al (2005) 10.1074/jbc.M410573200) and not detected in proteome
 % (Sjöberg et al (2023) 10.1016/j.ymben.2024.01.007).
-model = setParam(model,'eq','r_0714',0);
+model.lb(strcmp(model.rxns,'r_0714')) = 0;
+model.ub(strcmp(model.rxns,'r_0714')) = 0;
  
 % Block IDP2.  It is strongly repressed in transcriptome (Tai et al (2005)
 % 10.1074 /jbc.M410573200) and not detected in proteome (Sjöberg et al
 % (2023) 10.1016/j.ymben.2024.01.007).
-model = setParam(model,'eq',{'r_0659'},0);
+model.lb(strcmp(model.rxns,'r_0659')) = 0;
+model.ub(strcmp(model.rxns,'r_0659')) = 0;
 
 %% Fumarate reductase is required to recycle FADH2 derived from disulphide
 % bound formation by growth in anaerobic conditions through Ero1 (Camarasa
 % et al (2007) 10.1002/yea.1467; Kim et al (2018) 10.1038/s41467-018-07285-9). 
 
 FADH2_prod=0.08;
-metIdx = getIndexes(model,{'s_0689','s_0687','s_0794'},'mets'); % FADH2[c], FAD[c], H+[c]
-bioIdx = getIndexes(model,'r_4041','rxns');
+[~,metIdx] = ismember({'s_0689','s_0687','s_0794'},model.mets); % FADH2[c], FAD[c], H+[c]
+bioIdx = find(strcmp(model.rxns,'r_4041'));
 
 currCoeff = full(model.S(metIdx,bioIdx)); % Gather the current coefficients
 model.S(metIdx,bioIdx) = currCoeff + [FADH2_prod; -FADH2_prod; -2*FADH2_prod];

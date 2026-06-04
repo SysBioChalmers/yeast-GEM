@@ -36,7 +36,7 @@ aaRatio = aaRatio(:,col);
 aaRatio = [-aaRatio; aaRatio];
 
 [~, P] = sumBioMass(model,false);
-protRxn  = getIndexes(model,'r_4047','rxns');
+protRxn  = find(strcmp(model.rxns,'r_4047'));
 [~, tRNAidxs] = ismember(tRNAids,model.mets);
 model.S(tRNAidxs,protRxn) = aaRatio;
 model = scaleBioMass(model,'protein',P,[],false);
