@@ -57,8 +57,10 @@ legend(b,'N-limited aerobic','C-limited aerobic','C-limited anaerobic','N-limite
 % meanerror = sqrt(sum(([exp_data1(:,4);exp_data2(:,4);exp_data3(:,4);exp_data4(:,4)]-[mod_data1(:,4);mod_data2(:,4);mod_data3(:,4);mod_data4(:,4)]).^2)/32)/sqrt(32);
 % text(0.25,0.1,['SEM:',num2str(meanerror)])
 hold off
-R2=corrcoef(exp_data(:,4),mod_data(:,4));
-R2=R2(2)^2;
+% R2 = coefficient of determination about the line of identity, with the
+% experimental values as reference; all data points (no thresholding).
+obs = exp_data(:,4); pred = mod_data(:,4);
+R2 = 1 - sum((obs-pred).^2)/sum((obs-mean(obs)).^2);
 text(0.25,0.1,['R2:',num2str(R2)])
 
 if writeOutput

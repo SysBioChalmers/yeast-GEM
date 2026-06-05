@@ -45,9 +45,10 @@ end
 
 
 threshold=30;
-R2=corrcoef(merged_sim(merged_data<threshold),merged_data(merged_data<threshold));
-R2=R2(2)^2;
-mean_relative_error=mean(abs((merged_sim(merged_data<threshold)-merged_data(merged_data<threshold))./merged_data(merged_data<threshold)),'omitnan');
+% R2 = coefficient of determination about the line of identity, with the
+% experimental values (merged_data) as reference; all data points (no threshold).
+R2 = 1 - sum((merged_data-merged_sim).^2)/sum((merged_data-mean(merged_data)).^2);
+mean_relative_error = mean(abs((merged_sim-merged_data)./merged_data),'omitnan');
 
 x=0:1:threshold;
 y = x;
