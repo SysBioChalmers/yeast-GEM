@@ -128,7 +128,7 @@ end
 
 %%
 function checkGrowth(model,condition,allowNoGrowth)
-%Function that checks if the model can grow or not using COBRA under a
+%Function that checks if the model can grow or not using RAVEN under a
 %given condition (aerobic or anaerobic). Will either return warnings or
 %errors depending on allowNoGrowth.
 
@@ -145,9 +145,9 @@ try
             condition ' conditions. Please ensure the model can grow'];
     end
 catch
-    dispText = ['The model yields an infeasible simulation using COBRA ' ...
+    dispText = ['The model yields an infeasible simulation using RAVEN ' ...
         'under ' condition ' conditions. Please ensure the model ' ...
-        'can be simulated with COBRA'];
+        'can be simulated with RAVEN'];
 end
 
 if exist('dispText','var')
