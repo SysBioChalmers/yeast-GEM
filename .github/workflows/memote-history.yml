@@ -7,14 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         # MEMOTE wants to fetch all branches
         with:
           fetch-depth: 0
 
 
       - name: Set up Python 3
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v6
         with:
           python-version: "3.9"
 
@@ -22,7 +22,7 @@ jobs:
         run: pip install -r code/requirements/ci-requirements.txt
 
       - name: Checkout repo for gh-pages branch
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
         with:
           repository: ${{ github.repository }}
           ref: gh-pages
@@ -49,7 +49,7 @@ jobs:
           git pull
 
       - name: Auto-commit results
-        uses: stefanzweifel/git-auto-commit-action@v4
+        uses: stefanzweifel/git-auto-commit-action@v7
         with:
           commit_user_name: memote-bot
           commit_message: "chore: update memote history report"
