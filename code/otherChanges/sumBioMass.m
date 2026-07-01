@@ -23,35 +23,14 @@ if nargin < 2
     dispOutput = true;
 end
 
-%Load original biomass component MWs:
-%TODO: compute MW automatically from chemical formulas (check that all components have them first)
-fid = fopen('../../data/physiology/biomassComposition_Forster2003.tsv');
-Forster2003 = textscan(fid,'%s %s %f32 %f32 %s','Delimiter','\t','HeaderLines',1);
-data.mets   = Forster2003{1};
-data.MWs    = double(Forster2003{4});
-fclose(fid);
-
-%load additional cofactor/ion MWs:
-fid = fopen('../../data/physiology/biomassComposition_Cofactor_Ion.tsv');
-CofactorsIons = textscan(fid,'%s %s %f32 %f32 %s %s','Delimiter','\t','HeaderLines',1);
-data_new.mets = CofactorsIons{1};
-data_new.MWs  = double(CofactorsIons{4});
-fclose(fid);
-for i = 1:length(data_new.mets)
-    if ~ismember(data_new.mets(i),data.mets)
-        data.mets = [data.mets; data_new.mets(i)];
-        data.MWs  = [data.MWs; data_new.MWs(i)];
-    end
-end
-
 %Get main fractions:
-[P,X] = getFraction(model,data,'P',0,dispOutput);
-[C,X] = getFraction(model,data,'C',X,dispOutput);
-[R,X] = getFraction(model,data,'R',X,dispOutput);
-[D,X] = getFraction(model,data,'D',X,dispOutput);
-[L,X] = getFraction(model,data,'L',X,dispOutput);
-[I,X] = getFraction(model,data,'I',X,dispOutput);
-[F,X] = getFraction(model,data,'F',X,dispOutput);
+[P,X] = getFraction(model,'P',0,dispOutput);
+[C,X] = getFraction(model,'C',X,dispOutput);
+[R,X] = getFraction(model,'R',X,dispOutput);
+[D,X] = getFraction(model,'D',X,dispOutput);
+[L,X] = getFraction(model,'L',X,dispOutput);
+[I,X] = getFraction(model,'I',X,dispOutput);
+[F,X] = getFraction(model,'F',X,dispOutput);
 
 if dispOutput
     disp(['X -> ' num2str(X) ' gDW/gDW'])
@@ -60,12 +39,10 @@ if dispOutput
     disp(['Growth = ' num2str(sol.f) ' 1/h'])
     disp(' ')
 end
-
 end
 
 %%
-
-function [F,X] = getFraction(model,data,compType,X,dispOutput)
+function [F,X] = getFraction(model,compType,X,dispOutput)
 
 %Define pseudoreaction name:
 rxnName = [compType ' pseudoreaction'];
@@ -80,37 +57,69 @@ rxnName = strrep(rxnName,'F','cofactor');
 
 %Add up fraction:
 rxnPos = strcmp(model.rxnNames,rxnName);
-if ~all(rxnPos==0)
-    isSub   = model.S(:,rxnPos) < 0;        %substrates in pseudo-rxn
-    if strcmp(compType,'L')
-        F = -sum(model.S(isSub,rxnPos));   %g/gDW
-    else
-        F = 0;
-        %Add up all components:
-        for i = 1:length(model.mets)
-            pos = strcmp(data.mets,model.mets{i});
-            if isSub(i) && sum(pos) == 1
-                if strcmp(compType,'I') || strcmp(compType,'F')
-                    MW = data.MWs(pos);
-                else
-                    MW = data.MWs(pos)-18;
-                end
-                abundance = -model.S(i,rxnPos)*MW/1000;
-                F         = F + abundance;
-            end
-        end
-    end
-    X = X + F;
-    
-    if dispOutput
-        disp([compType ' -> ' num2str(F) ' g/gDW'])
-    end
-else
+if isempty(rxnPos)
     if dispOutput
         disp([compType ' does not exist '])
     end
     F = 0;
-    X = X + F;
+else
+    isSub   = find(model.S(:,rxnPos)<0); % Substrates in pseudoreaction
+    if strcmp(compType,'L') % Lipid already has g/gDW as unit
+        F = full(-sum(model.S(isSub,rxnPos)));
+    else
+        formulas = model.metFormulas(isSub);
+        MWs = zeros(numel(formulas),1);
+        for i = 1:numel(formulas)
+            MWs(i) = parseChemicalFormula(formulas{i});
+        end
+        zeroMW = MWs == 0;
+        if any(zeroMW)
+            error('Biomass metabolite %s has an empty metFormula field.', model.mets{isSub(zeroMW)})
+        end
+        switch compType
+            case 'P'
+                % Two protons have to be removed from the charged-tRNA
+                % formulas that are in the model
+                MWs = MWs - 2.016;
+            case {'R','D'}
+                % H2O has to be removed to represent polymerization
+                MWs = MWs - 18.015;
+        end
+        F = full(-sum(model.S(isSub,rxnPos).*MWs)/1000);
+    end
+end
+X = X + F;
+
+if dispOutput
+    disp([compType ' -> ' num2str(F) ' g/gDW'])
+end
 end
 
+function molecularWeight = parseChemicalFormula(formula)
+    % Split formula in elements and coefficients
+    tokens = regexp(formula, '([A-Z][a-z]*)(\d*)', 'tokens');
+    tokensMatrix = vertcat(tokens{:});
+    tokensMatrix(cellfun(@isempty,tokensMatrix(:,2)),2) = {'1'};
+    elements = tokensMatrix(:, 1);
+    counts   = str2double(tokensMatrix(:, 2));
+
+    %Weight of elements
+    elem    = {'C', 12.01; ...
+               'H', 1.008; ...
+               'N', 14.007; ...
+               'O', 15.999; ...
+               'P', 30.974; ...
+               'S', 32.06; ...
+               'R', 0; ...
+               'Fe', 55.845; ...
+               'K', 39.098; ...
+               'Na', 22.99; ...
+               'Cl', 35.45; ...
+               'Mn', 54.938; ...
+               'Zn', 65.38; ...
+               'Ca', 40.078; ...
+               'Mg', 24.305; ...
+               'Cu', 63.546};
+    [~,elemMatch] = ismember(elements,elem(:,1));
+    molecularWeight = sum(counts .* transpose([elem{elemMatch,2}]),'all');
 end

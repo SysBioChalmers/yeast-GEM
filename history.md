@@ -1,5 +1,14 @@
 # History
 
+### yeast 9.1.0:
+- Fixes:
+  - Curations related to reactions involved in anaerobic metabolism, as well as other errorenous reactions that we encountered during the curation process. (PR #386)
+  - Updated anaerobicModel.m and new anaerobic_model.py functions. (PR #386)
+  - Mitochondrial carnitine shuttle (`r_0252`) is disabled (LB=UB=0) by default, to represent that defined medium does not (typically) contain carnitine. The UB should be set to 1000 when simulating carnitine in the growtn medium. (PR #386)
+  - Glutamate synthase (`r_0472`) is disabled (LB=UB=0) by default, as the expression of this gene is severely repressed in excess nitrogen. The UB should be set to 1000 when simulating nitrogen-limiting conditions. (PR #386)
+  - Glycine cleavage ('r_0501', 'r_0507', 'r_0509') is disabled (LB=UB=0) by default, as the expression is repressed when nitrogen is in excess The UB should be set to 1000 when glycine is used as nitrogen source, or nitrogen limiting conditions are simulated. (PR #386)
+  - Various bugs that gave misleading growth predictions under nitrogen-limiting anaerobic conditions (closes #376)
+
 ### yeast 9.0.2:
 - Fixes:
   - Curation based on auxotrophy predictions. (closes #371)
