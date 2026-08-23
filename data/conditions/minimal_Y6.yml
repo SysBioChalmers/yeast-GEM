@@ -1,0 +1,42 @@
+# Minimal media (Y6 / Sánchez et al. 2017): ammonium, glucose, oxygen,
+# phosphate, sulphate, plus trace elements. Bicarbonate exchange is
+# blocked to avoid CO2/bicarbonate equivalence conflicts; lipid backbone
+# and lipid chain exchanges are blocked as they are biomass internals,
+# not media. Reference: doi:10.1371/journal.pcbi.1004530.
+#
+# Loaders: code/applyCondition.m (MATLAB), yeastgem.conditions.apply (Python).
+
+name: minimal_Y6
+description: Minimal media for aerobic glucose-limited growth.
+
+# Apply before any per-reaction bounds: set all "out"-direction exchange
+# reactions to (lb=0, ub=1000) — i.e. allow secretion, block uptake.
+prelude:
+  reset_exchanges: out
+
+# Targeted bounds. Reactions referenced by id; lb/ub omitted means leave
+# unchanged (so a {rxn, lb: -1000} entry sets only the lower bound).
+bounds:
+  - { rxn: r_1654, lb: -1000, comment: ammonium exchange }
+  - { rxn: r_1992, lb: -1000, comment: oxygen exchange }
+  - { rxn: r_2005, lb: -1000, comment: phosphate exchange }
+  - { rxn: r_2060, lb: -1000, comment: sulphate exchange }
+  - { rxn: r_1861, lb: -1000, comment: iron exchange }
+  - { rxn: r_1832, lb: -1000, comment: hydrogen exchange }
+  - { rxn: r_2100, lb: -1000, comment: water exchange }
+  - { rxn: r_4593, lb: -1000, comment: chloride exchange }
+  - { rxn: r_4595, lb: -1000, comment: "Mn(2+) exchange" }
+  - { rxn: r_4596, lb: -1000, comment: "Zn(2+) exchange" }
+  - { rxn: r_4597, lb: -1000, comment: "Mg(2+) exchange" }
+  - { rxn: r_2049, lb: -1000, comment: sodium exchange }
+  - { rxn: r_4594, lb: -1000, comment: "Cu(2+) exchange" }
+  - { rxn: r_4600, lb: -1000, comment: "Ca(2+) exchange" }
+  - { rxn: r_2020, lb: -1000, comment: potassium exchange }
+  - { rxn: r_1714, lb: -1,    comment: D-glucose exchange (growth-limiting) }
+  - { rxn: r_1663, lb: 0, ub: 0, comment: bicarbonate exchange blocked }
+  - { rxn: r_4062, lb: 0, ub: 0, comment: lipid backbone exchange blocked }
+  - { rxn: r_4064, lb: 0, ub: 0, comment: lipid chain exchange blocked }
+
+# Sanity check that all 15 "uptake" reactions (lb=-1000) resolved. Mirrors
+# the warning in the legacy minimal_Y6.m.
+expected_uptake_count: 15

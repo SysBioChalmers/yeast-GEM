@@ -1,0 +1,16 @@
+# Glycine as sole nitrogen source. Activates the glycine cleavage system.
+# References:
+#   - doi:10.1111/j.1567-1364.2002.tb00069.x
+#   - doi:10.1074/jbc.274.15.10523
+#   - doi:10.1128/EC.2.5.827-829.2003
+#
+# Mirrors code/otherChanges/glycineNitrogenSource.m verbatim, including
+# the unusual (lb=1000, ub=0) settings of the legacy function.
+
+name: glycine_nitrogen
+description: Convert model to represent glycine as sole nitrogen source.
+
+bounds:
+  - { rxn: r_0501, lb: 1000, ub: 0, comment: glycine cleavage, mitochondrion }
+  - { rxn: r_0507, lb: 1000, ub: 0, comment: glycine cleavage complex (lipoylprotein), mitochondrion }
+  - { rxn: r_0509, lb: 1000, ub: 0, comment: glycine cleavage complex (lipoamide), mitochondrion }
