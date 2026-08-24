@@ -124,8 +124,21 @@ jobs:
           WLSSECRET: ${{ secrets.GUROBI_WLSSECRET }}
           LICENSEID: ${{ secrets.GUROBI_LICENSEID }}
         run: |
-          if [ -z "$WLSACCESSID" ]; then
-            echo "No Gurobi WLS licence in secrets; cobrapy will use GLPK."
+          # Report which parts are visible, never their values, so a
+          # misnamed or unshared secret is diagnosable from the log.
+          for v in WLSACCESSID WLSSECRET LICENSEID; do
+            eval "val=\${$v}"
+            if [ -n "$val" ]; then
+              echo "$v: set (${#val} chars)"
+            else
+              echo "$v: EMPTY"
+            fi
+          done
+          if [ -z "$WLSACCESSID" ] || [ -z "$WLSSECRET" ] || [ -z "$LICENSEID" ]; then
+            echo "Gurobi WLS licence not fully available; cobrapy will use GLPK."
+            echo "If the secrets exist org-wide, check they are Actions secrets"
+            echo "(not Dependabot/Codespaces) and that this repository is in"
+            echo "the secret's repository-access list."
             exit 0
           fi
           umask 077
