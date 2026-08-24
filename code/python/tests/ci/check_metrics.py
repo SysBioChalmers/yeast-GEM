@@ -30,6 +30,11 @@ def main(reference_path: Path = _DEFAULT_REFERENCE) -> int:
 
     print(f"Reference: {reference_path} (source={ref.get('source_commit', '?')})")
     model = read_yeast_model()
+    # No solver is pinned anywhere: cobrapy takes whatever optlang resolves,
+    # which is GLPK in CI and Gurobi on a machine with gurobipy installed.
+    # Since that choice is what the tolerances below are absorbing, report it
+    # rather than leaving it to be inferred.
+    print(f"Solver: {model.solver.interface.__name__}")
 
     print("Computing growth R² ...")
     growth_r2 = model_tests.growth(model.copy())

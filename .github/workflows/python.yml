@@ -83,7 +83,7 @@ jobs:
 
   # Level-2 parity — Python validation metrics must match the
   # committed MATLAB-produced reference within tolerance. Tolerances
-  # account for Gurobi-vs-HiGHS solver drift around the essential-gene
+  # account for Gurobi-vs-GLPK solver drift around the essential-gene
   # 1e-6 growth-ratio threshold. Regenerate the reference via
   # code/python/tests/reference/runPhase5Metrics.m when the metrics
   # shift legitimately.

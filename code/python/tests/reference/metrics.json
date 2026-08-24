@@ -20,6 +20,6 @@
     "accuracy_abs": 5e-3,
     "mcc_abs": 5e-2,
     "gene_count_abs": 2,
-    "_rationale": "Gurobi (MATLAB) vs HiGHS (cobrapy default in CI) solver drift around the 1e-6 growth-ratio threshold accounts for ~1-gene differences in the essential-gene confusion matrix and ~1e-3 differences in R^2 metrics."
+    "_rationale": "Solver drift around the 1e-6 growth-ratio threshold accounts for ~1-gene differences in the essential-gene confusion matrix and ~1e-3 differences in R^2 metrics. The reference is produced by MATLAB with Gurobi; CI resolves GLPK, because cobra only pulls in swiglpk and neither gurobipy nor highspy is installed there."
   }
 }
