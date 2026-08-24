@@ -50,6 +50,7 @@ Thumbs.db
 *.mex*
 *.mlappinstall
 *.mltbx
+*.mat
 helpsearch*/
 
 # Python-related things #
@@ -63,6 +64,7 @@ __pycache__/
 
 # Non-complying tables and files #
 ##################################
+*.xls*
 *.tab
 *.doc*
 *.ppt*
