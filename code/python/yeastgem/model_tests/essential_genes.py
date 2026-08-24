@@ -55,6 +55,7 @@ def essential_genes(
     model: cobra.Model | None = None,
     *,
     write_output: bool = False,
+    processes: int = 1,
 ) -> EssentialGeneResult:
     """Predict essential genes + compare against Stanford deletion lists.
 
@@ -65,6 +66,13 @@ def essential_genes(
     write_output
         When True, save a markdown report to
         ``data/testResults/essentialGenes.md``.
+    processes
+        Number of worker processes for the deletion scan. Defaults to 1,
+        which runs in-process. cobrapy otherwise defaults to one worker
+        per CPU, and that multiprocessing pool can deadlock against the
+        solver's own threads — it hung indefinitely on Python 3.12 in CI
+        while completing normally on 3.11. Raise it only if you have
+        verified the combination on your platform.
     """
     if model is None:
         model = read_yeast_model()
@@ -84,7 +92,7 @@ def essential_genes(
             f"Wild-type FBA returned {wild_type.status}/"
             f"obj={wild_type.objective_value}; cannot run deletion benchmark."
         )
-    knockout = single_gene_deletion(model)
+    knockout = single_gene_deletion(model, processes=processes)
     gr_ratio = _knockout_growth_ratio(
         knockout, model_genes, wild_type.objective_value,
     )

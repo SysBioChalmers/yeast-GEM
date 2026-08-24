@@ -29,6 +29,7 @@ jobs:
   # wall clock per Python version after caches warm).
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     strategy:
       fail-fast: false
       matrix:
@@ -61,6 +62,7 @@ jobs:
   # accidental id rewrites.
   parity-level-1-round-trip:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     needs: test
     steps:
       - name: Checkout
@@ -87,6 +89,7 @@ jobs:
   # shift legitimately.
   parity-level-2-metrics:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     needs: test
     steps:
       - name: Checkout
