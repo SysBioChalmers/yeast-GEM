@@ -32,6 +32,15 @@ dev = [
     "pytest-cov>=4.0",
     "ruff>=0.4",
 ]
+# Optional. cobrapy solves with whatever optlang resolves; without this it
+# is GLPK, which cobra pulls in via swiglpk. Installing gurobipy makes
+# cobrapy pick Gurobi, matching the solver RAVEN uses on the MATLAB side.
+# Needs a licence: the one bundled with the PyPI wheel is capped at 2000
+# variables and 2000 constraints, well below yeast-GEM's ~4100 reactions
+# and ~2750 metabolites.
+gurobi = [
+    "gurobipy>=11",
+]
 
 [project.urls]
 "Source" = "https://github.com/SysBioChalmers/yeast-GEM"

@@ -234,7 +234,9 @@ diff <(jq -S . /tmp/phase5-matlab-metrics.json) \
 | TP/TN/FP/FN | 934/65/94/14 | 933/65/94/15 | 1 gene |
 
 The single-gene discrepancy is a borderline case at the 1e-6 growth-ratio
-threshold (Gurobi vs GLPK solver tolerance). All metrics are within
+threshold. This is not solver-related -- it persists when Python also
+uses Gurobi -- and points at cobrapy's single_gene_deletion differing
+from RAVEN's findGeneDeletions. All metrics are within
 the level-2 tolerances defined in PORTING_PLAN.md (R²/accuracy ≤ 1e-4
 when the underlying inputs match; here we're at 1e-3 because of one
 gene). Acceptable for phase 5; revisit if any drifts beyond 1e-2.

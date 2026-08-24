@@ -83,8 +83,9 @@ jobs:
 
   # Level-2 parity — Python validation metrics must match the
   # committed MATLAB-produced reference within tolerance. Tolerances
-  # account for Gurobi-vs-GLPK solver drift around the essential-gene
-  # 1e-6 growth-ratio threshold. Regenerate the reference via
+  # cover both solver drift on the R^2 metrics and a one-gene difference
+  # in the essential-gene confusion matrix that is not solver-related (it
+  # persists when Python also uses Gurobi). See metrics.json for details. Regenerate the reference via
   # code/python/tests/reference/runPhase5Metrics.m when the metrics
   # shift legitimately.
   parity-level-2-metrics:
@@ -102,8 +103,38 @@ jobs:
           cache: pip
           cache-dependency-path: code/python/pyproject.toml
 
+      # The MATLAB reference is produced with Gurobi. Using it here too
+      # removes the solver as a variable in the comparison. The licence
+      # lives in repository secrets, which are unavailable to pull
+      # requests from forks, so this is best-effort: without it cobrapy
+      # falls back to GLPK and the tolerances still cover the difference.
       - name: Install yeastgem
-        run: pip install -e code/python/
+        env:
+          WLSACCESSID: ${{ secrets.GUROBI_WLSACCESSID }}
+        run: |
+          if [ -n "$WLSACCESSID" ]; then
+            pip install -e "code/python/[gurobi]"
+          else
+            pip install -e code/python/
+          fi
+
+      - name: Configure Gurobi WLS licence
+        env:
+          WLSACCESSID: ${{ secrets.GUROBI_WLSACCESSID }}
+          WLSSECRET: ${{ secrets.GUROBI_WLSSECRET }}
+          LICENSEID: ${{ secrets.GUROBI_LICENSEID }}
+        run: |
+          if [ -z "$WLSACCESSID" ]; then
+            echo "No Gurobi WLS licence in secrets; cobrapy will use GLPK."
+            exit 0
+          fi
+          umask 077
+          {
+            echo "WLSACCESSID=$WLSACCESSID"
+            echo "WLSSECRET=$WLSSECRET"
+            echo "LICENSEID=$LICENSEID"
+          } > "$HOME/gurobi.lic"
+          echo "GRB_LICENSE_FILE=$HOME/gurobi.lic" >> "$GITHUB_ENV"
 
       - name: Validation metrics match the committed reference
         run: python code/python/tests/ci/check_metrics.py

@@ -20,6 +20,6 @@
     "accuracy_abs": 5e-3,
     "mcc_abs": 5e-2,
     "gene_count_abs": 2,
-    "_rationale": "Solver drift around the 1e-6 growth-ratio threshold accounts for ~1-gene differences in the essential-gene confusion matrix and ~1e-3 differences in R^2 metrics. The reference is produced by MATLAB with Gurobi; CI resolves GLPK, because cobra only pulls in swiglpk and neither gurobipy nor highspy is installed there."
+    "_rationale": "Two independent sources of drift. (1) R^2 metrics differ at ~1e-4 between solvers; this is genuine solver drift. (2) The essential-gene confusion matrix differs from the MATLAB reference by one gene (Python 933/65/94/15 vs MATLAB 934/65/94/14). That one is NOT solver drift: it is unchanged when Python also uses Gurobi, so it reflects a difference between cobrapy's single_gene_deletion and RAVEN's findGeneDeletions around the 1e-6 growth-ratio threshold, not the LP solver. gene_count_abs absorbs it pending investigation."
   }
 }
