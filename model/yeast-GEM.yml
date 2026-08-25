@@ -1,10 +1,10 @@
 ---
 !!omap
 - metaData:
-    id: "yeastGEM_v9.1.0"
+    id: "yeastGEM_develop"
     name: "The Consensus Genome-Scale Metabolic Model of Yeast"
-    version: "9.1.0"
-    date: "2026-07-01"
+    version: ""
+    date: "2026-08-23"
     defaultLB: "-1000"
     defaultUB: "1000"
     givenName: "Eduard"
@@ -3334,9 +3334,9 @@
       - smiles: "CC(=O)NC1C(C(C(OC1OC2C(C(C(C(C2OP(=O)(O)OCC(COC(=O)C)OC(=O)C)O)O)O)O)CO)O)O"
       - annotation: !!omap
           - bigg.metabolite: "acgpail_hs"
-          - chebi: "CHEBI:57265"
+          - chebi: "CHEBI:12194"
           - kegg.compound: "C01288"
-          - metanetx.chemical: "MNXM999"
+          - metanetx.chemical: "MNXM1104777"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
@@ -5837,7 +5837,7 @@
           - bigg.metabolite: "gal"
           - chebi: "CHEBI:12936"
           - kegg.compound: "C00124"
-          - metanetx.chemical: "MNXM390"
+          - metanetx.chemical: "MNXM735266"
           - sbo: "SBO:0000247"
       - deltaG: -101.44
     - !!omap
@@ -5851,7 +5851,7 @@
           - bigg.metabolite: "gal"
           - chebi: "CHEBI:12936"
           - kegg.compound: "C00124"
-          - metanetx.chemical: "MNXM390"
+          - metanetx.chemical: "MNXM735266"
           - sbo: "SBO:0000247"
       - deltaG: -101.44
     - !!omap
@@ -14806,7 +14806,7 @@
       - smiles: "C(C(C(C(C=O)O)O)O)OP(=O)(O)O"
       - annotation: !!omap
           - bigg.metabolite: "r5p"
-          - chebi: "CHEBI:18189"
+          - chebi: "CHEBI:140679"
           - kegg.compound: "C03736"
           - metanetx.chemical: "MNXM15900"
           - sbo: "SBO:0000247"
@@ -15552,7 +15552,7 @@
       - deltaG: -58.6
     - !!omap
       - id: "s_1473"
-      - name: "taurocholic acid"
+      - name: "taurocholate"
       - compartment: "c"
       - formula: "C26H44NO7S"
       - charge: -1
@@ -15566,7 +15566,7 @@
       - deltaG: 160.38
     - !!omap
       - id: "s_1474"
-      - name: "taurocholic acid"
+      - name: "taurocholate"
       - compartment: "v"
       - formula: "C26H44NO7S"
       - charge: -1
@@ -27606,9 +27606,6 @@
       - compartment: "c"
       - charge: 0
       - annotation: !!omap
-          - bigg.metabolite: "protein"
-          - kegg.compound: "C00492"
-          - metanetx.chemical: "MNXM621"
           - sbo: "SBO:0000649"
       - deltaG: 10000000
     - !!omap
@@ -27617,8 +27614,6 @@
       - compartment: "c"
       - charge: 0
       - annotation: !!omap
-          - kegg.compound: "C05402"
-          - metanetx.chemical: "MNXM1434"
           - sbo: "SBO:0000649"
       - deltaG: 10000000
     - !!omap
@@ -28154,8 +28149,7 @@
       - smiles: "C(C1C(C(C(O1)O)O)O)OP(=O)(O)O"
       - annotation: !!omap
           - chebi: "CHEBI:78346"
-          - kegg.compound: "C00117"
-          - metanetx.chemical: "MNXM722712"
+          - metanetx.chemical: "MNXM1363910"
           - sbo: "SBO:0000247"
       - deltaG: -307.29
     - !!omap
@@ -28307,9 +28301,9 @@
       - smiles: "C(C1C(C(C(C(O1)O)O)O)O)O"
       - annotation: !!omap
           - bigg.metabolite: "gal"
-          - chebi: "CHEBI:4139"
+          - chebi: "CHEBI:12936"
           - kegg.compound: "C00124"
-          - metanetx.chemical: "MNXM390"
+          - metanetx.chemical: "MNXM735266"
           - sbo: "SBO:0000247"
       - deltaG: -101.44
     - !!omap
@@ -28615,6 +28609,7 @@
       - charge: 0
       - smiles: "CS(=O)CCC(C(=O)O)N"
       - annotation: !!omap
+          - bigg.metabolite: "metsox_S__L"
           - chebi: "CHEBI:49031"
           - kegg.compound: "C15999"
           - metanetx.chemical: "MNXM722780"
@@ -28863,10 +28858,10 @@
       - charge: 0
       - smiles: "CS(=O)CCC(C(=O)O)N"
       - annotation: !!omap
-          - bigg.metabolite: "metsox_S__L"
+          - bigg.metabolite: "metox"
           - chebi: "CHEBI:17016"
           - kegg.compound: "C02989"
-          - metanetx.chemical: "MNXM2246"
+          - metanetx.chemical: "MNXM1364200"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
@@ -29028,8 +29023,7 @@
       - smiles: "C(C(C(C(C=O)O)O)O)OP(=O)([O-])[O-]"
       - annotation: !!omap
           - chebi: "CHEBI:58273"
-          - kegg.compound: "C00117"
-          - metanetx.chemical: "MNXM722712"
+          - metanetx.chemical: "MNXM1363911"
           - sbo: "SBO:0000247"
       - deltaG: -307.29
     - !!omap
@@ -29130,7 +29124,7 @@
           - bigg.metabolite: "a_gal__D"
           - chebi: "CHEBI:28061"
           - kegg.compound: "C00984"
-          - metanetx.chemical: "MNXM390"
+          - metanetx.chemical: "MNXM1364486"
           - sbo: "SBO:0000247"
       - deltaG: -101.44
     - !!omap
@@ -29278,7 +29272,7 @@
       - charge: -1
       - annotation: !!omap
           - chebi: "CHEBI:57265"
-          - metanetx.chemical: "MNXM92477"
+          - metanetx.chemical: "MNXM741477"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
@@ -32644,10 +32638,10 @@
       - charge: 0
       - smiles: "CS(=O)CCC(C(=O)O)N"
       - annotation: !!omap
-          - bigg.metabolite: "metsox_S__L"
+          - bigg.metabolite: "metox"
           - chebi: "CHEBI:17016"
           - kegg.compound: "C02989"
-          - metanetx.chemical: "MNXM2246"
+          - metanetx.chemical: "MNXM1364200"
           - sbo: "SBO:0000247"
       - deltaG: 10000000
     - !!omap
@@ -32701,9 +32695,9 @@
       - smiles: "C(C(C(C(=O)CO)O)O)O"
       - annotation: !!omap
           - bigg.metabolite: "xylu__L"
-          - chebi: "CHEBI:17140"
+          - chebi: "CHEBI:17399"
           - kegg.compound: "C00312"
-          - metanetx.chemical: "MNXM597"
+          - metanetx.chemical: "MNXM1371095"
           - sbo: "SBO:0000247"
       - deltaG: -83.58
     - !!omap
@@ -32989,7 +32983,6 @@
       - name: "cofactor"
       - compartment: "c"
       - charge: 0
-      - smiles: "C1C2CN(CN2C3=C(N1)N=C(NC3=O)N)C4=CC=C(C=C4)C(=O)NC(CCC(=O)[O-])C(=O)[O-].[Ca+2]"
       - annotation: !!omap
           - sbo: "SBO:0000649"
       - deltaG: 10000000
@@ -33614,7 +33607,7 @@
       - deltaG: -79.97
     - !!omap
       - id: "s_4267"
-      - name: "taurocholate"
+      - name: "taurocholic acid"
       - compartment: "c"
       - formula: "C26H45NO7S"
       - charge: 0
@@ -33629,7 +33622,7 @@
       - deltaG: -235.6
     - !!omap
       - id: "s_4268"
-      - name: "taurocholate"
+      - name: "taurocholic acid"
       - compartment: "e"
       - formula: "C26H45NO7S"
       - charge: 0
@@ -34229,14 +34222,13 @@
       - charge: -4
       - smiles: "C1=NC2=C(C(=O)N1)N=CN2C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O"
       - annotation: !!omap
-          - bigg.metabolite: "succ"
-          - biocyc: "SUC"
+          - bigg.metabolite: "itp"
+          - biocyc: "ITP"
           - chebi: "CHEBI:61402"
           - kegg.compound: "C00081"
-          - metanetx.chemical: "MNXM25"
-          - pubchem.compound: "160419"
+          - metanetx.chemical: "MNXM423"
           - sbo: "SBO:0000247"
-          - seed.compound: "cpd00036"
+          - seed.compound: "cpd00068"
       - deltaG: -633.42
     - !!omap
       - id: "s_4314"
@@ -114574,6 +114566,73 @@
       - annotation: !!omap
           - sbo: "SBO:0000655"
       - confidence_score: 3
+    - !!omap
+      - id: "r_4785"
+      - name: "acetate transport"
+      - metabolites: !!omap
+          - s_0362: 1
+          - s_0365: -1
+      - lower_bound: 0
+      - upper_bound: 1000
+      - references: "10.1093/femsyr/fov015; 10.1016/j.fgb.2009.03.004"
+      - subsystem: "Transport [c, m]"
+      - annotation: !!omap
+          - metanetx.reaction: "MNXR95431"
+          - sbo: "SBO:0000655"
+      - confidence_score: 2
+      - rxnNotes: "Set LB to -1000 to allow acetate import when simulating acetate stress"
+    - !!omap
+      - id: "r_4786"
+      - name: "ribonucleotide reductase"
+      - metabolites: !!omap
+          - s_0652: 1
+          - s_0794: -1
+          - s_0803: 1
+          - s_1538: -1
+          - s_1616: -1
+          - s_1620: 1
+      - lower_bound: 0
+      - upper_bound: 1000
+      - gene_reaction_rule: "YER070W or YGR180C or YIL066C or YJL026W"
+      - eccodes: "1.17.4.1"
+      - references: "10.1073/pnas.0600443103"
+      - subsystem: "Pyrimidine metabolism"
+      - annotation: !!omap
+          - bigg.reaction: "RNDR4"
+          - kegg.pathway:
+              - "sce00230"
+              - "sce00240"
+              - "sce00480"
+          - kegg.reaction: "R02018"
+          - metanetx.reaction: "MNXR104066"
+          - sbo: "SBO:0000176"
+      - confidence_score: 2
+    - !!omap
+      - id: "r_4787"
+      - name: "ribonucleotide reductase"
+      - metabolites: !!omap
+          - s_0653: 1
+          - s_0800: -1
+          - s_0808: 1
+          - s_1540: -1
+          - s_1618: -1
+          - s_1622: 1
+      - lower_bound: 0
+      - upper_bound: 1000
+      - gene_reaction_rule: "YER070W or YGR180C or YIL066C or YJL026W"
+      - eccodes: "1.17.4.1"
+      - references: "10.1073/pnas.0600443103"
+      - subsystem: "Pyrimidine metabolism"
+      - annotation: !!omap
+          - bigg.reaction: "RNDR4n"
+          - kegg.pathway:
+              - "sce00230"
+              - "sce00240"
+              - "sce00480"
+          - kegg.reaction: "R02018"
+          - metanetx.reaction: "MNXR104066"
+          - sbo: "SBO:0000176"
+      - confidence_score: 2
 - genes:
     - !!omap
       - id: "Q0045"
