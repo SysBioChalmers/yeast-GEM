@@ -1,0 +1,59 @@
+# Canonical yeast-GEM identifiers.
+#
+# This file is the single source of truth for the yeast-specific IDs that
+# generic algorithms in code/ and code/python/yeastgem/ need as
+# parameters. It is consumed by:
+#   - MATLAB: code/applyIDs.m (and downstream functions)
+#   - Python: yeastgem.config.load_ids()
+#
+# Update this file alongside any model change that renames or replaces a
+# canonical reaction or metabolite.
+
+# Core pseudoreaction reaction IDs ---------------------------------------
+biomass_rxn: r_4041            # biomass pseudoreaction
+protein_rxn: r_4047            # protein pseudoreaction
+cofactor_rxn: r_4598           # cofactor pseudoreaction
+
+# Core metabolite IDs -----------------------------------------------------
+proton_met: s_0794             # H+ [cytoplasm]
+
+# Names used to identify biomass pseudoreactions by `rxnNames` (sumBioMass,
+# rescalePseudoReaction). These are NAMES, not IDs, because the legacy
+# code uses model.rxnNames to look them up.
+pseudoreaction_names:
+  biomass: biomass pseudoreaction
+  protein: protein pseudoreaction
+  carbohydrate: carbohydrate pseudoreaction
+  lipid_backbone: lipid backbone pseudoreaction
+  lipid_chain: lipid chain pseudoreaction
+  RNA: RNA pseudoreaction
+  DNA: DNA pseudoreaction
+  ion: ion pseudoreaction
+  cofactor: cofactor pseudoreaction
+
+# Per-component config for the raven_toolbox.biomass module (sum_biomass,
+# scale_biomass, rescale_pseudoreaction). Only the components that the
+# legacy sumBioMass.m summed are listed here — lipid_chain is rescaled
+# alongside lipid_backbone but does NOT contribute to the mass total.
+# mass_strategy:
+#   mw                — plain MW from chemical formula
+#   mw_minus_2h       — MW − 2.016 g/mol per substrate (charged tRNAs)
+#   mw_minus_water    — MW − 18.015 g/mol per substrate (polymerisation)
+#   grams             — stoichiometry already in g/gDW
+biomass_components:
+  - { name: protein,        mass_strategy: mw_minus_2h }
+  - { name: carbohydrate,   mass_strategy: mw }
+  - { name: RNA,            mass_strategy: mw_minus_water }
+  - { name: DNA,            mass_strategy: mw_minus_water }
+  - { name: lipid_backbone, mass_strategy: grams }
+  - { name: ion,            mass_strategy: mw }
+  - { name: cofactor,       mass_strategy: mw }
+
+# Metabolite NAMES scaled by GAM in the biomass pseudoreaction. Mirrors
+# the hardcoded list in changeGAM.m. Matching is by `metNames`.
+gam_cofactors:
+  - ATP
+  - ADP
+  - H2O
+  - H+
+  - phosphate

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" xmlns:groups="http://www.sbml.org/sbml/level3/version1/groups/version1" level="3" version="1" fbc:required="false" groups:required="false">
-  <model metaid="yeastGEM_develop" id="yeastGEM_develop" name="The Consensus Genome-Scale Metabolic Model of Yeast" fbc:strict="true">
+  <model metaid="yeastGEM_v9.1.0" id="yeastGEM_v9__46__1__46__0" name="The Consensus Genome-Scale Metabolic Model of Yeast" fbc:strict="true">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
         <p>Saccharomyces cerevisiae - strain S288C</p>
@@ -8,7 +8,7 @@
     </notes>
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-        <rdf:Description rdf:about="#yeastGEM_develop">
+        <rdf:Description rdf:about="#yeastGEM_v9.1.0">
           <dcterms:creator>
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
@@ -24,10 +24,10 @@
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-05-27T23:08:53Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-07-01T09:36:37Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-05-27T23:08:53Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-07-01T09:36:37Z</dcterms:W3CDTF>
           </dcterms:modified>
           <bqbiol:is>
             <rdf:Bag>
@@ -62593,7 +62593,7 @@
           <fbc:geneProductRef fbc:geneProduct="YKR080W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_0732" sboTerm="SBO:0000176" id="r_0732" name="methylenetetrahydrofolate dehydrogenase (NADP)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_0732" sboTerm="SBO:0000176" id="r_0732" name="methylenetetrahydrofolate dehydrogenase (NADP)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -62628,7 +62628,7 @@
           <fbc:geneProductRef fbc:geneProduct="YGR204W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_0733" sboTerm="SBO:0000176" id="r_0733" name="methylenetetrahydrofolate dehydrogenase (NADP)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_0733" sboTerm="SBO:0000176" id="r_0733" name="methylenetetrahydrofolate dehydrogenase (NADP)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -72678,7 +72678,7 @@
           <speciesReference species="s_0319" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_1104" sboTerm="SBO:0000655" id="r_1104" name="8-Amino-7-oxononanoate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1104" sboTerm="SBO:0000655" id="r_1104" name="8-Amino-7-oxononanoate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -73599,7 +73599,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1136" sboTerm="SBO:0000655" id="r_1136" name="D-lactate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1136" sboTerm="SBO:0000655" id="r_1136" name="D-lactate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -74335,7 +74335,7 @@
           <fbc:geneProductRef fbc:geneProduct="YDL198C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1176" sboTerm="SBO:0000655" id="r_1176" name="guanine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1176" sboTerm="SBO:0000655" id="r_1176" name="guanine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -74544,7 +74544,7 @@
           <speciesReference species="s_0945" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_1183" sboTerm="SBO:0000655" id="r_1183" name="L-alanine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1183" sboTerm="SBO:0000655" id="r_1183" name="L-alanine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -74581,7 +74581,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1184" sboTerm="SBO:0000655" id="r_1184" name="L-arganine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1184" sboTerm="SBO:0000655" id="r_1184" name="L-arganine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -74649,7 +74649,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1186" sboTerm="SBO:0000655" id="r_1186" name="L-asparagine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1186" sboTerm="SBO:0000655" id="r_1186" name="L-asparagine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -74782,7 +74782,7 @@
           <fbc:geneProductRef fbc:geneProduct="YER119C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1190" sboTerm="SBO:0000655" id="r_1190" name="L-aspartate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1190" sboTerm="SBO:0000655" id="r_1190" name="L-aspartate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -74844,7 +74844,7 @@
           <fbc:geneProductRef fbc:geneProduct="YBR132C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1192" sboTerm="SBO:0000655" id="r_1192" name="L-cystine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1192" sboTerm="SBO:0000655" id="r_1192" name="L-cystine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -74974,7 +74974,7 @@
           <fbc:geneProductRef fbc:geneProduct="YER119C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1196" sboTerm="SBO:0000655" id="r_1196" name="L-glutamate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1196" sboTerm="SBO:0000655" id="r_1196" name="L-glutamate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75075,7 +75075,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1199" sboTerm="SBO:0000655" id="r_1199" name="L-glutamine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1199" sboTerm="SBO:0000655" id="r_1199" name="L-glutamine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75146,7 +75146,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1201" sboTerm="SBO:0000655" id="r_1201" name="L-histidine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1201" sboTerm="SBO:0000655" id="r_1201" name="L-histidine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75275,7 +75275,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1205" sboTerm="SBO:0000655" id="r_1205" name="L-isoleucine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1205" sboTerm="SBO:0000655" id="r_1205" name="L-isoleucine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75466,7 +75466,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1211" sboTerm="SBO:0000655" id="r_1211" name="L-leucine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1211" sboTerm="SBO:0000655" id="r_1211" name="L-leucine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75539,7 +75539,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1213" sboTerm="SBO:0000655" id="r_1213" name="L-lysine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1213" sboTerm="SBO:0000655" id="r_1213" name="L-lysine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75572,7 +75572,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1214" sboTerm="SBO:0000655" id="r_1214" name="L-methionine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1214" sboTerm="SBO:0000655" id="r_1214" name="L-methionine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75610,7 +75610,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1215" sboTerm="SBO:0000655" id="r_1215" name="L-phenylalanine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1215" sboTerm="SBO:0000655" id="r_1215" name="L-phenylalanine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75646,7 +75646,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1216" sboTerm="SBO:0000655" id="r_1216" name="L-proline transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1216" sboTerm="SBO:0000655" id="r_1216" name="L-proline transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75679,7 +75679,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1217" sboTerm="SBO:0000655" id="r_1217" name="L-serine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1217" sboTerm="SBO:0000655" id="r_1217" name="L-serine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75716,7 +75716,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1218" sboTerm="SBO:0000655" id="r_1218" name="L-threonine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1218" sboTerm="SBO:0000655" id="r_1218" name="L-threonine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -75751,7 +75751,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1219" sboTerm="SBO:0000655" id="r_1219" name="L-tryptophan transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1219" sboTerm="SBO:0000655" id="r_1219" name="L-tryptophan transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -75886,7 +75886,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1223" sboTerm="SBO:0000655" id="r_1223" name="L-tyrosine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1223" sboTerm="SBO:0000655" id="r_1223" name="L-tyrosine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -75923,7 +75923,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1224" sboTerm="SBO:0000655" id="r_1224" name="L-valine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1224" sboTerm="SBO:0000655" id="r_1224" name="L-valine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -76295,7 +76295,7 @@
           <fbc:geneProductRef fbc:geneProduct="YOR130C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1238" sboTerm="SBO:0000655" id="r_1238" name="orntithine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1238" sboTerm="SBO:0000655" id="r_1238" name="orntithine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -76355,7 +76355,7 @@
           <fbc:geneProductRef fbc:geneProduct="YKL120W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1241" sboTerm="SBO:0000655" id="r_1241" name="pantothenate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1241" sboTerm="SBO:0000655" id="r_1241" name="pantothenate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -76437,7 +76437,7 @@
           <speciesReference species="s_1317" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_1244" sboTerm="SBO:0000655" id="r_1244" name="phosphate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1244" sboTerm="SBO:0000655" id="r_1244" name="phosphate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -76506,7 +76506,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1249" sboTerm="SBO:0000655" id="r_1249" name="potassium transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1249" sboTerm="SBO:0000655" id="r_1249" name="potassium transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -76568,7 +76568,7 @@
           <fbc:geneProductRef fbc:geneProduct="YKL174C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1251" sboTerm="SBO:0000655" id="r_1251" name="putrescine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
+      <reaction metaid="r_1251" sboTerm="SBO:0000655" id="r_1251" name="putrescine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -76635,7 +76635,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1253" sboTerm="SBO:0000655" id="r_1253" name="pyridoxine symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1253" sboTerm="SBO:0000655" id="r_1253" name="pyridoxine symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -76664,7 +76664,7 @@
           <fbc:geneProductRef fbc:geneProduct="YGL186C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1254" sboTerm="SBO:0000655" id="r_1254" name="pyruvate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1254" sboTerm="SBO:0000655" id="r_1254" name="pyruvate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -76844,7 +76844,7 @@
           <fbc:geneProductRef fbc:geneProduct="YKL174C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1260" sboTerm="SBO:0000655" id="r_1260" name="spermidine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
+      <reaction metaid="r_1260" sboTerm="SBO:0000655" id="r_1260" name="spermidine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -76916,7 +76916,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1262" sboTerm="SBO:0000655" id="r_1262" name="spermine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
+      <reaction metaid="r_1262" sboTerm="SBO:0000655" id="r_1262" name="spermine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -77257,7 +77257,7 @@
           <fbc:geneProductRef fbc:geneProduct="YBR021W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_1273" sboTerm="SBO:0000655" id="r_1273" name="urea transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_1273" sboTerm="SBO:0000655" id="r_1273" name="urea transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -88397,7 +88397,7 @@
           <speciesReference species="s_1493" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_2079" sboTerm="SBO:0000655" id="r_2079" name="trehalose transporter" reversible="true" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
+      <reaction metaid="r_2079" sboTerm="SBO:0000655" id="r_2079" name="trehalose transporter" reversible="false" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 3</p>
@@ -155498,7 +155498,7 @@
           <speciesReference species="s_1322" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4343" sboTerm="SBO:0000655" id="r_4343" name="L-Threonine phosphate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4343" sboTerm="SBO:0000655" id="r_4343" name="L-Threonine phosphate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -155581,7 +155581,7 @@
           <speciesReference species="s_1322" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4346" sboTerm="SBO:0000655" id="r_4346" name="Guanosine transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4346" sboTerm="SBO:0000655" id="r_4346" name="Guanosine transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -155636,7 +155636,7 @@
           <speciesReference species="s_1322" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4348" sboTerm="SBO:0000655" id="r_4348" name="Guanosine transport via proton symport(for 3&apos;-GMP)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4348" sboTerm="SBO:0000655" id="r_4348" name="Guanosine transport via proton symport(for 3&apos;-GMP)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -155663,7 +155663,7 @@
           <speciesReference species="s_4068" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4349" sboTerm="SBO:0000655" id="r_4349" name="2-Phosphoglycolate transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4349" sboTerm="SBO:0000655" id="r_4349" name="2-Phosphoglycolate transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -155862,7 +155862,7 @@
           <speciesReference species="s_4079" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4356" sboTerm="SBO:0000655" id="r_4356" name="2-aminobutyrate transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4356" sboTerm="SBO:0000655" id="r_4356" name="2-aminobutyrate transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -155915,7 +155915,7 @@
           <speciesReference species="s_1556" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4358" sboTerm="SBO:0000655" id="r_4358" name="Uridine 2&apos;-phosphate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4358" sboTerm="SBO:0000655" id="r_4358" name="Uridine 2&apos;-phosphate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -155972,7 +155972,7 @@
           <speciesReference species="s_1556" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4360" sboTerm="SBO:0000655" id="r_4360" name="3&apos;-UMP transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4360" sboTerm="SBO:0000655" id="r_4360" name="3&apos;-UMP transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156000,7 +156000,7 @@
           <speciesReference species="s_4083" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4361" sboTerm="SBO:0000655" id="r_4361" name="Gly-Met transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4361" sboTerm="SBO:0000655" id="r_4361" name="Gly-Met transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -156088,7 +156088,7 @@
           <speciesReference species="s_4089" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4364" sboTerm="SBO:0000655" id="r_4364" name="N-phosphocreatine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4364" sboTerm="SBO:0000655" id="r_4364" name="N-phosphocreatine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156113,7 +156113,7 @@
           <speciesReference species="s_4088" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4365" sboTerm="SBO:0000655" id="r_4365" name="creatinine transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4365" sboTerm="SBO:0000655" id="r_4365" name="creatinine transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156169,7 +156169,7 @@
           <speciesReference species="s_0965" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4367" sboTerm="SBO:0000655" id="r_4367" name="L-arginine phosphate transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4367" sboTerm="SBO:0000655" id="r_4367" name="L-arginine phosphate transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156224,7 +156224,7 @@
           <speciesReference species="s_1322" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4369" sboTerm="SBO:0000655" id="r_4369" name="Tripolyphosphate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4369" sboTerm="SBO:0000655" id="r_4369" name="Tripolyphosphate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156279,7 +156279,7 @@
           <speciesReference species="s_1322" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4371" sboTerm="SBO:0000655" id="r_4371" name="Cytidine- 2&apos;- Monophosphate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4371" sboTerm="SBO:0000655" id="r_4371" name="Cytidine- 2&apos;- Monophosphate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156337,7 +156337,7 @@
           <fbc:geneProductRef fbc:geneProduct="YGR247W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4373" sboTerm="SBO:0000655" id="r_4373" name="2&apos;,3&apos;-Cyclic UMP transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4373" sboTerm="SBO:0000655" id="r_4373" name="2&apos;,3&apos;-Cyclic UMP transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156394,7 +156394,7 @@
           <speciesReference species="s_1469" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4375" sboTerm="SBO:0000655" id="r_4375" name="3-Sulfino-L-alanine transport via proton antiport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4375" sboTerm="SBO:0000655" id="r_4375" name="3-Sulfino-L-alanine transport via proton antiport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156504,7 +156504,7 @@
           <speciesReference species="s_0563" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4379" sboTerm="SBO:0000655" id="r_4379" name="Palatinose transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4379" sboTerm="SBO:0000655" id="r_4379" name="Palatinose transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156560,7 +156560,7 @@
           <speciesReference species="s_0981" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4381" sboTerm="SBO:0000655" id="r_4381" name="Acetylcysteine transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4381" sboTerm="SBO:0000655" id="r_4381" name="Acetylcysteine transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156673,7 +156673,7 @@
           <speciesReference species="s_3875" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4385" sboTerm="SBO:0000655" id="r_4385" name="5-Dehydro-D-gluconate transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4385" sboTerm="SBO:0000655" id="r_4385" name="5-Dehydro-D-gluconate transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156728,7 +156728,7 @@
           <speciesReference species="s_3759" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4387" sboTerm="SBO:0000655" id="r_4387" name="ala-L-asp-L transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4387" sboTerm="SBO:0000655" id="r_4387" name="ala-L-asp-L transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -156792,7 +156792,7 @@
           <fbc:geneProductRef fbc:geneProduct="YGR247W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4389" sboTerm="SBO:0000655" id="r_4389" name="2&apos;,3&apos;-Cyclic CMP transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4389" sboTerm="SBO:0000655" id="r_4389" name="2&apos;,3&apos;-Cyclic CMP transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -156873,7 +156873,7 @@
           <speciesReference species="s_4124" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4392" sboTerm="SBO:0000655" id="r_4392" name="alpha-Methyl-D-glucoside transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4392" sboTerm="SBO:0000655" id="r_4392" name="alpha-Methyl-D-glucoside transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -157059,7 +157059,7 @@
           <speciesReference species="s_1029" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4398" sboTerm="SBO:0000655" id="r_4398" name="Ala-Gln transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4398" sboTerm="SBO:0000655" id="r_4398" name="Ala-Gln transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -157180,7 +157180,7 @@
           <speciesReference species="s_4042" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4402" sboTerm="SBO:0000655" id="r_4402" name="Ala-Thr transport via proton symport (extracellular to cytosol)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4402" sboTerm="SBO:0000655" id="r_4402" name="Ala-Thr transport via proton symport (extracellular to cytosol)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -157246,7 +157246,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4404" sboTerm="SBO:0000655" id="r_4404" name="Gly-Asn transport via proton symport (extracellular to cytosol)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4404" sboTerm="SBO:0000655" id="r_4404" name="Gly-Asn transport via proton symport (extracellular to cytosol)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -157300,7 +157300,7 @@
           <speciesReference species="s_4048" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4406" sboTerm="SBO:0000655" id="r_4406" name="D-O-Phosphoserine transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4406" sboTerm="SBO:0000655" id="r_4406" name="D-O-Phosphoserine transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -157358,7 +157358,7 @@
           <speciesReference species="s_3904" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4408" sboTerm="SBO:0000655" id="r_4408" name="L-alanyl-L-glutamate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4408" sboTerm="SBO:0000655" id="r_4408" name="L-alanyl-L-glutamate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -157677,7 +157677,7 @@
           <speciesReference species="s_3839" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4419" sboTerm="SBO:0000655" id="r_4419" name="L-Cysteate transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4419" sboTerm="SBO:0000655" id="r_4419" name="L-Cysteate transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -157738,7 +157738,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4421" sboTerm="SBO:0000655" id="r_4421" name="2-Hydroxyethanesulfonate transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4421" sboTerm="SBO:0000655" id="r_4421" name="2-Hydroxyethanesulfonate transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -157765,7 +157765,7 @@
           <speciesReference species="s_4115" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4422" sboTerm="SBO:0000655" id="r_4422" name="3-Oxalomalate transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4422" sboTerm="SBO:0000655" id="r_4422" name="3-Oxalomalate transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -157819,7 +157819,7 @@
           <speciesReference species="s_4087" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4424" sboTerm="SBO:0000655" id="r_4424" name="Gly-Gln transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4424" sboTerm="SBO:0000655" id="r_4424" name="Gly-Gln transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -157906,7 +157906,7 @@
           <speciesReference species="s_4036" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4427" sboTerm="SBO:0000655" id="r_4427" name="N-Acetylmethionine transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4427" sboTerm="SBO:0000655" id="r_4427" name="N-Acetylmethionine transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -157933,7 +157933,7 @@
           <speciesReference species="s_4134" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4428" sboTerm="SBO:0000655" id="r_4428" name="Phosphotyrosine transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4428" sboTerm="SBO:0000655" id="r_4428" name="Phosphotyrosine transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -157960,7 +157960,7 @@
           <speciesReference species="s_4096" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4429" sboTerm="SBO:0000655" id="r_4429" name="Ala-His transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4429" sboTerm="SBO:0000655" id="r_4429" name="Ala-His transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -158185,7 +158185,7 @@
           <speciesReference species="s_1493" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4437" sboTerm="SBO:0000655" id="r_4437" name="Gly-Glu transport via proton symport (extracellular to cytosol)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4437" sboTerm="SBO:0000655" id="r_4437" name="Gly-Glu transport via proton symport (extracellular to cytosol)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -158361,7 +158361,7 @@
           <speciesReference species="s_4094" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4444" sboTerm="SBO:0000655" id="r_4444" name="D-Glycerate 2-phosphate transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4444" sboTerm="SBO:0000655" id="r_4444" name="D-Glycerate 2-phosphate transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158389,7 +158389,7 @@
           <speciesReference species="s_0794" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4445" sboTerm="SBO:0000655" id="r_4445" name="3-Phospho-D-glycerate transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4445" sboTerm="SBO:0000655" id="r_4445" name="3-Phospho-D-glycerate transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158467,7 +158467,7 @@
           <speciesReference species="s_0455" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4448" sboTerm="SBO:0000655" id="r_4448" name="Met-Ala transport via proton symport (extracellular to cytosol)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4448" sboTerm="SBO:0000655" id="r_4448" name="Met-Ala transport via proton symport (extracellular to cytosol)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -158523,7 +158523,7 @@
           <speciesReference species="s_3757" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4450" sboTerm="SBO:0000655" id="r_4450" name="O-Phospho-L-serine transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4450" sboTerm="SBO:0000655" id="r_4450" name="O-Phospho-L-serine transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158551,7 +158551,7 @@
           <speciesReference species="s_0794" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4451" sboTerm="SBO:0000655" id="r_4451" name="GMP transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4451" sboTerm="SBO:0000655" id="r_4451" name="GMP transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158654,7 +158654,7 @@
           <speciesReference species="s_1545" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4455" sboTerm="SBO:0000655" id="r_4455" name="Phosphoenolpyruvate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4455" sboTerm="SBO:0000655" id="r_4455" name="Phosphoenolpyruvate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158707,7 +158707,7 @@
           <speciesReference species="s_0574" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4457" sboTerm="SBO:0000655" id="r_4457" name="O-Phosphoryl-Ethanolamine transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4457" sboTerm="SBO:0000655" id="r_4457" name="O-Phosphoryl-Ethanolamine transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -158737,7 +158737,7 @@
           <fbc:geneProductRef fbc:geneProduct="YDR093W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4458" sboTerm="SBO:0000655" id="r_4458" name="6-Phospho-D-gluconate transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4458" sboTerm="SBO:0000655" id="r_4458" name="6-Phospho-D-gluconate transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158765,7 +158765,7 @@
           <speciesReference species="s_0794" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4459" sboTerm="SBO:0000655" id="r_4459" name="MAN1P transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4459" sboTerm="SBO:0000655" id="r_4459" name="MAN1P transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158793,7 +158793,7 @@
           <speciesReference species="s_0794" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4460" sboTerm="SBO:0000655" id="r_4460" name="Pyrophosphate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4460" sboTerm="SBO:0000655" id="r_4460" name="Pyrophosphate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158872,7 +158872,7 @@
           <speciesReference species="s_4113" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4463" sboTerm="SBO:0000655" id="r_4463" name="AMP transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4463" sboTerm="SBO:0000655" id="r_4463" name="AMP transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158925,7 +158925,7 @@
           <speciesReference species="s_0131" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4465" sboTerm="SBO:0000655" id="r_4465" name="Adenosine- 2&apos;-Monophosphate transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4465" sboTerm="SBO:0000655" id="r_4465" name="Adenosine- 2&apos;-Monophosphate transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -158952,7 +158952,7 @@
           <speciesReference species="s_0794" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4466" sboTerm="SBO:0000655" id="r_4466" name="CMP transport in/out via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4466" sboTerm="SBO:0000655" id="r_4466" name="CMP transport in/out via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -159037,7 +159037,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4469" sboTerm="SBO:0000655" id="r_4469" name="L-Citrulline transport in via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4469" sboTerm="SBO:0000655" id="r_4469" name="L-Citrulline transport in via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -159094,7 +159094,7 @@
           <speciesReference species="s_0771" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4471" sboTerm="SBO:0000655" id="r_4471" name="Ala-Leu transport via proton symport (extracellular to cytosol)" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4471" sboTerm="SBO:0000655" id="r_4471" name="Ala-Leu transport via proton symport (extracellular to cytosol)" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -159150,7 +159150,7 @@
           <speciesReference species="s_3840" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4473" sboTerm="SBO:0000655" id="r_4473" name="L-alanylglycine transport via proton antiport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4473" sboTerm="SBO:0000655" id="r_4473" name="L-alanylglycine transport via proton antiport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -159260,7 +159260,7 @@
           <speciesReference species="s_1192" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4477" sboTerm="SBO:0000655" id="r_4477" name="Lipoamide transport via proton symport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4477" sboTerm="SBO:0000655" id="r_4477" name="Lipoamide transport via proton symport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -159338,7 +159338,7 @@
           <speciesReference species="s_4055" stoichiometry="1" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4480" sboTerm="SBO:0000655" id="r_4480" name="Cysteamine transport via proton antiport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4480" sboTerm="SBO:0000655" id="r_4480" name="Cysteamine transport via proton antiport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 1</p>
@@ -161682,7 +161682,7 @@
           <speciesReference species="s_4193" stoichiometry="2" constant="true"/>
         </listOfProducts>
       </reaction>
-      <reaction metaid="r_4587" sboTerm="SBO:0000655" id="r_4587" name="Ca(2+) transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4587" sboTerm="SBO:0000655" id="r_4587" name="Ca(2+) transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -161741,7 +161741,7 @@
           <fbc:geneProductRef fbc:geneProduct="YNL275W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4589" sboTerm="SBO:0000655" id="r_4589" name="Cu2(+) transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4589" sboTerm="SBO:0000655" id="r_4589" name="Cu2(+) transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -161771,7 +161771,7 @@
           <fbc:geneProductRef fbc:geneProduct="YOL122C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4590" sboTerm="SBO:0000655" id="r_4590" name="Mn(2+) transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4590" sboTerm="SBO:0000655" id="r_4590" name="Mn(2+) transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -161802,7 +161802,7 @@
           <fbc:geneProductRef fbc:geneProduct="YOL130W"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4591" sboTerm="SBO:0000655" id="r_4591" name="Zn(2+) transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4591" sboTerm="SBO:0000655" id="r_4591" name="Zn(2+) transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -161836,7 +161836,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4592" sboTerm="SBO:0000655" id="r_4592" name="Mg(2+) transport" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4592" sboTerm="SBO:0000655" id="r_4592" name="Mg(2+) transport" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -164982,7 +164982,7 @@
           <fbc:geneProductRef fbc:geneProduct="YOR126C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4713" sboTerm="SBO:0000176" id="r_4713" name="diethyl-succinate esterase, c" reversible="true" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
+      <reaction metaid="r_4713" sboTerm="SBO:0000176" id="r_4713" name="diethyl-succinate esterase, c" reversible="false" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -165014,7 +165014,7 @@
           <fbc:geneProductRef fbc:geneProduct="YOR126C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4714" sboTerm="SBO:0000176" id="r_4714" name="monoethyl-succinate esterase, c" reversible="true" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
+      <reaction metaid="r_4714" sboTerm="SBO:0000176" id="r_4714" name="monoethyl-succinate esterase, c" reversible="false" fast="false" fbc:lowerFluxBound="FB1N1000" fbc:upperFluxBound="FB3N0">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -165313,7 +165313,7 @@
           <fbc:geneProductRef fbc:geneProduct="YJL012C"/>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4723" sboTerm="SBO:0000176" id="r_4723" name="polyphosphate phosphohydrolase, v" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4723" sboTerm="SBO:0000176" id="r_4723" name="polyphosphate phosphohydrolase, v" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -165350,7 +165350,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4724" sboTerm="SBO:0000176" id="r_4724" name="polyphosphate phosphohydrolase, m" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4724" sboTerm="SBO:0000176" id="r_4724" name="polyphosphate phosphohydrolase, m" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>
@@ -165386,7 +165386,7 @@
           </fbc:or>
         </fbc:geneProductAssociation>
       </reaction>
-      <reaction metaid="r_4725" sboTerm="SBO:0000176" id="r_4725" name="polyphosphate phosphohydrolase, n" reversible="true" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
+      <reaction metaid="r_4725" sboTerm="SBO:0000176" id="r_4725" name="polyphosphate phosphohydrolase, n" reversible="false" fast="false" fbc:lowerFluxBound="FB3N0" fbc:upperFluxBound="FB5N1000">
         <notes>
           <body xmlns="http://www.w3.org/1999/xhtml">
             <p>Confidence Level: 2</p>

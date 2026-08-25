@@ -39,7 +39,21 @@ This repository contains the current consensus genome-scale metabolic model of _
 
 | Taxonomy | Latest update | Version | Reactions | Metabolites | Genes |
 |:-------|:--------------|:------|:------|:----------|:-----|
-| _Saccharomyces cerevisiae_ | 27-May-2026 | develop | 4102 | 2748 | 1143 |
+| _Saccharomyces cerevisiae_ | 01-Jul-2026 | 9.1.0 | 4102 | 2748 | 1143 |
+
+### Gene essentiality prediction
+
+- Accuracy: 0.902
+- True non-essential genes: 934
+- True essential genes: 65
+- False non-essential genes: 94
+- False essential genes: 14
+
+### Growth prediction
+
+- Correlation coefficient R<sup>2</sup>: 0.901
+
+![Growth curve](data/testResults/growth.png)
 
 # Installation & usage
 
@@ -71,9 +85,21 @@ Please see the installation instructions for each software package.
   * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later
 
 * Python-based  
-  Contribution via python (cobrapy) is not yet functional. In essence, if you can retain the same format of the model files, you can still contribute to the development of yeast-GEM. However, you cannot use the MATLAB functions.
+  The `yeastgem` package provides a cobrapy-based interface to the model, built on
+  [raven-toolbox](https://github.com/SysBioChalmers/raven-python) for the generic,
+  organism-agnostic parts. It covers loading and committing the model, applying
+  growth conditions, biomass composition, and the validation test suite. See
+  [code/python/README.md](code/python/README.md) for the API map.
+  ```bash
+  pip install -e code/python/
+  touch .env # create a .env file for locating the root
+  ```
+  Note that writing the `.yml`, `.txt`, `.xlsx` and `.mat` model files remains
+  MATLAB-only; the Python side reads and writes `.xml` plus the deltaG CSVs.
 
-  If you want to use any of the [provided](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code) Python functions, you may create an environment with all requirements:
+  If you instead want to use the standalone Python functions in
+  [code/](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code), you may
+  create an environment with all requirements:
   ```bash
   pip install -r code/requirements/requirements.txt  # install all dependencies
   touch .env # create a .env file for locating the root

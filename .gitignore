@@ -57,6 +57,9 @@ helpsearch*/
 #########################
 *.ipynb_checkpoints/
 *.pyc
+__pycache__/
+*.egg-info/
+.pytest_cache/
 *.env
 
 # Non-complying tables and files #

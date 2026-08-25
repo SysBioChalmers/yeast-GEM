@@ -1,0 +1,62 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "yeastgem"
+version = "0.0.1.dev0"
+description = "Python interface to the yeast-GEM consensus genome-scale metabolic model"
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "CC-BY-4.0" }
+authors = [{ name = "SysBioChalmers", email = "info@sysbiochalmers.se" }]
+keywords = ["systems biology", "metabolic model", "yeast", "Saccharomyces cerevisiae", "cobra"]
+
+# Generic, organism-agnostic helpers live upstream in raven-toolbox; the\r
+# local yeastgem package is just the yeast-specific repo orchestration on\r
+# top. This mirrors the MATLAB side, where code/ is a thin layer over the\r
+# RAVEN toolbox.\r
+dependencies = [
+    "raven-toolbox>=0.3.0",
+    "cobra>=0.29",
+    "pandas>=2.0",
+    "pyyaml>=6.0",
+    "matplotlib>=3.7",
+    "numpy>=1.24",
+    "python-dotenv>=1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0",
+    "pytest-cov>=4.0",
+    "ruff>=0.4",
+]
+# Optional. cobrapy solves with whatever optlang resolves; without this it
+# is GLPK, which cobra pulls in via swiglpk. Installing gurobipy makes
+# cobrapy pick Gurobi, matching the solver RAVEN uses on the MATLAB side.
+# Needs a licence: the one bundled with the PyPI wheel is capped at 2000
+# variables and 2000 constraints, well below yeast-GEM's ~4100 reactions
+# and ~2750 metabolites.
+gurobi = [
+    "gurobipy>=11",
+]
+
+[project.urls]
+"Source" = "https://github.com/SysBioChalmers/yeast-GEM"
+"Issues" = "https://github.com/SysBioChalmers/yeast-GEM/issues"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["yeastgem*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "RUF"]

@@ -3,7 +3,7 @@
 This is a self-contained port of ``code/otherChanges/anaerobicModel.m`` (and
 the ``changeAminoAcidRatio`` / ``sumBioMass`` / ``rescalePseudoReaction``
 helpers it relies on) to cobrapy. It has no dependency on the RAVEN toolbox
-or raven-python; the only third-party requirement is ``cobra``.
+or raven-toolbox; the only third-party requirement is ``cobra``.
 
 By default yeast-GEM represents aerobic metabolism. :func:`anaerobic_model`
 edits exchange reactions and a few intracellular reactions in place so the
