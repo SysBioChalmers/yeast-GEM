@@ -109,45 +109,42 @@ jobs:
       # requests from forks, so this is best-effort: without it cobrapy
       # falls back to GLPK and the tolerances still cover the difference.
       - name: Install yeastgem
-        env:
-          WLSACCESSID: ${{ secrets.GUROBI_WLSACCESSID }}
-        run: |
-          if [ -n "$WLSACCESSID" ]; then
-            pip install -e "code/python/[gurobi]"
-          else
-            pip install -e code/python/
-          fi
+        run: pip install -e "code/python/[gurobi]"
 
-      - name: Configure Gurobi WLS licence
+      # The licence is supplied either as a complete licence file or as its
+      # three separate fields; accept whichever is configured. Falling back
+      # to GLPK is deliberate rather than a hard failure here, because
+      # secrets are not exposed to pull requests from forks and the
+      # tolerances still cover the solver difference.
+      - name: Install the Gurobi WLS licence
         env:
+          LICENCE_FILE: ${{ secrets.GUROBI_EDUARD }}
           WLSACCESSID: ${{ secrets.GUROBI_WLSACCESSID }}
           WLSSECRET: ${{ secrets.GUROBI_WLSSECRET }}
           LICENSEID: ${{ secrets.GUROBI_LICENSEID }}
         run: |
-          # Report which parts are visible, never their values, so a
-          # misnamed or unshared secret is diagnosable from the log.
-          for v in WLSACCESSID WLSSECRET LICENSEID; do
-            eval "val=\${$v}"
-            if [ -n "$val" ]; then
-              echo "$v: set (${#val} chars)"
-            else
-              echo "$v: EMPTY"
-            fi
-          done
-          if [ -z "$WLSACCESSID" ] || [ -z "$WLSSECRET" ] || [ -z "$LICENSEID" ]; then
-            echo "Gurobi WLS licence not fully available; cobrapy will use GLPK."
-            echo "If the secrets exist org-wide, check they are Actions secrets"
-            echo "(not Dependabot/Codespaces) and that this repository is in"
-            echo "the secret's repository-access list."
+          umask 077
+          licence="$HOME/gurobi.lic"
+          if [ -n "$LICENCE_FILE" ]; then
+            echo "$LICENCE_FILE" > "$licence"
+          elif [ -n "$WLSACCESSID" ] && [ -n "$WLSSECRET" ] && [ -n "$LICENSEID" ]; then
+            { echo "WLSACCESSID=$WLSACCESSID"
+              echo "WLSSECRET=$WLSSECRET"
+              echo "LICENSEID=$LICENSEID"
+            } > "$licence"
+          else
+            echo "No Gurobi licence configured; cobrapy will use GLPK."
             exit 0
           fi
-          umask 077
-          {
-            echo "WLSACCESSID=$WLSACCESSID"
-            echo "WLSSECRET=$WLSSECRET"
-            echo "LICENSEID=$LICENSEID"
-          } > "$HOME/gurobi.lic"
-          echo "GRB_LICENSE_FILE=$HOME/gurobi.lic" >> "$GITHUB_ENV"
+          # Report the shape without printing the value. A named-user academic
+          # licence is tied to one machine and cannot authenticate on a hosted
+          # runner, which otherwise looks like a solver bug.
+          if grep -q "^[[:space:]]*WLSACCESSID=" "$licence"; then
+            echo "Gurobi WLS licence installed"
+          else
+            echo "::warning::the configured licence is not a WLS licence, so it will not authenticate on a hosted runner"
+          fi
+          echo "GRB_LICENSE_FILE=$licence" >> "$GITHUB_ENV"
 
       - name: Validation metrics match the committed reference
         run: python code/python/tests/ci/check_metrics.py
