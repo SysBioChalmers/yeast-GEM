@@ -88,27 +88,18 @@ end
 fclose('all');
 delete('backup.md');
 
-%Allow .mat & .xlsx storage:
-copyfile('../.gitignore','backup')
-fin  = fopen('backup','r');
-fout = fopen('../.gitignore','w');
-still_reading = true;
-while still_reading
-  inline = fgets(fin);
-  if ~ischar(inline)
-      still_reading = false;
-  elseif ~startsWith(inline,'*.mat') && ~startsWith(inline,'*.xls')
-      fwrite(fout,inline);
-  end
-end
-fclose('all');
-delete('backup');
-
 %Include tag and save model:
 disp('Write model files')
 model.id = ['yeastGEM_v' newVersion];
 model.version = newVersion;
 saveYeastModel(model,true,true,true)   %only save if model can grow
+
+%Stage the binary model files. They are listed in .gitignore, so that they
+%cannot reach develop by accident, and are therefore force-added here on
+%main where they do belong. This replaces stripping the two entries out of
+%.gitignore: that left main and develop permanently disagreeing about those
+%lines, which made every merge between the two branches conflict.
+system('git add -f ../model/yeast-GEM.mat ../model/yeast-GEM.xlsx');
 
 %Check for any unexpected file changes
 [~,diff]   = system('git diff --numstat');
