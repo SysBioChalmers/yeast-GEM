@@ -1,5 +1,5 @@
 % This scripts applies curations to be applied on yeast-GEM release 9.1.0,
-% to get to yeast-GEM release 9.2.0.
+% to get to yeast-GEM release 9.1.1.
 %
 % Curations in this release:
 %   - Correction of erroneous metabolite annotations (Issue #378)
@@ -12,7 +12,7 @@ codeDir=pwd();
 model = getEarlierModelVersion('9.1.0');
 model.id='yeastGEM_develop';
 model.version='';
-% dataDir=fullfile(pwd(),'..','data','modelCuration','v9.2.0'); % No dataDir required for these curations
+% dataDir=fullfile(pwd(),'..','data','modelCuration','v9.1.1'); % No dataDir required for these curations
 cd modelCuration
 
 %% ========================================================================
