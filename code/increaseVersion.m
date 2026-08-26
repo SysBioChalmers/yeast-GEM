@@ -52,9 +52,14 @@ model = readYAMLmodel('../model/yeast-GEM.yml');
 %Run tests
 cd modelTests
 disp('Running gene essentiality analysis')
-[new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model);
+[new.accuracy,new.tp,new.tn,new.fn,new.fp] = essentialGenes(model,true);
 disp('Run growth analysis')
 new.R2=growth(model,true);
+disp('Run anaerobic flux analysis')
+cd ../otherChanges
+modelAnaerobic = anaerobicModel(model);
+cd ../modelTests
+new.R2anaerobic = anaerobic_flux_predictions(modelAnaerobic);
 
 cd ..
 copyfile('../README.md','backup.md')
@@ -82,6 +87,43 @@ while ~feof(fin)
     inline = regexprep(inline,searchStats4,newStats4);
     inline = regexprep(inline,searchStats5,newStats5);
     inline = regexprep(inline,searchStats6,newStats6);
+    inline = unicode2native(inline,'UTF-8');
+    fwrite(fout,inline);
+end
+fclose('all');
+delete('backup.md');
+
+%Update the test results summary. Only the two metadata lines and the
+%numbers in the table are rewritten, so the surrounding text describing
+%what each test does can be edited freely. The Python parity gate reads
+%this same file, so it must not be allowed to go stale.
+resultsFile = '../data/testResults/README.md';
+copyfile(resultsFile,'backup.md')
+fin  = fopen('backup.md','r');
+fout = fopen(resultsFile,'w');
+searchRes = {'^(- Model version\: )[^\n]*', ...
+             '^(- Software\: )[^\n]*', ...
+             '^(\| Growth prediction R2 \| )[\d.eE+-]+', ...
+             '^(\| Anaerobic flux prediction R2 \| )[\d.eE+-]+', ...
+             '^(\| Gene essentiality accuracy \| )[\d.eE+-]+', ...
+             '^(\| True non-essential genes \| )\d+', ...
+             '^(\| True essential genes \| )\d+', ...
+             '^(\| False non-essential genes \| )\d+', ...
+             '^(\| False essential genes \| )\d+'};
+newRes    = {['$1' newVersion], ...
+             ['$1MATLAB ' version ', RAVEN ' getToolboxVersion('RAVEN','ravenCobraWrapper.m')], ...
+             ['$1' num2str(new.R2,'%.16g')], ...
+             ['$1' num2str(new.R2anaerobic,'%.16g')], ...
+             ['$1' num2str(new.accuracy,'%.16g')], ...
+             ['$1' num2str(numel(new.tp))], ...
+             ['$1' num2str(numel(new.tn))], ...
+             ['$1' num2str(numel(new.fp))], ...
+             ['$1' num2str(numel(new.fn))]};
+while ~feof(fin)
+    inline = fgets(fin);
+    for i = 1:numel(searchRes)
+        inline = regexprep(inline,searchRes{i},newRes{i});
+    end
     inline = unicode2native(inline,'UTF-8');
     fwrite(fout,inline);
 end
@@ -123,7 +165,11 @@ for i = 1:length(diff)
                     disp(['NOTE: File ' diff_i{3} ' is changing more than expected'])
                     change = true;
                 end                
-            case {'history.md','README.md','data/testResults/growth.png','model/yeast-GEM.mat','model/yeast-GEM.xlsx'}
+            %The test results are regenerated above, so they are expected
+            %to change whenever the model does
+            case {'history.md','README.md','model/yeast-GEM.mat','model/yeast-GEM.xlsx', ...
+                  'data/testResults/README.md','data/testResults/growth.md', ...
+                  'data/testResults/growth.png','data/testResults/essentialGenes.md'}
             otherwise
                 disp(['NOTE: File ' diff_i{3} ' is changing'])
                 change = true;                
