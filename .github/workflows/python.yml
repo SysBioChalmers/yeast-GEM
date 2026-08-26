@@ -85,9 +85,9 @@ jobs:
   # committed MATLAB-produced reference within tolerance. Tolerances
   # cover both solver drift on the R^2 metrics and a one-gene difference
   # in the essential-gene confusion matrix that is not solver-related (it
-  # persists when Python also uses Gurobi). See metrics.json for details. Regenerate the reference via
-  # code/python/tests/reference/runPhase5Metrics.m when the metrics
-  # shift legitimately.
+  # persists when Python also uses Gurobi). See check_metrics.py for details. The reference
+  # values live in data/testResults/README.md and are regenerated at
+  # release time.
   parity-level-2-metrics:
     runs-on: ubuntu-latest
     timeout-minutes: 30
