@@ -60,3 +60,102 @@ collection. The per-gene lists are in [essentialGenes.md](essentialGenes.md).
 Note that the deletion collection was screened on complex medium supplemented
 for genetic markers, so it is not an ideal reference; it is useful for
 comparing model versions against each other rather than as ground truth.
+
+## Model quality checks
+
+These run on every pull request that touches `model/`, and are reported in a
+single comment on the pull request. The headings below match the check names in
+that comment exactly, so a name there links straight to its explanation here.
+
+Both columns of the comment are computed in the same run: the target branch is
+checked out and measured with the same code, the same reference data and the
+same dependency versions, so the difference between the two columns is the
+model and nothing else. The icons read: :white_check_mark: the count is zero
+(or the model grows); :warning: a non-zero finding that this pull request did
+not make worse, which is a report and does not block; :x: a count that rose
+against the target branch, meaning this pull request introduced it.
+
+Only growth is a gate. Everything else is reported so that work is not blocked
+on findings that were already there.
+
+The per-check CSVs listing the exact entries are attached to each workflow run
+as the `model-qc-results` artifact, for the pull request and the target branch
+both.
+
+### Model checks
+
+#### Growth (biomass producible)
+**Gate.** The objective value under the model's own constraints. A model that
+cannot produce biomass blocks the merge.
+
+#### Reactions with no metabolites
+Reactions with empty stoichiometry. Such a reaction does nothing and is
+usually the residue of an incomplete edit.
+
+#### Exact-duplicate reaction groups
+Reactions sharing identical stoichiometry and direction. Keyed on the
+metabolite/coefficient set together with reversibility, so a forward-only and
+a reversible copy of the same conversion are not conflated.
+
+#### Unused metabolites
+Metabolites that take part in no reaction.
+
+#### Unused genes
+Genes associated with no reaction.
+
+#### Metabolites missing formula
+Metabolites with no chemical formula. These also make every reaction they
+appear in impossible to mass-balance, so they show up twice.
+
+#### Metabolites missing charge
+Metabolites with no charge assigned.
+
+### Mass/charge balance and MACAW
+
+#### Mass-imbalanced reactions
+Elemental imbalance, from cobrapy's `Reaction.check_mass_balance()`.
+
+Three classes are excluded because they are not expected to balance: boundary
+reactions, which have one side by construction; pseudoreactions, which are
+lumped compositions; and SLIME reactions, which split lipids into measurable
+entities using fractional averaged coefficients. Leaving SLIME in would report
+186 findings against the 2 genuinely unexpected imbalances in the rest of the
+model, which is the same as reporting nothing.
+
+#### Charge-imbalanced reactions
+Charge imbalance, from the same call and with the same exclusions.
+
+#### Reactions flagged by MACAW dead-end test
+Reactions that cannot carry flux because a metabolite in them can only be
+produced or only consumed. From [MACAW](https://github.com/Devlin-Moyer/macaw).
+
+#### Reactions flagged as MACAW duplicates
+Reaction pairs MACAW considers redundant — identical, or differing only by
+compartment, direction or cofactor.
+
+### Annotations
+
+#### Malformed cross-references
+Cross-references that do not match the identifier pattern their namespace
+declares at identifiers.org. Only namespaces with a pattern recorded in
+`model_qc.py` are checked; a namespace without one is left alone rather than
+guessed at, because a wrong pattern manufactures findings.
+
+#### Gene cross-references from other organisms
+Gene cross-references in a namespace that does not belong on a
+_Saccharomyces_ model — an E. coli or human gene database, say. These are
+copy-paste errors rather than deliberate annotations.
+
+#### Cross-refs inconsistent across compartments
+The same metabolite name appearing in several compartments with disagreeing
+cross-references. Read these before acting: a different ChEBI identifier
+across compartments is sometimes correct, where the compartments genuinely
+hold different protonation states or a zwitterion. The finding is that the
+name and the identifier disagree about whether they are the same species.
+
+### Not yet implemented
+
+Human-GEM additionally checks model/annotation-table consistency, that removed
+identifiers were moved to a deprecated list, and structure (SMILES/InChI)
+against formula and charge. All three need the YAML-based curation layout with
+separate identifier TSVs, which yeast-GEM adopts in 9.2.0 (see #379).
