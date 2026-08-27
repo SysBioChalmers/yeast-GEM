@@ -90,7 +90,7 @@ jobs:
   # release time.
   parity-level-2-metrics:
     runs-on: ubuntu-latest
-    timeout-minutes: 30
+    timeout-minutes: 75
     needs: test
     # Needed to post the results comment. Declared explicitly rather than
     # relying on the repository-wide default, which is read-only in many
@@ -101,6 +101,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v7
+
+      # The target branch is measured in this same run, so both columns of the
+      # comparison come from the same code, the same reference data and the
+      # same solver. Only on pull requests: a push has nothing to compare to
+      # and falls back to the committed table.
+      - name: Checkout the target branch
+        if: github.event_name == 'pull_request'
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.event.pull_request.base.ref }}
+          path: base-checkout
 
       - name: Set up Python
         uses: actions/setup-python@v6
@@ -152,32 +163,49 @@ jobs:
           fi
           echo "GRB_LICENSE_FILE=$licence" >> "$GITHUB_ENV"
 
-      # The summary is written even when the comparison fails, so the
-      # comment below reports which metric moved rather than only that
-      # something did. continue-on-error keeps the job going as far as
-      # the comment; the verdict step below restores the failure.
-      - name: Validation metrics match the committed reference
+      # Measuring both sides doubles the work of this job; the essential-gene
+      # sweep is the bulk of it. continue-on-error so the comment is posted
+      # even when a metric regresses; the gate below restores the failure.
+      - name: Validation metrics vs the target branch
         id: metrics
         continue-on-error: true
+        env:
+          BASE_REF: ${{ github.event.pull_request.base.ref }}
+          RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         run: |
-          python code/python/tests/ci/check_metrics.py \
-            --markdown "$RUNNER_TEMP/metrics.md"
+          args=(--markdown "$RUNNER_TEMP/metrics.md" --run-url "$RUN_URL")
+          if [ -d base-checkout ]; then
+            args+=(--base-model base-checkout/model/yeast-GEM.xml --base-ref "$BASE_REF")
+          fi
+          python code/python/tests/ci/check_metrics.py "${args[@]}"
 
-      # Only for pull requests raised from this repository: GITHUB_TOKEN is
-      # read-only on pull requests from forks, so posting would fail. The
-      # metrics still run there and still gate the merge, they are just
-      # reported in the log rather than as a comment.
+      # GITHUB_TOKEN is read-only on pull requests from forks, so posting is
+      # skipped there. The metrics still run and still gate the merge; they are
+      # reported in the log instead.
       - name: Report the metrics on the pull request
         if: >-
+          !cancelled() &&
           github.event_name == 'pull_request' &&
           github.event.pull_request.head.repo.full_name == github.repository
-        uses: marocchino/sticky-pull-request-comment@v3
+        uses: actions/github-script@v9
         with:
-          header: validation-metrics
-          path: ${{ runner.temp }}/metrics.md
+          script: |
+            const fs = require('fs');
+            const marker = '<!-- VALIDATION-METRICS-COMMENT -->';
+            const body = marker + '\n' + fs.readFileSync(process.env.RUNNER_TEMP + '/metrics.md', 'utf8');
+            const { owner, repo } = context.repo;
+            const issue_number = context.issue.number;
+            const comments = await github.paginate(github.rest.issues.listComments,
+              { owner, repo, issue_number });
+            const existing = comments.find(c => c.body && c.body.includes(marker));
+            if (existing) {
+              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
+            } else {
+              await github.rest.issues.createComment({ owner, repo, issue_number, body });
+            }
 
-      - name: Fail if any metric moved beyond tolerance
-        if: steps.metrics.outcome == 'failure'
+      - name: Fail if a metric got worse
+        if: ${{ !cancelled() && steps.metrics.outcome == 'failure' }}
         run: |
-          echo "::error::validation metrics differ from data/testResults/README.md"
+          echo "::error::a validation metric regressed; see the pull-request comment"
           exit 1

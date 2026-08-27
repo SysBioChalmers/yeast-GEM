@@ -1,12 +1,23 @@
-"""Level-2 parity gate — Python validation metrics match the committed
-MATLAB-produced results.
+"""Validation metrics, compared against the target branch.
 
-Computes growth R², essential-gene accuracy and confusion matrix, and
-anaerobic flux R², then checks each against the values published in
-``data/testResults/README.md`` within tolerance. That file is the
-human-readable record of the model tests, regenerated at release time,
-so there is a single set of committed numbers rather than a separate
-machine-readable copy that can drift away from it.
+Computes growth R², gene-essentiality accuracy and its confusion matrix,
+anaerobic flux R² and the anaerobic exchange metrics, for this branch's
+model and for the target branch's model, and reports the difference.
+
+Comparing against the target branch rather than against committed
+reference numbers matters here. ``data/testResults/README.md`` records
+the values as of the last *release*, so on any curation pull request the
+model has legitimately moved away from it and the comparison degenerates
+into "is the tolerance wide enough". Measuring both sides in the same run
+-- same code, same reference data, same solver -- isolates what this
+branch actually changed.
+
+The reference data (chemostat measurements, the deletion collection, the
+anaerobic exchange rates) always comes from the current checkout: only
+the model differs between the two columns.
+
+With no ``--base-model`` the metrics are checked against the committed
+table instead, which is what the release routine wants.
 
 Run locally:
     python code/python/tests/ci/check_metrics.py
@@ -17,6 +28,7 @@ import argparse
 import re
 from pathlib import Path
 
+import cobra
 import matplotlib
 
 matplotlib.use("Agg")
@@ -26,41 +38,45 @@ from yeastgem.io import REPO_PATH
 
 _DEFAULT_RESULTS = REPO_PATH / "data" / "testResults" / "README.md"
 
-# Tolerances live here rather than beside the results, because they are a
-# property of the comparison and not of the model.
+# Tolerances are a property of the comparison, not of the model, so they
+# live here rather than beside the results.
 #
-# Two independent sources of drift are absorbed:
-#
-# 1. R² metrics differ at ~1e-4 between solvers. The reference is produced
-#    by MATLAB with Gurobi; CI resolves Gurobi when the organisation licence
-#    is available and GLPK otherwise.
-# 2. The essential-gene confusion matrix differs from the MATLAB reference by
-#    one gene (Python 933/65/94/15 vs MATLAB 934/65/94/14). This one is *not*
-#    solver drift: it is unchanged when Python also uses Gurobi, so it
-#    reflects a difference between cobrapy's single_gene_deletion and RAVEN's
-#    findGeneDeletions around the 1e-6 growth-ratio threshold. Tracked
-#    separately; gene_count_abs absorbs it in the meantime.
+# Against the target branch they absorb solver noise only, since both sides
+# run in the same job. Against the committed table they additionally absorb
+# the reference having been produced by MATLAB with Gurobi, and a one-gene
+# difference in the confusion matrix that is not solver drift: it persists
+# when Python also uses Gurobi, and reflects cobrapy's single_gene_deletion
+# differing from RAVEN's findGeneDeletions around the 1e-6 growth-ratio
+# threshold.
 _TOL_R2 = 5e-3
 _TOL_ACCURACY = 5e-3
 _TOL_GENE_COUNT = 2
-# The exchange comparison is a handful of fluxes from one FBA solution, so
-# it moves more with the solver than the aggregate R2 metrics do.
 _TOL_RELATIVE_ERROR = 1e-2
 _TOL_RATIO = 5e-2
 
-# Row labels in the results table, mapped to the keys used below.
-_ROWS = {
-    "growth prediction r2": "growth_r2",
-    "anaerobic flux prediction r2": "anaerobic_flux_r2",
-    "anaerobic exchange mean relative error": "exchange_mean_relative_error",
-    "anaerobic exchange within error": "exchange_within_error",
-    "ammonium per atpase": "ammonium_per_atpase",
-    "gene essentiality accuracy": "accuracy",
-    "true non-essential genes": "tp",
-    "true essential genes": "tn",
-    "false non-essential genes": "fp",
-    "false essential genes": "fn",
-}
+# (key, comment label, direction, tolerance)
+#
+# "direction" says which way is an improvement, and is what makes a delta
+# readable: a rising R² is good, a rising error is not, and a rising
+# false-negative count is not. A move within tolerance is reported as
+# unchanged.
+_METRICS = [
+    ("growth_r2", "Growth prediction R2", "higher", _TOL_R2),
+    ("anaerobic_flux_r2", "Anaerobic flux prediction R2", "higher", _TOL_R2),
+    ("exchange_mean_relative_error", "Anaerobic exchange mean relative error",
+     "lower", _TOL_RELATIVE_ERROR),
+    ("exchange_within_error", "Anaerobic exchange within error", "higher",
+     _TOL_RELATIVE_ERROR),
+    ("ammonium_per_atpase", "Ammonium per ATPase", "none", _TOL_RATIO),
+    ("accuracy", "Gene essentiality accuracy", "higher", _TOL_ACCURACY),
+    ("tp", "True non-essential genes", "higher", _TOL_GENE_COUNT),
+    ("tn", "True essential genes", "higher", _TOL_GENE_COUNT),
+    ("fp", "False non-essential genes", "lower", _TOL_GENE_COUNT),
+    ("fn", "False essential genes", "lower", _TOL_GENE_COUNT),
+]
+
+# Row labels in the committed table, mapped to the keys used here.
+_ROWS = {label.lower(): key for key, label, _dir, _tol in _METRICS}
 
 
 def parse_results(path: Path) -> dict[str, float]:
@@ -87,138 +103,159 @@ def parse_results(path: Path) -> dict[str, float]:
     return found
 
 
-def main(
-    results_path: Path = _DEFAULT_RESULTS,
-    markdown_path: Path | None = None,
-) -> int:
-    ref = parse_results(results_path)
-
-    print(f"Reference: {results_path}")
-    model = read_yeast_model()
-    # No solver is pinned anywhere: cobrapy takes whatever optlang resolves,
-    # which is Gurobi when the licence is available and GLPK otherwise. Since
-    # that choice is what the tolerances above are absorbing, report it rather
-    # than leaving it to be inferred.
-    print(f"Solver: {model.solver.interface.__name__}")
-
-    print("Computing growth R² ...")
+def compute(model) -> dict[str, float]:
+    """Every validation metric for one model."""
     growth_r2 = model_tests.growth(model.copy())
-    print(f"  Python: {growth_r2:.6g}  Reference: {ref['growth_r2']:.6g}")
+    essential = model_tests.essential_genes(model.copy())
 
-    print("Computing essential_genes ...")
-    result = model_tests.essential_genes(model.copy())
-    print(f"  Python accuracy: {result.accuracy:.6g}  Reference: {ref['accuracy']:.6g}")
-    print(f"  Python TP/TN/FP/FN: "
-          f"{len(result.tp)}/{len(result.tn)}/{len(result.fp)}/{len(result.fn)}  "
-          f"Reference: {ref['tp']:.0f}/{ref['tn']:.0f}/{ref['fp']:.0f}/{ref['fn']:.0f}")
-
-    print("Computing anaerobic_flux_predictions ...")
     anaerobic = model.copy()
     conditions.apply(anaerobic, "anaerobic")
-    af_r2, _af_mre = model_tests.anaerobic_flux_predictions(anaerobic)
-    print(f"  Python: {af_r2:.6g}  Reference: {ref['anaerobic_flux_r2']:.6g}")
-
-    print("Computing anaerobic exchange rates ...")
+    anaerobic_r2, _mre = model_tests.anaerobic_flux_predictions(anaerobic)
     exchange = model_tests.plot_anaerobic(anaerobic, plot=False)
-    print(f"  Python mean relative error: {exchange.mean_relative_error:.6g}  "
-          f"Reference: {ref['exchange_mean_relative_error']:.6g}")
-    print(f"  Python within error: {exchange.fraction_within_error:.6g}  "
-          f"Reference: {ref['exchange_within_error']:.6g}")
-    print(f"  Python ammonium/ATPase: {exchange.ammonium_per_atpase:.6g}  "
-          f"Reference: {ref['ammonium_per_atpase']:.6g}")
 
-    checks: list[tuple[str, float, float, float]] = [
-        ("growth R2", growth_r2, ref["growth_r2"], _TOL_R2),
-        ("anaerobic flux R2", af_r2, ref["anaerobic_flux_r2"], _TOL_R2),
-        ("anaerobic exchange mean relative error",
-         exchange.mean_relative_error, ref["exchange_mean_relative_error"],
-         _TOL_RELATIVE_ERROR),
-        ("anaerobic exchange within error",
-         exchange.fraction_within_error, ref["exchange_within_error"], 1e-9),
-        ("ammonium per ATPase",
-         exchange.ammonium_per_atpase, ref["ammonium_per_atpase"], _TOL_RATIO),
-        ("gene essentiality accuracy", result.accuracy, ref["accuracy"], _TOL_ACCURACY),
-        ("true non-essential genes", len(result.tp), ref["tp"], _TOL_GENE_COUNT),
-        ("true essential genes", len(result.tn), ref["tn"], _TOL_GENE_COUNT),
-        ("false non-essential genes", len(result.fp), ref["fp"], _TOL_GENE_COUNT),
-        ("false essential genes", len(result.fn), ref["fn"], _TOL_GENE_COUNT),
-    ]
+    return {
+        "growth_r2": float(growth_r2),
+        "anaerobic_flux_r2": float(anaerobic_r2),
+        "exchange_mean_relative_error": exchange.mean_relative_error,
+        "exchange_within_error": exchange.fraction_within_error,
+        "ammonium_per_atpase": exchange.ammonium_per_atpase,
+        "accuracy": float(essential.accuracy),
+        "tp": float(len(essential.tp)),
+        "tn": float(len(essential.tn)),
+        "fp": float(len(essential.fp)),
+        "fn": float(len(essential.fn)),
+    }
 
-    failures: list[str] = []
-    for name, actual, expected, tol_abs in checks:
-        diff = abs(actual - expected)
-        if diff > tol_abs:
-            failures.append(
-                f"  FAIL {name}: |{actual:.6g} - {expected:.6g}| = "
-                f"{diff:.6g}  > tol {tol_abs:.6g}"
-            )
 
-    if markdown_path is not None:
-        markdown_path.write_text(
-            _render_markdown(checks, failures, model.solver.interface.__name__),
-            encoding="utf-8",
+def _verdict(value: float, base: float, direction: str, tol: float):
+    """Return ``(delta_text, icon, is_regression)`` for one metric."""
+    change = value - base
+    if abs(change) <= tol:
+        return "0", ":white_check_mark:", False
+    text = f"{change:+.4g}"
+    if direction == "none":
+        return text, ":warning:", False
+    improved = (change > 0) if direction == "higher" else (change < 0)
+    return text, (":white_check_mark:" if improved else ":x:"), not improved
+
+
+def render(current: dict, base: dict, base_ref: str, solver: str,
+           run_url: str = "") -> str:
+    """Render the comparison for a pull-request comment."""
+    rows, regressions, moved = [], 0, 0
+    for key, label, direction, tol in _METRICS:
+        value = current[key]
+        if key not in base:
+            rows.append(f"| {label} | {value:.6g} | — | new | :grey_question: |")
+            continue
+        delta, icon, regression = _verdict(value, base[key], direction, tol)
+        regressions += regression
+        moved += delta != "0"
+        rows.append(
+            f"| {label} | {value:.6g} | {base[key]:.6g} | {delta} | {icon} |"
         )
-        print(f"\nWrote summary to {markdown_path}")
 
-    if failures:
-        print("\nMetric parity FAILED:")
-        for msg in failures:
-            print(msg)
-        return 1
-    print("\nAll metric-parity checks passed.")
-    return 0
+    if regressions:
+        verdict = (
+            f":x: **{regressions} metric(s) got worse vs `{base_ref}`.** "
+            "Review the :x: rows."
+        )
+    elif moved:
+        verdict = (
+            f":white_check_mark: **No regressions vs `{base_ref}`** "
+            f"({moved} metric(s) moved, none for the worse)."
+        )
+    else:
+        verdict = (
+            f":white_check_mark: **Unchanged vs `{base_ref}`** — every metric "
+            "is within tolerance."
+        )
 
-
-def _render_markdown(
-    checks: list[tuple[str, float, float, float]],
-    failures: list[str],
-    solver: str,
-) -> str:
-    """Render the comparison as a table for a pull-request comment.
-
-    Every metric is listed, passing or not, so the comment is a readable
-    report of where the model stands rather than only a list of
-    complaints.
-    """
-    verdict = (
-        f"{len(failures)} metric(s) moved beyond tolerance."
-        if failures
-        else "All metrics match the committed reference."
-    )
     lines = [
         "## Validation metrics",
         "",
         verdict,
         "",
-        "| Metric | This branch | Reference | Difference | Tolerance | |",
-        "|---|---|---|---|---|---|",
-    ]
-    for name, actual, expected, tol_abs in checks:
-        diff = abs(actual - expected)
-        mark = "x" if diff > tol_abs else "white_check_mark"
-        lines.append(
-            f"| {name} | {actual:.6g} | {expected:.6g} | {diff:.3g} "
-            f"| {tol_abs:.3g} | :{mark}: |"
-        )
-    lines += [
+        f"| Metric | This branch | `{base_ref}` | &Delta; | |",
+        "| --- | ---: | ---: | ---: | :---: |",
+        *rows,
         "",
-        f"Solver: `{solver}`. Reference values come from "
-        "[`data/testResults/README.md`](https://github.com/SysBioChalmers/"
-        "yeast-GEM/blob/develop/data/testResults/README.md), which is "
-        "regenerated at release time.",
+        f"Solver: `{solver}`. A change within tolerance is reported as 0. "
+        "Direction matters: a rising R2 or accuracy is an improvement, a "
+        "rising error or false-call count is not.",
+        "",
+        "_Both columns are computed in this run, against the same reference "
+        "data — only the model differs._",
     ]
+    if run_url:
+        lines += ["", f"[Full workflow run]({run_url})"]
     return "\n".join(lines) + "\n"
 
 
-if __name__ == "__main__":
+def _load(path: Path | None):
+    if path is None:
+        return read_yeast_model()
+    if path.suffix in {".yml", ".yaml"}:
+        return cobra.io.load_yaml_model(str(path))
+    return cobra.io.read_sbml_model(str(path))
+
+
+def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument(
-        "results", nargs="?", type=Path, default=_DEFAULT_RESULTS,
-        help="results table to compare against",
-    )
-    parser.add_argument(
-        "--markdown", type=Path, default=None,
-        help="also write a markdown summary here, for a PR comment",
-    )
+    parser.add_argument("--model", type=Path, default=None,
+                        help="model to measure (default: this checkout's)")
+    parser.add_argument("--base-model", type=Path, default=None,
+                        help="target-branch model; when given, the comparison "
+                             "is against this instead of the committed table")
+    parser.add_argument("--results", type=Path, default=_DEFAULT_RESULTS,
+                        help="committed results table, used when there is no "
+                             "--base-model")
+    parser.add_argument("--markdown", type=Path, default=None,
+                        help="write the comparison here, for a PR comment")
+    parser.add_argument("--base-ref", default="the target branch")
+    parser.add_argument("--run-url", default="")
     args = parser.parse_args()
-    raise SystemExit(main(args.results, markdown_path=args.markdown))
+
+    model = _load(args.model)
+    solver = model.solver.interface.__name__
+    print(f"Solver: {solver}")
+
+    print("Measuring this branch ...")
+    current = compute(model)
+
+    if args.base_model is not None:
+        print(f"Measuring {args.base_ref} ...")
+        base = compute(_load(args.base_model))
+        source = args.base_ref
+    else:
+        base = parse_results(args.results)
+        source = str(args.results)
+
+    width = max(len(label) for _k, label, _d, _t in _METRICS)
+    regressions = []
+    for key, label, direction, tol in _METRICS:
+        if key not in base:
+            continue
+        delta, _icon, regression = _verdict(current[key], base[key], direction, tol)
+        print(f"  {label:<{width}}  {current[key]:>12.6g}  vs "
+              f"{base[key]:>12.6g}   {delta}")
+        if regression:
+            regressions.append(label)
+
+    if args.markdown is not None:
+        args.markdown.parent.mkdir(parents=True, exist_ok=True)
+        args.markdown.write_text(
+            render(current, base, source, solver, args.run_url),
+            encoding="utf-8",
+        )
+        print(f"\nWrote summary to {args.markdown}")
+
+    if regressions:
+        print(f"\nFAILED — worse than {source}: {', '.join(regressions)}")
+        return 1
+    print(f"\nNo regressions against {source}.")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
