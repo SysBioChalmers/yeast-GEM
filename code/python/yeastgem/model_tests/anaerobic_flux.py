@@ -40,6 +40,10 @@ class AnaerobicFluxResult:
     fraction_within_two_fold: float
     n_unpredicted: int
     n_measurements: int
+    # One row per measurement: (reaction, measured, predicted, fold error
+    # or the reason there is none). Carried out so the pull-request report
+    # can show what the median is a summary of.
+    measurements: list[tuple]
     # Retained for comparison with earlier releases; see the note in the
     # function body for why it is not the headline number.
     r2: float
@@ -155,6 +159,24 @@ def anaerobic_flux_predictions(
         np.log10(np.abs(sim[comparable]) / np.abs(data[comparable]))
     )
 
+    rows = []
+    for name, measured, predicted, ok in zip(
+        merged_names, data, sim, comparable, strict=True
+    ):
+        if ok:
+            fold = 10 ** abs(np.log10(abs(predicted) / abs(measured)))
+            rows.append((name, f"{measured:.4g}", f"{predicted:.4g}",
+                         f"{fold:.3f}"))
+        elif abs(predicted) <= _FLUX_TOL:
+            rows.append((name, f"{measured:.4g}", f"{predicted:.4g}",
+                         "no flux predicted"))
+        elif abs(measured) <= _FLUX_TOL:
+            rows.append((name, f"{measured:.4g}", f"{predicted:.4g}",
+                         "no flux measured"))
+        else:
+            rows.append((name, f"{measured:.4g}", f"{predicted:.4g}",
+                         "opposite direction"))
+
     result = AnaerobicFluxResult(
         median_fold_error=float(10 ** np.median(log_ratio)),
         mean_fold_error=float(10 ** np.mean(log_ratio)),
@@ -163,6 +185,7 @@ def anaerobic_flux_predictions(
         n_measurements=int(data.size),
         r2=r2,
         mean_relative_error=mre,
+        measurements=rows,
     )
 
     if plot or write_output:

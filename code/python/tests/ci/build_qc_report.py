@@ -69,6 +69,16 @@ _ZERO_IS_IDEAL = {
     "geneEssentialityFalseEssential",
 }
 
+# Metrics whose detail lives under another metric's heading. The four
+# gene counts are the confusion matrix behind the accuracy, so they share
+# its section rather than repeating the same table four times.
+_DETAIL_ANCHOR = {
+    "geneEssentialityTrueNonEssential": "Gene essentiality accuracy",
+    "geneEssentialityTrueEssential": "Gene essentiality accuracy",
+    "geneEssentialityFalseNonEssential": "Gene essentiality accuracy",
+    "geneEssentialityFalseEssential": "Gene essentiality accuracy",
+}
+
 _VALIDATION_ROWS = [
     ("growthPredictionR2", "Growth prediction R2", "higher", 5e-3),
     ("anaerobicFluxMedianFoldError", "Anaerobic flux median fold error",
@@ -171,7 +181,7 @@ def _render_rows(rows, current, base, url_base, detail_base, running):
     return lines, regressions, warnings, pending, skipped, fatal
 
 
-def _render_validation(current, base, url_base, base_ref):
+def _render_validation(current, base, url_base, base_ref, detail_base=""):
     """The validation-metrics table, or a note if the job did not report."""
     if not current:
         return ["_not run — the validation metrics job reported nothing._"], 0, 1
@@ -186,8 +196,15 @@ def _render_validation(current, base, url_base, base_ref):
             skipped += 1
             continue
         value = current[key]
+        # The value links to the measurements it summarises, the same way a
+        # QC count links to the entries behind it.
+        shown = f"{value:.6g}"
+        if detail_base:
+            anchor = _slug(_DETAIL_ANCHOR.get(key, label))
+            shown = (f"[{shown}]({detail_base}/validation_findings.md"
+                     f"#{anchor})")
         if key not in base:
-            lines.append(f"| {name} | {value:.6g} | — | new | :grey_question: |")
+            lines.append(f"| {name} | {shown} | — | new | :grey_question: |")
             skipped += 1
             continue
         change = value - base[key]
@@ -208,7 +225,7 @@ def _render_validation(current, base, url_base, base_ref):
                 icon = ":white_check_mark:"
             regressions += not improved
         lines.append(
-            f"| {name} | {value:.6g} | {base[key]:.6g} | {delta} | {icon} |"
+            f"| {name} | {shown} | {base[key]:.6g} | {delta} | {icon} |"
         )
     return lines, regressions, skipped
 
@@ -251,7 +268,8 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         val_reg, val_skip = 0, 0
     else:
         val_lines, val_reg, val_skip = _render_validation(
-            validation or {}, validation_base or {}, url_base, base_ref
+            validation or {}, validation_base or {}, url_base, base_ref,
+            detail_base,
         )
     regressions += val_reg
     skipped += val_skip

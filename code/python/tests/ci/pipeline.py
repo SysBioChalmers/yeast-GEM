@@ -34,7 +34,12 @@ _API = "https://api.github.com"
 # rather than globbed: a glob would sweep up whatever a future check
 # happens to write, and the point of tracking these is that the set is
 # predictable.
-_TRACKED = ("qc_findings.md", "qc_metrics.tsv", "validation_metrics.tsv")
+_TRACKED = (
+    "qc_findings.md",
+    "qc_metrics.tsv",
+    "validation_findings.md",
+    "validation_metrics.tsv",
+)
 
 
 def read_metrics(path: Path) -> dict[str, float]:

@@ -283,9 +283,10 @@ comment that later scrolls away:
 |---|---|
 | `qc_findings.md` | every entry behind every count, one section per check |
 | `qc_metrics.tsv` | every structural, balance and annotation count, as `key<TAB>value` |
+| `validation_findings.md` | the measurements behind each validation metric |
 | `validation_metrics.tsv` | every validation metric, same format |
 
-`qc_findings.md` keeps all its section headings whether or not the check found
+Both findings files keep all their section headings whether or not the check found
 anything: an empty section reads `_None._`. One file with a fixed set of
 sections diffs far better than a CSV per check that appears and disappears —
 a check going clean shows as rows vanishing under a heading that stays put,

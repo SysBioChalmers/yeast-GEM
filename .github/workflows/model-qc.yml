@@ -117,7 +117,7 @@ jobs:
         continue-on-error: true
         run: |
           python code/python/tests/ci/check_metrics.py \
-            --emit results/head/validation_metrics.tsv
+            --emit results/head/validation_metrics.tsv             --findings results/head/validation_findings.md
 
       - name: Measure the target branch
         continue-on-error: true
