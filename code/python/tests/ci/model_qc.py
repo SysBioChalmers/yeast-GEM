@@ -299,6 +299,13 @@ def check_macaw(model, out_dir: Path) -> dict:
     duplicates = None
     for column in duplicate_columns:
         mask = _flagged(column)
+        # Per-column counts are printed, not just the union, because the
+        # union alone gives no way to tell a real finding from a column
+        # being misread: the run that reported every reaction as a
+        # duplicate looked identical to a real one in the summary.
+        sample = sorted({str(v) for v in merged[column].head(50)})[:3]
+        print(f"    {column}: dtype={merged[column].dtype} "
+              f"flagged={int(mask.sum())} sample={sample}")
         duplicates = mask if duplicates is None else (duplicates | mask)
 
     return {
