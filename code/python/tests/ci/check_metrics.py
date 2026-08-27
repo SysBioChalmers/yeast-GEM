@@ -43,11 +43,18 @@ _DEFAULT_RESULTS = REPO_PATH / "data" / "testResults" / "README.md"
 _TOL_R2 = 5e-3
 _TOL_ACCURACY = 5e-3
 _TOL_GENE_COUNT = 2
+# The exchange comparison is a handful of fluxes from one FBA solution, so
+# it moves more with the solver than the aggregate R2 metrics do.
+_TOL_RELATIVE_ERROR = 1e-2
+_TOL_RATIO = 5e-2
 
 # Row labels in the results table, mapped to the keys used below.
 _ROWS = {
     "growth prediction r2": "growth_r2",
     "anaerobic flux prediction r2": "anaerobic_flux_r2",
+    "anaerobic exchange mean relative error": "exchange_mean_relative_error",
+    "anaerobic exchange within error": "exchange_within_error",
+    "ammonium per atpase": "ammonium_per_atpase",
     "gene essentiality accuracy": "accuracy",
     "true non-essential genes": "tp",
     "true essential genes": "tn",
@@ -108,9 +115,25 @@ def main(results_path: Path = _DEFAULT_RESULTS) -> int:
     af_r2, _af_mre = model_tests.anaerobic_flux_predictions(anaerobic)
     print(f"  Python: {af_r2:.6g}  Reference: {ref['anaerobic_flux_r2']:.6g}")
 
+    print("Computing anaerobic exchange rates ...")
+    exchange = model_tests.plot_anaerobic(anaerobic, plot=False)
+    print(f"  Python mean relative error: {exchange.mean_relative_error:.6g}  "
+          f"Reference: {ref['exchange_mean_relative_error']:.6g}")
+    print(f"  Python within error: {exchange.fraction_within_error:.6g}  "
+          f"Reference: {ref['exchange_within_error']:.6g}")
+    print(f"  Python ammonium/ATPase: {exchange.ammonium_per_atpase:.6g}  "
+          f"Reference: {ref['ammonium_per_atpase']:.6g}")
+
     checks: list[tuple[str, float, float, float]] = [
         ("growth R2", growth_r2, ref["growth_r2"], _TOL_R2),
         ("anaerobic flux R2", af_r2, ref["anaerobic_flux_r2"], _TOL_R2),
+        ("anaerobic exchange mean relative error",
+         exchange.mean_relative_error, ref["exchange_mean_relative_error"],
+         _TOL_RELATIVE_ERROR),
+        ("anaerobic exchange within error",
+         exchange.fraction_within_error, ref["exchange_within_error"], 1e-9),
+        ("ammonium per ATPase",
+         exchange.ammonium_per_atpase, ref["ammonium_per_atpase"], _TOL_RATIO),
         ("gene essentiality accuracy", result.accuracy, ref["accuracy"], _TOL_ACCURACY),
         ("true non-essential genes", len(result.tp), ref["tp"], _TOL_GENE_COUNT),
         ("true essential genes", len(result.tn), ref["tn"], _TOL_GENE_COUNT),

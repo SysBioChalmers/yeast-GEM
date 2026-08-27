@@ -16,11 +16,26 @@ compares against, so the table below is parsed and should keep its shape: one
 |---|---|
 | Growth prediction R2 | 0.9019066691398621 |
 | Anaerobic flux prediction R2 | 0.9969544651425022 |
+| Anaerobic exchange mean relative error | 0.06454293960336684 |
+| Anaerobic exchange within error | 0.75 |
+| Ammonium per ATPase | 1.071951239704032 |
 | Gene essentiality accuracy | 0.9024390243902439 |
 | True non-essential genes | 934 |
 | True essential genes | 65 |
 | False non-essential genes | 94 |
 | False essential genes | 14 |
+
+Per measurement, at a glucose uptake rate of 23 mmol/gDW/h:
+
+| Exchange | Measured | Predicted | Within error |
+|---|---|---|---|
+| glycerol | 4.5 +/- 0.4 | 4.3527 | yes |
+| ethanol | 31 +/- 2 | 35.7072 | no |
+| carbon dioxide | 38 +/- 10 | 38.7741 | yes |
+| biomass | 0.36 +/- 0.02 | 0.3792 | yes |
+
+Ethanol is predicted above the measured rate; the other three products
+fall within their experimental error.
 
 ## What the tests do
 

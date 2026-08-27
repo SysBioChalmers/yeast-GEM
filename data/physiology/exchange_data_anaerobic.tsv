@@ -1,0 +1,5 @@
+dataset	reference	glucoseUptake	rxnID	rxnName	measured	stdev	unit
+Sjoberg2024	10.1016/j.ymben.2024.01.007	23	r_1808	glycerol exchange	4.5	0.4	mmol/gDW/h
+Sjoberg2024	10.1016/j.ymben.2024.01.007	23	r_1761	ethanol exchange	31	2	mmol/gDW/h
+Sjoberg2024	10.1016/j.ymben.2024.01.007	23	r_1672	carbon dioxide exchange	38	10	mmol/gDW/h
+Sjoberg2024	10.1016/j.ymben.2024.01.007	23	r_4041	biomass pseudoreaction	0.36	0.02	1/h

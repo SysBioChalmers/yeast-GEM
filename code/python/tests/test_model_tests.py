@@ -52,15 +52,23 @@ def test_anaerobic_flux_predictions(model):
     assert 0 <= mre  # MRE is non-negative
 
 
-def test_plot_anaerobic_returns_predictions(model):
-    """plot_anaerobic also returns the (gly, eth, CO2, biomass) vector."""
+def test_plot_anaerobic_returns_exchange_metrics(model):
+    """plot_anaerobic compares predicted exchange rates with measurements."""
     anaerobic = model.copy()
     conditions.apply(anaerobic, "anaerobic")
-    sim = model_tests.plot_anaerobic(anaerobic)
-    assert sim.shape == (4,)
-    # Glycerol, ethanol, CO2 should all be non-negative under anaerobic;
-    # biomass too (growth rate).
-    assert (sim >= -1e-6).all()
+    result = model_tests.plot_anaerobic(anaerobic, plot=False)
+
+    assert result.n_measurements == len(result.results)
+    assert result.n_measurements > 0
+    # Glycerol, ethanol, CO2 and biomass are all produced under anaerobic
+    # conditions, and the table reports magnitudes.
+    assert (result.results["predicted"] >= -1e-6).all()
+    assert 0.0 <= result.fraction_within_error <= 1.0
+    assert result.max_relative_error >= result.mean_relative_error
+    # Ammonium uptake is coupled to the plasma membrane ATPase; the
+    # measured ratio is near 1, so anything wildly off indicates the
+    # wrong reactions are being read.
+    assert 0.5 < result.ammonium_per_atpase < 2.0
 
 
 def test_find_duplicated_rxns_returns_list(model, capsys):
