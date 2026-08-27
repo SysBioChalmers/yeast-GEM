@@ -56,26 +56,26 @@ titles  = {'v9.1.0 model, new anaerobic script', ...
            'v9.0.2 model, new anaerobic script', ...
            'v9.0.2 model, old anaerobic script'};
 fig3 = figure('Name', 'Anaerobic Comparison', 'Position', [100 100 1000 800]);
+exchange = cell(1,4);
 for k = 1:4
     subplot(2,2,k);
-    plotAnaerobic(models{k});
+    exchange{k} = plotAnaerobic(models{k});
     title(titles{k});
 end
 sgtitle('Anaerobic fluxes (Sjöberg data): v9.1.0 vs v9.0.2, new vs old anaerobic script');
 saveas(fig3, '..\..\data\testResults\v910_anaerobic_sjoberg.png');
 
-%% Set glucose uptake rate and solve pFBA
-temp_model = setParam(modelAn910,'eq','r_1714',-23);
-res=solveLP(temp_model,1); FLUX = res.x;
+%% Exchange rate predictions against Sjöberg et al. (2024)
+% Ethanol is predicted somewhat above the measured rate; the other three
+% products fall within their experimental error.
+fprintf('\nExchange rates vs Sjoberg et al. (2024):\n')
+for k = 1:4
+    fprintf('  %-38s mean rel. error %.4f, %.0f%% within error, NH4+/ATPase %.2f\n', ...
+        titles{k}, exchange{k}.meanRelativeError, ...
+        100*exchange{k}.fractionWithinError, exchange{k}.ammoniumPerATPase);
+end
 
-v_AStr = res.x(getIndexes(temp_model,'r_1115','rxns')); % Ammonium exchange
-v_ATPase = res.x(getIndexes(temp_model,'r_0227','rxns')); % ATPase
-v_glc = res.x(getIndexes(temp_model,'r_1714','rxns')); % Glucose uptake
-[v_AStr, v_ATPase, v_glc];
-
-fprintf("Ratio of ammonium sulfate exchange / ATPase: %.02f\n", v_AStr / v_ATPase)
-
-% Ratio of ammonium sulfate / ATPase is 1.072, close to the measured 1.
+% The ammonium/ATPase ratio is measured to be close to 1.
 
 %% Pack flux results into table
 rxns_reacs=constructEquations(temp_model,temp_model.rxns);
