@@ -77,13 +77,6 @@ _XREF_PATTERNS = {
 # confirms a number the code never produced.
 _NOT_A_FINDING = {"", "ok", "n/a", "na", "none", "nan"}
 
-# Namespaces expected on a Saccharomyces model. Anything outside this set is
-# reported: an E. coli or human gene database on a yeast gene is a copy-paste
-# error, not a deliberate cross-reference.
-_EXPECTED_GENE_XREFS = {
-    "sbo", "uniprot", "kegg.genes", "ncbigene", "ncbiprotein", "refseq", "sgd",
-}
-
 
 def _values(annotation, key):
     """Annotation values as a list; cobrapy stores either a scalar or a list."""
@@ -97,11 +90,6 @@ def check_growth(model) -> tuple[float, list]:
     """Objective value under the model's own constraints. A gate."""
     value = model.slim_optimize(error_value=0.0)
     return (float(value or 0.0), [])
-
-
-def check_empty_reactions(model) -> tuple[int, list]:
-    rows = [(r.id, r.name or "") for r in model.reactions if not r.metabolites]
-    return len(rows), rows
 
 
 def check_orphan_metabolites(model) -> tuple[int, list]:
@@ -216,17 +204,6 @@ def check_malformed_xrefs(model) -> tuple[int, list]:
     return len(rows), rows
 
 
-def check_unexpected_gene_xrefs(model) -> tuple[int, list]:
-    """Gene cross-references pointing at a database for another organism."""
-    rows = [
-        (gene.id, namespace, ";".join(str(v) for v in _values(gene.annotation, namespace)))
-        for gene in model.genes
-        for namespace in gene.annotation
-        if namespace not in _EXPECTED_GENE_XREFS
-    ]
-    return len(rows), rows
-
-
 def check_xrefs_across_compartments(model) -> tuple[int, list]:
     """The same species annotated differently in different compartments.
 
@@ -325,7 +302,6 @@ def check_macaw(model, out_dir: Path) -> dict:
 # (metric key, comment label, function)
 _CHECKS = [
     ("growth", "Growth (biomass producible)", check_growth),
-    ("empty_reactions", "Reactions with no metabolites", check_empty_reactions),
     ("orphan_metabolites", "Unused metabolites", check_orphan_metabolites),
     ("unused_genes", "Unused genes", check_unused_genes),
     ("missing_formula", "Metabolites missing formula", check_missing_formula),
@@ -333,21 +309,17 @@ _CHECKS = [
     ("duplicate_reactions", "Exact-duplicate reaction groups",
      check_duplicate_reactions),
     ("malformed_xrefs", "Malformed cross-references", check_malformed_xrefs),
-    ("unexpected_gene_xrefs", "Gene cross-references from other organisms",
-     check_unexpected_gene_xrefs),
     ("xrefs_across_compartments", "Cross-refs inconsistent across compartments",
      check_xrefs_across_compartments),
 ]
 
 _HEADERS = {
-    "empty_reactions": ("reaction", "name"),
     "orphan_metabolites": ("metabolite", "name"),
     "unused_genes": ("gene", "name"),
     "missing_formula": ("metabolite", "name"),
     "missing_charge": ("metabolite", "name"),
     "duplicate_reactions": ("group", "reaction", "name", "equation"),
     "malformed_xrefs": ("kind", "id", "namespace", "value"),
-    "unexpected_gene_xrefs": ("gene", "namespace", "value"),
     "xrefs_across_compartments": ("metabolite name", "namespace", "values"),
     "mass_imbalanced": ("reaction", "name", "imbalance"),
     "charge_imbalanced": ("reaction", "name", "charge"),

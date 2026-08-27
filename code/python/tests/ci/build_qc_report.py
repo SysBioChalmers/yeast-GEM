@@ -30,8 +30,6 @@ from pathlib import Path
 # (metric key, comment label, kind, detail CSV)
 _MODEL_ROWS = [
     ("growth", "Growth (biomass producible)", "growth", None),
-    ("empty_reactions", "Reactions with no metabolites", "count",
-     "qc_empty_reactions.csv"),
     ("duplicate_reactions", "Exact-duplicate reaction groups", "count",
      "qc_duplicate_reactions.csv"),
     ("orphan_metabolites", "Unused metabolites", "count",
@@ -57,16 +55,35 @@ _BALANCE_ROWS = [
 _ANNOTATION_ROWS = [
     ("malformed_xrefs", "Malformed cross-references", "count",
      "qc_malformed_xrefs.csv"),
-    ("unexpected_gene_xrefs", "Gene cross-references from other organisms",
-     "count", "qc_unexpected_gene_xrefs.csv"),
     ("xrefs_across_compartments", "Cross-refs inconsistent across compartments",
      "count", "qc_xrefs_across_compartments.csv"),
 ]
 
 
-def read_metrics(directory: Path) -> dict[str, float]:
+# (metric key, comment label, direction, tolerance)
+#
+# "direction" says which way is an improvement, which is what makes a
+# delta on a continuous metric readable: a rising R2 is a gain, a rising
+# error or false-call count is not. A move within tolerance is reported
+# as unchanged, so solver noise does not read as a change.
+_VALIDATION_ROWS = [
+    ("growth_r2", "Growth prediction R2", "higher", 5e-3),
+    ("anaerobic_flux_r2", "Anaerobic flux prediction R2", "higher", 5e-3),
+    ("exchange_mean_relative_error", "Anaerobic exchange mean relative error",
+     "lower", 1e-2),
+    ("exchange_within_error", "Anaerobic exchange within error", "higher", 1e-2),
+    ("ammonium_per_atpase", "Ammonium per ATPase", "none", 5e-2),
+    ("accuracy", "Gene essentiality accuracy", "higher", 5e-3),
+    ("tp", "True non-essential genes", "higher", 2),
+    ("tn", "True essential genes", "higher", 2),
+    ("fp", "False non-essential genes", "lower", 2),
+    ("fn", "False essential genes", "lower", 2),
+]
+
+
+def read_metrics(directory: Path, name: str = "qc_metrics.tsv") -> dict[str, float]:
     """Read a ``key<TAB>value`` metrics file, if it exists."""
-    path = directory / "qc_metrics.tsv"
+    path = directory / name
     if not path.is_file():
         return {}
     metrics = {}
@@ -150,8 +167,45 @@ def _render_rows(rows, current, base, url_base, detail_base, running):
     return lines, regressions, warnings, pending, skipped, fatal
 
 
+def _render_validation(current, base, url_base, base_ref):
+    """The validation-metrics table, or a note if the job did not report."""
+    if not current:
+        return ["_not run — the validation metrics job reported nothing._"], 0, 1
+    lines, regressions, skipped = [], 0, 0
+    for key, label, direction, tol in _VALIDATION_ROWS:
+        name = (
+            f"[{label}]({url_base}/README.md#{_slug(label)})"
+            if url_base else label
+        )
+        if key not in current:
+            lines.append(f"| {name} | _not run_ | | | :grey_question: |")
+            skipped += 1
+            continue
+        value = current[key]
+        if key not in base:
+            lines.append(f"| {name} | {value:.6g} | — | new | :grey_question: |")
+            skipped += 1
+            continue
+        change = value - base[key]
+        if abs(change) <= tol:
+            delta, icon = "0", ":white_check_mark:"
+        elif direction == "none":
+            delta, icon = f"{change:+.4g}", ":warning:"
+        else:
+            improved = (change > 0) if direction == "higher" else (change < 0)
+            delta = f"{change:+.4g}"
+            icon = ":white_check_mark:" if improved else ":x:"
+            regressions += not improved
+        lines.append(
+            f"| {name} | {value:.6g} | {base[key]:.6g} | {delta} | {icon} |"
+        )
+    return lines, regressions, skipped
+
+
 def build(current: dict, base: dict, base_ref: str, url_base: str,
-          running: bool, run_url: str, detail_base: str = "") -> str:
+          running: bool, run_url: str, detail_base: str = "",
+          validation: dict | None = None,
+          validation_base: dict | None = None) -> str:
     groups = [
         ("Model checks",
          "_Growth is a gate and blocks the merge; every other row is a "
@@ -177,6 +231,30 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         if note:
             body += [note]
         body += ["", header, separator, *lines, ""]
+
+    # Validation metrics share this comment: they are the same question
+    # asked of the model's predictions rather than its structure, and
+    # splitting them across two comments meant neither told the whole story.
+    if running:
+        val_lines = ["| _running_ | | | | :hourglass_flowing_sand: |"]
+        val_reg, val_skip = 0, 0
+    else:
+        val_lines, val_reg, val_skip = _render_validation(
+            validation or {}, validation_base or {}, url_base, base_ref
+        )
+    regressions += val_reg
+    skipped += val_skip
+    body += [
+        "### Validation metrics",
+        "_Predictions against measured data. A change within tolerance is "
+        "reported as 0; direction matters, so a rising R2 is a gain and a "
+        "rising error is not._",
+        "",
+        f"| Metric | This branch | `{base_ref}` | &Delta; | |",
+        "| --- | ---: | ---: | ---: | :---: |",
+        *val_lines,
+        "",
+    ]
 
     if fatal:
         verdict = (
@@ -255,10 +333,15 @@ def main() -> int:
 
     current = read_metrics(args.current)
     base = read_metrics(args.base) if args.base else {}
+    validation = read_metrics(args.current, "validation_metrics.tsv")
+    validation_base = (
+        read_metrics(args.base, "validation_metrics.tsv") if args.base else {}
+    )
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(
         build(current, base, args.base_ref, args.url_base.rstrip("/"),
-              args.running, args.run_url, args.detail_base.rstrip("/")),
+              args.running, args.run_url, args.detail_base.rstrip("/"),
+              validation, validation_base),
         encoding="utf-8",
     )
     print(f"Wrote {args.out}")

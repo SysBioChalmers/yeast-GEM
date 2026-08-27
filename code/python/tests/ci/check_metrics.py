@@ -210,6 +210,9 @@ def main() -> int:
     parser.add_argument("--results", type=Path, default=_DEFAULT_RESULTS,
                         help="committed results table, used when there is no "
                              "--base-model")
+    parser.add_argument("--emit", type=Path, default=None,
+                        help="write the measured values as key<TAB>value, for "
+                             "build_qc_report.py to compare and render")
     parser.add_argument("--markdown", type=Path, default=None,
                         help="write the comparison here, for a PR comment")
     parser.add_argument("--base-ref", default="the target branch")
@@ -222,6 +225,18 @@ def main() -> int:
 
     print("Measuring this branch ...")
     current = compute(model)
+
+    if args.emit is not None:
+        args.emit.parent.mkdir(parents=True, exist_ok=True)
+        args.emit.write_text(
+            "".join(f"{k}\t{current[k]}\n" for k in sorted(current)),
+            encoding="utf-8",
+        )
+        print(f"Wrote {args.emit}")
+        # Emitting is for the report, which does its own comparison against
+        # the target branch. Comparing here as well would mean measuring the
+        # base model twice.
+        return 0
 
     if args.base_model is not None:
         print(f"Measuring {args.base_ref} ...")
