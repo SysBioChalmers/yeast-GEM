@@ -3,13 +3,19 @@ function increaseVersion(bumpType)
 %   Upgrades the model to a new version. Run this function after merging
 %   changes to the main branch for making a new release.
 %
+%   As of the CI release workflow (.github/workflows/release.yml), this
+%   is no longer the normal way to release: the workflow runs
+%   code/python/release/increase_version.py instead, which covers
+%   everything here except the .xml/.txt/.xlsx/.mat export (still MATLAB,
+%   called from the workflow's export-binaries job). Kept as a manual
+%   fallback in case that workflow needs debugging; not routinely used.
+%
 %   bumpType    One of the following 3 strings: "major", "minor" or
 %               "patch", indicating the type of increase of version to be
 %               performed.
 %
 %   Usage: increaseVersion(bumpType)
 %
-
 %Check if in main:
 [~,currentBranch] = system('git rev-parse --abbrev-ref HEAD');
 if ~strcmp(strtrim(currentBranch),'main')

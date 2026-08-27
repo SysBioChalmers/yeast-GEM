@@ -88,6 +88,10 @@ Thank you very much for contributing to yeast-GEM!
 
 * `{chore, doc, feat, fix, refactor, style}/descriptive-name`: Any other branch created in the model. If you work on a fix, start the branch name with `fix/`, if you work on a feature, start the branch name with `feat/`. Examples: `fix/format_reactions` or `feat/new_algorithms`. [See below](#semantic-commits) for more details on the possible actions you can use.
 
+* `release/X.Y.Z`: Created and merged automatically by the [Release workflow](#releasing-a-new-version). Never create or push to one of these by hand.
+
+Never merge `main` into `develop` directly, and never push to `develop` from `main`. The binary model files (`.mat`, `.xlsx`) are tracked on `main` only; merging `main` into `develop` by hand would carry them across, which `branch-hygiene.yml` then blocks on every subsequent pull request until they are removed again. The release workflow's sync-back pull request (see [below](#releasing-a-new-version)) is the only sanctioned way for `main`'s content to reach `develop`.
+
 #### Semantic commits
 
 Please use concise descriptive commit messages. Ideally, use semantic commit messages to make it easier to show what you are aiming to do:
@@ -208,23 +212,24 @@ yeast-GEM follows [semantic versioning](https://semver.org/), adapted to GEMs:
   * Re-organization of data
   * Refactoring of code.
 
-When releasing, please follow these steps:
-  1. Make sure all dependencies in `develop` correspond to the setup from the local computer from which the release will be made. If not, make a single commit in `develop` updating this with a `loadYeastModel`/`saveYeastModel` cycle.
-  2. Create a pull request from `develop` to `main`, indicating all new features/fixes/etc. and referencing every previous pull request included (examples [here](https://github.com/SysBioChalmers/yeast-GEM/releases)). Tip: if any [issue](https://github.com/SysBioChalmers/yeast-GEM/issues) gets solved in the release, write in the pull request description "Closes #X", where "X" is the issue number. That way the issue will be automatically closed after merge.
-  3. Merge at least a day after (having at least one accepted review).
-  4. Switch locally to `main`, pull changes and update `history.md`, by putting at the top the same description of the corresponding PR from step 2.
-  5. Bump version with `increaseVersion.m`. **NOTE:** The function will error if unexpected changes are occurring. If this happens, probably step 1 was done incorrectly. To fix it, commit in `develop` any necessary changes and make a new pull request.
-  6. Commit changes from steps 4 and 5 with the message `chore: version X.Y.Z`, and push to the remote.
-  7. Make the new release at GitHub [here](https://github.com/SysBioChalmers/yeast-GEM/releases/new), using the proper tag "vX.Y.Z" and with the same description as the corresponding PR from step 2.
-  8. Merge locally `main` into `gh-pages` and push to update the landing page.
-  9. Review the [Zenodo](https://zenodo.org) release: Every new release from Github (step 7) automatically triggers a new release in Zenodo. However, so far it is not possible to fully customize this release, and some manual curation is needed. This includes:
-      * Ensuring the title of the release has the format `SysBioChalmers/yeast-GEM: yeast X.Y.Z`.
-      * Correcting author names to include all commit authors and PR reviewers that contributed to the release.
-      * Ensuring the version of the release has the format `vX.Y.Z`.
-      * Setting the language to English.
-      * Adding any grant IDs (if applicable).
+The release itself is automated by [`.github/workflows/release.yml`](../.github/workflows/release.yml). The administrator's job is to trigger it, review what it produces, and approve the resulting pull requests -- not to run any of the steps by hand.
 
-     Make sure to both save & publish your edits. You will find the new release at the top of [all Zenodo releases](https://zenodo.org/search?page=1&size=20&q=conceptrecid:%221494182%22&sort=-publication_date&all_versions=True). Note that it might take some minutes for the Zenodo release to appear after you create the release in Github.
+1. Update `history.md` by hand, putting the description of everything to be released at the top under a new `### yeast X.Y.Z:` heading. This is the only manual editing step; everything else reads this heading to know what version is being released.
+2. Trigger the [Release workflow](https://github.com/SysBioChalmers/yeast-GEM/actions/workflows/release.yml) with "Run workflow", giving it the version number (`X.Y.Z`, matching the heading from step 1). It will:
+   * validate that `X.Y.Z` is a legal bump from `version.txt` and that `history.md` has a matching heading, and cut `release/X.Y.Z` from `develop`;
+   * run `code/python/release/increase_version.py`, the Python port of `increaseVersion.m`: stamp the version and date into `model/yeast-GEM.yml`, run the model tests, and refresh `README.md`, `data/testResults/README.md`, `growth.md`/`growth.png` and `essentialGenes.tsv`;
+   * export `model/yeast-GEM.xml`, `.txt`, `.xlsx` and `.mat` from the now-stamped `.yml`, via RAVEN -- the one step that still needs MATLAB, since there is no Python writer for those formats;
+   * take a memote snapshot and open a pull request from `release/X.Y.Z` into `main`.
+3. Review the pull request like any other: check the model-quality and validation-metrics comment for regressions, and the linked memote snapshot. Wait at least a day, get at least one approving review, then merge.
+4. On merge, the workflow tags `vX.Y.Z`, publishes the GitHub release, and opens a pull request syncing `main` back into `develop` -- with the binary model files removed again, so they never reach `develop` (see `branch-hygiene.yml`, which would otherwise flag them). Merge that pull request too.
+5. Review the [Zenodo](https://zenodo.org) release: every new release from GitHub (step 4) automatically triggers a new release in Zenodo. However, so far it is not possible to fully customize this release, and some manual curation is needed. This includes:
+    * Ensuring the title of the release has the format `SysBioChalmers/yeast-GEM: yeast X.Y.Z`.
+    * Correcting author names to include all commit authors and PR reviewers that contributed to the release.
+    * Ensuring the version of the release has the format `vX.Y.Z`.
+    * Setting the language to English.
+    * Adding any grant IDs (if applicable).
+
+   Make sure to both save & publish your edits. You will find the new release at the top of [all Zenodo releases](https://zenodo.org/search?page=1&size=20&q=conceptrecid:%221494182%22&sort=-publication_date&all_versions=True). Note that it might take some minutes for the Zenodo release to appear after you create the release in GitHub.
 
 ## Acknowledgments
 
