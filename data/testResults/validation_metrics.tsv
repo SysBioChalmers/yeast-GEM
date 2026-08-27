@@ -1,0 +1,10 @@
+accuracy	0.9015356820234869
+ammonium_per_atpase	1.0719512397041098
+anaerobic_flux_r2	0.9967421147681541
+exchange_mean_relative_error	0.0645475428321038
+exchange_within_error	0.75
+fn	15.0
+fp	94.0
+growth_r2	0.9019063673672041
+tn	65.0
+tp	933.0
