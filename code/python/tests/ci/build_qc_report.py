@@ -116,15 +116,23 @@ def _icon(value: float, base: float | None, kind: str):
 
 
 def _render_rows(rows, current, base, url_base, detail_base, running):
-    lines, regressions, warnings, pending, fatal = [], 0, 0, 0, False
+    lines, regressions, warnings, pending, skipped, fatal = [], 0, 0, 0, 0, False
     for key, label, kind, detail in rows:
         name = (
             f"[{label}]({url_base}/README.md#{_slug(label)})"
             if url_base else label
         )
-        if running or key not in current:
+        if running:
             lines.append(f"| {name} | _running_ | | :hourglass_flowing_sand: |")
             pending += 1
+            continue
+        # A check with no value once the run is over did not execute -- an
+        # optional dependency missing, or the check crashed. Saying "running"
+        # there would be a lie that never resolves, and counting it as clean
+        # would be worse.
+        if key not in current:
+            lines.append(f"| {name} | _not run_ | | :grey_question: |")
+            skipped += 1
             continue
         value = current[key]
         delta, icon, regression, row_fatal = _icon(value, base.get(key), kind)
@@ -139,7 +147,7 @@ def _render_rows(rows, current, base, url_base, detail_base, running):
         regressions += regression
         warnings += icon == ":warning:"
         fatal = fatal or row_fatal
-    return lines, regressions, warnings, pending, fatal
+    return lines, regressions, warnings, pending, skipped, fatal
 
 
 def build(current: dict, base: dict, base_ref: str, url_base: str,
@@ -153,16 +161,17 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         ("Annotations", "", _ANNOTATION_ROWS),
     ]
 
-    body, regressions, warnings, pending, fatal = [], 0, 0, 0, False
+    body, regressions, warnings, pending, skipped, fatal = [], 0, 0, 0, 0, False
     header = f"| Check | Result | &Delta; vs `{base_ref}` | |"
     separator = "| --- | ---: | ---: | :---: |"
     for title, note, rows in groups:
-        lines, reg, warn, pend, fat = _render_rows(
+        lines, reg, warn, pend, skip, fat = _render_rows(
             rows, current, base, url_base, detail_base, running
         )
         regressions += reg
         warnings += warn
         pending += pend
+        skipped += skip
         fatal = fatal or fat
         body += [f"### {title}"]
         if note:
@@ -200,6 +209,11 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
             f":white_check_mark: **All checks clean, no regressions vs "
             f"`{base_ref}`.**"
         )
+    if skipped:
+        verdict += (
+            f" {skipped} check(s) did not run — their result is unknown, "
+            "not clean."
+        )
 
     intro = (
         "_Each check name links to its explanation in the "
@@ -208,7 +222,8 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
     footer = [
         ":x: = a count rose vs the target branch (regression) &middot; "
         ":warning: = a pre-existing non-zero finding (non-blocking) &middot; "
-        ":hourglass_flowing_sand: = still running.",
+        ":hourglass_flowing_sand: = still running &middot; "
+        ":grey_question: = the check did not run.",
         "",
         "_Both columns are computed in this run — the target branch is "
         "checked out and measured the same way — so the delta reflects this "
