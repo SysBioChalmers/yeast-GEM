@@ -136,6 +136,12 @@ only in redox partner — and writes one column per sub-test rather than a
 single verdict. The count is the union: a reaction flagged by any sub-test is
 counted once, since the sub-tests overlap.
 
+A sub-test that does not apply to a reaction is written as the literal string
+`N/A`, which is neither a null nor `ok`. Reading the CSV back with pandas turns
+it into a null, so the file and the values the count is taken from disagree —
+which is why this count has to be checked against the frame in memory and not
+against the written file.
+
 ### Annotations
 
 #### Malformed cross-references

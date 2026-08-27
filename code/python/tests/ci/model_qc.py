@@ -62,6 +62,21 @@ _XREF_PATTERNS = {
     ),
 }
 
+# Cell values that mean "nothing to report" in a MACAW result column.
+#
+# "n/a" is the one that matters and the one that is easy to get wrong.
+# MACAW writes the literal string "N/A" for a sub-test that does not apply
+# to a reaction -- it is not a null, so isna() is False for it, and it is
+# not "ok", so a naive filter counts it as a finding and reports every
+# reaction in the model as a duplicate.
+#
+# It is also invisible to any check done by reading the CSV back:
+# pandas.read_csv lists "N/A" among its default NA strings, so the value
+# becomes a real null on the way in. The written file and the frame the
+# count is taken from therefore disagree, and verifying against the file
+# confirms a number the code never produced.
+_NOT_A_FINDING = {"", "ok", "n/a", "na", "none", "nan"}
+
 # Namespaces expected on a Saccharomyces model. Anything outside this set is
 # reported: an E. coli or human gene database on a yeast gene is a copy-paste
 # error, not a deliberate cross-reference.
@@ -272,16 +287,9 @@ def check_macaw(model, out_dir: Path) -> dict:
                 f"{sorted(merged.columns)}. The report would otherwise "
                 "show this check as clean without having run it."
             )
-        # Nulls are detected with isna() rather than by matching the string
-        # they turn into. A column MACAW leaves empty can hold NaN, None or
-        # pd.NA depending on its dtype, and those stringify as "nan", "none"
-        # and "<NA>" respectively -- so a string-only filter silently
-        # flagged every row of a column full of pd.NA. Writing to CSV
-        # normalises all three, which is why the round-tripped file looked
-        # correct while the in-memory frame did not.
         column_values = merged[column]
         text = column_values.astype(str).str.strip().str.lower()
-        return ~(column_values.isna() | text.isin({"", "ok"}))
+        return ~(column_values.isna() | text.isin(_NOT_A_FINDING))
 
     # duplicate_test writes one column per kind of duplicate -- exact,
     # same-but-for-direction, same-but-for-coefficients, redox -- and no
