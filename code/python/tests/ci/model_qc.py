@@ -259,15 +259,43 @@ def check_macaw(model, out_dir: Path) -> dict:
     merged = dead_end_results.merge(duplicate_results)
     merged.to_csv(out_dir / "macaw_results.csv", index=False)
 
-    def _flagged(frame, column):
-        if column not in frame.columns:
-            return 0
-        values = frame[column].astype(str).str.strip().str.lower()
-        return int((~values.isin({"", "ok", "nan", "none"})).sum())
+    def _flagged(column):
+        """Rows this column flags, as a boolean mask.
+
+        A missing column is an error rather than zero: MACAW returning a
+        different shape than expected must not be reported as a clean
+        result.
+        """
+        if column not in merged.columns:
+            raise KeyError(
+                f"MACAW returned no '{column}' column; got "
+                f"{sorted(merged.columns)}. The report would otherwise "
+                "show this check as clean without having run it."
+            )
+        values = merged[column].astype(str).str.strip().str.lower()
+        return ~values.isin({"", "ok", "nan", "none"})
+
+    # duplicate_test writes one column per kind of duplicate -- exact,
+    # same-but-for-direction, same-but-for-coefficients, redox -- and no
+    # single summary column. A reaction flagged by any of them is a
+    # duplicate, and they overlap, so the count is the union rather than
+    # the sum.
+    duplicate_columns = [
+        c for c in merged.columns if c.startswith("duplicate_test")
+    ]
+    if not duplicate_columns:
+        raise KeyError(
+            f"MACAW returned no duplicate_test* columns; got "
+            f"{sorted(merged.columns)}."
+        )
+    duplicates = None
+    for column in duplicate_columns:
+        mask = _flagged(column)
+        duplicates = mask if duplicates is None else (duplicates | mask)
 
     return {
-        "macaw_dead_end": _flagged(merged, "dead_end_test"),
-        "macaw_duplicates": _flagged(merged, "duplicate_test"),
+        "macaw_dead_end": int(_flagged("dead_end_test").sum()),
+        "macaw_duplicates": int(duplicates.sum()),
     }
 
 

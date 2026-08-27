@@ -130,8 +130,11 @@ Reactions that cannot carry flux because a metabolite in them can only be
 produced or only consumed. From [MACAW](https://github.com/Devlin-Moyer/macaw).
 
 #### Reactions flagged as MACAW duplicates
-Reaction pairs MACAW considers redundant — identical, or differing only by
-compartment, direction or cofactor.
+Reactions MACAW considers redundant. It runs four sub-tests — exact
+duplicates, and pairs differing only in direction, only in coefficients, or
+only in redox partner — and writes one column per sub-test rather than a
+single verdict. The count is the union: a reaction flagged by any sub-test is
+counted once, since the sub-tests overlap.
 
 ### Annotations
 
