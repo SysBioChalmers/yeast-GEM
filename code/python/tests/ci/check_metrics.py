@@ -13,8 +13,8 @@ Run locally:
 """
 from __future__ import annotations
 
+import argparse
 import re
-import sys
 from pathlib import Path
 
 import matplotlib
@@ -87,7 +87,10 @@ def parse_results(path: Path) -> dict[str, float]:
     return found
 
 
-def main(results_path: Path = _DEFAULT_RESULTS) -> int:
+def main(
+    results_path: Path = _DEFAULT_RESULTS,
+    markdown_path: Path | None = None,
+) -> int:
     ref = parse_results(results_path)
 
     print(f"Reference: {results_path}")
@@ -150,6 +153,13 @@ def main(results_path: Path = _DEFAULT_RESULTS) -> int:
                 f"{diff:.6g}  > tol {tol_abs:.6g}"
             )
 
+    if markdown_path is not None:
+        markdown_path.write_text(
+            _render_markdown(checks, failures, model.solver.interface.__name__),
+            encoding="utf-8",
+        )
+        print(f"\nWrote summary to {markdown_path}")
+
     if failures:
         print("\nMetric parity FAILED:")
         for msg in failures:
@@ -159,6 +169,56 @@ def main(results_path: Path = _DEFAULT_RESULTS) -> int:
     return 0
 
 
+def _render_markdown(
+    checks: list[tuple[str, float, float, float]],
+    failures: list[str],
+    solver: str,
+) -> str:
+    """Render the comparison as a table for a pull-request comment.
+
+    Every metric is listed, passing or not, so the comment is a readable
+    report of where the model stands rather than only a list of
+    complaints.
+    """
+    verdict = (
+        f"{len(failures)} metric(s) moved beyond tolerance."
+        if failures
+        else "All metrics match the committed reference."
+    )
+    lines = [
+        "## Validation metrics",
+        "",
+        verdict,
+        "",
+        "| Metric | This branch | Reference | Difference | Tolerance | |",
+        "|---|---|---|---|---|---|",
+    ]
+    for name, actual, expected, tol_abs in checks:
+        diff = abs(actual - expected)
+        mark = "x" if diff > tol_abs else "white_check_mark"
+        lines.append(
+            f"| {name} | {actual:.6g} | {expected:.6g} | {diff:.3g} "
+            f"| {tol_abs:.3g} | :{mark}: |"
+        )
+    lines += [
+        "",
+        f"Solver: `{solver}`. Reference values come from "
+        "[`data/testResults/README.md`](https://github.com/SysBioChalmers/"
+        "yeast-GEM/blob/develop/data/testResults/README.md), which is "
+        "regenerated at release time.",
+    ]
+    return "\n".join(lines) + "\n"
+
+
 if __name__ == "__main__":
-    path = Path(sys.argv[1]) if len(sys.argv) > 1 else _DEFAULT_RESULTS
-    raise SystemExit(main(path))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "results", nargs="?", type=Path, default=_DEFAULT_RESULTS,
+        help="results table to compare against",
+    )
+    parser.add_argument(
+        "--markdown", type=Path, default=None,
+        help="also write a markdown summary here, for a PR comment",
+    )
+    args = parser.parse_args()
+    raise SystemExit(main(args.results, markdown_path=args.markdown))

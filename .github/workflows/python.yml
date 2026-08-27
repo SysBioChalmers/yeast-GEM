@@ -92,6 +92,12 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     needs: test
+    # Needed to post the results comment. Declared explicitly rather than
+    # relying on the repository-wide default, which is read-only in many
+    # configurations and would make the comment step fail.
+    permissions:
+      contents: read
+      pull-requests: write
     steps:
       - name: Checkout
         uses: actions/checkout@v7
@@ -146,5 +152,32 @@ jobs:
           fi
           echo "GRB_LICENSE_FILE=$licence" >> "$GITHUB_ENV"
 
+      # The summary is written even when the comparison fails, so the
+      # comment below reports which metric moved rather than only that
+      # something did. continue-on-error keeps the job going as far as
+      # the comment; the verdict step below restores the failure.
       - name: Validation metrics match the committed reference
-        run: python code/python/tests/ci/check_metrics.py
+        id: metrics
+        continue-on-error: true
+        run: |
+          python code/python/tests/ci/check_metrics.py \
+            --markdown "$RUNNER_TEMP/metrics.md"
+
+      # Only for pull requests raised from this repository: GITHUB_TOKEN is
+      # read-only on pull requests from forks, so posting would fail. The
+      # metrics still run there and still gate the merge, they are just
+      # reported in the log rather than as a comment.
+      - name: Report the metrics on the pull request
+        if: >-
+          github.event_name == 'pull_request' &&
+          github.event.pull_request.head.repo.full_name == github.repository
+        uses: marocchino/sticky-pull-request-comment@v3
+        with:
+          header: validation-metrics
+          path: ${{ runner.temp }}/metrics.md
+
+      - name: Fail if any metric moved beyond tolerance
+        if: steps.metrics.outcome == 'failure'
+        run: |
+          echo "::error::validation metrics differ from data/testResults/README.md"
+          exit 1
