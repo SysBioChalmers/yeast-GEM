@@ -1,6 +1,8 @@
 charge_imbalanced	10
 duplicate_reactions	0
-growth	0.0811003294352177
+growth	0.08110025381639172
+macaw_dead_end	1753
+macaw_duplicates	18
 malformed_xrefs	48
 mass_imbalanced	8
 missing_charge	0

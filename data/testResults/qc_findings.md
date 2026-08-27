@@ -148,8 +148,1787 @@ _None._
 
 ## Reactions flagged by MACAW dead-end test
 
-_None._
+| reaction | finding |
+|---|---|
+| r_0003 | only when going forwards |
+| r_0018 | only when going backwards |
+| r_0023 | only when going forwards |
+| r_0027 | only when going backwards |
+| r_0030 | s_0011;s_0292 |
+| r_0034 | s_0194 |
+| r_0035 | s_0196 |
+| r_0037 | s_0193 |
+| r_0059 | s_0217 |
+| r_0060 | only when going forwards |
+| r_0069 | s_0264;s_0285 |
+| r_0070 | s_0290 |
+| r_0073 | s_0279 |
+| r_0074 | s_0279;s_0263 |
+| r_0084 | s_0319 |
+| r_0085 | s_0323;s_1486 |
+| r_0087 | only when going backwards |
+| r_0088 | s_0263 |
+| r_0092 | s_0333 |
+| r_0093 | s_0333 |
+| r_0094 | s_1368;s_0352 |
+| r_0099 | s_1845;s_0372 |
+| r_0103 | only when going forwards |
+| r_0104 | only when going backwards |
+| r_0108 | s_0447;s_1104 |
+| r_0116 | s_0715;s_1406 |
+| r_0117 | only when going backwards |
+| r_0126 | only when going backwards |
+| r_0128 | only when going backwards |
+| r_0130 | only when going backwards |
+| r_0131 | only when going backwards |
+| r_0132 | only when going backwards |
+| r_0133 | only when going backwards |
+| r_0134 | only when going backwards |
+| r_0135 | only when going backwards |
+| r_0137 | s_0329;s_0330 |
+| r_0146 | s_0352;s_0341;s_1412 |
+| r_0150 | only when going backwards |
+| r_0152 | only when going backwards |
+| r_0155 | s_0131;s_0389 |
+| r_0164 | s_0570 |
+| r_0176 | s_0854 |
+| r_0177 | s_0853 |
+| r_0178 | s_0854 |
+| r_0185 | s_1321 |
+| r_0189 | s_0405;s_1555 |
+| r_0190 | s_0407;s_0405 |
+| r_0192 | s_0444;s_0414 |
+| r_0198 | s_1105 |
+| r_0199 | s_0280;s_0281 |
+| r_0200 | s_0418 |
+| r_0204 | only when going backwards |
+| r_0205 | s_0963;s_0961 |
+| r_0207 | only when going backwards |
+| r_0208 | only when going backwards |
+| r_0210 | s_0967;s_1584;s_0429 |
+| r_0213 | s_0971;s_1586;s_0431 |
+| r_0221 | s_1588;s_0433 |
+| r_0223 | s_1284 |
+| r_0224 | s_1283 |
+| r_0228 | s_1184;s_0443 |
+| r_0229 | s_0612;s_1371;s_0451 |
+| r_0230 | s_0451;s_0453 |
+| r_0249 | s_1231;s_1230 |
+| r_0271 | s_0510 |
+| r_0281 | s_0692;s_0944;s_0746 |
+| r_0282 | s_0746;s_0944;s_1312 |
+| r_0283 | s_0944;s_1312;s_0830 |
+| r_0284 | s_0830;s_0944;s_0815 |
+| r_0285 | s_0815;s_0944;s_1259 |
+| r_0286 | s_0944;s_1259;s_1232 |
+| r_0287 | s_0944;s_1232;s_0606 |
+| r_0288 | s_0606;s_0944;s_1549 |
+| r_0289 | s_0944;s_1549;s_0641 |
+| r_0290 | s_0641;s_0944;s_1523 |
+| r_0291 | s_0944;s_1523;s_1483 |
+| r_0292 | s_0944;s_1483;s_1310 |
+| r_0293 | s_0944;s_1310;s_0829 |
+| r_0294 | s_0829;s_0944;s_0814 |
+| r_0295 | s_0814;s_0944;s_1246 |
+| r_0296 | s_0944;s_1246;s_1229 |
+| r_0297 | s_0944;s_1229;s_0845 |
+| r_0298 | s_0845;s_0944;s_0813 |
+| r_0299 | s_0813;s_0944;s_0640 |
+| r_0319 | s_0547;s_0607 |
+| r_0320 | s_0548;s_0547 |
+| r_0321 | s_0548;s_0547 |
+| r_0322 | s_0556;s_0570 |
+| r_0323 | s_0561;s_0553 |
+| r_0328 | s_0132;s_0136 |
+| r_0331 | s_1526 |
+| r_0332 | s_0152;s_0153 |
+| r_0335 | s_0341;s_0612 |
+| r_0349 | only when going forwards |
+| r_0354 | s_0771 |
+| r_0356 | s_0140 |
+| r_0359 | s_0143;s_0144 |
+| r_0360 | s_0642 |
+| r_0365 | s_1309;s_0560 |
+| r_0368 | s_0683;s_1239 |
+| r_0370 | s_0003 |
+| r_0437 | s_0838 |
+| r_0443 | s_0721;s_1421 |
+| r_0447 | only when going forwards |
+| r_0455 | only when going backwards |
+| r_0457 | s_0987 |
+| r_0458 | s_0558 |
+| r_0480 | s_1592;s_0749 |
+| r_0482 | s_0756;s_0752 |
+| r_0484 | s_0752;s_0838;s_0756 |
+| r_0487 | s_0771 |
+| r_0500 | s_0952 |
+| r_0518 | s_0331;s_0329;s_0363 |
+| r_0519 | s_0330;s_0334 |
+| r_0520 | s_0334;s_1352;s_0337 |
+| r_0521 | s_0337;s_0339 |
+| r_0522 | s_0339;s_0338 |
+| r_0523 | s_0338;s_1352;s_0332;s_0620 |
+| r_0533 | s_0553 |
+| r_0535 | s_0571 |
+| r_0540 | s_1008;s_1595;s_0833 |
+| r_0541 | s_1183 |
+| r_0542 | only when going backwards |
+| r_0543 | s_0183;s_0835 |
+| r_0551 | s_0838;s_1617;s_1621 |
+| r_0554 | s_0034;s_0752 |
+| r_0570 | only when going backwards |
+| r_0596 | s_1116;s_1111 |
+| r_0597 | s_1119;s_1111 |
+| r_0598 | s_1128;s_1111 |
+| r_0599 | s_1131;s_1111 |
+| r_0600 | s_1122;s_1111 |
+| r_0601 | s_1125;s_1111 |
+| r_0602 | s_1134;s_1111 |
+| r_0603 | s_1137;s_1111 |
+| r_0604 | s_1140;s_1111 |
+| r_0605 | s_1143;s_1111 |
+| r_0606 | s_0861;s_1109 |
+| r_0607 | s_0864;s_1109 |
+| r_0608 | s_0873;s_1109 |
+| r_0609 | s_0876;s_1109 |
+| r_0610 | s_0867;s_1109 |
+| r_0611 | s_0870;s_1109 |
+| r_0612 | s_0879;s_1109 |
+| r_0613 | s_0882;s_1109 |
+| r_0614 | s_0885;s_1109 |
+| r_0615 | s_0888;s_1109 |
+| r_0616 | s_0896;s_0129;s_0477 |
+| r_0617 | s_0899;s_0129;s_0480 |
+| r_0618 | s_0908;s_0129;s_0489 |
+| r_0619 | s_0911;s_0129;s_0492 |
+| r_0620 | s_0902;s_0129;s_0483 |
+| r_0621 | s_0905;s_0129;s_0486 |
+| r_0622 | s_0914;s_0129;s_0495 |
+| r_0623 | s_0917;s_0129;s_0498 |
+| r_0624 | s_0920;s_0129;s_0501 |
+| r_0625 | s_0923;s_0129;s_0504 |
+| r_0626 | s_1118;s_0477;s_1112 |
+| r_0627 | s_1121;s_0480;s_1112 |
+| r_0628 | s_1130;s_0489;s_1112 |
+| r_0629 | s_1133;s_0492;s_1112 |
+| r_0630 | s_1124;s_0483;s_1112 |
+| r_0631 | s_1127;s_0486;s_1112 |
+| r_0632 | s_1136;s_0495;s_1112 |
+| r_0633 | s_1139;s_0498;s_1112 |
+| r_0634 | s_1142;s_0501;s_1112 |
+| r_0635 | s_1145;s_0504;s_1112 |
+| r_0636 | s_0863;s_0477;s_1110 |
+| r_0637 | s_0866;s_0480;s_1110 |
+| r_0638 | s_0875;s_0489;s_1110 |
+| r_0639 | s_0878;s_0492;s_1110 |
+| r_0640 | s_0869;s_0483;s_1110 |
+| r_0641 | s_0872;s_0486;s_1110 |
+| r_0642 | s_0881;s_0495;s_1110 |
+| r_0643 | s_0884;s_0498;s_1110 |
+| r_0644 | s_0887;s_0501;s_1110 |
+| r_0645 | s_0890;s_0504;s_1110 |
+| r_0664 | only when going forwards |
+| r_0666 | s_1597;s_0848 |
+| r_0667 | only when going backwards |
+| r_0668 | s_0946;s_0949 |
+| r_0672 | only when going forwards |
+| r_0673 | only when going backwards |
+| r_0674 | only when going forwards |
+| r_0675 | s_0958 |
+| r_0676 | s_0958;s_0952 |
+| r_0680 | s_0970;s_0974 |
+| r_0681 | s_0677;s_0282 |
+| r_0682 | s_0283 |
+| r_0683 | s_0679;s_0284 |
+| r_0690 | s_0960 |
+| r_0691 | s_0989;s_1043 |
+| r_0700 | s_1023;s_0292 |
+| r_0702 | s_1023;s_1599;s_1078 |
+| r_0703 | s_1079;s_0013 |
+| r_0704 | s_1080;s_0014 |
+| r_0705 | s_1079;s_0608 |
+| r_0706 | s_1080;s_0609 |
+| r_0707 | s_1079;s_1081 |
+| r_0708 | s_1080;s_1082 |
+| r_0712 | s_1027;s_1601;s_1100 |
+| r_0715 | only when going forwards |
+| r_0721 | s_1104;s_1845;s_0465 |
+| r_0723 | only when going forwards |
+| r_0724 | only when going backwards |
+| r_0728 | s_1149;s_0713 |
+| r_0730 | s_1031;s_1603;s_1149 |
+| r_0747 | s_1117 |
+| r_0748 | s_1120 |
+| r_0749 | s_1129 |
+| r_0750 | s_1132 |
+| r_0751 | s_1123 |
+| r_0752 | s_1126 |
+| r_0753 | s_1135 |
+| r_0754 | s_1138 |
+| r_0755 | s_1141 |
+| r_0756 | s_1144 |
+| r_0767 | s_0402;s_1217 |
+| r_0769 | only when going forwards |
+| r_0775 | s_1221;s_1387;s_1223 |
+| r_0782 | s_0087 |
+| r_0787 | s_1387;s_1404;s_1223 |
+| r_0802 | s_0618;s_0639 |
+| r_0803 | only when going backwards |
+| r_0812 | s_1150 |
+| r_0820 | only when going forwards |
+| r_0853 | s_1034;s_1605;s_1315 |
+| r_0882 | only when going backwards |
+| r_0885 | s_1239;s_0474 |
+| r_0890 | s_0411 |
+| r_0902 | only when going forwards |
+| r_0912 | only when going backwards |
+| r_0921 | s_0161;s_1240 |
+| r_0929 | s_1180;s_1193 |
+| r_0936 | s_1181;s_1180 |
+| r_0943 | s_1218 |
+| r_0949 | only when going backwards |
+| r_0950 | s_0792;s_0416;s_0789 |
+| r_0975 | s_1618;s_0583;s_1622 |
+| r_0977 | s_0468;s_1618;s_0588;s_1622 |
+| r_0979 | s_0742;s_1618;s_0614;s_1622 |
+| r_0983 | s_1218 |
+| r_0987 | s_1421 |
+| r_0990 | only when going forwards |
+| r_0998 | s_1375;s_1431 |
+| r_0999 | s_1431;s_1430 |
+| r_1000 | only when going backwards |
+| r_1003 | s_0825;s_1240 |
+| r_1008 | s_1504 |
+| r_1009 | s_1503 |
+| r_1010 | s_1204;s_1199 |
+| r_1024 | s_1466;s_0554 |
+| r_1028 | s_1473;s_1474 |
+| r_1029 | s_1471;s_0417 |
+| r_1031 | s_0308 |
+| r_1032 | s_1476;s_1490 |
+| r_1033 | s_1498;s_1490 |
+| r_1035 | s_1532 |
+| r_1037 | s_0839;s_1618;s_1622 |
+| r_1039 | s_1621;s_1617 |
+| r_1043 | s_1609;s_1492 |
+| r_1046 | s_1503;s_0007 |
+| r_1058 | s_1050;s_1611;s_1528 |
+| r_1067 | s_1053;s_1613;s_1534 |
+| r_1068 | s_0670 |
+| r_1069 | only when going backwards |
+| r_1071 | only when going forwards |
+| r_1076 | s_1555 |
+| r_1082 | s_1375 |
+| r_1087 | only when going backwards |
+| r_1088 | only when going forwards |
+| r_1090 | s_1615;s_1562 |
+| r_1092 | s_1566;s_0580 |
+| r_1093 | s_0578;s_1566 |
+| r_1094 | s_0580 |
+| r_1095 | s_1388 |
+| r_1096 | only when going forwards |
+| r_1097 | only when going backwards |
+| r_1099 | only when going backwards |
+| r_1100 | only when going backwards |
+| r_1101 | s_0736 |
+| r_1102 | s_0316 |
+| r_1103 | s_0320;s_0319 |
+| r_1104 | s_0354;s_0352 |
+| r_1106 | only when going backwards |
+| r_1108 | s_0384 |
+| r_1109 | s_0387 |
+| r_1111 | s_0399 |
+| r_1113 | s_0406;s_0405 |
+| r_1114 | s_0408;s_0407 |
+| r_1119 | s_0452;s_0451 |
+| r_1121 | only when going backwards |
+| r_1122 | only when going backwards |
+| r_1123 | only when going backwards |
+| r_1124 | only when going backwards |
+| r_1127 | only when going forwards |
+| r_1132 | s_0544 |
+| r_1133 | s_0546 |
+| r_1134 | s_0554;s_0553 |
+| r_1135 | s_0559;s_0558 |
+| r_1136 | s_0026 |
+| r_1139 | s_0572;s_0571 |
+| r_1146 | only when going forwards |
+| r_1147 | only when going forwards |
+| r_1148 | s_0665 |
+| r_1149 | s_0684;s_0683 |
+| r_1161 | only when going forwards |
+| r_1162 | s_0699 |
+| r_1164 | s_0720;s_0719 |
+| r_1167 | s_0751 |
+| r_1168 | only when going forwards |
+| r_1169 | only when going forwards |
+| r_1170 | only when going forwards |
+| r_1173 | only when going forwards |
+| r_1176 | s_0788 |
+| r_1177 | s_1154 |
+| r_1182 | only when going backwards |
+| r_1183 | s_0956 |
+| r_1184 | s_0966 |
+| r_1186 | s_0970 |
+| r_1189 | s_0977 |
+| r_1190 | s_0974 |
+| r_1191 | only when going forwards |
+| r_1192 | s_0982 |
+| r_1193 | s_0985;s_0984 |
+| r_1195 | s_0996 |
+| r_1196 | s_0992 |
+| r_1199 | s_1000 |
+| r_1201 | s_1007 |
+| r_1205 | s_1017 |
+| r_1206 | s_0065 |
+| r_1207 | s_0064 |
+| r_1211 | s_1022 |
+| r_1213 | s_1026 |
+| r_1214 | s_1030 |
+| r_1215 | s_1033 |
+| r_1216 | s_1036 |
+| r_1217 | s_1041 |
+| r_1218 | s_1046 |
+| r_1219 | s_1049 |
+| r_1223 | s_1052 |
+| r_1224 | s_1057 |
+| r_1225 | only when going forwards |
+| r_1227 | s_1106;s_1105 |
+| r_1230 | s_0585 |
+| r_1232 | s_0616 |
+| r_1235 | only when going forwards |
+| r_1238 | s_1267 |
+| r_1241 | s_0032 |
+| r_1242 | only when going backwards |
+| r_1252 | s_1391 |
+| r_1253 | s_1397 |
+| r_1254 | s_1400 |
+| r_1255 | s_1418 |
+| r_1256 | only when going backwards |
+| r_1257 | s_1425;s_1424 |
+| r_1258 | only when going forwards |
+| r_1261 | s_1441 |
+| r_1263 | s_1444 |
+| r_1268 | s_1471;s_1472 |
+| r_1269 | s_1477 |
+| r_1270 | s_1490 |
+| r_1271 | s_1542 |
+| r_1272 | s_1551 |
+| r_1273 | s_1553 |
+| r_1274 | s_1557 |
+| r_1275 | s_1547;s_1560 |
+| r_1276 | s_1547;s_1560 |
+| r_1278 | only when going forwards |
+| r_1449 | s_0892;s_3744 |
+| r_1450 | s_0892;s_3745 |
+| r_1451 | s_0892;s_3744 |
+| r_1452 | s_0892;s_3745 |
+| r_1453 | s_0892;s_3744 |
+| r_1454 | s_0892;s_3745 |
+| r_1455 | s_0892;s_3744 |
+| r_1456 | s_0892;s_3745 |
+| r_1457 | s_0892;s_3744 |
+| r_1458 | s_0892;s_3745 |
+| r_1479 | s_0862;s_0859;s_3744 |
+| r_1480 | s_0865;s_0859;s_3745 |
+| r_1481 | s_0874;s_0859;s_3744 |
+| r_1482 | s_0877;s_0859;s_3745 |
+| r_1483 | s_0868;s_0859;s_3744 |
+| r_1484 | s_0871;s_0859;s_3745 |
+| r_1485 | s_0880;s_0859;s_3744 |
+| r_1486 | s_0883;s_0859;s_3745 |
+| r_1487 | s_0886;s_0859;s_3744 |
+| r_1488 | s_0889;s_0859;s_3745 |
+| r_1509 | s_1129;s_1114;s_3744 |
+| r_1510 | s_1132;s_1114;s_3745 |
+| r_1511 | s_1135;s_1114;s_3744 |
+| r_1512 | s_1138;s_1114;s_3745 |
+| r_1513 | s_1117;s_1114;s_3744 |
+| r_1514 | s_1120;s_1114;s_3745 |
+| r_1515 | s_1123;s_1114;s_3744 |
+| r_1516 | s_1126;s_1114;s_3745 |
+| r_1517 | s_1141;s_1114;s_3744 |
+| r_1518 | s_1144;s_1114;s_3745 |
+| r_1542 | s_0003 |
+| r_1543 | s_0002 |
+| r_1546 | s_0026 |
+| r_1548 | s_0032 |
+| r_1551 | s_0064 |
+| r_1554 | s_0084 |
+| r_1562 | only when going backwards |
+| r_1563 | s_0133 |
+| r_1564 | s_0135 |
+| r_1565 | s_0137 |
+| r_1566 | s_0139 |
+| r_1567 | only when going forwards |
+| r_1568 | only when going forwards |
+| r_1573 | only when going backwards |
+| r_1574 | only when going forwards |
+| r_1575 | only when going backwards |
+| r_1576 | only when going forwards |
+| r_1578 | only when going backwards |
+| r_1579 | only when going backwards |
+| r_1582 | only when going backwards |
+| r_1583 | only when going backwards |
+| r_1587 | s_0183 |
+| r_1590 | only when going forwards |
+| r_1591 | only when going backwards |
+| r_1595 | s_0011 |
+| r_1597 | only when going forwards |
+| r_1599 | only when going backwards |
+| r_1600 | only when going backwards |
+| r_1601 | only when going forwards |
+| r_1605 | only when going backwards |
+| r_1606 | only when going backwards |
+| r_1607 | only when going backwards |
+| r_1608 | only when going forwards |
+| r_1609 | s_0282;s_0283 |
+| r_1610 | s_0282;s_0284 |
+| r_1611 | only when going backwards |
+| r_1614 | s_0132 |
+| r_1616 | s_0134 |
+| r_1620 | s_1563 |
+| r_1621 | s_0316 |
+| r_1622 | only when going forwards |
+| r_1624 | s_0319 |
+| r_1625 | s_0320 |
+| r_1627 | s_0342 |
+| r_1628 | s_0342;s_0341 |
+| r_1629 | s_0354 |
+| r_1632 | only when going forwards |
+| r_1633 | only when going forwards |
+| r_1635 | only when going backwards |
+| r_1637 | only when going forwards |
+| r_1639 | s_0384 |
+| r_1640 | s_0385 |
+| r_1642 | only when going forwards |
+| r_1643 | s_0387 |
+| r_1644 | only when going forwards |
+| r_1645 | only when going forwards |
+| r_1648 | s_0406 |
+| r_1649 | s_0408 |
+| r_1650 | s_1521 |
+| r_1657 | s_0967 |
+| r_1658 | s_0971 |
+| r_1661 | only when going backwards |
+| r_1664 | s_0447 |
+| r_1668 | only when going backwards |
+| r_1671 | s_0452 |
+| r_1675 | s_0468 |
+| r_1676 | only when going forwards |
+| r_1677 | only when going forwards |
+| r_1678 | only when going forwards |
+| r_1679 | only when going forwards |
+| r_1680 | only when going forwards |
+| r_1681 | only when going forwards |
+| r_1684 | only when going backwards |
+| r_1686 | only when going forwards |
+| r_1688 | only when going forwards |
+| r_1691 | only when going forwards |
+| r_1695 | only when going forwards |
+| r_1696 | only when going forwards |
+| r_1697 | only when going backwards |
+| r_1698 | only when going forwards |
+| r_1699 | only when going backwards |
+| r_1702 | s_0544 |
+| r_1705 | s_0546 |
+| r_1706 | s_0549 |
+| r_1707 | s_0549;s_0548 |
+| r_1708 | only when going backwards |
+| r_1709 | s_0554 |
+| r_1710 | s_0559 |
+| r_1711 | s_0560 |
+| r_1712 | s_0562 |
+| r_1713 | only when going forwards |
+| r_1715 | s_0572 |
+| r_1716 | s_0576 |
+| r_1717 | s_0562;s_0561 |
+| r_1718 | s_0579 |
+| r_1719 | s_0579;s_0578 |
+| r_1720 | s_0583 |
+| r_1721 | s_0588 |
+| r_1723 | s_0639 |
+| r_1725 | s_0618 |
+| r_1726 | only when going forwards |
+| r_1728 | s_0133;s_0132 |
+| r_1730 | s_0611 |
+| r_1731 | s_0611 |
+| r_1732 | s_0135;s_0134 |
+| r_1733 | s_0137;s_0136 |
+| r_1735 | s_0139 |
+| r_1737 | s_0614 |
+| r_1738 | only when going backwards |
+| r_1739 | s_1181 |
+| r_1743 | only when going backwards |
+| r_1745 | only when going forwards |
+| r_1748 | only when going forwards |
+| r_1750 | only when going forwards |
+| r_1751 | only when going forwards |
+| r_1752 | only when going backwards |
+| r_1754 | only when going backwards |
+| r_1759 | only when going forwards |
+| r_1762 | only when going backwards |
+| r_1764 | s_0684 |
+| r_1766 | only when going backwards |
+| r_1770 | only when going forwards |
+| r_1776 | only when going forwards |
+| r_1777 | only when going forwards |
+| r_1791 | s_0715 |
+| r_1792 | s_0720 |
+| r_1795 | only when going forwards |
+| r_1796 | only when going forwards |
+| r_1797 | s_0556 |
+| r_1800 | s_0736 |
+| r_1801 | only when going forwards |
+| r_1802 | s_0742 |
+| r_1803 | only when going forwards |
+| r_1805 | only when going forwards |
+| r_1806 | s_0755 |
+| r_1807 | s_0751 |
+| r_1812 | only when going forwards |
+| r_1813 | only when going forwards |
+| r_1816 | only when going backwards |
+| r_1817 | only when going backwards |
+| r_1818 | s_0788 |
+| r_1819 | s_0789 |
+| r_1820 | s_0791 |
+| r_1822 | s_0792 |
+| r_1823 | s_0791 |
+| r_1826 | only when going forwards |
+| r_1833 | only when going backwards |
+| r_1834 | s_0826 |
+| r_1835 | only when going forwards |
+| r_1836 | only when going forwards |
+| r_1837 | s_1008 |
+| r_1839 | s_0839 |
+| r_1840 | only when going forwards |
+| r_1842 | only when going forwards |
+| r_1844 | only when going backwards |
+| r_1845 | only when going backwards |
+| r_1846 | s_0853;s_0854 |
+| r_1847 | s_0857 |
+| r_1848 | s_0857 |
+| r_1849 | only when going forwards |
+| r_1851 | only when going backwards |
+| r_1852 | only when going backwards |
+| r_1853 | only when going backwards |
+| r_1854 | only when going backwards |
+| r_1855 | only when going backwards |
+| r_1856 | only when going backwards |
+| r_1857 | only when going backwards |
+| r_1858 | only when going backwards |
+| r_1859 | only when going backwards |
+| r_1860 | only when going backwards |
+| r_1863 | only when going backwards |
+| r_1864 | only when going forwards |
+| r_1868 | only when going backwards |
+| r_1869 | only when going forwards |
+| r_1872 | s_0952;s_0418 |
+| r_1873 | s_0956 |
+| r_1875 | s_0962 |
+| r_1876 | s_0962;s_0961 |
+| r_1877 | s_0964;s_0963 |
+| r_1878 | s_0964 |
+| r_1879 | s_0966 |
+| r_1880 | s_0970 |
+| r_1881 | s_0974 |
+| r_1883 | s_0982 |
+| r_1884 | s_0677 |
+| r_1885 | s_0677;s_0679 |
+| r_1886 | s_0990 |
+| r_1887 | only when going backwards |
+| r_1889 | s_0992 |
+| r_1890 | only when going backwards |
+| r_1891 | s_1000 |
+| r_1892 | only when going forwards |
+| r_1893 | s_1007 |
+| r_1895 | only when going forwards |
+| r_1897 | s_1017 |
+| r_1899 | s_1022 |
+| r_1900 | s_1026 |
+| r_1902 | s_1030 |
+| r_1903 | s_1033 |
+| r_1904 | s_1036 |
+| r_1905 | only when going backwards |
+| r_1906 | s_1041 |
+| r_1907 | only when going backwards |
+| r_1908 | s_0990;s_0989 |
+| r_1909 | s_1044 |
+| r_1910 | s_1044;s_1043 |
+| r_1911 | s_1046 |
+| r_1912 | s_1049 |
+| r_1913 | s_1052 |
+| r_1914 | s_1057 |
+| r_1919 | s_1027 |
+| r_1920 | s_0862;s_0861 |
+| r_1921 | s_0868;s_0867 |
+| r_1922 | s_0874;s_0873 |
+| r_1923 | s_0880;s_0879 |
+| r_1924 | s_0886;s_0885 |
+| r_1925 | s_0865;s_0864 |
+| r_1926 | s_0871;s_0870 |
+| r_1927 | s_0877;s_0876 |
+| r_1928 | s_0883;s_0882 |
+| r_1929 | s_0889;s_0888 |
+| r_1931 | s_1106 |
+| r_1932 | only when going forwards |
+| r_1935 | s_1031 |
+| r_1937 | s_1117;s_1116 |
+| r_1938 | s_1123;s_1122 |
+| r_1939 | s_1129;s_1128 |
+| r_1940 | s_1135;s_1134 |
+| r_1941 | s_1141;s_1140 |
+| r_1942 | s_1120;s_1119 |
+| r_1943 | s_1126;s_1125 |
+| r_1944 | s_1132;s_1131 |
+| r_1945 | s_1138;s_1137 |
+| r_1946 | s_1144;s_1143 |
+| r_1947 | s_1154 |
+| r_1963 | only when going forwards |
+| r_1964 | only when going backwards |
+| r_1966 | s_1217 |
+| r_1968 | s_1225 |
+| r_1970 | only when going backwards |
+| r_1971 | only when going forwards |
+| r_1972 | s_1225 |
+| r_1977 | only when going backwards |
+| r_1978 | only when going backwards |
+| r_1981 | only when going forwards |
+| r_1987 | s_1267 |
+| r_1988 | only when going backwards |
+| r_1990 | s_0755 |
+| r_1991 | only when going forwards |
+| r_1995 | only when going backwards |
+| r_1998 | only when going forwards |
+| r_1999 | s_1309 |
+| r_2002 | only when going backwards |
+| r_2003 | only when going backwards |
+| r_2004 | s_1034 |
+| r_2008 | only when going forwards |
+| r_2022 | only when going backwards |
+| r_2023 | s_1387 |
+| r_2028 | s_1397 |
+| r_2033 | s_1400 |
+| r_2036 | s_1404 |
+| r_2037 | only when going backwards |
+| r_2038 | s_1406 |
+| r_2040 | s_1406 |
+| r_2041 | s_0576 |
+| r_2042 | only when going forwards |
+| r_2043 | s_1418 |
+| r_2044 | s_1425 |
+| r_2050 | s_1180 |
+| r_2053 | only when going backwards |
+| r_2054 | only when going backwards |
+| r_2057 | only when going forwards |
+| r_2058 | s_1466 |
+| r_2062 | s_1472 |
+| r_2063 | only when going backwards |
+| r_2066 | s_1476 |
+| r_2067 | s_1490 |
+| r_2068 | s_1498 |
+| r_2075 | only when going forwards |
+| r_2079 | s_1521 |
+| r_2080 | only when going backwards |
+| r_2082 | s_1050 |
+| r_2084 | only when going backwards |
+| r_2085 | only when going forwards |
+| r_2086 | s_1053 |
+| r_2087 | only when going forwards |
+| r_2089 | only when going backwards |
+| r_2090 | s_1551 |
+| r_2091 | s_1553 |
+| r_2092 | s_1557 |
+| r_2093 | only when going forwards |
+| r_2095 | only when going backwards |
+| r_2099 | only when going backwards |
+| r_2101 | only when going forwards |
+| r_2102 | s_1564 |
+| r_2103 | s_1564;s_1563 |
+| r_2104 | s_1567 |
+| r_2105 | s_1567;s_1566 |
+| r_2112 | s_2763 |
+| r_2113 | s_2763;s_2764 |
+| r_2136 | only when going forwards |
+| r_2139 | only when going forwards |
+| r_2142 | s_0372;s_0465;s_1845;s_2770 |
+| r_2143 | s_0465;s_2771;s_1845;s_2772 |
+| r_2144 | s_0465;s_2773;s_1845;s_2774 |
+| r_2145 | s_2770;s_2775 |
+| r_2146 | s_2772;s_2776 |
+| r_2147 | s_2774;s_2777 |
+| r_2148 | s_2775;s_2778 |
+| r_2149 | s_2776;s_2779 |
+| r_2150 | s_2777;s_2780 |
+| r_2151 | s_2778;s_2771 |
+| r_2152 | s_2779;s_2773 |
+| r_2153 | s_2780;s_1254 |
+| r_2168 | only when going backwards |
+| r_2169 | only when going backwards |
+| r_2170 | only when going backwards |
+| r_2171 | only when going backwards |
+| r_2172 | only when going backwards |
+| r_2174 | only when going backwards |
+| r_2184 | only when going forwards |
+| r_2185 | only when going forwards |
+| r_2186 | only when going forwards |
+| r_2190 | only when going forwards |
+| r_2191 | only when going forwards |
+| r_2192 | only when going forwards |
+| r_2209 | s_2858;s_2861 |
+| r_2210 | s_2862;s_2863 |
+| r_2213 | s_2868 |
+| r_2216 | s_2871;s_2872 |
+| r_2229 | only when going forwards |
+| r_2230 | only when going forwards |
+| r_2352 | s_2978 |
+| r_2353 | s_2980 |
+| r_2354 | s_2982 |
+| r_2355 | s_2984 |
+| r_2356 | s_2986 |
+| r_2357 | s_2988 |
+| r_2358 | s_2990 |
+| r_2359 | s_2992 |
+| r_2432 | only when going backwards |
+| r_2433 | only when going backwards |
+| r_2434 | only when going backwards |
+| r_2435 | only when going backwards |
+| r_2436 | only when going backwards |
+| r_2437 | only when going backwards |
+| r_2438 | only when going backwards |
+| r_2439 | only when going backwards |
+| r_2440 | only when going backwards |
+| r_2441 | only when going backwards |
+| r_2442 | only when going backwards |
+| r_2443 | only when going backwards |
+| r_2444 | only when going backwards |
+| r_2445 | only when going backwards |
+| r_2462 | s_3126 |
+| r_2463 | s_3127 |
+| r_2520 | s_3216 |
+| r_2521 | s_3216 |
+| r_2522 | s_3216 |
+| r_2523 | s_3216 |
+| r_2524 | s_3216 |
+| r_2525 | s_3216 |
+| r_2526 | s_3216 |
+| r_2527 | s_3216 |
+| r_2828 | s_3343 |
+| r_2829 | s_3345 |
+| r_2830 | s_3347 |
+| r_2831 | s_3349 |
+| r_2832 | s_3351 |
+| r_2833 | s_3353 |
+| r_2834 | s_3355 |
+| r_2835 | s_3357 |
+| r_3046 | s_3465;s_3466 |
+| r_3047 | s_3467;s_3468 |
+| r_3048 | s_3469;s_3470 |
+| r_3049 | s_3471;s_3472 |
+| r_3050 | s_3473;s_3466 |
+| r_3051 | s_3474;s_3468 |
+| r_3052 | s_3475;s_3470 |
+| r_3053 | s_3476;s_3472 |
+| r_3054 | s_3466;s_3477 |
+| r_3055 | s_3468;s_3477 |
+| r_3056 | s_3470;s_3477 |
+| r_3057 | s_3472;s_3477 |
+| r_3058 | s_3478;s_3479 |
+| r_3059 | s_3480;s_3481 |
+| r_3060 | s_3482;s_3483 |
+| r_3061 | s_3484;s_3485 |
+| r_3062 | s_3486;s_3479 |
+| r_3063 | s_3487;s_3481 |
+| r_3064 | s_3488;s_3483 |
+| r_3065 | s_3489;s_3485 |
+| r_3066 | s_3479;s_3490 |
+| r_3067 | s_3481;s_3490 |
+| r_3068 | s_3483;s_3490 |
+| r_3069 | s_3485;s_3490 |
+| r_3082 | s_3498 |
+| r_3083 | s_3498 |
+| r_3084 | s_3498 |
+| r_3085 | s_3498 |
+| r_3086 | s_3498 |
+| r_3087 | s_3498 |
+| r_3088 | s_3498 |
+| r_3089 | s_3498 |
+| r_3240 | s_3632;s_3633 |
+| r_3241 | s_3634;s_3635 |
+| r_3242 | s_3636;s_3637 |
+| r_3243 | s_3638;s_3639 |
+| r_3244 | s_3640;s_3641 |
+| r_3245 | s_3642;s_3643 |
+| r_3246 | s_3644;s_3645 |
+| r_3247 | s_3646;s_3647 |
+| r_3248 | s_3648;s_3649 |
+| r_3249 | s_3650;s_3651 |
+| r_3250 | s_3652;s_3653 |
+| r_3251 | s_3654;s_3655 |
+| r_3304 | s_3675;s_3676;s_3677 |
+| r_3305 | s_3678;s_3677;s_3679 |
+| r_3306 | s_3680;s_3677;s_3681 |
+| r_3307 | s_3682;s_3677;s_3683 |
+| r_3332 | only when going backwards |
+| r_3333 | only when going backwards |
+| r_3334 | only when going backwards |
+| r_3335 | only when going backwards |
+| r_3336 | only when going backwards |
+| r_3337 | only when going backwards |
+| r_3338 | only when going backwards |
+| r_3339 | only when going backwards |
+| r_3340 | only when going backwards |
+| r_3341 | only when going backwards |
+| r_3342 | only when going backwards |
+| r_3343 | only when going backwards |
+| r_3344 | only when going backwards |
+| r_3345 | only when going backwards |
+| r_3346 | only when going backwards |
+| r_3347 | only when going backwards |
+| r_3348 | s_1117;s_0862 |
+| r_3349 | s_1117;s_0862 |
+| r_3350 | s_1117;s_0862 |
+| r_3351 | s_1117;s_0862 |
+| r_3352 | s_1117;s_0862 |
+| r_3353 | s_1117;s_0862 |
+| r_3354 | s_1117;s_0862 |
+| r_3355 | s_1117;s_0862 |
+| r_3356 | s_1120;s_0865 |
+| r_3357 | s_1120;s_0865 |
+| r_3358 | s_1120;s_0865 |
+| r_3359 | s_1120;s_0865 |
+| r_3360 | s_1120;s_0865 |
+| r_3361 | s_1120;s_0865 |
+| r_3362 | s_1120;s_0865 |
+| r_3363 | s_1120;s_0865 |
+| r_3364 | s_1129;s_0874 |
+| r_3365 | s_1129;s_0874 |
+| r_3366 | s_1129;s_0874 |
+| r_3367 | s_1129;s_0874 |
+| r_3368 | s_1129;s_0874 |
+| r_3369 | s_1129;s_0874 |
+| r_3370 | s_1129;s_0874 |
+| r_3371 | s_1129;s_0874 |
+| r_3372 | s_1132;s_0877 |
+| r_3373 | s_1132;s_0877 |
+| r_3374 | s_1132;s_0877 |
+| r_3375 | s_1132;s_0877 |
+| r_3376 | s_1132;s_0877 |
+| r_3377 | s_1132;s_0877 |
+| r_3378 | s_1132;s_0877 |
+| r_3379 | s_1132;s_0877 |
+| r_3380 | s_1123;s_0868 |
+| r_3381 | s_1123;s_0868 |
+| r_3382 | s_1123;s_0868 |
+| r_3383 | s_1123;s_0868 |
+| r_3384 | s_1123;s_0868 |
+| r_3385 | s_1123;s_0868 |
+| r_3386 | s_1123;s_0868 |
+| r_3387 | s_1123;s_0868 |
+| r_3388 | s_1126;s_0871 |
+| r_3389 | s_1126;s_0871 |
+| r_3390 | s_1126;s_0871 |
+| r_3391 | s_1126;s_0871 |
+| r_3392 | s_1126;s_0871 |
+| r_3393 | s_1126;s_0871 |
+| r_3394 | s_1126;s_0871 |
+| r_3395 | s_1126;s_0871 |
+| r_3396 | s_1135;s_0880 |
+| r_3397 | s_1135;s_0880 |
+| r_3398 | s_1135;s_0880 |
+| r_3399 | s_1135;s_0880 |
+| r_3400 | s_1135;s_0880 |
+| r_3401 | s_1135;s_0880 |
+| r_3402 | s_1135;s_0880 |
+| r_3403 | s_1135;s_0880 |
+| r_3404 | s_1138;s_0883 |
+| r_3405 | s_1138;s_0883 |
+| r_3406 | s_1138;s_0883 |
+| r_3407 | s_1138;s_0883 |
+| r_3408 | s_1138;s_0883 |
+| r_3409 | s_1138;s_0883 |
+| r_3410 | s_1138;s_0883 |
+| r_3411 | s_1138;s_0883 |
+| r_3412 | s_1141;s_0886 |
+| r_3413 | s_1141;s_0886 |
+| r_3414 | s_1141;s_0886 |
+| r_3415 | s_1141;s_0886 |
+| r_3416 | s_1141;s_0886 |
+| r_3417 | s_1141;s_0886 |
+| r_3418 | s_1141;s_0886 |
+| r_3419 | s_1141;s_0886 |
+| r_3420 | s_1144;s_0889 |
+| r_3421 | s_1144;s_0889 |
+| r_3422 | s_1144;s_0889 |
+| r_3423 | s_1144;s_0889 |
+| r_3424 | s_1144;s_0889 |
+| r_3425 | s_1144;s_0889 |
+| r_3426 | s_1144;s_0889 |
+| r_3427 | s_1144;s_0889 |
+| r_3514 | only when going backwards |
+| r_3521 | only when going forwards |
+| r_3522 | only when going forwards |
+| r_3527 | only when going forwards |
+| r_3529 | only when going backwards |
+| r_3530 | only when going forwards |
+| r_3531 | only when going backwards |
+| r_3532 | only when going backwards |
+| r_3533 | only when going forwards |
+| r_3534 | only when going backwards |
+| r_3535 | only when going backwards |
+| r_3537 | only when going forwards |
+| r_3538 | only when going backwards |
+| r_3539 | only when going forwards |
+| r_3540 | only when going forwards |
+| r_3541 | s_0474;s_3216 |
+| r_3542 | only when going backwards |
+| r_3545 | only when going backwards |
+| r_3546 | only when going backwards |
+| r_3547 | only when going backwards |
+| r_3548 | only when going forwards |
+| r_3570 | only when going backwards |
+| r_3581 | only when going backwards |
+| r_3582 | only when going backwards |
+| r_3583 | only when going backwards |
+| r_3584 | only when going forwards |
+| r_3596 | only when going backwards |
+| r_3597 | only when going backwards |
+| r_3598 | s_2872 |
+| r_3602 | only when going forwards |
+| r_3604 | only when going backwards |
+| r_3605 | only when going forwards |
+| r_3606 | only when going backwards |
+| r_3607 | only when going backwards |
+| r_3608 | only when going backwards |
+| r_3609 | only when going backwards |
+| r_3610 | only when going backwards |
+| r_3611 | only when going backwards |
+| r_3612 | s_2861 |
+| r_3613 | s_2863 |
+| r_3640 | only when going backwards |
+| r_3641 | only when going backwards |
+| r_3642 | only when going backwards |
+| r_3643 | only when going backwards |
+| r_3644 | only when going backwards |
+| r_3645 | only when going backwards |
+| r_3646 | only when going backwards |
+| r_3647 | only when going backwards |
+| r_3648 | only when going backwards |
+| r_3649 | only when going forwards |
+| r_3651 | only when going backwards |
+| r_3652 | only when going forwards |
+| r_3653 | only when going forwards |
+| r_3654 | only when going backwards |
+| r_3655 | only when going backwards |
+| r_3656 | only when going backwards |
+| r_3657 | only when going backwards |
+| r_3658 | only when going backwards |
+| r_3659 | only when going backwards |
+| r_3660 | only when going backwards |
+| r_3661 | only when going backwards |
+| r_3662 | only when going backwards |
+| r_3663 | only when going forwards |
+| r_3665 | only when going forwards |
+| r_3666 | only when going backwards |
+| r_3667 | only when going forwards |
+| r_3668 | only when going backwards |
+| r_3669 | only when going forwards |
+| r_3670 | only when going backwards |
+| r_3671 | only when going backwards |
+| r_3672 | only when going backwards |
+| r_3673 | only when going backwards |
+| r_3674 | only when going backwards |
+| r_3675 | only when going backwards |
+| r_3676 | only when going backwards |
+| r_3677 | only when going backwards |
+| r_3678 | only when going backwards |
+| r_3679 | only when going backwards |
+| r_3680 | only when going backwards |
+| r_3717 | only when going forwards |
+| r_3718 | only when going forwards |
+| r_3719 | only when going forwards |
+| r_3720 | only when going forwards |
+| r_3721 | only when going backwards |
+| r_3722 | only when going backwards |
+| r_3723 | only when going backwards |
+| r_3724 | only when going backwards |
+| r_3725 | only when going backwards |
+| r_3726 | only when going backwards |
+| r_3727 | only when going backwards |
+| r_3728 | only when going backwards |
+| r_3729 | only when going backwards |
+| r_3730 | only when going backwards |
+| r_3731 | only when going backwards |
+| r_3732 | only when going backwards |
+| r_3733 | only when going backwards |
+| r_3734 | only when going backwards |
+| r_3735 | only when going backwards |
+| r_3736 | only when going backwards |
+| r_3737 | only when going backwards |
+| r_3738 | only when going backwards |
+| r_3739 | only when going backwards |
+| r_3740 | only when going backwards |
+| r_3741 | only when going backwards |
+| r_3742 | only when going backwards |
+| r_3747 | only when going forwards |
+| r_3748 | only when going forwards |
+| r_3749 | only when going forwards |
+| r_3750 | only when going forwards |
+| r_3755 | only when going backwards |
+| r_3756 | only when going backwards |
+| r_3757 | only when going backwards |
+| r_3758 | only when going backwards |
+| r_3759 | only when going backwards |
+| r_3760 | only when going backwards |
+| r_3761 | only when going backwards |
+| r_3762 | only when going backwards |
+| r_3763 | only when going backwards |
+| r_3764 | only when going backwards |
+| r_3765 | only when going backwards |
+| r_3766 | only when going backwards |
+| r_3767 | only when going backwards |
+| r_3768 | only when going backwards |
+| r_3769 | only when going backwards |
+| r_3770 | only when going backwards |
+| r_3771 | only when going backwards |
+| r_3772 | only when going backwards |
+| r_3773 | only when going backwards |
+| r_3774 | only when going backwards |
+| r_3775 | only when going backwards |
+| r_3776 | only when going backwards |
+| r_3777 | only when going backwards |
+| r_3778 | only when going backwards |
+| r_3779 | only when going backwards |
+| r_3780 | only when going backwards |
+| r_3789 | only when going forwards |
+| r_3790 | only when going forwards |
+| r_3791 | only when going forwards |
+| r_3792 | only when going forwards |
+| r_3793 | only when going forwards |
+| r_3794 | only when going forwards |
+| r_3795 | only when going forwards |
+| r_3796 | only when going forwards |
+| r_3813 | only when going backwards |
+| r_3814 | only when going backwards |
+| r_3815 | only when going backwards |
+| r_3816 | only when going backwards |
+| r_3817 | only when going backwards |
+| r_3818 | only when going backwards |
+| r_3819 | only when going backwards |
+| r_3820 | only when going backwards |
+| r_3821 | only when going backwards |
+| r_3822 | only when going backwards |
+| r_3823 | only when going backwards |
+| r_3824 | only when going backwards |
+| r_3825 | only when going backwards |
+| r_3826 | only when going backwards |
+| r_3827 | only when going backwards |
+| r_3828 | only when going backwards |
+| r_3837 | only when going backwards |
+| r_3838 | only when going backwards |
+| r_3839 | only when going backwards |
+| r_3840 | only when going backwards |
+| r_3841 | only when going backwards |
+| r_3842 | only when going backwards |
+| r_3843 | only when going backwards |
+| r_3844 | only when going backwards |
+| r_3845 | only when going backwards |
+| r_3846 | only when going backwards |
+| r_3847 | only when going backwards |
+| r_3848 | only when going backwards |
+| r_3849 | only when going backwards |
+| r_3850 | only when going backwards |
+| r_3851 | only when going backwards |
+| r_3852 | only when going backwards |
+| r_3853 | only when going backwards |
+| r_3854 | only when going backwards |
+| r_3855 | only when going backwards |
+| r_3856 | only when going backwards |
+| r_3857 | only when going backwards |
+| r_3858 | only when going backwards |
+| r_3859 | only when going backwards |
+| r_3860 | only when going backwards |
+| r_3861 | only when going backwards |
+| r_3862 | only when going backwards |
+| r_3863 | only when going backwards |
+| r_3864 | only when going backwards |
+| r_3865 | only when going backwards |
+| r_3866 | only when going backwards |
+| r_3867 | only when going backwards |
+| r_3868 | only when going backwards |
+| r_3877 | only when going backwards |
+| r_3878 | only when going backwards |
+| r_3879 | only when going backwards |
+| r_3880 | only when going backwards |
+| r_3881 | only when going backwards |
+| r_3882 | only when going backwards |
+| r_3883 | only when going backwards |
+| r_3884 | only when going backwards |
+| r_3885 | s_3465 |
+| r_3886 | s_3467 |
+| r_3887 | s_3469 |
+| r_3888 | s_3471 |
+| r_3889 | s_3473 |
+| r_3890 | s_3474 |
+| r_3891 | s_3475 |
+| r_3892 | s_3476 |
+| r_3893 | s_3478 |
+| r_3894 | s_3480 |
+| r_3895 | s_3482 |
+| r_3896 | s_3484 |
+| r_3897 | s_3486 |
+| r_3898 | s_3487 |
+| r_3899 | s_3488 |
+| r_3900 | s_3489 |
+| r_3903 | only when going backwards |
+| r_3904 | only when going backwards |
+| r_3905 | only when going backwards |
+| r_3906 | only when going backwards |
+| r_3907 | only when going backwards |
+| r_3908 | only when going backwards |
+| r_3909 | only when going backwards |
+| r_3910 | only when going backwards |
+| r_3919 | only when going backwards |
+| r_3920 | only when going backwards |
+| r_3921 | only when going backwards |
+| r_3922 | only when going backwards |
+| r_3923 | only when going backwards |
+| r_3924 | only when going backwards |
+| r_3925 | only when going backwards |
+| r_3926 | only when going backwards |
+| r_3927 | only when going backwards |
+| r_3928 | only when going backwards |
+| r_3929 | only when going backwards |
+| r_3930 | only when going backwards |
+| r_3931 | only when going backwards |
+| r_3932 | only when going backwards |
+| r_3933 | only when going backwards |
+| r_3934 | only when going backwards |
+| r_3935 | only when going backwards |
+| r_3936 | only when going backwards |
+| r_3941 | only when going backwards |
+| r_3942 | only when going backwards |
+| r_3943 | only when going backwards |
+| r_3944 | only when going backwards |
+| r_3945 | only when going backwards |
+| r_3946 | only when going backwards |
+| r_3947 | only when going backwards |
+| r_3948 | only when going backwards |
+| r_3949 | only when going backwards |
+| r_3950 | only when going backwards |
+| r_3951 | only when going backwards |
+| r_3952 | only when going backwards |
+| r_3953 | only when going backwards |
+| r_3954 | only when going backwards |
+| r_3955 | only when going backwards |
+| r_3956 | only when going backwards |
+| r_3959 | only when going forwards |
+| r_3960 | only when going backwards |
+| r_3961 | only when going forwards |
+| r_3962 | only when going forwards |
+| r_3973 | only when going backwards |
+| r_3987 | only when going backwards |
+| r_3996 | only when going backwards |
+| r_4005 | only when going backwards |
+| r_4038 | only when going backwards |
+| r_4040 | only when going backwards |
+| r_4042 | s_3715;s_0554;s_3716 |
+| r_4043 | s_3715 |
+| r_4044 | s_3716 |
+| r_4051 | s_3721;s_3722 |
+| r_4052 | s_0859;s_3723 |
+| r_4053 | s_0892;s_3724 |
+| r_4054 | s_1114;s_3725 |
+| r_4055 | s_3726;s_3727 |
+| r_4056 | s_3728;s_3729 |
+| r_4057 | s_3730;s_3731 |
+| r_4058 | s_3732;s_3733 |
+| r_4059 | s_3734;s_3735 |
+| r_4060 | s_3736;s_3737 |
+| r_4061 | s_3738;s_3739 |
+| r_4066 | s_3721;s_3744 |
+| r_4067 | s_3721;s_3745 |
+| r_4068 | s_3721;s_3744 |
+| r_4069 | s_3721;s_3745 |
+| r_4070 | s_3721;s_3744 |
+| r_4071 | s_3721;s_3745 |
+| r_4072 | s_3721;s_3744 |
+| r_4073 | s_3721;s_3745 |
+| r_4074 | s_3721;s_3744 |
+| r_4075 | s_3721;s_3745 |
+| r_4076 | s_3726 |
+| r_4077 | s_3728 |
+| r_4078 | s_3726 |
+| r_4079 | s_3728 |
+| r_4080 | s_3730 |
+| r_4081 | s_3730 |
+| r_4082 | s_3730 |
+| r_4083 | s_3730 |
+| r_4084 | s_3730 |
+| r_4085 | s_3730 |
+| r_4086 | s_3730 |
+| r_4087 | s_3730 |
+| r_4088 | s_3732 |
+| r_4089 | s_3732 |
+| r_4090 | s_3732 |
+| r_4091 | s_3732 |
+| r_4092 | s_3732 |
+| r_4093 | s_3732 |
+| r_4094 | s_3732 |
+| r_4095 | s_3732 |
+| r_4096 | s_3126;s_3734 |
+| r_4097 | s_3127;s_3734 |
+| r_4098 | s_3736 |
+| r_4099 | s_3736 |
+| r_4100 | s_3736 |
+| r_4101 | s_3736 |
+| r_4102 | s_3736 |
+| r_4103 | s_3736 |
+| r_4104 | s_3738 |
+| r_4105 | s_3738 |
+| r_4106 | s_3738 |
+| r_4107 | s_3738 |
+| r_4108 | s_3738 |
+| r_4109 | s_3738 |
+| r_4110 | s_3738 |
+| r_4111 | s_3738 |
+| r_4112 | s_3738 |
+| r_4113 | s_3738 |
+| r_4114 | s_3738 |
+| r_4115 | s_3738 |
+| r_4116 | s_3738 |
+| r_4117 | s_3738 |
+| r_4118 | s_3738 |
+| r_4119 | s_3738 |
+| r_4120 | s_3738 |
+| r_4121 | s_3738 |
+| r_4122 | s_3738 |
+| r_4123 | s_3738 |
+| r_4124 | s_3738 |
+| r_4125 | s_3738 |
+| r_4126 | s_3738 |
+| r_4127 | s_3738 |
+| r_4128 | s_3738 |
+| r_4129 | s_3738 |
+| r_4130 | s_3738 |
+| r_4131 | s_3738 |
+| r_4132 | s_3738 |
+| r_4133 | s_3738 |
+| r_4134 | s_3738 |
+| r_4135 | s_3738 |
+| r_4136 | s_3738 |
+| r_4137 | s_3738 |
+| r_4138 | s_3738 |
+| r_4139 | s_3738 |
+| r_4140 | s_3738 |
+| r_4141 | s_3738 |
+| r_4142 | s_3738 |
+| r_4143 | s_3738 |
+| r_4144 | s_3738 |
+| r_4145 | s_3738 |
+| r_4146 | s_3738 |
+| r_4147 | s_3738 |
+| r_4148 | s_3738 |
+| r_4149 | s_3738 |
+| r_4150 | s_3738 |
+| r_4151 | s_3738 |
+| r_4152 | s_3748;s_3749 |
+| r_4153 | s_3750 |
+| r_4154 | s_3751;s_3752;s_3753 |
+| r_4155 | s_3754;s_3755;s_3756 |
+| r_4156 | s_3757;s_3758;s_3759 |
+| r_4157 | s_3760;s_3761 |
+| r_4158 | s_3762;s_3763 |
+| r_4159 | s_3764;s_3765;s_3766;s_3767 |
+| r_4160 | s_3761;s_3768 |
+| r_4161 | only when going backwards |
+| r_4162 | only when going backwards |
+| r_4163 | only when going backwards |
+| r_4164 | s_3769;s_3770 |
+| r_4165 | s_3771;s_3772;s_3773 |
+| r_4166 | s_3773;s_3772;s_3774 |
+| r_4167 | s_3775;s_3776;s_3777 |
+| r_4168 | s_0553;s_3779 |
+| r_4169 | s_0558;s_3780 |
+| r_4170 | s_3764;s_3765;s_3781 |
+| r_4172 | s_3782;s_3783 |
+| r_4174 | s_3787;s_3788 |
+| r_4175 | s_3789;s_3790 |
+| r_4176 | s_3791;s_3792 |
+| r_4177 | s_3793;s_3794 |
+| r_4178 | s_3795;s_3796 |
+| r_4179 | s_3797;s_3798 |
+| r_4180 | s_3799;s_3800 |
+| r_4181 | s_3802 |
+| r_4183 | s_3805;s_0553 |
+| r_4184 | s_3806 |
+| r_4186 | s_3807 |
+| r_4187 | s_3808;s_3809 |
+| r_4189 | s_3811;s_3812 |
+| r_4190 | s_3813;s_0838 |
+| r_4191 | s_3814;s_3815 |
+| r_4192 | s_3816;s_3817 |
+| r_4194 | s_3823 |
+| r_4195 | s_4026;s_4027 |
+| r_4196 | only when going backwards |
+| r_4197 | s_3826;s_3827 |
+| r_4198 | s_3828;s_3829 |
+| r_4202 | only when going backwards |
+| r_4203 | s_3838;s_3759;s_3839 |
+| r_4204 | s_3840;s_3759 |
+| r_4206 | s_3841 |
+| r_4208 | s_3846;s_3847 |
+| r_4209 | s_3843;s_3848;s_3849;s_3850 |
+| r_4210 | s_3851 |
+| r_4211 | s_3852 |
+| r_4212 | only when going forwards |
+| r_4214 | only when going backwards |
+| r_4217 | s_3855 |
+| r_4218 | s_3856 |
+| r_4219 | s_3857;s_3858 |
+| r_4220 | s_3859;s_3860 |
+| r_4221 | s_3861;s_1043 |
+| r_4222 | s_3862 |
+| r_4223 | s_3863;s_3864 |
+| r_4227 | s_3867;s_1321 |
+| r_4228 | s_3868;s_0853 |
+| r_4230 | s_3871;s_3872 |
+| r_4231 | s_3873;s_3874 |
+| r_4232 | only when going backwards |
+| r_4234 | s_3764;s_3878;s_3766;s_3879 |
+| r_4237 | s_3881;s_3882;s_3883 |
+| r_4238 | s_4196;s_4197;s_4198 |
+| r_4241 | s_3889;s_3771;s_3772 |
+| r_4242 | s_3890;s_3891;s_3892;s_3893 |
+| r_4243 | s_3890;s_3894;s_3892;s_3895 |
+| r_4244 | s_3890;s_3895;s_3892;s_3896 |
+| r_4245 | s_3897;s_3898;s_3899 |
+| r_4247 | s_3903 |
+| r_4248 | s_3904 |
+| r_4250 | s_3888 |
+| r_4253 | s_3911;s_3912;s_3887 |
+| r_4254 | s_3913;s_3914 |
+| r_4255 | s_3913;s_3914 |
+| r_4260 | s_3923 |
+| r_4261 | s_3924;s_3925 |
+| r_4263 | s_3926 |
+| r_4269 | s_3929;s_3930 |
+| r_4270 | s_3931 |
+| r_4271 | s_3774;s_3932;s_3933 |
+| r_4272 | s_3774;s_3891;s_3933 |
+| r_4273 | s_3934;s_3935 |
+| r_4275 | s_3936 |
+| r_4276 | s_4031 |
+| r_4279 | s_3942;s_3943 |
+| r_4282 | s_3948 |
+| r_4283 | s_0553;s_3948 |
+| r_4284 | s_3949;s_3950 |
+| r_4285 | s_3951;s_3952 |
+| r_4286 | s_3953 |
+| r_4287 | s_3954;s_3948 |
+| r_4288 | s_3952;s_3950 |
+| r_4291 | s_0570;s_3958 |
+| r_4292 | only when going forwards |
+| r_4294 | s_0853 |
+| r_4295 | s_3959;s_3960 |
+| r_4296 | s_3961;s_3962 |
+| r_4297 | s_3963;s_3964 |
+| r_4298 | s_3965;s_3966 |
+| r_4299 | s_3967;s_3968 |
+| r_4300 | s_3969;s_3970 |
+| r_4301 | s_3971;s_3972 |
+| r_4302 | s_3973;s_3974 |
+| r_4303 | s_3975;s_3976 |
+| r_4304 | s_3977;s_3978 |
+| r_4305 | s_3979;s_3980 |
+| r_4306 | s_3981;s_3982 |
+| r_4307 | s_3983;s_3984 |
+| r_4309 | s_3988 |
+| r_4310 | s_3890;s_3896;s_3892;s_3989 |
+| r_4311 | s_3890;s_3989;s_3892;s_3990 |
+| r_4312 | s_3991;s_3992 |
+| r_4313 | s_3993;s_3994 |
+| r_4314 | s_3995;s_3996 |
+| r_4315 | s_3997 |
+| r_4316 | s_3994;s_3995 |
+| r_4317 | s_3998;s_0553 |
+| r_4318 | s_3999;s_3951 |
+| r_4319 | s_4000 |
+| r_4320 | s_3911;s_3996;s_4001 |
+| r_4321 | s_3911;s_4001;s_3912 |
+| r_4322 | s_4002;s_4003 |
+| r_4326 | s_4009;s_4010;s_4011;s_4012 |
+| r_4327 | s_4014 |
+| r_4328 | s_4015;s_3766;s_3911 |
+| r_4329 | s_4016 |
+| r_4330 | only when going forwards |
+| r_4331 | s_4017 |
+| r_4332 | only when going backwards |
+| r_4334 | s_4020 |
+| r_4336 | s_4021 |
+| r_4337 | s_4022;s_4023 |
+| r_4338 | s_4024;s_3951 |
+| r_4339 | s_3764;s_4025 |
+| r_4341 | s_4063;s_4062 |
+| r_4342 | s_4062 |
+| r_4343 | s_4065;s_4064 |
+| r_4344 | s_4064 |
+| r_4345 | s_4066 |
+| r_4346 | s_4067;s_4066 |
+| r_4347 | s_4068 |
+| r_4348 | s_4069;s_4068 |
+| r_4349 | s_4070;s_4071 |
+| r_4350 | s_4071;s_3997 |
+| r_4351 | s_4072;s_4073 |
+| r_4352 | s_4075;s_4072 |
+| r_4353 | s_4073;s_4076 |
+| r_4354 | s_4076;s_1471 |
+| r_4355 | s_4079 |
+| r_4356 | s_4080;s_4079 |
+| r_4357 | s_4081 |
+| r_4358 | s_4082;s_4081 |
+| r_4359 | s_4083 |
+| r_4360 | s_4084;s_4083 |
+| r_4361 | s_4085;s_4086 |
+| r_4362 | s_4087;s_3758;s_3839 |
+| r_4363 | s_4088;s_4089 |
+| r_4364 | s_4090;s_4088 |
+| r_4365 | s_4091;s_4089 |
+| r_4366 | s_4092 |
+| r_4367 | s_4093;s_4092 |
+| r_4368 | s_4096 |
+| r_4369 | s_4099;s_4098 |
+| r_4370 | s_4100 |
+| r_4371 | s_4101;s_4100 |
+| r_4372 | s_4102;s_4081 |
+| r_4373 | s_4103;s_4102 |
+| r_4374 | s_4104 |
+| r_4375 | s_4105;s_4104 |
+| r_4376 | s_4106 |
+| r_4377 | s_4107;s_4106 |
+| r_4378 | s_4108;s_0553 |
+| r_4379 | s_4109;s_4108 |
+| r_4380 | s_4110 |
+| r_4381 | s_4111;s_4110 |
+| r_4382 | s_4113;s_4112 |
+| r_4383 | s_4114;s_4112 |
+| r_4384 | s_4117 |
+| r_4385 | s_4118;s_4117 |
+| r_4386 | s_4121;s_0977;s_3759 |
+| r_4387 | s_4119;s_4120 |
+| r_4388 | s_4126;s_4100 |
+| r_4389 | s_4127;s_4126 |
+| r_4390 | s_4122;s_4123 |
+| r_4391 | s_4123;s_4124 |
+| r_4392 | s_4125;s_4122 |
+| r_4393 | s_4128;s_4129 |
+| r_4394 | s_4129 |
+| r_4395 | s_4130;s_4128 |
+| r_4397 | s_4134 |
+| r_4398 | s_4034;s_4035 |
+| r_4399 | s_4038;s_4039 |
+| r_4400 | s_4140;s_1106 |
+| r_4401 | s_4041;s_4042 |
+| r_4402 | s_4040;s_4041 |
+| r_4403 | s_4098 |
+| r_4404 | s_4053;s_4054 |
+| r_4405 | s_4049;s_4048 |
+| r_4406 | s_4078;s_4077 |
+| r_4407 | s_4077;s_3904 |
+| r_4408 | s_4037;s_4038 |
+| r_4409 | s_4039;s_0996;s_3759 |
+| r_4410 | s_4136 |
+| r_4411 | s_4138 |
+| r_4412 | s_4094;s_4066 |
+| r_4413 | s_4044 |
+| r_4414 | s_4036;s_3759 |
+| r_4415 | s_4052;s_3759 |
+| r_4416 | s_4042;s_3759;s_4043 |
+| r_4417 | s_4055;s_3839 |
+| r_4418 | s_4058;s_3839 |
+| r_4419 | s_4139;s_4138 |
+| r_4420 | s_4131;s_0554 |
+| r_4421 | s_4116;s_4115 |
+| r_4422 | s_4137;s_4136 |
+| r_4423 | s_4086;s_4087 |
+| r_4424 | s_4056;s_4057 |
+| r_4425 | s_4057;s_4058 |
+| r_4426 | s_4035;s_4036 |
+| r_4427 | s_4135;s_4134 |
+| r_4428 | s_4097;s_4096 |
+| r_4429 | s_4050;s_4051 |
+| r_4430 | s_4051;s_4052 |
+| r_4431 | s_4120;s_4121 |
+| r_4432 | s_4115 |
+| r_4433 | s_4045;s_4044 |
+| r_4434 | s_4047;s_4046 |
+| r_4435 | s_4048 |
+| r_4436 | s_4046 |
+| r_4437 | s_4059;s_4060 |
+| r_4438 | s_4060;s_4061 |
+| r_4439 | s_4061;s_0996;s_3839 |
+| r_4440 | s_3758 |
+| r_4441 | s_4043 |
+| r_4442 | s_4074 |
+| r_4443 | s_4095;s_4094 |
+| r_4444 | s_4141 |
+| r_4445 | s_4142 |
+| r_4446 | only when going forwards |
+| r_4447 | only when going forwards |
+| r_4448 | s_4143;s_4144 |
+| r_4449 | s_4144;s_3757 |
+| r_4450 | s_4147 |
+| r_4451 | s_4148 |
+| r_4452 | s_4149 |
+| r_4453 | only when going forwards |
+| r_4454 | only when going forwards |
+| r_4455 | s_4152 |
+| r_4456 | only when going forwards |
+| r_4457 | s_4154;s_1239 |
+| r_4458 | s_4155 |
+| r_4459 | s_4156 |
+| r_4460 | s_4157 |
+| r_4461 | only when going forwards |
+| r_4462 | s_4159;s_4113 |
+| r_4463 | s_4160 |
+| r_4464 | s_4161;s_0131 |
+| r_4465 | s_4162;s_0389 |
+| r_4466 | s_4163 |
+| r_4467 | s_4164;s_3953 |
+| r_4468 | s_4165;s_0152 |
+| r_4469 | s_4166 |
+| r_4470 | s_4167;s_0771 |
+| r_4471 | s_4168;s_4169 |
+| r_4472 | s_4169;s_3840 |
+| r_4473 | s_4170;s_4171 |
+| r_4474 | s_4171;s_3838 |
+| r_4475 | only when going forwards |
+| r_4476 | only when going forwards |
+| r_4477 | s_4174;s_4175 |
+| r_4478 | only when going forwards |
+| r_4479 | s_4054;s_4055 |
+| r_4480 | s_4074;s_4073 |
+| r_4482 | s_3759 |
+| r_4483 | s_3839 |
+| r_4484 | only when going forwards |
+| r_4489 | s_0961;s_4180 |
+| r_4490 | s_4180;s_1566 |
+| r_4491 | s_0548;s_4181 |
+| r_4492 | s_4181;s_0580 |
+| r_4493 | only when going forwards |
+| r_4494 | s_4124 |
+| r_4495 | s_0389 |
+| r_4496 | s_4170 |
+| r_4497 | s_4137 |
+| r_4498 | s_4109 |
+| r_4499 | s_4118 |
+| r_4500 | s_4130 |
+| r_4501 | s_4131 |
+| r_4503 | s_4140 |
+| r_4505 | s_4125 |
+| r_4506 | s_4164 |
+| r_4507 | s_4167 |
+| r_4508 | s_4034 |
+| r_4509 | s_4168 |
+| r_4510 | s_4056 |
+| r_4511 | s_4050 |
+| r_4512 | s_4053 |
+| r_4513 | s_4037 |
+| r_4514 | s_4085 |
+| r_4515 | s_4119 |
+| r_4516 | s_4059 |
+| r_4517 | s_4040 |
+| r_4518 | s_4143 |
+| r_4519 | s_4166 |
+| r_4520 | s_4080 |
+| r_4522 | s_4049 |
+| r_4523 | s_4141 |
+| r_4524 | s_4148 |
+| r_4525 | s_4147 |
+| r_4526 | s_4078 |
+| r_4527 | s_4157 |
+| r_4528 | s_4099 |
+| r_4529 | s_4152 |
+| r_4530 | s_4093 |
+| r_4532 | s_4154 |
+| r_4533 | s_4075 |
+| r_4534 | s_4067 |
+| r_4535 | s_4063 |
+| r_4536 | s_4069 |
+| r_4537 | s_4070 |
+| r_4538 | s_4155 |
+| r_4540 | s_4095 |
+| r_4541 | s_4097 |
+| r_4542 | s_4065 |
+| r_4543 | s_4142 |
+| r_4544 | s_4162 |
+| r_4545 | s_4107 |
+| r_4546 | s_4161 |
+| r_4547 | s_4156 |
+| r_4548 | s_4160 |
+| r_4549 | s_4135 |
+| r_4551 | s_4105 |
+| r_4552 | s_4111 |
+| r_4553 | s_4139 |
+| r_4554 | s_4116 |
+| r_4558 | s_4163 |
+| r_4559 | s_4047 |
+| r_4560 | s_4045 |
+| r_4561 | s_4101 |
+| r_4562 | s_4082 |
+| r_4563 | s_4084 |
+| r_4564 | s_4127 |
+| r_4565 | s_4103 |
+| r_4569 | s_4195;s_4194 |
+| r_4570 | only when going forwards |
+| r_4571 | only when going backwards |
+| r_4572 | only when going backwards |
+| r_4585 | s_4192;s_0558;s_4193 |
+| r_4586 | s_3998;s_4192;s_4193 |
+| r_4588 | only when going backwards |
+| r_4601 | only when going backwards |
+| r_4602 | s_0363 |
+| r_4603 | s_3761;s_0402 |
+| r_4604 | s_0692 |
+| r_4605 | s_1221 |
+| r_4606 | s_1239;s_1240 |
+| r_4607 | only when going forwards |
+| r_4609 | only when going backwards |
+| r_4610 | only when going forwards |
+| r_4611 | only when going forwards |
+| r_4612 | s_1622 |
+| r_4613 | s_3677 |
+| r_4614 | s_3751 |
+| r_4615 | s_3755 |
+| r_4616 | s_3781 |
+| r_4617 | s_3818 |
+| r_4618 | s_3831 |
+| r_4619 | s_3883;s_3881 |
+| r_4620 | s_3898 |
+| r_4623 | s_3925 |
+| r_4624 | s_3987 |
+| r_4625 | s_4113;s_4010 |
+| r_4626 | s_4011 |
+| r_4627 | s_4015 |
+| r_4628 | s_4025 |
+| r_4629 | only when going backwards |
+| r_4630 | only when going backwards |
+| r_4631 | only when going backwards |
+| r_4632 | s_4217;s_4218 |
+| r_4633 | only when going backwards |
+| r_4634 | only when going backwards |
+| r_4635 | only when going backwards |
+| r_4636 | only when going backwards |
+| r_4637 | s_4218;s_4224 |
+| r_4639 | only when going backwards |
+| r_4640 | only when going backwards |
+| r_4641 | only when going backwards |
+| r_4642 | s_4224;s_4229 |
+| r_4647 | s_4229 |
+| r_4653 | s_4234;s_4235 |
+| r_4655 | s_4235 |
+| r_4656 | only when going backwards |
+| r_4657 | only when going backwards |
+| r_4660 | only when going backwards |
+| r_4662 | s_4240;s_4241 |
+| r_4664 | s_4241 |
+| r_4665 | only when going backwards |
+| r_4666 | only when going backwards |
+| r_4671 | s_4246;s_4247 |
+| r_4673 | s_4247 |
+| r_4674 | only when going backwards |
+| r_4675 | only when going backwards |
+| r_4680 | only when going backwards |
+| r_4682 | only when going backwards |
+| r_4683 | only when going backwards |
+| r_4684 | only when going backwards |
+| r_4685 | only when going backwards |
+| r_4697 | only when going backwards |
+| r_4702 | only when going backwards |
+| r_4705 | s_4268;s_4267 |
+| r_4707 | s_4269;s_4113 |
+| r_4710 | s_4268 |
+| r_4711 | only when going backwards |
+| r_4712 | only when going backwards |
+| r_4713 | s_4274 |
+| r_4714 | s_4276 |
+| r_4715 | s_3874;s_4278 |
+| r_4716 | only when going backwards |
+| r_4717 | s_3799;s_4288 |
+| r_4718 | only when going backwards |
+| r_4719 | only when going backwards |
+| r_4720 | only when going backwards |
+| r_4721 | only when going backwards |
+| r_4725 | s_4292;s_4293 |
+| r_4726 | only when going backwards |
+| r_4728 | only when going backwards |
+| r_4730 | s_4274;s_4275 |
+| r_4731 | s_4275 |
+| r_4732 | s_4276;s_4277 |
+| r_4733 | s_4277 |
+| r_4734 | s_4278;s_4279 |
+| r_4735 | s_4279 |
+| r_4736 | only when going backwards |
+| r_4738 | s_4288;s_4289 |
+| r_4739 | s_4289 |
+| r_4740 | only when going backwards |
+| r_4742 | only when going backwards |
+| r_4745 | only when going backwards |
+| r_4746 | s_4292 |
+| r_4748 | s_0570 |
+| r_4750 | s_3951;s_3949 |
+| r_4751 | s_4296;s_4297 |
+| r_4752 | s_4299;s_4300 |
+| r_4753 | s_4301 |
+| r_4754 | s_4295;s_4298;s_4312 |
+| r_4755 | s_4302 |
+| r_4757 | s_4304 |
+| r_4758 | s_0134;s_4305 |
+| r_4760 | only when going backwards |
+| r_4761 | s_4331 |
+| r_4762 | s_4306;s_4307 |
+| r_4763 | s_4308;s_4309 |
+| r_4764 | s_4310;s_4311 |
+| r_4765 | s_1555 |
+| r_4767 | s_4294 |
+| r_4768 | s_4303 |
+| r_4769 | s_4317 |
+| r_4770 | s_4322 |
+| r_4771 | s_4319;s_4318 |
+| r_4772 | s_4323;s_4324 |
+| r_4773 | s_4321;s_4320 |
+| r_4774 | s_4325;s_4326 |
+| r_4776 | s_4314;s_4313 |
+| r_4777 | s_4327;s_4328 |
+| r_4778 | s_4329;s_4330 |
+| r_4779 | only when going backwards |
+| r_4787 | s_1618;s_1622 |
 
 ## Reactions flagged as MACAW duplicates
 
-_None._
+| reaction | sub-test | duplicate of |
+|---|---|---|
+| r_0163 | coefficients | r_2115 |
+| r_0163 | directions | r_2115 |
+| r_0342 | coefficients | r_0919 |
+| r_0342 | directions | r_0919 |
+| r_0343 | coefficients | r_0920 |
+| r_0343 | directions | r_0920 |
+| r_0919 | coefficients | r_0342 |
+| r_0919 | directions | r_0342 |
+| r_0920 | coefficients | r_0343 |
+| r_0920 | directions | r_0343 |
+| r_1130 | coefficients | r_1131 |
+| r_1131 | coefficients | r_1130 |
+| r_1187 | coefficients | r_1188 |
+| r_1188 | coefficients | r_1187 |
+| r_1197 | coefficients | r_1198 |
+| r_1198 | coefficients | r_1197 |
+| r_1203 | coefficients | r_1204 |
+| r_1204 | coefficients | r_1203 |
+| r_1209 | coefficients | r_1210 |
+| r_1210 | coefficients | r_1209 |
+| r_1221 | coefficients | r_1222 |
+| r_1222 | coefficients | r_1221 |
+| r_2115 | coefficients | r_0163 |
+| r_2115 | directions | r_0163 |
