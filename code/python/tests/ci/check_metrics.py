@@ -1,8 +1,9 @@
 """Validation metrics, compared against the target branch.
 
-Computes growth R², gene-essentiality accuracy and its confusion matrix,
-anaerobic flux R² and the anaerobic exchange metrics, for this branch's
-model and for the target branch's model, and reports the difference.
+Computes growth R², the anaerobic flux fold error, the anaerobic exchange
+metrics and gene-essentiality accuracy with its confusion matrix, for this
+branch's model and for the target branch's model, and reports the
+difference.
 
 Comparing against the target branch rather than against committed
 reference numbers matters here. ``data/testResults/README.md`` records
@@ -54,14 +55,7 @@ _TOL_GENE_COUNT = 2
 _TOL_RELATIVE_ERROR = 1e-2
 _TOL_RATIO = 5e-2
 _TOL_FOLD = 5e-2
-_TOL_FRACTION = 2e-2
 
-# (key, comment label, direction, tolerance)
-#
-# "direction" says which way is an improvement, and is what makes a delta
-# readable: a rising R² is good, a rising error is not, and a rising
-# false-negative count is not. A move within tolerance is reported as
-# unchanged.
 # (key, comment label, direction, tolerance)
 #
 # Ordered by test, not alphabetically, and written to file in this order:
@@ -81,16 +75,18 @@ _METRICS = [
     # Chemostat growth rates, Osterlund et al. 2013
     ("growthPredictionR2", "Growth prediction R2", "higher", _TOL_R2),
 
-    # Intracellular fluxes under anaerobic conditions, Jouhten et al. 2008
+    # Intracellular fluxes under anaerobic conditions, Jouhten et al. 2008.
+    #
+    # Two metrics, not five. The mean fold error, the fraction within
+    # 2-fold and R2 were all restatements of how far out the comparable
+    # predictions are, so they moved together and none of them told you
+    # anything the median did not. These two answer genuinely different
+    # questions: how wrong is a prediction that can be compared, and how
+    # many cannot be compared at all.
     ("anaerobicFluxMedianFoldError", "Anaerobic flux median fold error",
      "lower", _TOL_FOLD),
-    ("anaerobicFluxMeanFoldError", "Anaerobic flux mean fold error",
-     "lower", _TOL_FOLD),
-    ("anaerobicFluxWithinTwoFold", "Anaerobic flux within 2-fold",
-     "higher", _TOL_FRACTION),
     ("anaerobicFluxUnpredicted", "Anaerobic fluxes with no comparable ratio",
      "lower", 0),
-    ("anaerobicFluxR2", "Anaerobic flux prediction R2", "higher", _TOL_R2),
 
     # Fermentation product exchange rates, Sjoberg et al. 2024
     ("anaerobicExchangeMeanRelativeError",
@@ -153,10 +149,7 @@ def compute(model) -> dict[str, float]:
     return {
         "growthPredictionR2": float(growth_r2),
         "anaerobicFluxMedianFoldError": flux.median_fold_error,
-        "anaerobicFluxMeanFoldError": flux.mean_fold_error,
-        "anaerobicFluxWithinTwoFold": flux.fraction_within_two_fold,
         "anaerobicFluxUnpredicted": float(flux.n_unpredicted),
-        "anaerobicFluxR2": flux.r2,
         "anaerobicExchangeMeanRelativeError": exchange.mean_relative_error,
         "anaerobicExchangeWithinError": exchange.fraction_within_error,
         "anaerobicAmmoniumPerATPase": exchange.ammonium_per_atpase,
