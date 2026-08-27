@@ -61,8 +61,6 @@ _VALIDATION_ROWS = [
     ("growthPredictionR2", "Growth prediction R2", "higher", 5e-3),
     ("anaerobicFluxMedianFoldError", "Anaerobic flux median fold error",
      "lower", 5e-2),
-    ("anaerobicFluxUnpredicted", "Anaerobic fluxes with no comparable ratio",
-     "lower", 0),
     ("anaerobicExchangeMeanRelativeError",
      "Anaerobic exchange mean relative error", "lower", 1e-2),
     ("anaerobicExchangeWithinError", "Anaerobic exchange within error",

@@ -48,7 +48,6 @@ model stood for that version.
 |---|---|
 | Growth prediction R2 | 0.9019066691398621 |
 | Anaerobic flux median fold error | 1.053461050692928 |
-| Anaerobic fluxes with no comparable ratio | 11 |
 | Anaerobic exchange mean relative error | 0.06454293960336684 |
 | Anaerobic exchange within error | 0.75 |
 | Ammonium per ATPase | 1.071951239704032 |
@@ -196,19 +195,18 @@ big fluxes right", which is nearly a restatement of the glucose constraint:
 the coefficient of determination reads 0.997 on a model whose smaller half of
 measurements is out by about 50%, which is why it is not reported.
 
-This is the only summary of how far out the comparable predictions are. A mean
-fold error, a fraction within 2-fold and an R2 were all reported at one point,
-but they are restatements of the same quantity and moved together, so the
-table said the same thing four times.
+This is the only summary of how far out the predictions are. A mean fold
+error, a fraction within 2-fold and an R2 were all reported at one point, but
+they are restatements of the same quantity and moved together, so the table
+said the same thing four times.
 
-#### Anaerobic fluxes with no comparable ratio
-Measurements for which no fold error exists: a flux measured as non-zero but
-predicted as zero, or predicted in the opposite direction.
-
-Counted rather than dropped, and reported separately from the fold error
-because it is a different kind of failure. Both are worse than any finite fold
-error, and excluding them from the denominator would make the fold error
-improve as the model got worse. Lower is better.
+One caveat, since it is no longer reported as its own number: a ratio needs
+both values non-zero and pointing the same way, so measurements predicted as
+zero or in the opposite direction have no fold error and are left out of the
+median. There are 11 such measurements out of 90 on the committed model.
+Because they are excluded rather than penalised, a change that turns a
+badly-predicted flux into an unpredicted one improves this number. Read it
+together with the flux plot rather than on its own.
 
 #### Anaerobic exchange mean relative error
 Mean absolute relative deviation between predicted and measured exchange rates

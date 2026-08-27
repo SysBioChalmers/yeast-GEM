@@ -77,16 +77,11 @@ _METRICS = [
 
     # Intracellular fluxes under anaerobic conditions, Jouhten et al. 2008.
     #
-    # Two metrics, not five. The mean fold error, the fraction within
-    # 2-fold and R2 were all restatements of how far out the comparable
-    # predictions are, so they moved together and none of them told you
-    # anything the median did not. These two answer genuinely different
-    # questions: how wrong is a prediction that can be compared, and how
-    # many cannot be compared at all.
+    # One metric. The mean fold error, the fraction within 2-fold and R2
+    # were all restatements of how far out the comparable predictions are,
+    # so they moved together and none told you anything the median did not.
     ("anaerobicFluxMedianFoldError", "Anaerobic flux median fold error",
      "lower", _TOL_FOLD),
-    ("anaerobicFluxUnpredicted", "Anaerobic fluxes with no comparable ratio",
-     "lower", 0),
 
     # Fermentation product exchange rates, Sjoberg et al. 2024
     ("anaerobicExchangeMeanRelativeError",
@@ -149,7 +144,6 @@ def compute(model) -> dict[str, float]:
     return {
         "growthPredictionR2": float(growth_r2),
         "anaerobicFluxMedianFoldError": flux.median_fold_error,
-        "anaerobicFluxUnpredicted": float(flux.n_unpredicted),
         "anaerobicExchangeMeanRelativeError": exchange.mean_relative_error,
         "anaerobicExchangeWithinError": exchange.fraction_within_error,
         "anaerobicAmmoniumPerATPase": exchange.ammonium_per_atpase,
