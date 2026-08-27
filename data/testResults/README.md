@@ -36,7 +36,7 @@ by itself mean the branch is wrong, since a curation can legitimately trade one
 finding for another.
 
 **At release**, `increaseVersion.m` regenerates the summary table below along
-with `growth.md`, `growth.png` and `essentialGenes.md`, recording where the
+with `growth.md`, `growth.png` and `essentialGenes.tsv`, recording where the
 model stood for that version.
 
 ## 2. Latest release results
@@ -72,8 +72,9 @@ within their experimental error.
 ## 3. What each check means
 
 The headings below match the check names in the pull-request comment exactly,
-so a name there links straight to its explanation here. Each count links to the
-file in this folder that lists the entries behind it.
+so a name there links straight to its explanation here — and to the section of
+the same name in [`qc_findings.md`](qc_findings.md), which lists the entries
+behind the count.
 
 ### Model checks
 
@@ -87,32 +88,29 @@ Reactions sharing identical stoichiometry and direction. Keyed on the
 metabolite/coefficient set together with reversibility, so a forward-only and a
 reversible copy of the same conversion are counted as different reactions
 rather than conflated. Reported as one row per reaction in each group larger
-than one. Detail: `qc_duplicate_reactions.csv`.
+than one.
 
 #### Unused metabolites
 Metabolites taking part in no reaction. Usually the residue of a removed
-reaction whose metabolites were left behind. Detail:
-`qc_orphan_metabolites.csv`.
+reaction whose metabolites were left behind.
 
 #### Unused genes
 Genes associated with no reaction, normally left over after a gene rule was
-edited. Detail: `qc_unused_genes.csv`.
+edited.
 
 #### Metabolites missing formula
 Metabolites with no chemical formula. These also make every reaction they
 appear in impossible to mass-balance, so a single missing formula shows up
-twice: once here, and once in the mass-balance count. Detail:
-`qc_missing_formula.csv`.
+twice: once here, and once in the mass-balance count.
 
 #### Metabolites missing charge
 Metabolites with no charge assigned, which likewise makes their reactions
-impossible to charge-balance. Detail: `qc_missing_charge.csv`.
+impossible to charge-balance.
 
 ### Mass/charge balance and MACAW
 
 #### Mass-imbalanced reactions
-Elemental imbalance, from cobrapy's `Reaction.check_mass_balance()`. Detail:
-`qc_mass_imbalanced.csv`.
+Elemental imbalance, from cobrapy's `Reaction.check_mass_balance()`.
 
 Three classes are excluded because they are not expected to balance:
 
@@ -128,27 +126,25 @@ model; including them would report 194 findings that nobody can act on, which
 is the same as reporting nothing.
 
 #### Charge-imbalanced reactions
-Charge imbalance, from the same call and with the same exclusions. Detail:
-`qc_charge_imbalanced.csv`.
+Charge imbalance, from the same call and with the same exclusions.
 
 #### Reactions flagged by MACAW dead-end test
 Reactions that cannot carry flux, or can only carry it in one direction,
 because a metabolite in them can only be produced or only consumed. From
-[MACAW](https://github.com/Devlin-Moyer/macaw). Detail: `macaw_results.csv`,
-column `dead_end_test`.
+[MACAW](https://github.com/Devlin-Moyer/macaw).
 
 #### Reactions flagged as MACAW duplicates
 Reactions MACAW considers redundant. It runs four sub-tests — exact duplicates,
 and pairs differing only in direction, only in coefficients, or only in redox
 partner — and writes one column per sub-test rather than a single verdict. The
 count is the union: a reaction flagged by any sub-test is counted once, since
-the sub-tests overlap. Detail: `macaw_results.csv`, columns `duplicate_test_*`.
+the sub-tests overlap.
 
-A sub-test that does not apply to a reaction is written as the literal string
-`N/A`, which is neither a null nor `ok`. Reading the CSV back with pandas turns
-it into a null, so the written file and the values the count is taken from
-disagree — which is why this count is checked against the frame in memory and
-never against the written file.
+A sub-test that does not apply to a reaction is reported by MACAW as the
+literal string `N/A`, which is neither a null nor `ok`. Reading MACAW's output
+back through pandas turns it into a null, so a file and the values a count is
+taken from can disagree — which is why this count is taken from the frame in
+memory and never from a written file.
 
 ### Annotations
 
@@ -157,7 +153,7 @@ Cross-references that do not match the identifier pattern their namespace
 declares at [identifiers.org](https://identifiers.org). Only namespaces with a
 pattern recorded in `model_qc.py` are checked; a namespace without one is left
 alone rather than guessed at, because a wrong pattern manufactures findings
-that look exactly like real ones. Detail: `qc_malformed_xrefs.csv`.
+that look exactly like real ones.
 
 #### Cross-refs inconsistent across compartments
 The same metabolite name appearing in several compartments with disagreeing
@@ -167,8 +163,7 @@ Read these before acting on them. A different ChEBI identifier across
 compartments is sometimes correct, where the compartments genuinely hold
 different protonation states or a zwitterion. The finding is that the name and
 the identifier disagree about whether they are the same species: either the
-names should differ, or the annotations should match. Detail:
-`qc_xrefs_across_compartments.csv`.
+names should differ, or the annotations should match.
 
 ### Validation metrics
 
@@ -213,7 +208,7 @@ move is reported but never counted as a regression.
 `essentialGenes.m` deletes each gene in turn on Kennedy synthetic complete
 medium and compares predicted viability against the Stanford yeast deletion
 collection. Higher is better. The per-gene lists are in
-[essentialGenes.md](essentialGenes.md).
+[essentialGenes.tsv](essentialGenes.tsv).
 
 Note that the deletion collection was screened on complex medium supplemented
 for genetic markers, so it is not ideal ground truth; it is most useful for
@@ -233,35 +228,35 @@ Genes predicted lethal that are viable in the collection. Lower is better.
 
 ## 4. Files in this folder
 
-Regenerated by CI on each pull request, and committed so that a change in a
-finding is visible in the pull request's own diff rather than only in a comment
-that later disappears:
+Alphabetically. Regenerated by CI on each pull request and committed, so that a
+change in a finding shows in the pull request's own diff rather than only in a
+comment that later scrolls away:
 
 | File | Holds |
 |---|---|
-| `qc_metrics.tsv` | every structural/balance/annotation count, as `key<TAB>value` |
+| `qc_findings.md` | every entry behind every count, one section per check |
+| `qc_metrics.tsv` | every structural, balance and annotation count, as `key<TAB>value` |
 | `validation_metrics.tsv` | every validation metric, same format |
-| `qc_duplicate_reactions.csv` | duplicate reaction groups |
-| `qc_orphan_metabolites.csv` | metabolites in no reaction |
-| `qc_unused_genes.csv` | genes in no reaction |
-| `qc_missing_formula.csv` | metabolites with no formula |
-| `qc_missing_charge.csv` | metabolites with no charge |
-| `qc_mass_imbalanced.csv` | reaction, name, elemental imbalance |
-| `qc_charge_imbalanced.csv` | reaction, name, charge imbalance |
-| `qc_malformed_xrefs.csv` | kind, id, namespace, offending value |
-| `qc_xrefs_across_compartments.csv` | metabolite name, namespace, per-compartment values |
-| `macaw_results.csv` | MACAW's full per-reaction output, all sub-tests |
 
-A check that found nothing writes no file, so the absence of a CSV means a
-count of zero.
+`qc_findings.md` keeps all its section headings whether or not the check found
+anything: an empty section reads `_None._`. One file with a fixed set of
+sections diffs far better than a CSV per check that appears and disappears —
+a check going clean shows as rows vanishing under a heading that stays put,
+rather than as a deleted file.
 
 Regenerated at release by `increaseVersion.m`:
 
 | File | Holds |
 |---|---|
+| `essentialGenes.tsv` | one row per gene, sorted, with `TP`/`TN`/`FP`/`FN` |
+| `growth.md` | measured against predicted growth, per condition |
+| `growth.png` | the same, as a figure |
 | `README.md` | the summary table in section 2 |
-| `growth.md`, `growth.png` | measured against predicted growth, per condition |
-| `essentialGenes.md` | the per-gene essentiality lists |
+
+`essentialGenes.tsv` is one sorted table rather than four lists of gene names,
+so a gene changing category is a one-line diff. In the list form the gene moved
+between sections, which showed as two edits far apart in the file and made a
+single reclassification easy to miss.
 
 ## 5. Not yet implemented
 

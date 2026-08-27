@@ -76,15 +76,22 @@ sqrt((n_tp + n_fp)*(n_tp + n_fn)*(n_tn + n_fp)*(n_tn + n_fn));
 geoMean = (sensitivity * specificity)^.5;
 
 if writeOutput
-    fid = fopen('../../data/testResults/essentialGenes.md','w');
-    fprintf(fid,'%s\n','## False non-essential genes');
-    fprintf(fid,'%s\n',fp{:});
-    fprintf(fid,'%s\n','## False essential genes');
-    fprintf(fid,'%s\n',fn{:});
-    fprintf(fid,'%s\n','## True non-essential genes');
-    fprintf(fid,'%s\n',tp{:});
-    fprintf(fid,'%s\n','## True essential genes');
-    fprintf(fid,'%s\n',tn{:});
+    %One row per gene, sorted by gene name, with its classification in the
+    %second column. Written this way rather than as four lists so that a
+    %gene changing category is a one-line diff: in the list form the gene
+    %moved between sections, which showed as two edits far apart in the
+    %file and made a single reclassification hard to see.
+    genes = [tp; tn; fp; fn];
+    class = [repmat({'TP'},numel(tp),1); repmat({'TN'},numel(tn),1); ...
+             repmat({'FP'},numel(fp),1); repmat({'FN'},numel(fn),1)];
+    [genes,order] = sort(genes);
+    class = class(order);
+
+    fid = fopen('../../data/testResults/essentialGenes.tsv','w');
+    fprintf(fid,'gene\tclassification\n');
+    for i = 1:numel(genes)
+        fprintf(fid,'%s\t%s\n',genes{i},class{i});
+    end
     fclose(fid);
 end
 

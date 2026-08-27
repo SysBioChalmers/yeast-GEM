@@ -31,7 +31,6 @@ Usage:
 from __future__ import annotations
 
 import argparse
-import csv
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -188,6 +187,27 @@ def _balance(model):
     return mass_rows, charge_rows
 
 
+def _why_malformed(namespace: str, value: str) -> str:
+    """Say what is wrong with an identifier, not just that something is.
+
+    A row reading "chebi / ChEBI:15987" leaves the reader to work out that
+    the rest of the model writes CHEBI in capitals. Naming the likely
+    cause makes the finding actionable without opening the model.
+    """
+    expected = _XREF_PATTERNS[namespace]
+    prefix = namespace.split(".")[0]
+    if value.lower().startswith(f"{prefix.lower()}:"):
+        stripped = value.split(":", 1)[1]
+        if re.match(expected, stripped):
+            return f"remove the redundant '{value.split(':', 1)[0]}:' prefix"
+        return f"wrong case or prefix; expected to match {expected}"
+    if re.match(expected, value, flags=re.IGNORECASE):
+        return "correct apart from letter case"
+    if not any(c.isdigit() for c in value):
+        return "looks like a name rather than an identifier"
+    return f"does not match {expected}"
+
+
 def check_malformed_xrefs(model) -> tuple[int, list]:
     """Cross-references that do not match their namespace's pattern."""
     rows = []
@@ -199,8 +219,12 @@ def check_malformed_xrefs(model) -> tuple[int, list]:
         for entity in entities:
             for namespace, pattern in _XREF_PATTERNS.items():
                 for value in _values(entity.annotation, namespace):
-                    if not re.match(pattern, str(value)):
-                        rows.append((kind, entity.id, namespace, str(value)))
+                    text = str(value)
+                    if not re.match(pattern, text):
+                        rows.append((
+                            kind, entity.id, namespace, text,
+                            _why_malformed(namespace, text),
+                        ))
     return len(rows), rows
 
 
@@ -234,29 +258,33 @@ def check_xrefs_across_compartments(model) -> tuple[int, list]:
     return len(rows), rows
 
 
-def check_macaw(model, out_dir: Path) -> dict:
+def check_macaw(model):
     """MACAW dead-end and duplicate tests.
 
-    Optional: when MACAW is not installed the two rows are reported as
-    unavailable rather than as zero, so a missing dependency cannot be
-    mistaken for a clean result.
+    Returns ``(metrics, sections)``. When MACAW is not installed the two
+    metrics are absent rather than zero, so a missing dependency is
+    reported as "not run" instead of being mistaken for a clean result.
     """
+    empty_sections = [
+        ("Reactions flagged by MACAW dead-end test",
+         ("reaction", "finding"), []),
+        ("Reactions flagged as MACAW duplicates",
+         ("reaction", "sub-test", "duplicate of"), []),
+    ]
     try:
         from macaw.main import dead_end_test, duplicate_test
     except ImportError:
-        return {}
+        return {}, empty_sections
 
     dead_end_results, _edges = dead_end_test(model)
     duplicate_results, _dup_edges = duplicate_test(model)
     merged = dead_end_results.merge(duplicate_results)
-    merged.to_csv(out_dir / "macaw_results.csv", index=False)
 
     def _flagged(column):
         """Rows this column flags, as a boolean mask.
 
         A missing column is an error rather than zero: MACAW returning a
-        different shape than expected must not be reported as a clean
-        result.
+        different shape than expected must not be reported as clean.
         """
         if column not in merged.columns:
             raise KeyError(
@@ -264,9 +292,19 @@ def check_macaw(model, out_dir: Path) -> dict:
                 f"{sorted(merged.columns)}. The report would otherwise "
                 "show this check as clean without having run it."
             )
+        # Nulls are found with isna(), which is dtype-independent. See
+        # _NOT_A_FINDING for why the string form cannot be relied on.
         column_values = merged[column]
         text = column_values.astype(str).str.strip().str.lower()
         return ~(column_values.isna() | text.isin(_NOT_A_FINDING))
+
+    ids = merged["reaction_id"].astype(str)
+
+    dead_end_mask = _flagged("dead_end_test")
+    dead_end_rows = list(zip(
+        ids[dead_end_mask], merged["dead_end_test"][dead_end_mask].astype(str),
+        strict=True,
+    ))
 
     # duplicate_test writes one column per kind of duplicate -- exact,
     # same-but-for-direction, same-but-for-coefficients, redox -- and no
@@ -282,21 +320,33 @@ def check_macaw(model, out_dir: Path) -> dict:
             f"{sorted(merged.columns)}."
         )
     duplicates = None
+    duplicate_rows = []
     for column in duplicate_columns:
         mask = _flagged(column)
         # Per-column counts are printed, not just the union, because the
         # union alone gives no way to tell a real finding from a column
         # being misread: the run that reported every reaction as a
         # duplicate looked identical to a real one in the summary.
-        sample = sorted({str(v) for v in merged[column].head(50)})[:3]
         print(f"    {column}: dtype={merged[column].dtype} "
-              f"flagged={int(mask.sum())} sample={sample}")
+              f"flagged={int(mask.sum())}")
+        kind = column.replace("duplicate_test_", "")
+        duplicate_rows += list(zip(
+            ids[mask], [kind] * int(mask.sum()),
+            merged[column][mask].astype(str), strict=True,
+        ))
         duplicates = mask if duplicates is None else (duplicates | mask)
 
-    return {
-        "macaw_dead_end": int(_flagged("dead_end_test").sum()),
+    metrics = {
+        "macaw_dead_end": int(dead_end_mask.sum()),
         "macaw_duplicates": int(duplicates.sum()),
     }
+    sections = [
+        ("Reactions flagged by MACAW dead-end test",
+         ("reaction", "finding"), dead_end_rows),
+        ("Reactions flagged as MACAW duplicates",
+         ("reaction", "sub-test", "duplicate of"), duplicate_rows),
+    ]
+    return metrics, sections
 
 
 # (metric key, comment label, function)
@@ -319,18 +369,47 @@ _HEADERS = {
     "missing_formula": ("metabolite", "name"),
     "missing_charge": ("metabolite", "name"),
     "duplicate_reactions": ("group", "reaction", "name", "equation"),
-    "malformed_xrefs": ("kind", "id", "namespace", "value"),
+    "malformed_xrefs": ("kind", "id", "namespace", "value", "problem"),
     "xrefs_across_compartments": ("metabolite name", "namespace", "values"),
     "mass_imbalanced": ("reaction", "name", "imbalance"),
     "charge_imbalanced": ("reaction", "name", "charge"),
 }
 
 
-def _write_csv(path: Path, header, rows) -> None:
-    with path.open("w", newline="", encoding="utf-8") as handle:
-        writer = csv.writer(handle)
-        writer.writerow(header)
-        writer.writerows(rows)
+def _write_findings(path: Path, sections: list[tuple[str, tuple, list]]) -> None:
+    """Write every check's entries into one markdown file.
+
+    One file with a fixed set of sections, rather than a CSV per check that
+    only appears when something is found. A check going from some findings
+    to none then shows as rows disappearing under a heading that stays put,
+    instead of a whole file being added or deleted, and the order of the
+    sections never moves.
+    """
+    lines = [
+        "# Model QC findings",
+        "",
+        "Generated by `model_qc.py` on every pull request. One section per",
+        "check, always present: an empty section means the check found",
+        "nothing, not that it did not run. See",
+        "[README.md](README.md) for what each check means.",
+        "",
+    ]
+    for label, header, rows in sections:
+        lines += [f"## {label}", ""]
+        if not rows:
+            lines += ["_None._", ""]
+            continue
+        lines += [
+            "| " + " | ".join(header) + " |",
+            "|" + "|".join("---" for _ in header) + "|",
+        ]
+        # Sorted so that the file is a function of the findings alone and
+        # not of the order the model happened to be traversed in.
+        for row in sorted(rows, key=lambda r: tuple(str(v) for v in r)):
+            cells = [str(v).replace("|", "\\|") for v in row]
+            lines.append("| " + " | ".join(cells) + " |")
+        lines.append("")
+    path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
 def run(model_path: Path, out_dir: Path) -> dict:
@@ -341,23 +420,29 @@ def run(model_path: Path, out_dir: Path) -> dict:
         model = cobra.io.read_sbml_model(str(model_path))
 
     metrics: dict[str, float] = {}
-    for key, _label, function in _CHECKS:
+    sections: list[tuple[str, tuple, list]] = []
+    for key, label, function in _CHECKS:
         value, rows = function(model)
         metrics[key] = value
-        if rows:
-            _write_csv(out_dir / f"qc_{key}.csv", _HEADERS[key], rows)
+        if key in _HEADERS:
+            sections.append((label, _HEADERS[key], rows))
 
     mass_rows, charge_rows = _balance(model)
     metrics["mass_imbalanced"] = len(mass_rows)
     metrics["charge_imbalanced"] = len(charge_rows)
-    if mass_rows:
-        _write_csv(out_dir / "qc_mass_imbalanced.csv",
-                   _HEADERS["mass_imbalanced"], mass_rows)
-    if charge_rows:
-        _write_csv(out_dir / "qc_charge_imbalanced.csv",
-                   _HEADERS["charge_imbalanced"], charge_rows)
+    sections.append(
+        ("Mass-imbalanced reactions", _HEADERS["mass_imbalanced"], mass_rows)
+    )
+    sections.append(
+        ("Charge-imbalanced reactions", _HEADERS["charge_imbalanced"],
+         charge_rows)
+    )
 
-    metrics.update(check_macaw(model, out_dir))
+    macaw_metrics, macaw_sections = check_macaw(model)
+    metrics.update(macaw_metrics)
+    sections += macaw_sections
+
+    _write_findings(out_dir / "qc_findings.md", sections)
 
     with (out_dir / "qc_metrics.tsv").open("w", encoding="utf-8") as handle:
         for key in sorted(metrics):

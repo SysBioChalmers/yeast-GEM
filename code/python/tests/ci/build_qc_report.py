@@ -27,36 +27,27 @@ from __future__ import annotations
 import argparse
 from pathlib import Path
 
-# (metric key, comment label, kind, detail CSV)
+# (metric key, comment label, kind)
 _MODEL_ROWS = [
-    ("growth", "Growth (biomass producible)", "growth", None),
-    ("duplicate_reactions", "Exact-duplicate reaction groups", "count",
-     "qc_duplicate_reactions.csv"),
-    ("orphan_metabolites", "Unused metabolites", "count",
-     "qc_orphan_metabolites.csv"),
-    ("unused_genes", "Unused genes", "count", "qc_unused_genes.csv"),
-    ("missing_formula", "Metabolites missing formula", "count",
-     "qc_missing_formula.csv"),
-    ("missing_charge", "Metabolites missing charge", "count",
-     "qc_missing_charge.csv"),
+    ("growth", "Growth (biomass producible)", "growth"),
+    ("duplicate_reactions", "Exact-duplicate reaction groups", "count"),
+    ("orphan_metabolites", "Unused metabolites", "count"),
+    ("unused_genes", "Unused genes", "count"),
+    ("missing_formula", "Metabolites missing formula", "count"),
+    ("missing_charge", "Metabolites missing charge", "count"),
 ]
 
 _BALANCE_ROWS = [
-    ("mass_imbalanced", "Mass-imbalanced reactions", "count",
-     "qc_mass_imbalanced.csv"),
-    ("charge_imbalanced", "Charge-imbalanced reactions", "count",
-     "qc_charge_imbalanced.csv"),
-    ("macaw_dead_end", "Reactions flagged by MACAW dead-end test", "count",
-     "macaw_results.csv"),
-    ("macaw_duplicates", "Reactions flagged as MACAW duplicates", "count",
-     "macaw_results.csv"),
+    ("mass_imbalanced", "Mass-imbalanced reactions", "count"),
+    ("charge_imbalanced", "Charge-imbalanced reactions", "count"),
+    ("macaw_dead_end", "Reactions flagged by MACAW dead-end test", "count"),
+    ("macaw_duplicates", "Reactions flagged as MACAW duplicates", "count"),
 ]
 
 _ANNOTATION_ROWS = [
-    ("malformed_xrefs", "Malformed cross-references", "count",
-     "qc_malformed_xrefs.csv"),
+    ("malformed_xrefs", "Malformed cross-references", "count"),
     ("xrefs_across_compartments", "Cross-refs inconsistent across compartments",
-     "count", "qc_xrefs_across_compartments.csv"),
+     "count"),
 ]
 
 
@@ -134,7 +125,7 @@ def _icon(value: float, base: float | None, kind: str):
 
 def _render_rows(rows, current, base, url_base, detail_base, running):
     lines, regressions, warnings, pending, skipped, fatal = [], 0, 0, 0, 0, False
-    for key, label, kind, detail in rows:
+    for key, label, kind in rows:
         name = (
             f"[{label}]({url_base}/README.md#{_slug(label)})"
             if url_base else label
@@ -154,12 +145,11 @@ def _render_rows(rows, current, base, url_base, detail_base, running):
         value = current[key]
         delta, icon, regression, row_fatal = _icon(value, base.get(key), kind)
         text = f"{value:.4g}" if kind == "growth" else str(int(value))
-        # Counts link to their CSV only when those files are published
-        # somewhere. yeast-GEM does not commit them, so by default the
-        # count is plain text and the CSVs ride along as a run artifact;
-        # a broken link would be worse than no link.
-        if detail_base and detail and kind == "count" and value:
-            text = f"[{text}]({detail_base}/{detail})"
+        # A non-zero count links to its section in the findings file,
+        # which is addressed by the same slug as the README heading, so
+        # the link follows the label automatically.
+        if detail_base and kind == "count" and value:
+            text = f"[{text}]({detail_base}/qc_findings.md#{_slug(label)})"
         lines.append(f"| {name} | {text} | {delta} | {icon} |")
         regressions += regression
         warnings += icon == ":warning:"

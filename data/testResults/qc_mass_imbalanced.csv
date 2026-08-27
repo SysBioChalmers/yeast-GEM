@@ -1,9 +1,0 @@
-reaction,name,imbalance
-r_0137,"acylation of GPI inositol at 2 position, GPI-anchor assembly, step 3",C:-33;H:-58;N:-1;O:-18;P:-1;R:-2
-r_0438,ferrocytochrome-c:oxygen oxidoreductase,H:-0.633
-r_0439,ubiquinol:ferricytochrome c reductase,H:1.266
-r_0519,"GPI-anchor assembly, step 5",C:-6;H:-10;O:-5
-r_0520,"GPI-anchor assembly, step 6",C:-5;H:-10;N:-1;O:-4;P:-1
-r_0521,"GPI-anchor assembly, step 7",C:-6;H:-10;O:-5
-r_0522,"GPI-anchor assembly, step 8",C:-26;H:-47;O:-9;P:-1
-r_0523,"GPI-anchor assembly, step 9",C:41;H:38;N:8;O:-2;P:-1

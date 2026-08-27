@@ -193,8 +193,9 @@ jobs:
       - name: Update the tracked results
         run: |
           mkdir -p data/testResults
-          cp results/head/*.csv data/testResults/ 2>/dev/null || true
-          cp results/head/*.tsv data/testResults/ 2>/dev/null || true
+          cp results/head/qc_findings.md data/testResults/
+          cp results/head/qc_metrics.tsv data/testResults/
+          cp results/head/validation_metrics.tsv data/testResults/ 2>/dev/null || true
           ls -la data/testResults/
 
       - name: Render the report
