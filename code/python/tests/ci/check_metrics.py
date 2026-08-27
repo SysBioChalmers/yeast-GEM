@@ -53,6 +53,8 @@ _TOL_ACCURACY = 5e-3
 _TOL_GENE_COUNT = 2
 _TOL_RELATIVE_ERROR = 1e-2
 _TOL_RATIO = 5e-2
+_TOL_FOLD = 5e-2
+_TOL_FRACTION = 2e-2
 
 # (key, comment label, direction, tolerance)
 #
@@ -60,19 +62,54 @@ _TOL_RATIO = 5e-2
 # readable: a rising R² is good, a rising error is not, and a rising
 # false-negative count is not. A move within tolerance is reported as
 # unchanged.
+# (key, comment label, direction, tolerance)
+#
+# Ordered by test, not alphabetically, and written to file in this order:
+# reading the file top to bottom should walk through the tests the way
+# somebody would run them, rather than interleaving unrelated numbers
+# because their names happen to sort together.
+#
+# Keys name the test they belong to. "accuracy" and "exchange_within_error"
+# did not say accuracy of what, or which exchange -- readable only if you
+# already knew what the file contained.
+#
+# "direction" says which way is an improvement, which is what makes a
+# delta on a continuous metric readable: a rising R2 is a gain, a rising
+# error or fold error is not. A move within tolerance is reported as
+# unchanged, so solver noise does not read as a result.
 _METRICS = [
-    ("growth_r2", "Growth prediction R2", "higher", _TOL_R2),
-    ("anaerobic_flux_r2", "Anaerobic flux prediction R2", "higher", _TOL_R2),
-    ("exchange_mean_relative_error", "Anaerobic exchange mean relative error",
-     "lower", _TOL_RELATIVE_ERROR),
-    ("exchange_within_error", "Anaerobic exchange within error", "higher",
-     _TOL_RELATIVE_ERROR),
-    ("ammonium_per_atpase", "Ammonium per ATPase", "none", _TOL_RATIO),
-    ("accuracy", "Gene essentiality accuracy", "higher", _TOL_ACCURACY),
-    ("tp", "True non-essential genes", "higher", _TOL_GENE_COUNT),
-    ("tn", "True essential genes", "higher", _TOL_GENE_COUNT),
-    ("fp", "False non-essential genes", "lower", _TOL_GENE_COUNT),
-    ("fn", "False essential genes", "lower", _TOL_GENE_COUNT),
+    # Chemostat growth rates, Osterlund et al. 2013
+    ("growthPredictionR2", "Growth prediction R2", "higher", _TOL_R2),
+
+    # Intracellular fluxes under anaerobic conditions, Jouhten et al. 2008
+    ("anaerobicFluxMedianFoldError", "Anaerobic flux median fold error",
+     "lower", _TOL_FOLD),
+    ("anaerobicFluxMeanFoldError", "Anaerobic flux mean fold error",
+     "lower", _TOL_FOLD),
+    ("anaerobicFluxWithinTwoFold", "Anaerobic flux within 2-fold",
+     "higher", _TOL_FRACTION),
+    ("anaerobicFluxUnpredicted", "Anaerobic fluxes with no comparable ratio",
+     "lower", 0),
+    ("anaerobicFluxR2", "Anaerobic flux prediction R2", "higher", _TOL_R2),
+
+    # Fermentation product exchange rates, Sjoberg et al. 2024
+    ("anaerobicExchangeMeanRelativeError",
+     "Anaerobic exchange mean relative error", "lower", _TOL_RELATIVE_ERROR),
+    ("anaerobicExchangeWithinError", "Anaerobic exchange within error",
+     "higher", _TOL_RELATIVE_ERROR),
+    ("anaerobicAmmoniumPerATPase", "Ammonium per ATPase", "none", _TOL_RATIO),
+
+    # Single-gene deletions against the Stanford deletion collection
+    ("geneEssentialityAccuracy", "Gene essentiality accuracy", "higher",
+     _TOL_ACCURACY),
+    ("geneEssentialityTrueNonEssential", "True non-essential genes", "higher",
+     _TOL_GENE_COUNT),
+    ("geneEssentialityTrueEssential", "True essential genes", "higher",
+     _TOL_GENE_COUNT),
+    ("geneEssentialityFalseNonEssential", "False non-essential genes", "lower",
+     _TOL_GENE_COUNT),
+    ("geneEssentialityFalseEssential", "False essential genes", "lower",
+     _TOL_GENE_COUNT),
 ]
 
 # Row labels in the committed table, mapped to the keys used here.
@@ -104,26 +141,30 @@ def parse_results(path: Path) -> dict[str, float]:
 
 
 def compute(model) -> dict[str, float]:
-    """Every validation metric for one model."""
+    """Every validation metric for one model, keyed by test."""
     growth_r2 = model_tests.growth(model.copy())
     essential = model_tests.essential_genes(model.copy())
 
     anaerobic = model.copy()
     conditions.apply(anaerobic, "anaerobic")
-    anaerobic_r2, _mre = model_tests.anaerobic_flux_predictions(anaerobic)
+    flux = model_tests.anaerobic_flux_predictions(anaerobic)
     exchange = model_tests.plot_anaerobic(anaerobic, plot=False)
 
     return {
-        "growth_r2": float(growth_r2),
-        "anaerobic_flux_r2": float(anaerobic_r2),
-        "exchange_mean_relative_error": exchange.mean_relative_error,
-        "exchange_within_error": exchange.fraction_within_error,
-        "ammonium_per_atpase": exchange.ammonium_per_atpase,
-        "accuracy": float(essential.accuracy),
-        "tp": float(len(essential.tp)),
-        "tn": float(len(essential.tn)),
-        "fp": float(len(essential.fp)),
-        "fn": float(len(essential.fn)),
+        "growthPredictionR2": float(growth_r2),
+        "anaerobicFluxMedianFoldError": flux.median_fold_error,
+        "anaerobicFluxMeanFoldError": flux.mean_fold_error,
+        "anaerobicFluxWithinTwoFold": flux.fraction_within_two_fold,
+        "anaerobicFluxUnpredicted": float(flux.n_unpredicted),
+        "anaerobicFluxR2": flux.r2,
+        "anaerobicExchangeMeanRelativeError": exchange.mean_relative_error,
+        "anaerobicExchangeWithinError": exchange.fraction_within_error,
+        "anaerobicAmmoniumPerATPase": exchange.ammonium_per_atpase,
+        "geneEssentialityAccuracy": float(essential.accuracy),
+        "geneEssentialityTrueNonEssential": float(len(essential.tp)),
+        "geneEssentialityTrueEssential": float(len(essential.tn)),
+        "geneEssentialityFalseNonEssential": float(len(essential.fp)),
+        "geneEssentialityFalseEssential": float(len(essential.fn)),
     }
 
 
@@ -273,7 +314,11 @@ def main() -> int:
     if args.emit is not None:
         args.emit.parent.mkdir(parents=True, exist_ok=True)
         args.emit.write_text(
-            "".join(f"{k}\t{current[k]}\n" for k in sorted(current)),
+            # In _METRICS order, not sorted: the file should read as a walk
+            # through the tests, rather than interleaving unrelated numbers
+            # because their names happen to sort together.
+            "".join(f"{k}\t{current[k]}\n"
+                    for k, _label, _dir, _tol in _METRICS if k in current),
             encoding="utf-8",
         )
         print(f"Wrote {args.emit}")

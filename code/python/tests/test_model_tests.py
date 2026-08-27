@@ -47,9 +47,13 @@ def test_anaerobic_flux_predictions(model):
     pre-applied (mirrors the legacy MATLAB calling convention)."""
     anaerobic = model.copy()
     conditions.apply(anaerobic, "anaerobic")
-    r2, mre = model_tests.anaerobic_flux_predictions(anaerobic)
-    assert 0.5 <= r2 <= 1.0  # yeast9 typically lands ~0.95
-    assert 0 <= mre  # MRE is non-negative
+    result = model_tests.anaerobic_flux_predictions(anaerobic)
+    # Fold error is >= 1 by construction (1.0 is exact); yeast9 lands
+    # near 1.05 on the median.
+    assert 1.0 <= result.median_fold_error <= result.mean_fold_error
+    assert 0.0 <= result.fraction_within_two_fold <= 1.0
+    assert 0 <= result.n_unpredicted < result.n_measurements
+    assert 0.5 <= result.r2 <= 1.0
 
 
 def test_plot_anaerobic_returns_exchange_metrics(model):

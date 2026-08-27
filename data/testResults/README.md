@@ -47,6 +47,10 @@ model stood for that version.
 | Metric | Value |
 |---|---|
 | Growth prediction R2 | 0.9019066691398621 |
+| Anaerobic flux median fold error | 1.053461050692928 |
+| Anaerobic flux mean fold error | 1.2206904044120181 |
+| Anaerobic flux within 2-fold | 0.9240506329113924 |
+| Anaerobic fluxes with no comparable ratio | 11 |
 | Anaerobic flux prediction R2 | 0.9969544651425022 |
 | Anaerobic exchange mean relative error | 0.06454293960336684 |
 | Anaerobic exchange within error | 0.75 |
@@ -178,11 +182,47 @@ across aerobic and anaerobic, carbon- and nitrogen-limited conditions. Reported
 as the coefficient of determination about the line of identity. Higher is
 better. The per-condition plot is in [growth.md](growth.md).
 
-#### Anaerobic flux prediction R2
+#### Anaerobic flux median fold error
 `anaerobic_flux_predictions.m` fixes the glucose uptake rate to the measured
 value for each dataset and compares predicted intracellular fluxes, scaled to
-100 · v<sub>i</sub> / v<sub>glucose</sub>, against the measurements. Same
-definition of R2. Higher is better.
+100 · v<sub>i</sub> / v<sub>glucose</sub>, against the measurements of
+[Jouhten _et al._ (2008)](https://doi.org/10.1186/1752-0509-2-60).
+
+Reported as a fold error, `10^median(|log10(predicted/measured)|)`. A value of
+1.05 means the typical prediction is 5% out in either direction. Lower is
+better, and 1.0 is exact.
+
+Fold error rather than a difference, because these fluxes span three orders of
+magnitude — 0.1 to 163 in the scaled units — and being 2× out matters as much
+at a flux of 1 as at a flux of 100. A difference-based score answers "are the
+big fluxes right", which is nearly a restatement of the glucose constraint.
+
+#### Anaerobic flux mean fold error
+The same on the mean rather than the median, so a few badly-predicted fluxes
+show up. Where the mean is much the larger of the two, the error is
+concentrated in a handful of reactions rather than spread across all of them.
+
+#### Anaerobic flux within 2-fold
+The fraction of predictions inside a factor of two of the measurement, in
+either direction. Higher is better.
+
+#### Anaerobic fluxes with no comparable ratio
+Measurements for which no fold error exists: a flux measured as non-zero but
+predicted as zero, or predicted in the opposite direction.
+
+Counted rather than dropped. Both are worse errors than any finite fold error,
+and excluding them from the denominator would make every other score on this
+page improve as the model got worse. Lower is better.
+
+#### Anaerobic flux prediction R2
+The coefficient of determination about the line of identity, kept so that a
+release stays comparable with earlier ones.
+
+It is a poor summary of this fit and is not the headline number. The sum of
+squares is dominated by a handful of large glycolytic fluxes whose values
+follow from the glucose constraint and stoichiometry almost regardless of the
+model: on the committed model it reads 0.997 while the smaller half of the
+measurements is out by about 50%. Read the fold errors above instead.
 
 #### Anaerobic exchange mean relative error
 Mean absolute relative deviation between predicted and measured exchange rates
