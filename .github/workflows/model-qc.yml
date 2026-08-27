@@ -108,21 +108,7 @@ jobs:
           WLSACCESSID: ${{ secrets.GUROBI_WLSACCESSID }}
           WLSSECRET: ${{ secrets.GUROBI_WLSSECRET }}
           LICENSEID: ${{ secrets.GUROBI_LICENSEID }}
-        run: |
-          umask 077
-          licence="$HOME/gurobi.lic"
-          if [ -n "$LICENCE_FILE" ]; then
-            echo "$LICENCE_FILE" > "$licence"
-          elif [ -n "$WLSACCESSID" ] && [ -n "$WLSSECRET" ] && [ -n "$LICENSEID" ]; then
-            { echo "WLSACCESSID=$WLSACCESSID"
-              echo "WLSSECRET=$WLSSECRET"
-              echo "LICENSEID=$LICENSEID"
-            } > "$licence"
-          else
-            echo "No Gurobi licence configured; cobrapy will use GLPK."
-            exit 0
-          fi
-          echo "GRB_LICENSE_FILE=$licence" >> "$GITHUB_ENV"
+        run: python code/python/tests/ci/pipeline.py licence
 
       # The model differs between the two calls; the reference data (chemostat
       # measurements, the deletion collection, the anaerobic exchange rates)
@@ -146,6 +132,15 @@ jobs:
           name: validation-results
           path: results
           if-no-files-found: warn
+
+      # The two steps above are continue-on-error so that one failing side
+      # still uploads the other. Without this the job reported success
+      # having produced nothing at all -- which is how an exhausted Gurobi
+      # licence came to look like a passing run.
+      - name: Fail if neither side was measured
+        if: ${{ !cancelled() }}
+        run: |
+          python code/python/tests/ci/pipeline.py require             --any results/head/validation_metrics.tsv                   results/base/validation_metrics.tsv
 
   # Renders one comment from both jobs, commits the detail, then applies the
   # gate. Split out so that the comment is written once from everything rather
@@ -182,7 +177,12 @@ jobs:
         with:
           name: qc-results
           path: results
+      # continue-on-error: the metrics job may have produced nothing (a
+      # refused solver licence, say). The report then shows the validation
+      # rows as "not run", which is the honest outcome -- it must not take
+      # the whole report down with it.
       - uses: actions/download-artifact@v7
+        continue-on-error: true
         with:
           name: validation-results
           path: results
@@ -192,11 +192,7 @@ jobs:
       # change in them visible in the pull request's own diff.
       - name: Update the tracked results
         run: |
-          mkdir -p data/testResults
-          cp results/head/qc_findings.md data/testResults/
-          cp results/head/qc_metrics.tsv data/testResults/
-          cp results/head/validation_metrics.tsv data/testResults/ 2>/dev/null || true
-          ls -la data/testResults/
+          python code/python/tests/ci/pipeline.py collect             --source results/head --dest data/testResults
 
       - name: Render the report
         run: |
@@ -222,35 +218,14 @@ jobs:
 
       - name: Post the report
         if: github.event.pull_request.head.repo.full_name == github.repository
-        uses: actions/github-script@v9
-        with:
-          script: |
-            const fs = require('fs');
-            const marker = '<!-- MODEL-QC-COMMENT -->';
-            const body = marker + '\n' + fs.readFileSync('report.md', 'utf8');
-            const { owner, repo } = context.repo;
-            const issue_number = context.issue.number;
-            const comments = await github.paginate(github.rest.issues.listComments,
-              { owner, repo, issue_number });
-            const existing = comments.find(c => c.body && c.body.includes(marker));
-            if (existing) {
-              await github.rest.issues.updateComment({ owner, repo, comment_id: existing.id, body });
-            } else {
-              await github.rest.issues.createComment({ owner, repo, issue_number, body });
-            }
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          python code/python/tests/ci/pipeline.py comment             --repo "${{ github.repository }}"             --issue "${{ github.event.pull_request.number }}"             --body report.md
 
       # Raised last, after the detail is committed and the comment posted, so
       # a failure is always visible in both rather than only as a red cross on
       # a job whose output never got published.
-      - name: Fail if the model cannot grow
+      - name: Apply the merge gate
         run: |
-          growth=$(awk -F'\t' '$1 == "growth" { print $2 }' results/head/qc_metrics.tsv)
-          if [ -z "$growth" ]; then
-            echo "::error::the checks did not produce a growth value"
-            exit 1
-          fi
-          if awk "BEGIN { exit !($growth <= 1e-6) }"; then
-            echo "::error::the model cannot produce biomass (growth = $growth)"
-            exit 1
-          fi
-          echo "Growth $growth"
+          python code/python/tests/ci/pipeline.py gate             --metrics results/head/qc_metrics.tsv

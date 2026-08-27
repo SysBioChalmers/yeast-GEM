@@ -192,6 +192,38 @@ def render(current: dict, base: dict, base_ref: str, solver: str,
     return "\n".join(lines) + "\n"
 
 
+def _select_solver() -> str:
+    """Pick a solver that actually works, and say which.
+
+    cobrapy takes whatever optlang resolves, which is Gurobi whenever
+    gurobipy is importable -- including when the WLS licence is present but
+    refuses to issue a session. That failure surfaces much later as an
+    unreadable SBML file, because building the model is the first thing
+    that needs a solver, so it reads as a corrupt model rather than an
+    exhausted licence. Probing once here turns it into one clear line and
+    a working fallback.
+    """
+    import optlang
+    from cobra import Configuration
+
+    for name in ("gurobi", "glpk"):
+        if name not in getattr(optlang, "available_solvers", {}):
+            continue
+        if not optlang.available_solvers[name]:
+            continue
+        try:
+            interface = getattr(optlang, f"{name}_interface")
+            interface.Model()
+        except Exception as exc:  # licence refused, or a broken install
+            print(f"::warning::{name} is installed but unusable ({exc}); "
+                  "trying the next solver")
+            continue
+        Configuration().solver = name
+        print(f"Solver: {name}")
+        return name
+    raise SystemExit("::error::no usable LP solver is available")
+
+
 def _load(path: Path | None):
     if path is None:
         return read_yeast_model()
@@ -219,9 +251,8 @@ def main() -> int:
     parser.add_argument("--run-url", default="")
     args = parser.parse_args()
 
+    solver = _select_solver()
     model = _load(args.model)
-    solver = model.solver.interface.__name__
-    print(f"Solver: {solver}")
 
     print("Measuring this branch ...")
     current = compute(model)
