@@ -64,8 +64,8 @@ def essential_genes(
     model
         Model to test. Defaults to a fresh :func:`read_yeast_model` load.
     write_output
-        When True, save a markdown report to
-        ``data/testResults/essentialGenes.md``.
+        When True, save a sorted per-gene table to
+        ``data/testResults/essentialGenes.tsv``.
     processes
         Number of worker processes for the deletion scan. Defaults to 1,
         which runs in-process. cobrapy otherwise defaults to one worker
@@ -190,15 +190,23 @@ def _knockout_growth_ratio(
 
 
 def _write_report(result: EssentialGeneResult) -> None:
+    """Write one row per gene, sorted, with its classification.
+
+    Written this way rather than as four lists so that a gene changing
+    category is a one-line diff. In the list form the gene moved between
+    sections, which showed as two edits far apart in the file and made a
+    single reclassification hard to spot.
+    """
     out_dir = REPO_PATH / "data" / "testResults"
     out_dir.mkdir(parents=True, exist_ok=True)
-    md = []
-    md.append("## False non-essential genes")
-    md.extend(result.fp)
-    md.append("## False essential genes")
-    md.extend(result.fn)
-    md.append("## True non-essential genes")
-    md.extend(result.tp)
-    md.append("## True essential genes")
-    md.extend(result.tn)
-    (out_dir / "essentialGenes.md").write_text("\n".join(md) + "\n")
+    rows = sorted(
+        [(gene, label)
+         for label, genes in (("TP", result.tp), ("TN", result.tn),
+                              ("FP", result.fp), ("FN", result.fn))
+         for gene in genes]
+    )
+    (out_dir / "essentialGenes.tsv").write_text(
+        "gene\tclassification\n"
+        + "".join(f"{gene}\t{label}\n" for gene, label in rows),
+        encoding="utf-8",
+    )

@@ -13,12 +13,20 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v3
+        uses: actions/checkout@v7
 
       - name: Create .env
-        run: |
-          touch .env
-          cd /project
-          pip install -r code/requirements/ci-requirements.txt
-          python -c 'import code.io as io; model = io.read_yeast_model(make_bigg_compliant=True); io.write_yeast_model(model)'
-          memote run --ignore-git --solver-timeout 30
+        run: touch .env
+
+      - name: Install memote
+        run: pip install -r code/requirements/ci-requirements.txt
+
+      # memote scores annotations against BiGG-style identifiers, so the
+      # model is converted before it is run through the suite. This is why
+      # the score here is not comparable with one taken from the model as
+      # it is committed.
+      - name: Convert the model to BiGG-compliant identifiers
+        run: python -c 'import code.io as io; model = io.read_yeast_model(make_bigg_compliant=True); io.write_yeast_model(model)'
+
+      - name: Memote run
+        run: memote run --ignore-git --solver-timeout 30
