@@ -86,8 +86,6 @@ _METRICS = [
     # Fermentation product exchange rates, Sjoberg et al. 2024
     ("anaerobicExchangeMeanRelativeError",
      "Anaerobic exchange mean relative error", "lower", _TOL_RELATIVE_ERROR),
-    ("anaerobicExchangeWithinError", "Anaerobic exchange within error",
-     "higher", _TOL_RELATIVE_ERROR),
     ("anaerobicAmmoniumPerATPase", "Ammonium per ATPase", "none", _TOL_RATIO),
 
     # Single-gene deletions against the Stanford deletion collection
@@ -145,7 +143,6 @@ def compute(model) -> dict[str, float]:
         "growthPredictionR2": float(growth_r2),
         "anaerobicFluxMedianFoldError": flux.median_fold_error,
         "anaerobicExchangeMeanRelativeError": exchange.mean_relative_error,
-        "anaerobicExchangeWithinError": exchange.fraction_within_error,
         "anaerobicAmmoniumPerATPase": exchange.ammonium_per_atpase,
         "geneEssentialityAccuracy": float(essential.accuracy),
         "geneEssentialityTrueNonEssential": float(len(essential.tp)),

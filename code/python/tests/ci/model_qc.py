@@ -261,30 +261,38 @@ def check_xrefs_across_compartments(model) -> tuple[int, list]:
 def check_macaw(model):
     """MACAW dead-end and duplicate tests.
 
-    Returns ``(metrics, sections)``. When MACAW is not installed the two
+    Returns ``(metrics, sections)``. When MACAW is not installed the
     metrics are absent rather than zero, so a missing dependency is
     reported as "not run" instead of being mistaken for a clean result.
+
+    Reported per metabolite rather than per reaction for the dead-end
+    test. MACAW flags a reaction for each dead-end metabolite in it, so
+    one gap is counted many times -- a single metabolite here accounts
+    for 49 reactions. The metabolite is what a curator fixes, either by
+    adding the missing reaction or correcting an annotation, and the
+    blocked reactions follow from it.
     """
-    empty_sections = [
-        ("Reactions flagged by MACAW dead-end test",
-         ("reaction", "finding"), []),
+    empty = [
+        ("Dead-end metabolites", ("metabolite", "name", "reactions blocked"), []),
+        ("Reactions that can only carry flux one way",
+         ("reaction", "name", "finding"), []),
         ("Reactions flagged as MACAW duplicates",
-         ("reaction", "sub-test", "duplicate of"), []),
+         ("reaction", "name", "why", "duplicates"), []),
     ]
     try:
         from macaw.main import dead_end_test, duplicate_test
     except ImportError:
-        return {}, empty_sections
+        return {}, empty
 
     dead_end_results, _edges = dead_end_test(model)
     duplicate_results, _dup_edges = duplicate_test(model)
     merged = dead_end_results.merge(duplicate_results)
 
-    def _flagged(column):
-        """Rows this column flags, as a boolean mask.
+    def _cells(column):
+        """Stripped text and a mask of the rows that say something.
 
-        A missing column is an error rather than zero: MACAW returning a
-        different shape than expected must not be reported as clean.
+        Nulls are found with isna(), which is dtype-independent; see
+        _NOT_A_FINDING for why the string form cannot be relied on.
         """
         if column not in merged.columns:
             raise KeyError(
@@ -292,25 +300,51 @@ def check_macaw(model):
                 f"{sorted(merged.columns)}. The report would otherwise "
                 "show this check as clean without having run it."
             )
-        # Nulls are found with isna(), which is dtype-independent. See
-        # _NOT_A_FINDING for why the string form cannot be relied on.
-        column_values = merged[column]
-        text = column_values.astype(str).str.strip().str.lower()
-        return ~(column_values.isna() | text.isin(_NOT_A_FINDING))
+        values = merged[column]
+        text = values.astype(str).str.strip()
+        return text, ~(values.isna() | text.str.lower().isin(_NOT_A_FINDING))
+
+    def _name(identifier, lookup):
+        try:
+            return lookup.get_by_id(identifier).name or ""
+        except KeyError:
+            return ""
 
     ids = merged["reaction_id"].astype(str)
 
-    dead_end_mask = _flagged("dead_end_test")
-    dead_end_rows = list(zip(
-        ids[dead_end_mask], merged["dead_end_test"][dead_end_mask].astype(str),
-        strict=True,
-    ))
+    # dead_end_test says either "ok", a direction phrase, or the dead-end
+    # metabolites in that reaction. The three mean different things.
+    dead_end_text, dead_end_flagged = _cells("dead_end_test")
+    blocked_by = defaultdict(list)
+    direction_rows = []
+    for rxn_id, value in zip(ids[dead_end_flagged],
+                             dead_end_text[dead_end_flagged], strict=True):
+        if value.lower().startswith("only when"):
+            direction_rows.append((rxn_id, _name(rxn_id, model.reactions), value))
+            continue
+        for met_id in (m.strip() for m in value.split(";")):
+            if met_id:
+                blocked_by[met_id].append(rxn_id)
 
-    # duplicate_test writes one column per kind of duplicate -- exact,
-    # same-but-for-direction, same-but-for-coefficients, redox -- and no
-    # single summary column. A reaction flagged by any of them is a
-    # duplicate, and they overlap, so the count is the union rather than
-    # the sum.
+    dead_end_rows = [
+        (met_id, _name(met_id, model.metabolites), len(reactions))
+        for met_id, reactions in blocked_by.items()
+    ]
+
+    # duplicate_test writes one column per kind of duplicate and no single
+    # verdict. The column names are MACAW's internal ones; each is given
+    # the sentence from its documentation so the finding can be read
+    # without going and looking the test up.
+    reasons = {
+        "duplicate_test_exact":
+            "same metabolites and coefficients",
+        "duplicate_test_directions":
+            "same metabolites, opposite direction or reversibility",
+        "duplicate_test_coefficients":
+            "same metabolites, different coefficients",
+        "duplicate_test_redox":
+            "same conversion using a different electron carrier",
+    }
     duplicate_columns = [
         c for c in merged.columns if c.startswith("duplicate_test")
     ]
@@ -319,32 +353,38 @@ def check_macaw(model):
             f"MACAW returned no duplicate_test* columns; got "
             f"{sorted(merged.columns)}."
         )
+
     duplicates = None
     duplicate_rows = []
     for column in duplicate_columns:
-        mask = _flagged(column)
-        # Per-column counts are printed, not just the union, because the
-        # union alone gives no way to tell a real finding from a column
-        # being misread: the run that reported every reaction as a
-        # duplicate looked identical to a real one in the summary.
-        print(f"    {column}: dtype={merged[column].dtype} "
-              f"flagged={int(mask.sum())}")
-        kind = column.replace("duplicate_test_", "")
-        duplicate_rows += list(zip(
-            ids[mask], [kind] * int(mask.sum()),
-            merged[column][mask].astype(str), strict=True,
-        ))
+        text, mask = _cells(column)
+        # The redox sub-test needs redox_pairs and proton_ids, which are
+        # not passed, so MACAW writes N/A for every reaction. Saying so is
+        # the point: counting it as zero would claim a check that never
+        # ran.
+        if not mask.any() and column == "duplicate_test_redox":
+            print(f"    {column}: not run (no redox pairs configured)")
+            continue
+        print(f"    {column}: flagged={int(mask.sum())}")
+        for rxn_id, other in zip(ids[mask], text[mask], strict=True):
+            duplicate_rows.append((
+                rxn_id, _name(rxn_id, model.reactions),
+                reasons.get(column, column), other,
+            ))
         duplicates = mask if duplicates is None else (duplicates | mask)
 
     metrics = {
-        "macaw_dead_end": int(dead_end_mask.sum()),
-        "macaw_duplicates": int(duplicates.sum()),
+        "macaw_dead_end_metabolites": len(dead_end_rows),
+        "macaw_single_direction": len(direction_rows),
+        "macaw_duplicates": int(duplicates.sum()) if duplicates is not None else 0,
     }
     sections = [
-        ("Reactions flagged by MACAW dead-end test",
-         ("reaction", "finding"), dead_end_rows),
+        ("Dead-end metabolites",
+         ("metabolite", "name", "reactions blocked"), dead_end_rows),
+        ("Reactions that can only carry flux one way",
+         ("reaction", "name", "finding"), direction_rows),
         ("Reactions flagged as MACAW duplicates",
-         ("reaction", "sub-test", "duplicate of"), duplicate_rows),
+         ("reaction", "name", "why", "duplicates"), duplicate_rows),
     ]
     return metrics, sections
 

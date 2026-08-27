@@ -49,7 +49,6 @@ model stood for that version.
 | Growth prediction R2 | 0.9019066691398621 |
 | Anaerobic flux median fold error | 1.053461050692928 |
 | Anaerobic exchange mean relative error | 0.06454293960336684 |
-| Anaerobic exchange within error | 0.75 |
 | Ammonium per ATPase | 1.071951239704032 |
 | Gene essentiality accuracy | 0.9024390243902439 |
 | True non-essential genes | 934 |
@@ -128,23 +127,51 @@ is the same as reporting nothing.
 #### Charge-imbalanced reactions
 Charge imbalance, from the same call and with the same exclusions.
 
-#### Reactions flagged by MACAW dead-end test
-Reactions that cannot carry flux, or can only carry it in one direction,
-because a metabolite in them can only be produced or only consumed. From
-[MACAW](https://github.com/Devlin-Moyer/macaw).
+#### Dead-end metabolites
+Metabolites that every reaction they appear in can only produce, or only
+consume, so no steady-state flux through them is possible. From
+[MACAW](https://github.com/Devlin-Moyer/macaw)'s dead-end test. The commonest
+cause is a missing reaction; sometimes it is a metabolite annotated as two
+different species that should be one.
+
+Counted per metabolite rather than per blocked reaction. MACAW flags a reaction
+for each dead-end metabolite in it, so one gap is counted many times: on the
+committed model 943 dead-end metabolites account for 1753 flagged reactions,
+and a single metabolite accounts for 49 of them. The metabolite is what gets
+fixed, and the blocked reactions follow. `qc_findings.md` lists each metabolite
+with its name and how many reactions it blocks, so the ones worth attention
+sort to the top.
+
+#### Reactions that can only carry flux one way
+Reversible reactions that are not themselves dead ends, but that have a
+reactant or product which every *other* reaction it appears in can only consume
+or only produce. The reaction can therefore only ever run in one direction, and
+MACAW reports which: `only when going forwards` or `only when going backwards`.
+
+Either the reversibility is wrong and should be corrected, or something is
+missing that would let the metabolite move the other way. This is reported
+separately from the dead-end count because it is a different fix.
 
 #### Reactions flagged as MACAW duplicates
-Reactions MACAW considers redundant. It runs four sub-tests — exact duplicates,
-and pairs differing only in direction, only in coefficients, or only in redox
-partner — and writes one column per sub-test rather than a single verdict. The
-count is the union: a reaction flagged by any sub-test is counted once, since
-the sub-tests overlap.
+Reactions MACAW considers possible duplicates of each other. It runs four
+sub-tests and writes one column per sub-test rather than a single verdict; the
+count is the union, since a reaction can be flagged by more than one.
+`qc_findings.md` names the reaction it duplicates and why, in these terms:
 
-A sub-test that does not apply to a reaction is reported by MACAW as the
-literal string `N/A`, which is neither a null nor `ok`. Reading MACAW's output
-back through pandas turns it into a null, so a file and the values a count is
-taken from can disagree — which is why this count is taken from the frame in
-memory and never from a written file.
+| Reported as | Means |
+|---|---|
+| same metabolites and coefficients | identical stoichiometry, possibly different genes |
+| same metabolites, opposite direction or reversibility | one runs the other way, or one is reversible and the other is not |
+| same metabolites, different coefficients | same participants, different stoichiometry |
+| same conversion using a different electron carrier | the same redox chemistry with, say, NAD(H) in one and NADP(H) in the other |
+
+Not every one is a mistake: separate irreversible importer and exporter
+reactions for the same metabolite are legitimate when different genes encode
+them, as is an enzyme that genuinely uses either NAD(H) or NADP(H).
+
+The redox sub-test needs a list of oxidised/reduced carrier pairs, which is not
+currently configured, so MACAW writes `N/A` for it and it is reported as not
+run rather than as zero findings.
 
 ### Annotations
 
@@ -217,10 +244,6 @@ No single R<sup>2</sup> is reported for these: the product rates are in
 mmol/gDW/h and growth is in 1/h, so pooling them into one coefficient of
 determination would not mean anything, whereas the relative deviation per
 measurement is comparable across units.
-
-#### Anaerobic exchange within error
-The fraction of those predictions falling inside the experimental error of the
-measurement. Higher is better.
 
 #### Ammonium per ATPase
 Ammonium uptake divided by plasma-membrane ATPase flux. Ammonium uptake runs

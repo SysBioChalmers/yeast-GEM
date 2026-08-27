@@ -40,7 +40,9 @@ _MODEL_ROWS = [
 _BALANCE_ROWS = [
     ("mass_imbalanced", "Mass-imbalanced reactions", "count"),
     ("charge_imbalanced", "Charge-imbalanced reactions", "count"),
-    ("macaw_dead_end", "Reactions flagged by MACAW dead-end test", "count"),
+    ("macaw_dead_end_metabolites", "Dead-end metabolites", "count"),
+    ("macaw_single_direction",
+     "Reactions that can only carry flux one way", "count"),
     ("macaw_duplicates", "Reactions flagged as MACAW duplicates", "count"),
 ]
 
@@ -57,14 +59,22 @@ _ANNOTATION_ROWS = [
 # delta on a continuous metric readable: a rising R2 is a gain, a rising
 # error or false-call count is not. A move within tolerance is reported
 # as unchanged, so solver noise does not read as a change.
+# Validation metrics whose ideal value is zero. These follow the same icon
+# rule as the QC counts -- non-zero is a standing finding worth a warning
+# even when this branch did not make it worse -- rather than showing a
+# green tick merely because nothing moved. The others have no meaningful
+# zero: a growth R2 of 0 would be a disaster, not a clean result.
+_ZERO_IS_IDEAL = {
+    "geneEssentialityFalseNonEssential",
+    "geneEssentialityFalseEssential",
+}
+
 _VALIDATION_ROWS = [
     ("growthPredictionR2", "Growth prediction R2", "higher", 5e-3),
     ("anaerobicFluxMedianFoldError", "Anaerobic flux median fold error",
      "lower", 5e-2),
     ("anaerobicExchangeMeanRelativeError",
      "Anaerobic exchange mean relative error", "lower", 1e-2),
-    ("anaerobicExchangeWithinError", "Anaerobic exchange within error",
-     "higher", 1e-2),
     ("anaerobicAmmoniumPerATPase", "Ammonium per ATPase", "none", 5e-2),
     ("geneEssentialityAccuracy", "Gene essentiality accuracy", "higher", 5e-3),
     ("geneEssentialityTrueNonEssential", "True non-essential genes",
@@ -182,13 +192,20 @@ def _render_validation(current, base, url_base, base_ref):
             continue
         change = value - base[key]
         if abs(change) <= tol:
-            delta, icon = "0", ":white_check_mark:"
+            delta = "0"
+            icon = (":warning:" if key in _ZERO_IS_IDEAL and value > 0
+                    else ":white_check_mark:")
         elif direction == "none":
             delta, icon = f"{change:+.4g}", ":warning:"
         else:
             improved = (change > 0) if direction == "higher" else (change < 0)
             delta = f"{change:+.4g}"
-            icon = ":white_check_mark:" if improved else ":x:"
+            if not improved:
+                icon = ":x:"
+            elif key in _ZERO_IS_IDEAL and value > 0:
+                icon = ":warning:"
+            else:
+                icon = ":white_check_mark:"
             regressions += not improved
         lines.append(
             f"| {name} | {value:.6g} | {base[key]:.6g} | {delta} | {icon} |"
