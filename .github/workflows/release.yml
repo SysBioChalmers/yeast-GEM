@@ -192,7 +192,12 @@ jobs:
         run: touch .env
 
       - name: Install memote
-        run: pip install -r code/requirements/requirements.txt
+        run: |
+          # code/requirements/requirements.txt is a 2022 pip-compile freeze;
+          # bleach==5.0.0's metadata is malformed and pip>=24.1 rejects it
+          # outright instead of tolerating it as older pip did.
+          python -m pip install "pip<24.1"
+          pip install -r code/requirements/requirements.txt
 
       # Visible before approval rather than discovered after merge --
       # the whole point of moving this here from the release: published
