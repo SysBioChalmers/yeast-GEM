@@ -125,9 +125,9 @@ def _stamp_yaml(version: str) -> None:
     text = _YEAST_YML.read_text(encoding="utf-8")
     today = datetime.now(UTC).strftime("%Y-%m-%d")
     substitutions = {
-        r'^    id: ".*"$': f'    id: "yeastGEM_v{version}"',
-        r'^    version: ".*"$': f'    version: "{version}"',
-        r'^    date: ".*"$': f'    date: "{today}"',
+        r'^  - id: .*$': f'  - id: yeastGEM_v{version}',
+        r'^  - version: ".*"$': f'  - version: "{version}"',
+        r'^  - date: ".*"$': f'  - date: "{today}"',
     }
     for pattern, replacement in substitutions.items():
         text, count = re.subn(pattern, replacement, text, count=1, flags=re.M)
