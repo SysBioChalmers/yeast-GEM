@@ -4,8 +4,8 @@
   - name: The Consensus Genome-Scale Metabolic Model of Yeast
   - version: ''
   - date: '2026-08-23'
-  - defaultLB: '-1000'
-  - defaultUB: '1000'
+  - defaultLB: -1000.0
+  - defaultUB: 1000.0
   - givenName: Eduard
   - familyName: Kerkhoven
   - email: eduardk@chalmers.se
