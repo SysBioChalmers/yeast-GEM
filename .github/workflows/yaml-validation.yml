@@ -19,7 +19,14 @@ jobs:
           ## File(s) or Directory, separate by space if multiple files or folder are specified
           file_or_dir: model/
           ## Custom configuration (as YAML source)
-          config_data: "{extends: default, rules: {line-length: disable}}"
+          # indent-sequences: false -- RAVEN and raven-toolbox now write
+          # model/yeast-GEM.yml in a shared layout (yeast-GEM#397) that
+          # nests a sequence at the same indentation as its parent
+          # mapping key, which is legal YAML but conflicts with
+          # yamllint's stricter default. Re-indenting the file to satisfy
+          # the default instead would only diverge from that shared
+          # writer and get overwritten on the next legitimate write.
+          config_data: "{extends: default, rules: {line-length: disable, indentation: {indent-sequences: false}}}"
           ## Format for parsing output [parsable,standard,colored,auto]
           # format: # optional, default is colored
           ## Return non-zero exit code on warnings as well as errors
