@@ -20,7 +20,7 @@ pip install -e code/python/[dev]
 
 The generic, organism-agnostic helpers live in
 [raven-toolbox](https://github.com/SysBioChalmers/raven-python), which
-is resolved from PyPI via the `raven-toolbox>=0.3.0` constraint in
+is resolved from PyPI via the `raven-toolbox>=0.4.0` constraint in
 [pyproject.toml](pyproject.toml).
 
 ## Quick start

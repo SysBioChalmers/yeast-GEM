@@ -17,7 +17,7 @@ keywords = ["systems biology", "metabolic model", "yeast", "Saccharomyces cerevi
 # top. This mirrors the MATLAB side, where code/ is a thin layer over the\r
 # RAVEN toolbox.\r
 dependencies = [
-    "raven-toolbox>=0.3.0",
+    "raven-toolbox>=0.4.0",
     "cobra>=0.29",
     "pandas>=2.0",
     "pyyaml>=6.0",
