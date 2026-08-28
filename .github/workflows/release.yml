@@ -128,18 +128,11 @@ jobs:
       # actual checkout (which actions/checkout provides), not an
       # extracted release archive -- see the note in code/increaseVersion.m
       # history for why this bit a release before.
-      #
-      # develop3, not main or develop: readYAMLmodel/writeYAMLmodel/
-      # exportForGit only agree with the model/yeast-GEM.yml format written
-      # by raven-toolbox>=0.3.0 (adopted in yeast-GEM #396) as of RAVEN
-      # #698/#699, which are merged into develop3 and not yet promoted to
-      # develop. Move this to a release tag once RAVEN cuts one that
-      # includes them; until then main or develop cannot read this file.
       - name: Checkout RAVEN
         uses: actions/checkout@v7
         with:
           repository: SysBioChalmers/RAVEN
-          ref: develop3
+          ref: main
           path: RAVEN
 
       - uses: matlab-actions/setup-matlab@v3
