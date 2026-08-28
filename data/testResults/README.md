@@ -41,26 +41,26 @@ model stood for that version.
 
 ## 2. Latest release results
 
-- Model version: develop (post-9.1.0 curations, commit 58be7b3)
-- Software: MATLAB 24.2.0.2923080 (R2024b) Update 6, RAVEN 2.11.2
+- Model version: 9.1.1
+- Software: Python 3.12.14, cobrapy 0.32.1
 
 | Metric | Value |
 |---|---|
-| Growth prediction R2 | 0.9019066691398621 |
-| Anaerobic flux median fold error | 1.053461050692928 |
-| Anaerobic exchange mean relative error | 0.06454293960336684 |
-| Ammonium per ATPase | 1.071951239704032 |
-| Gene essentiality accuracy | 0.9024390243902439 |
-| True non-essential genes | 934 |
+| Growth prediction R2 | 0.9019063673672041 |
+| Anaerobic flux median fold error | 1.061500419010032 |
+| Anaerobic exchange mean relative error | 0.0645475428321038 |
+| Ammonium per ATPase | 1.07195123970411 |
+| Gene essentiality accuracy | 0.9015356820234869 |
+| True non-essential genes | 933 |
 | True essential genes | 65 |
 | False non-essential genes | 94 |
-| False essential genes | 14 |
+| False essential genes | 15 |
 
 Per measurement, at a glucose uptake rate of 23 mmol/gDW/h:
 
 | Exchange | Measured | Predicted | Within error |
 |---|---|---|---|
-| glycerol | 4.5 +/- 0.4 | 4.3527 | yes |
+| glycerol | 4.5 +/- 0.4 | 4.3526 | yes |
 | ethanol | 31 +/- 2 | 35.7072 | no |
 | carbon dioxide | 38 +/- 10 | 38.7741 | yes |
 | biomass | 0.36 +/- 0.02 | 0.3792 | yes |
