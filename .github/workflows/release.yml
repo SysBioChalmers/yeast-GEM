@@ -260,10 +260,11 @@ jobs:
           gh release create "v$version" --target main --title "v$version" \
             --notes "See [history.md](https://github.com/${{ github.repository }}/blob/main/history.md)."
 
-      # Everything except the binaries: main after the release is develop
-      # plus a reviewable series of commits (the release branch's own
-      # history), so this is an ordinary merge rather than the kind of
-      # merge-commit-only content that caused the divergence this replaced.
+      # Everything except the binaries and version.txt: main after the
+      # release is develop plus a reviewable series of commits (the release
+      # branch's own history), so this is an ordinary merge rather than the
+      # kind of merge-commit-only content that caused the divergence this
+      # replaced.
       - name: Open the sync-back pull request into develop
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -275,9 +276,9 @@ jobs:
           git fetch origin develop
           git checkout -b "sync/main-to-develop-$version" origin/develop
           git merge --no-commit --no-ff origin/main
-          git rm --cached model/yeast-GEM.mat model/yeast-GEM.xlsx
-          git commit -m "chore: merge main into develop after $version, without binaries"
+          git rm --cached model/yeast-GEM.mat model/yeast-GEM.xlsx version.txt
+          git commit -m "chore: merge main into develop after $version, without binaries or version.txt"
           git push origin "sync/main-to-develop-$version"
           gh pr create --base develop --head "sync/main-to-develop-$version" \
             --title "chore: sync main into develop after $version" \
-            --body "Brings $version back into develop, keeping the binary model files off it. See branch-hygiene.yml, which would otherwise flag them."
+            --body "Brings $version back into develop, keeping the binary model files and version.txt off it. See branch-hygiene.yml, which would otherwise flag them."

@@ -93,8 +93,30 @@ def _is_legal_bump(old: tuple[int, int, int], new: tuple[int, int, int]) -> bool
     }
 
 
+def _current_version_text() -> str:
+    """The currently-released version.
+
+    version.txt lives on main only (develop does not track it -- see
+    branch-hygiene.yml), but validate runs from a develop checkout when
+    cutting a release. Read the local file if this happens to be run on
+    a checkout that has one (main, or an already-cut release branch);
+    otherwise fetch it from origin/main.
+    """
+    if _VERSION_TXT.is_file():
+        return _VERSION_TXT.read_text(encoding="utf-8")
+    subprocess.run(
+        ["git", "fetch", "--depth=1", "origin", "main"], cwd=REPO_PATH,
+        capture_output=True, text=True, check=True,
+    )
+    result = subprocess.run(
+        ["git", "show", "origin/main:version.txt"], cwd=REPO_PATH,
+        capture_output=True, text=True, check=True,
+    )
+    return result.stdout
+
+
 def cmd_validate(args: argparse.Namespace) -> int:
-    old = _parse_version(_VERSION_TXT.read_text(encoding="utf-8"))
+    old = _parse_version(_current_version_text())
     new = _parse_version(args.version)
     if not _is_legal_bump(old, new):
         raise SystemExit(
