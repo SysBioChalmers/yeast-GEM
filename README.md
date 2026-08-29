@@ -105,8 +105,6 @@ Please see the installation instructions for each software package.
   pip install -e code/python/
   touch .env # create a .env file for locating the root
   ```
-  Note that writing the `.yml`, `.txt`, `.xlsx` and `.mat` model files remains
-  MATLAB-only; the Python side reads and writes `.xml` plus the deltaG CSVs.
 
   The standalone functions in
   [code/](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code) (`code/io.py`
@@ -142,10 +140,6 @@ Before opening Python, the following command only needs to be run once, in the y
   model = read_yeast_model()      # loading
   commit_yeast_model(model)       # saving
   ```
-
-### Online visualization
-
-You can interactively navigate model components and visualize 3D representations of all compartments and subsystems of yeast-GEM at [Metabolic Atlas](https://metabolicatlas.org/explore?selected=Yeast-GEM). Learn more [about Metabolic Atlas](https://www.metabolicatlas.org/about).
 
 # Contributing
 
