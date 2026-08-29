@@ -178,7 +178,7 @@ def render(scored: dict, config: ReportConfiguration) -> str:
     # same 3-column pattern for the collapsible block).
     try:
         detailed = _detailed_rows(scored, config)
-    except Exception as exc:  # noqa: BLE001 - detail is optional, never fail on it
+    except Exception as exc:  # detail is optional, never fail the run on it
         print(f"::warning::Could not build the detailed MEMOTE scores ({exc}).")
         detailed = []
     if detailed:
