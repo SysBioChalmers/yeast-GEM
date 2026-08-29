@@ -85,6 +85,59 @@ def _section_rows(scored: dict) -> list[tuple[str, float]]:
     return rows
 
 
+def _test_metric(scored: dict, test_id: str) -> float | None:
+    """The 0-1 metric of a single MEMOTE test (parametrised tests averaged)."""
+    test = (scored.get("tests") or {}).get(test_id)
+    if not isinstance(test, dict):
+        return None
+    metric = test.get("metric")
+    if isinstance(metric, (int, float)):
+        return float(metric)
+    if isinstance(metric, dict):
+        values = [v for v in metric.values() if isinstance(v, (int, float))]
+        return sum(values) / len(values) if values else None
+    return None
+
+
+def _test_title(scored: dict, test_id: str) -> str:
+    test = (scored.get("tests") or {}).get(test_id) or {}
+    return str(test.get("title") or test_id)
+
+
+def _detailed_rows(scored: dict, config: ReportConfiguration
+                    ) -> list[tuple[str, str, float]]:
+    """Per-test scores grouped by section: ``(section, test, metric)``.
+
+    Uses the scoring configuration's section -> cases mapping to place
+    each test, and the per-test metric from the scored result. Falls back
+    to a flat list of every scored test if that mapping is not where
+    expected, so the detail is still available even if less tidy.
+    """
+    try:
+        sections = config["cards"]["scored"]["sections"]
+    except (KeyError, TypeError, AttributeError):
+        sections = None
+    rows: list[tuple[str, str, float]] = []
+    if isinstance(sections, dict):
+        for section_id, section in sections.items():
+            if not isinstance(section, dict):
+                continue
+            title = str(section.get("title") or section_id)
+            for case in section.get("cases") or []:
+                metric = _test_metric(scored, case)
+                if metric is not None:
+                    rows.append((title, _test_title(scored, case), metric))
+    if rows:
+        return rows
+    tests = scored.get("tests")
+    if isinstance(tests, dict):
+        for test_id in tests:
+            metric = _test_metric(scored, test_id)
+            if metric is not None:
+                rows.append(("", _test_title(scored, test_id), metric))
+    return rows
+
+
 def snapshot(model: cobra.Model) -> tuple[dict, ReportConfiguration]:
     """Run the MEMOTE fast subset on ``model`` and return the scored result."""
     with tempfile.TemporaryDirectory() as tmp:
@@ -102,7 +155,7 @@ def snapshot(model: cobra.Model) -> tuple[dict, ReportConfiguration]:
     return scored, config
 
 
-def render(scored: dict) -> str:
+def render(scored: dict, config: ReportConfiguration) -> str:
     total = _total_score(scored)
     if total is None:
         return "# MEMOTE snapshot\n\nTotal score: unavailable (see workflow log).\n"
@@ -118,6 +171,21 @@ def render(scored: dict) -> str:
     if rows:
         lines += ["", "| Section | Score |", "| --- | ---: |"]
         lines += [f"| {name} | {value * 100:.1f}% |" for name, value in rows]
+
+    # A plain table here, not the <details> HTML the pull-request comment
+    # wraps it in: this file is the source of data, build_qc_report.py
+    # decides how to present it (and re-parses this same table with the
+    # same 3-column pattern for the collapsible block).
+    try:
+        detailed = _detailed_rows(scored, config)
+    except Exception as exc:  # noqa: BLE001 - detail is optional, never fail on it
+        print(f"::warning::Could not build the detailed MEMOTE scores ({exc}).")
+        detailed = []
+    if detailed:
+        lines += ["", "### Detailed scores", "", "| Section | Test | Score |",
+                  "| --- | --- | ---: |"]
+        lines += [f"| {section} | {test} | {metric * 100:.1f}% |"
+                  for section, test, metric in detailed]
     return "\n".join(lines) + "\n"
 
 
@@ -137,13 +205,13 @@ def main() -> int:
         else read_yeast_model()
     )
 
-    scored, _config = snapshot(model)
+    scored, config = snapshot(model)
 
     args.out.mkdir(parents=True, exist_ok=True)
     with open(args.out / "memote_result.json", "w", encoding="utf-8") as fh:
         json.dump(scored, fh, default=str)
 
-    summary = render(scored)
+    summary = render(scored, config)
     (args.out / "memote_score.md").write_text(summary, encoding="utf-8")
     print(summary)
     return 0

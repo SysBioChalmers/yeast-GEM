@@ -280,8 +280,9 @@ Genes predicted lethal that are viable in the collection. Lower is better.
 branch, skipping the flux-variability and matrix-rank tests that dominate its
 runtime on a genome-scale model — so this is a faster, lower number than
 `memote report snapshot` (used at release, see below) would give. Reported as
-a total score and one score per MEMOTE section (consistency, annotation
-completeness by entity type).
+a total score, one score per MEMOTE section (consistency, annotation
+completeness by entity type), and the individual test scores behind those
+sections in a collapsed table.
 
 Unlike the other checks, it is not measured on both branches in this run:
 even the fast subset roughly doubles the job's cost if run twice, for a score

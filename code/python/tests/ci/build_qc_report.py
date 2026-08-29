@@ -243,8 +243,13 @@ def _render_validation(current, base, url_base, base_ref, detail_base=""):
     return lines, regressions, skipped
 
 
-def _parse_memote(directory: Path | None) -> tuple[float, dict[str, float]] | None:
-    """Parse ``memote_score.md`` -> ``(total_pct, {section: pct})``.
+def _parse_memote(directory: Path | None):
+    """Parse ``memote_score.md`` -> ``(total_pct, {section: pct}, detailed)``.
+
+    ``detailed`` is a list of ``(section, test, pct)`` triples, matched by
+    its 3-column shape rather than by which heading it sits under -- the
+    2-column section table above it cannot match a 3-column pattern, so
+    this is unambiguous without needing to scope the search.
 
     None if ``directory`` is unset or the file is absent (the job did not
     run, or has not reached this directory yet) rather than [] or 0 -- a
@@ -261,7 +266,9 @@ def _parse_memote(directory: Path | None) -> tuple[float, dict[str, float]] | No
         return None
     sections = {m.group(1): float(m.group(2))
                 for m in re.finditer(r"^\| (\w+) \| ([\d.]+)% \|$", text, re.M)}
-    return float(total.group(1)), sections
+    detailed = [(s, t, float(pct)) for s, t, pct in re.findall(
+        r"^\| (.+?) \| (.+?) \| ([\d.]+)% \|$", text, re.M)]
+    return float(total.group(1)), sections, detailed
 
 
 def _memote_delta(current: float, base: float | None) -> str:
@@ -291,9 +298,9 @@ def _render_memote(current: Path | None, base: Path | None, base_ref: str,
     parsed = _parse_memote(current)
     if parsed is None:
         return ["_not run — the MEMOTE job reported nothing._", ""]
-    total, sections = parsed
+    total, sections, detailed = parsed
     base_parsed = _parse_memote(base) if base is not None else None
-    base_total, base_sections = base_parsed or (None, {})
+    base_total, base_sections, _base_detailed = base_parsed or (None, {}, [])
 
     lines = [
         f"**Total score: {total:.1f}%** &nbsp; "
@@ -309,6 +316,15 @@ def _render_memote(current: Path | None, base: Path | None, base_ref: str,
             for name, value in sections.items()
         ]
         lines.append("")
+    # Collapsed by default: one row per MEMOTE test is too long to sit
+    # in the open comment, but still worth having a click away rather
+    # than only in the uploaded memote_result.json artifact.
+    if detailed:
+        lines += ["<details><summary>Per-test scores</summary>", "",
+                  "| Section | Test | Score |", "| --- | --- | ---: |"]
+        lines += [f"| {section} | {test} | {pct:.1f}% |"
+                  for section, test, pct in detailed]
+        lines += ["", "</details>", ""]
     return lines
 
 
