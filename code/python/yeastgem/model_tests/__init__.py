@@ -1,7 +1,8 @@
 """yeast-GEM model-validation tests — Python counterparts of `code/modelTests/`.
 
-These are *integration* tests against experimental data (the
-``increaseVersion`` PR gate, plus standalone benchmarks):
+These are *integration* tests against experimental data (the release
+build's test gate -- see ``code/python/release/increase_version.py`` --
+plus standalone benchmarks):
 
 * :mod:`growth` — chemostat growth across 4 conditions vs Tobias 2013.
 * :mod:`essential_genes` — single-gene-knockout vs Stanford KO collection.

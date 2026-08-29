@@ -35,7 +35,7 @@ blocked on findings that were already there. A :x: asks for review; it does not
 by itself mean the branch is wrong, since a curation can legitimately trade one
 finding for another.
 
-**At release**, `increaseVersion.m` regenerates the summary table below along
+**At release**, `increase_version.py` regenerates the summary table below along
 with `growth.md`, `growth.png` and `essentialGenes.tsv`, recording where the
 model stood for that version.
 
@@ -316,7 +316,7 @@ sections diffs far better than a CSV per check that appears and disappears —
 a check going clean shows as rows vanishing under a heading that stays put,
 rather than as a deleted file.
 
-Regenerated at release by `increaseVersion.m`:
+Regenerated at release by `increase_version.py`:
 
 | File | Holds |
 |---|---|
