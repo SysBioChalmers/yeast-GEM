@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <sbml xmlns="http://www.sbml.org/sbml/level3/version1/core" xmlns:fbc="http://www.sbml.org/sbml/level3/version1/fbc/version2" xmlns:groups="http://www.sbml.org/sbml/level3/version1/groups/version1" level="3" version="1" fbc:required="false" groups:required="false">
-  <model metaid="yeastGEM_develop" id="yeastGEM_develop" name="The Consensus Genome-Scale Metabolic Model of Yeast" fbc:strict="true">
+  <model metaid="yeastGEM_v9.1.1" id="yeastGEM_v9__46__1__46__1" name="The Consensus Genome-Scale Metabolic Model of Yeast" fbc:strict="true">
     <notes>
       <body xmlns="http://www.w3.org/1999/xhtml">
         <p>Saccharomyces cerevisiae - strain S288C</p>
@@ -8,7 +8,7 @@
     </notes>
     <annotation>
       <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:dcterms="http://purl.org/dc/terms/" xmlns:vCard="http://www.w3.org/2001/vcard-rdf/3.0#" xmlns:vCard4="http://www.w3.org/2006/vcard/ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/" xmlns:bqmodel="http://biomodels.net/model-qualifiers/">
-        <rdf:Description rdf:about="#yeastGEM_develop">
+        <rdf:Description rdf:about="#yeastGEM_v9.1.1">
           <dcterms:creator>
             <rdf:Bag>
               <rdf:li rdf:parseType="Resource">
@@ -24,10 +24,10 @@
             </rdf:Bag>
           </dcterms:creator>
           <dcterms:created rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-08-23T22:06:36Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-08-28T22:43:54Z</dcterms:W3CDTF>
           </dcterms:created>
           <dcterms:modified rdf:parseType="Resource">
-            <dcterms:W3CDTF>2026-08-23T22:06:37Z</dcterms:W3CDTF>
+            <dcterms:W3CDTF>2026-08-28T22:43:54Z</dcterms:W3CDTF>
           </dcterms:modified>
           <bqbiol:is>
             <rdf:Bag>
