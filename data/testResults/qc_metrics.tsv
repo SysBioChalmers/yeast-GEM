@@ -8,6 +8,9 @@ malformed_xrefs	48
 mass_imbalanced	8
 missing_charge	0
 missing_formula	16
+n_genes	1143
+n_metabolites	2748
+n_reactions	4105
 orphan_metabolites	0
 unused_genes	0
 xrefs_across_compartments	18
