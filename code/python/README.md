@@ -43,7 +43,7 @@ in that order. No additional setup needed for the common case.
 
 | Area | Module | Highlights |
 |---|---|---|
-| **I/O** | [`yeastgem.io`](yeastgem/io.py) | `read_yeast_model`, `commit_yeast_model` (release pipeline: canonical state → SBML validity → aerobic + anaerobic growth → write `.xml` + ΔG CSVs → update README). `write_yeast_model` is a deprecated forwarding shim. |
+| **I/O** | [`yeastgem.io`](yeastgem/io.py) | `read_yeast_model`, `commit_yeast_model` (release pipeline: canonical state → SBML validity → aerobic + anaerobic growth → write `.xml` + ΔG CSVs). `write_yeast_model` is a deprecated forwarding shim. |
 | **Comparison** | [`yeastgem.compare`](yeastgem/compare.py) | `compare_models` / `ComparisonReport` re-exported from `raven_toolbox.comparison.diff_models`. Use for cross-toolchain semantic-equality checks. |
 | **Conditions** | [`yeastgem.conditions`](yeastgem/conditions.py) | `apply(model, name)` — minimal_Y6, anaerobic, glycine_nitrogen, nitrogen_limitation. Files under [`data/conditions/`](../../data/conditions/). |
 | **Biomass** | [`yeastgem.biomass`](yeastgem/biomass.py) | `sum_biomass`, `scale_biomass`, `rescale_pseudoreaction`, `set_gam`, `change_amino_acid_ratio`. Configured from [`data/yeastgem/ids.yml`](../../data/yeastgem/ids.yml). |

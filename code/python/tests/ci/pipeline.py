@@ -39,6 +39,7 @@ _TRACKED = (
     "qc_metrics.tsv",
     "validation_findings.md",
     "validation_metrics.tsv",
+    "memote_score.md",
 )
 
 
