@@ -251,14 +251,28 @@ jobs:
           ref: main
           fetch-depth: 0
 
+      # The tag keeps the "vX.Y.Z" form (matches every existing tag), but
+      # the release title and body follow the "yeast X.Y.Z" / history.md
+      # convention already used by every release published before this
+      # workflow existed.
+      - name: Extract the history.md entry for this version
+        run: |
+          version="${{ github.event.pull_request.head.ref }}"
+          version="${version#release/}"
+          awk -v heading="### yeast $version:" '
+            $0 == heading { found=1; next }
+            found && /^### / { exit }
+            found { print }
+          ' history.md > release_notes.md
+
       - name: Tag and publish the release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           version="${{ github.event.pull_request.head.ref }}"
           version="${version#release/}"
-          gh release create "v$version" --target main --title "v$version" \
-            --notes "See [history.md](https://github.com/${{ github.repository }}/blob/main/history.md)."
+          gh release create "v$version" --target main --title "yeast $version" \
+            --notes-file release_notes.md
 
       # Everything except the binaries and version.txt: main after the
       # release is develop plus a reviewable series of commits (the release
