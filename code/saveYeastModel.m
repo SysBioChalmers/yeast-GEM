@@ -1,7 +1,7 @@
 function saveYeastModel(model,upDATE,allowNoGrowth,binaryFiles)
 % saveYeastModel
-%   Saves model as .xml, .txt and .yml file (.mat and .xlsx on demand). 
-%   It also updates README.md, dependencies.txt and checks for growth.
+%   Saves model as .xml, .txt and .yml file (.mat and .xlsx on demand).
+%   It also updates dependencies.txt and checks for growth.
 %
 % Inputs:
 %   model           (struct) model to save. Preferably RAVEN format,
@@ -83,25 +83,11 @@ cd missingFields
 saveDeltaG(model,false);
 cd ..
 
-%Update README file: date + size of model
-%No version is stamped: it would go stale on develop the moment the next
-%curation lands, and it duplicates the "Current release" badge on main.
-nGenes=num2str(numel(model.genes));
-nMets=num2str(numel(model.mets));
-nRxns=num2str(numel(model.rxns));
-copyfile('../README.md','backup.md')
-fin  = fopen('backup.md','r');
-fout = fopen('../README.md','w');
-newStats = ['| $1 | ' datestr(now,'dd-mmm-yyyy') ' | ' nRxns ' | ' nMets ' | ' nGenes ' |'];
-searchStats = '^\| (\_Saccharomyces cerevisiae\_) \| \d{2}-\D+-\d{4} \| \d+ \| \d+ \| \d+ \|';
-while ~feof(fin)
-    str = fgets(fin);
-    inline = regexprep(str,searchStats,newStats);
-    inline = unicode2native(inline,'UTF-8');
-    fwrite(fout,inline);
-end
-fclose('all');
-delete('backup.md');
+%README.md is deliberately not touched here: its model statistics and
+%validation numbers are only ever current for a specific released
+%version, so they are stamped once at release time
+%(code/python/release/increase_version.py) rather than on every curation
+%commit, where they would immediately start going stale on develop.
 
 %Convert notation "e-005" to "e-05 " in stoich. coeffs. to avoid
 %inconsistencies between Windows and MAC:

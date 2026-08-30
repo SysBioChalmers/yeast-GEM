@@ -14,8 +14,7 @@ from yeastgem import io as yio
 def isolated_paths(model, tmp_path, monkeypatch):
     """Redirect MODEL_PATH and ΔG CSV paths into a tmp directory.
 
-    Copies the canonical README so the regex rewrite has something
-    to chew on. Returns the temp directory.
+    Returns the temp directory.
     """
     from yeastgem import missing_fields as mf
 
@@ -24,16 +23,6 @@ def isolated_paths(model, tmp_path, monkeypatch):
     model_path = model_dir / "yeast-GEM.xml"
     monkeypatch.setattr(yio, "MODEL_PATH", model_path)
     monkeypatch.setattr(yio, "REPO_PATH", tmp_path)
-
-    # README seed: the regex looks for a yeast-GEM stats row.
-    (tmp_path / "README.md").write_text(
-        "Header\n"
-        "| Taxonomy | Latest update | Version | Reactions | Metabolites | Genes |\n"
-        "|:-------|:--------------|:------|:------|:----------|:-----|\n"
-        "| _Saccharomyces cerevisiae_ | 01-Jan-2000 | develop | 1 | 1 | 1 |\n"
-        "Footer\n",
-        encoding="utf-8",
-    )
 
     # ΔG CSV redirection lives in missing_fields.
     monkeypatch.setattr(mf, "_MET_CSV", tmp_path / "met.csv")
@@ -67,23 +56,6 @@ def test_commit_yeast_model_writes_deltag_csvs(model, isolated_paths):
 
     commit_yeast_model(model.copy())
     assert mf._MET_CSV.exists() and mf._RXN_CSV.exists()
-
-
-def test_commit_yeast_model_updates_readme(model, isolated_paths):
-    commit_yeast_model(model.copy())
-    text = (isolated_paths / "README.md").read_text(encoding="utf-8")
-    # Old stub row was 1/1/1; the rewrite plugs in real model sizes.
-    assert "| 1 | 1 | 1 |" not in text
-    assert "| _Saccharomyces cerevisiae_" in text
-    # Today's date should appear (just check the year)
-    from datetime import datetime
-    assert datetime.now().strftime("%Y") in text
-
-
-def test_commit_yeast_model_skip_readme(model, isolated_paths):
-    commit_yeast_model(model.copy(), update_readme=False)
-    text = (isolated_paths / "README.md").read_text(encoding="utf-8")
-    assert "01-Jan-2000" in text  # stub preserved
 
 
 def test_commit_applies_canonical_state(model, isolated_paths):

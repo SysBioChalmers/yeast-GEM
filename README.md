@@ -36,15 +36,15 @@ This repository contains the current consensus genome-scale metabolic model of _
 
 # Model overview
 
-| Taxonomy | Latest update | Reactions | Metabolites | Genes |
-|:-------|:--------------|:------|:----------|:-----|
-| _Saccharomyces cerevisiae_ | 28-Aug-2026 | 4105 | 2748 | 1143 |
-
-Validated against experimental data on every pull request, including gene
-essentiality and growth-rate prediction accuracy; see
-[data/testResults/README.md](data/testResults/README.md) for the current
-numbers, methodology and additional metrics, including anaerobic flux and
-fermentation-product predictions.
+Model statistics (reaction, metabolite and gene counts) and validation
+results against experimental data (gene-essentiality and growth-rate
+prediction accuracy) are stamped here at release time, since `develop`
+itself is a moving target that would make those numbers stale the moment
+the next curation lands. See the
+[latest release](https://github.com/SysBioChalmers/yeast-GEM/releases/latest)
+for those numbers, or
+[data/testResults/README.md](data/testResults/README.md) for this
+branch's current validation results.
 
 # Installation & usage
 

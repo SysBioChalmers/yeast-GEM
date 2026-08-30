@@ -51,12 +51,20 @@ import matplotlib
 matplotlib.use("Agg")
 
 from yeastgem import conditions, model_tests
-from yeastgem.io import REPO_PATH, _update_readme, read_yeast_model
+from yeastgem.io import REPO_PATH, read_yeast_model
 
 _VERSION_TXT = REPO_PATH / "version.txt"
 _HISTORY_MD = REPO_PATH / "history.md"
 _YEAST_YML = REPO_PATH / "model" / "yeast-GEM.yml"
+_ROOT_README = REPO_PATH / "README.md"
 _RESULTS_README = REPO_PATH / "data" / "testResults" / "README.md"
+
+# Matches root README.md's whole "# Model overview" section, from the
+# heading up to (not including) the next top-level heading. On develop
+# this is a static placeholder -- see the section itself -- so unlike
+# the row-only rewrite this used to be, a release has to build the
+# section from scratch rather than edit an existing table in place.
+_MODEL_OVERVIEW_RE = re.compile(r"^# Model overview\n.*?(?=^# )", re.M | re.S)
 
 # Files this step is allowed to change. Anything else in the working tree
 # after it runs means develop and this branch have diverged in a way that
@@ -158,6 +166,56 @@ def _stamp_yaml(version: str) -> None:
                 f"{_YEAST_YML}, found {count}"
             )
     _YEAST_YML.write_text(text, encoding="utf-8")
+
+
+def _populate_root_readme_overview(version: str, n_rxns: int, n_mets: int,
+                                    n_genes: int, accuracy, tp, tn, fp, fn,
+                                    r2) -> None:
+    """Replace root README.md's "# Model overview" placeholder with the
+    full, stamped section: main is a specific released version, so
+    unlike develop these numbers do not go stale between curations.
+    """
+    date = datetime.now(UTC).strftime("%d-%b-%Y")
+    block = f"""# Model overview
+
+| Taxonomy | Latest update | Version | Reactions | Metabolites | Genes |
+|:-------|:--------------|:------|:------|:----------|:-----|
+| _Saccharomyces cerevisiae_ | {date} | {version} | {n_rxns} | {n_mets} | {n_genes} |
+
+Validated against experimental data on every pull request; see
+[data/testResults/README.md](data/testResults/README.md) for the full
+methodology and additional metrics, including anaerobic flux and
+fermentation-product predictions.
+
+### Gene essentiality prediction
+
+Predicted gene essentiality vs. the Stanford yeast deletion collection
+(1107 genes):
+
+- Accuracy: {accuracy:.3f}
+- True non-essential genes: {len(tp)}
+- True essential genes: {len(tn)}
+- False non-essential genes: {len(fp)}
+- False essential genes: {len(fn)}
+
+### Growth prediction
+
+Predicted vs. measured growth rate across chemostat conditions from
+[Österlund _et al._ (2013)](https://doi.org/10.1186/1752-0509-7-36):
+
+- Correlation coefficient R<sup>2</sup>: {r2:.3f}
+
+![Growth curve](data/testResults/growth.png)
+
+"""
+    text = _ROOT_README.read_text(encoding="utf-8")
+    new_text, count = _MODEL_OVERVIEW_RE.subn(block, text, count=1)
+    if count != 1:
+        raise SystemExit(
+            "expected exactly one '# Model overview' section in "
+            f"{_ROOT_README}, found {count}"
+        )
+    _ROOT_README.write_text(new_text, encoding="utf-8")
 
 
 def _update_results_readme(version: str, r2, flux, exchange, accuracy, tp,
@@ -268,7 +326,11 @@ def cmd_build(args: argparse.Namespace) -> int:
     exchange = model_tests.plot_anaerobic(anaerobic, plot=False)
 
     print("Updating README.md")
-    _update_readme(model)
+    _populate_root_readme_overview(
+        args.version, len(model.reactions), len(model.metabolites),
+        len(model.genes), essential.accuracy, essential.tp, essential.tn,
+        essential.fp, essential.fn, r2,
+    )
 
     print("Updating data/testResults/README.md")
     _update_results_readme(
