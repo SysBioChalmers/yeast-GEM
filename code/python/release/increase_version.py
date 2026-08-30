@@ -121,12 +121,22 @@ def _stamp_yaml(version: str) -> None:
     Everything else in the file -- every reaction, metabolite, gene --
     is untouched text, so this cannot introduce the kind of diff a full
     model rewrite would.
+
+    The version line is a special case, handled separately below: RAVEN's
+    writeYAMLmodel.m (writeMetadata) omits it entirely whenever
+    model.version is empty, which is the normal state on develop -- so a
+    release branch cut straight from develop, or from any commit since
+    the last ordinary save, has no such line to match on. Confirmed
+    directly: round-tripping the current develop yml through
+    readYAMLmodel/writeYAMLmodel with no other change already drops a
+    previously-committed `- version: ""` line. When that's the case,
+    insert the line fresh right after `- name:`, matching writeMetadata's
+    own field order (id, name, version, date).
     """
     text = _YEAST_YML.read_text(encoding="utf-8")
     today = datetime.now(UTC).strftime("%Y-%m-%d")
     substitutions = {
         r'^  - id: .*$': f'  - id: yeastGEM_v{version}',
-        r'^  - version: ".*"$': f'  - version: "{version}"',
         r'^  - date: ".*"$': f'  - date: "{today}"',
     }
     for pattern, replacement in substitutions.items():
@@ -136,6 +146,19 @@ def _stamp_yaml(version: str) -> None:
                 f"expected exactly one match for {pattern!r} in "
                 f"{_YEAST_YML}, found {count}"
             )
+
+    version_line = f'  - version: "{version}"'
+    text, count = re.subn(r'^  - version: ".*"$', version_line, text, count=1, flags=re.M)
+    if count == 0:
+        text, count = re.subn(
+            r'^(  - name: .*)$', rf'\1\n{version_line}', text, count=1, flags=re.M
+        )
+        if count != 1:
+            raise SystemExit(
+                f"expected exactly one '  - name: ...' line to insert the version "
+                f"line after in {_YEAST_YML}, found {count}"
+            )
+
     _YEAST_YML.write_text(text, encoding="utf-8")
 
 
