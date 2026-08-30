@@ -1,11 +1,11 @@
 name: Release
 
 # Cuts a release branch from develop, runs the Python side of the release
-# (code/python/release/increase_version.py -- a full port of
-# code/increaseVersion.m), regenerates the binary model files with RAVEN,
-# takes a memote snapshot, and opens the release PR into main for a human
-# to approve. On merge, tags the release, publishes it on GitHub, and opens
-# the sync-back PR into develop.
+# (code/python/release/increase_version.py -- stamps the version, runs the
+# model tests, refreshes the derived docs), regenerates the binary model
+# files with RAVEN, takes a memote snapshot, and opens the release PR into
+# main for a human to approve. On merge, tags the release, publishes it on
+# GitHub, and opens the sync-back PR into develop.
 #
 # See .github/CONTRIBUTING.md, "Releasing a new version", for the routine
 # this replaces, and the scratchpad plan this was built from for the
@@ -126,8 +126,8 @@ jobs:
       # getToolboxVersion walks up to a .git directory to find RAVEN's
       # version for model/dependencies.txt, so RAVEN has to be an
       # actual checkout (which actions/checkout provides), not an
-      # extracted release archive -- see the note in code/increaseVersion.m
-      # history for why this bit a release before.
+      # extracted release archive -- see `git log -- code/increaseVersion.m`
+      # (removed; this job replaces it) for why this bit a release before.
       #
       # v3.0.0-rc1, not main or develop: readYAMLmodel/writeYAMLmodel/
       # exportForGit only agree with the model/yeast-GEM.yml format written
@@ -192,7 +192,12 @@ jobs:
         run: touch .env
 
       - name: Install memote
-        run: pip install -r code/requirements/requirements.txt
+        run: |
+          # code/requirements/requirements.txt is a 2022 pip-compile freeze;
+          # bleach==5.0.0's metadata is malformed and pip>=24.1 rejects it
+          # outright instead of tolerating it as older pip did.
+          python -m pip install "pip<24.1"
+          pip install -r code/requirements/requirements.txt
 
       # Visible before approval rather than discovered after merge --
       # the whole point of moving this here from the release: published
@@ -255,10 +260,11 @@ jobs:
           gh release create "v$version" --target main --title "v$version" \
             --notes "See [history.md](https://github.com/${{ github.repository }}/blob/main/history.md)."
 
-      # Everything except the binaries: main after the release is develop
-      # plus a reviewable series of commits (the release branch's own
-      # history), so this is an ordinary merge rather than the kind of
-      # merge-commit-only content that caused the divergence this replaced.
+      # Everything except the binaries and version.txt: main after the
+      # release is develop plus a reviewable series of commits (the release
+      # branch's own history), so this is an ordinary merge rather than the
+      # kind of merge-commit-only content that caused the divergence this
+      # replaced.
       - name: Open the sync-back pull request into develop
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -270,9 +276,9 @@ jobs:
           git fetch origin develop
           git checkout -b "sync/main-to-develop-$version" origin/develop
           git merge --no-commit --no-ff origin/main
-          git rm --cached model/yeast-GEM.mat model/yeast-GEM.xlsx
-          git commit -m "chore: merge main into develop after $version, without binaries"
+          git rm --cached model/yeast-GEM.mat model/yeast-GEM.xlsx version.txt
+          git commit -m "chore: merge main into develop after $version, without binaries or version.txt"
           git push origin "sync/main-to-develop-$version"
           gh pr create --base develop --head "sync/main-to-develop-$version" \
             --title "chore: sync main into develop after $version" \
-            --body "Brings $version back into develop, keeping the binary model files off it. See branch-hygiene.yml, which would otherwise flag them."
+            --body "Brings $version back into develop, keeping the binary model files and version.txt off it. See branch-hygiene.yml, which would otherwise flag them."

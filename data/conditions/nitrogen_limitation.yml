@@ -1,0 +1,14 @@
+# Nitrogen-limiting conditions. Activates glutamine synthase (repressed
+# under N excess) and forces the glycine cleavage system.
+# Reference: doi:10.1128/EC.2.5.827-829.2003.
+#
+# Mirrors code/otherChanges/nitrogenLimitation.m.
+
+name: nitrogen_limitation
+description: Convert model to represent nitrogen-limiting conditions.
+
+bounds:
+  - { rxn: r_0472, ub: 1000, comment: glutamine synthase — enable }
+  - { rxn: r_0501, lb: 1000, comment: glycine cleavage, mitochondrion }
+  - { rxn: r_0507, lb: 1000, comment: glycine cleavage complex (lipoylprotein), mitochondrion }
+  - { rxn: r_0509, lb: 1000, comment: glycine cleavage complex (lipoamide), mitochondrion }

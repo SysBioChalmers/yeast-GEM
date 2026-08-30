@@ -1,5 +1,18 @@
 # History
 
+### yeast 9.1.1:
+- Features:
+  - `yeastgem`, a cobrapy-based Python interface to yeast-GEM under `code/python`. (PR #385)
+  - Mitochondrial acetate transport (`r_4785`) and ribonucleotide reductase acting on UDP. (PR #389)
+  - `plotAnaerobic` reports the anaerobic exchange-rate error and ammonium/ATPase ratio. (PR #394)
+  - Automate the release process, from `history.md` to a tagged GitHub release. (PR #396)
+- Fixes:
+  - Correct erroneous annotations on 22 metabolites. (PR #389, closes #378)
+  - `model/yeast-GEM.yml` adopts the shared RAVEN/raven-toolbox YAML layout; model content is unchanged. (PR #397)
+  - CI cleanup and de-duplication across the metrics gate, stale test results and the memote workflows -- which now also report a MEMOTE score on every pull request. (PR #390, #393, #395, #398)
+- Chore:
+  - Keep the binary model files and `version.txt` off `develop`. (PR #392, #398)
+
 ### yeast 9.1.0:
 - Fixes:
   - Curations related to reactions involved in anaerobic metabolism, as well as other errorenous reactions that we encountered during the curation process. (PR #386)

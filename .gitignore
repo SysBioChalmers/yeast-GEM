@@ -4,6 +4,12 @@ yetfl_metG.csv
 yetfl_rxnG.csv
 YMDBtemp/
 
+# Release-only files: tracked on main, stamped at release time. Ignored
+# here (like *.mat/*.xls* below) so a stray `git add` on develop cannot
+# re-track them -- branch-hygiene.yml is what actually enforces this on
+# a merge, since .gitignore only applies to untracked paths.
+version.txt
+
 # Compiled source #
 ###################
 *.com
@@ -50,16 +56,21 @@ Thumbs.db
 *.mex*
 *.mlappinstall
 *.mltbx
+*.mat
 helpsearch*/
 
 # Python-related things #
 #########################
 *.ipynb_checkpoints/
 *.pyc
+__pycache__/
+*.egg-info/
+.pytest_cache/
 *.env
 
 # Non-complying tables and files #
 ##################################
+*.xls*
 *.tab
 *.doc*
 *.ppt*

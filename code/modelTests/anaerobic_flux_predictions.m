@@ -1,4 +1,8 @@
-function R2=anaerobic_flux_predictions(model)
+function flux=anaerobic_flux_predictions(model)
+%   flux   struct with the fold-error metrics, the count of measurements
+%          that have no comparable ratio, and R2 (kept for comparison
+%          with earlier releases; see data/testResults/README.md for why
+%          it is not the headline number)
 
 fluxTable = readtable('../../data/physiology/flux_data_anaerobic.tsv','FileType','text');
 fluxTable = table2cell(fluxTable);
@@ -49,6 +53,25 @@ threshold=30;
 % experimental values (merged_data) as reference; all data points (no threshold).
 R2 = 1 - sum((merged_data-merged_sim).^2)/sum((merged_data-mean(merged_data)).^2);
 mean_relative_error = mean(abs((merged_sim-merged_data)./merged_data),'omitnan');
+
+%Fold error. These fluxes span three orders of magnitude, so what matters
+%is how far out a prediction is proportionally: 2x out at a flux of 1 is
+%the same error as 2x out at a flux of 100, which a difference-based score
+%does not say. A ratio needs both values non-zero and pointing the same
+%way; pairs that fail either test are counted rather than dropped, since
+%predicting no flux where flux was measured, or the opposite direction, is
+%a worse error than any finite ratio.
+fluxTol = 1e-9;
+comparable = abs(merged_data) > fluxTol & abs(merged_sim) > fluxTol & ...
+             sign(merged_sim) == sign(merged_data);
+logRatio = abs(log10(abs(merged_sim(comparable))./abs(merged_data(comparable))));
+
+flux.medianFoldError = 10^median(logRatio);
+flux.meanFoldError   = 10^mean(logRatio);
+flux.withinTwoFold   = mean(logRatio < log10(2));
+flux.unpredicted     = numel(merged_data) - sum(comparable);
+flux.R2              = R2;
+flux.meanRelativeError = mean_relative_error;
 
 x=0:1:threshold;
 y = x;
