@@ -105,7 +105,7 @@ def write_yeast_model(model: cobra.Model) -> None:
 # label so the rewrite preserves it.
 _README_STATS_RE = re.compile(
     r"^\| (\_Saccharomyces cerevisiae\_) \| "
-    r"\d{2}-\D+-\d{4} \| (\d+\.\d+\.\d+|develop) \| \d+ \| \d+ \| \d+ \|",
+    r"\d{2}-\D+-\d{4} \| \d+ \| \d+ \| \d+ \|",
     re.MULTILINE,
 )
 
@@ -239,19 +239,18 @@ def _check_growth_anaerobic(model: cobra.Model, allow_no_growth: bool) -> None:
 def _update_readme(model: cobra.Model) -> None:
     """Rewrite the model-stats row in ``README.md``.
 
-    Mirrors the MATLAB regex rewrite. The species label, version
-    placeholder, and column order are preserved; only the date and the
-    three size counters change.
+    Mirrors the MATLAB regex rewrite. The species label and column order
+    are preserved; only the date and the three size counters change. No
+    version is stamped -- it would go stale on ``develop`` the moment the
+    next curation lands, and it duplicates the "Current release" badge on
+    ``main``.
     """
     readme = REPO_PATH / "README.md"
-    version = re.sub(r"yeastGEM_v?", "", (model.id or "develop"))
     date = datetime.now().strftime("%d-%b-%Y")
     n_rxns = len(model.reactions)
     n_mets = len(model.metabolites)
     n_genes = len(model.genes)
-    replacement = (
-        f"| \\1 | {date} | {version} | {n_rxns} | {n_mets} | {n_genes} |"
-    )
+    replacement = f"| \\1 | {date} | {n_rxns} | {n_mets} | {n_genes} |"
     text = readme.read_text(encoding="utf-8")
     new_text = _README_STATS_RE.sub(replacement, text)
     readme.write_text(new_text, encoding="utf-8")

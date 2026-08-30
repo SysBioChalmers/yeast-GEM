@@ -36,34 +36,15 @@ This repository contains the current consensus genome-scale metabolic model of _
 
 # Model overview
 
-| Taxonomy | Latest update | Version | Reactions | Metabolites | Genes |
-|:-------|:--------------|:------|:------|:----------|:-----|
-| _Saccharomyces cerevisiae_ | 28-Aug-2026 | 9.1.1 | 4105 | 2748 | 1143 |
+| Taxonomy | Latest update | Reactions | Metabolites | Genes |
+|:-------|:--------------|:------|:----------|:-----|
+| _Saccharomyces cerevisiae_ | 28-Aug-2026 | 4105 | 2748 | 1143 |
 
-Validated against experimental data on every pull request; see
-[data/testResults/README.md](data/testResults/README.md) for the full
-methodology and additional metrics, including anaerobic flux and
+Validated against experimental data on every pull request, including gene
+essentiality and growth-rate prediction accuracy; see
+[data/testResults/README.md](data/testResults/README.md) for the current
+numbers, methodology and additional metrics, including anaerobic flux and
 fermentation-product predictions.
-
-### Gene essentiality prediction
-
-Predicted gene essentiality vs. the Stanford yeast deletion collection
-(1107 genes):
-
-- Accuracy: 0.902
-- True non-essential genes: 933
-- True essential genes: 65
-- False non-essential genes: 94
-- False essential genes: 15
-
-### Growth prediction
-
-Predicted vs. measured growth rate across chemostat conditions from
-[Österlund _et al._ (2013)](https://doi.org/10.1186/1752-0509-7-36):
-
-- Correlation coefficient R<sup>2</sup>: 0.902
-
-![Growth curve](data/testResults/growth.png)
 
 # Installation & usage
 

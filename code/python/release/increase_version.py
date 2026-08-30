@@ -56,7 +56,6 @@ from yeastgem.io import REPO_PATH, _update_readme, read_yeast_model
 _VERSION_TXT = REPO_PATH / "version.txt"
 _HISTORY_MD = REPO_PATH / "history.md"
 _YEAST_YML = REPO_PATH / "model" / "yeast-GEM.yml"
-_ROOT_README = REPO_PATH / "README.md"
 _RESULTS_README = REPO_PATH / "data" / "testResults" / "README.md"
 
 # Files this step is allowed to change. Anything else in the working tree
@@ -159,33 +158,6 @@ def _stamp_yaml(version: str) -> None:
                 f"{_YEAST_YML}, found {count}"
             )
     _YEAST_YML.write_text(text, encoding="utf-8")
-
-
-def _update_root_readme_stats(accuracy, tp, tn, fp, fn, r2) -> None:
-    """The five gene-essentiality/growth lines under '## Model overview'.
-
-    The overview table row itself is handled separately by
-    :func:`yeastgem.io._update_readme`, which already exists for the
-    same purpose on every curation commit.
-    """
-    text = _ROOT_README.read_text(encoding="utf-8")
-    substitutions = [
-        (r"^(- Accuracy: )0\.\d+$", rf"\g<1>{accuracy:.3f}"),
-        (r"^(- True non-essential genes: )\d+$", rf"\g<1>{len(tp)}"),
-        (r"^(- True essential genes: )\d+$", rf"\g<1>{len(tn)}"),
-        (r"^(- False non-essential genes: )\d+$", rf"\g<1>{len(fp)}"),
-        (r"^(- False essential genes: )\d+$", rf"\g<1>{len(fn)}"),
-        (r"^(- Correlation coefficient R<sup>2</sup>: )0\.\d+$",
-         rf"\g<1>{r2:.3f}"),
-    ]
-    for pattern, replacement in substitutions:
-        text, count = re.subn(pattern, replacement, text, count=1, flags=re.M)
-        if count != 1:
-            raise SystemExit(
-                f"expected exactly one match for {pattern!r} in "
-                f"{_ROOT_README}, found {count}"
-            )
-    _ROOT_README.write_text(text, encoding="utf-8")
 
 
 def _update_results_readme(version: str, r2, flux, exchange, accuracy, tp,
@@ -297,10 +269,6 @@ def cmd_build(args: argparse.Namespace) -> int:
 
     print("Updating README.md")
     _update_readme(model)
-    _update_root_readme_stats(
-        essential.accuracy, essential.tp, essential.tn, essential.fp,
-        essential.fn, r2,
-    )
 
     print("Updating data/testResults/README.md")
     _update_results_readme(

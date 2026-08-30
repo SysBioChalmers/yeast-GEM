@@ -84,15 +84,16 @@ saveDeltaG(model,false);
 cd ..
 
 %Update README file: date + size of model
-modelVersion = regexprep(model.id,'yeastGEM_v?','');
+%No version is stamped: it would go stale on develop the moment the next
+%curation lands, and it duplicates the "Current release" badge on main.
 nGenes=num2str(numel(model.genes));
 nMets=num2str(numel(model.mets));
 nRxns=num2str(numel(model.rxns));
 copyfile('../README.md','backup.md')
 fin  = fopen('backup.md','r');
 fout = fopen('../README.md','w');
-newStats = ['| $1 | ' datestr(now,'dd-mmm-yyyy') ' | ' modelVersion ' | ' nRxns ' | ' nMets ' | ' nGenes ' |'];
-searchStats = '^\| (\_Saccharomyces cerevisiae\_) \| \d{2}-\D+-\d{4} \| (\d+\.\d+\.\d+|develop) \| \d+ \| \d+ \| \d+ \|';
+newStats = ['| $1 | ' datestr(now,'dd-mmm-yyyy') ' | ' nRxns ' | ' nMets ' | ' nGenes ' |'];
+searchStats = '^\| (\_Saccharomyces cerevisiae\_) \| \d{2}-\D+-\d{4} \| \d+ \| \d+ \| \d+ \|';
 while ~feof(fin)
     str = fgets(fin);
     inline = regexprep(str,searchStats,newStats);
