@@ -75,6 +75,13 @@ so a name there links straight to its explanation here — and to the section of
 the same name in [`qc_findings.md`](qc_findings.md), which lists the entries
 behind the count.
 
+### Model size
+Reaction, metabolite and gene counts, with the change against the target
+branch. Shown at the top of the comment, but not a check: unlike every count
+below, a curation pull request is expected to change these, so it carries no
+icon and is never a regression. It exists so a size change is visible, not so
+it can be judged.
+
 ### Model checks
 
 #### Growth (biomass producible)

@@ -16,6 +16,11 @@ Icon rule, per row:
   blocking), :white_check_mark: if it is zero.
 * :hourglass_flowing_sand: -- the group is still being computed on this run.
 
+One exception: the model-size line (reaction/metabolite/gene counts) at
+the top of the comment carries no icon at all. Unlike every other count
+here, a curation pull request is expected to change it, so treating a
+rise like a regression would flag normal work.
+
 Only the growth gate fails the build. Everything else is reported.
 
 Usage:
@@ -27,6 +32,18 @@ from __future__ import annotations
 import argparse
 import re
 from pathlib import Path
+
+# (metric key, label)
+#
+# No icon, unlike every other row in this file: a curation PR is expected
+# to add or remove reactions, metabolites and genes, so a changed count is
+# not itself a finding -- only a place for the reader to notice a size
+# change they were not expecting.
+_SIZE_ROWS = [
+    ("n_reactions", "reactions"),
+    ("n_metabolites", "metabolites"),
+    ("n_genes", "genes"),
+]
 
 # (metric key, comment label, kind)
 _MODEL_ROWS = [
@@ -147,6 +164,33 @@ def _icon(value: float, base: float | None, kind: str):
     if value > 0:
         return text, ":warning:", False, False
     return text, ":white_check_mark:", False, False
+
+
+def _render_size(current, base, base_ref, running) -> str:
+    """One-line model-size summary: no icon, no gate.
+
+    A changed reaction/metabolite/gene count is expected on essentially
+    every curation pull request, so treating it like the other counts --
+    green unless it rose -- would flag normal work as a regression. This
+    is context for the reader, not a check.
+    """
+    if running:
+        return "_running_"
+    if not current:
+        return "_not run._"
+    parts = []
+    for key, label in _SIZE_ROWS:
+        if key not in current:
+            parts.append(f"{label}: _not run_")
+            continue
+        value = int(current[key])
+        if key in base:
+            change = int(value - int(base[key]))
+            delta = f"{change:+d}" if change else "0"
+        else:
+            delta = "new"
+        parts.append(f"{value} {label} ({delta})")
+    return ", ".join(parts) + f" vs `{base_ref}`"
 
 
 def _render_rows(rows, current, base, url_base, detail_base, running):
@@ -449,8 +493,11 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
     if run_url:
         footer += ["", f"[Full workflow run]({run_url})"]
 
+    size_line = f"**Model size:** {_render_size(current, base, base_ref, running)}"
+
     return "\n".join(
-        ["## Model quality report", "", verdict, "", intro, "", *body, *footer]
+        ["## Model quality report", "", verdict, "", size_line, "", intro, "",
+         *body, *footer]
     ) + "\n"
 
 
