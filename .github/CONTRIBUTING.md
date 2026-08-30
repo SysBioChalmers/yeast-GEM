@@ -177,6 +177,7 @@ The following points should be considered when merging branches to `develop`:
 * Make sure the branch gets accepted by at least one developer with writing access.
 * Wait at least a day before merging, to allow other developers to inspect the pull request.
 * As soon as the branch is merged, check if `develop` is still possible to merge to `main` (this can be checked [here](https://github.com/SysBioChalmers/yeast-GEM/compare/develop)). If conflicts appear (which should rarely happen and only if the `.xml` file was changed in an unexpected way by a toolbox update), fix the conflict _locally_ as soon as possible in `develop` and then push it (note, **DO NOT** pull any other changes from `main` to `develop`, just the single file that is creating the conflict).
+* When using "Squash and merge", check the commit-message box before confirming. GitHub pre-fills it with the subject line of every squashed commit, and a pull request that touched the model almost always includes a bot-authored `chore: update model QC results [skip ci]` commit from `model-qc.yml`. If that line survives into the final squash-commit message, GitHub Actions skips *every* push-triggered workflow on `develop` (`branch-hygiene.yml`, `yaml-validation.yml`) for that merge -- not just the one push it was originally meant to skip. Trim the message to a short summary (or at least delete any `[skip ci]` line) before confirming.
 
 ### Managing python dependencies
 
@@ -221,7 +222,7 @@ The release itself is automated by [`.github/workflows/release.yml`](../.github/
    * export `model/yeast-GEM.xml`, `.txt`, `.xlsx` and `.mat` from the now-stamped `.yml`, via RAVEN -- the one step that still needs MATLAB, since there is no Python writer for those formats;
    * take a memote snapshot and open a pull request from `release/X.Y.Z` into `main`.
 3. Review the pull request like any other: check the model-quality and validation-metrics comment for regressions, and the linked memote snapshot. Wait at least a day, get at least one approving review, then merge.
-4. On merge, the workflow tags `vX.Y.Z`, publishes the GitHub release, and opens a pull request syncing `main` back into `develop` -- with the binary model files removed again, so they never reach `develop` (see `branch-hygiene.yml`, which would otherwise flag them). Merge that pull request too.
+4. On merge, the workflow tags `vX.Y.Z`, publishes the GitHub release, and opens a pull request syncing `main` back into `develop` -- with the binary model files removed again, so they never reach `develop` (see `branch-hygiene.yml`, which would otherwise flag them). Merge that pull request too -- it carries every commit `develop` was missing, so it is the one most likely to trip the `[skip ci]` squash-message issue noted [above](#merging-contributions).
 5. Review the [Zenodo](https://zenodo.org) release: every new release from GitHub (step 4) automatically triggers a new release in Zenodo. However, so far it is not possible to fully customize this release, and some manual curation is needed. This includes:
     * Ensuring the title of the release has the format `SysBioChalmers/yeast-GEM: yeast X.Y.Z`.
     * Correcting author names to include all commit authors and PR reviewers that contributed to the release.
