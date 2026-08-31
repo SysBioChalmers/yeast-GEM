@@ -3,17 +3,14 @@
 MEMOTE only computes a score when it builds a report; the raw ``memote run``
 result holds per-test results but no score. So this runs MEMOTE through its
 Python API and then builds the snapshot report to obtain the score, rather
-than shelling out to ``memote run`` (which would leave us without one).
-Ported from the equivalent script on Human-GEM's ``develop`` branch
-(``code/test/memoteSnapshot.py``), simplified to one run per pull request
-instead of a core-subset/full-suite split -- yeast-GEM does not (yet) have
-Human-GEM's ``/run memote`` slash-command trigger for an on-demand full run.
+than shelling out to ``memote run`` (which would leave us without one). One
+run per pull request rather than a core-subset/full-suite split -- yeast-GEM
+does not (yet) have a slash-command trigger for an on-demand full run.
 
 Skips the handful of tests that dominate runtime on a genome-scale model
 (flux-variability / loopless-MILP consistency checks, and the matrix-rank /
 null-space tests, which are O(n^3)) so a pull request gets a score within a
-normal CI budget. This mirrors, and reuses the exact skip list from,
-Human-GEM's core subset.
+normal CI budget.
 
 Writes the total score and section scores to ``<out>/memote_score.md``
 (diff-friendly markdown, read back by ``build_qc_report.py``) and the full
