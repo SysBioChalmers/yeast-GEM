@@ -42,59 +42,6 @@ _None._
 
 _None._
 
-## Malformed cross-references
-
-| kind | id | namespace | value | problem |
-|---|---|---|---|---|
-| metabolite | s_4269 | chebi | ChEBI:15987 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
-| metabolite | s_4304 | chebi | ChEBI:17173 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
-| metabolite | s_4310 | chebi | ChEBI:27551 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
-| reaction | r_4747 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4747 | rhea | RHEA:24674 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4748 | kegg.pathway | Fructose and mannose metabolism | looks like a name rather than an identifier |
-| reaction | r_4748 | rhea | RHEA:13941 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4749 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
-| reaction | r_4749 | rhea | RHEA:27642 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4750 | kegg.pathway | Glycolysis / gluconeogenesis | looks like a name rather than an identifier |
-| reaction | r_4750 | rhea | RHEA:10264 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4751 | kegg.pathway | Phenylalanine metabolism | looks like a name rather than an identifier |
-| reaction | r_4752 | kegg.pathway | Glutathione metabolism | looks like a name rather than an identifier |
-| reaction | r_4753 | kegg.pathway | Thiamine metabolism | looks like a name rather than an identifier |
-| reaction | r_4753 | rhea | RHEA:47848 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4754 | kegg.pathway | Riboflavin metabolism | looks like a name rather than an identifier |
-| reaction | r_4754 | rhea | RHEA:37743 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4755 | kegg.pathway | Pyruvate metabolism | looks like a name rather than an identifier |
-| reaction | r_4755 | rhea | RHEA:51608 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4756 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4757 | kegg.pathway | Alternate carbon metabolism | looks like a name rather than an identifier |
-| reaction | r_4758 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
-| reaction | r_4758 | rhea | RHEA:27738 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4760 | kegg.pathway | Arginine and proline metabolism | looks like a name rather than an identifier |
-| reaction | r_4761 | kegg.pathway | Tryptophan metabolism | looks like a name rather than an identifier |
-| reaction | r_4761 | rhea | RHEA:65885 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4762 | kegg.pathway | Valine, leucine and isoleucine metabolism | looks like a name rather than an identifier |
-| reaction | r_4762 | rhea | RHEA:31251 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4763 | kegg.pathway | Butanoate metabolism | looks like a name rather than an identifier |
-| reaction | r_4764 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4764 | rhea | RHEA:30759 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4765 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
-| reaction | r_4766 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
-| reaction | r_4766 | rhea | RHEA:13665 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4767 | kegg.pathway | Tryptophan metabolism | looks like a name rather than an identifier |
-| reaction | r_4767 | rhea | RHEA:65561 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4768 | kegg.pathway | Thiamine metabolism | looks like a name rather than an identifier |
-| reaction | r_4769 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
-| reaction | r_4769 | rhea | RHEA:13893 | remove the redundant 'RHEA:' prefix |
-| reaction | r_4770 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4771 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4772 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4773 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4774 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4775 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4776 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4777 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-| reaction | r_4778 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
-
 ## Cross-refs inconsistent across compartments
 
 | metabolite name | namespace | values |
@@ -149,6 +96,974 @@ _None._
 ## Reaction/metabolite names disagreeing with the tsvs
 
 _None._
+
+## Malformed cross-references
+
+| kind | id | namespace | value | problem |
+|---|---|---|---|---|
+| metabolite | s_4269 | chebi | ChEBI:15987 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
+| metabolite | s_4304 | chebi | ChEBI:17173 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
+| metabolite | s_4310 | chebi | ChEBI:27551 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
+| reaction | r_4747 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4748 | kegg.pathway | Fructose and mannose metabolism | looks like a name rather than an identifier |
+| reaction | r_4749 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
+| reaction | r_4750 | kegg.pathway | Glycolysis / gluconeogenesis | looks like a name rather than an identifier |
+| reaction | r_4751 | kegg.pathway | Phenylalanine metabolism | looks like a name rather than an identifier |
+| reaction | r_4752 | kegg.pathway | Glutathione metabolism | looks like a name rather than an identifier |
+| reaction | r_4753 | kegg.pathway | Thiamine metabolism | looks like a name rather than an identifier |
+| reaction | r_4754 | kegg.pathway | Riboflavin metabolism | looks like a name rather than an identifier |
+| reaction | r_4755 | kegg.pathway | Pyruvate metabolism | looks like a name rather than an identifier |
+| reaction | r_4756 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4757 | kegg.pathway | Alternate carbon metabolism | looks like a name rather than an identifier |
+| reaction | r_4758 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
+| reaction | r_4760 | kegg.pathway | Arginine and proline metabolism | looks like a name rather than an identifier |
+| reaction | r_4761 | kegg.pathway | Tryptophan metabolism | looks like a name rather than an identifier |
+| reaction | r_4762 | kegg.pathway | Valine, leucine and isoleucine metabolism | looks like a name rather than an identifier |
+| reaction | r_4763 | kegg.pathway | Butanoate metabolism | looks like a name rather than an identifier |
+| reaction | r_4764 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4765 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
+| reaction | r_4766 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
+| reaction | r_4767 | kegg.pathway | Tryptophan metabolism | looks like a name rather than an identifier |
+| reaction | r_4768 | kegg.pathway | Thiamine metabolism | looks like a name rather than an identifier |
+| reaction | r_4769 | kegg.pathway | Purine metabolism | looks like a name rather than an identifier |
+| reaction | r_4770 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4771 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4772 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4773 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4774 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4775 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4776 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4777 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+| reaction | r_4778 | kegg.pathway | Pyrimidine metabolism | looks like a name rather than an identifier |
+
+## Model/annotation-table consistency
+
+_None._
+
+## Removed identifiers not added to the deprecated lists
+
+_None._
+
+## Metabolite structure (SMILES) disagreeing with formula/charge
+
+| metabolite | name | issue | model formula | model charge | smiles formula | smiles charge | smiles |
+|---|---|---|---|---|---|---|---|
+| s_0001 | (1->3)-beta-D-glucan | formula_error | C6H10O5 | 0 | C6H12O6 | 0 | C(C1C(C(C(C(O1)O)O)O)O)O |
+| s_0002 | (1->3)-beta-D-glucan | formula_error | C6H10O5 | 0 | C6H12O6 | 0 | C(C1C(C(C(C(O1)O)O)O)O)O |
+| s_0003 | (1->3)-beta-D-glucan | formula_error | C6H10O5 | 0 | C6H12O6 | 0 | C(C1C(C(C(C(O1)O)O)O)O)O |
+| s_0004 | (1->6)-beta-D-glucan | formula_error | C6H10O5 | 0 | C6H12O6 | 0 | C(C1C(C(C(C(O1)O)O)O)O)O |
+| s_0006 | (2-amino-4-hydroxy-7,8-dihydropteridin-6-yl)methyl trihydrogen diphosphate | protonation | C7H8N5O8P2 | -3 | C7H11N5O8P2 | 0 | C1C(=NC2=C(N1)N=C(NC2=O)N)COP(=O)(O)OP(=O)(O)O |
+| s_0007 | (2E)-3-(methoxycarbonyl)pent-2-enedioic acid | protonation | C7H6O6 | -2 | C7H8O6 | 0 | COC(=O)C(=CC(=O)O)CC(=O)O |
+| s_0010 | (2S)-2-isopropyl-3-oxosuccinate | protonation | C7H8O5 | -2 | C7H10O5 | 0 | CC(C)C(C(=O)C(=O)O)C(=O)O |
+| s_0011 | (2S)-2-isopropyl-3-oxosuccinate | protonation | C7H8O5 | -2 | C7H10O5 | 0 | CC(C)C(C(=O)C(=O)O)C(=O)O |
+| s_0012 | (2S,3R)-3-hydroxybutane-1,2,3-tricarboxylic acid | protonation | C7H7O7 | -3 | C7H10O7 | 0 | CC(C(CC(=O)O)C(=O)O)(C(=O)O)O |
+| s_0013 | (5S,6S)-di-HETE | protonation | C20H31O4 | -1 | C20H32O4 | 0 | CCCCCC=CCC=CC=CC=CC(C(CCCC(=O)O)O)O |
+| s_0014 | (5S,6S)-di-HETE | protonation | C20H31O4 | -1 | C20H32O4 | 0 | CCCCCC=CCC=CC=CC=CC(C(CCCC(=O)O)O)O |
+| s_0015 | (N(omega)-L-arginino)succinic acid | protonation | C10H17N4O6 | -1 | C10H18N4O6 | 0 | C(CC(C(=O)O)N)CN=C(N)NC(CC(=O)O)C(=O)O |
+| s_0017 | (R)-4'-phosphopantothenic acid | protonation | C9H15NO8P | -3 | C9H18NO8P | 0 | CC(C)(COP(=O)(O)O)C(C(=O)NCCC(=O)O)O |
+| s_0018 | (R)-5-diphosphomevalonic acid | protonation | C6H10O10P2 | -4 | C6H14O10P2 | 0 | CC(CCOP(=O)(O)OP(=O)(O)O)(CC(=O)O)O |
+| s_0019 | (R)-5-phosphomevalonic acid | protonation | C6H10O7P | -3 | C6H13O7P | 0 | CC(CCOP(=O)(O)O)(CC(=O)O)O |
+| s_0025 | (R)-lactate | protonation | C3H5O3 | -1 | C3H6O3 | 0 | CC(C(=O)O)O |
+| s_0026 | (R)-lactate | protonation | C3H5O3 | -1 | C3H6O3 | 0 | CC(C(=O)O)O |
+| s_0027 | (R)-lactate | protonation | C3H5O3 | -1 | C3H6O3 | 0 | CC(C(=O)O)O |
+| s_0031 | (R)-pantothenate | protonation | C9H16NO5 | -1 | C9H17NO5 | 0 | CC(C)(CO)C(C(=O)NCCC(=O)O)O |
+| s_0032 | (R)-pantothenate | protonation | C9H16NO5 | -1 | C9H17NO5 | 0 | CC(C)(CO)C(C(=O)NCCC(=O)O)O |
+| s_0033 | (R)-S-lactoylglutathione | protonation | C13H20N3O8S | -1 | C13H21N3O8S | 0 | CC(C(=O)SCC(C(=O)NCC(=O)O)NC(=O)CCC(C(=O)O)N)O |
+| s_0034 | (R)-S-lactoylglutathione | protonation | C13H20N3O8S | -1 | C13H21N3O8S | 0 | CC(C(=O)SCC(C(=O)NCC(=O)O)NC(=O)CCC(C(=O)O)N)O |
+| s_0042 | (R)-3-hydroxydecanoyl-CoA | protonation | C31H50N7O18P3S | -4 | C31H54N7O18P3S | 0 | CCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_0045 | (S)-3-hydroxyhexacosanoyl-CoA | protonation | C47H82N7O18P3S | -4 | C47H86N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_0048 | (R)-3-hydroxylauroyl-CoA | protonation | C33H54N7O18P3S | -4 | C33H58N7O18P3S | 0 | CCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_0051 | (S)-3-hydroxypalmitoyl-CoA | protonation | C37H62N7O18P3S | -4 | C37H66N7O18P3S | 0 | CCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_0054 | (S)-3-hydroxytetradecanoyl-CoA | protonation | C35H58N7O18P3S | -4 | C35H62N7O18P3S | 0 | CCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_0056 | (S)-3-methyl-2-oxopentanoate | protonation | C6H9O3 | -1 | C6H10O3 | 0 | CCC(C)C(=O)C(=O)O |
+| s_0058 | (S)-3-methyl-2-oxopentanoate | protonation | C6H9O3 | -1 | C6H10O3 | 0 | CCC(C)C(=O)C(=O)O |
+| s_0060 | (S)-3-methyl-2-oxopentanoate | protonation | C6H9O3 | -1 | C6H10O3 | 0 | CCC(C)C(=O)C(=O)O |
+| s_0061 | (S)-dihydroorotate | protonation | C5H5N2O4 | -1 | C5H6N2O4 | 0 | C1C(NC(=O)NC1=O)C(=O)O |
+| s_0063 | (S)-lactate | protonation | C3H5O3 | -1 | C3H6O3 | 0 | CC(C(=O)O)O |
+| s_0064 | (S)-lactate | protonation | C3H5O3 | -1 | C3H6O3 | 0 | CC(C(=O)O)O |
+| s_0065 | (S)-lactate | protonation | C3H5O3 | -1 | C3H6O3 | 0 | CC(C(=O)O)O |
+| s_0066 | (S)-malate | protonation | C4H4O5 | -2 | C4H6O5 | 0 | C(C(C(=O)O)O)C(=O)O |
+| s_0067 | (S)-malate | protonation | C4H4O5 | -2 | C4H6O5 | 0 | C(C(C(=O)O)O)C(=O)O |
+| s_0068 | (S)-malate | protonation | C4H4O5 | -2 | C4H6O5 | 0 | C(C(C(=O)O)O)C(=O)O |
+| s_0069 | (S)-malate | protonation | C4H4O5 | -2 | C4H6O5 | 0 | C(C(C(=O)O)O)C(=O)O |
+| s_0075 | 1,3-bisphospho-D-glycerate | protonation | C3H4O10P2 | -4 | C3H8O10P2 | 0 | C(C(C(=O)OP(=O)(O)O)O)OP(=O)(O)O |
+| s_0076 | 1-(2-carboxyphenylamino)-1-deoxy-D-ribulose 5-phosphate | protonation | C12H13NO9P | -3 | C12H16NO9P | 0 | C1=CC=C(C(=C1)C(=O)O)NCC(=O)C(C(COP(=O)(O)O)O)O |
+| s_0079 | 1-(sn-glycero-3-phospho)-1D-myo-inositol | protonation | C9H18O11P | -1 | C9H19O11P | 0 | C(C(COP(=O)(O)OC1C(C(C(C(C1O)O)O)O)O)O)O |
+| s_0080 | 1-(sn-glycero-3-phospho)-1D-myo-inositol | protonation | C9H18O11P | -1 | C9H19O11P | 0 | C(C(COP(=O)(O)OC1C(C(C(C(C1O)O)O)O)O)O)O |
+| s_0086 | 1-C-(indol-3-yl)glycerol 3-phosphate | protonation | C11H12NO6P | -2 | C11H14NO6P | 0 | C1=CC=C2C(=C1)C(=CN2)C(C(COP(=O)(O)O)O)O |
+| s_0116 | 1-pyrroline-3-hydroxy-5-carboxylic acid | protonation | C5H6NO3 | -1 | C5H7NO3 | 0 | C1C(C=NC1C(=O)O)O |
+| s_0117 | 1-pyrroline-3-hydroxy-5-carboxylic acid | protonation | C5H6NO3 | -1 | C5H7NO3 | 0 | C1C(C=NC1C(=O)O)O |
+| s_0118 | 1-pyrroline-5-carboxylate | protonation | C5H6NO2 | -1 | C5H7NO2 | 0 | C1CC(N=C1)C(=O)O |
+| s_0119 | 1-pyrroline-5-carboxylate | protonation | C5H6NO2 | -1 | C5H7NO2 | 0 | C1CC(N=C1)C(=O)O |
+| s_0120 | 10-formyl-THF | protonation | C20H21N7O7 | -2 | C20H23N7O7 | 0 | C1C(NC2=C(N1)N=C(NC2=O)N)CN(C=O)C3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0121 | 10-formyl-THF | protonation | C20H21N7O7 | -2 | C20H23N7O7 | 0 | C1C(NC2=C(N1)N=C(NC2=O)N)CN(C=O)C3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0123 | 1D-myo-inositol 1,3,4,5-tetrakisphosphate | protonation | C6H8O18P4 | -8 | C6H16O18P4 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)O)OP(=O)(O)O)O |
+| s_0124 | 1D-myo-inositol 1,4,5,6-tetrakisphosphate | protonation | C6H8O18P4 | -8 | C6H16O18P4 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)O)O |
+| s_0125 | 1D-myo-inositol 1,4,5-trisphosphate | protonation | C6H9O15P3 | -6 | C6H15O15P3 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)O)OP(=O)(O)O)OP(=O)(O)O)O)O |
+| s_0126 | 1D-myo-inositol 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C1(C(C(C(C(C1O)O)OP(=O)(O)O)O)O)O |
+| s_0127 | 1D-myo-inositol 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C1(C(C(C(C(C1O)O)OP(=O)(O)O)O)O)O |
+| s_0129 | 1D-myo-inositol 3-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C1(C(C(C(C(C1O)O)OP(=O)(O)O)O)O)O |
+| s_0131 | 2',3'-cyclic AMP | protonation | C10H11N5O6P | -1 | C10H12N5O6P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C4C(C(O3)CO)OP(=O)(O4)O)N |
+| s_0140 | 2,3-bisphospho-D-glyceric acid | protonation | C3H3O10P2 | -5 | C3H8O10P2 | 0 | C(C(C(=O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_0141 | 2,5-diamino-4-hydroxy-6-(5-phosphoribosylamino)pyrimidine | protonation | C9H14N5O8P | -2 | C9H16N5O8P | 0 | C(C1C(C(C(O1)NC2=C(C(=O)NC(=N2)N)N)O)O)OP(=O)(O)O |
+| s_0142 | 2,5-diamino-6-(5-phosphono)ribitylamino-4(3H)-pyrimidinone | protonation | C9H16N5O8P | -2 | C9H18N5O8P | 0 | C(C(C(C(COP(=O)(O)O)O)O)O)NC1=C(C(=O)NC(=N1)N)N |
+| s_0144 | 2-[3-carboxy-3-(methylammonio)propyl]-L-histidine | protonation | C11H18N4O4 | 0 | C11H19N4O4+ | 1 | C[NH2+]C(CCC1=NC=C(N1)CC(C(=O)O)N)C(=O)O |
+| s_0145 | 2-acetamido-5-oxopentanoate | protonation | C7H10NO4 | -1 | C7H11NO4 | 0 | CC(=O)NC(CCC=O)C(=O)O |
+| s_0146 | 2-acetyllactic acid | protonation | C5H7O4 | -1 | C5H8O4 | 0 | CC(=O)C(C)(C(=O)O)O |
+| s_0147 | 2-amino-3-carboxymuconate-6-semialdehyde | protonation | C7H6NO5 | -1 | C7H7NO5 | 0 | C(=CC(=C(C(=O)O)N)C(=O)O)C=O |
+| s_0149 | 2-dehydropantoate | protonation | C6H9O4 | -1 | C6H10O4 | 0 | CC(C)(CO)C(=O)C(=O)O |
+| s_0150 | 2-dehydropantoate | protonation | C6H9O4 | -1 | C6H10O4 | 0 | CC(C)(CO)C(=O)C(=O)O |
+| s_0158 | 2-hydroxy-3-oxobutyl phosphate | protonation | C4H7O6P | -2 | C4H9O6P | 0 | CC(=O)C(COP(=O)(O)O)O |
+| s_0162 | 2-isopropylmalate | protonation | C7H10O5 | -2 | C7H12O5 | 0 | CC(C)C(CC(=O)O)(C(=O)O)O |
+| s_0163 | 2-isopropylmalate | protonation | C7H10O5 | -2 | C7H12O5 | 0 | CC(C)C(CC(=O)O)(C(=O)O)O |
+| s_0164 | 2-isopropylmalate | protonation | C7H10O5 | -2 | C7H12O5 | 0 | CC(C)C(CC(=O)O)(C(=O)O)O |
+| s_0165 | 2-isopropylmaleic acid | protonation | C7H8O4 | -2 | C7H10O4 | 0 | CC(C)C(=CC(=O)O)C(=O)O |
+| s_0174 | 2-methylcitrate | protonation | C7H7O7 | -3 | C7H10O7 | 0 | CC(C(=O)O)C(CC(=O)O)(C(=O)O)O |
+| s_0176 | 2-oxoadipic acid | protonation | C6H6O5 | -2 | C6H8O5 | 0 | C(CC(=O)C(=O)O)CC(=O)O |
+| s_0177 | 2-oxoadipic acid | protonation | C6H6O5 | -2 | C6H8O5 | 0 | C(CC(=O)C(=O)O)CC(=O)O |
+| s_0180 | 2-oxoglutarate | protonation | C5H4O5 | -2 | C5H6O5 | 0 | C(CC(=O)O)C(=O)C(=O)O |
+| s_0181 | 2-oxoglutarate | protonation | C5H4O5 | -2 | C5H6O5 | 0 | C(CC(=O)O)C(=O)C(=O)O |
+| s_0182 | 2-oxoglutarate | protonation | C5H4O5 | -2 | C5H6O5 | 0 | C(CC(=O)O)C(=O)C(=O)O |
+| s_0183 | 2-oxoglutarate | protonation | C5H4O5 | -2 | C5H6O5 | 0 | C(CC(=O)O)C(=O)C(=O)O |
+| s_0184 | 2-oxoglutarate | protonation | C5H4O5 | -2 | C5H6O5 | 0 | C(CC(=O)O)C(=O)C(=O)O |
+| s_0188 | 2-phospho-D-glyceric acid | protonation | C3H4O7P | -3 | C3H7O7P | 0 | C(C(C(=O)O)OP(=O)(O)O)O |
+| s_0189 | geranylgeranyl diphosphate | protonation | C20H33O7P2 | -3 | C20H36O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C |
+| s_0190 | farnesyl diphosphate | protonation | C15H25O7P2 | -3 | C15H28O7P2 | 0 | CC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C |
+| s_0191 | farnesyl diphosphate | protonation | C15H25O7P2 | -3 | C15H28O7P2 | 0 | CC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C |
+| s_0192 | 3',5'-cyclic AMP | protonation | C10H11N5O6P | -1 | C10H12N5O6P | 0 | C1C2C(C(C(O2)N3C=NC4=C(N=CN=C43)N)O)OP(=O)(O1)O |
+| s_0193 | 3',5'-cyclic CMP | protonation | C9H11N3O7P | -1 | C9H12N3O7P | 0 | C1C2C(C(C(O2)N3C=CC(=NC3=O)N)O)OP(=O)(O1)O |
+| s_0194 | 3',5'-cyclic dAMP | protonation | C10H11N5O5P | -1 | C10H12N5O5P | 0 | C1C2C(COP(=O)(O2)O)OC1N3C=NC4=C(N=CN=C43)N |
+| s_0195 | 3',5'-cyclic GMP | protonation | C10H11N5O7P | -1 | C10H12N5O7P | 0 | C1C2C(C(C(O2)N3C=NC4=C3N=C(NC4=O)N)O)OP(=O)(O1)O |
+| s_0196 | 3',5'-cyclic IMP | protonation | C10H10N4O7P | -1 | C10H11N4O7P | 0 | C1C2C(C(C(O2)N3C=NC4=C3N=CNC4=O)O)OP(=O)(O1)O |
+| s_0197 | 3'-dephospho-CoA | protonation | C21H33N7O13P2S | -2 | C21H35N7O13P2S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0200 | 3'-dephospho-CoA | protonation | C21H33N7O13P2S | -2 | C21H35N7O13P2S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0201 | 3'-phospho-5'-adenylyl sulfate | protonation | C10H11N5O13P2S | -4 | C10H15N5O13P2S | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OS(=O)(=O)O)OP(=O)(O)O)O)N |
+| s_0207 | 3-(imidazol-4-yl)-2-oxopropyl dihydrogen phosphate | protonation | C6H7N2O5P | -2 | C6H9N2O5P | 0 | C1=C(NC=N1)CC(=O)COP(=O)(O)O |
+| s_0208 | 3-aminopropanal | protonation | C3H8NO | 1 | C3H7NO | 0 | C(CN)C=O |
+| s_0211 | 3-dehydroshikimate | protonation | C7H7O5 | -1 | C7H8O5 | 0 | C1C(C(C(=O)C=C1C(=O)O)O)O |
+| s_0212 | 3-hexaprenyl-4,5-dihydroxybenzoic acid | protonation | C37H53O4 | -1 | C37H54O4 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCC1=C(C(=CC(=C1)C(=O)O)O)O)C)C)C)C)C)C |
+| s_0213 | 3-hexaprenyl-4,5-dihydroxybenzoic acid | protonation | C37H53O4 | -1 | C37H54O4 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCC1=C(C(=CC(=C1)C(=O)O)O)O)C)C)C)C)C)C |
+| s_0214 | 3-hexaprenyl-4-hydroxy-5-methoxybenzoic acid | protonation | C38H55O4 | -1 | C38H56O4 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCC1=C(C(=CC(=C1)C(=O)O)OC)O)C)C)C)C)C)C |
+| s_0215 | 3-hexaprenyl-4-hydroxybenzoic acid | protonation | C37H53O3 | -1 | C37H54O3 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCC1=C(C=CC(=C1)C(=O)O)O)C)C)C)C)C)C |
+| s_0216 | 3-hexaprenyl-4-hydroxybenzoic acid | protonation | C37H53O3 | -1 | C37H54O3 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCC1=C(C=CC(=C1)C(=O)O)O)C)C)C)C)C)C |
+| s_0218 | 3-hydroxy-3-methylglutaryl-CoA | protonation | C27H39N7O20P3S | -5 | C27H44N7O20P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CC(C)(CC(=O)O)O)O |
+| s_0221 | 3-hydroxy-3-methylglutaryl-CoA | protonation | C27H39N7O20P3S | -5 | C27H44N7O20P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CC(C)(CC(=O)O)O)O |
+| s_0224 | 3-hydroxyanthranilate | protonation | C7H6NO3 | -1 | C7H7NO3 | 0 | C1=CC(=C(C(=C1)O)N)C(=O)O |
+| s_0229 | 3-hydroxyoctadecanoyl-CoA | protonation | C39H66N7O18P3S | -4 | C39H70N7O18P3S | 0 | CCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_0231 | 3-ketosphinganine | protonation | C18H38NO2 | 1 | C18H37NO2 | 0 | CCCCCCCCCCCCCCCC(=O)C(CO)N |
+| s_0232 | 3-methyl-2-oxobutanoate | protonation | C5H7O3 | -1 | C5H8O3 | 0 | CC(C)C(=O)C(=O)O |
+| s_0233 | 3-methyl-2-oxobutanoate | protonation | C5H7O3 | -1 | C5H8O3 | 0 | CC(C)C(=O)C(=O)O |
+| s_0239 | 3-oxodecanoyl-CoA | protonation | C31H48N7O18P3S | -4 | C31H52N7O18P3S | 0 | CCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0243 | 3-oxohexacosanoyl-CoA | protonation | C47H80N7O18P3S | -4 | C47H84N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0247 | 3-oxolauroyl-CoA | protonation | C33H52N7O18P3S | -4 | C33H56N7O18P3S | 0 | CCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0250 | 3-oxooctadecanoyl-CoA | protonation | C39H64N7O18P3S | -4 | C39H68N7O18P3S | 0 | CCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0253 | 3-oxopalmitoyl-CoA | protonation | C37H60N7O18P3S | -4 | C37H64N7O18P3S | 0 | CCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0257 | 3-oxotetradecanoyl-CoA | protonation | C35H56N7O18P3S | -4 | C35H60N7O18P3S | 0 | CCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0259 | 3-phospho-serine | protonation | C3H6NO6P | -2 | C3H8NO6P | 0 | C(C(C(=O)O)N)OP(=O)(O)O |
+| s_0261 | 3-phosphoshikimic acid | protonation | C7H8O8P | -3 | C7H11O8P | 0 | C1C(C(C(C=C1C(=O)O)OP(=O)(O)O)O)O |
+| s_0263 | 4,5-bis(diphospho)-1D-myo-inositol tetrakisphosphate | protonation | C6H7O30P8 | -13 | C6H20O30P8 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)OP(=O)(O)O)OP(=O)(O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_0264 | 4-(phosphonooxy)-L-threonine | protonation | C4H8NO7P | -2 | C4H10NO7P | 0 | C(C(C(C(=O)O)N)O)OP(=O)(O)O |
+| s_0267 | 4-amino-2-methyl-5-diphosphomethylpyrimidine | protonation | C6H8N3O7P2 | -3 | C6H11N3O7P2 | 0 | CC1=NC=C(C(=N1)N)COP(=O)(O)OP(=O)(O)O |
+| s_0268 | 4-amino-2-methyl-5-phosphomethylpyrimidine | protonation | C6H8N3O4P | -2 | C6H10N3O4P | 0 | CC1=NC=C(C(=N1)N)COP(=O)(O)O |
+| s_0274 | 4-aminobutanal | protonation | C4H10NO | 1 | C4H9NO | 0 | C(CC=O)CN |
+| s_0275 | 4-aminobutanal | protonation | C4H10NO | 1 | C4H9NO | 0 | C(CC=O)CN |
+| s_0279 | 4-diphospho-1D-myo-inositol pentakisphosphate | protonation | C6H6O27P7 | -13 | C6H19O27P7 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_0280 | 4-guanidinobutanamide | protonation | C5H13N4O | 1 | C5H12N4O | 0 | C(CC(=O)N)CN=C(N)N |
+| s_0282 | 4-hydroxy-2-oxoglutarate | protonation | C5H4O6 | -2 | C5H6O6 | 0 | C(C(C(=O)O)O)C(=O)C(=O)O |
+| s_0283 | 4-hydroxy-2-oxoglutarate | protonation | C5H4O6 | -2 | C5H6O6 | 0 | C(C(C(=O)O)O)C(=O)C(=O)O |
+| s_0284 | 4-hydroxy-2-oxoglutarate | protonation | C5H4O6 | -2 | C5H6O6 | 0 | C(C(C(=O)O)O)C(=O)C(=O)O |
+| s_0290 | 4-hydroxybenzoyl-CoA | protonation | C28H36N7O18P3S | -4 | C28H40N7O18P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)C4=CC=C(C=C4)O)O |
+| s_0291 | 4-methyl-2-oxopentanoate | protonation | C6H9O3 | -1 | C6H10O3 | 0 | CC(C)CC(=O)C(=O)O |
+| s_0292 | 4-methyl-2-oxopentanoate | protonation | C6H9O3 | -1 | C6H10O3 | 0 | CC(C)CC(=O)C(=O)O |
+| s_0293 | 4-methyl-5-(2-phosphonooxyethyl)thiazole | protonation | C6H8NO4PS | -2 | C6H10NO4PS | 0 | CC1=C(SC=N1)CCOP(=O)(O)O |
+| s_0294 | 4-methylthio-2-oxobutanoate | protonation | C5H7O3S | -1 | C5H8O3S | 0 | CSCCC(=O)C(=O)O |
+| s_0295 | 4-phospho-L-aspartate | protonation | C4H6NO7P | -2 | C4H8NO7P | 0 | C(C(C(=O)O)N)C(=O)OP(=O)(O)O |
+| s_0297 | 4beta-methylzymosterol-4alpha-carboxylic acid | protonation | C29H45O3 | -1 | C29H46O3 | 0 | CC(CCC=C(C)C)C1CCC2C1(CCC3=C2CCC4C3(CCC(C4(C)C(=O)O)O)C)C |
+| s_0298 | 5'-adenylyl sulfate | protonation | C10H12N5O10PS | -2 | C10H14N5O10PS | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OS(=O)(=O)O)O)O)N |
+| s_0299 | 5'-phosphoribosyl-4-(N-succinocarboxamide)-5-aminoimidazole | protonation | C13H15N4O12P | -4 | C13H19N4O12P | 0 | C1=NC(=C(N1C2C(C(C(O2)COP(=O)(O)O)O)O)N)C(=O)NC(CC(=O)O)C(=O)O |
+| s_0300 | 5'-phosphoribosyl-5-aminoimidazole | protonation | C8H13N3O7P | -1 | C8H14N3O7P | 0 | C1=C(N(C=N1)C2C(C(C(O2)COP(=O)(O)O)O)O)N |
+| s_0301 | 5'-phosphoribosyl-N-formylglycineamide | protonation | C8H13N2O9P | -2 | C8H15N2O9P | 0 | C(C1C(C(C(O1)NC(=O)CNC=O)O)O)OP(=O)(O)O |
+| s_0304 | 5,10-methenyl-THF | protonation | C20H20N7O6 | -1 | C20H21N7O6 | 0 | C1C2CN(C=[N+]2C3=C(N1)N=C(NC3=O)N)C4=CC=C(C=C4)C(=O)NC(CCC(=O)O)C(=O)[O-] |
+| s_0305 | 5,10-methenyl-THF | protonation | C20H20N7O6 | -1 | C20H21N7O6 | 0 | C1C2CN(C=[N+]2C3=C(N1)N=C(NC3=O)N)C4=CC=C(C=C4)C(=O)NC(CCC(=O)O)C(=O)[O-] |
+| s_0306 | 5,10-methylenetetrahydrofolate | protonation | C20H21N7O6 | -2 | C20H23N7O6 | 0 | C1C2CN(CN2C3=C(N1)N=C(NC3=O)N)C4=CC=C(C=C4)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0307 | 5,10-methylenetetrahydrofolate | protonation | C20H21N7O6 | -2 | C20H23N7O6 | 0 | C1C2CN(CN2C3=C(N1)N=C(NC3=O)N)C4=CC=C(C=C4)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0308 | 5,6,7,8-tetrahydrofolyl-L-glutamic acid | protonation | C24H27N8O9 | -3 | C24H30N8O9 | 0 | C1C(NC2=C(N1)N=C(NC2=O)N)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)NC(CCC(=O)O)C(=O)O)C(=O)O |
+| s_0309 | 5,6-bis(diphospho)-1D-myo-inositol tetrakisphosphate | protonation | C6H7O30P8 | -13 | C6H20O30P8 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)OP(=O)(O)O)OP(=O)(O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_0311 | 5-(methylsulfanyl)-2,3-dioxopentyl phosphate | protonation | C6H9O6PS | -2 | C6H11O6PS | 0 | CSCCC(=O)C(=O)COP(=O)(O)O |
+| s_0313 | 5-amino-6-(5-phosphoribitylamino)uracil | protonation | C9H15N4O9P | -2 | C9H17N4O9P | 0 | C(C(C(C(COP(=O)(O)O)O)O)O)NC1=C(C(=O)NC(=O)N1)N |
+| s_0318 | 5-diphospho-1D-myo-inositol pentakisphosphate | protonation | C6H6O27P7 | -13 | C6H19O27P7 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_0319 | 5-formyltetrahydrofolic acid | protonation | C20H21N7O7 | -2 | C20H23N7O7 | 0 | C1C(N(C2=C(N1)N=C(NC2=O)N)C=O)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0320 | 5-formyltetrahydrofolic acid | protonation | C20H21N7O7 | -2 | C20H23N7O7 | 0 | C1C(N(C2=C(N1)N=C(NC2=O)N)C=O)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0321 | 5-formyltetrahydrofolic acid | protonation | C20H21N7O7 | -2 | C20H23N7O7 | 0 | C1C(N(C2=C(N1)N=C(NC2=O)N)C=O)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0322 | 5-methyltetrahydrofolate | protonation | C20H23N7O6 | -2 | C20H25N7O6 | 0 | CN1C(CNC2=C1C(=O)NC(=N2)N)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0323 | 5-methyltetrahydropteroyltri-L-glutamic acid | protonation | C30H35N9O12 | -4 | C30H39N9O12 | 0 | CN1C(CNC2=C1C(=O)NC(=N2)N)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)NC(CCC(=O)NC(CCC(=O)O)C(=O)O)C(=O)O)C(=O)O |
+| s_0324 | 5-O-(1-carboxyvinyl)-3-phosphoshikimic acid | protonation | C10H9O10P | -4 | C10H13O10P | 0 | C=C(C(=O)O)OC1CC(=CC(C1O)OP(=O)(O)O)C(=O)O |
+| s_0327 | 5-phosphoribosylamine | protonation | C5H11NO7P | -1 | C5H12NO7P | 0 | C(C1C(C(C(O1)N)O)O)OP(=O)(O)O |
+| s_0328 | 6,7-dimethyl-8-(1-D-ribityl)lumazine | protonation | C13H17N4O6 | -1 | C13H18N4O6 | 0 | CC1=C(N(C2=NC(=O)NC(=O)C2=N1)CC(C(C(CO)O)O)O)C |
+| s_0333 | 6-diphospho-1D-myo-inositol pentakisphosphate | protonation | C6H6O27P7 | -13 | C6H19O27P7 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_0335 | 6-O-phosphono-D-glucono-1,5-lactone | protonation | C6H9O9P | -2 | C6H11O9P | 0 | C(C1C(C(C(C(=O)O1)O)O)O)OP(=O)(O)O |
+| s_0340 | 6-phospho-D-gluconate | protonation | C6H10O10P | -3 | C6H13O10P | 0 | C(C(C(C(C(C(=O)O)O)O)O)O)OP(=O)(O)O |
+| s_0341 | 7,8-diaminononanoate | protonation | C9H21N2O2 | 1 | C9H20N2O2 | 0 | CC(C(CCCCCC(=O)O)N)N |
+| s_0342 | 7,8-diaminononanoate | protonation | C9H21N2O2 | 1 | C9H20N2O2 | 0 | CC(C(CCCCCC(=O)O)N)N |
+| s_0345 | 7,8-dihydroneopterin 3'-phosphate | protonation | C9H12N5O7P | -2 | C9H14N5O7P | 0 | C1C(=NC2=C(N1)N=C(NC2=O)N)C(C(COP(=O)(O)O)O)O |
+| s_0346 | 7,8-dihydroneopterin 3'-triphosphate | protonation | C9H12N5O13P3 | -4 | C9H16N5O13P3 | 0 | C1C(=NC2=C(N1)N=C(NC2=O)N)C(C(COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_0347 | 7,8-dihydropteroate | protonation | C14H13N6O3 | -1 | C14H14N6O3 | 0 | C1C(=NC2=C(N1)N=C(NC2=O)N)CNC3=CC=C(C=C3)C(=O)O |
+| s_0348 | 7,8-dihydropteroate | protonation | C14H13N6O3 | -1 | C14H14N6O3 | 0 | C1C(=NC2=C(N1)N=C(NC2=O)N)CNC3=CC=C(C=C3)C(=O)O |
+| s_0349 | 7-phospho-2-dehydro-3-deoxy-D-arabino-heptonic acid | protonation | C7H10O10P | -3 | C7H13O10P | 0 | C(C(C(C(COP(=O)(O)O)O)O)O)C(=O)C(=O)O |
+| s_0350 | 7-phospho-2-dehydro-3-deoxy-D-arabino-heptonic acid | protonation | C7H10O10P | -3 | C7H13O10P | 0 | C(C(C(C(COP(=O)(O)O)O)O)O)C(=O)C(=O)O |
+| s_0352 | 8-amino-7-oxononanoate | protonation | C9H17NO3 | 0 | C9H16NO3- | -1 | CC(C(=O)CCCCCC(=O)[O-])N |
+| s_0354 | 8-amino-7-oxononanoate | protonation | C9H17NO3 | 0 | C9H16NO3- | -1 | CC(C(=O)CCCCCC(=O)[O-])N |
+| s_0367 | acetoacetyl-CoA | protonation | C25H36N7O18P3S | -4 | C25H40N7O18P3S | 0 | CC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0370 | acetoacetyl-CoA | protonation | C25H36N7O18P3S | -4 | C25H40N7O18P3S | 0 | CC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0373 | acetyl-CoA | protonation | C23H34N7O17P3S | -4 | C23H38N7O17P3S | 0 | CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0376 | acetyl-CoA | protonation | C23H34N7O17P3S | -4 | C23H38N7O17P3S | 0 | CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0377 | acetyl-CoA | protonation | C23H34N7O17P3S | -4 | C23H38N7O17P3S | 0 | CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0378 | acetyl-CoA | protonation | C23H34N7O17P3S | -4 | C23H38N7O17P3S | 0 | CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0389 | adenosine 2'-phosphate | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)CO)O)OP(=O)(O)O)N |
+| s_0390 | adenosine 3',5'-bismonophosphate | protonation | C10H11N5O10P2 | -4 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)OP(=O)(O)O)O)N |
+| s_0391 | adenosine 3',5'-bismonophosphate | protonation | C10H11N5O10P2 | -4 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)OP(=O)(O)O)O)N |
+| s_0392 | adenosine 3',5'-bismonophosphate | protonation | C10H11N5O10P2 | -4 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)OP(=O)(O)O)O)N |
+| s_0394 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0395 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0397 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0398 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0399 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0402 | ADP-ribose | protonation | C15H21N5O14P2 | -2 | C15H23N5O14P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)O)O)O)O)O)N |
+| s_0403 | AICAR | formula_error | C9H13N4O8P | -2 | C9H14N4O5 | 0 | C1=NC(=C(N1C2C(C(C(O2)CO)O)O)N)C(=O)N |
+| s_0409 | alpha,alpha-trehalose 6-phosphate | protonation | C12H21O14P | -2 | C12H23O14P | 0 | C(C1C(C(C(C(O1)OC2C(C(C(C(O2)COP(=O)(O)O)O)O)O)O)O)O)O |
+| s_0410 | alpha-D-galactose 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)OP(=O)(O)O)O)O)O)O |
+| s_0411 | alpha-D-glucosamine 1-phosphate | protonation | C6H13NO8P | -1 | C6H14NO8P | 0 | C(C1C(C(C(C(O1)OP(=O)(O)O)N)O)O)O |
+| s_0412 | alpha-D-glucosamine 6-phosphate | protonation | C6H13NO8P | -1 | C6H14NO8P | 0 | C(C1C(C(C(C(O1)O)N)O)O)OP(=O)(O)O |
+| s_0413 | alpha-D-glucosamine 6-phosphate | protonation | C6H13NO8P | -1 | C6H14NO8P | 0 | C(C1C(C(C(C(O1)O)N)O)O)OP(=O)(O)O |
+| s_0414 | alpha-D-mannosyl-beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | formula_error | C48H84N2O27P2 | 0 | C53H92N2O27P2 | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OP(=O)(O)OC1C(C(C(C(O1)CO)OC2C(C(C(C(O2)CO)OC3C(C(C(C(O3)CO)O)OC4C(C(C(C(O4)CO)O)O)O)O)O)NC(=O)C)O)NC(=O)C |
+| s_0417 | aminoacetaldehyde | protonation | C2H6NO | 1 | C2H5NO | 0 | C(C=O)N |
+| s_0418 | aminoacetone | protonation | C3H8NO | 1 | C3H7NO | 0 | CC(=O)CN |
+| s_0423 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_0424 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_0425 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_0426 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_0427 | anthranilate | protonation | C7H6NO2 | -1 | C7H7NO2 | 0 | C1=CC=C(C(=C1)C(=O)O)N |
+| s_0434 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0435 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0437 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0438 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0439 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_0442 | beta-D-fructose 2,6-bisphosphate | protonation | C6H10O12P2 | -4 | C6H14O12P2 | 0 | C(C1C(C(C(O1)(CO)OP(=O)(O)O)O)O)OP(=O)(O)O |
+| s_0443 | beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | formula_error | C42H72N2O22P2 | -2 | C47H82N2O22P2 | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OP(=O)(O)OC1C(C(C(C(O1)CO)OC2C(C(C(C(O2)CO)OC3C(C(C(C(O3)CO)O)O)O)O)NC(=O)C)O)NC(=O)C |
+| s_0444 | beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | formula_error | C42H72N2O22P2 | -2 | C47H82N2O22P2 | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OP(=O)(O)OC1C(C(C(C(O1)CO)OC2C(C(C(C(O2)CO)OC3C(C(C(C(O3)CO)O)O)O)O)NC(=O)C)O)NC(=O)C |
+| s_0451 | biotin | protonation | C10H15N2O3S | -1 | C10H16N2O3S | 0 | C1C2C(C(S1)CCCCC(=O)O)NC(=O)N2 |
+| s_0452 | biotin | protonation | C10H15N2O3S | -1 | C10H16N2O3S | 0 | C1C2C(C(S1)CCCCC(=O)O)NC(=O)N2 |
+| s_0453 | biotinyl-5'-AMP | protonation | C20H27N7O9PS | -1 | C20H28N7O9PS | 0 | C1C2C(C(S1)CCCCC(=O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)NC(=O)N2 |
+| s_0454 | but-1-ene-1,2,4-tricarboxylic acid | protonation | C7H5O6 | -3 | C7H8O6 | 0 | C(CC(=O)O)C(=CC(=O)O)C(=O)O |
+| s_0455 | carbamoyl phosphate | protonation | CH2NO5P | -2 | CH4NO5P | 0 | C(=O)(N)OP(=O)(O)O |
+| s_0467 | CDP | protonation | C9H12N3O11P2 | -3 | C9H15N3O11P2 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_0468 | CDP | protonation | C9H12N3O11P2 | -3 | C9H15N3O11P2 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_0469 | CDP-choline | protonation | C14H25N4O11P2 | -1 | C14H26N4O11P2 | 0 | C[N+](C)(C)CCOP(=O)([O-])OP(=O)(O)OCC1C(C(C(O1)N2C=CC(=NC2=O)N)O)O |
+| s_0474 | CDP-ethanolamine | protonation | C11H19N4O11P2 | -1 | C11H20N4O11P2 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCCN)O)O |
+| s_0507 | cerotic acid | protonation | C26H51O2 | -1 | C26H52O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_0510 | chitosan | formula_error | C6H11NO4 | 0 | C56H103N9O39 | 0 | COC(=O)NC1C(C(C(OC1OC2C(OC(C(C2O)N)OC3C(OC(C(C3O)N)O)CO)CO)CO)OC4C(C(C(C(O4)CO)OC5C(C(C(C(O5)CO)OC6C(C(C(C(O6)CO)OC7C(C(C(C(O7)CO)OC8C(C(C(C(O8)CO)OC9C(C(C(C(O9)CO)O)O)N)O)N)O)N)O)N)O)N)O)N)O |
+| s_0514 | choline phosphate | formula_error | C5H13NO4P | -1 | C5H15ClNO4P | 0 | C[N+](C)(C)CCOP(=O)(O)O.[Cl-] |
+| s_0515 | chorismate | protonation | C10H8O6 | -2 | C10H10O6 | 0 | C=C(C(=O)O)OC1C=C(C=CC1O)C(=O)O |
+| s_0516 | cis-aconitate | protonation | C6H3O6 | -3 | C6H6O6 | 0 | C(C(=CC(=O)O)C(=O)O)C(=O)O |
+| s_0517 | cis-aconitate | protonation | C6H3O6 | -3 | C6H6O6 | 0 | C(C(=CC(=O)O)C(=O)O)C(=O)O |
+| s_0526 | CMP | protonation | C9H12N3O8P | -2 | C9H14N3O8P | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_0528 | CMP | protonation | C9H12N3O8P | -2 | C9H14N3O8P | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_0529 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0530 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0531 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0532 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0533 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0534 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_0538 | coproporphyrinogen III | protonation | C36H40N4O8 | -4 | C36H44N4O8 | 0 | CC1=C2CC3=C(C(=C(N3)CC4=C(C(=C(N4)CC5=C(C(=C(N5)CC(=C1CCC(=O)O)N2)C)CCC(=O)O)C)CCC(=O)O)CCC(=O)O)C |
+| s_0539 | CTP | protonation | C9H12N3O14P3 | -4 | C9H16N3O14P3 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_0541 | CTP | protonation | C9H12N3O14P3 | -4 | C9H16N3O14P3 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_0550 | D-erythro-1-(imidazol-4-yl)glycerol 3-phosphate | protonation | C6H9N2O6P | -2 | C6H11N2O6P | 0 | C1=C(NC=N1)C(C(COP(=O)(O)O)O)O |
+| s_0551 | D-erythrose 4-phosphate | protonation | C4H7O7P | -2 | C4H9O7P | 0 | C(C(C(C=O)O)O)OP(=O)(O)O |
+| s_0552 | D-erythrose 4-phosphate | protonation | C4H7O7P | -2 | C4H9O7P | 0 | C(C(C(C=O)O)O)OP(=O)(O)O |
+| s_0556 | D-fructose 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C(C(C(C(=O)COP(=O)(O)O)O)O)O)O |
+| s_0557 | D-fructose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C(C(C(C(=O)CO)O)O)O)OP(=O)(O)O |
+| s_0560 | D-galacturonate | protonation | C6H9O7 | -1 | C6H10O7 | 0 | C1(C(C(OC(C1O)O)C(=O)O)O)O |
+| s_0567 | D-glucose 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)OP(=O)(O)O)O)O)O)O |
+| s_0568 | D-glucose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C(C(C(C(C=O)O)O)O)O)OP(=O)(O)O |
+| s_0573 | D-mannose 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)OP(=O)(O)O)O)O)O)O |
+| s_0574 | D-mannose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)O)O)O)O)OP(=O)(O)O |
+| s_0577 | D-ribulose 5-phosphate | protonation | C5H9O8P | -2 | C5H11O8P | 0 | C(C(C(C(=O)CO)O)O)OP(=O)(O)O |
+| s_0581 | D-xylulose 5-phosphate | protonation | C5H9O8P | -2 | C5H11O8P | 0 | C(C(C(C(=O)CO)O)O)OP(=O)(O)O |
+| s_0582 | dADP | protonation | C10H12N5O9P2 | -3 | C10H15N5O9P2 | 0 | C1C(C(OC1N2C=NC3=C(N=CN=C32)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_0583 | dADP | protonation | C10H12N5O9P2 | -3 | C10H15N5O9P2 | 0 | C1C(C(OC1N2C=NC3=C(N=CN=C32)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_0584 | dAMP | protonation | C10H12N5O6P | -2 | C10H14N5O6P | 0 | C1C(C(OC1N2C=NC3=C(N=CN=C32)N)COP(=O)(O)O)O |
+| s_0585 | dAMP | protonation | C10H12N5O6P | -2 | C10H14N5O6P | 0 | C1C(C(OC1N2C=NC3=C(N=CN=C32)N)COP(=O)(O)O)O |
+| s_0586 | dATP | protonation | C10H12N5O12P3 | -4 | C10H16N5O12P3 | 0 | C1C(C(OC1N2C=NC3=C(N=CN=C32)N)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_0587 | dCDP | protonation | C9H12N3O10P2 | -3 | C9H15N3O10P2 | 0 | C1C(C(OC1N2C=CC(=NC2=O)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_0588 | dCDP | protonation | C9H12N3O10P2 | -3 | C9H15N3O10P2 | 0 | C1C(C(OC1N2C=CC(=NC2=O)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_0589 | dCMP | protonation | C9H12N3O7P | -2 | C9H14N3O7P | 0 | C1C(C(OC1N2C=CC(=NC2=O)N)COP(=O)(O)O)O |
+| s_0590 | dCTP | protonation | C9H12N3O13P3 | -4 | C9H16N3O13P3 | 0 | C1C(C(OC1N2C=CC(=NC2=O)N)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_0591 | deamido-NAD(+) | protonation | C21H24N6O15P2 | -2 | C21H27N6O15P2+ | 1 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)O |
+| s_0593 | deamido-NAD(+) | protonation | C21H24N6O15P2 | -2 | C21H27N6O15P2+ | 1 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)O |
+| s_0605 | decanoyl-CoA | protonation | C31H50N7O17P3S | -4 | C31H54N7O17P3S | 0 | CCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0606 | decaprenyl diphosphate | protonation | C50H81O7P2 | -3 | C50H84O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C |
+| s_0607 | dehydro-D-arabinono-1,4-lactone | protonation | C5H5O5 | -1 | C5H6O5 | 0 | C(C1C(=C(C(=O)O1)O)O)O |
+| s_0608 | Delta(6)-trans,Delta(8)-cis-leukotriene B4 | protonation | C20H31O4 | -1 | C20H32O4 | 0 | CCCCCC=CCC(C=CC=CC=CC(CCCC(=O)O)O)O |
+| s_0609 | Delta(6)-trans,Delta(8)-cis-leukotriene B4 | protonation | C20H31O4 | -1 | C20H32O4 | 0 | CCCCCC=CCC(C=CC=CC=CC(CCCC(=O)O)O)O |
+| s_0612 | dethiobiotin | protonation | C10H17N2O3 | -1 | C10H18N2O3 | 0 | CC1C(NC(=O)N1)CCCCCC(=O)O |
+| s_0613 | dGDP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1C(C(OC1N2C=NC3=C2N=C(NC3=O)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_0614 | dGDP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1C(C(OC1N2C=NC3=C2N=C(NC3=O)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_0615 | dGMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1C(C(OC1N2C=NC3=C2N=C(NC3=O)N)COP(=O)(O)O)O |
+| s_0616 | dGMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1C(C(OC1N2C=NC3=C2N=C(NC3=O)N)COP(=O)(O)O)O |
+| s_0617 | dGTP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1C(C(OC1N2C=NC3=C2N=C(NC3=O)N)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_0625 | dihydrofolic acid | protonation | C19H19N7O6 | -2 | C19H21N7O6 | 0 | C1C(=NC2=C(N1)N=C(NC2=O)N)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0626 | dihydrofolic acid | protonation | C19H19N7O6 | -2 | C19H21N7O6 | 0 | C1C(=NC2=C(N1)N=C(NC2=O)N)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)O)C(=O)O |
+| s_0629 | dihydroxyacetone phosphate | protonation | C3H5O6P | -2 | C3H7O6P | 0 | C(C(=O)COP(=O)(O)O)O |
+| s_0631 | dihydroxyacetone phosphate | protonation | C3H5O6P | -2 | C3H7O6P | 0 | C(C(=O)COP(=O)(O)O)O |
+| s_0632 | dihydroxyacetone phosphate | protonation | C3H5O6P | -2 | C3H7O6P | 0 | C(C(=O)COP(=O)(O)O)O |
+| s_0633 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_0635 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_0636 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_0637 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_0638 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_0639 | dITP | protonation | C10H11N4O13P3 | -4 | C10H15N4O13P3 | 0 | C1C(C(OC1N2C=NC3=C2N=CNC3=O)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_0640 | docosaprenyl diphosphate | protonation | C110H177O7P2 | -3 | C110H180O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_0641 | dodecaprenyl diphosphate | protonation | C60H97O7P2 | -3 | C60H100O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_0644 | dolichyl D-mannosyl phosphate | formula_error | C26H47O9P | 0 | C31H55O9P | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OC1C(C(C(C(O1)CO)O)O)O |
+| s_0645 | dolichyl phosphate | formula_error | C20H37O4P | 0 | C25H45O4P | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)O |
+| s_0646 | dolichyl phosphate | formula_error | C20H37O4P | 0 | C25H45O4P | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)O |
+| s_0647 | dTDP | protonation | C10H13N2O11P2 | -3 | C10H16N2O11P2 | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)OP(=O)(O)O)O |
+| s_0649 | dTMP | protonation | C10H13N2O8P | -2 | C10H15N2O8P | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)O)O |
+| s_0650 | dTTP | protonation | C10H13N2O14P3 | -4 | C10H17N2O14P3 | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_0651 | dTTP | protonation | C10H13N2O14P3 | -4 | C10H17N2O14P3 | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_0652 | dUDP | protonation | C9H11N2O11P2 | -3 | C9H14N2O11P2 | 0 | C1C(C(OC1N2C=CC(=O)NC2=O)COP(=O)(O)OP(=O)(O)O)O |
+| s_0653 | dUDP | protonation | C9H11N2O11P2 | -3 | C9H14N2O11P2 | 0 | C1C(C(OC1N2C=CC(=O)NC2=O)COP(=O)(O)OP(=O)(O)O)O |
+| s_0654 | dUMP | protonation | C9H11N2O8P | -2 | C9H13N2O8P | 0 | C1C(C(OC1N2C=CC(=O)NC2=O)COP(=O)(O)O)O |
+| s_0655 | dUMP | protonation | C9H11N2O8P | -2 | C9H13N2O8P | 0 | C1C(C(OC1N2C=CC(=O)NC2=O)COP(=O)(O)O)O |
+| s_0656 | dUTP | protonation | C9H11N2O14P3 | -4 | C9H15N2O14P3 | 0 | C1C(C(OC1N2C=CC(=O)NC2=O)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_0677 | erythro-4-hydroxy-L-glutamic acid | protonation | C5H8NO5 | -1 | C5H9NO5 | 0 | C(C(C(=O)O)N)C(C(=O)O)O |
+| s_0678 | erythro-4-hydroxy-L-glutamic acid | protonation | C5H8NO5 | -1 | C5H9NO5 | 0 | C(C(C(=O)O)N)C(C(=O)O)O |
+| s_0679 | erythro-4-hydroxy-L-glutamic acid | protonation | C5H8NO5 | -1 | C5H9NO5 | 0 | C(C(C(=O)O)N)C(C(=O)O)O |
+| s_0683 | ethanolamine | protonation | C2H8NO | 1 | C2H7NO | 0 | C(CO)N |
+| s_0684 | ethanolamine | protonation | C2H8NO | 1 | C2H7NO | 0 | C(CO)N |
+| s_0687 | FAD | protonation | C27H30N9O15P2 | -3 | C27H33N9O15P2 | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C(N=CN=C65)N)O)O)O)O)O |
+| s_0688 | FAD | protonation | C27H30N9O15P2 | -3 | C27H33N9O15P2 | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C(N=CN=C65)N)O)O)O)O)O |
+| s_0689 | FADH2 | protonation | C27H33N9O15P2 | -2 | C27H35N9O15P2 | 0 | CC1=CC2=C(C=C1C)N(C3=C(N2)C(=O)NC(=O)N3)CC(C(C(COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C(N=CN=C65)N)O)O)O)O)O |
+| s_0690 | FADH2 | protonation | C27H33N9O15P2 | -2 | C27H35N9O15P2 | 0 | CC1=CC2=C(C=C1C)N(C3=C(N2)C(=O)NC(=O)N3)CC(C(C(COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C(N=CN=C65)N)O)O)O)O)O |
+| s_0692 | farnesyl diphosphate | protonation | C15H25O7P2 | -3 | C15H28O7P2 | 0 | CC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C |
+| s_0712 | ferroheme b | protonation | C34H30FeN4O4 | -2 | C34H32FeN4O4-2 | -2 | CC1=C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(=C(C(=N5)C=C1[N-]2)C=C)C)C=C)C)C(=C3CCC(=O)O)C)CCC(=O)O.[Fe] |
+| s_0714 | FMN | protonation | C17H18N4O9P | -3 | C17H21N4O9P | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(COP(=O)(O)O)O)O)O |
+| s_0715 | FMN | protonation | C17H18N4O9P | -3 | C17H21N4O9P | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(COP(=O)(O)O)O)O)O |
+| s_0716 | FMN | protonation | C17H18N4O9P | -3 | C17H21N4O9P | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(COP(=O)(O)O)O)O)O |
+| s_0717 | FMNH2 | protonation | C17H21N4O9P | -2 | C17H23N4O9P | 0 | CC1=CC2=C(C=C1C)N(C3=C(N2)C(=O)NC(=O)N3)CC(C(C(COP(=O)(O)O)O)O)O |
+| s_0719 | folate | protonation | C19H17N7O6 | -2 | C19H19N7O6 | 0 | C1=CC(=CC=C1C(=O)NC(CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)NC(=N3)N |
+| s_0720 | folate | protonation | C19H17N7O6 | -2 | C19H19N7O6 | 0 | C1=CC(=CC=C1C(=O)NC(CCC(=O)O)C(=O)O)NCC2=CN=C3C(=N2)C(=O)NC(=N3)N |
+| s_0739 | GDP | protonation | C10H12N5O11P2 | -3 | C10H15N5O11P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0740 | GDP | protonation | C10H12N5O11P2 | -3 | C10H15N5O11P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0741 | GDP | protonation | C10H12N5O11P2 | -3 | C10H15N5O11P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0742 | GDP | protonation | C10H12N5O11P2 | -3 | C10H15N5O11P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0743 | GDP-alpha-D-mannose | protonation | C16H23N5O16P2 | -2 | C16H25N5O16P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OC4C(C(C(C(O4)CO)O)O)O)O)O)N=C(NC2=O)N |
+| s_0744 | GDP-alpha-D-mannose | protonation | C16H23N5O16P2 | -2 | C16H25N5O16P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OC4C(C(C(C(O4)CO)O)O)O)O)O)N=C(NC2=O)N |
+| s_0745 | geranyl diphosphate | protonation | C10H17O7P2 | -3 | C10H20O7P2 | 0 | CC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C |
+| s_0746 | geranylgeranyl diphosphate | protonation | C20H33O7P2 | -3 | C20H36O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C |
+| s_0750 | glutathione | protonation | C10H16N3O6S | -1 | C10H17N3O6S | 0 | C(CC(=O)NC(CS)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_0751 | glutathione | protonation | C10H16N3O6S | -1 | C10H17N3O6S | 0 | C(CC(=O)NC(CS)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_0752 | glutathione | protonation | C10H16N3O6S | -1 | C10H17N3O6S | 0 | C(CC(=O)NC(CS)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_0753 | glutathione | protonation | C10H16N3O6S | -1 | C10H17N3O6S | 0 | C(CC(=O)NC(CS)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_0754 | glutathione disulfide | protonation | C20H30N6O12S2 | -2 | C20H32N6O12S2 | 0 | C(CC(=O)NC(CSSCC(C(=O)NCC(=O)O)NC(=O)CCC(C(=O)O)N)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_0755 | glutathione disulfide | protonation | C20H30N6O12S2 | -2 | C20H32N6O12S2 | 0 | C(CC(=O)NC(CSSCC(C(=O)NCC(=O)O)NC(=O)CCC(C(=O)O)N)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_0756 | glutathione disulfide | protonation | C20H30N6O12S2 | -2 | C20H32N6O12S2 | 0 | C(CC(=O)NC(CSSCC(C(=O)NCC(=O)O)NC(=O)CCC(C(=O)O)N)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_0764 | glyceraldehyde 3-phosphate | protonation | C3H5O6P | -2 | C3H7O6P | 0 | C(C(C=O)O)OP(=O)(O)O |
+| s_0767 | glycerol 3-phosphate | protonation | C3H7O6P | -2 | C3H9O6P | 0 | C(C(COP(=O)(O)O)O)O |
+| s_0769 | glycerol 3-phosphate | protonation | C3H7O6P | -2 | C3H9O6P | 0 | C(C(COP(=O)(O)O)O)O |
+| s_0770 | glycerol 3-phosphate | protonation | C3H7O6P | -2 | C3H9O6P | 0 | C(C(COP(=O)(O)O)O)O |
+| s_0773 | glycogen | formula_error | C6H10O5 | 0 | C24H42O21 | 0 | C(C1C(C(C(C(O1)OCC2C(C(C(C(O2)OC3C(OC(C(C3O)O)O)CO)O)O)OC4C(C(C(C(O4)CO)O)O)O)O)O)O)O |
+| s_0774 | glycogen | formula_error | C6H10O5 | 0 | C24H42O21 | 0 | C(C1C(C(C(C(O1)OCC2C(C(C(C(O2)OC3C(OC(C(C3O)O)O)CO)O)O)OC4C(C(C(C(O4)CO)O)O)O)O)O)O)O |
+| s_0782 | GMP | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0783 | GMP | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0785 | GTP | protonation | C10H12N5O14P3 | -4 | C10H16N5O14P3 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0786 | GTP | protonation | C10H12N5O14P3 | -4 | C10H16N5O14P3 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_0811 | heme a | protonation | C49H55FeN4O6 | -3 | C49H56FeN4O6-2 | -2 | CC1=C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(=C(C(=N5)C=C1[N-]2)C(CCC=C(C)CCC=C(C)CCC=C(C)C)O)C)C=O)CCC(=O)O)C(=C3C)CCC(=O)O)C=C.[Fe] |
+| s_0812 | heme o | protonation | C49H56FeN4O5 | -2 | C49H58FeN4O5 | 0 | CC1=C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(=C(C(=N5)C=C1[N-]2)C=C)C)C(CCC=C(C)CCC=C(C)CCC=C(C)C)O)C)C(=C3CCC(=O)O)C)CCC(=O)O.[Fe+2] |
+| s_0813 | henicosaprenyl diphosphate | protonation | C105H169O7P2 | -3 | C105H172O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_0814 | heptadecaprenyl diphosphate | protonation | C85H137O7P2 | -3 | C85H140O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_0815 | heptaprenyl diphosphate | protonation | C35H57O7P2 | -3 | C35H60O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C |
+| s_0816 | hexacosanoyl-CoA | protonation | C47H82N7O17P3S | -4 | C47H86N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0817 | hexacosanoyl-CoA | protonation | C47H82N7O17P3S | -4 | C47H86N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0819 | hexacosanoyl-CoA | protonation | C47H82N7O17P3S | -4 | C47H86N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0823 | hexadec-2-enoyl-CoA | protonation | C37H60N7O17P3S | -4 | C37H64N7O17P3S | 0 | CCCCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_0829 | hexadecaprenyl diphosphate | protonation | C80H129O7P2 | -3 | C80H132O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_0830 | hexaprenyl diphosphate | protonation | C30H49O7P2 | -3 | C30H52O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C |
+| s_0831 | hexaprenyl diphosphate | protonation | C30H49O7P2 | -3 | C30H52O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C |
+| s_0834 | homocitrate | protonation | C7H7O7 | -3 | C7H10O7 | 0 | C(CC(CC(=O)O)(C(=O)O)O)C(=O)O |
+| s_0835 | homocitrate | protonation | C7H7O7 | -3 | C7H10O7 | 0 | C(CC(CC(=O)O)(C(=O)O)O)C(=O)O |
+| s_0836 | homoisocitrate | protonation | C7H7O7 | -3 | C7H10O7 | 0 | C(CC(=O)O)C(C(C(=O)O)O)C(=O)O |
+| s_0841 | hydrogen sulfide | protonation | HS | -1 | H2S | 0 | S |
+| s_0845 | icosaprenyl diphosphate | protonation | C100H161O7P2 | -3 | C100H164O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_0846 | IDP | protonation | C10H11N4O11P2 | -3 | C10H14N4O11P2 | 0 | C1=NC2=C(C(=O)N1)N=CN2C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_0849 | IMP | protonation | C10H11N4O8P | -2 | C10H13N4O8P | 0 | C1=NC2=C(C(=O)N1)N=CN2C3C(C(C(O3)COP(=O)(O)O)O)O |
+| s_0855 | indole-3-pyruvate | protonation | C11H8NO3 | -1 | C11H9NO3 | 0 | C1=CC=C2C(=C1)C(=CN2)CC(=O)C(=O)O |
+| s_0864 | inositol phosphomannosylinositol phosphoceramide A (C26) | formula_error | C62H121NO24P2 | 0 | C64H125NO24P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O |
+| s_0865 | inositol phosphomannosylinositol phosphoceramide A (C26) | formula_error | C62H121NO24P2 | 0 | C64H125NO24P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O |
+| s_0866 | inositol phosphomannosylinositol phosphoceramide A (C26) | formula_error | C62H121NO24P2 | 0 | C64H125NO24P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O |
+| s_0870 | inositol phosphomannosylinositol phosphoceramide B (C26) | formula_error | C62H121NO25P2 | 0 | C64H125NO25P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O |
+| s_0871 | inositol phosphomannosylinositol phosphoceramide B (C26) | formula_error | C62H121NO25P2 | 0 | C64H125NO25P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O |
+| s_0872 | inositol phosphomannosylinositol phosphoceramide B (C26) | formula_error | C62H121NO25P2 | 0 | C64H125NO25P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O |
+| s_0876 | inositol phosphomannosylinositol phosphoceramide B' (C26) | formula_error | C62H121NO25P2 | 0 | C64H125NO25P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O)O |
+| s_0877 | inositol phosphomannosylinositol phosphoceramide B' (C26) | formula_error | C62H121NO25P2 | 0 | C64H125NO25P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O)O |
+| s_0878 | inositol phosphomannosylinositol phosphoceramide B' (C26) | formula_error | C62H121NO25P2 | 0 | C64H125NO25P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O)O |
+| s_0882 | inositol phosphomannosylinositol phosphoceramide C (C26) | protonation | C62H121NO26P2 | 0 | C62H119NO26P2-2 | -2 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)([O-])OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O |
+| s_0883 | inositol phosphomannosylinositol phosphoceramide C (C26) | protonation | C62H121NO26P2 | 0 | C62H119NO26P2-2 | -2 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)([O-])OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O |
+| s_0884 | inositol phosphomannosylinositol phosphoceramide C (C26) | protonation | C62H121NO26P2 | 0 | C62H119NO26P2-2 | -2 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)([O-])OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O |
+| s_0888 | inositol phosphomannosylinositol phosphoceramide D (C26) | formula_error | C62H121NO27P2 | 0 | C64H125NO27P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O)O |
+| s_0889 | inositol phosphomannosylinositol phosphoceramide D (C26) | formula_error | C62H121NO27P2 | 0 | C64H125NO27P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O)O |
+| s_0890 | inositol phosphomannosylinositol phosphoceramide D (C26) | formula_error | C62H121NO27P2 | 0 | C64H125NO27P2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)COP(=O)(O)OC3C(C(C(C(C3O)O)O)O)O)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O)O |
+| s_0894 | inositol-P-ceramide A (C24) | protonation | C48H96NO11P | 0 | C48H95NO11P- | -1 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(CCCCCCCCCCCCCCC)O |
+| s_0895 | inositol-P-ceramide A (C24) | protonation | C48H96NO11P | 0 | C48H95NO11P- | -1 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(CCCCCCCCCCCCCCC)O |
+| s_0896 | inositol-P-ceramide A (C24) | protonation | C48H96NO11P | 0 | C48H95NO11P- | -1 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(CCCCCCCCCCCCCCC)O |
+| s_0918 | inositol-P-ceramide D (C24) | protonation | C48H96NO14P | 0 | C48H95NO14P- | -1 | CCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O)O |
+| s_0919 | inositol-P-ceramide D (C24) | protonation | C48H96NO14P | 0 | C48H95NO14P- | -1 | CCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O)O |
+| s_0920 | inositol-P-ceramide D (C24) | protonation | C48H96NO14P | 0 | C48H95NO14P- | -1 | CCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O)O |
+| s_0921 | inositol-P-ceramide D (C26) | protonation | C50H100NO14P | 0 | C50H99NO14P- | -1 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O)O |
+| s_0922 | inositol-P-ceramide D (C26) | protonation | C50H100NO14P | 0 | C50H99NO14P- | -1 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O)O |
+| s_0923 | inositol-P-ceramide D (C26) | protonation | C50H100NO14P | 0 | C50H99NO14P- | -1 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)([O-])OC1C(C(C(C(C1O)O)O)O)O)C(C(CCCCCCCCCCCCCC)O)O)O)O |
+| s_0940 | isocitrate | protonation | C6H5O7 | -3 | C6H8O7 | 0 | C(C(C(C(=O)O)O)C(=O)O)C(=O)O |
+| s_0941 | isocitrate | protonation | C6H5O7 | -3 | C6H8O7 | 0 | C(C(C(C(=O)O)O)C(=O)O)C(=O)O |
+| s_0942 | isocitrate | protonation | C6H5O7 | -3 | C6H8O7 | 0 | C(C(C(C(=O)O)O)C(=O)O)C(=O)O |
+| s_0943 | isopentenyl diphosphate | protonation | C5H9O7P2 | -3 | C5H12O7P2 | 0 | CC(=C)CCOP(=O)(O)OP(=O)(O)O |
+| s_0944 | isopentenyl diphosphate | protonation | C5H9O7P2 | -3 | C5H12O7P2 | 0 | CC(=C)CCOP(=O)(O)OP(=O)(O)O |
+| s_0945 | isopentenyl diphosphate | protonation | C5H9O7P2 | -3 | C5H12O7P2 | 0 | CC(=C)CCOP(=O)(O)OP(=O)(O)O |
+| s_0946 | itaconate | protonation | C5H4O4 | -2 | C5H6O4 | 0 | C=C(CC(=O)O)C(=O)O |
+| s_0949 | itaconyl-CoA | protonation | C26H35N7O19P3S | -5 | C26H40N7O19P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CC(=C)C(=O)O)O |
+| s_0950 | ITP | protonation | C10H11N4O14P3 | -4 | C10H15N4O14P3 | 0 | C1=NC2=C(C(=O)N1)N=CN2C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_0953 | L-2-aminoadipate | protonation | C6H10NO4 | -1 | C6H11NO4 | 0 | C(CC(C(=O)O)N)CC(=O)O |
+| s_0965 | L-arginine | protonation | C6H15N4O2 | 1 | C6H14N4O2 | 0 | C(CC(C(=O)O)N)CN=C(N)N |
+| s_0966 | L-arginine | protonation | C6H15N4O2 | 1 | C6H14N4O2 | 0 | C(CC(C(=O)O)N)CN=C(N)N |
+| s_0967 | L-arginine | protonation | C6H15N4O2 | 1 | C6H14N4O2 | 0 | C(CC(C(=O)O)N)CN=C(N)N |
+| s_0968 | L-arginine | protonation | C6H15N4O2 | 1 | C6H14N4O2 | 0 | C(CC(C(=O)O)N)CN=C(N)N |
+| s_0973 | L-aspartate | protonation | C4H6NO4 | -1 | C4H7NO4 | 0 | C(C(C(=O)O)N)C(=O)O |
+| s_0974 | L-aspartate | protonation | C4H6NO4 | -1 | C4H7NO4 | 0 | C(C(C(=O)O)N)C(=O)O |
+| s_0975 | L-aspartate | protonation | C4H6NO4 | -1 | C4H7NO4 | 0 | C(C(C(=O)O)N)C(=O)O |
+| s_0976 | L-aspartate | protonation | C4H6NO4 | -1 | C4H7NO4 | 0 | C(C(C(=O)O)N)C(=O)O |
+| s_0977 | L-aspartate | protonation | C4H6NO4 | -1 | C4H7NO4 | 0 | C(C(C(=O)O)N)C(=O)O |
+| s_0986 | L-gamma-glutamyl phosphate | protonation | C5H8NO7P | -2 | C5H10NO7P | 0 | C(CC(=O)OP(=O)(O)O)C(C(=O)O)N |
+| s_0987 | L-gamma-glutamyl-L-alanine | protonation | C8H13N2O5 | -1 | C8H14N2O5 | 0 | CC(C(=O)O)NC(=O)CCC(C(=O)O)N |
+| s_0988 | L-gamma-glutamyl-L-cysteine | protonation | C8H13N2O5S | -1 | C8H14N2O5S | 0 | C(CC(=O)NC(CS)C(=O)O)C(C(=O)O)N |
+| s_0991 | L-glutamate | protonation | C5H8NO4 | -1 | C5H9NO4 | 0 | C(CC(=O)O)C(C(=O)O)N |
+| s_0992 | L-glutamate | protonation | C5H8NO4 | -1 | C5H9NO4 | 0 | C(CC(=O)O)C(C(=O)O)N |
+| s_0993 | L-glutamate | protonation | C5H8NO4 | -1 | C5H9NO4 | 0 | C(CC(=O)O)C(C(=O)O)N |
+| s_0994 | L-glutamate | protonation | C5H8NO4 | -1 | C5H9NO4 | 0 | C(CC(=O)O)C(C(=O)O)N |
+| s_0995 | L-glutamate | protonation | C5H8NO4 | -1 | C5H9NO4 | 0 | C(CC(=O)O)C(C(=O)O)N |
+| s_0996 | L-glutamate | protonation | C5H8NO4 | -1 | C5H9NO4 | 0 | C(CC(=O)O)C(C(=O)O)N |
+| s_1010 | L-histidinol | protonation | C6H12N3O | 1 | C6H11N3O | 0 | C1=C(NC=N1)CC(CO)N |
+| s_1011 | L-histidinol phosphate | protonation | C6H11N3O4P | -1 | C6H12N3O4P | 0 | C1=C(NC=N1)CC(COP(=O)(O)O)N |
+| s_1025 | L-lysine | protonation | C6H15N2O2 | 1 | C6H14N2O2 | 0 | C(CCN)CC(C(=O)O)N |
+| s_1026 | L-lysine | protonation | C6H15N2O2 | 1 | C6H14N2O2 | 0 | C(CCN)CC(C(=O)O)N |
+| s_1027 | L-lysine | protonation | C6H15N2O2 | 1 | C6H14N2O2 | 0 | C(CCN)CC(C(=O)O)N |
+| s_1028 | L-lysine | protonation | C6H15N2O2 | 1 | C6H14N2O2 | 0 | C(CCN)CC(C(=O)O)N |
+| s_1038 | L-saccharopine | protonation | C11H19N2O6 | -1 | C11H20N2O6 | 0 | C(CCNC(CCC(=O)O)C(=O)O)CC(C(=O)O)N |
+| s_1073 | lauroyl-CoA | protonation | C33H54N7O17P3S | -4 | C33H58N7O17P3S | 0 | CCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1076 | lauroyl-CoA | protonation | C33H54N7O17P3S | -4 | C33H58N7O17P3S | 0 | CCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1079 | leukotriene A4 | protonation | C20H29O3 | -1 | C20H30O3 | 0 | CCCCCC=CCC=CC=CC=CC1C(O1)CCCC(=O)O |
+| s_1080 | leukotriene A4 | protonation | C20H29O3 | -1 | C20H30O3 | 0 | CCCCCC=CCC=CC=CC=CC1C(O1)CCCC(=O)O |
+| s_1081 | leukotriene B4 | protonation | C20H31O4 | -1 | C20H32O4 | 0 | CCCCCC=CCC(C=CC=CC=CC(CCCC(=O)O)O)O |
+| s_1082 | leukotriene B4 | protonation | C20H31O4 | -1 | C20H32O4 | 0 | CCCCCC=CCC(C=CC=CC=CC(CCCC(=O)O)O)O |
+| s_1085 | lignoceric acid | protonation | C24H47O2 | -1 | C24H48O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_1101 | malonyl-CoA | protonation | C24H33N7O19P3S | -5 | C24H38N7O19P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CC(=O)O)O |
+| s_1104 | malonyl-CoA | protonation | C24H33N7O19P3S | -5 | C24H38N7O19P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CC(=O)O)O |
+| s_1107 | mannan | formula_error | C6H10O5 | 0 | C24H42O21 | 0 | C(C1C(C(C(C(O1)OC2C(OC(C(C2O)O)OC3C(OC(C(C3O)O)OC4C(OC(C(C4O)O)O)CO)CO)CO)O)O)O)O |
+| s_1108 | mannan | formula_error | C6H10O5 | 0 | C24H42O21 | 0 | C(C1C(C(C(C(O1)OC2C(OC(C(C2O)O)OC3C(OC(C(C3O)O)OC4C(OC(C(C4O)O)O)CO)CO)CO)O)O)O)O |
+| s_1119 | mannosylinositol phosphorylceramide A (C26) | formula_error | C56H110NO16P | 0 | C58H114NO16P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O |
+| s_1120 | mannosylinositol phosphorylceramide A (C26) | formula_error | C56H110NO16P | 0 | C58H114NO16P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O |
+| s_1121 | mannosylinositol phosphorylceramide A (C26) | formula_error | C56H110NO16P | 0 | C58H114NO16P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O |
+| s_1125 | mannosylinositol phosphorylceramide B (C26) | formula_error | C56H110NO17P | 0 | C58H114NO17P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O |
+| s_1126 | mannosylinositol phosphorylceramide B (C26) | formula_error | C56H110NO17P | 0 | C58H114NO17P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O |
+| s_1127 | mannosylinositol phosphorylceramide B (C26) | formula_error | C56H110NO17P | 0 | C58H114NO17P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O |
+| s_1131 | mannosylinositol phosphorylceramide B' (C26) | formula_error | C56H110NO17P | 0 | C58H114NO17P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O)O |
+| s_1132 | mannosylinositol phosphorylceramide B' (C26) | formula_error | C56H110NO17P | 0 | C58H114NO17P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O)O |
+| s_1133 | mannosylinositol phosphorylceramide B' (C26) | formula_error | C56H110NO17P | 0 | C58H114NO17P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(CCCCCCCCCCCCCCCCC)O)O |
+| s_1137 | mannosylinositol phosphorylceramide C (C26) | formula_error | C56H110NO18P | 0 | C58H114NO18P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O |
+| s_1138 | mannosylinositol phosphorylceramide C (C26) | formula_error | C56H110NO18P | 0 | C58H114NO18P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O |
+| s_1139 | mannosylinositol phosphorylceramide C (C26) | formula_error | C56H110NO18P | 0 | C58H114NO18P | 0 | CCCCCCCCCCCCCCCCCCCCCCCCC(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O |
+| s_1143 | mannosylinositol phosphorylceramide D (C26) | formula_error | C56H110NO19P | 0 | C58H114NO19P | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O)O |
+| s_1144 | mannosylinositol phosphorylceramide D (C26) | formula_error | C56H110NO19P | 0 | C58H114NO19P | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O)O |
+| s_1145 | mannosylinositol phosphorylceramide D (C26) | formula_error | C56H110NO19P | 0 | C58H114NO19P | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(C(C(=O)NC(COP(=O)(O)OC1C(C(C(C(C1OC2C(C(C(C(O2)CO)O)O)O)O)O)O)O)C(C(CCCCCCCCCCCCCCCC)O)O)O)O |
+| s_1156 | myo-inositol 1,3,4,5,6-pentakisphosphate | protonation | C6H7O21P5 | -10 | C6H17O21P5 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)O |
+| s_1157 | myo-inositol 1,3,4,5,6-pentakisphosphate | protonation | C6H7O21P5 | -10 | C6H17O21P5 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)O |
+| s_1158 | myo-inositol hexakisphosphate | protonation | C6H6O24P6 | -12 | C6H18O24P6 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_1159 | myo-inositol hexakisphosphate | protonation | C6H6O24P6 | -12 | C6H18O24P6 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_1161 | myristate | protonation | C14H27O2 | -1 | C14H28O2 | 0 | CCCCCCCCCCCCCC(=O)O |
+| s_1163 | myristate | protonation | C14H27O2 | -1 | C14H28O2 | 0 | CCCCCCCCCCCCCC(=O)O |
+| s_1166 | myristate | protonation | C14H27O2 | -1 | C14H28O2 | 0 | CCCCCCCCCCCCCC(=O)O |
+| s_1176 | myristoyl-CoA | protonation | C35H58N7O17P3S | -4 | C35H62N7O17P3S | 0 | CCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1179 | myristoyl-CoA | protonation | C35H58N7O17P3S | -4 | C35H62N7O17P3S | 0 | CCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1180 | N(1)-acetylspermidine | protonation | C9H23N3O | 2 | C9H21N3O | 0 | CC(=O)NCCCNCCCCN |
+| s_1181 | N(1)-acetylspermine | protonation | C12H31N4O | 3 | C12H28N4O | 0 | CC(=O)NCCCNCCCCNCCCN |
+| s_1184 | N,N'-diacetylchitobiosyldiphosphodolichol | formula_error | C36H62N2O17P2 | -2 | C41H70N2O17P2-2 | -2 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)([O-])OP(=O)([O-])OC1C(C(C(C(O1)CO)OC2C(C(C(C(O2)CO)O)O)NC(=O)C)O)NC(=O)C |
+| s_1185 | N,N'-diformyldityrosine | protonation | C20H22N2O8 | -2 | C20H20N2O8 | 0 | C1=CC(=C(C=C1CC(C(=O)O)NC=O)C2=C(C=CC(=C2)CC(C(=O)O)NC=O)O)O |
+| s_1186 | N,N'-diformyldityrosine | protonation | C20H22N2O8 | -2 | C20H20N2O8 | 0 | C1=CC(=C(C=C1CC(C(=O)O)NC=O)C2=C(C=CC(=C2)CC(C(=O)O)NC=O)O)O |
+| s_1187 | N-(5-phospho-beta-D-ribosyl)anthranilate | protonation | C12H13NO9P | -3 | C12H16NO9P | 0 | C1=CC=C(C(=C1)C(=O)O)NC2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_1189 | N-acetyl-alpha-D-glucosamine 1-phosphate | protonation | C8H14NO9P | -2 | C8H16NO9P | 0 | CC(=O)NC1C(C(C(OC1OP(=O)(O)O)CO)O)O |
+| s_1190 | N-acetyl-D-glucosamine 6-phosphate | protonation | C8H14NO9P | -2 | C8H16NO9P | 0 | CC(=O)NC1C(C(C(OC1O)COP(=O)(O)O)O)O |
+| s_1191 | N-acetyl-L-gamma-glutamyl phosphate | protonation | C7H9NO8P | -3 | C7H12NO8P | 0 | CC(=O)NC(CCC(=O)OP(=O)(O)O)C(=O)O |
+| s_1192 | N-acetyl-L-glutamate | protonation | C7H9NO5 | -2 | C7H11NO5 | 0 | CC(=O)NC(CCC(=O)O)C(=O)O |
+| s_1193 | N-acetylputrescine | protonation | C6H15N2O | 1 | C6H14N2O | 0 | CC(=O)NCCCCN |
+| s_1194 | N-carbamoyl-L-aspartate | protonation | C5H6N2O5 | -2 | C5H8N2O5 | 0 | C(C(C(=O)O)NC(=O)N)C(=O)O |
+| s_1196 | N-formyl-L-tyrosine | protonation | C10H10NO4 | -1 | C10H11NO4 | 0 | C1=CC(=CC=C1CC(C(=O)O)NC=O)O |
+| s_1198 | NAD | protonation | C21H26N7O14P2 | -1 | C21H27N7O14P2 | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)([O-])OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)N |
+| s_1199 | NAD | protonation | C21H26N7O14P2 | -1 | C21H27N7O14P2 | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)([O-])OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)N |
+| s_1200 | NAD | protonation | C21H26N7O14P2 | -1 | C21H27N7O14P2 | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)([O-])OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)N |
+| s_1201 | NAD | protonation | C21H26N7O14P2 | -1 | C21H27N7O14P2 | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)([O-])OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)N |
+| s_1202 | NAD | protonation | C21H26N7O14P2 | -1 | C21H27N7O14P2 | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)([O-])OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)N |
+| s_1203 | NADH | protonation | C21H27N7O14P2 | -2 | C21H29N7O14P2 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O |
+| s_1204 | NADH | protonation | C21H27N7O14P2 | -2 | C21H29N7O14P2 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O |
+| s_1205 | NADH | protonation | C21H27N7O14P2 | -2 | C21H29N7O14P2 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O |
+| s_1206 | NADH | protonation | C21H27N7O14P2 | -2 | C21H29N7O14P2 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O |
+| s_1212 | NADPH | protonation | C21H26N7O17P3 | -4 | C21H30N7O17P3 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)OP(=O)(O)O)O)O)O |
+| s_1213 | NADPH | protonation | C21H26N7O17P3 | -4 | C21H30N7O17P3 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)OP(=O)(O)O)O)O)O |
+| s_1214 | NADPH | protonation | C21H26N7O17P3 | -4 | C21H30N7O17P3 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)OP(=O)(O)O)O)O)O |
+| s_1215 | NADPH | protonation | C21H26N7O17P3 | -4 | C21H30N7O17P3 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)OP(=O)(O)O)O)O)O |
+| s_1222 | nicotinic acid D-ribonucleotide | protonation | C11H12NO9P | -2 | C11H15NO9P+ | 1 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)O)O)O)C(=O)O |
+| s_1223 | nicotinic acid D-ribonucleotide | protonation | C11H12NO9P | -2 | C11H15NO9P+ | 1 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)O)O)O)C(=O)O |
+| s_1224 | NMN | protonation | C11H14N2O8P | -1 | C11H15N2O8P | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)[O-])O)O)C(=O)N |
+| s_1225 | NMN | protonation | C11H14N2O8P | -1 | C11H15N2O8P | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)[O-])O)O)C(=O)N |
+| s_1227 | NMN | protonation | C11H14N2O8P | -1 | C11H15N2O8P | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)[O-])O)O)C(=O)N |
+| s_1228 | NMN | protonation | C11H14N2O8P | -1 | C11H15N2O8P | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)(O)[O-])O)O)C(=O)N |
+| s_1229 | nonadecaprenyl diphosphate | protonation | C95H153O7P2 | -3 | C95H156O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_1230 | nonaprenyl 4-hydroxybenzoate | protonation | C52H77O3 | -1 | C52H78O3 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOC(=O)C1=CC=C(C=C1)O)C)C)C)C)C)C)C)C)C |
+| s_1231 | nonaprenyl diphosphate | protonation | C45H73O7P2 | -3 | C45H76O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C |
+| s_1232 | nonaprenyl diphosphate | protonation | C45H73O7P2 | -3 | C45H76O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C |
+| s_1238 | O-phospho-L-homoserine | protonation | C4H8NO6P | -2 | C4H10NO6P | 0 | C(COP(=O)(O)O)C(C(=O)O)N |
+| s_1239 | O-phosphoethanolamine | protonation | C2H7NO4P | -1 | C2H8NO4P | 0 | C(COP(=O)(O)O)N |
+| s_1240 | O-phosphoethanolamine | protonation | C2H7NO4P | -1 | C2H8NO4P | 0 | C(COP(=O)(O)O)N |
+| s_1241 | O-succinyl-L-homoserine | protonation | C8H12NO6 | -1 | C8H13NO6 | 0 | C(COC(=O)CCC(=O)O)C(C(=O)O)N |
+| s_1246 | octadecaprenyl diphosphate | protonation | C90H145O7P2 | -3 | C90H148O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_1258 | octanoyl-CoA | protonation | C29H46N7O17P3S | -4 | C29H50N7O17P3S | 0 | CCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1259 | octaprenyl diphosphate | protonation | C40H65O7P2 | -3 | C40H68O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C |
+| s_1260 | oleate | protonation | C18H33O2 | -1 | C18H34O2 | 0 | CCCCCCCCC=CCCCCCCCC(=O)O |
+| s_1262 | oleoyl-CoA | protonation | C39H64N7O17P3S | -4 | C39H68N7O17P3S | 0 | CCCCCCCCC=CCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1265 | oleoyl-CoA | protonation | C39H64N7O17P3S | -4 | C39H68N7O17P3S | 0 | CCCCCCCCC=CCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1266 | ornithine | protonation | C5H13N2O2 | 1 | C5H12N2O2 | 0 | C(CC(C(=O)O)N)CN |
+| s_1267 | ornithine | protonation | C5H13N2O2 | 1 | C5H12N2O2 | 0 | C(CC(C(=O)O)N)CN |
+| s_1268 | ornithine | protonation | C5H13N2O2 | 1 | C5H12N2O2 | 0 | C(CC(C(=O)O)N)CN |
+| s_1270 | orotidine 5'-(dihydrogen phosphate) | protonation | C10H10N2O11P | -3 | C10H13N2O11P | 0 | C1=C(N(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)O)O)O)C(=O)O |
+| s_1271 | oxaloacetate | protonation | C4H2O5 | -2 | C4H4O5 | 0 | C(C(=O)C(=O)O)C(=O)O |
+| s_1272 | oxaloacetate | protonation | C4H2O5 | -2 | C4H4O5 | 0 | C(C(=O)C(=O)O)C(=O)O |
+| s_1273 | oxaloacetate | protonation | C4H2O5 | -2 | C4H4O5 | 0 | C(C(=O)C(=O)O)C(=O)O |
+| s_1274 | oxaloacetate | protonation | C4H2O5 | -2 | C4H4O5 | 0 | C(C(=O)C(=O)O)C(=O)O |
+| s_1282 | P(1),P(4)-bis(5'-adenosyl) tetraphosphate | protonation | C20H24N10O19P4 | -4 | C20H28N10O19P4 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C(N=CN=C65)N)O)O)O)O)N |
+| s_1283 | P(1),P(4)-bis(5'-guanosyl) tetraphosphate | protonation | C20H24N10O21P4 | -4 | C20H28N10O21P4 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C5N=C(NC6=O)N)O)O)O)O)N=C(NC2=O)N |
+| s_1286 | palmitate | protonation | C16H31O2 | -1 | C16H32O2 | 0 | CCCCCCCCCCCCCCCC(=O)O |
+| s_1288 | palmitate | protonation | C16H31O2 | -1 | C16H32O2 | 0 | CCCCCCCCCCCCCCCC(=O)O |
+| s_1291 | palmitate | protonation | C16H31O2 | -1 | C16H32O2 | 0 | CCCCCCCCCCCCCCCC(=O)O |
+| s_1302 | palmitoyl-CoA | protonation | C37H62N7O17P3S | -4 | C37H66N7O17P3S | 0 | CCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1303 | palmitoyl-CoA | protonation | C37H62N7O17P3S | -4 | C37H66N7O17P3S | 0 | CCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1305 | palmitoyl-CoA | protonation | C37H62N7O17P3S | -4 | C37H66N7O17P3S | 0 | CCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1307 | pantetheine 4'-phosphate | protonation | C11H21N2O7PS | -2 | C11H23N2O7PS | 0 | CC(C)(COP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_1308 | pantetheine 4'-phosphate | protonation | C11H21N2O7PS | -2 | C11H23N2O7PS | 0 | CC(C)(COP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_1309 | pectin | formula_error | C6H7O6 | 0 | C6H10O7 | 0 | C1(C(C(OC(C1O)O)C(=O)O)O)O |
+| s_1310 | pentadecaprenyl diphosphate | protonation | C75H121O7P2 | -3 | C75H124O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_1311 | pentaprenyl diphosphate | protonation | C25H41O7P2 | -3 | C25H44O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C |
+| s_1312 | pentaprenyl diphosphate | protonation | C25H41O7P2 | -3 | C25H44O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C |
+| s_1313 | pentaprenyl diphosphate | protonation | C25H41O7P2 | -3 | C25H44O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C |
+| s_1321 | phenylacetic acid | protonation | C8H7O2 | -1 | C8H8O2 | 0 | C1=CC=C(C=C1)CC(=O)O |
+| s_1322 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_1323 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_1324 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_1325 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_1326 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_1329 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_1360 | phosphoenolpyruvate | protonation | C3H2O6P | -3 | C3H5O6P | 0 | C=C(C(=O)O)OP(=O)(O)O |
+| s_1361 | phosphoenolpyruvate | protonation | C3H2O6P | -3 | C3H5O6P | 0 | C=C(C(=O)O)OP(=O)(O)O |
+| s_1364 | phosphoribosyl-carboxy-aminoimidazole | protonation | C9H12N3O9P | -2 | C9H11N3O9P-3 | -3 | C1=NC(=C(N1C2C(C(C(O2)COP(=O)([O-])[O-])O)O)N)C(=O)[O-] |
+| s_1366 | phytosphingosine | protonation | C18H40NO3 | 1 | C18H39NO3 | 0 | CCCCCCCCCCCCCCC(C(C(CO)N)O)O |
+| s_1367 | phytosphingosine 1-phosphate | protonation | C18H39NO6P | -1 | C18H40NO6P | 0 | CCCCCCCCCCCCCCC(C(C(COP(=O)(O)O)N)O)O |
+| s_1368 | pimeloyl-CoA | protonation | C28H41N7O19P3S | -5 | C28H46N7O19P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CCCCCC(=O)O)O |
+| s_1372 | porphobilinogen | protonation | C10H13N2O4 | -1 | C10H14N2O4 | 0 | C1=C(C(=C(N1)CN)CC(=O)O)CCC(=O)O |
+| s_1373 | potassium | protonation | K | 1 | K | 0 | [K] |
+| s_1374 | potassium | protonation | K | 1 | K | 0 | [K] |
+| s_1375 | precorrin-2 | protonation | C42H41N4O16 | -7 | C42H48N4O16 | 0 | CC1(C(C2=CC3=NC(=CC4=C(C(=C(N4)CC5=C(C(=C(N5)C=C1N2)CC(=O)O)CCC(=O)O)CCC(=O)O)CC(=O)O)C(C3(C)CC(=O)O)CCC(=O)O)CCC(=O)O)CC(=O)O |
+| s_1377 | prephenate | protonation | C10H8O6 | -2 | C10H10O6 | 0 | C1=CC(C=CC1O)(CC(=O)C(=O)O)C(=O)O |
+| s_1378 | preuroporphyrinogen | protonation | C40H38N4O17 | -8 | C40H46N4O17 | 0 | C1=C(C(=C(N1)CC2=C(C(=C(N2)CC3=C(C(=C(N3)CC4=C(C(=C(N4)CO)CC(=O)O)CCC(=O)O)CC(=O)O)CCC(=O)O)CC(=O)O)CCC(=O)O)CC(=O)O)CCC(=O)O |
+| s_1382 | propionyl-CoA | protonation | C24H36N7O17P3S | -4 | C24H40N7O17P3S | 0 | CCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1383 | protoporphyrin | protonation | C34H32N4O4 | -2 | C34H34N4O4 | 0 | CC1=C(C2=CC3=NC(=CC4=NC(=CC5=C(C(=C(N5)C=C1N2)C=C)C)C(=C4CCC(=O)O)C)C(=C3C)CCC(=O)O)C=C |
+| s_1384 | protoporphyrinogen | protonation | C34H38N4O4 | -2 | C34H40N4O4 | 0 | CC1=C2CC3=C(C(=C(N3)CC4=C(C(=C(N4)CC5=C(C(=C(N5)CC(=C1CCC(=O)O)N2)CCC(=O)O)C)C=C)C)C=C)C |
+| s_1385 | protoporphyrinogen | protonation | C34H38N4O4 | -2 | C34H40N4O4 | 0 | CC1=C2CC3=C(C(=C(N3)CC4=C(C(=C(N4)CC5=C(C(=C(N5)CC(=C1CCC(=O)O)N2)CCC(=O)O)C)C=C)C)C=C)C |
+| s_1386 | PRPP | protonation | C5H8O14P3 | -5 | C5H13O14P3 | 0 | C(C1C(C(C(O1)OP(=O)(O)OP(=O)(O)O)O)O)OP(=O)(O)O |
+| s_1387 | PRPP | protonation | C5H8O14P3 | -5 | C5H13O14P3 | 0 | C(C1C(C(C(O1)OP(=O)(O)OP(=O)(O)O)O)O)OP(=O)(O)O |
+| s_1388 | pseudouridine 5'-phosphate | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=C(C(=O)NC(=O)N1)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_1389 | putrescine | protonation | C4H14N2 | 2 | C4H12N2 | 0 | C(CCN)CN |
+| s_1390 | putrescine | protonation | C4H14N2 | 2 | C4H12N2 | 0 | C(CCN)CN |
+| s_1391 | putrescine | protonation | C4H14N2 | 2 | C4H12N2 | 0 | C(CCN)CN |
+| s_1393 | pyridoxal 5'-phosphate | protonation | C8H8NO6P | -2 | C8H10NO6P | 0 | CC1=NC=C(C(=C1O)C=O)COP(=O)(O)O |
+| s_1394 | pyridoxamine | protonation | C8H13N2O2 | 1 | C8H12N2O2 | 0 | CC1=NC=C(C(=C1O)CN)CO |
+| s_1395 | pyridoxamine 5'-phosphate | protonation | C8H12N2O5P | -1 | C8H13N2O5P | 0 | CC1=NC=C(C(=C1O)CN)COP(=O)(O)O |
+| s_1398 | pyridoxine 5'-phosphate | protonation | C8H10NO6P | -2 | C8H12NO6P | 0 | CC1=NC=C(C(=C1O)CO)COP(=O)(O)O |
+| s_1403 | quinolinate | protonation | C7H3NO4 | -2 | C7H5NO4 | 0 | C1=CC(=C(N=C1)C(=O)O)C(=O)O |
+| s_1404 | quinolinate | protonation | C7H3NO4 | -2 | C7H5NO4 | 0 | C1=CC(=C(N=C1)C(=O)O)C(=O)O |
+| s_1405 | riboflavin | protonation | C17H19N4O6 | -1 | C17H20N4O6 | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(CO)O)O)O |
+| s_1406 | riboflavin | protonation | C17H19N4O6 | -1 | C17H20N4O6 | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(CO)O)O)O |
+| s_1407 | riboflavin | protonation | C17H19N4O6 | -1 | C17H20N4O6 | 0 | CC1=CC2=C(C=C1C)N(C3=NC(=O)NC(=O)C3=N2)CC(C(C(CO)O)O)O |
+| s_1408 | ribose-5-phosphate | protonation | C5H9O8P | -2 | C5H11O8P | 0 | C(C(C(C(C=O)O)O)O)OP(=O)(O)O |
+| s_1409 | S(8)-aminomethyldihydrolipoamide | protonation | C9H21N2OS2 | 1 | C9H20N2OS2 | 0 | C(CCC(=O)N)CC(CCSCN)S |
+| s_1411 | S(8)-succinyldihydrolipoamide | protonation | C12H20NO4S2 | -1 | C12H21NO4S2 | 0 | C(CCC(=O)N)CC(CCSC(=O)CCC(=O)O)S |
+| s_1412 | S-adenosyl-4-methylthio-2-oxobutanoate | protonation | C15H19N5O6S | 0 | C15H20N5O6S+ | 1 | C[S+](CCC(=O)C(=O)O)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O |
+| s_1416 | S-adenosyl-L-methionine | protonation | C15H23N6O5S | 1 | C15H22N6O5S | 0 | C[S+](CCC(C(=O)[O-])N)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O |
+| s_1418 | S-adenosyl-L-methionine | protonation | C15H23N6O5S | 1 | C15H22N6O5S | 0 | C[S+](CCC(C(=O)[O-])N)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O |
+| s_1419 | S-adenosyl-L-methionine | protonation | C15H23N6O5S | 1 | C15H22N6O5S | 0 | C[S+](CCC(C(=O)[O-])N)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O |
+| s_1420 | S-adenosylmethioninamine | protonation | C14H24N6O3S | 2 | C14H23N6O3S+ | 1 | C[S+](CCCN)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O |
+| s_1421 | S-formylglutathione | protonation | C11H16N3O7S | -1 | C11H17N3O7S | 0 | C(CC(=O)NC(CSC=O)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_1422 | S-methyl-5-thio-alpha-D-ribose 1-phosphate | protonation | C6H11O7PS | -2 | C6H13O7PS | 0 | CSCC1C(C(C(O1)OP(=O)(O)O)O)O |
+| s_1423 | S-methyl-5-thio-D-ribulose 1-phosphate | protonation | C6H11O7PS | -2 | C6H13O7PS | 0 | CSCC(C(C(=O)COP(=O)(O)O)O)O |
+| s_1426 | sedoheptulose 1,7-bisphosphate | protonation | C7H12O13P2 | -4 | C7H16O13P2 | 0 | C(C(C(C(C(C(=O)COP(=O)(O)O)O)O)O)O)OP(=O)(O)O |
+| s_1427 | sedoheptulose 7-phosphate | protonation | C7H13O10P | -2 | C7H15O10P | 0 | C(C(C(C(C(C(=O)CO)O)O)O)O)OP(=O)(O)O |
+| s_1429 | shikimate | protonation | C7H9O5 | -1 | C7H10O5 | 0 | C1C(C(C(C=C1C(=O)O)O)O)O |
+| s_1430 | siroheme | protonation | C42H36FeN4O16 | -8 | C42H44FeN4O16 | 0 | CC1(C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(C(C(=N5)C=C1[N-]2)CCC(=O)O)(C)CC(=O)O)CC(=O)O)CCC(=O)O)C(=C3CC(=O)O)CCC(=O)O)CCC(=O)O)CC(=O)O.[Fe+2] |
+| s_1431 | sirohydrochlorin | protonation | C42H38N4O16 | -8 | C42H46N4O16 | 0 | CC1(C(C2=NC1=CC3=NC(=CC4=C(C(=C(N4)C=C5C(=C(C(=C2)N5)CC(=O)O)CCC(=O)O)CCC(=O)O)CC(=O)O)C(C3CCC(=O)O)(C)CC(=O)O)CCC(=O)O)CC(=O)O |
+| s_1437 | sodium | protonation | Na | 1 | Na | 0 | [Na] |
+| s_1438 | sodium | protonation | Na | 1 | Na | 0 | [Na] |
+| s_1439 | spermidine | protonation | C7H22N3 | 3 | C7H19N3 | 0 | C(CCNCCCN)CN |
+| s_1440 | spermidine | protonation | C7H22N3 | 3 | C7H19N3 | 0 | C(CCNCCCN)CN |
+| s_1441 | spermidine | protonation | C7H22N3 | 3 | C7H19N3 | 0 | C(CCNCCCN)CN |
+| s_1442 | spermine | protonation | C10H30N4 | 4 | C10H26N4 | 0 | C(CCNCCCN)CNCCCN |
+| s_1443 | spermine | protonation | C10H30N4 | 4 | C10H26N4 | 0 | C(CCNCCCN)CNCCCN |
+| s_1444 | spermine | protonation | C10H30N4 | 4 | C10H26N4 | 0 | C(CCNCCCN)CNCCCN |
+| s_1445 | sphinganine | protonation | C18H40NO2 | 1 | C18H39NO2 | 0 | CCCCCCCCCCCCCCCC(C(CO)N)O |
+| s_1446 | sphinganine 1-phosphate | protonation | C18H39NO5P | -1 | C18H40NO5P | 0 | CCCCCCCCCCCCCCCC(C(COP(=O)(O)O)N)O |
+| s_1454 | stearoyl-CoA | protonation | C39H66N7O17P3S | -4 | C39H70N7O17P3S | 0 | CCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1457 | stearoyl-CoA | protonation | C39H66N7O17P3S | -4 | C39H70N7O17P3S | 0 | CCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1461 | succinic semialdehyde | protonation | C4H5O3 | -1 | C4H6O3 | 0 | C(CC(=O)O)C=O |
+| s_1464 | succinyl-CoA | protonation | C25H35N7O19P3S | -5 | C25H40N7O19P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CCC(=O)O)O |
+| s_1473 | taurocholate | protonation | C26H44NO7S | -1 | C26H45NO7S | 0 | CC(CCC(=O)NCCS(=O)(=O)O)C1CCC2C1(C(CC3C2C(CC4C3(CCC(C4)O)C)O)O)C |
+| s_1474 | taurocholate | protonation | C26H44NO7S | -1 | C26H45NO7S | 0 | CC(CCC(=O)NCCS(=O)(=O)O)C1CCC2C1(C(CC3C2C(CC4C3(CCC(C4)O)C)O)O)C |
+| s_1479 | tetracosanoyl-CoA | protonation | C45H78N7O17P3S | -4 | C45H82N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1480 | tetracosanoyl-CoA | protonation | C45H78N7O17P3S | -4 | C45H82N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1482 | tetracosanoyl-CoA | protonation | C45H78N7O17P3S | -4 | C45H82N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1483 | tetradecaprenyl diphosphate | protonation | C70H113O7P2 | -3 | C70H116O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_1486 | tetrahydropteroyltri-L-glutamic acid | protonation | C29H33N9O12 | -4 | C29H37N9O12 | 0 | C1C(NC2=C(N1)N=C(NC2=O)N)CNC3=CC=C(C=C3)C(=O)NC(CCC(=O)NC(CCC(=O)NC(CCC(=O)O)C(=O)O)C(=O)O)C(=O)O |
+| s_1487 | THF | formula_error | C19H21N7O6 | -2 | C4H8O | 0 | C1CCOC1 |
+| s_1488 | THF | formula_error | C19H21N7O6 | -2 | C4H8O | 0 | C1CCOC1 |
+| s_1503 | trans-aconitate | protonation | C6H3O6 | -3 | C6H6O6 | 0 | C(C(=CC(=O)O)C(=O)O)C(=O)O |
+| s_1504 | trans-aconitate | protonation | C6H3O6 | -3 | C6H6O6 | 0 | C(C(=CC(=O)O)C(=O)O)C(=O)O |
+| s_1507 | trans-dec-2-enoyl-CoA | protonation | C31H48N7O17P3S | -4 | C31H52N7O17P3S | 0 | CCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1510 | trans-dodec-2-enoyl-CoA | protonation | C33H52N7O17P3S | -4 | C33H56N7O17P3S | 0 | CCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1513 | trans-hexacos-2-enoyl-CoA | protonation | C47H80N7O17P3S | -4 | C47H84N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1516 | trans-octadec-2-enoyl-CoA | protonation | C39H64N7O17P3S | -4 | C39H68N7O17P3S | 0 | CCCCCCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1519 | trans-tetradec-2-enoyl-CoA | protonation | C35H56N7O17P3S | -4 | C35H60N7O17P3S | 0 | CCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_1523 | tridecaprenyl diphosphate | protonation | C65H105O7P2 | -3 | C65H108O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C)C)C |
+| s_1526 | trimethylenediamine | protonation | C3H12N2 | 2 | C3H10N2 | 0 | C(CN)CN |
+| s_1538 | UDP | protonation | C9H11N2O12P2 | -3 | C9H14N2O12P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_1539 | UDP | protonation | C9H11N2O12P2 | -3 | C9H14N2O12P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_1540 | UDP | protonation | C9H11N2O12P2 | -3 | C9H14N2O12P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_1541 | UDP-D-galactose | protonation | C15H22N2O17P2 | -2 | C15H24N2O17P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OC3C(C(C(C(O3)CO)O)O)O)O)O |
+| s_1542 | UDP-D-galactose | protonation | C15H22N2O17P2 | -2 | C15H24N2O17P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OC3C(C(C(C(O3)CO)O)O)O)O)O |
+| s_1543 | UDP-D-glucose | protonation | C15H22N2O17P2 | -2 | C15H24N2O17P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OC3C(C(C(C(O3)CO)O)O)O)O)O |
+| s_1544 | UDP-N-acetyl-alpha-D-glucosamine | protonation | C17H25N3O17P2 | -2 | C17H27N3O17P2 | 0 | CC(=O)NC1C(C(C(OC1OP(=O)(O)OP(=O)(O)OCC2C(C(C(O2)N3C=CC(=O)NC3=O)O)O)CO)O)O |
+| s_1545 | UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_1546 | UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_1547 | UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_1548 | UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_1549 | undecaprenyl diphosphate | protonation | C55H89O7P2 | -3 | C55H92O7P2 | 0 | CC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCCC(=CCOP(=O)(O)OP(=O)(O)O)C)C)C)C)C)C)C)C)C)C)C |
+| s_1554 | urea-1-carboxylic acid | protonation | C2H3N2O3 | -1 | C2H4N2O3 | 0 | C(=O)(N)NC(=O)O |
+| s_1555 | ureidoglycolic acid | protonation | C3H5N2O4 | -1 | C3H6N2O4 | 0 | C(C(=O)O)(NC(=O)N)O |
+| s_1558 | uroporphyrinogen III | protonation | C40H36N4O16 | -8 | C40H44N4O16 | 0 | C1C2=C(C(=C(N2)CC3=C(C(=C(N3)CC4=C(C(=C(N4)CC5=C(C(=C1N5)CCC(=O)O)CC(=O)O)CC(=O)O)CCC(=O)O)CC(=O)O)CCC(=O)O)CC(=O)O)CCC(=O)O |
+| s_1559 | UTP | protonation | C9H11N2O15P3 | -4 | C9H15N2O15P3 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_1560 | UTP | protonation | C9H11N2O15P3 | -4 | C9H15N2O15P3 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_1565 | xanthosine-5-phosphate | protonation | C10H11N4O9P | -2 | C10H13N4O9P | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)O)O)O)NC(=O)NC2=O |
+| s_1578 | zymosterol intermediate 1c | formula_error | C28H43O3 | -1 | C29H46O2 | 0 | CC(CCC=C(C)C)C1CCC2C1(CCC3=C2CCC4C3(CCC(C4C(=O)C)O)C)C |
+| s_2763 | kynurenic acid | protonation | C10H6NO3 | -1 | C10H7NO3 | 0 | C1=CC=C2C(=C1)C(=O)C=C(N2)C(=O)O |
+| s_2781 | lauroyl-CoA | protonation | C33H54N7O17P3S | -4 | C33H58N7O17P3S | 0 | CCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2782 | malonyl-CoA | protonation | C24H33N7O19P3S | -5 | C24H38N7O19P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)CC(=O)O)O |
+| s_2785 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_2786 | 3-oxotetradecanoyl-CoA | protonation | C35H56N7O18P3S | -4 | C35H60N7O18P3S | 0 | CCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2787 | myristoyl-CoA | protonation | C35H58N7O17P3S | -4 | C35H62N7O17P3S | 0 | CCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2788 | 3-oxopalmitoyl-CoA | protonation | C37H60N7O18P3S | -4 | C37H64N7O18P3S | 0 | CCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2789 | palmitoyl-CoA | protonation | C37H62N7O17P3S | -4 | C37H66N7O17P3S | 0 | CCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2790 | 3-oxooctadecanoyl-CoA | protonation | C39H64N7O18P3S | -4 | C39H68N7O18P3S | 0 | CCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2791 | stearoyl-CoA | protonation | C39H66N7O17P3S | -4 | C39H70N7O17P3S | 0 | CCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2792 | 3-oxoicosanoyl-CoA | protonation | C41H68N7O18P3S | -4 | C41H72N7O18P3S | 0 | CCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2793 | icosanoyl-CoA | protonation | C41H70N7O17P3S | -4 | C41H74N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2794 | 3-oxodocosanoyl-CoA | protonation | C43H72N7O18P3S | -4 | C43H76N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2795 | docosanoyl-CoA | protonation | C43H74N7O17P3S | -4 | C43H78N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2796 | 3-oxotetracosanoyl-CoA | protonation | C45H76N7O18P3S | -4 | C45H80N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2797 | tetracosanoyl-CoA | protonation | C45H78N7O17P3S | -4 | C45H82N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2798 | 3-oxohexacosanoyl-CoA | protonation | C47H80N7O18P3S | -4 | C47H84N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2799 | NADPH | protonation | C21H26N7O17P3 | -4 | C21H30N7O17P3 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)OP(=O)(O)O)O)O)O |
+| s_2801 | (S)-3-hydroxytetradecanoyl-CoA | protonation | C35H58N7O18P3S | -4 | C35H62N7O18P3S | 0 | CCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2802 | (S)-3-hydroxypalmitoyl-CoA | protonation | C37H62N7O18P3S | -4 | C37H66N7O18P3S | 0 | CCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2803 | 3-hydroxyoctadecanoyl-CoA | protonation | C39H66N7O18P3S | -4 | C39H70N7O18P3S | 0 | CCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2804 | 3-hydroxyicosanoyl-CoA | protonation | C41H70N7O18P3S | -4 | C41H74N7O18P3S | 0 | CCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2805 | 3-hydroxydocosanoyl-CoA | protonation | C43H74N7O18P3S | -4 | C43H78N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2806 | 3-hydroxytetracosanoyl-CoA | protonation | C45H78N7O18P3S | -4 | C45H82N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2807 | (S)-3-hydroxyhexacosanoyl-CoA | protonation | C47H82N7O18P3S | -4 | C47H86N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2809 | trans-tetradec-2-enoyl-CoA | protonation | C35H56N7O17P3S | -4 | C35H60N7O17P3S | 0 | CCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2810 | trans-hexadec-2-enoyl-CoA | protonation | C37H60N7O17P3S | -4 | C37H64N7O17P3S | 0 | CCCCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2811 | trans-octadec-2-enoyl-CoA | protonation | C39H64N7O17P3S | -4 | C39H68N7O17P3S | 0 | CCCCCCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2815 | trans-hexacos-2-enoyl-CoA | protonation | C47H80N7O17P3S | -4 | C47H84N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2816 | hexacosanoyl-CoA | protonation | C47H82N7O17P3S | -4 | C47H86N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2818 | NADH | protonation | C21H27N7O14P2 | -2 | C21H29N7O14P2 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O |
+| s_2820 | NAD | protonation | C21H26N7O14P2 | -1 | C21H27N7O14P2 | 0 | C1=CC(=C[N+](=C1)C2C(C(C(O2)COP(=O)([O-])OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O)C(=O)N |
+| s_2821 | oleoyl-CoA | protonation | C39H64N7O17P3S | -4 | C39H68N7O17P3S | 0 | CCCCCCCCC=CCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2826 | oleate | protonation | C18H33O2 | -1 | C18H34O2 | 0 | CCCCCCCCC=CCCCCCCCC(=O)O |
+| s_2831 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_2833 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_2834 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_2835 | myristate | protonation | C14H27O2 | -1 | C14H28O2 | 0 | CCCCCCCCCCCCCC(=O)O |
+| s_2836 | palmitate | protonation | C16H31O2 | -1 | C16H32O2 | 0 | CCCCCCCCCCCCCCCC(=O)O |
+| s_2839 | oleate | protonation | C18H33O2 | -1 | C18H34O2 | 0 | CCCCCCCCC=CCCCCCCCC(=O)O |
+| s_2840 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_2842 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_2843 | lauroyl-CoA | protonation | C33H54N7O17P3S | -4 | C33H58N7O17P3S | 0 | CCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2844 | myristate | protonation | C14H27O2 | -1 | C14H28O2 | 0 | CCCCCCCCCCCCCC(=O)O |
+| s_2845 | myristoyl-CoA | protonation | C35H58N7O17P3S | -4 | C35H62N7O17P3S | 0 | CCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2846 | palmitate | protonation | C16H31O2 | -1 | C16H32O2 | 0 | CCCCCCCCCCCCCCCC(=O)O |
+| s_2847 | palmitoyl-CoA | protonation | C37H62N7O17P3S | -4 | C37H66N7O17P3S | 0 | CCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2851 | stearoyl-CoA | protonation | C39H66N7O17P3S | -4 | C39H70N7O17P3S | 0 | CCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2852 | oleate | protonation | C18H33O2 | -1 | C18H34O2 | 0 | CCCCCCCCC=CCCCCCCCC(=O)O |
+| s_2853 | oleoyl-CoA | protonation | C39H64N7O17P3S | -4 | C39H68N7O17P3S | 0 | CCCCCCCCC=CCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2855 | oleate | protonation | C18H33O2 | -1 | C18H34O2 | 0 | CCCCCCCCC=CCCCCCCCC(=O)O |
+| s_2856 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_2857 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_2858 | arachidate | protonation | C20H39O2 | -1 | C20H40O2 | 0 | CCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_2859 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_2860 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_2861 | icosanoyl-CoA | protonation | C41H70N7O17P3S | -4 | C41H74N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2863 | docosanoyl-CoA | protonation | C43H74N7O17P3S | -4 | C43H78N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2864 | lignoceric acid | protonation | C24H47O2 | -1 | C24H48O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_2865 | tetracosanoyl-CoA | protonation | C45H78N7O17P3S | -4 | C45H82N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2866 | cerotic acid | protonation | C26H51O2 | -1 | C26H52O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_2867 | hexacosanoyl-CoA | protonation | C47H82N7O17P3S | -4 | C47H86N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2869 | lignoceric acid | protonation | C24H47O2 | -1 | C24H48O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_2870 | cerotic acid | protonation | C26H51O2 | -1 | C26H52O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_2872 | docosanoyl-CoA | protonation | C43H74N7O17P3S | -4 | C43H78N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2873 | lignoceric acid | protonation | C24H47O2 | -1 | C24H48O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_2874 | tetracosanoyl-CoA | protonation | C45H78N7O17P3S | -4 | C45H82N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2875 | cerotic acid | protonation | C26H51O2 | -1 | C26H52O2 | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)O |
+| s_2876 | hexacosanoyl-CoA | protonation | C47H82N7O17P3S | -4 | C47H86N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2878 | icosanoyl-CoA | protonation | C41H70N7O17P3S | -4 | C41H74N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2879 | icosanoyl-CoA | protonation | C41H70N7O17P3S | -4 | C41H74N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2880 | docosanoyl-CoA | protonation | C43H74N7O17P3S | -4 | C43H78N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2881 | docosanoyl-CoA | protonation | C43H74N7O17P3S | -4 | C43H78N7O17P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2884 | butanoyl-CoA | protonation | C25H38N7O17P3S | -4 | C25H42N7O17P3S | 0 | CCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2888 | trans-oct-2-enoyl-CoA | protonation | C29H44N7O17P3S | -4 | C29H48N7O17P3S | 0 | CCCCCC=CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2898 | cis-hexadec-7-enoyl-CoA | protonation | C37H64N7O17P3S | 0 | C37H60N7O17P3S-4 | -4 | CCCCCCCCC=CCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)([O-])OP(=O)([O-])OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)([O-])[O-])O |
+| s_2902 | (R)-3-hydroxybutanoyl-CoA | protonation | C25H38N7O18P3S | -4 | C25H42N7O18P3S | 0 | CC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2903 | (R)-3-hydroxyhexanoyl-CoA | protonation | C27H46N7O18P3S | 0 | C27H42N7O18P3S-4 | -4 | CCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)([O-])OP(=O)([O-])OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)([O-])[O-])O)O |
+| s_2905 | (R)-3-hydroxyicosanoyl-CoA | protonation | C41H70N7O18P3S | -4 | C41H74N7O18P3S | 0 | CCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2906 | (R)-3-hydroxydocosanoyl-CoA | protonation | C43H74N7O18P3S | -4 | C43H78N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2907 | (R)-3-hydroxytetracosanoyl-CoA | protonation | C45H78N7O18P3S | -4 | C45H82N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O)O |
+| s_2914 | acetoacetyl-CoA | protonation | C25H36N7O18P3S | -4 | C25H40N7O18P3S | 0 | CC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2917 | 3-oxoicosanoyl-CoA | protonation | C41H68N7O18P3S | -4 | C41H72N7O18P3S | 0 | CCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2918 | 3-oxodocosanoyl-CoA | protonation | C43H72N7O18P3S | -4 | C43H76N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2919 | 3-oxotetracosanoyl-CoA | protonation | C45H76N7O18P3S | -4 | C45H80N7O18P3S | 0 | CCCCCCCCCCCCCCCCCCCCCC(=O)CC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_2934 | glycerol 3-phosphate | protonation | C3H7O6P | -2 | C3H9O6P | 0 | C(C(COP(=O)(O)O)O)O |
+| s_2939 | dihydroxyacetone phosphate | protonation | C3H5O6P | -2 | C3H7O6P | 0 | C(C(=O)COP(=O)(O)O)O |
+| s_2952 | NADPH | protonation | C21H26N7O17P3 | -4 | C21H30N7O17P3 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)OP(=O)(O)O)O)O)O |
+| s_2966 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_2977 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_2995 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_3083 | CTP | protonation | C9H12N3O14P3 | -4 | C9H16N3O14P3 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_3093 | CTP | protonation | C9H12N3O14P3 | -4 | C9H16N3O14P3 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_3095 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_3108 | CMP | protonation | C9H12N3O8P | -2 | C9H14N3O8P | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_3182 | S-adenosyl-L-methionine | protonation | C15H23N6O5S | 1 | C15H22N6O5S | 0 | C[S+](CCC(C(=O)[O-])N)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O |
+| s_3215 | CDP | protonation | C9H12N3O11P2 | -3 | C9H15N3O11P2 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_3216 | CDP-ethanolamine | protonation | C11H19N4O11P2 | -1 | C11H20N4O11P2 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCCN)O)O |
+| s_3217 | CDP-choline | protonation | C14H25N4O11P2 | -1 | C14H26N4O11P2 | 0 | C[N+](C)(C)CCOP(=O)([O-])OP(=O)(O)OCC1C(C(C(O1)N2C=CC(=NC2=O)N)O)O |
+| s_3218 | glycerol 3-phosphate | protonation | C3H7O6P | -2 | C3H9O6P | 0 | C(C(COP(=O)(O)O)O)O |
+| s_3219 | CMP | protonation | C9H12N3O8P | -2 | C9H14N3O8P | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_3228 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_3271 | palmitate | protonation | C16H31O2 | -1 | C16H32O2 | 0 | CCCCCCCCCCCCCCCC(=O)O |
+| s_3321 | coenzyme A | protonation | C21H32N7O16P3S | -4 | C21H36N7O16P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCS)O |
+| s_3322 | oleoyl-CoA | protonation | C39H64N7O17P3S | -4 | C39H68N7O17P3S | 0 | CCCCCCCCC=CCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_3324 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3341 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3342 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3359 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3360 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3459 | oleate | protonation | C18H33O2 | -1 | C18H34O2 | 0 | CCCCCCCCC=CCCCCCCCC(=O)O |
+| s_3463 | palmitate | protonation | C16H31O2 | -1 | C16H32O2 | 0 | CCCCCCCCCCCCCCCC(=O)O |
+| s_3495 | 1-(sn-glycero-3-phospho)-1D-myo-inositol | protonation | C9H18O11P | -1 | C9H19O11P | 0 | C(C(COP(=O)(O)OC1C(C(C(C(C1O)O)O)O)O)O)O |
+| s_3498 | 1D-myo-inositol 1,4,5-trisphosphate | protonation | C6H9O15P3 | -6 | C6H15O15P3 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)O)OP(=O)(O)O)OP(=O)(O)O)O)O |
+| s_3536 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_3677 | oleate | protonation | C18H33O2 | -1 | C18H34O2 | 0 | CCCCCCCCC=CCCCCCCCC(=O)O |
+| s_3714 | heme a | protonation | C49H55FeN4O6 | -3 | C49H56FeN4O6-2 | -2 | CC1=C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(=C(C(=N5)C=C1[N-]2)C(CCC=C(C)CCC=C(C)CCC=C(C)C)O)C)C=O)CCC(=O)O)C(=C3C)CCC(=O)O)C=C.[Fe] |
+| s_3753 | NADH | protonation | C21H27N7O14P2 | -2 | C21H29N7O14P2 | 0 | C1C=CN(C=C1C(=O)N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OCC3C(C(C(O3)N4C=NC5=C(N=CN=C54)N)O)O)O)O |
+| s_3760 | ADP-D-ribose 1''-phosphate | protonation | C15H20N5O17P3 | -4 | C15H24N5O17P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)OP(=O)(O)O)O)O)O)O)N |
+| s_3761 | ADP-ribose | protonation | C15H21N5O14P2 | -2 | C15H23N5O14P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)O)O)O)O)O)N |
+| s_3764 | UDP-N-acetyl-alpha-D-glucosamine | protonation | C17H25N3O17P2 | -2 | C17H27N3O17P2 | 0 | CC(=O)NC1C(C(C(OC1OP(=O)(O)OP(=O)(O)OCC2C(C(C(O2)N3C=CC(=O)NC3=O)O)O)CO)O)O |
+| s_3765 | N-Acetyl-D-glucosaminyldiphosphodolichol | formula_error | C28H51NO12P2 | 0 | C33H59NO12P2 | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OP(=O)(O)OC1C(C(C(C(O1)CO)O)O)NC(=O)C |
+| s_3766 | UDP | protonation | C9H11N2O12P2 | -3 | C9H14N2O12P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_3768 | D-ribofuranose 5-phosphate | protonation | C5H9O8P | -2 | C5H11O8P | 0 | C(C1C(C(C(O1)O)O)O)OP(=O)(O)O |
+| s_3770 | Oxalyl-CoA | protonation | C23H31N7O19P3S | -5 | C23H36N7O19P3S | 0 | CC(C)(COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)C(C(=O)NCCC(=O)NCCSC(=O)C(=O)O)O |
+| s_3775 | sodium | protonation | Na | 1 | Na | 0 | [Na] |
+| s_3776 | potassium | protonation | K | 1 | K | 0 | [K] |
+| s_3781 | UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_3810 | 5-oxo-L-proline | protonation | C5H6NO3 | -1 | C5H7NO3 | 0 | C1CC(=O)NC1C(=O)O |
+| s_3814 | 2-deoxy-D-glucose 6-phosphate | protonation | C6H11O8P | -2 | C6H13O8P | 0 | C1C(C(C(OC1O)COP(=O)(O)O)O)O |
+| s_3818 | S-adenosyl-L-methionine | protonation | C15H23N6O5S | 1 | C15H22N6O5S | 0 | C[S+](CCC(C(=O)[O-])N)CC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O |
+| s_3831 | glutathione | protonation | C10H16N3O6S | -1 | C10H17N3O6S | 0 | C(CC(=O)NC(CS)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_3841 | Threo-3-hydroxy-L-aspartate | protonation | C4H6NO5 | -1 | C4H7NO5 | 0 | C(C(C(=O)O)O)(C(=O)O)N |
+| s_3843 | glutathione | protonation | C10H16N3O6S | -1 | C10H17N3O6S | 0 | C(CC(=O)NC(CS)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_3849 | glutathione disulfide | protonation | C20H30N6O12S2 | -2 | C20H32N6O12S2 | 0 | C(CC(=O)NC(CSSCC(C(=O)NCC(=O)O)NC(=O)CCC(C(=O)O)N)C(=O)NCC(=O)O)C(C(=O)O)N |
+| s_3859 | 4-nitrophenyl phosphate | protonation | C6H4NO6P | -2 | C6H6NO6P | 0 | C1=CC(=CC=C1[N+](=O)[O-])OP(=O)(O)O |
+| s_3860 | 4-nitrophenol | protonation | C6H4NO3 | -1 | C6H5NO3 | 0 | C1=CC(=CC=C1[N+](=O)[O-])O |
+| s_3863 | 3-hydroxy-2-methylpropanoyl-CoA | protonation | C25H38N7O18P3S | -4 | C25H42N7O18P3S | 0 | CC(CO)C(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_3871 | Acrylic acid | protonation | C3H3O2 | -1 | C3H4O2 | 0 | C=CC(=O)O |
+| s_3881 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3883 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3888 | Dolichyl diphosphate | formula_error | C20H35O7P2 | -3 | C25H46O7P2 | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OP(=O)(O)O |
+| s_3890 | GDP-alpha-D-mannose | protonation | C16H23N5O16P2 | -2 | C16H25N5O16P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OC4C(C(C(C(O4)CO)O)O)O)O)O)N=C(NC2=O)N |
+| s_3892 | GDP | protonation | C10H12N5O11P2 | -3 | C10H15N5O11P2 | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_3898 | D-mannose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)O)O)O)O)OP(=O)(O)O |
+| s_3903 | L-Threonylcarbamoyladenylate | protonation | C15H19N6O11P | -2 | C15H21N6O11P | 0 | CC(C(C(=O)O)NC(=O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)O)O |
+| s_3906 | hydrogen sulfide | protonation | HS | -1 | H2S | 0 | S |
+| s_3911 | Dolichyl beta-D-glucosyl phosphate | formula_error | C26H46O9P | -1 | C31H55O9P | 0 | CC(CCC=C(C)CCC=C(C)CCC=C(C)CCC=C(C)C)CCOP(=O)(O)OC1C(C(C(C(O1)CO)O)O)O |
+| s_3934 | Ethylnitronate | protonation | C2H5NO2 | 0 | C2H4NO2- | -1 | CC=[N+]([O-])[O-] |
+| s_3942 | 8-oxo-dGTP | protonation | C10H12N5O14P3 | -4 | C10H16N5O14P3 | 0 | C1C(C(OC1N2C3=C(C(=O)NC(=N3)N)NC2=O)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_3943 | 8-oxo-dGMP | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1C(C(OC1N2C3=C(C(=O)NC(=N3)N)NC2=O)COP(=O)(O)O)O |
+| s_3948 | beta-D-Fructose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(O1)(CO)O)O)O)OP(=O)(O)O |
+| s_3950 | beta-D-Glucose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)O)O)O)O)OP(=O)(O)O |
+| s_3952 | alpha-D-Glucose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)O)O)O)O)OP(=O)(O)O |
+| s_3953 | D-Glucosamine | protonation | C6H14NO5 | 1 | C6H13NO5 | 0 | C(C1C(C(C(C(O1)O)N)O)O)O |
+| s_3962 | D-Glucarate | protonation | C6H8O8 | -2 | C6H10O8 | 0 | C(C(C(C(=O)O)O)O)(C(C(=O)O)O)O |
+| s_3965 | (S)-Methylmalonate semialdehyde | protonation | C4H5O3 | -1 | C4H6O3 | 0 | CC(C=O)C(=O)O |
+| s_3966 | Methylmalonate | protonation | C4H4O4 | -2 | C4H6O4 | 0 | CC(C(=O)O)C(=O)O |
+| s_3968 | Imidazole-4-acetate | protonation | C5H5N2O2 | -1 | C5H6N2O2 | 0 | C1=C(NC=N1)CC(=O)O |
+| s_3970 | 3alpha,7alpha-Dihydroxy-5beta-cholestanate | protonation | C27H45O4 | -1 | C27H46O4 | 0 | CC(CCCC(C)C(=O)O)C1CCC2C1(CCC3C2C(CC4C3(CCC(C4)O)C)O)C |
+| s_3972 | 5-Hydroxyindoleacetate | protonation | C10H8NO3 | -1 | C10H9NO3 | 0 | C1=CC2=C(C=C1O)C(=CN2)CC(=O)O |
+| s_3974 | 4-Acetamidobutanoate | protonation | C6H10NO3 | -1 | C6H11NO3 | 0 | CC(=O)NCCCC(=O)O |
+| s_3976 | trans-3-Chloroacrylic acid | protonation | C3H2ClO2 | -1 | C3H3ClO2 | 0 | C(=CCl)C(=O)O |
+| s_3978 | cis-3-Chloroacrylic acid | protonation | C3H2ClO2 | -1 | C3H3ClO2 | 0 | C(=CCl)C(=O)O |
+| s_3980 | Chloroacetic acid | protonation | C2H2ClO2 | -1 | C2H3ClO2 | 0 | C(C(=O)O)Cl |
+| s_3982 | Perillic acid | protonation | C10H13O2 | -1 | C10H14O2 | 0 | CC(=C)C1CCC(=CC1)C(=O)O |
+| s_3984 | Farnesoic acid | protonation | C15H23O2 | -1 | C15H24O2 | 0 | CC(=CCCC(=CCCC(=CC(=O)O)C)C)C |
+| s_3987 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_3997 | glycolate | protonation | C2H3O3 | -1 | C2H4O3 | 0 | C(C(=O)O)O |
+| s_4000 | Dextrin | formula_error | C12H20O10 | 0 | C18H32O16 | 0 | C(C1C(C(C(C(O1)OC2C(OC(C(C2O)O)OC3C(OC(C(C3O)O)O)CO)CO)O)O)O)O |
+| s_4010 | thiosulfate | protonation | HO3S2 | -1 | O3S2-2 | -2 | [O-]S(=O)(=S)[O-] |
+| s_4015 | UDP-D-glucose | protonation | C15H22N2O17P2 | -2 | C15H24N2O17P2 | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)OC3C(C(C(C(O3)CO)O)O)O)O)O |
+| s_4021 | 2-Oxoglutaramate | protonation | C5H6NO4 | -1 | C5H7NO4 | 0 | C(CC(=O)N)C(=O)C(=O)O |
+| s_4025 | UDP-N-acetyl-alpha-D-glucosamine | protonation | C17H25N3O17P2 | -2 | C17H27N3O17P2 | 0 | CC(=O)NC1C(C(C(OC1OP(=O)(O)OP(=O)(O)OCC2C(C(C(O2)N3C=CC(=O)NC3=O)O)O)CO)O)O |
+| s_4037 | Ala-Glu | protonation | C8H13N2O5 | -1 | C8H14N2O5 | 0 | CC(C(=O)NC(CCC(=O)O)C(=O)O)N |
+| s_4038 | Ala-Glu | protonation | C8H13N2O5 | -1 | C8H14N2O5 | 0 | CC(C(=O)NC(CCC(=O)O)C(=O)O)N |
+| s_4039 | Ala-Glu | protonation | C8H13N2O5 | -1 | C8H14N2O5 | 0 | CC(C(=O)NC(CCC(=O)O)C(=O)O)N |
+| s_4044 | thymidine 3'-monophosphate | protonation | C10H13N2O8P | -2 | C10H15N2O8P | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)CO)OP(=O)(O)O |
+| s_4045 | thymidine 3'-monophosphate | protonation | C10H13N2O8P | -2 | C10H15N2O8P | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)CO)OP(=O)(O)O |
+| s_4046 | thymidine 5'-monophosphate | protonation | C10H13N2O8P | -2 | C10H15N2O8P | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)O)O |
+| s_4047 | thymidine 5'-monophosphate | protonation | C10H13N2O8P | -2 | C10H15N2O8P | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)O)O |
+| s_4048 | glycerol 1-phosphate | protonation | C3H7O6P | -2 | C3H9O6P | 0 | C(C(COP(=O)(O)O)O)O |
+| s_4049 | glycerol 1-phosphate | protonation | C3H7O6P | -2 | C3H9O6P | 0 | C(C(COP(=O)(O)O)O)O |
+| s_4059 | Gly-Glu | protonation | C7H11N2O5 | -1 | C7H12N2O5 | 0 | C(CC(=O)O)C(C(=O)O)NC(=O)CN |
+| s_4060 | Gly-Glu | protonation | C7H11N2O5 | -1 | C7H12N2O5 | 0 | C(CC(=O)O)C(C(=O)O)NC(=O)CN |
+| s_4061 | Gly-Glu | protonation | C7H11N2O5 | -1 | C7H12N2O5 | 0 | C(CC(=O)O)C(C(=O)O)NC(=O)CN |
+| s_4064 | O-phospho-L-threonine | protonation | C4H8NO6P | -2 | C4H10NO6P | 0 | CC(C(C(=O)O)N)OP(=O)(O)O |
+| s_4065 | O-phospho-L-threonine | protonation | C4H8NO6P | -2 | C4H10NO6P | 0 | CC(C(C(=O)O)N)OP(=O)(O)O |
+| s_4066 | guanosine 2'-monophosphate | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1=NC2=C(N1C3C(C(C(O3)CO)O)OP(=O)(O)O)N=C(NC2=O)N |
+| s_4067 | guanosine 2'-monophosphate | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1=NC2=C(N1C3C(C(C(O3)CO)O)OP(=O)(O)O)N=C(NC2=O)N |
+| s_4068 | 3'-GMP | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1=NC2=C(N1C3C(C(C(O3)CO)OP(=O)(O)O)O)N=C(NC2=O)N |
+| s_4069 | 3'-GMP | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1=NC2=C(N1C3C(C(C(O3)CO)OP(=O)(O)O)O)N=C(NC2=O)N |
+| s_4072 | cysteamine S-phosphate | protonation | C2H7NO3PS | -1 | C2H8NO3PS | 0 | C(CSP(=O)(O)O)N |
+| s_4073 | cysteamine | protonation | C2H8NS | 1 | C2H7NS | 0 | C(CS)N |
+| s_4074 | cysteamine | protonation | C2H8NS | 1 | C2H7NS | 0 | C(CS)N |
+| s_4075 | cysteamine S-phosphate | protonation | C2H7NO3PS | -1 | C2H8NO3PS | 0 | C(CSP(=O)(O)O)N |
+| s_4081 | uridine 2'-phosphate | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)CO)O)OP(=O)(O)O |
+| s_4082 | uridine 2'-phosphate | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)CO)O)OP(=O)(O)O |
+| s_4083 | 3'-UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)CO)OP(=O)(O)O)O |
+| s_4084 | 3'-UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)CO)OP(=O)(O)O)O |
+| s_4088 | N-phosphocreatine | protonation | C4H8N3O5P | -2 | C4H10N3O5P | 0 | CN(CC(=O)O)C(=NP(=O)(O)O)N |
+| s_4090 | N-phosphocreatine | protonation | C4H8N3O5P | -2 | C4H10N3O5P | 0 | CN(CC(=O)O)C(=NP(=O)(O)O)N |
+| s_4092 | N(omega)-phospho-L-arginine | protonation | C6H14N4O5P | -1 | C6H15N4O5P | 0 | C(CC(C(=O)O)N)CN=C(N)NP(=O)(O)O |
+| s_4093 | N(omega)-phospho-L-arginine | protonation | C6H14N4O5P | -1 | C6H15N4O5P | 0 | C(CC(C(=O)O)N)CN=C(N)NP(=O)(O)O |
+| s_4094 | 2',3'-cyclic GMP | protonation | C10H11N5O7P | -1 | C10H12N5O7P | 0 | C1=NC2=C(N1C3C4C(C(O3)CO)OP(=O)(O4)O)N=C(NC2=O)N |
+| s_4095 | 2',3'-cyclic GMP | protonation | C10H11N5O7P | -1 | C10H12N5O7P | 0 | C1=NC2=C(N1C3C4C(C(O3)CO)OP(=O)(O4)O)N=C(NC2=O)N |
+| s_4096 | O(4)-phospho-L-tyrosine | protonation | C9H10NO6P | -2 | C9H12NO6P | 0 | C1=CC(=CC=C1CC(C(=O)O)N)OP(=O)(O)O |
+| s_4097 | O(4)-phospho-L-tyrosine | protonation | C9H10NO6P | -2 | C9H12NO6P | 0 | C1=CC(=CC=C1CC(C(=O)O)N)OP(=O)(O)O |
+| s_4098 | triphosphate | protonation | O10P3 | -5 | H5O10P3 | 0 | OP(=O)(O)OP(=O)(O)OP(=O)(O)O |
+| s_4099 | triphosphate | protonation | O10P3 | -5 | H5O10P3 | 0 | OP(=O)(O)OP(=O)(O)OP(=O)(O)O |
+| s_4100 | cytidine 2'-phosphate | protonation | C9H12N3O8P | -2 | C9H14N3O8P | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)CO)O)OP(=O)(O)O |
+| s_4101 | cytidine 2'-phosphate | protonation | C9H12N3O8P | -2 | C9H14N3O8P | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)CO)O)OP(=O)(O)O |
+| s_4102 | 2',3'-cyclic UMP | protonation | C9H10N2O8P | -1 | C9H11N2O8P | 0 | C1=CN(C(=O)NC1=O)C2C3C(C(O2)CO)OP(=O)(O3)O |
+| s_4103 | 2',3'-cyclic UMP | protonation | C9H10N2O8P | -1 | C9H11N2O8P | 0 | C1=CN(C(=O)NC1=O)C2C3C(C(O2)CO)OP(=O)(O3)O |
+| s_4104 | 3-sulfino-L-alanine | protonation | C3H6NO4S | -1 | C3H7NO4S | 0 | C(C(C(=O)O)N)S(=O)O |
+| s_4105 | 3-sulfino-L-alanine | protonation | C3H6NO4S | -1 | C3H7NO4S | 0 | C(C(C(=O)O)N)S(=O)O |
+| s_4106 | 3'-AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)CO)OP(=O)(O)O)O)N |
+| s_4107 | 3'-AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)CO)OP(=O)(O)O)O)N |
+| s_4110 | N-acetyl-L-cysteine | protonation | C5H8NO3S | -1 | C5H9NO3S | 0 | CC(=O)NC(CS)C(=O)O |
+| s_4111 | N-acetyl-L-cysteine | protonation | C5H8NO3S | -1 | C5H9NO3S | 0 | CC(=O)NC(CS)C(=O)O |
+| s_4113 | thiosulfate | protonation | HO3S2 | -1 | O3S2-2 | -2 | [O-]S(=O)(=S)[O-] |
+| s_4115 | 2-hydroxyethane-1-sulfonate | protonation | C2H5O4S | -1 | C2H6O4S | 0 | C(CS(=O)(=O)O)O |
+| s_4116 | 2-hydroxyethane-1-sulfonate | protonation | C2H5O4S | -1 | C2H6O4S | 0 | C(CS(=O)(=O)O)O |
+| s_4119 | Ala-Asp | protonation | C7H11N2O5 | -1 | C7H12N2O5 | 0 | CC(C(=O)NC(CC(=O)O)C(=O)O)N |
+| s_4120 | Ala-Asp | protonation | C7H11N2O5 | -1 | C7H12N2O5 | 0 | CC(C(=O)NC(CC(=O)O)C(=O)O)N |
+| s_4121 | Ala-Asp | protonation | C7H11N2O5 | -1 | C7H12N2O5 | 0 | CC(C(=O)NC(CC(=O)O)C(=O)O)N |
+| s_4129 | D-tagatofuranose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(O1)(CO)O)O)O)OP(=O)(O)O |
+| s_4141 | 2-phospho-D-glyceric acid | protonation | C3H4O7P | -3 | C3H7O7P | 0 | C(C(C(=O)O)OP(=O)(O)O)O |
+| s_4145 | D-glucose 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)OP(=O)(O)O)O)O)O)O |
+| s_4146 | carbamoyl phosphate | protonation | CH2NO5P | -2 | CH4NO5P | 0 | C(=O)(N)OP(=O)(O)O |
+| s_4147 | 3-phospho-serine | protonation | C3H6NO6P | -2 | C3H8NO6P | 0 | C(C(C(=O)O)N)OP(=O)(O)O |
+| s_4148 | GMP | protonation | C10H12N5O8P | -2 | C10H14N5O8P | 0 | C1=NC2=C(N1C3C(C(C(O3)COP(=O)(O)O)O)O)N=C(NC2=O)N |
+| s_4149 | myo-inositol hexakisphosphate | protonation | C6H6O24P6 | -12 | C6H18O24P6 | 0 | C1(C(C(C(C(C1OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O)OP(=O)(O)O |
+| s_4150 | D-glucose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C(C(C(C(C=O)O)O)O)O)OP(=O)(O)O |
+| s_4151 | UMP | protonation | C9H11N2O9P | -2 | C9H13N2O9P | 0 | C1=CN(C(=O)NC1=O)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_4152 | phosphoenolpyruvate | protonation | C3H2O6P | -3 | C3H5O6P | 0 | C=C(C(=O)O)OP(=O)(O)O |
+| s_4153 | D-mannose 6-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)O)O)O)O)OP(=O)(O)O |
+| s_4154 | O-phosphoethanolamine | protonation | C2H7NO4P | -1 | C2H8NO4P | 0 | C(COP(=O)(O)O)N |
+| s_4155 | 6-phospho-D-gluconate | protonation | C6H10O10P | -3 | C6H13O10P | 0 | C(C(C(C(C(C(=O)O)O)O)O)O)OP(=O)(O)O |
+| s_4156 | D-mannose 1-phosphate | protonation | C6H11O9P | -2 | C6H13O9P | 0 | C(C1C(C(C(C(O1)OP(=O)(O)O)O)O)O)O |
+| s_4157 | diphosphate | protonation | HO7P2 | -3 | O7P2-4 | -4 | [O-]P(=O)([O-])OP(=O)([O-])[O-] |
+| s_4158 | choline phosphate | formula_error | C5H13NO4P | -1 | C5H15ClNO4P | 0 | C[N+](C)(C)CCOP(=O)(O)O.[Cl-] |
+| s_4159 | thiosulfate | protonation | HO3S2 | -1 | O3S2-2 | -2 | [O-]S(=O)(=S)[O-] |
+| s_4160 | AMP | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)O)O)O)N |
+| s_4161 | 2',3'-cyclic AMP | protonation | C10H11N5O6P | -1 | C10H12N5O6P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C4C(C(O3)CO)OP(=O)(O4)O)N |
+| s_4162 | adenosine 2'-phosphate | protonation | C10H12N5O7P | -2 | C10H14N5O7P | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)CO)O)OP(=O)(O)O)N |
+| s_4163 | CMP | protonation | C9H12N3O8P | -2 | C9H14N3O8P | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)O)O)O |
+| s_4164 | D-Glucosamine | protonation | C6H14NO5 | 1 | C6H13NO5 | 0 | C(C1C(C(C(C(O1)O)N)O)O)O |
+| s_4172 | N-acetyl-L-glutamate | protonation | C7H9NO5 | -2 | C7H11NO5 | 0 | CC(=O)NC(CCC(=O)O)C(=O)O |
+| s_4173 | N-acetyl-L-glutamate | protonation | C7H9NO5 | -2 | C7H11NO5 | 0 | CC(=O)NC(CCC(=O)O)C(=O)O |
+| s_4177 | homogentisate | protonation | C8H7O4 | -1 | C8H8O4 | 0 | C1=CC(=C(C=C1O)CC(=O)O)O |
+| s_4178 | 4-maleylacetoacetate | protonation | C8H6O6 | -2 | C8H8O6 | 0 | C(C(=O)CC(=O)O)C(=O)C=CC(=O)O |
+| s_4179 | 4-fumarylacetoacetate | protonation | C8H6O6 | -2 | C8H8O6 | 0 | C(C(=O)CC(=O)O)C(=O)C=CC(=O)O |
+| s_4182 | 2-hydroxyglutarate | protonation | C5H6O5 | -2 | C5H8O5 | 0 | C(CC(=O)O)C(C(=O)O)O |
+| s_4183 | propionyl-CoA | protonation | C24H36N7O17P3S | -4 | C24H40N7O17P3S | 0 | CCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_4189 | (2R,3S)-3-methylmalate | protonation | C5H6O5 | -2 | C5H8O5 | 0 | CC(C(C(=O)O)O)C(=O)O |
+| s_4196 | ATP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_4198 | ADP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O)N |
+| s_4213 | octanoyl-CoA | protonation | C29H46N7O17P3S | -4 | C29H50N7O17P3S | 0 | CCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_4215 | butanoyl-CoA | protonation | C25H38N7O17P3S | -4 | C25H42N7O17P3S | 0 | CCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_4219 | decanoyl-CoA | protonation | C31H50N7O17P3S | -4 | C31H54N7O17P3S | 0 | CCCCCCCCCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_4250 | propionate | protonation | C3H6O2 | 0 | C3H5O2- | -1 | CCC(=O)[O-] |
+| s_4251 | propionate | protonation | C3H6O2 | 0 | C3H5O2- | -1 | CCC(=O)[O-] |
+| s_4252 | propionyl-CoA | protonation | C24H36N7O17P3S | -4 | C24H40N7O17P3S | 0 | CCC(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_4256 | methionyl acetate | formula_error | C6H12O2S | 0 | C7H13NO3S | 0 | CC(=O)OC(=O)C(CCSC)N |
+| s_4257 | methionyl acetate | formula_error | C6H12O2S | 0 | C7H13NO3S | 0 | CC(=O)OC(=O)C(CCSC)N |
+| s_4263 | hydrogen sulfide | protonation | HS | -1 | H2S | 0 | S |
+| s_4276 | monoethyl succinate | protonation | C6H9O4 | -1 | C6H10O4 | 0 | CCOC(=O)CCC(=O)O |
+| s_4277 | monoethyl succinate | protonation | C6H9O4 | -1 | C6H10O4 | 0 | CCOC(=O)CCC(=O)O |
+| s_4285 | isobutyrate | protonation | C4H7O2 | -1 | C4H8O2 | 0 | CC(C)C(=O)O |
+| s_4293 | phosphate | protonation | HO4P | -2 | O4P-3 | -3 | [O-]P(=O)([O-])[O-] |
+| s_4294 | 4-(2-aminophenyl)-2,4-dioxobutanoate | protonation | C10H8NO4 | -1 | C10H9NO4 | 0 | C1=CC=C(C(=C1)C(=O)CC(=O)C(=O)O)N |
+| s_4295 | dimethylallyl phosphate | protonation | C5H9O4P | -2 | C5H11O4P | 0 | CC(=CCOP(=O)(O)O)C |
+| s_4298 | FMNH2 | protonation | C17H21N4O9P | -2 | C17H23N4O9P | 0 | CC1=CC2=C(C=C1C)N(C3=C(N2)C(=O)NC(=O)N3)CC(C(C(COP(=O)(O)O)O)O)O |
+| s_4299 | cadaverine | protonation | C5H16N2 | 2 | C5H14N2 | 0 | C(CCN)CCN |
+| s_4300 | aminopropylcadaverine | protonation | C8H24N3 | 3 | C8H21N3 | 0 | C(CCN)CCNCCCN |
+| s_4301 | 2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate | protonation | C7H7NO6PS | -3 | C7H10NO6PS | 0 | CC1=C(SC(=N1)C(=O)O)CCOP(=O)(O)O |
+| s_4302 | 2-hydroxyglutarate | protonation | C5H6O5 | -2 | C5H8O5 | 0 | C(CC(=O)O)C(C(=O)O)O |
+| s_4305 | 2-deoxy-D-ribose 1-phosphate | protonation | C5H9O7P | -2 | C5H11O7P | 0 | C1C(C(OC1OP(=O)(O)O)CO)O |
+| s_4306 | 3-hydroxyisobutyryl-CoA | protonation | C25H38N7O18P3S | -4 | C25H42N7O18P3S | 0 | CC(CO)C(=O)SCCNC(=O)CCNC(=O)C(C(C)(C)COP(=O)(O)OP(=O)(O)OCC1C(C(C(O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
+| s_4313 | ITP | protonation | C10H11N4O14P3 | -4 | C10H15N4O14P3 | 0 | C1=NC2=C(C(=O)N1)N=CN2C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O)O |
+| s_4314 | IDP | protonation | C10H11N4O11P2 | -3 | C10H14N4O11P2 | 0 | C1=NC2=C(C(=O)N1)N=CN2C3C(C(C(O3)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_4317 | P(1),P(3)-bis(5'-adenosyl) triphosphate | protonation | C20H24N10O16P3 | -3 | C20H27N10O16P3 | 0 | C1=NC(=C2C(=N1)N(C=N2)C3C(C(C(O3)COP(=O)(O)OP(=O)(O)OP(=O)(O)OCC4C(C(C(O4)N5C=NC6=C(N=CN=C65)N)O)O)O)O)N |
+| s_4318 | dATP | protonation | C10H12N5O12P3 | -4 | C10H16N5O12P3 | 0 | C1C(C(OC1N2C=NC3=C(N=CN=C32)N)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_4319 | dADP | protonation | C10H12N5O9P2 | -3 | C10H15N5O9P2 | 0 | C1C(C(OC1N2C=NC3=C(N=CN=C32)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_4320 | dGTP | protonation | C10H12N5O13P3 | -4 | C10H16N5O13P3 | 0 | C1C(C(OC1N2C=NC3=C2N=C(NC3=O)N)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_4321 | dGDP | protonation | C10H12N5O10P2 | -3 | C10H15N5O10P2 | 0 | C1C(C(OC1N2C=NC3=C2N=C(NC3=O)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_4322 | CDP | protonation | C9H12N3O11P2 | -3 | C9H15N3O11P2 | 0 | C1=CN(C(=O)N=C1N)C2C(C(C(O2)COP(=O)(O)OP(=O)(O)O)O)O |
+| s_4323 | dCDP | protonation | C9H12N3O10P2 | -3 | C9H15N3O10P2 | 0 | C1C(C(OC1N2C=CC(=NC2=O)N)COP(=O)(O)OP(=O)(O)O)O |
+| s_4324 | dCTP | protonation | C9H12N3O13P3 | -4 | C9H16N3O13P3 | 0 | C1C(C(OC1N2C=CC(=NC2=O)N)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_4325 | dTDP | protonation | C10H13N2O11P2 | -3 | C10H16N2O11P2 | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)OP(=O)(O)O)O |
+| s_4326 | dTTP | protonation | C10H13N2O14P3 | -4 | C10H17N2O14P3 | 0 | CC1=CN(C(=O)NC1=O)C2CC(C(O2)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_4328 | dITP | protonation | C10H11N4O13P3 | -4 | C10H15N4O13P3 | 0 | C1C(C(OC1N2C=NC3=C2N=CNC3=O)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_4329 | dUDP | protonation | C9H11N2O11P2 | -3 | C9H14N2O11P2 | 0 | C1C(C(OC1N2C=CC(=O)NC2=O)COP(=O)(O)OP(=O)(O)O)O |
+| s_4330 | dUTP | protonation | C9H11N2O14P3 | -4 | C9H15N2O14P3 | 0 | C1C(C(OC1N2C=CC(=O)NC2=O)COP(=O)(O)OP(=O)(O)OP(=O)(O)O)O |
+| s_4331 | xanthurenate | protonation | C10H6NO4 | -1 | C10H7NO4 | 0 | C1=CC2=C(C(=C1)O)NC(=CC2=O)C(=O)O |
+| s_4332 | heme a | protonation | C49H55FeN4O6 | -3 | C49H56FeN4O6-2 | -2 | CC1=C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(=C(C(=N5)C=C1[N-]2)C(CCC=C(C)CCC=C(C)CCC=C(C)C)O)C)C=O)CCC(=O)O)C(=C3C)CCC(=O)O)C=C.[Fe] |
+| s_4334 | trans-but-2-enoyl-CoA | protonation | C25H36N7O17P3S | -4 | C25H40N7O17P3S | 0 | C/C=C/C(=O)SCCNC(=O)CCNC(=O)[C@@H](C(C)(C)COP(=O)(O)OP(=O)(O)OC[C@@H]1[C@H]([C@H]([C@@H](O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
 
 ## Dead-end metabolites
 
