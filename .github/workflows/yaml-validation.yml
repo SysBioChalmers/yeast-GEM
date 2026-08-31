@@ -32,12 +32,12 @@ jobs:
           ## Return non-zero exit code on warnings as well as errors
           # strict: # optional, default is false
 
-      - name: Import with cobrapy
-        uses: addnab/docker-run-action@v3
+      - name: Set up Python
+        uses: actions/setup-python@v6
         with:
-          image: ghcr.io/metabolicatlas/memote-docker:0.13
-          options: -v ${{ github.workspace }}:/opt
-          shell: bash
-          run: |
-            cd /opt
-            python -c "import cobra ; cobra.io.load_yaml_model('model/yeast-GEM.yml')"
+          python-version: '3.12'
+
+      - name: Import with cobrapy
+        run: |
+          pip install cobra
+          python -c "import cobra ; cobra.io.load_yaml_model('model/yeast-GEM.yml')"
