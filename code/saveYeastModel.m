@@ -1,7 +1,7 @@
 function saveYeastModel(model,upDATE,allowNoGrowth,binaryFiles)
 % saveYeastModel
-%   Saves model as .xml, .txt and .yml file (.mat and .xlsx on demand). 
-%   It also updates README.md, dependencies.txt and checks for growth.
+%   Saves model as .xml, .txt and .yml file (.mat and .xlsx on demand).
+%   It also updates dependencies.txt and checks for growth.
 %
 % Inputs:
 %   model           (struct) model to save. Preferably RAVEN format,
@@ -72,10 +72,17 @@ checkGrowth(model,'anaerobic',allowNoGrowth)
 %Update .xml, .txt and .yml models:
 copyfile('tempModel.xml','../model/yeast-GEM.xml')
 delete('tempModel.xml');
+% .yml is written from a stripped copy: reaction, metabolite and gene
+% cross-reference annotation (KEGG, BiGG, ChEBI, MetaNetX, EC codes,
+% UniProt) lives in model/{reactions,metabolites,genes}.tsv instead
+% (yeast-GEM#379), so it is not re-embedded here. .xml/.txt/.xlsx/.mat
+% keep the full, unstripped model exactly as before.
+leanModel = stripTsvAnnotation(model);
+exportForGit(leanModel,'yeast-GEM','../model',{'yml'},false,false);
 if binaryFiles==false
-    exportForGit(model,'yeast-GEM','../model',{'yml','txt'},false,false);
+    exportForGit(model,'yeast-GEM','../model',{'txt'},false,false);
 else
-    exportForGit(model,'yeast-GEM','../model',{'yml','txt','xlsx','mat'},false,false);
+    exportForGit(model,'yeast-GEM','../model',{'txt','xlsx','mat'},false,false);
 end
 
 %Write deltaG fields to file
@@ -83,24 +90,11 @@ cd missingFields
 saveDeltaG(model,false);
 cd ..
 
-%Update README file: date + size of model
-modelVersion = regexprep(model.id,'yeastGEM_v?','');
-nGenes=num2str(numel(model.genes));
-nMets=num2str(numel(model.mets));
-nRxns=num2str(numel(model.rxns));
-copyfile('../README.md','backup.md')
-fin  = fopen('backup.md','r');
-fout = fopen('../README.md','w');
-newStats = ['| $1 | ' datestr(now,'dd-mmm-yyyy') ' | ' modelVersion ' | ' nRxns ' | ' nMets ' | ' nGenes ' |'];
-searchStats = '^\| (\_Saccharomyces cerevisiae\_) \| \d{2}-\D+-\d{4} \| (\d+\.\d+\.\d+|develop) \| \d+ \| \d+ \| \d+ \|';
-while ~feof(fin)
-    str = fgets(fin);
-    inline = regexprep(str,searchStats,newStats);
-    inline = unicode2native(inline,'UTF-8');
-    fwrite(fout,inline);
-end
-fclose('all');
-delete('backup.md');
+%README.md is deliberately not touched here: its model statistics and
+%validation numbers are only ever current for a specific released
+%version, so they are stamped once at release time
+%(code/python/release/increase_version.py) rather than on every curation
+%commit, where they would immediately start going stale on develop.
 
 %Convert notation "e-005" to "e-05 " in stoich. coeffs. to avoid
 %inconsistencies between Windows and MAC:
@@ -155,6 +149,53 @@ if exist('dispText','var')
         warning([dispText ' before opening a PR.'])
     else
         error([dispText ' before committing.'])
+    end
+end
+end
+
+%%
+function model = stripTsvAnnotation(model)
+%Remove the six cross-reference fields that live in
+%model/{reactions,metabolites,genes}.tsv from a copy of the model, so
+%they are not re-embedded in model/yeast-GEM.yml on every save
+%(yeast-GEM#379). sbo and every other field is left untouched.
+if isfield(model,'rxnMiriams')
+    model.rxnMiriams = stripMiriamNames(model.rxnMiriams, ...
+        {'bigg.reaction','kegg.pathway','kegg.reaction','metanetx.reaction'});
+end
+if isfield(model,'eccodes')
+    model.eccodes = repmat({''}, size(model.eccodes));
+end
+
+if isfield(model,'metMiriams')
+    model.metMiriams = stripMiriamNames(model.metMiriams, ...
+        {'bigg.metabolite','chebi','kegg.compound','metanetx.chemical'});
+end
+if isfield(model,'metSmiles')
+    model.metSmiles = repmat({''}, size(model.metSmiles));
+end
+
+if isfield(model,'geneMiriams')
+    model.geneMiriams = stripMiriamNames(model.geneMiriams, {'uniprot'});
+end
+end
+
+function miriams = stripMiriamNames(miriams, names)
+%Remove any (name,value) pair whose name is in NAMES from every entity's
+%MIRIAM struct, leaving other namespaces (e.g. sbo) untouched. An entity
+%left with no annotation at all collapses to '', matching
+%readYAMLmodel's own empty-entry convention.
+for i = 1:numel(miriams)
+    if ~isstruct(miriams{i})
+        continue
+    end
+    keep = ~ismember(miriams{i}.name, names);
+    if all(keep)
+        continue
+    elseif any(keep)
+        miriams{i} = struct('name',{miriams{i}.name(keep)},'value',{miriams{i}.value(keep)});
+    else
+        miriams{i} = '';
     end
 end
 end

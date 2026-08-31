@@ -14,15 +14,21 @@ repository, so there is no baseline to keep up to date: the comparison is
 always this model against that branch's model, computed the same way on the
 same day with the same dependencies.
 
-Only two checks are gates -- the model must load, and it must grow.
-Everything else is reported so that a pull request which makes a number
-worse is visible, without blocking work on findings that were already
-there.
+Three checks are gates: the model must load, it must grow, and reaction/
+metabolite names in model/yeast-GEM.yml must agree with
+model/reactions.tsv and model/metabolites.tsv (yeast-GEM#379 -- the yml
+is authoritative, the tsvs' name column is a read-only convenience copy,
+and by the time a pull request is reviewed the two are supposed to
+already agree, so any disagreement can only mean this branch introduced
+one). Everything else is reported so that a pull request which makes a
+number worse is visible, without blocking work on findings that were
+already there.
 
 Checks that Human-GEM runs and this does not yet: model/annotation-table
-consistency, removed-identifiers-not-deprecated, and structure (SMILES /
-InChI) versus formula and charge. All three need the YAML-based curation
-layout with separate identifier TSVs, which yeast-GEM adopts in 9.2.0
+consistency (for the cross-reference identifier columns, not names --
+Human-GEM's own tsvs have no name column), removed-identifiers-not-
+deprecated, and structure (SMILES / InChI) versus formula and charge.
+All three need more of the YAML-based curation layout than exists yet
 (see #379).
 
 Usage:
@@ -31,6 +37,7 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import csv
 import re
 from collections import defaultdict
 from pathlib import Path
@@ -258,6 +265,42 @@ def check_xrefs_across_compartments(model) -> tuple[int, list]:
     return len(rows), rows
 
 
+def check_name_consistency(model, model_dir: Path) -> tuple[int, list]:
+    """Reaction/metabolite names: model/yeast-GEM.yml vs. the tsvs. A gate.
+
+    model/yeast-GEM.yml is authoritative for names -- renaming something
+    is a model edit, the same category as changing its formula or
+    bounds. reactions.tsv/metabolites.tsv's name column is a read-only,
+    human-readable copy included so the file can be scanned without
+    cross-referencing the yml; this catches the two drifting apart.
+
+    An id present in the model but entirely absent from a tsv (or vice
+    versa) is a separate, row-completeness concern -- not a name
+    mismatch -- and out of scope here; skipped rather than flagged.
+    """
+    rows = []
+    for kind, entities, tsv_name in (
+        ("reaction", model.reactions, "reactions.tsv"),
+        ("metabolite", model.metabolites, "metabolites.tsv"),
+    ):
+        tsv_path = model_dir / tsv_name
+        if not tsv_path.is_file():
+            continue
+        with tsv_path.open(encoding="utf-8", newline="") as fh:
+            tsv_names = {
+                row["id"]: (row.get("name") or "").strip()
+                for row in csv.DictReader(fh, delimiter="\t")
+            }
+        for entity in entities:
+            if entity.id not in tsv_names:
+                continue
+            model_name = (entity.name or "").strip()
+            tsv_name_value = tsv_names[entity.id]
+            if model_name != tsv_name_value:
+                rows.append((kind, entity.id, model_name, tsv_name_value))
+    return len(rows), rows
+
+
 def check_macaw(model):
     """MACAW dead-end and duplicate tests.
 
@@ -413,6 +456,7 @@ _HEADERS = {
     "xrefs_across_compartments": ("metabolite name", "namespace", "values"),
     "mass_imbalanced": ("reaction", "name", "imbalance"),
     "charge_imbalanced": ("reaction", "name", "charge"),
+    "name_mismatches": ("kind", "id", "model name", "tsv name"),
 }
 
 
@@ -459,7 +503,11 @@ def run(model_path: Path, out_dir: Path) -> dict:
     else:
         model = cobra.io.read_sbml_model(str(model_path))
 
-    metrics: dict[str, float] = {}
+    metrics: dict[str, float] = {
+        "n_reactions": len(model.reactions),
+        "n_metabolites": len(model.metabolites),
+        "n_genes": len(model.genes),
+    }
     sections: list[tuple[str, tuple, list]] = []
     for key, label, function in _CHECKS:
         value, rows = function(model)
@@ -477,6 +525,16 @@ def run(model_path: Path, out_dir: Path) -> dict:
         ("Charge-imbalanced reactions", _HEADERS["charge_imbalanced"],
          charge_rows)
     )
+
+    name_count, name_rows = check_name_consistency(model, model_path.parent)
+    metrics["name_mismatches"] = name_count
+    # Label must match build_qc_report.py's _ANNOTATION_ROWS entry for this
+    # key exactly -- the PR comment links into this file's heading by
+    # slugifying that label, and the two must agree for the link to resolve.
+    sections.append((
+        "Reaction/metabolite names disagreeing with the tsvs",
+        _HEADERS["name_mismatches"], name_rows,
+    ))
 
     macaw_metrics, macaw_sections = check_macaw(model)
     metrics.update(macaw_metrics)
@@ -500,11 +558,16 @@ def main() -> int:
     width = max(len(k) for k in metrics)
     for key in sorted(metrics):
         print(f"  {key:<{width}}  {metrics[key]:g}")
-    # Only the gate is allowed to fail the run; every other check reports.
+    # Only these gates are allowed to fail the run; every other check reports.
+    failed = False
     if metrics["growth"] <= 1e-6:
         print("\nGATE FAILED: the model cannot produce biomass.")
-        return 1
-    return 0
+        failed = True
+    if metrics.get("name_mismatches", 0) > 0:
+        print(f"\nGATE FAILED: {metrics['name_mismatches']:g} reaction/metabolite "
+              "name(s) disagree between model/yeast-GEM.yml and the tsvs.")
+        failed = True
+    return 1 if failed else 0
 
 
 if __name__ == "__main__":

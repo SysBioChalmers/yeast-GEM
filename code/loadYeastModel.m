@@ -10,7 +10,13 @@ function model = loadYeastModel(filename)
 %               be loaded if provided here. (opt, default empty).
 %
 % Output:
-%   model       the yeast-GEM model structure
+%   model       the yeast-GEM model structure. Reaction, metabolite and
+%               gene cross-reference annotation (KEGG, BiGG, ChEBI,
+%               MetaNetX, EC codes, UniProt) is stored separately in
+%               model/reactions.tsv, model/metabolites.tsv and
+%               model/genes.tsv (yeast-GEM#379) and merged back in here
+%               via annotateGEM, so the returned model looks the same as
+%               before that split either way.
 %
 %   Usage: model = loadYeastModel(filename)
 
@@ -23,6 +29,15 @@ end
 
 if endsWith(filename,{'.yml','.yaml'})
     model = readYAMLmodel(filename);
+    % The yml only carries this by itself for the default model path -- a
+    % filename argument may point at an .xml-derived .yml or some other
+    % file that already has full annotation, or at a model/ folder
+    % without the tsvs, in which case there is nothing to merge.
+    annPath = fullfile(funcDir,'..','model');
+    if isequal(filename, fullfile(funcDir,'..','model','yeast-GEM.yml')) ...
+            && isfile(fullfile(annPath,'reactions.tsv'))
+        model = annotateGEM(model, annPath);
+    end
 else
     if ~(exist('ravenCobraWrapper.m','file')==2)
         if exist('readCbModel.m','file')==2

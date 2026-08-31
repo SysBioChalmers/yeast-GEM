@@ -2,21 +2,16 @@
 
 ### yeast 9.1.1:
 - Features:
-  - `yeastgem`, a cobrapy-based Python interface to yeast-GEM under `code/python`, covering model I/O, growth conditions, biomass composition, curation helpers and the validation test suite. (PR #385)
-  - Mitochondrial acetate transport, `r_4785`. (PR #389, closes #388)
-  - Ribonucleotide reductase acting on UDP, cytosolic `r_4786` and nuclear `r_4787`. (PR #389, closes #380)
-  - `plotAnaerobic` reports a metric for the exchange rates of the main fermentation products, plus the ammonium/ATPase flux ratio. (PR #394)
-  - Automate releases: `.github/workflows/release.yml` and `code/python/release/increase_version.py` cut `release/X.Y.Z` from `develop`, stamp the version, export the binary model files and open the release and sync-back pull requests. (PR #396)
+  - `yeastgem`, a cobrapy-based Python interface to yeast-GEM under `code/python`. (PR #385)
+  - Mitochondrial acetate transport (`r_4785`) and ribonucleotide reductase acting on UDP. (PR #389)
+  - `plotAnaerobic` reports the anaerobic exchange-rate error and ammonium/ATPase ratio. (PR #394)
+  - Automate the release process, from `history.md` to a tagged GitHub release. (PR #396)
 - Fixes:
-  - Correct erroneous annotations on 22 metabolites that shared identifiers with, or carried the identifier of, an entirely different compound (closes #378). (PR #389)
-  - `model/yeast-GEM.yml` is rewritten in the shared RAVEN/raven-toolbox YAML layout; model content is unchanged (same reactions, metabolites and genes). (PR #397)
-  - CI's metrics parity gate actually uses Gurobi now, instead of silently falling back to GLPK. (PR #390)
-  - Regenerate `data/testResults/essentialGenes.md` and `growth.md`, which had drifted from the model's actual predictions over several releases. (PR #393)
-  - `memote-release.yml`'s release trigger and a report/checkout race are fixed. (PR #395)
+  - Correct erroneous annotations on 22 metabolites. (PR #389, closes #378)
+  - `model/yeast-GEM.yml` adopts the shared RAVEN/raven-toolbox YAML layout; model content is unchanged. (PR #397)
+  - CI cleanup and de-duplication across the metrics gate, stale test results and the memote workflows -- which now also report a MEMOTE score on every pull request. (PR #390, #393, #395, #398)
 - Chore:
-  - Keep the binary model files (`.mat`, `.xlsx`) off `develop`; add a `Branch hygiene` workflow that rejects pull requests and pushes carrying them. (PR #392)
-  - Restructure CI workflows; remove the long-dead `memote-history.yml`. (PR #395)
-  - Rename the curation script for this release to `v9_1_1.m`. (PR #391)
+  - Keep the binary model files and `version.txt` off `develop`. (PR #392, #398)
 
 ### yeast 9.1.0:
 - Fixes:

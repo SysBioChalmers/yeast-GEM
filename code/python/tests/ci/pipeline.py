@@ -39,6 +39,7 @@ _TRACKED = (
     "qc_metrics.tsv",
     "validation_findings.md",
     "validation_metrics.tsv",
+    "memote_score.md",
 )
 
 
@@ -181,24 +182,41 @@ def cmd_comment(args) -> int:
 def cmd_gate(args) -> int:
     """Fail the build only on the conditions that block a merge.
 
-    Growth is the single gate. Everything else in the report is a finding
-    to review, not a reason to stop, so this deliberately reads one value
-    rather than looking at the report as a whole.
+    Two gates: growth, and reaction/metabolite name agreement between
+    model/yeast-GEM.yml and the annotation tsvs (reactions.tsv /
+    metabolites.tsv -- yeast-GEM#379). Everything else in the report is a
+    finding to review, not a reason to stop, so this deliberately reads
+    specific values rather than looking at the report as a whole.
     """
     metrics = read_metrics(args.metrics)
     if not metrics:
         print(f"::error::{args.metrics} is missing or empty, so the checks "
               "did not produce a result")
         return 1
+
+    failed = False
+
     if "growth" not in metrics:
         print("::error::the checks produced no growth value")
-        return 1
-    growth = metrics["growth"]
-    if growth <= 1e-6:
-        print(f"::error::the model cannot produce biomass (growth = {growth:g})")
-        return 1
-    print(f"Growth {growth:g}")
-    return 0
+        failed = True
+    else:
+        growth = metrics["growth"]
+        if growth <= 1e-6:
+            print(f"::error::the model cannot produce biomass (growth = {growth:g})")
+            failed = True
+        else:
+            print(f"Growth {growth:g}")
+
+    name_mismatches = metrics.get("name_mismatches", 0)
+    if name_mismatches > 0:
+        print(f"::error::{name_mismatches:g} reaction/metabolite name(s) disagree "
+              "between model/yeast-GEM.yml and the annotation tsvs -- see "
+              "qc_findings.md")
+        failed = True
+    else:
+        print(f"Names: model and tsvs agree ({name_mismatches:g} mismatches)")
+
+    return 1 if failed else 0
 
 
 def cmd_require(args) -> int:

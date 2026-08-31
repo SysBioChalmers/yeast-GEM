@@ -9,10 +9,8 @@ from __future__ import annotations
 
 import csv
 import os
-import re
 import warnings
 from copy import copy
-from datetime import datetime
 from pathlib import Path
 
 import cobra
@@ -85,9 +83,9 @@ def write_yeast_model(model: cobra.Model) -> None:
 
     ``write_yeast_model`` implied a casual write, but the release path
     needs the full pipeline (canonical state, validation gates, ΔG
-    CSVs, README update). This shim forwards to ``commit_yeast_model``
-    with its default arguments and emits a DeprecationWarning. It will
-    be removed at the next minor version bump after the rename ships.
+    CSVs). This shim forwards to ``commit_yeast_model`` with its default
+    arguments and emits a DeprecationWarning. It will be removed at the
+    next minor version bump after the rename ships.
     """
     warnings.warn(
         "write_yeast_model is deprecated; use commit_yeast_model instead. "
@@ -100,20 +98,10 @@ def write_yeast_model(model: cobra.Model) -> None:
 
 # --- the release pipeline ------------------------------------------------
 
-# Regex matching the model-stats table row in README.md, mirroring the
-# legacy MATLAB regex used by saveYeastModel.m. Captures the species
-# label so the rewrite preserves it.
-_README_STATS_RE = re.compile(
-    r"^\| (\_Saccharomyces cerevisiae\_) \| "
-    r"\d{2}-\D+-\d{4} \| (\d+\.\d+\.\d+|develop) \| \d+ \| \d+ \| \d+ \|",
-    re.MULTILINE,
-)
-
 
 def commit_yeast_model(
     model: cobra.Model,
     *,
-    update_readme: bool = True,
     allow_no_growth: bool = True,
 ) -> cobra.Model:
     """Prepare the yeast-GEM artifacts for a curation PR.
@@ -136,8 +124,13 @@ def commit_yeast_model(
        landed.)
     6. Write SBML to ``model/yeast-GEM.xml``.
     7. Persist ΔG annotations via :func:`save_delta_g`.
-    8. Update ``README.md`` with the current date and model size
-       (if ``update_readme`` is True).
+
+    Root ``README.md`` is deliberately not touched here: its model
+    statistics and validation numbers are only ever current for a
+    specific released version, so they are stamped once at release time
+    (``code/python/release/increase_version.py``) rather than on every
+    curation commit, where they would immediately start going stale on
+    ``develop``.
 
     Limitations vs. the MATLAB pipeline (will close as later phases land)
         - No ``.yml`` / ``.txt`` / ``.xlsx`` / ``.mat`` companion exports
@@ -153,9 +146,6 @@ def commit_yeast_model(
     ----------
     model
         Model to commit.
-    update_readme
-        Whether to rewrite the model-stats row in ``README.md``
-        (default True).
     allow_no_growth
         When True (default), an aerobic-growth failure warns rather
         than raises. When False, it raises ``RuntimeError``.
@@ -174,9 +164,6 @@ def commit_yeast_model(
 
     write_sbml_model(model, str(MODEL_PATH))
     save_delta_g(model)
-
-    if update_readme:
-        _update_readme(model)
 
     return model
 
@@ -234,27 +221,6 @@ def _check_growth_anaerobic(model: cobra.Model, allow_no_growth: bool) -> None:
     anaerobic = model.copy()
     conditions.apply(anaerobic, "anaerobic")
     _check_growth(anaerobic, "anaerobic", allow_no_growth)
-
-
-def _update_readme(model: cobra.Model) -> None:
-    """Rewrite the model-stats row in ``README.md``.
-
-    Mirrors the MATLAB regex rewrite. The species label, version
-    placeholder, and column order are preserved; only the date and the
-    three size counters change.
-    """
-    readme = REPO_PATH / "README.md"
-    version = re.sub(r"yeastGEM_v?", "", (model.id or "develop"))
-    date = datetime.now().strftime("%d-%b-%Y")
-    n_rxns = len(model.reactions)
-    n_mets = len(model.metabolites)
-    n_genes = len(model.genes)
-    replacement = (
-        f"| \\1 | {date} | {version} | {n_rxns} | {n_mets} | {n_genes} |"
-    )
-    text = readme.read_text(encoding="utf-8")
-    new_text = _README_STATS_RE.sub(replacement, text)
-    readme.write_text(new_text, encoding="utf-8")
 
 
 # --- BiGG compliance helper (ported verbatim from legacy code/io.py) ---

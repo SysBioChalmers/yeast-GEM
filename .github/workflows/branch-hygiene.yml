@@ -1,10 +1,12 @@
 name: Branch hygiene
 
-# The binary model files are generated at release time and belong on main
-# only. .gitignore cannot keep them off develop: it is consulted only for
-# untracked paths, so once the files are tracked on main, any merge of main
-# into develop carries them across regardless. This check is the thing that
-# actually prevents it.
+# The binary model files and version.txt are generated or stamped at
+# release time and belong on main only -- develop is never "at" a
+# version, it is ahead of the last release by an unknown number of
+# increments. .gitignore cannot keep them off develop: it is consulted
+# only for untracked paths, so once a file is tracked on main, any merge
+# of main into develop carries it across regardless. This check is the
+# thing that actually prevents it.
 on:
   pull_request:
     branches: [develop]
@@ -12,7 +14,7 @@ on:
     branches: [develop]
 
 jobs:
-  no-binaries-on-develop:
+  no-release-artifacts-on-develop:
     runs-on: ubuntu-latest
     timeout-minutes: 5
     steps:
@@ -23,20 +25,19 @@ jobs:
       # PR branch, so it answers "would develop contain these once this is
       # merged?" -- which also catches files arriving through a merge commit
       # rather than being added directly.
-      - name: No binary model files on develop
+      - name: No release-only files on develop
         run: |
-          found=$(git ls-files '*.mat' '*.xls' '*.xlsx' '*.xlsm')
+          found=$(git ls-files '*.mat' '*.xls' '*.xlsx' '*.xlsm' 'version.txt')
           if [ -n "$found" ]; then
-            echo "::error::Binary model files are tracked, but belong on main only:"
+            echo "::error::These are generated or stamped at release time, but belong on main only:"
             echo "$found" | sed 's/^/  /'
             echo ""
-            echo "These are generated at release time by exportForGit and are"
-            echo "committed on main. If they arrived here through a merge of"
-            echo "main into develop, drop them in the merge commit:"
+            echo "If they arrived here through a merge of main into develop,"
+            echo "drop them in the merge commit:"
             echo ""
             echo "  git rm --cached $(echo $found | tr '\n' ' ')"
             echo ""
             echo "A local, untracked copy is fine -- this only rejects tracked files."
             exit 1
           fi
-          echo "No binary model files tracked on develop."
+          echo "No release-only files tracked on develop."
