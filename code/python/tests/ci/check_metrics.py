@@ -69,8 +69,9 @@ _TOL_FOLD = 5e-2
 #
 # "direction" says which way is an improvement, which is what makes a
 # delta on a continuous metric readable: a rising R2 is a gain, a rising
-# error or fold error is not. A move within tolerance is reported as
-# unchanged, so solver noise does not read as a result.
+# error or fold error is not. A move within tolerance still shows its
+# real value -- only the icon treats it as clean, so solver noise gets a
+# checkmark without hiding what actually moved.
 _METRICS = [
     # Chemostat growth rates, Osterlund et al. 2013
     ("growthPredictionR2", "Growth prediction R2", "higher", _TOL_R2),
@@ -239,16 +240,28 @@ def compute(model, findings_path: Path | None = None) -> dict[str, float]:
     }
 
 
+def _fmt_delta(change: float) -> str:
+    """4 significant digits, or a bare ``0`` for an exact (non-)change.
+
+    Tolerance decides whether a move counts as a *regression* -- it must
+    not also decide whether the reader gets to see the move at all. A
+    change under tolerance is still a real change; showing it as literally
+    ``0`` reads as "nothing moved" when something did, just not enough to
+    matter for the verdict.
+    """
+    return f"{change:+.4g}" if abs(change) > 1e-9 else "0"
+
+
 def _verdict(value: float, base: float, direction: str, tol: float):
     """Return ``(delta_text, icon, is_regression)`` for one metric."""
     change = value - base
+    delta = _fmt_delta(change)
     if abs(change) <= tol:
-        return "0", ":white_check_mark:", False
-    text = f"{change:+.4g}"
+        return delta, ":white_check_mark:", False
     if direction == "none":
-        return text, ":warning:", False
+        return delta, ":warning:", False
     improved = (change > 0) if direction == "higher" else (change < 0)
-    return text, (":white_check_mark:" if improved else ":x:"), not improved
+    return delta, (":white_check_mark:" if improved else ":x:"), not improved
 
 
 def render(current: dict, base: dict, base_ref: str, solver: str,
@@ -258,13 +271,13 @@ def render(current: dict, base: dict, base_ref: str, solver: str,
     for key, label, direction, tol in _METRICS:
         value = current[key]
         if key not in base:
-            rows.append(f"| {label} | {value:.6g} | — | new | :grey_question: |")
+            rows.append(f"| {label} | {value:.4g} | — | new | :grey_question: |")
             continue
         delta, icon, regression = _verdict(value, base[key], direction, tol)
         regressions += regression
         moved += delta != "0"
         rows.append(
-            f"| {label} | {value:.6g} | {base[key]:.6g} | {delta} | {icon} |"
+            f"| {label} | {value:.4g} | {base[key]:.4g} | {delta} | {icon} |"
         )
 
     if regressions:
@@ -292,9 +305,10 @@ def render(current: dict, base: dict, base_ref: str, solver: str,
         "| --- | ---: | ---: | ---: | :---: |",
         *rows,
         "",
-        f"Solver: `{solver}`. A change within tolerance is reported as 0. "
-        "Direction matters: a rising R2 or accuracy is an improvement, a "
-        "rising error or false-call count is not.",
+        f"Solver: `{solver}`. Values to 4 significant digits. A change "
+        "within tolerance still gets a checkmark. Direction matters: a "
+        "rising R2 or accuracy is an improvement, a rising error or "
+        "false-call count is not.",
         "",
         "_Both columns are computed in this run, against the same reference "
         "data — only the model differs._",

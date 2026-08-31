@@ -22,6 +22,11 @@ Icon rule, per row:
   finding, not blocking), :white_check_mark: if it is zero.
 * :hourglass_flowing_sand: -- the group is still being computed on this run.
 
+One exception: the model-size line (reaction/metabolite/gene counts) at
+the top of the comment carries no icon at all. Unlike every other count
+here, a curation pull request is expected to change it, so treating a
+rise like a regression would flag normal work.
+
 Only the gates (growth, name_mismatches) fail the build. Everything else
 is reported.
 
@@ -32,7 +37,20 @@ Usage:
 from __future__ import annotations
 
 import argparse
+import re
 from pathlib import Path
+
+# (metric key, label)
+#
+# No icon, unlike every other row in this file: a curation PR is expected
+# to add or remove reactions, metabolites and genes, so a changed count is
+# not itself a finding -- only a place for the reader to notice a size
+# change they were not expecting.
+_SIZE_ROWS = [
+    ("n_reactions", "reactions"),
+    ("n_metabolites", "metabolites"),
+    ("n_genes", "genes"),
+]
 
 # (metric key, comment label, kind)
 _MODEL_ROWS = [
@@ -73,8 +91,9 @@ _FATAL_MESSAGES = {
 #
 # "direction" says which way is an improvement, which is what makes a
 # delta on a continuous metric readable: a rising R2 is a gain, a rising
-# error or false-call count is not. A move within tolerance is reported
-# as unchanged, so solver noise does not read as a change.
+# error or false-call count is not. A move within tolerance still shows
+# its real value -- only the icon (not the number) treats it as clean, so
+# solver noise gets a checkmark without hiding what actually moved.
 # Validation metrics whose ideal value is zero. These follow the same icon
 # rule as the QC counts -- non-zero is a standing finding worth a warning
 # even when this branch did not make it worse -- rather than showing a
@@ -176,6 +195,33 @@ def _icon(value: float, base: float | None, kind: str):
     return text, ":white_check_mark:", False, False
 
 
+def _render_size(current, base, base_ref, running) -> str:
+    """One-line model-size summary: no icon, no gate.
+
+    A changed reaction/metabolite/gene count is expected on essentially
+    every curation pull request, so treating it like the other counts --
+    green unless it rose -- would flag normal work as a regression. This
+    is context for the reader, not a check.
+    """
+    if running:
+        return "_running_"
+    if not current:
+        return "_not run._"
+    parts = []
+    for key, label in _SIZE_ROWS:
+        if key not in current:
+            parts.append(f"{label}: _not run_")
+            continue
+        value = int(current[key])
+        if key in base:
+            change = int(value - int(base[key]))
+            delta = f"{change:+d}" if change else "0"
+        else:
+            delta = "new"
+        parts.append(f"{value} {label} ({delta})")
+    return ", ".join(parts) + f" vs `{base_ref}`"
+
+
 def _render_rows(rows, current, base, url_base, detail_base, running):
     lines, regressions, warnings, pending, skipped, fatal_keys = [], 0, 0, 0, 0, []
     for key, label, kind in rows:
@@ -211,6 +257,18 @@ def _render_rows(rows, current, base, url_base, detail_base, running):
     return lines, regressions, warnings, pending, skipped, fatal_keys
 
 
+def _fmt_delta(change: float) -> str:
+    """4 significant digits, or a bare ``0`` for an exact (non-)change.
+
+    Tolerance decides whether a move counts as a *regression* -- it must
+    not also decide whether the reader gets to see the move at all. A
+    change of 0.0008 sitting under a 0.005 tolerance is still a real
+    change; showing it as literally ``0`` reads as "nothing moved" when
+    something did, just not enough to matter for the verdict.
+    """
+    return f"{change:+.4g}" if abs(change) > 1e-9 else "0"
+
+
 def _render_validation(current, base, url_base, base_ref, detail_base=""):
     """The validation-metrics table, or a note if the job did not report."""
     if not current:
@@ -228,7 +286,7 @@ def _render_validation(current, base, url_base, base_ref, detail_base=""):
         value = current[key]
         # The value links to the measurements it summarises, the same way a
         # QC count links to the entries behind it.
-        shown = f"{value:.6g}"
+        shown = f"{value:.4g}"
         if detail_base:
             anchor = _slug(_DETAIL_ANCHOR.get(key, label))
             shown = (f"[{shown}]({detail_base}/validation_findings.md"
@@ -238,15 +296,14 @@ def _render_validation(current, base, url_base, base_ref, detail_base=""):
             skipped += 1
             continue
         change = value - base[key]
+        delta = _fmt_delta(change)
         if abs(change) <= tol:
-            delta = "0"
             icon = (":warning:" if key in _ZERO_IS_IDEAL and value > 0
                     else ":white_check_mark:")
         elif direction == "none":
-            delta, icon = f"{change:+.4g}", ":warning:"
+            icon = ":warning:"
         else:
             improved = (change > 0) if direction == "higher" else (change < 0)
-            delta = f"{change:+.4g}"
             if not improved:
                 icon = ":x:"
             elif key in _ZERO_IS_IDEAL and value > 0:
@@ -255,15 +312,102 @@ def _render_validation(current, base, url_base, base_ref, detail_base=""):
                 icon = ":white_check_mark:"
             regressions += not improved
         lines.append(
-            f"| {name} | {shown} | {base[key]:.6g} | {delta} | {icon} |"
+            f"| {name} | {shown} | {base[key]:.4g} | {delta} | {icon} |"
         )
     return lines, regressions, skipped
+
+
+def _parse_memote(directory: Path | None):
+    """Parse ``memote_score.md`` -> ``(total_pct, {section: pct}, detailed)``.
+
+    ``detailed`` is a list of ``(section, test, pct)`` triples, matched by
+    its 3-column shape rather than by which heading it sits under -- the
+    2-column section table above it cannot match a 3-column pattern, so
+    this is unambiguous without needing to scope the search.
+
+    None if ``directory`` is unset or the file is absent (the job did not
+    run, or has not reached this directory yet) rather than [] or 0 -- a
+    missing score and a score of zero must not read the same to the caller.
+    """
+    if directory is None:
+        return None
+    path = directory / "memote_score.md"
+    if not path.is_file():
+        return None
+    text = path.read_text(encoding="utf-8")
+    total = re.search(r"Total score:\s*([\d.]+)\s*%", text)
+    if not total:
+        return None
+    sections = {m.group(1): float(m.group(2))
+                for m in re.finditer(r"^\| (\w+) \| ([\d.]+)% \|$", text, re.M)}
+    detailed = [(s, t, float(pct)) for s, t, pct in re.findall(
+        r"^\| (.+?) \| (.+?) \| ([\d.]+)% \|$", text, re.M)]
+    return float(total.group(1)), sections, detailed
+
+
+def _memote_delta(current: float, base: float | None) -> str:
+    """Percentage-point delta, MEMOTE's own scale -- not the 4g convention
+    used for validation metrics, since a score is already a rounded percent."""
+    if base is None:
+        return ""
+    change = current - base
+    if abs(change) < 0.05:
+        return "0"
+    return f"{change:+.1f} {':warning:' if change < 0 else ':white_check_mark:'}"
+
+
+def _render_memote(current: Path | None, base: Path | None, base_ref: str,
+                    running: bool) -> list[str]:
+    """The MEMOTE-score section, or a note if the job did not report.
+
+    Compared against the target branch's own last-committed score rather
+    than a fresh run on the base model, the way the other sections do it:
+    MEMOTE (even the fast subset) is expensive enough that re-running it a
+    second time in the same job would roughly double this job's cost for a
+    score that mostly reflects annotation completeness, not something a
+    typical pull request moves. See memote_snapshot.py's docstring.
+    """
+    if running:
+        return ["_running_ &middot; :hourglass_flowing_sand:", ""]
+    parsed = _parse_memote(current)
+    if parsed is None:
+        return ["_not run — the MEMOTE job reported nothing._", ""]
+    total, sections, detailed = parsed
+    base_parsed = _parse_memote(base) if base is not None else None
+    base_total, base_sections, _base_detailed = base_parsed or (None, {}, [])
+
+    lines = [
+        f"**Total score: {total:.1f}%** &nbsp; "
+        f"{_memote_delta(total, base_total)}".rstrip(),
+        "",
+    ]
+    if sections:
+        lines += [f"| Section | Score | &Delta; vs `{base_ref}` |",
+                  "| --- | ---: | ---: |"]
+        lines += [
+            f"| {name} | {value:.1f}% | "
+            f"{_memote_delta(value, base_sections.get(name))} |"
+            for name, value in sections.items()
+        ]
+        lines.append("")
+    # Collapsed by default: one row per MEMOTE test is too long to sit
+    # in the open comment, but still worth having a click away rather
+    # than only in the uploaded memote_result.json artifact.
+    if detailed:
+        lines += ["<details><summary>Per-test scores</summary>", "",
+                  "| Section | Test | Score |", "| --- | --- | ---: |"]
+        lines += [f"| {section} | {test} | {pct:.1f}% |"
+                  for section, test, pct in detailed]
+        lines += ["", "</details>", ""]
+    return lines
 
 
 def build(current: dict, base: dict, base_ref: str, url_base: str,
           running: bool, run_url: str, detail_base: str = "",
           validation: dict | None = None,
-          validation_base: dict | None = None) -> str:
+          validation_base: dict | None = None,
+          memote_dir: Path | None = None,
+          memote_base_dir: Path | None = None) -> str:
     groups = [
         ("Model checks",
          "_Growth is a gate and blocks the merge; every other row is a "
@@ -308,14 +452,24 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
     skipped += val_skip
     body += [
         "### Validation metrics",
-        "_Predictions against measured data. A change within tolerance is "
-        "reported as 0; direction matters, so a rising R2 is a gain and a "
-        "rising error is not._",
+        "_Predictions against measured data, to 4 significant digits. A "
+        "change within tolerance still gets a checkmark; direction matters, "
+        "so a rising R2 is a gain and a rising error is not._",
         "",
         f"| Metric | This branch | `{base_ref}` | &Delta; | |",
         "| --- | ---: | ---: | ---: | :---: |",
         *val_lines,
         "",
+    ]
+
+    body += [
+        "### MEMOTE score",
+        "_Fast subset -- flux-variability and matrix-rank tests are "
+        "skipped, so this is not the same score `memote report snapshot` "
+        f"would give. Compared against `{base_ref}`'s own last-committed "
+        "score, not a fresh run on it._",
+        "",
+        *_render_memote(memote_dir, memote_base_dir, base_ref, running),
     ]
 
     if fatal_keys:
@@ -372,8 +526,11 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
     if run_url:
         footer += ["", f"[Full workflow run]({run_url})"]
 
+    size_line = f"**Model size:** {_render_size(current, base, base_ref, running)}"
+
     return "\n".join(
-        ["## Model quality report", "", verdict, "", intro, "", *body, *footer]
+        ["## Model quality report", "", verdict, "", size_line, "", intro, "",
+         *body, *footer]
     ) + "\n"
 
 
@@ -403,7 +560,8 @@ def main() -> int:
     args.out.write_text(
         build(current, base, args.base_ref, args.url_base.rstrip("/"),
               args.running, args.run_url, args.detail_base.rstrip("/"),
-              validation, validation_base),
+              validation, validation_base,
+              memote_dir=args.current, memote_base_dir=args.base),
         encoding="utf-8",
     )
     print(f"Wrote {args.out}")

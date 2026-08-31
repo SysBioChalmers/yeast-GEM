@@ -503,7 +503,11 @@ def run(model_path: Path, out_dir: Path) -> dict:
     else:
         model = cobra.io.read_sbml_model(str(model_path))
 
-    metrics: dict[str, float] = {}
+    metrics: dict[str, float] = {
+        "n_reactions": len(model.reactions),
+        "n_metabolites": len(model.metabolites),
+        "n_genes": len(model.genes),
+    }
     sections: list[tuple[str, tuple, list]] = []
     for key, label, function in _CHECKS:
         value, rows = function(model)
