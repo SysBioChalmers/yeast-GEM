@@ -1,10 +1,12 @@
+annotation_consistency	0
 charge_imbalanced	10
+deprecation_completeness	0
 duplicate_reactions	0
 growth	0.08110025381639172
 macaw_dead_end_metabolites	943
 macaw_duplicates	18
 macaw_single_direction	570
-malformed_xrefs	48
+malformed_xrefs	34
 mass_imbalanced	8
 missing_charge	0
 missing_formula	16
@@ -13,5 +15,6 @@ n_metabolites	2748
 n_reactions	4105
 name_mismatches	0
 orphan_metabolites	0
+structure_inconsistent	916
 unused_genes	0
 xrefs_across_compartments	18
