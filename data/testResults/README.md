@@ -223,8 +223,6 @@ row in the matching tsv, and vice versa; a curated entity added to one side
 without the other is exactly the kind of gap this exists to catch before
 it merges. Also flags a *deprecated* identifier (see the next check) that is
 back in active use, since retiring an id promises it stays retired.
-Ports Human-GEM's `check_annotation_consistency`
-([`qcModelChecks.py`](https://github.com/SysBioChalmers/Human-GEM/blob/main/code/test/qcModelChecks.py)).
 
 #### Removed identifiers not added to the deprecated lists
 Reaction or metabolite ids present in the target branch but missing from this
@@ -237,7 +235,7 @@ same pull request that removes the id.
 
 Needs the target branch's own model tables to know what was removed; empty
 (not "clean") when they are not available, e.g. run locally without
-`--base-model-dir`. Ports Human-GEM's `check_deprecation_completeness`.
+`--base-model-dir`.
 
 #### Metabolite structure (SMILES) vs. formula/charge
 A metabolite's `formula`/`charge` in `model/yeast-GEM.yml` and its `smiles` in
@@ -259,9 +257,8 @@ Report only, not a gate: yeast-GEM's SMILES annotations are mostly curated as
 neutral reference structures (e.g. from KEGG), not in the ionized form the
 model's `charge` field implies, so `protonation` alone is currently a large,
 pre-existing count — a target for gradual curation, not something a single
-pull request is expected to fix. Ports Human-GEM's
-`structureConsistencyTest.py`, minus its SMILES/InChI cross-check: yeast-GEM
-has no InChI field.
+pull request is expected to fix. There is no SMILES/InChI cross-check:
+yeast-GEM has no InChI field.
 
 ### Validation metrics
 
@@ -403,7 +400,7 @@ single reclassification easy to miss.
 
 ## 5. Not yet implemented
 
-Human-GEM also runs `verifyAnnotations.py`: cross-checks metabolite/reaction
+A heavier annotation-verification check: cross-checking metabolite/reaction
 identifiers against MetaNetX's structure-matched reference tables (SMILES →
 InChIKey → a MetaNetX id → every other database's id for the same structure),
 classifying each stored identifier as confirmed/wrong/missing/drift, with a

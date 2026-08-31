@@ -26,12 +26,11 @@ only mean this branch introduced one). Everything else is reported so
 that a pull request which makes a number worse is visible, without
 blocking work on findings that were already there.
 
-Two more checks port Human-GEM's, adapted to what yeast-GEM's tsvs
-actually carry: identifiers removed since the target branch that were
+Two more checks: identifiers removed since the target branch that were
 not added to data/deprecatedIdentifiers/ (report only -- needs
 --base-model-dir, empty without it), and metabolite structure (SMILES;
-yeast-GEM has no InChI field, so there is no Human-GEM-style
-smiles/InChI cross-check) versus formula and charge (report only).
+yeast-GEM has no InChI field, so there is no smiles/InChI cross-check)
+versus formula and charge (report only).
 
 check_malformed_xrefs reads reactions.tsv/metabolites.tsv/genes.tsv
 directly rather than the model's own (SBML-derived) annotation, per
@@ -363,10 +362,10 @@ def _parse_formula(formula: str) -> Counter:
 
 
 def _classify_structure(model_formula, model_charge, smiles: str):
-    """Relate a stored SMILES to the curated formula/charge (ported from
-    Human-GEM's structureConsistencyTest.py, minus the InChI cross-check --
-    yeast-GEM has no InChI field). Returns (category, rdkit_formula,
-    rdkit_charge)."""
+    """Relate a stored SMILES to the curated formula/charge, deriving the
+    formula/charge the SMILES implies via RDKit and comparing (no InChI
+    cross-check -- yeast-GEM has no InChI field). Returns (category,
+    rdkit_formula, rdkit_charge)."""
     if not smiles:
         return "no_structure", "", ""
     mol = Chem.MolFromSmiles(smiles)
