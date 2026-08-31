@@ -189,6 +189,14 @@ pattern recorded in `model_qc.py` are checked; a namespace without one is left
 alone rather than guessed at, because a wrong pattern manufactures findings
 that look exactly like real ones.
 
+Reads `model/reactions.tsv`, `metabolites.tsv` and `genes.tsv` directly, not
+the exported model (yeast-GEM#379). A curator who edits a tsv cell by hand —
+e.g. via the GitHub web UI, without ever regenerating `model/yeast-GEM.xml` —
+gets caught at the file they actually edited, not only after someone next
+runs `saveYeastModel`/`commit_yeast_model`. `sbo` is consequently not checked
+here any more: it is computed, not curator-edited, and does not live in any
+tsv.
+
 #### Cross-refs inconsistent across compartments
 The same metabolite name appearing in several compartments with disagreeing
 cross-references.
@@ -207,6 +215,53 @@ column so those files are readable without cross-referencing the yml
 (yeast-GEM#379). This flags any id where the two disagree. Fix it by updating
 the tsv row's `name` to match the yml, never the other way around — renaming
 something is done in the yml, the same as any other model edit.
+
+#### Model/annotation-table consistency
+A **gate** — non-zero blocks the merge, not just a rise vs. the target branch.
+Every reaction, metabolite and gene id in `model/yeast-GEM.yml` must have a
+row in the matching tsv, and vice versa; a curated entity added to one side
+without the other is exactly the kind of gap this exists to catch before
+it merges. Also flags a *deprecated* identifier (see the next check) that is
+back in active use, since retiring an id promises it stays retired.
+Ports Human-GEM's `check_annotation_consistency`
+([`qcModelChecks.py`](https://github.com/SysBioChalmers/Human-GEM/blob/main/code/test/qcModelChecks.py)).
+
+#### Removed identifiers not added to the deprecated lists
+Reaction or metabolite ids present in the target branch but missing from this
+model, that were not added to `data/deprecatedIdentifiers/deprecatedReactions.tsv`
+or `deprecatedMetabolites.tsv`. Removing an id silently, rather than retiring
+it, breaks anything that still refers to it by that id (a paper, a script, an
+old release). Fix it by adding a row — `id`, optionally `replaced_by` if
+something specific supersedes it, and a `note` — to the matching file, in the
+same pull request that removes the id.
+
+Needs the target branch's own model tables to know what was removed; empty
+(not "clean") when they are not available, e.g. run locally without
+`--base-model-dir`. Ports Human-GEM's `check_deprecation_completeness`.
+
+#### Metabolite structure (SMILES) vs. formula/charge
+A metabolite's `formula`/`charge` in `model/yeast-GEM.yml` and its `smiles` in
+`metabolites.tsv` are curated separately and can drift apart. This parses each
+SMILES with [RDKit](https://www.rdkit.org), derives its formula and net
+charge, and compares them to the curated values. Every metabolite falls into
+one category (only `protonation` and `formula_error` count toward the number
+reported):
+
+| category | meaning |
+|---|---|
+| `ok` | SMILES formula and charge match the model |
+| `protonation` | same heavy-atom skeleton, but a different protonation state than the model — the SMILES and the `charge` field disagree about how many protons are on it |
+| `formula_error` | heavy-atom composition disagrees — the wrong molecule may be stored |
+| `generic` | an R-group or polymer repeat unit; no single concrete structure to check against a per-unit formula |
+| `no_structure` | no SMILES stored |
+
+Report only, not a gate: yeast-GEM's SMILES annotations are mostly curated as
+neutral reference structures (e.g. from KEGG), not in the ionized form the
+model's `charge` field implies, so `protonation` alone is currently a large,
+pre-existing count — a target for gradual curation, not something a single
+pull request is expected to fix. Ports Human-GEM's
+`structureConsistencyTest.py`, minus its SMILES/InChI cross-check: yeast-GEM
+has no InChI field.
 
 ### Validation metrics
 
@@ -348,8 +403,10 @@ single reclassification easy to miss.
 
 ## 5. Not yet implemented
 
-Human-GEM additionally checks model/annotation-table consistency, that removed
-identifiers were moved to a deprecated list, and structure (SMILES/InChI)
-against formula and charge. All three need the YAML-based curation layout with
-separate identifier TSVs, which yeast-GEM adopts in 9.2.0 (see
-[#379](https://github.com/SysBioChalmers/yeast-GEM/issues/379)).
+Human-GEM also runs `verifyAnnotations.py`: cross-checks metabolite/reaction
+identifiers against MetaNetX's structure-matched reference tables (SMILES →
+InChIKey → a MetaNetX id → every other database's id for the same structure),
+classifying each stored identifier as confirmed/wrong/missing/drift, with a
+`--fix` mode for the safe corrections. Heavier than the checks above (needs a
+cached MetaNetX download and RDKit, and a `--fix` mode that writes back to the
+tsvs) and not part of #379 — left for a follow-up.

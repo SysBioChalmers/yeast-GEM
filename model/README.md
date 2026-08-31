@@ -76,4 +76,11 @@ the yml, update the matching tsv row's `name` column in the same change.
 To curate a cross-reference identifier, edit the matching column directly —
 no RAVEN, cobrapy, or other package required, the same way the yml itself is
 meant to be hand-edited (yeast-GEM#379). A newly added reaction, metabolite,
-or gene needs a (possibly mostly-blank) row added to the matching TSV too.
+or gene needs a (possibly mostly-blank) row added to the matching TSV too;
+CI's `model_qc.py` gates the build on the model and the tsvs agreeing exactly
+(id-for-id, and name-for-name — see [data/testResults/README.md](../data/testResults/README.md)).
+
+Removing a reaction or metabolite needs its row deleted here *and* an entry
+added to `data/deprecatedIdentifiers/deprecatedReactions.tsv` or
+`deprecatedMetabolites.tsv`, so the retired id stays resolvable instead of
+silently vanishing — CI reports (does not block) when this is missed.

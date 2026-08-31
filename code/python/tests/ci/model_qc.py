@@ -14,22 +14,37 @@ repository, so there is no baseline to keep up to date: the comparison is
 always this model against that branch's model, computed the same way on the
 same day with the same dependencies.
 
-Three checks are gates: the model must load, it must grow, and reaction/
+Four checks are gates: the model must load, it must grow, reaction/
 metabolite names in model/yeast-GEM.yml must agree with
-model/reactions.tsv and model/metabolites.tsv (yeast-GEM#379 -- the yml
-is authoritative, the tsvs' name column is a read-only convenience copy,
-and by the time a pull request is reviewed the two are supposed to
-already agree, so any disagreement can only mean this branch introduced
-one). Everything else is reported so that a pull request which makes a
-number worse is visible, without blocking work on findings that were
-already there.
+model/reactions.tsv and model/metabolites.tsv, and the model's reaction/
+metabolite/gene ids must agree with the three tsvs -- with no id that
+was ever deprecated back in active use (yeast-GEM#379 -- the yml is
+authoritative, the tsvs' name column and identifier columns are the
+supplementary annotation record, and by the time a pull request is
+reviewed the two are supposed to already agree, so any disagreement can
+only mean this branch introduced one). Everything else is reported so
+that a pull request which makes a number worse is visible, without
+blocking work on findings that were already there.
 
-Checks that Human-GEM runs and this does not yet: model/annotation-table
-consistency (for the cross-reference identifier columns, not names --
-Human-GEM's own tsvs have no name column), removed-identifiers-not-
-deprecated, and structure (SMILES / InChI) versus formula and charge.
-All three need more of the YAML-based curation layout than exists yet
-(see #379).
+Two more checks port Human-GEM's, adapted to what yeast-GEM's tsvs
+actually carry: identifiers removed since the target branch that were
+not added to data/deprecatedIdentifiers/ (report only -- needs
+--base-model-dir, empty without it), and metabolite structure (SMILES;
+yeast-GEM has no InChI field, so there is no Human-GEM-style
+smiles/InChI cross-check) versus formula and charge (report only).
+
+check_malformed_xrefs reads reactions.tsv/metabolites.tsv/genes.tsv
+directly rather than the model's own (SBML-derived) annotation, per
+edkerk's comment on #379: a curator who edits a tsv cell directly (e.g.
+via the GitHub web UI, never running saveYeastModel/commit_yeast_model)
+should have a bad identifier caught at that file, not only after
+someone next regenerates model/yeast-GEM.xml. sbo is consequently no
+longer checked here -- it is computed, not curator-edited, and does not
+live in any tsv; a wrong SBO value would be a bug in the assignment
+logic, not a curation mistake this check is meant to catch.
+check_xrefs_across_compartments still reads the loaded model and was
+not part of this rework -- not asked for, and arguably worth revisiting
+for the same reason later.
 
 Usage:
     python model_qc.py --model model/yeast-GEM.xml --out data/testResults
@@ -39,10 +54,14 @@ from __future__ import annotations
 import argparse
 import csv
 import re
-from collections import defaultdict
+from collections import Counter, defaultdict
 from pathlib import Path
 
 import cobra
+from rdkit import Chem, RDLogger
+from rdkit.Chem import rdMolDescriptors
+
+RDLogger.DisableLog("rdApp.*")
 
 # Identifier patterns, from identifiers.org, for the namespaces yeast-GEM
 # actually uses. A namespace with no pattern here is not checked rather than
@@ -215,23 +234,190 @@ def _why_malformed(namespace: str, value: str) -> str:
     return f"does not match {expected}"
 
 
-def check_malformed_xrefs(model) -> tuple[int, list]:
-    """Cross-references that do not match their namespace's pattern."""
+_TSV_XREF_COLUMNS = {
+    "reaction": ("bigg.reaction", "ec-code", "kegg.pathway", "kegg.reaction", "metanetx.reaction"),
+    "metabolite": ("bigg.metabolite", "chebi", "kegg.compound", "metanetx.chemical"),
+    "gene": ("uniprot",),
+}
+
+
+def check_malformed_xrefs(model_dir: Path) -> tuple[int, list]:
+    """Cross-references that do not match their namespace's pattern.
+
+    Reads reactions.tsv/metabolites.tsv/genes.tsv directly -- see the
+    module docstring for why this reads the tsvs and not the model.
+    """
     rows = []
-    for kind, entities in (
-        ("metabolite", model.metabolites),
-        ("reaction", model.reactions),
-        ("gene", model.genes),
-    ):
-        for entity in entities:
-            for namespace, pattern in _XREF_PATTERNS.items():
-                for value in _values(entity.annotation, namespace):
-                    text = str(value)
-                    if not re.match(pattern, text):
-                        rows.append((
-                            kind, entity.id, namespace, text,
-                            _why_malformed(namespace, text),
-                        ))
+    tsv_names = {"reaction": "reactions.tsv", "metabolite": "metabolites.tsv", "gene": "genes.tsv"}
+    for kind, columns in _TSV_XREF_COLUMNS.items():
+        tsv_path = model_dir / tsv_names[kind]
+        if not tsv_path.is_file():
+            continue
+        with tsv_path.open(encoding="utf-8", newline="") as fh:
+            for row in csv.DictReader(fh, delimiter="\t"):
+                for column in columns:
+                    if column not in _XREF_PATTERNS:
+                        continue
+                    cell = (row.get(column) or "").strip()
+                    if not cell:
+                        continue
+                    pattern = _XREF_PATTERNS[column]
+                    for value in (v.strip() for v in cell.split(";")):
+                        if value and not re.match(pattern, value):
+                            rows.append((
+                                kind, row["id"], column, value,
+                                _why_malformed(column, value),
+                            ))
+    return len(rows), rows
+
+
+def check_annotation_consistency(model, model_dir: Path) -> tuple[int, list]:
+    """model/yeast-GEM.yml vs. the annotation tsvs, and deprecated
+    identifiers in active use. A gate: an id missing from one side, or an
+    id that was deliberately retired being reused, means a curation step
+    was skipped -- not a pre-existing issue to track a delta on over time.
+
+    Complements check_name_consistency, which only looks at the
+    intersection and checks *names*; this looks at *which ids exist* on
+    each side.
+    """
+    rows = []
+    deprecated_dir = model_dir.parent / "data" / "deprecatedIdentifiers"
+
+    def compare(kind, model_ids, tsv_name, deprecated_name):
+        tsv_path = model_dir / tsv_name
+        if not tsv_path.is_file():
+            return
+        with tsv_path.open(encoding="utf-8", newline="") as fh:
+            tsv_ids = {row["id"] for row in csv.DictReader(fh, delimiter="\t")}
+        deprecated = set()
+        dep_path = deprecated_dir / deprecated_name if deprecated_name else None
+        if dep_path is not None and dep_path.is_file():
+            with dep_path.open(encoding="utf-8", newline="") as fh:
+                deprecated = {row["id"] for row in csv.DictReader(fh, delimiter="\t")}
+        for used in sorted(model_ids & deprecated):
+            rows.append((kind, used, "a deprecated identifier is in active use"))
+        for missing in sorted(model_ids - tsv_ids):
+            rows.append((kind, missing, f"in the model but not in {tsv_name}"))
+        for orphan in sorted(tsv_ids - model_ids):
+            rows.append((kind, orphan, f"in {tsv_name} but not in the model"))
+
+    compare("reaction", {r.id for r in model.reactions},
+            "reactions.tsv", "deprecatedReactions.tsv")
+    compare("metabolite", {m.id for m in model.metabolites},
+            "metabolites.tsv", "deprecatedMetabolites.tsv")
+    compare("gene", {g.id for g in model.genes}, "genes.tsv", None)  # no deprecated list
+
+    return len(rows), rows
+
+
+def check_deprecation_completeness(
+    model, model_dir: Path, base_model_dir: Path | None
+) -> tuple[int, list]:
+    """Ids present in the target branch but missing from this model must
+    appear in the matching data/deprecatedIdentifiers/ file, so a removed
+    identifier stays resolvable instead of silently vanishing. Report
+    only: needs base_model_dir (the target branch's own model/ checkout);
+    empty without it -- e.g. run locally, or the first comparison for a
+    branch.
+    """
+    rows = []
+    if base_model_dir is None or not base_model_dir.is_dir():
+        return 0, rows
+
+    deprecated_dir = model_dir.parent / "data" / "deprecatedIdentifiers"
+    specs = [
+        ("reaction", {r.id for r in model.reactions},
+         "reactions.tsv", "deprecatedReactions.tsv"),
+        ("metabolite", {m.id for m in model.metabolites},
+         "metabolites.tsv", "deprecatedMetabolites.tsv"),
+    ]
+    for kind, current_ids, tsv_name, dep_name in specs:
+        base_path = base_model_dir / tsv_name
+        if not base_path.is_file():
+            continue
+        with base_path.open(encoding="utf-8", newline="") as fh:
+            base_ids = {row["id"] for row in csv.DictReader(fh, delimiter="\t")}
+        deprecated = set()
+        dep_path = deprecated_dir / dep_name
+        if dep_path.is_file():
+            with dep_path.open(encoding="utf-8", newline="") as fh:
+                deprecated = {row["id"] for row in csv.DictReader(fh, delimiter="\t")}
+        removed = base_ids - current_ids
+        for missing in sorted(removed - deprecated):
+            rows.append((kind, missing, f"removed from the model but not listed in {dep_name}"))
+
+    return len(rows), rows
+
+
+_ELEM_RE = re.compile(r"([A-Z][a-z]?)(\d*)")
+
+
+def _parse_formula(formula: str) -> Counter:
+    """Element -> count for a Hill formula string (charge sign ignored)."""
+    counts: Counter = Counter()
+    for symbol, number in _ELEM_RE.findall((formula or "").strip().rstrip("+-")):
+        if symbol:
+            counts[symbol] += int(number) if number else 1
+    return counts
+
+
+def _classify_structure(model_formula, model_charge, smiles: str):
+    """Relate a stored SMILES to the curated formula/charge (ported from
+    Human-GEM's structureConsistencyTest.py, minus the InChI cross-check --
+    yeast-GEM has no InChI field). Returns (category, rdkit_formula,
+    rdkit_charge)."""
+    if not smiles:
+        return "no_structure", "", ""
+    mol = Chem.MolFromSmiles(smiles)
+    if mol is None:
+        return "unparseable", "", ""
+    # generic: an R group (dummy atom) or an "R" in the model formula means
+    # there is no concrete structure to check against.
+    generic = "*" in smiles or "R" in (model_formula or "")
+    rd_formula = rdMolDescriptors.CalcMolFormula(mol)
+    rd_charge = Chem.GetFormalCharge(mol)
+    m_elements, r_elements = _parse_formula(model_formula), _parse_formula(rd_formula)
+    m_heavy = {k: v for k, v in m_elements.items() if k != "H"}
+    r_heavy = {k: v for k, v in r_elements.items() if k != "H"}
+    m_charge = int(model_charge) if model_charge is not None else None
+    if generic:
+        return "generic", rd_formula, str(rd_charge)
+    if m_heavy != r_heavy:
+        return "formula_error", rd_formula, str(rd_charge)
+    if m_elements == r_elements and m_charge == rd_charge:
+        return "ok", rd_formula, str(rd_charge)
+    return "protonation", rd_formula, str(rd_charge)
+
+
+_STRUCTURE_INCONSISTENT = {"protonation", "formula_error"}
+
+
+def check_structure_consistency(model, model_dir: Path) -> tuple[int, list]:
+    """Metabolite formula/charge (model/yeast-GEM.yml) vs. the SMILES
+    stored in metabolites.tsv. Report only -- see _classify_structure for
+    the categories.
+    """
+    tsv_path = model_dir / "metabolites.tsv"
+    if not tsv_path.is_file():
+        return 0, []
+    with tsv_path.open(encoding="utf-8", newline="") as fh:
+        smiles_by_id = {
+            row["id"]: (row.get("smiles") or "").strip()
+            for row in csv.DictReader(fh, delimiter="\t")
+        }
+
+    rows = []
+    for met in model.metabolites:
+        category, rd_formula, rd_charge = _classify_structure(
+            met.formula, met.charge, smiles_by_id.get(met.id, "")
+        )
+        if category in _STRUCTURE_INCONSISTENT:
+            rows.append((
+                met.id, met.name or "", category,
+                met.formula or "", "" if met.charge is None else str(int(met.charge)),
+                rd_formula, rd_charge, smiles_by_id.get(met.id, ""),
+            ))
     return len(rows), rows
 
 
@@ -441,10 +627,15 @@ _CHECKS = [
     ("missing_charge", "Metabolites missing charge", check_missing_charge),
     ("duplicate_reactions", "Exact-duplicate reaction groups",
      check_duplicate_reactions),
-    ("malformed_xrefs", "Malformed cross-references", check_malformed_xrefs),
     ("xrefs_across_compartments", "Cross-refs inconsistent across compartments",
      check_xrefs_across_compartments),
 ]
+# malformed_xrefs, annotation_consistency, deprecation_completeness and
+# structure_inconsistent are not in _CHECKS: each needs model_dir (and
+# deprecation_completeness also base_model_dir), not just model, so they
+# are called directly in run() instead of through the uniform (model,)
+# signature -- the same reason check_name_consistency and check_macaw
+# already sit outside this list.
 
 _HEADERS = {
     "orphan_metabolites": ("metabolite", "name"),
@@ -457,6 +648,10 @@ _HEADERS = {
     "mass_imbalanced": ("reaction", "name", "imbalance"),
     "charge_imbalanced": ("reaction", "name", "charge"),
     "name_mismatches": ("kind", "id", "model name", "tsv name"),
+    "annotation_consistency": ("kind", "id", "issue"),
+    "deprecation_completeness": ("kind", "id", "issue"),
+    "structure_inconsistent": ("metabolite", "name", "issue", "model formula",
+                               "model charge", "smiles formula", "smiles charge", "smiles"),
 }
 
 
@@ -496,12 +691,13 @@ def _write_findings(path: Path, sections: list[tuple[str, tuple, list]]) -> None
     path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
-def run(model_path: Path, out_dir: Path) -> dict:
+def run(model_path: Path, out_dir: Path, base_model_dir: Path | None = None) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     if model_path.suffix in {".yml", ".yaml"}:
         model = cobra.io.load_yaml_model(str(model_path))
     else:
         model = cobra.io.read_sbml_model(str(model_path))
+    model_dir = model_path.parent
 
     metrics: dict[str, float] = {
         "n_reactions": len(model.reactions),
@@ -526,7 +722,7 @@ def run(model_path: Path, out_dir: Path) -> dict:
          charge_rows)
     )
 
-    name_count, name_rows = check_name_consistency(model, model_path.parent)
+    name_count, name_rows = check_name_consistency(model, model_dir)
     metrics["name_mismatches"] = name_count
     # Label must match build_qc_report.py's _ANNOTATION_ROWS entry for this
     # key exactly -- the PR comment links into this file's heading by
@@ -534,6 +730,33 @@ def run(model_path: Path, out_dir: Path) -> dict:
     sections.append((
         "Reaction/metabolite names disagreeing with the tsvs",
         _HEADERS["name_mismatches"], name_rows,
+    ))
+
+    xrefs_count, xrefs_rows = check_malformed_xrefs(model_dir)
+    metrics["malformed_xrefs"] = xrefs_count
+    sections.append(
+        ("Malformed cross-references", _HEADERS["malformed_xrefs"], xrefs_rows)
+    )
+
+    consistency_count, consistency_rows = check_annotation_consistency(model, model_dir)
+    metrics["annotation_consistency"] = consistency_count
+    sections.append((
+        "Model/annotation-table consistency",
+        _HEADERS["annotation_consistency"], consistency_rows,
+    ))
+
+    dep_count, dep_rows = check_deprecation_completeness(model, model_dir, base_model_dir)
+    metrics["deprecation_completeness"] = dep_count
+    sections.append((
+        "Removed identifiers not added to the deprecated lists",
+        _HEADERS["deprecation_completeness"], dep_rows,
+    ))
+
+    structure_count, structure_rows = check_structure_consistency(model, model_dir)
+    metrics["structure_inconsistent"] = structure_count
+    sections.append((
+        "Metabolite structure (SMILES) disagreeing with formula/charge",
+        _HEADERS["structure_inconsistent"], structure_rows,
     ))
 
     macaw_metrics, macaw_sections = check_macaw(model)
@@ -552,9 +775,12 @@ def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--model", type=Path, default=Path("model/yeast-GEM.xml"))
     parser.add_argument("--out", type=Path, default=Path("data/testResults"))
+    parser.add_argument("--base-model-dir", type=Path, default=None,
+                         help="target branch's own model/ checkout, for "
+                              "deprecation-completeness; omit to skip that check")
     args = parser.parse_args()
 
-    metrics = run(args.model, args.out)
+    metrics = run(args.model, args.out, args.base_model_dir)
     width = max(len(k) for k in metrics)
     for key in sorted(metrics):
         print(f"  {key:<{width}}  {metrics[key]:g}")
@@ -566,6 +792,10 @@ def main() -> int:
     if metrics.get("name_mismatches", 0) > 0:
         print(f"\nGATE FAILED: {metrics['name_mismatches']:g} reaction/metabolite "
               "name(s) disagree between model/yeast-GEM.yml and the tsvs.")
+        failed = True
+    if metrics.get("annotation_consistency", 0) > 0:
+        print(f"\nGATE FAILED: {metrics['annotation_consistency']:g} "
+              "model/annotation-table inconsistenc(y/ies) -- see qc_findings.md.")
         failed = True
     return 1 if failed else 0
 

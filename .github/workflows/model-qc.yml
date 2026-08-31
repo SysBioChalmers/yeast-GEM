@@ -48,18 +48,26 @@ jobs:
       # MACAW comes from the upstream repository, not PyPI: that is the
       # source Human-GEM uses, and the similarly-named PyPI package is a
       # different distribution. numpy is pinned in the same resolve because
-      # MACAW requires exactly 1.26.4.
+      # MACAW requires exactly 1.26.4. rdkit (structure-consistency check)
+      # is a hard dependency, unlike MACAW -- it ships a stable PyPI wheel,
+      # so there is no "unavailable" case to fall back on.
       - name: Install dependencies
         run: |
-          pip install cobra numpy==1.26.4
+          pip install cobra numpy==1.26.4 rdkit
           pip install "git+https://github.com/Devlin-Moyer/macaw.git@main" \
             || echo "::warning::MACAW is unavailable; its rows will show as not run"
 
+      # --base-model-dir only on the pull-request side: deprecation-
+      # completeness asks "what did this branch remove since the target
+      # branch", which needs the target branch's own tsvs as the
+      # comparison point. Measuring the target branch against itself
+      # would just be empty, so it is left off that call below.
       - name: Measure the pull request
         continue-on-error: true
         run: |
           python code/python/tests/ci/model_qc.py \
-            --model model/yeast-GEM.xml --out results/head
+            --model model/yeast-GEM.xml --out results/head \
+            --base-model-dir base-checkout/model
 
       - name: Measure the target branch
         continue-on-error: true
