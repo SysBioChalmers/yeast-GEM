@@ -11,9 +11,15 @@ Icon rule, per row:
 
 * growth -- :white_check_mark: if the model grows, :x: if it cannot. This
   is a gate and blocks the merge.
-* every count -- :x: if it rose against the target branch (a regression),
-  :warning: if it is non-zero but no worse (a pre-existing finding, not
-  blocking), :white_check_mark: if it is zero.
+* name_mismatches (a "gate_count") -- :white_check_mark: if zero, :x: if
+  non-zero. Also a gate: by the time a pull request is reviewed, the yml
+  and the tsvs are supposed to already agree, so any non-zero count can
+  only mean this branch introduced one -- unlike an ordinary count, a
+  pre-existing non-zero value here is not a legitimate "no worse than
+  before" state to warn about instead of blocking.
+* every other count -- :x: if it rose against the target branch (a
+  regression), :warning: if it is non-zero but no worse (a pre-existing
+  finding, not blocking), :white_check_mark: if it is zero.
 * :hourglass_flowing_sand: -- the group is still being computed on this run.
 
 One exception: the model-size line (reaction/metabolite/gene counts) at
@@ -21,7 +27,8 @@ the top of the comment carries no icon at all. Unlike every other count
 here, a curation pull request is expected to change it, so treating a
 rise like a regression would flag normal work.
 
-Only the growth gate fails the build. Everything else is reported.
+Only the gates (growth, name_mismatches) fail the build. Everything else
+is reported.
 
 Usage:
     python build_qc_report.py --current data/testResults --base /tmp/base \\
@@ -68,7 +75,16 @@ _ANNOTATION_ROWS = [
     ("malformed_xrefs", "Malformed cross-references", "count"),
     ("xrefs_across_compartments", "Cross-refs inconsistent across compartments",
      "count"),
+    ("name_mismatches", "Reaction/metabolite names disagreeing with the tsvs",
+     "gate_count"),
 ]
+
+# (metric key -> the reason clause used in the "Merge blocked" verdict)
+_FATAL_MESSAGES = {
+    "growth": "the model cannot grow",
+    "name_mismatches": "reaction/metabolite names disagree between the model "
+                        "and the tsvs",
+}
 
 
 # (metric key, comment label, direction, tolerance)
@@ -155,6 +171,19 @@ def _icon(value: float, base: float | None, kind: str):
         text = f"{change:+.3g}" if abs(change) > 1e-9 else "0"
         return text, icon, False, not grows
 
+    if kind == "gate_count":
+        # Like "count" for the delta/icon shown, but any non-zero value is
+        # fatal outright -- not just a rise vs. base -- because by the time
+        # this exists the two sides being compared are supposed to already
+        # agree, so a non-zero count can only mean this branch broke it.
+        is_fatal = value > 0
+        icon = ":x:" if is_fatal else ":white_check_mark:"
+        if base is None:
+            return "new", icon, False, is_fatal
+        change = int(value) - int(base)
+        text = f"+{change}" if change > 0 else ("0" if change == 0 else str(change))
+        return text, icon, change > 0, is_fatal
+
     if base is None:
         return "new", (":warning:" if value else ":white_check_mark:"), False, False
     change = int(value) - int(base)
@@ -194,7 +223,7 @@ def _render_size(current, base, base_ref, running) -> str:
 
 
 def _render_rows(rows, current, base, url_base, detail_base, running):
-    lines, regressions, warnings, pending, skipped, fatal = [], 0, 0, 0, 0, False
+    lines, regressions, warnings, pending, skipped, fatal_keys = [], 0, 0, 0, 0, []
     for key, label, kind in rows:
         name = (
             f"[{label}]({url_base}/README.md#{_slug(label)})"
@@ -218,13 +247,14 @@ def _render_rows(rows, current, base, url_base, detail_base, running):
         # A non-zero count links to its section in the findings file,
         # which is addressed by the same slug as the README heading, so
         # the link follows the label automatically.
-        if detail_base and kind == "count" and value:
+        if detail_base and kind in ("count", "gate_count") and value:
             text = f"[{text}]({detail_base}/qc_findings.md#{_slug(label)})"
         lines.append(f"| {name} | {text} | {delta} | {icon} |")
         regressions += regression
         warnings += icon == ":warning:"
-        fatal = fatal or row_fatal
-    return lines, regressions, warnings, pending, skipped, fatal
+        if row_fatal:
+            fatal_keys.append(key)
+    return lines, regressions, warnings, pending, skipped, fatal_keys
 
 
 def _fmt_delta(change: float) -> str:
@@ -384,10 +414,13 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
          "non-blocking report._",
          _MODEL_ROWS),
         ("Mass/charge balance and MACAW", "", _BALANCE_ROWS),
-        ("Annotations", "", _ANNOTATION_ROWS),
+        ("Annotations",
+         "_Reaction/metabolite name agreement with the tsvs is also a "
+         "gate; every other row is a non-blocking report._",
+         _ANNOTATION_ROWS),
     ]
 
-    body, regressions, warnings, pending, skipped, fatal = [], 0, 0, 0, 0, False
+    body, regressions, warnings, pending, skipped, fatal_keys = [], 0, 0, 0, 0, []
     header = f"| Check | Result | &Delta; vs `{base_ref}` | |"
     separator = "| --- | ---: | ---: | :---: |"
     for title, note, rows in groups:
@@ -398,7 +431,7 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         warnings += warn
         pending += pend
         skipped += skip
-        fatal = fatal or fat
+        fatal_keys += fat
         body += [f"### {title}"]
         if note:
             body += [note]
@@ -439,11 +472,11 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         *_render_memote(memote_dir, memote_base_dir, base_ref, running),
     ]
 
-    if fatal:
-        verdict = (
-            ":x: **Merge blocked: the model cannot grow.** "
-            "See the Model checks table."
+    if fatal_keys:
+        reasons = " and ".join(
+            _FATAL_MESSAGES.get(key, key) for key in dict.fromkeys(fatal_keys)
         )
+        verdict = f":x: **Merge blocked: {reasons}.** See the table(s) above."
     elif regressions:
         extra = f" ({pending} check(s) still running)" if pending else ""
         verdict = (

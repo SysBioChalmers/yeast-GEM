@@ -199,6 +199,15 @@ different protonation states or a zwitterion. The finding is that the name and
 the identifier disagree about whether they are the same species: either the
 names should differ, or the annotations should match.
 
+#### Reaction/metabolite names disagreeing with the tsvs
+A **gate** — non-zero blocks the merge, not just a rise vs. the target branch.
+`model/yeast-GEM.yml` is authoritative for reaction and metabolite names;
+`model/reactions.tsv` and `model/metabolites.tsv` carry a read-only `name`
+column so those files are readable without cross-referencing the yml
+(yeast-GEM#379). This flags any id where the two disagree. Fix it by updating
+the tsv row's `name` to match the yml, never the other way around — renaming
+something is done in the yml, the same as any other model edit.
+
 ### Validation metrics
 
 Predictions against measured data. These are continuous rather than counts, so

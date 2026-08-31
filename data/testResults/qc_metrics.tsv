@@ -11,6 +11,7 @@ missing_formula	16
 n_genes	1143
 n_metabolites	2748
 n_reactions	4105
+name_mismatches	0
 orphan_metabolites	0
 unused_genes	0
 xrefs_across_compartments	18
