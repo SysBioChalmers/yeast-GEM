@@ -113,7 +113,7 @@ function R2 = growthOld(model_origin,writeOutput)
 funcDir = fileparts(mfilename('fullpath'));
 
 if nargin<1
-    model_origin = loadYeastModel;
+    model_origin = loadYeastYaml;
 end
 if nargin<2
     writeOutput = false;

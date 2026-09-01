@@ -42,7 +42,7 @@ else
     end
 end
 
-model=loadYeastModel('_earlierModel.yml');
+model=loadYeastYaml('_earlierModel.yml');
 delete '_earlierModel.yml'
 if verbose
     disp(['Loaded model version: ''' regexprep(model.id,'yeastGEM_v?','') ''''])

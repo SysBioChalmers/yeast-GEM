@@ -10,7 +10,7 @@ funcDir = dbstack('-completenames');
 funcDir = regexprep(funcDir(1).file,[funcDir(1).name '\.m'],'');
 
 if nargin<1
-    model_origin = loadYeastModel;
+    model_origin = loadYeastYaml;
 end
 if nargin<2
     writeOutput = false;

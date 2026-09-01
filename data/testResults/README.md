@@ -193,7 +193,7 @@ Reads `model/reactions.tsv`, `metabolites.tsv` and `genes.tsv` directly, not
 the exported model (yeast-GEM#379). A curator who edits a tsv cell by hand —
 e.g. via the GitHub web UI, without ever regenerating `model/yeast-GEM.xml` —
 gets caught at the file they actually edited, not only after someone next
-runs `saveYeastModel`/`commit_yeast_model`. `sbo` is consequently not checked
+runs `saveYeastYaml`/`save_yeast_yaml`. `sbo` is consequently not checked
 here any more: it is computed, not curator-edited, and does not live in any
 tsv.
 

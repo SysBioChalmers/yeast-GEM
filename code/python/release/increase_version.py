@@ -9,16 +9,16 @@ those tests feed -- ``README.md``, ``data/testResults/README.md``,
 
 What this does **not** do: write ``model/yeast-GEM.xml``, ``.txt``,
 ``.xlsx`` or ``.mat``. Those four are RAVEN's ``exportForGit`` output,
-derived *from* ``model/yeast-GEM.yml`` -- not from anything Python
-writes -- and there is no Python writer for RAVEN's ``!!omap`` YAML, its
-tab-separated ``.txt``, or its multi-sheet ``.xlsx`` layout. Building one
-was explicitly out of scope here: getting a binary/structured export
-format wrong is a much more expensive mistake than getting a markdown
-table wrong, and there is no way to verify a hand-rolled writer's output
-against RAVEN in this environment. This script stamps the three metadata
-lines RAVEN's export reads (``id``, ``version``, ``date``) and stops; a
-MATLAB step downstream runs ``exportForGit`` against the now-stamped
-``.yml`` to produce the four derived files. See ``.github/workflows/release.yml``.
+derived *from* ``model/yeast-GEM.yml``. ``raven_toolbox.io.write_yaml_model``
+can write the ``.yml`` itself now (used by ``yeastgem.save_yeast_yaml``),
+but ``_stamp_yaml`` below still edits the file's text directly rather than
+loading the model and rewriting it whole: a full rewrite would touch
+every line's formatting incidentally, while a release commit should only
+ever change the three metadata lines it is actually stamping. There is
+still no Python writer for RAVEN's tab-separated ``.txt`` or multi-sheet
+``.xlsx`` layout -- those, and ``.xml``, stay a MATLAB step downstream,
+which runs ``exportForGit`` against the now-stamped ``.yml`` to produce
+the four derived files. See ``.github/workflows/release.yml``.
 
 Two subcommands:
 
@@ -50,8 +50,8 @@ import matplotlib
 
 matplotlib.use("Agg")
 
-from yeastgem import conditions, model_tests
-from yeastgem.io import REPO_PATH, read_yeast_model
+from yeastgem import conditions, load_yeast_yaml, model_tests
+from yeastgem.io import REPO_PATH
 
 _VERSION_TXT = REPO_PATH / "version.txt"
 _HISTORY_MD = REPO_PATH / "history.md"
@@ -328,7 +328,7 @@ def _check_only_expected_changed() -> None:
 
 def cmd_build(args: argparse.Namespace) -> int:
     print("Loading model")
-    model = read_yeast_model()
+    model = load_yeast_yaml()
     model.id = f"yeastGEM_v{args.version}"
 
     print("Stamping model/yeast-GEM.yml")

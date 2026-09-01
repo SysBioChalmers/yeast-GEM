@@ -14,7 +14,7 @@ function [accuracy,tp,tn,fn,fp] = essentialGenes(model,writeOutput)
 
 if nargin<1 | isempty(model)
     cd ..
-    model = loadYeastModel;
+    model = loadYeastYaml;
     cd modelTests
 end
 if nargin<2

@@ -31,8 +31,9 @@ from pathlib import Path
 import cobra
 import memote.suite.api as api
 from memote.suite.reporting import ReportConfiguration, SnapshotReport
+from raven_toolbox.io import read_yaml_model
 
-from yeastgem import read_yeast_model
+from yeastgem import load_yeast_yaml
 
 # The tests that dominate MEMOTE runtime on a genome-scale model:
 #  * consistency: MILP / flux-variability / per-metabolite optimisation over
@@ -197,9 +198,12 @@ def main() -> int:
     model = (
         cobra.io.read_sbml_model(str(args.model))
         if args.model is not None and args.model.suffix == ".xml"
-        else cobra.io.load_yaml_model(str(args.model))
+        # raven_toolbox.io.read_yaml_model, not cobra.io.load_yaml_model:
+        # the latter silently drops RAVEN-only fields (deltaG,
+        # confidence_score, notes, inchis, model.id/name/version).
+        else read_yaml_model(str(args.model))
         if args.model is not None
-        else read_yeast_model()
+        else load_yeast_yaml()
     )
 
     scored, config = snapshot(model)

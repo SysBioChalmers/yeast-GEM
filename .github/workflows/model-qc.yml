@@ -66,14 +66,14 @@ jobs:
         continue-on-error: true
         run: |
           python code/python/tests/ci/model_qc.py \
-            --model model/yeast-GEM.xml --out results/head \
+            --model model/yeast-GEM.yml --out results/head \
             --base-model-dir base-checkout/model
 
       - name: Measure the target branch
         continue-on-error: true
         run: |
           python code/python/tests/ci/model_qc.py \
-            --model base-checkout/model/yeast-GEM.xml --out results/base
+            --model base-checkout/model/yeast-GEM.yml --out results/base
 
       - uses: actions/upload-artifact@v7
         if: ${{ !cancelled() }}
@@ -131,7 +131,7 @@ jobs:
         continue-on-error: true
         run: |
           python code/python/tests/ci/check_metrics.py \
-            --model base-checkout/model/yeast-GEM.xml \
+            --model base-checkout/model/yeast-GEM.yml \
             --emit results/base/validation_metrics.tsv
 
       - uses: actions/upload-artifact@v7

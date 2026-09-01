@@ -15,14 +15,19 @@ MetaNetX, EC numbers, UniProt): those live in the three TSV files below
 instead, kept separate so the yml stays lean, diffable, and reviewable
 directly on GitHub.
 
-`loadYeastModel.m` merges the TSV annotation back in automatically after
-reading the yml (via `annotateGEM.m`), so day-to-day curation in MATLAB sees
-exactly the same fully-annotated model as before this split — the merge is
-transparent. `saveYeastModel.m` writes `model/yeast-GEM.yml` from a stripped
-copy (so it stays lean) and writes `.xml`/`.txt`/`.xlsx`/`.mat` from the full,
-unstripped model (so those keep carrying every identifier, exactly as
-before). Python's `code/python/yeastgem` reads/writes `.xml` directly and is
-unaffected by any of this.
+`loadYeastYaml.m`/`load_yeast_yaml` (Python: `code/python/yeastgem`) merges
+the TSV annotation back in automatically after reading the yml (via
+`annotateGEM.m`/`annotate_gem`), so day-to-day curation sees exactly the
+same fully-annotated model as before this split — the merge is
+transparent. `saveYeastYaml.m`/`save_yeast_yaml` applies the canonical
+medium, SBO terms and aerobic/anaerobic growth checks, then writes
+`model/yeast-GEM.yml` from a stripped copy (so it stays lean) — this is
+the function every curation script should call after editing a model.
+For a local `.xml`/`.txt`/`.xlsx`/`.mat` build (MATLAB) or `.xml`/`.txt`
+(Python) from the full, unstripped model, use
+`commitYeastModel.m`/`commit_yeast_model` separately — most curation
+never needs it, since routine PRs only change `model/yeast-GEM.yml` and
+the annotation tsvs.
 
 ## Reaction, Metabolite, and Gene Annotation
 

@@ -31,10 +31,11 @@ from pathlib import Path
 
 import cobra
 import matplotlib
+from raven_toolbox.io import read_yaml_model
 
 matplotlib.use("Agg")
 
-from yeastgem import conditions, model_tests, read_yeast_model
+from yeastgem import conditions, load_yeast_yaml, model_tests
 from yeastgem.io import REPO_PATH
 
 _DEFAULT_RESULTS = REPO_PATH / "data" / "testResults" / "README.md"
@@ -365,9 +366,11 @@ def _select_solver() -> str:
 
 def _load(path: Path | None):
     if path is None:
-        return read_yeast_model()
+        return load_yeast_yaml()
     if path.suffix in {".yml", ".yaml"}:
-        return cobra.io.load_yaml_model(str(path))
+        # raven_toolbox.io.read_yaml_model, not cobra.io.load_yaml_model:
+        # the latter silently drops RAVEN-only fields.
+        return read_yaml_model(str(path))
     return cobra.io.read_sbml_model(str(path))
 
 

@@ -12,7 +12,7 @@ from dataclasses import dataclass
 import cobra
 from cobra.flux_analysis import single_gene_deletion
 
-from yeastgem.io import REPO_PATH, read_yeast_model
+from yeastgem.io import REPO_PATH, load_yeast_yaml
 
 # Kennedy-medium exchange-reaction bound presets, copied from the
 # ``complete_Y7`` local function in essentialGenes.m.
@@ -62,7 +62,7 @@ def essential_genes(
     Parameters
     ----------
     model
-        Model to test. Defaults to a fresh :func:`read_yeast_model` load.
+        Model to test. Defaults to a fresh :func:`load_yeast_yaml` load.
     write_output
         When True, save a sorted per-gene table to
         ``data/testResults/essentialGenes.tsv``.
@@ -75,7 +75,7 @@ def essential_genes(
         verified the combination on your platform.
     """
     if model is None:
-        model = read_yeast_model()
+        model = load_yeast_yaml()
     model = _apply_complete_Y7(model.copy())
 
     inviable_orfs = _load_orfs("inviable_orfs.txt")
