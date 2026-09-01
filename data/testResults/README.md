@@ -398,12 +398,12 @@ so a gene changing category is a one-line diff. In the list form the gene moved
 between sections, which showed as two edits far apart in the file and made a
 single reclassification easy to miss.
 
-## 5. Not yet implemented
+## 5. Not part of this report
 
-A heavier annotation-verification check: cross-checking metabolite/reaction
-identifiers against MetaNetX's structure-matched reference tables (SMILES →
-InChIKey → a MetaNetX id → every other database's id for the same structure),
+`code/python/annotation/verify_annotations.py` cross-checks metabolite/
+reaction identifiers against MetaNetX's structure-matched reference tables,
 classifying each stored identifier as confirmed/wrong/missing/drift, with a
-`--fix` mode for the safe corrections. Heavier than the checks above (needs a
-cached MetaNetX download and RDKit, and a `--fix` mode that writes back to the
-tsvs) and not part of #379 — left for a follow-up.
+`--fix` mode for the safe corrections. It is not part of `model_qc.py` or
+this report: it needs a ~200MB one-time MetaNetX download, so it is a tool a
+curator runs on demand rather than a pull-request gate. See its own
+docstring, or `.github/CONTRIBUTING.md`.
