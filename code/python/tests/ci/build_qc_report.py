@@ -11,12 +11,13 @@ Icon rule, per row:
 
 * growth -- :white_check_mark: if the model grows, :x: if it cannot. This
   is a gate and blocks the merge.
-* name_mismatches (a "gate_count") -- :white_check_mark: if zero, :x: if
-  non-zero. Also a gate: by the time a pull request is reviewed, the yml
-  and the tsvs are supposed to already agree, so any non-zero count can
-  only mean this branch introduced one -- unlike an ordinary count, a
-  pre-existing non-zero value here is not a legitimate "no worse than
-  before" state to warn about instead of blocking.
+* name_mismatches and annotation_consistency (both a "gate_count") --
+  :white_check_mark: if zero, :x: if non-zero. Also gates: by the time a
+  pull request is reviewed, the yml and the tsvs are supposed to already
+  agree, so any non-zero count can only mean this branch introduced one
+  -- unlike an ordinary count, a pre-existing non-zero value here is not
+  a legitimate "no worse than before" state to warn about instead of
+  blocking.
 * every other count -- :x: if it rose against the target branch (a
   regression), :warning: if it is non-zero but no worse (a pre-existing
   finding, not blocking), :white_check_mark: if it is zero.
@@ -27,8 +28,8 @@ the top of the comment carries no icon at all. Unlike every other count
 here, a curation pull request is expected to change it, so treating a
 rise like a regression would flag normal work.
 
-Only the gates (growth, name_mismatches) fail the build. Everything else
-is reported.
+Only the gates (growth, name_mismatches, annotation_consistency) fail
+the build. Everything else is reported.
 
 Usage:
     python build_qc_report.py --current data/testResults --base /tmp/base \\
@@ -77,6 +78,11 @@ _ANNOTATION_ROWS = [
      "count"),
     ("name_mismatches", "Reaction/metabolite names disagreeing with the tsvs",
      "gate_count"),
+    ("annotation_consistency", "Model/annotation-table consistency", "gate_count"),
+    ("deprecation_completeness", "Removed identifiers not added to the deprecated lists",
+     "count"),
+    ("structure_inconsistent", "Metabolite structure (SMILES) vs. formula/charge",
+     "count"),
 ]
 
 # (metric key -> the reason clause used in the "Merge blocked" verdict)
@@ -84,6 +90,8 @@ _FATAL_MESSAGES = {
     "growth": "the model cannot grow",
     "name_mismatches": "reaction/metabolite names disagree between the model "
                         "and the tsvs",
+    "annotation_consistency": "the model and its annotation tables disagree, "
+                               "or a deprecated identifier is in active use",
 }
 
 
@@ -415,8 +423,9 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
          _MODEL_ROWS),
         ("Mass/charge balance and MACAW", "", _BALANCE_ROWS),
         ("Annotations",
-         "_Reaction/metabolite name agreement with the tsvs is also a "
-         "gate; every other row is a non-blocking report._",
+         "_Reaction/metabolite name agreement with the tsvs, and model/"
+         "annotation-table consistency, are also gates; every other row "
+         "is a non-blocking report._",
          _ANNOTATION_ROWS),
     ]
 
