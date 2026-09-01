@@ -182,11 +182,12 @@ def cmd_comment(args) -> int:
 def cmd_gate(args) -> int:
     """Fail the build only on the conditions that block a merge.
 
-    Two gates: growth, and reaction/metabolite name agreement between
-    model/yeast-GEM.yml and the annotation tsvs (reactions.tsv /
-    metabolites.tsv -- yeast-GEM#379). Everything else in the report is a
-    finding to review, not a reason to stop, so this deliberately reads
-    specific values rather than looking at the report as a whole.
+    Three gates: growth, reaction/metabolite name agreement between
+    model/yeast-GEM.yml and the annotation tsvs, and id agreement between
+    the model and the tsvs -- with no deprecated id in active use
+    (yeast-GEM#379). Everything else in the report is a finding to
+    review, not a reason to stop, so this deliberately reads specific
+    values rather than looking at the report as a whole.
     """
     metrics = read_metrics(args.metrics)
     if not metrics:
@@ -215,6 +216,14 @@ def cmd_gate(args) -> int:
         failed = True
     else:
         print(f"Names: model and tsvs agree ({name_mismatches:g} mismatches)")
+
+    annotation_consistency = metrics.get("annotation_consistency", 0)
+    if annotation_consistency > 0:
+        print(f"::error::{annotation_consistency:g} model/annotation-table "
+              "inconsistenc(y/ies) -- see qc_findings.md")
+        failed = True
+    else:
+        print(f"Annotation tables: model and tsvs agree ({annotation_consistency:g} issues)")
 
     return 1 if failed else 0
 
