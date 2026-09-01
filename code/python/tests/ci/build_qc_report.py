@@ -33,8 +33,8 @@ separately (_render_memote, _render_annotation) rather than through the
 icon rule above: both are compared against the target branch's own
 last-committed result instead of a fresh run on it (each has its own
 reason -- MEMOTE's cost, MetaNetX's download), and neither counts a rise
-as a regression, since annotation `wrong`/`conflict` findings need a human
-decision and MetaNetX's own reference data can move them on its own.
+as a regression, since annotation `wrong` findings need a human decision
+and MetaNetX's own reference data can move them on its own.
 
 Only the gates (growth, name_mismatches, annotation_consistency) fail
 the build. Everything else is reported.
@@ -418,14 +418,15 @@ def _render_memote(current: Path | None, base: Path | None, base_ref: str,
     return lines
 
 
-# (metrics key, comment label). "wrong"/"conflict" split into isolated vs.
-# recurring the same way the report does; "drift"/"missing" are the two
-# --fix can apply safely, kept for visibility rather than because a rise
-# means anything is broken.
+# (metrics key, comment label). "wrong" splits into isolated vs. recurring
+# the same way the report does; "drift"/"missing" are the two --fix can
+# apply safely, kept for visibility rather than because a rise means
+# anything is broken. Cross-annotation conflicts are a separate, occasional
+# check (verify_annotation_consistency.py) that does not run in CI, so
+# there is no annotation_conflict row here.
 _ANNOTATION_SUMMARY_ROWS = [
     ("annotation_wrong_isolated", "`wrong`, isolated"),
     ("annotation_wrong_recurring", "`wrong`, recurring"),
-    ("annotation_conflict", "`conflict`"),
     ("annotation_drift", "`drift` (safe to `--fix`)"),
     ("annotation_missing", "`missing` (safe to `--fix`)"),
 ]
@@ -452,10 +453,9 @@ def _render_annotation(current_dir: Path | None, base_dir: Path | None,
     own last-committed summary rather than a fresh run on it -- the
     MetaNetX download makes a second run costly for little benefit -- and,
     unlike the other QC counts, a rise here is never treated as a
-    regression: "wrong" and "conflict" need a human decision, not a
-    pass/fail rule (see the tool's own docstring), and MetaNetX's own
-    reference data can move these counts on its own, independent of
-    anything this pull request did.
+    regression: "wrong" needs a human decision, not a pass/fail rule (see
+    the tool's own docstring), and MetaNetX's own reference data can move
+    this count on its own, independent of anything this pull request did.
     """
     if running:
         return ["_running_ &middot; :hourglass_flowing_sand:", ""]
@@ -560,9 +560,12 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         "_Metabolite/reaction identifiers cross-checked against MetaNetX's "
         "structure-matched reference tables. Compared against "
         f"`{base_ref}`'s own last-committed summary, not a fresh run on it. "
-        "Not a gate, and a rise here is not scored as a regression: `wrong`/"
-        "`conflict` need a human decision, and MetaNetX's own reference data "
-        "moving can shift these counts independent of this pull request._",
+        "Not a gate, and a rise here is not scored as a regression: `wrong` "
+        "needs a human decision, and MetaNetX's own reference data moving "
+        "can shift this count independent of this pull request. A separate, "
+        "occasional check of whether an entity's own columns agree with "
+        "each other (`verify_annotation_consistency.py`) does not run "
+        "here -- see `data/testResults/README.md`._",
         "",
         *_render_annotation(annotation_dir, annotation_base_dir, base_ref,
                             running, detail_base),
