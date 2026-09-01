@@ -296,7 +296,7 @@ def _render_validation(current, base, url_base, base_ref, detail_base=""):
             if url_base else label
         )
         if key not in current:
-            lines.append(f"| {name} | _not run_ | | | :grey_question: |")
+            lines.append(f"| {name} | _not run_ | | :grey_question: |")
             skipped += 1
             continue
         value = current[key]
@@ -308,7 +308,7 @@ def _render_validation(current, base, url_base, base_ref, detail_base=""):
             shown = (f"[{shown}]({detail_base}/validation_findings.md"
                      f"#{anchor})")
         if key not in base:
-            lines.append(f"| {name} | {shown} | — | new | :grey_question: |")
+            lines.append(f"| {name} | {shown} | new | :grey_question: |")
             skipped += 1
             continue
         change = value - base[key]
@@ -327,9 +327,7 @@ def _render_validation(current, base, url_base, base_ref, detail_base=""):
             else:
                 icon = ":white_check_mark:"
             regressions += not improved
-        lines.append(
-            f"| {name} | {shown} | {base[key]:.4g} | {delta} | {icon} |"
-        )
+        lines.append(f"| {name} | {shown} | {delta} | {icon} |")
     return lines, regressions, skipped
 
 
@@ -361,15 +359,19 @@ def _parse_memote(directory: Path | None):
     return float(total.group(1)), sections, detailed
 
 
-def _memote_delta(current: float, base: float | None) -> str:
-    """Percentage-point delta, MEMOTE's own scale -- not the 4g convention
-    used for validation metrics, since a score is already a rounded percent."""
+def _memote_delta(current: float, base: float | None) -> tuple[str, str]:
+    """Percentage-point delta and icon, MEMOTE's own scale -- not the 4g
+    convention used for validation metrics, since a score is already a
+    rounded percent. Never :x:, unlike an ordinary count: this is compared
+    against a stale baseline (see _render_memote), so a drop is shown, not
+    scored as a build-blocking regression."""
     if base is None:
-        return ""
+        return "new", ":grey_question:"
     change = current - base
     if abs(change) < 0.05:
-        return "0"
-    return f"{change:+.1f} {':warning:' if change < 0 else ':white_check_mark:'}"
+        return "0", ":white_check_mark:"
+    icon = ":white_check_mark:" if change > 0 else ":warning:"
+    return f"{change:+.1f}", icon
 
 
 def _render_memote(current: Path | None, base: Path | None, base_ref: str,
@@ -383,8 +385,10 @@ def _render_memote(current: Path | None, base: Path | None, base_ref: str,
     score that mostly reflects annotation completeness, not something a
     typical pull request moves. See memote_snapshot.py's docstring.
     """
+    header = [f"| Section | Score | &Delta; vs `{base_ref}` | |",
+              "| --- | ---: | ---: | :---: |"]
     if running:
-        return ["_running_ &middot; :hourglass_flowing_sand:", ""]
+        return [*header, "| _running_ | | | :hourglass_flowing_sand: |", ""]
     parsed = _parse_memote(current)
     if parsed is None:
         return ["_not run — the MEMOTE job reported nothing._", ""]
@@ -392,20 +396,13 @@ def _render_memote(current: Path | None, base: Path | None, base_ref: str,
     base_parsed = _parse_memote(base) if base is not None else None
     base_total, base_sections, _base_detailed = base_parsed or (None, {}, [])
 
-    lines = [
-        f"**Total score: {total:.1f}%** &nbsp; "
-        f"{_memote_delta(total, base_total)}".rstrip(),
-        "",
-    ]
-    if sections:
-        lines += [f"| Section | Score | &Delta; vs `{base_ref}` |",
-                  "| --- | ---: | ---: |"]
-        lines += [
-            f"| {name} | {value:.1f}% | "
-            f"{_memote_delta(value, base_sections.get(name))} |"
-            for name, value in sections.items()
-        ]
-        lines.append("")
+    lines = list(header)
+    total_delta, total_icon = _memote_delta(total, base_total)
+    lines.append(f"| **Total** | {total:.1f}% | {total_delta} | {total_icon} |")
+    for name, value in sections.items():
+        delta, icon = _memote_delta(value, base_sections.get(name))
+        lines.append(f"| {name} | {value:.1f}% | {delta} | {icon} |")
+    lines.append("")
     # Collapsed by default: one row per MEMOTE test is too long to sit
     # in the open comment, but still worth having a click away rather
     # than only in the uploaded memote_result.json artifact.
@@ -432,16 +429,18 @@ _ANNOTATION_SUMMARY_ROWS = [
 ]
 
 
-def _annotation_delta(value: float, base: float | None) -> str:
-    """A count delta, shown but never scored as a regression -- see
-    _render_annotation for why a rise here does not mean this pull
-    request caused it."""
+def _annotation_delta(value: float, base: float | None) -> tuple[str, str]:
+    """A count delta and icon, shown but never :x: -- see _render_annotation
+    for why a rise here is not scored as a build-blocking regression the
+    way an ordinary count's would be."""
     if base is None:
-        return "new"
+        return "new", (":warning:" if value else ":white_check_mark:")
     change = int(value) - int(base)
     if change == 0:
-        return "0"
-    return f"{change:+d} {':warning:' if change > 0 else ':white_check_mark:'}"
+        return "0", ":white_check_mark:"
+    text = f"+{change}" if change > 0 else str(change)
+    icon = ":warning:" if change > 0 else ":white_check_mark:"
+    return text, icon
 
 
 def _render_annotation(current_dir: Path | None, base_dir: Path | None,
@@ -457,20 +456,22 @@ def _render_annotation(current_dir: Path | None, base_dir: Path | None,
     the tool's own docstring), and MetaNetX's own reference data can move
     this count on its own, independent of anything this pull request did.
     """
+    header = [f"| Finding | Count | &Delta; vs `{base_ref}` | |",
+              "| --- | ---: | ---: | :---: |"]
     if running:
-        return ["_running_ &middot; :hourglass_flowing_sand:", ""]
+        return [*header, "| _running_ | | | :hourglass_flowing_sand: |", ""]
     current = read_metrics(current_dir, "annotation_metrics.tsv") if current_dir else {}
     if not current:
         return ["_not run — the annotation job reported nothing._", ""]
     base = read_metrics(base_dir, "annotation_metrics.tsv") if base_dir else {}
-    lines = [f"| Finding | Count | &Delta; vs `{base_ref}` |",
-             "| --- | ---: | ---: |"]
+    lines = list(header)
     for key, label in _ANNOTATION_SUMMARY_ROWS:
         value = current.get(key)
         if value is None:
-            lines.append(f"| {label} | _not run_ | |")
+            lines.append(f"| {label} | _not run_ | | :grey_question: |")
             continue
-        lines.append(f"| {label} | {int(value)} | {_annotation_delta(value, base.get(key))} |")
+        delta, icon = _annotation_delta(value, base.get(key))
+        lines.append(f"| {label} | {int(value)} | {delta} | {icon} |")
     lines.append("")
     if detail_base:
         lines.append(f"[Full report]({detail_base}/annotation_report.md)")
@@ -520,7 +521,7 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
     # asked of the model's predictions rather than its structure, and
     # splitting them across two comments meant neither told the whole story.
     if running:
-        val_lines = ["| _running_ | | | | :hourglass_flowing_sand: |"]
+        val_lines = ["| _running_ | | | :hourglass_flowing_sand: |"]
         val_reg, val_skip = 0, 0
     else:
         val_lines, val_reg, val_skip = _render_validation(
@@ -535,8 +536,8 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         "change within tolerance still gets a checkmark; direction matters, "
         "so a rising R2 is a gain and a rising error is not._",
         "",
-        f"| Metric | This branch | `{base_ref}` | &Delta; | |",
-        "| --- | ---: | ---: | ---: | :---: |",
+        f"| Metric | This branch | &Delta; vs `{base_ref}` | |",
+        "| --- | ---: | ---: | :---: |",
         *val_lines,
         "",
     ]
@@ -603,13 +604,15 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
     )
     footer = [
         ":x: = a count rose vs the target branch (regression) &middot; "
-        ":warning: = a pre-existing non-zero finding (non-blocking) &middot; "
-        ":hourglass_flowing_sand: = still running &middot; "
-        ":grey_question: = the check did not run.",
+        ":warning: = a non-zero or worse-than-baseline finding (non-blocking) "
+        "&middot; :hourglass_flowing_sand: = still running &middot; "
+        ":grey_question: = the check did not run, or has no baseline yet.",
         "",
-        "_Both columns are computed in this run — the target branch is "
-        "checked out and measured the same way — so the delta reflects this "
-        "pull request and nothing else._",
+        "_Most deltas are computed in this run — the target branch is "
+        "checked out and measured the same way — so they reflect this pull "
+        "request and nothing else. MEMOTE and the MetaNetX annotation check "
+        "are the exception: compared against the target branch's own "
+        "last-committed result instead (see their sections above)._",
     ]
     if run_url:
         footer += ["", f"[Full workflow run]({run_url})"]
