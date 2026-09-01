@@ -4,6 +4,10 @@ yetfl_metG.csv
 yetfl_rxnG.csv
 YMDBtemp/
 
+# verify_annotations.py's MetaNetX reference-table cache: ~200MB,
+# downloaded once and regenerable, never committed.
+data/databases/.metanetx/
+
 # Release-only files: tracked on main, stamped at release time. Ignored
 # here (like *.mat/*.xls* below) so a stray `git add` on develop cannot
 # re-track them -- branch-hygiene.yml is what actually enforces this on

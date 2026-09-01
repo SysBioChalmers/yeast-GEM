@@ -204,13 +204,56 @@ jobs:
           path: results
           if-no-files-found: warn
 
+  # MetaNetX-based annotation verification (yeast-GEM#379). A separate job:
+  # it needs its own ~200MB reference-table download (cached across runs
+  # below) and no Gurobi licence, unlike every other job here. Like memote,
+  # only this branch is checked -- see verify_annotations.py's own
+  # docstring for why re-running it on the target branch in the same job
+  # is not worth its cost, and why this never gates the merge.
+  annotation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout the pull request
+        uses: actions/checkout@v7
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.12'
+
+      - name: Install dependencies
+        run: pip install cobra rdkit
+
+      # Bump the key (e.g. metanetx-v2) if verify_annotations.py's
+      # ensure_metanetx() ever changes which columns it keeps from
+      # MetaNetX's reference tables -- the cached files would otherwise be
+      # silently stale in the old schema. See the mnx_chem.tsv rename in
+      # its history for the same situation on a developer's own machine.
+      - name: Cache the MetaNetX reference tables
+        uses: actions/cache@v4
+        with:
+          path: data/databases/.metanetx
+          key: metanetx-v1
+
+      - name: Verify annotation against MetaNetX
+        continue-on-error: true
+        run: python code/python/annotation/verify_annotations.py --all --out results/head
+
+      - uses: actions/upload-artifact@v7
+        if: ${{ !cancelled() }}
+        with:
+          name: annotation-results
+          path: results
+          if-no-files-found: warn
+
   # Renders one comment from all three jobs above, commits the detail, then
   # applies the gate. Split out so that the comment is written once from
   # everything rather than several times, and so a slow job does not hold
   # up the others' results.
   report:
     runs-on: ubuntu-latest
-    needs: [checks, metrics, memote]
+    needs: [checks, metrics, memote, annotation]
     if: ${{ !cancelled() }}
     timeout-minutes: 15
     permissions:
@@ -256,16 +299,26 @@ jobs:
         with:
           name: memote-results
           path: results
+      # Same reasoning again: the annotation job may have produced nothing
+      # (e.g. MetaNetX unreachable).
+      - uses: actions/download-artifact@v7
+        continue-on-error: true
+        with:
+          name: annotation-results
+          path: results
 
-      # The MEMOTE score is compared against the target branch's own last
-      # commit, not a fresh run (see the memote job above) -- so fetch just
-      # that one file rather than a full second checkout.
-      - name: Fetch the target branch's committed MEMOTE score
+      # MEMOTE and the annotation summary are both compared against the
+      # target branch's own last commit, not a fresh run in this job (see
+      # the memote/annotation jobs above) -- so fetch just those two files
+      # rather than a full second checkout.
+      - name: Fetch the target branch's committed MEMOTE score and annotation summary
         run: |
           mkdir -p results/base
           git fetch --depth=1 origin "$BASE_REF"
           git show "origin/$BASE_REF:data/testResults/memote_score.md" \
             > results/base/memote_score.md 2>/dev/null || true
+          git show "origin/$BASE_REF:data/testResults/annotation_metrics.tsv" \
+            > results/base/annotation_metrics.tsv 2>/dev/null || true
 
       # Copy the detail into the repository so it is tracked: the committed
       # files are what the counts in the comment link to, and what makes a

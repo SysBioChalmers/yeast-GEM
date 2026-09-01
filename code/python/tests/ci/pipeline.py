@@ -40,6 +40,8 @@ _TRACKED = (
     "validation_findings.md",
     "validation_metrics.tsv",
     "memote_score.md",
+    "annotation_report.md",
+    "annotation_metrics.tsv",
 )
 
 
