@@ -44,24 +44,33 @@ reported, never overwritten automatically, because replacing a curated id
 needs a human judgement (a stereochemistry-only difference, for instance, is
 not a mistake).
 
-Every run writes a full report (--report, default
-data/annotation/verification_report.md) listing every finding, not just the
-console's first-40-per-status preview. "wrong" findings are additionally
-split by how many distinct entities independently suggest the exact same
-correction: many entities landing on the same (column, suggested value) is
-the fingerprint of a shared structural-representation limitation -- most
-often a polymer/repeat-unit or generic (R-group) entry whose SMILES matches
-whatever simple molecule it was drawn as, not the thing it represents -- so
-those are grouped as "recurring" for a batch look, rather than mixed in with
-"isolated" findings that are unique and more directly actionable one at a
-time. This is a repetition count, not a verdict: recurring findings are not
-assumed to be false positives, just worth checking as a group first.
+Every run writes a full report (annotation_report.md) listing every
+finding, not just the console's first-40-per-status preview, plus a
+key<TAB>value summary (annotation_metrics.tsv) that build_qc_report.py
+reads for the pull-request comment -- both into --out (default
+data/testResults, matching model_qc.py/memote_snapshot.py). "wrong"
+findings are additionally split by how many distinct entities independently
+suggest the exact same correction: many entities landing on the same
+(column, suggested value) is the fingerprint of a shared
+structural-representation limitation
+-- most often a polymer/repeat-unit or generic (R-group) entry whose SMILES
+matches whatever simple molecule it was drawn as, not the thing it
+represents -- so those are grouped as "recurring" for a batch look, rather
+than mixed in with "isolated" findings that are unique and more directly
+actionable one at a time. This is a repetition count, not a verdict:
+recurring findings are not assumed to be false positives, just worth
+checking as a group first.
 
 The MetaNetX reference tables are downloaded once to a cache directory
-($MNX_CACHE, default data/databases/.metanetx) and reused. Not part of
-model_qc.py / the pull-request gate -- this needs a first-run download of
-MetaNetX's full reference tables (tens of MB) and is meant to be run by a
-curator on demand, the same way Human-GEM's equivalent tool is.
+($MNX_CACHE, default data/databases/.metanetx) and reused. Run with --all
+by model-qc.yml's own annotation job on every pull request (see
+data/testResults/README.md) -- unlike the other model_qc.py checks it is
+not measured on the target branch in the same run (the MetaNetX download
+makes that costly for little benefit) and is not a merge gate: "wrong" and
+"conflict" need a human decision, not a pass/fail rule, and both can be
+driven by MetaNetX's own reference data changing over time rather than by
+what a pull request did. Also runnable directly, e.g. scoped to just the
+metabolites/reactions a pull request touched with --mets/--rxns.
 
 Not implemented: gene verification (UniProt ids aren't chemical structures,
 so MetaNetX's structure-matching approach doesn't apply to genes.tsv) and
@@ -679,6 +688,25 @@ def write_report(report_path: Path, findings, isolated, recurring, groups, confl
     report_path.write_text("\n".join(lines).rstrip() + "\n", encoding="utf-8")
 
 
+def write_metrics(metrics_path: Path, isolated, recurring, conflicts, findings) -> None:
+    """Write the ``key<TAB>value`` summary CI reads (see build_qc_report.py's
+    _render_annotation()) -- the same shape as qc_metrics.tsv/
+    validation_metrics.tsv, kept separate from the prose report so a wording
+    change there can never silently break what CI parses."""
+    by_status = Counter(f[3] for f in findings)
+    rows = {
+        "annotation_wrong_isolated": len(isolated),
+        "annotation_wrong_recurring": len(recurring),
+        "annotation_conflict": len(conflicts),
+        "annotation_drift": by_status.get("drift", 0),
+        "annotation_missing": by_status.get("missing", 0),
+    }
+    metrics_path.parent.mkdir(parents=True, exist_ok=True)
+    metrics_path.write_text(
+        "".join(f"{key}\t{value}\n" for key, value in rows.items()), encoding="utf-8"
+    )
+
+
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__,
                                   formatter_class=argparse.RawDescriptionHelpFormatter)
@@ -687,12 +715,15 @@ def main() -> int:
     ap.add_argument("--rxns", help="comma-separated reaction ids to check")
     ap.add_argument("--fix", action="store_true",
                      help="apply safe corrections (add missing, update drift)")
-    ap.add_argument("--report", type=Path,
-                     default=Path("data/annotation/verification_report.md"),
-                     help="where to write the full findings report (default: %(default)s)")
+    ap.add_argument("--out", type=Path, default=Path("data/testResults"),
+                     help="directory to write annotation_report.md and "
+                          "annotation_metrics.tsv into (default: %(default)s), "
+                          "matching model_qc.py/memote_snapshot.py")
     args = ap.parse_args()
     if not (args.all or args.mets or args.rxns):
         ap.error("choose --all, --mets and/or --rxns")
+    report_path = args.out / "annotation_report.md"
+    metrics_path = args.out / "annotation_metrics.tsv"
 
     ensure_metanetx()
     mnx = load_metanetx()
@@ -763,8 +794,10 @@ def main() -> int:
                     f"metabolites {args.mets}" if args.mets else "") if s)
     context = {"names": names, "best_mnx": best_mnx, "mnx_info": mnx2info,
                "model_charge": model_charge}
-    write_report(args.report, findings, isolated, recurring, groups, conflicts, scope, context)
-    print(f"\nFull report written to {args.report}")
+    write_report(report_path, findings, isolated, recurring, groups, conflicts, scope, context)
+    print(f"\nFull report written to {report_path}")
+    write_metrics(metrics_path, isolated, recurring, conflicts, findings)
+    print(f"Summary metrics written to {metrics_path}")
 
     if args.fix:
         met_f = [f for f in findings if f[0] == "met"]

@@ -28,6 +28,14 @@ the top of the comment carries no icon at all. Unlike every other count
 here, a curation pull request is expected to change it, so treating a
 rise like a regression would flag normal work.
 
+MEMOTE and the MetaNetX annotation-verification sections are rendered
+separately (_render_memote, _render_annotation) rather than through the
+icon rule above: both are compared against the target branch's own
+last-committed result instead of a fresh run on it (each has its own
+reason -- MEMOTE's cost, MetaNetX's download), and neither counts a rise
+as a regression, since annotation `wrong`/`conflict` findings need a human
+decision and MetaNetX's own reference data can move them on its own.
+
 Only the gates (growth, name_mismatches, annotation_consistency) fail
 the build. Everything else is reported.
 
@@ -410,12 +418,78 @@ def _render_memote(current: Path | None, base: Path | None, base_ref: str,
     return lines
 
 
+# (metrics key, comment label). "wrong"/"conflict" split into isolated vs.
+# recurring the same way the report does; "drift"/"missing" are the two
+# --fix can apply safely, kept for visibility rather than because a rise
+# means anything is broken.
+_ANNOTATION_SUMMARY_ROWS = [
+    ("annotation_wrong_isolated", "`wrong`, isolated"),
+    ("annotation_wrong_recurring", "`wrong`, recurring"),
+    ("annotation_conflict", "`conflict`"),
+    ("annotation_drift", "`drift` (safe to `--fix`)"),
+    ("annotation_missing", "`missing` (safe to `--fix`)"),
+]
+
+
+def _annotation_delta(value: float, base: float | None) -> str:
+    """A count delta, shown but never scored as a regression -- see
+    _render_annotation for why a rise here does not mean this pull
+    request caused it."""
+    if base is None:
+        return "new"
+    change = int(value) - int(base)
+    if change == 0:
+        return "0"
+    return f"{change:+d} {':warning:' if change > 0 else ':white_check_mark:'}"
+
+
+def _render_annotation(current_dir: Path | None, base_dir: Path | None,
+                        base_ref: str, running: bool, detail_base: str) -> list[str]:
+    """The MetaNetX annotation-verification section, or a note if the job
+    did not report.
+
+    Like MEMOTE (see _render_memote), compared against the target branch's
+    own last-committed summary rather than a fresh run on it -- the
+    MetaNetX download makes a second run costly for little benefit -- and,
+    unlike the other QC counts, a rise here is never treated as a
+    regression: "wrong" and "conflict" need a human decision, not a
+    pass/fail rule (see the tool's own docstring), and MetaNetX's own
+    reference data can move these counts on its own, independent of
+    anything this pull request did.
+    """
+    if running:
+        return ["_running_ &middot; :hourglass_flowing_sand:", ""]
+    current = read_metrics(current_dir, "annotation_metrics.tsv") if current_dir else {}
+    if not current:
+        return ["_not run — the annotation job reported nothing._", ""]
+    base = read_metrics(base_dir, "annotation_metrics.tsv") if base_dir else {}
+    lines = [f"| Finding | Count | &Delta; vs `{base_ref}` |",
+             "| --- | ---: | ---: |"]
+    for key, label in _ANNOTATION_SUMMARY_ROWS:
+        value = current.get(key)
+        if value is None:
+            lines.append(f"| {label} | _not run_ | |")
+            continue
+        lines.append(f"| {label} | {int(value)} | {_annotation_delta(value, base.get(key))} |")
+    lines.append("")
+    if detail_base:
+        lines.append(
+            f"[Full report]({detail_base}/annotation_report.md) — every finding, "
+            "with MetaNetX's reference name/formula/charge alongside each one "
+            "that needs a human decision."
+        )
+        lines.append("")
+    return lines
+
+
 def build(current: dict, base: dict, base_ref: str, url_base: str,
           running: bool, run_url: str, detail_base: str = "",
           validation: dict | None = None,
           validation_base: dict | None = None,
           memote_dir: Path | None = None,
-          memote_base_dir: Path | None = None) -> str:
+          memote_base_dir: Path | None = None,
+          annotation_dir: Path | None = None,
+          annotation_base_dir: Path | None = None) -> str:
     groups = [
         ("Model checks",
          "_Growth is a gate and blocks the merge; every other row is a "
@@ -479,6 +553,19 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
         "score, not a fresh run on it._",
         "",
         *_render_memote(memote_dir, memote_base_dir, base_ref, running),
+    ]
+
+    body += [
+        "### Annotation verification (MetaNetX)",
+        "_Metabolite/reaction identifiers cross-checked against MetaNetX's "
+        "structure-matched reference tables. Compared against "
+        f"`{base_ref}`'s own last-committed summary, not a fresh run on it. "
+        "Not a gate, and a rise here is not scored as a regression: `wrong`/"
+        "`conflict` need a human decision, and MetaNetX's own reference data "
+        "moving can shift these counts independent of this pull request._",
+        "",
+        *_render_annotation(annotation_dir, annotation_base_dir, base_ref,
+                            running, detail_base),
     ]
 
     if fatal_keys:
@@ -570,7 +657,8 @@ def main() -> int:
         build(current, base, args.base_ref, args.url_base.rstrip("/"),
               args.running, args.run_url, args.detail_base.rstrip("/"),
               validation, validation_base,
-              memote_dir=args.current, memote_base_dir=args.base),
+              memote_dir=args.current, memote_base_dir=args.base,
+              annotation_dir=args.current, annotation_base_dir=args.base),
         encoding="utf-8",
     )
     print(f"Wrote {args.out}")
