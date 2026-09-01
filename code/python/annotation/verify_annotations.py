@@ -358,7 +358,11 @@ def verify_metabolites(rows, mnx, ids, rev):
     return findings, best_by_id
 
 
-def verify_metabolite_conflicts(rows, mnx2key, rev, ids):
+def _best_mnx(mnxset, mnx2xref):
+    return sorted(mnxset, key=lambda m: (-len(mnx2xref.get(m, {})), m))[0]
+
+
+def verify_metabolite_conflicts(rows, mnx, rev, best_mnx_by_id, ids):
     """Flag metabolites whose OWN cross-reference columns disagree with each
     other about which MetaNetX chemical they identify -- independent of
     structure/SMILES, via MetaNetX's id graph alone. Catches rows a
@@ -366,20 +370,26 @@ def verify_metabolite_conflicts(rows, mnx2key, rev, ids):
     verify_metabolites() with nothing to match against, but two existing
     ids simply not sharing any MetaNetX chemical is evidence on its own.
 
-    Compares at the skeleton level (see skeleton()), same as the "wrong"
-    classification above, and for the same reason: chebi/kegg.compound/
-    bigg.metabolite/metanetx.chemical each independently curated is exactly
-    where one column landing on a generic entry and another on a specific
-    stereoisomer/protonation microspecies is common and not an error.
+    Groups columns at the skeleton level (see skeleton()) into clusters that
+    agree with each other, then tries to pick a winning cluster two ways,
+    in order: (1) this metabolite's own smiles, if verify_metabolites()
+    matched one (best_mnx_by_id) -- the strongest evidence, independent of
+    any curated id; (2) a strict majority of this metabolite's own columns
+    -- weaker, but still more than an arbitrary pick. A losing column gets
+    a suggested replacement drawn from the winning cluster's own MetaNetX
+    cross-references. Neither may resolve it (e.g. exactly two columns,
+    no smiles): reported with no suggestion, for a human to weigh using
+    the name/formula context write_report() attaches to each column.
     """
+    _, mnx2key, mnx2xref, *_ = mnx
     findings = []
     for r in rows:
         if ids and r["id"] not in ids:
             continue
-        implied = {}
+        cols = {}
         mnxm_direct = _ids(r.get("metanetx.chemical", ""))
         if mnxm_direct:
-            implied["metanetx.chemical"] = {skeleton(mnx2key.get(m, "")) for m in mnxm_direct}
+            cols["metanetx.chemical"] = {"value": r["metanetx.chemical"], "mnxm": mnxm_direct}
         for col, dbs in MET_DB.items():
             have = _ids(r.get(col, ""))
             if not have:
@@ -389,15 +399,60 @@ def verify_metabolite_conflicts(rows, mnx2key, rev, ids):
                 bare = hid.replace("CHEBI:", "") if col == "chebi" else hid
                 for db in dbs:
                     mnxset |= rev.get((db, bare), set())
-            implied[col] = {skeleton(mnx2key.get(m, "")) for m in mnxset}
-        cols = [c for c, s in implied.items() if s - {""}]
-        for i, ca in enumerate(cols):
-            for cb in cols[i + 1:]:
-                a, b = implied[ca] - {""}, implied[cb] - {""}
-                if not (a & b):
-                    findings.append(("met", r["id"], f"{ca} vs {cb}", "conflict",
-                                      ";".join(sorted(_ids(r.get(ca, "")))),
-                                      ";".join(sorted(_ids(r.get(cb, ""))))))
+            if mnxset:
+                cols[col] = {"value": r[col], "mnxm": mnxset}
+        if len(cols) < 2:
+            continue
+
+        clusters = []
+        for col, info in cols.items():
+            skel = {skeleton(mnx2key.get(m, "")) for m in info["mnxm"]} - {""}
+            if not skel:
+                continue
+            for c in clusters:
+                if c["skel"] & skel:
+                    c["skel"] |= skel
+                    c["mnxm"] |= info["mnxm"]
+                    c["cols"].append(col)
+                    break
+            else:
+                clusters.append({"skel": skel, "mnxm": set(info["mnxm"]), "cols": [col]})
+        if len(clusters) < 2:
+            continue
+
+        winner, basis = None, None
+        structure_mnxm = best_mnx_by_id.get(r["id"])
+        structure_skel = skeleton(mnx2key.get(structure_mnxm, "")) if structure_mnxm else ""
+        if structure_skel:
+            winner = next((c for c in clusters if structure_skel in c["skel"]), None)
+            basis = "structure" if winner else None
+        if winner is None:
+            clusters.sort(key=lambda c: -len(c["cols"]))
+            if len(clusters[0]["cols"]) > len(clusters[1]["cols"]):
+                winner, basis = clusters[0], "majority"
+
+        winner_ref = _best_mnx(winner["mnxm"], mnx2xref) if winner else None
+        suggestions = {}
+        if winner:
+            for col in cols:
+                if col in winner["cols"]:
+                    continue
+                if col == "metanetx.chemical":
+                    suggestions[col] = winner_ref
+                    continue
+                pool = [e for m in winner["mnxm"] for db in MET_DB[col]
+                        for e in mnx2xref.get(m, {}).get(db, [])]
+                suggestions[col] = _best([_norm_met(e, col) for e in pool], col) if pool else ""
+
+        findings.append({
+            "kind": "met", "id": r["id"],
+            "columns": {col: {"value": info["value"], "ref": _best_mnx(info["mnxm"], mnx2xref)}
+                        for col, info in cols.items()},
+            "winner_cols": winner["cols"] if winner else [],
+            "winner_ref": winner_ref,
+            "basis": basis,
+            "suggestions": suggestions,
+        })
     return findings
 
 
@@ -447,24 +502,29 @@ def verify_reactions(rxn_rows, stoich, mnx, metkey, ids):
     return findings, best_by_id
 
 
-def verify_reaction_conflicts(rows, mnxr2sig, rev, ids):
+def verify_reaction_conflicts(rows, mnxr2sig, mnxr2xref, rev, best_mnxr_by_id, ids):
     """Reaction-side equivalent of verify_metabolite_conflicts(): flags
     reactions whose kegg.reaction / bigg.reaction / metanetx.reaction
     columns don't share a common MetaNetX reaction, independent of the
-    participant-structure signature check. Compares via each MNXR's own
+    participant-structure signature check, and resolves it the same way --
+    this reaction's own stoichiometry match (best_mnxr_by_id) first, a
+    majority of its own columns otherwise. Compares via each MNXR's own
     participant-structure signature (mnxr2sig, the inverse of sig2mnxr)
     rather than raw MNXR ids, so two ids for what MetaNetX considers the
     same reaction (e.g. a duplicate/merged MNXR entry) do not read as a
     conflict -- the same reasoning as the metabolite side's skeleton
-    comparison, one level up."""
+    comparison, one level up. No MetaNetX name/formula exists for a
+    reaction the way it does for a metabolite, so a resolved reaction
+    conflict's suggestion is the only extra context this can offer.
+    """
     findings = []
     for r in rows:
         if ids and r["id"] not in ids:
             continue
-        implied = {}
+        cols = {}
         mnxr_direct = _ids(r.get("metanetx.reaction", ""))
         if mnxr_direct:
-            implied["metanetx.reaction"] = {mnxr2sig.get(m) for m in mnxr_direct} - {None}
+            cols["metanetx.reaction"] = {"value": r["metanetx.reaction"], "mnxr": mnxr_direct}
         for col, dbs in RXN_DB.items():
             have = _ids(r.get(col, ""))
             if not have:
@@ -473,14 +533,60 @@ def verify_reaction_conflicts(rows, mnxr2sig, rev, ids):
             for hid in have:
                 for db in dbs:
                     mnxrset |= rev.get((db, hid), set())
-            implied[col] = {mnxr2sig.get(m) for m in mnxrset} - {None}
-        cols = [c for c, s in implied.items() if s]
-        for i, ca in enumerate(cols):
-            for cb in cols[i + 1:]:
-                if not (implied[ca] & implied[cb]):
-                    findings.append(("rxn", r["id"], f"{ca} vs {cb}", "conflict",
-                                      ";".join(sorted(_ids(r.get(ca, "")))),
-                                      ";".join(sorted(_ids(r.get(cb, ""))))))
+            if mnxrset:
+                cols[col] = {"value": r[col], "mnxr": mnxrset}
+        if len(cols) < 2:
+            continue
+
+        clusters = []
+        for col, info in cols.items():
+            sigs = {mnxr2sig.get(m) for m in info["mnxr"]} - {None}
+            if not sigs:
+                continue
+            for c in clusters:
+                if c["sig"] & sigs:
+                    c["sig"] |= sigs
+                    c["mnxr"] |= info["mnxr"]
+                    c["cols"].append(col)
+                    break
+            else:
+                clusters.append({"sig": sigs, "mnxr": set(info["mnxr"]), "cols": [col]})
+        if len(clusters) < 2:
+            continue
+
+        winner, basis = None, None
+        structure_mnxr = best_mnxr_by_id.get(r["id"])
+        structure_sig = mnxr2sig.get(structure_mnxr) if structure_mnxr else None
+        if structure_sig is not None:
+            winner = next((c for c in clusters if structure_sig in c["sig"]), None)
+            basis = "structure" if winner else None
+        if winner is None:
+            clusters.sort(key=lambda c: -len(c["cols"]))
+            if len(clusters[0]["cols"]) > len(clusters[1]["cols"]):
+                winner, basis = clusters[0], "majority"
+
+        winner_ref = _best_mnx(winner["mnxr"], mnxr2xref) if winner else None
+        suggestions = {}
+        if winner:
+            for col in cols:
+                if col in winner["cols"]:
+                    continue
+                if col == "metanetx.reaction":
+                    suggestions[col] = winner_ref
+                    continue
+                pool = [e for m in winner["mnxr"] for db in RXN_DB[col]
+                        for e in mnxr2xref.get(m, {}).get(db, [])]
+                suggestions[col] = _best(pool, col) if pool else ""
+
+        findings.append({
+            "kind": "rxn", "id": r["id"],
+            "columns": {col: {"value": info["value"], "ref": _best_mnx(info["mnxr"], mnxr2xref)}
+                        for col, info in cols.items()},
+            "winner_cols": winner["cols"] if winner else [],
+            "winner_ref": winner_ref,
+            "basis": basis,
+            "suggestions": suggestions,
+        })
     return findings
 
 
@@ -556,60 +662,32 @@ def write_report(report_path: Path, findings, isolated, recurring, groups, confl
         "",
         "## Method",
         "",
-        "Metabolites are matched to MetaNetX by chemical **structure**: the "
-        "`smiles` column in `metabolites.tsv` is converted to an InChIKey "
-        "(ignoring the final protonation-state character) and looked up in "
-        "MetaNetX's structure table, which links every other database's id "
-        "(KEGG, ChEBI, BiGG, MetaNetX itself) known to share that structure. "
-        "Reactions are matched the same way, via a stoichiometric signature "
-        "built from their participants' structure keys. Matching is "
-        "**structure-only** -- metabolite/reaction names and formulas play "
-        "no role in confirming or rejecting a cross-reference. Separately, "
-        "and without needing a smiles at all, a metabolite's or reaction's "
-        "*own* cross-reference columns are checked against each other via "
-        "MetaNetX's id graph -- e.g. its `chebi` and `kegg.compound` ids "
-        "should map to the same MetaNetX chemical; if they map to different "
-        "ones, that is a `conflict` regardless of what (or whether) a smiles "
-        "confirms. Both checks compare at the *skeleton* level (structure "
-        "only, ignoring stereochemistry and protonation): MetaNetX commonly "
-        "registers a generic entry and a specific stereoisomer/protonation "
-        "microspecies of the same real compound as separate ids, and one "
-        "column citing the generic form while another cites the specific "
-        "form is normal curation, not an error. A `conflict` can still be a "
-        "structurally genuine (not just a stereo/protonation) difference and "
-        "not a data-entry mistake -- a ring/open-chain sugar tautomer (e.g. "
-        "D-xylose) or a monatomic ion vs. its neutral atom (e.g. sodium) are "
-        "registered as fully distinct MetaNetX ids, even though a curator "
-        "reasonably treats them as the same metabolite; this is exactly the "
-        "kind of case the name/formula/charge context below is for. Each "
-        "existing cross-reference id is then classified:",
+        "Metabolites are matched to MetaNetX by structure (`smiles` -> "
+        "InChIKey); reactions by their participant-structure signature -- "
+        "not by name or formula. Separately, an entity's own columns (e.g. "
+        "`chebi` vs `kegg.compound`) are checked against each other via "
+        "MetaNetX's id graph, even without a smiles. Statuses:",
         "",
         "| status | meaning |",
         "|---|---|",
-        "| `wrong` | the id resolves to a *different* compound/reaction -- "
-        "a real mistake, needs a human decision |",
-        "| `conflict` | this entity's own columns disagree with each other "
-        "about its identity -- needs a human decision |",
-        "| `missing` | a structure-verified id the tsv does not have yet "
-        "-- safe to add |",
-        "| `drift` | (MetaNetX ids only) the id is deprecated, a current "
-        "id exists -- safe to update |",
+        "| `wrong` | an existing id resolves to a *different* "
+        "compound/reaction |",
+        "| `conflict` | this entity's own columns disagree about its "
+        "identity |",
+        "| `missing` | a structure-verified id not yet recorded -- safe "
+        "to add |",
+        "| `drift` | a stored MetaNetX id is deprecated -- safe to "
+        "update |",
         "",
-        "`wrong` findings are further split into isolated (a unique "
-        "suggested correction) and recurring (the same correction shared "
-        "by 3+ entities -- usually a polymer/repeat-unit or generic "
-        "(R-group) entry whose structure matches whatever simple molecule "
-        "it was drawn as, rather than 3+ independent mistakes) -- see "
-        "below.",
-        "",
-        "Metabolite tables also carry MetaNetX's own name/formula/charge for "
-        "the matched compound, and the model's current charge, as context "
-        "for the human decision `wrong`/`conflict` need -- not compared "
-        "automatically. Chemical names are not reliably comparable by "
-        "string matching (synonyms, stereo-descriptors), and a charge "
-        "difference is often just a legitimate protonation-state choice "
-        "rather than a mistake, so neither is used to classify a finding, "
-        "only to inform the human judging it.",
+        "`wrong`/`conflict` need a human decision; `missing`/`drift` are "
+        "safe with `--fix`. `wrong` findings repeated identically across "
+        "3+ entities are grouped as recurring, below. Where possible a "
+        "`conflict` also gets a suggested fix, from this entity's own "
+        "structure match or a majority of its other columns; where "
+        "neither settles it, the names/formulas shown are the best "
+        "evidence available. See the script's own docstring for the full "
+        "method, including why a structural difference (e.g. a sugar's "
+        "ring/open-chain tautomer) is not always a curation mistake.",
         "",
         f"Scope: {scope}.",
         "",
@@ -647,15 +725,76 @@ def write_report(report_path: Path, findings, isolated, recurring, groups, confl
             out.append("| " + " | ".join(cells) + " |")
         return out
 
+    def _ref_label(kind, ref):
+        """What MetaNetX believes a column's value actually names, for a
+        reader who cannot tell "CHEBI:59457" from "prbamp" apart otherwise.
+        Reactions have no MetaNetX name/formula to show (see
+        verify_reaction_conflicts), so this is the bare id for those."""
+        if not ref:
+            return "_(unknown to MetaNetX)_"
+        if kind != "met":
+            return ref
+        info = mnx_info.get(ref, {})
+        name = info.get("name", "").replace("|", "\\|")
+        return f"{name} ({info.get('formula', '?')})" if name else "_(unknown to MetaNetX)_"
+
+    def _conflict_row(c, cols_order):
+        name = names.get(c["id"], "").replace("|", "\\|")
+        cells = [c["kind"], c["id"], name]
+        for col in cols_order:
+            info = c["columns"].get(col)
+            if info is None:
+                cells.append("_(none)_")
+                continue
+            value = info["value"].replace("|", "\\|")
+            cell = f"{value} -- {_ref_label(c['kind'], info['ref'])}"
+            cells.append(f"**{cell}**" if col in c["winner_cols"] else cell)
+        return cells
+
+    def _conflict_fix(c):
+        label = _ref_label(c["kind"], c["winner_ref"])
+        parts = [f"`{col}` -> `{val}`" if val else f"`{col}`: no id known to MetaNetX"
+                 for col, val in c["suggestions"].items()]
+        return f"Use {label}: " + "; ".join(parts)
+
+    def _conflict_table(kind, cols_order):
+        rows = [c for c in conflicts if c["kind"] == kind]
+        if not rows:
+            return ["_None._"]
+        resolved = sorted((c for c in rows if c["basis"]), key=lambda c: c["id"])
+        unresolved = sorted((c for c in rows if not c["basis"]), key=lambda c: c["id"])
+        out = []
+        if resolved:
+            header = ["kind", "id", "name", *cols_order, "suggested fix"]
+            out += [f"#### Suggested fix available ({len(resolved)})", "",
+                    "| " + " | ".join(header) + " |",
+                    "|" + "|".join("---" for _ in header) + "|"]
+            out += [f"| {' | '.join(_conflict_row(c, cols_order))} | {_conflict_fix(c)} |"
+                    for c in resolved]
+            out.append("")
+        if unresolved:
+            header = ["kind", "id", "name", *cols_order]
+            out += [f"#### No consensus -- compare names ({len(unresolved)})", "",
+                    "| " + " | ".join(header) + " |",
+                    "|" + "|".join("---" for _ in header) + "|"]
+            out += [f"| {' | '.join(_conflict_row(c, cols_order))} |" for c in unresolved]
+            out.append("")
+        return out
+
     lines += [
         "## Cross-annotation conflicts (`conflict`)",
         "",
         "This entity's own columns imply different MetaNetX identities "
-        "from each other -- see Method above.",
+        "from each other -- see Method above. **Bold** marks the value(s) "
+        "the suggested fix is based on.",
+        "",
+        "### Metabolites",
         "",
     ]
-    lines += _table(conflicts, header=("kind", "id", "name", "columns compared",
-                                        "value A", "value B")) if conflicts else ["_None._"]
+    lines += _conflict_table("met", ("bigg.metabolite", "chebi", "kegg.compound",
+                                      "metanetx.chemical"))
+    lines += ["", "### Reactions", ""]
+    lines += _conflict_table("rxn", ("bigg.reaction", "kegg.reaction", "metanetx.reaction"))
     lines += [""]
 
     lines += [
@@ -727,7 +866,7 @@ def main() -> int:
 
     ensure_metanetx()
     mnx = load_metanetx()
-    _, mnx2key, mnx2xref, sig2mnxr, mnxr2xref, mnx2info = mnx
+    _, _, mnx2xref, sig2mnxr, mnxr2xref, mnx2info = mnx
     mnxr2sig = {m: sig for sig, ms in sig2mnxr.items() for m in ms}
     met_ids = set(args.mets.split(",")) if args.mets else None
     rxn_ids = set(args.rxns.split(",")) if args.rxns else None
@@ -740,12 +879,13 @@ def main() -> int:
     model_charge = {m.id: m.charge for m in model.metabolites}
 
     findings = []
+    conflicts = []
     best_mnx = {}
     if args.all or args.mets:
         rev = reverse_xref(mnx2xref)
         met_findings, met_best = verify_metabolites(met_rows, mnx, met_ids, rev)
         findings += met_findings
-        findings += verify_metabolite_conflicts(met_rows, mnx2key, rev, met_ids)
+        conflicts += verify_metabolite_conflicts(met_rows, mnx, rev, met_best, met_ids)
         best_mnx.update(met_best)
     if args.all or args.rxns:
         smiles_by_id = {r["id"]: r.get("smiles", "").strip() for r in met_rows}
@@ -755,15 +895,15 @@ def main() -> int:
         stoich = load_reaction_stoich(model, skip_ids)
         rxn_findings, rxn_best = verify_reactions(rxn_rows, stoich, mnx, metkey, rxn_ids)
         findings += rxn_findings
-        findings += verify_reaction_conflicts(rxn_rows, mnxr2sig, reverse_xref(mnxr2xref), rxn_ids)
+        conflicts += verify_reaction_conflicts(rxn_rows, mnxr2sig, mnxr2xref,
+                                                reverse_xref(mnxr2xref), rxn_best, rxn_ids)
         best_mnx.update(rxn_best)
 
     wrong = [f for f in findings if f[3] == "wrong"]
     isolated, recurring, groups = split_wrong_by_recurrence(wrong)
-    conflicts = [f for f in findings if f[3] == "conflict"]
 
     by_status = Counter(f[3] for f in findings)
-    print(f"findings: {dict(by_status)} "
+    print(f"findings: {dict(by_status)}, conflict: {len(conflicts)} "
           f"(wrong: {len(isolated)} isolated, {len(recurring)} recurring "
           f"in {len(groups)} group(s))")
 
@@ -778,8 +918,10 @@ def main() -> int:
               f"{_RECURRING_THRESHOLD}+ entities sharing one correction, "
               f"see the report for detail ({len(recurring)} findings total)")
     if conflicts:
+        resolved = sum(1 for c in conflicts if c["basis"])
         print(f"\nconflict ({len(conflicts)}) -- an entity's own columns disagree "
-              "with each other, see the report")
+              f"with each other; {resolved} with a suggested fix, "
+              f"{len(conflicts) - resolved} with no consensus -- see the report")
     for status in ("drift", "missing"):
         rows = [f for f in findings if f[3] == status]
         if rows:

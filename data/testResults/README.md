@@ -389,7 +389,7 @@ on its own, independent of anything a pull request did.
 | status | meaning |
 |---|---|
 | `wrong` | an existing id resolves to a *different* compound/reaction |
-| `conflict` | this entity's own columns disagree with each other about its identity |
+| `conflict` | this entity's own columns disagree with each other about its identity — resolved where possible using the entity's own structure match or a majority of its other columns, giving a suggested fix; otherwise reported with the MetaNetX name/formula behind each column's value, for a human to compare |
 | `missing` | a structure-verified id is not yet recorded — safe to add with `--fix` |
 | `drift` | a stored MetaNetX id is deprecated; a current one exists — safe to update with `--fix` |
 
