@@ -94,9 +94,9 @@ These have clean abstractions and are clearly useful beyond yeast.
   with the same fields.
 - **Why local for now:** ravengem is pre-alpha; the `BiomassConfig` shape
   has not been exercised on a second model.
-- **Trigger to upstream:** at least one other GEM project (e.g. Human-GEM,
-  yeast-pcGEM) successfully uses the same `BiomassConfig` shape, or ravengem
-  reaches a stable release.
+- **Trigger to upstream:** at least one other GEM project (e.g. yeast-pcGEM)
+  successfully uses the same `BiomassConfig` shape, or ravengem reaches a
+  stable release.
 
 ### `changeGAM` → `set_gam`
 

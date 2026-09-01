@@ -45,12 +45,12 @@ jobs:
         with:
           python-version: '3.11'
 
-      # MACAW comes from the upstream repository, not PyPI: that is the
-      # source Human-GEM uses, and the similarly-named PyPI package is a
-      # different distribution. numpy is pinned in the same resolve because
-      # MACAW requires exactly 1.26.4. rdkit (structure-consistency check)
-      # is a hard dependency, unlike MACAW -- it ships a stable PyPI wheel,
-      # so there is no "unavailable" case to fall back on.
+      # MACAW comes from the upstream repository, not PyPI: the
+      # similarly-named PyPI package is a different distribution. numpy is
+      # pinned in the same resolve because MACAW requires exactly 1.26.4.
+      # rdkit (structure-consistency check) is a hard dependency, unlike
+      # MACAW -- it ships a stable PyPI wheel, so there is no "unavailable"
+      # case to fall back on.
       - name: Install dependencies
         run: |
           pip install cobra numpy==1.26.4 rdkit
