@@ -473,11 +473,7 @@ def _render_annotation(current_dir: Path | None, base_dir: Path | None,
         lines.append(f"| {label} | {int(value)} | {_annotation_delta(value, base.get(key))} |")
     lines.append("")
     if detail_base:
-        lines.append(
-            f"[Full report]({detail_base}/annotation_report.md) — every finding, "
-            "with MetaNetX's reference name/formula/charge alongside each one "
-            "that needs a human decision."
-        )
+        lines.append(f"[Full report]({detail_base}/annotation_report.md)")
         lines.append("")
     return lines
 
@@ -558,14 +554,7 @@ def build(current: dict, base: dict, base_ref: str, url_base: str,
     body += [
         "### Annotation verification (MetaNetX)",
         "_Metabolite/reaction identifiers cross-checked against MetaNetX's "
-        "structure-matched reference tables. Compared against "
-        f"`{base_ref}`'s own last-committed summary, not a fresh run on it. "
-        "Not a gate, and a rise here is not scored as a regression: `wrong` "
-        "needs a human decision, and MetaNetX's own reference data moving "
-        "can shift this count independent of this pull request. A separate, "
-        "occasional check of whether an entity's own columns agree with "
-        "each other (`verify_annotation_consistency.py`) does not run "
-        "here -- see `data/testResults/README.md`._",
+        "reference data -- see the full report below for detail._",
         "",
         *_render_annotation(annotation_dir, annotation_base_dir, base_ref,
                             running, detail_base),
