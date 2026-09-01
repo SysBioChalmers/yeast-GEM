@@ -71,7 +71,8 @@ _XREF_PATTERNS = {
     "kegg.compound": r"^C\d+$",
     "kegg.reaction": r"^R\d+$",
     "kegg.pathway": r"^\w{2,4}\d{5}$",
-    "metanetx.chemical": r"^MNXM\d+$",
+    # WATER/BIOMASS are MetaNetX's own non-numeric pseudo-ids, not typos.
+    "metanetx.chemical": r"^(MNXM\d+|WATER|BIOMASS)$",
     "metanetx.reaction": r"^MNXR\d+$",
     "seed.compound": r"^cpd\d+$",
     "seed.reactions": r"^rxn\d+$",
