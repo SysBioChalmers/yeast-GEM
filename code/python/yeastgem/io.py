@@ -98,6 +98,7 @@ def load_yeast_yaml(*, make_bigg_compliant: bool = False) -> cobra.Model:
     from yeastgem.missing_fields import load_delta_g
 
     model = read_yaml_model(str(YAML_PATH))
+    _collapse_single_value_annotations(model)
     # Pass YAML_PATH's own directory explicitly, for the same reason as in
     # save_yeast_yaml: annotate_gem's REPO_PATH-derived default is a
     # separate binding from annotate.py's own module load time.
@@ -107,6 +108,26 @@ def load_yeast_yaml(*, make_bigg_compliant: bool = False) -> cobra.Model:
     if make_bigg_compliant and "x" not in model.compartments:
         _make_bigg_compliant(model)
     return model
+
+
+def _collapse_single_value_annotations(model: cobra.Model) -> None:
+    """Collapse single-element list annotation values to scalars, in place.
+
+    ``raven_toolbox.io.read_yaml_model`` represents every MIRIAM-style
+    annotation value as a list, even single-valued ones (e.g. ``sbo`` —
+    the only annotation key yeast-GEM's yml carries inline, everything
+    else living in the tsvs, yeast-GEM#379) — unlike ``cobra``'s own SBML
+    reader, which collapses a lone value to a plain string. The rest of
+    this codebase (``add_sbo_terms``, every ``annotation['sbo'] ==
+    '...'`` comparison) is written against the scalar form, so this keeps
+    a yml-loaded model's annotation shape consistent with an xml-loaded
+    one rather than leaking the reader's own representation choice.
+    """
+    for collection in (model.reactions, model.metabolites, model.genes):
+        for entity in collection:
+            for key, value in list(entity.annotation.items()):
+                if isinstance(value, list) and len(value) == 1:
+                    entity.annotation[key] = value[0]
 
 
 def save_yeast_yaml(
