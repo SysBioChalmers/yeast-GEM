@@ -101,6 +101,20 @@ _None._
 
 | kind | id | namespace | value | problem |
 |---|---|---|---|---|
+| metabolite | s_0803 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_0804 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_0805 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_0806 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_0807 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_0808 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_0809 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_0810 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_2808 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_2976 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_2994 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_3226 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_3449 | metanetx.chemical | WATER | looks like a name rather than an identifier |
+| metabolite | s_3657 | metanetx.chemical | WATER | looks like a name rather than an identifier |
 | metabolite | s_4269 | chebi | ChEBI:15987 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
 | metabolite | s_4304 | chebi | ChEBI:17173 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
 | metabolite | s_4310 | chebi | ChEBI:27551 | wrong case or prefix; expected to match ^CHEBI:\d+$ |
