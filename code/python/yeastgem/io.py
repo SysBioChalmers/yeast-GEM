@@ -13,6 +13,7 @@ import os
 import warnings
 from copy import copy
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 import cobra
 from cobra.io import validate_sbml_model, write_sbml_model
@@ -99,15 +100,59 @@ def load_yeast_yaml(*, make_bigg_compliant: bool = False) -> cobra.Model:
 
     model = read_yaml_model(str(YAML_PATH))
     _collapse_single_value_annotations(model)
+    _normalize_metabolite_charges(model)
     # Pass YAML_PATH's own directory explicitly, for the same reason as in
     # save_yeast_yaml: annotate_gem's REPO_PATH-derived default is a
     # separate binding from annotate.py's own module load time.
     annotate_gem(model, YAML_PATH.parent)
     load_delta_g(model)
+    _escape_notes_for_sbml(model)
 
     if make_bigg_compliant and "x" not in model.compartments:
         _make_bigg_compliant(model)
     return model
+
+
+def _normalize_metabolite_charges(model: cobra.Model) -> None:
+    """Convert every metabolite's ``.charge`` to ``int``, in place.
+
+    ``model/yeast-GEM.yml`` stores charge as a float (``charge: -3.0``,
+    matching RAVEN's ``metCharges`` double-precision array), and
+    ``raven_toolbox.io.read_yaml_model`` reads it faithfully as a Python
+    ``float``. ``cobra.io.write_sbml_model`` silently writes ``0`` for a
+    float charge instead of raising -- SBML's ``fbc:charge`` is an
+    integer attribute, and cobrapy's FBC writer does not coerce it.
+    Confirmed directly: writing a yml-loaded model and reading it back
+    zeroed every nonzero charge, with no error; converting to ``int``
+    first (chemically always a whole number) round-trips correctly.
+    """
+    for met in model.metabolites:
+        if met.charge is not None:
+            met.charge = int(met.charge)
+
+
+def _escape_notes_for_sbml(model: cobra.Model) -> None:
+    """XML-escape every ``.notes`` string value, in place.
+
+    ``model/yeast-GEM.yml`` stores each entity's free-text notes/
+    references as plain YAML scalars, so a value containing a literal
+    ``<``/``>``/``&`` (e.g. a DOI like
+    ``...15:13<1377::AID-YEA473>3.0.CO;2-0``) reaches cobra unescaped.
+    cobra's SBML writer embeds ``.notes`` values directly into an XHTML
+    fragment without escaping them itself, so an unescaped ``<...>`` that
+    happens to look like a tag corrupts the notes body for that entity --
+    confirmed directly: writing such a reaction's notes throws a libSBML
+    error, and cobra's writer silently drops all metabolite/reaction data
+    serialized afterwards rather than failing loudly.
+    """
+    for collection in (model.reactions, model.metabolites, model.genes):
+        for entity in collection:
+            if not entity.notes:
+                continue
+            entity.notes = {
+                key: escape(value) if isinstance(value, str) else value
+                for key, value in entity.notes.items()
+            }
 
 
 def _collapse_single_value_annotations(model: cobra.Model) -> None:
