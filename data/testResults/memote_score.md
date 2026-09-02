@@ -6,7 +6,7 @@ Skipped (slow) tests: test_stoichiometric_consistency, test_unconserved_metaboli
 
 | Section | Score |
 | --- | ---: |
-| consistency | 42.1% |
+| consistency | 42.0% |
 | annotation_met | 72.5% |
 | annotation_rxn | 71.0% |
 | annotation_gene | 56.9% |
@@ -18,7 +18,7 @@ Skipped (slow) tests: test_stoichiometric_consistency, test_unconserved_metaboli
 | --- | --- | ---: |
 | Consistency | Stoichiometric Consistency | 100.0% |
 | Consistency | Mass Balance | 5.3% |
-| Consistency | Charge Balance | 0.0% |
+| Consistency | Charge Balance | 0.4% |
 | Consistency | Metabolite Connectivity | 0.0% |
 | Consistency | Unbounded Flux In Default Medium | 100.0% |
 | Annotation - Metabolites | Presence of Metabolite Annotation | 0.0% |
