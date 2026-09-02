@@ -33,7 +33,7 @@ import memote.suite.api as api
 from memote.suite.reporting import ReportConfiguration, SnapshotReport
 from raven_toolbox.io import read_yaml_model
 
-from yeastgem import load_yeast_yaml
+from yeastgem import add_sbo_terms, load_yeast_yaml
 
 # The tests that dominate MEMOTE runtime on a genome-scale model:
 #  * consistency: MILP / flux-variability / per-metabolite optimisation over
@@ -205,6 +205,12 @@ def main() -> int:
         if args.model is not None
         else load_yeast_yaml()
     )
+
+    # Fill-only-if-missing (same semantic add_sbo_terms uses everywhere
+    # else), so this is a no-op once model/yeast-GEM.yml itself carries
+    # gene SBO terms -- it just stops memote's score from depending on
+    # that having happened yet.
+    add_sbo_terms(model)
 
     scored, config = snapshot(model)
 
