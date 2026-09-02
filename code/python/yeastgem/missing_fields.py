@@ -31,6 +31,16 @@ _RXN_CSV = _DELTAG_DIR / "model_rxnDeltaG.csv"
 _DELTA_G_NOTE_KEY = "deltaG"
 
 
+# SBO:0000243 ("gene"), the same constant every gene in a committed
+# model/yeast-GEM.xml already carries -- previously supplied only as a
+# side effect of RAVEN's MATLAB SBML writer, never by any curation code
+# (raven_toolbox.annotation.add_sbo_terms and the MATLAB addSBOterms.m it
+# is ported from both only ever covered mets/rxns). Kept local to
+# yeast-GEM rather than added to the shared upstream helper, mirroring
+# addSBOterms.m's own local (not RAVEN-generic) gene handling.
+_GENE_SBO = "SBO:0000243"
+
+
 def add_sbo_terms(model: cobra.Model) -> cobra.Model:
     """Assign SBO terms with yeast-GEM defaults.
 
@@ -41,8 +51,16 @@ def add_sbo_terms(model: cobra.Model) -> cobra.Model:
     Fixing that bug is a future behaviour-change PR; flip this flag to
     ``False`` (the upstream default) once the change is lock-stepped
     with the MATLAB side.
+
+    Also fills ``gene.annotation['sbo']`` with ``SBO:0000243`` for any
+    gene that does not already carry one -- same "fill" semantic the
+    upstream helper uses for mets/rxns (only set when missing/empty).
     """
-    return _ra_add_sbo_terms(model, only_last_reaction_for_pseudo=True)
+    model = _ra_add_sbo_terms(model, only_last_reaction_for_pseudo=True)
+    for gene in model.genes:
+        if not gene.annotation.get("sbo"):
+            gene.annotation["sbo"] = _GENE_SBO
+    return model
 
 
 def load_delta_g(model: cobra.Model, *,

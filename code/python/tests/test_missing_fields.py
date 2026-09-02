@@ -25,6 +25,20 @@ def test_add_sbo_terms_assigns_every_rxn(model):
         assert rxn.annotation.get("sbo"), f"{rxn.id} has no SBO term"
 
 
+def test_add_sbo_terms_assigns_every_gene(model):
+    mutated = model.copy()
+    add_sbo_terms(mutated)
+    for gene in mutated.genes:
+        assert gene.annotation.get("sbo"), f"{gene.id} has no SBO term"
+
+
+def test_genes_get_gene_sbo(model):
+    mutated = model.copy()
+    add_sbo_terms(mutated)
+    for gene in mutated.genes:
+        assert gene.annotation["sbo"] == "SBO:0000243"
+
+
 def test_biomass_pseudo_metabolites_get_biomass_sbo(model):
     mutated = model.copy()
     add_sbo_terms(mutated)
@@ -65,6 +79,14 @@ def test_fill_semantic_preserves_existing(model):
     met.annotation["sbo"] = "SBO:0009999"  # arbitrary pre-existing value
     add_sbo_terms(mutated)
     assert met.annotation["sbo"] == "SBO:0009999"
+
+
+def test_fill_semantic_preserves_existing_gene_sbo(model):
+    mutated = model.copy()
+    gene = mutated.genes[0]
+    gene.annotation["sbo"] = "SBO:0009999"  # arbitrary pre-existing value
+    add_sbo_terms(mutated)
+    assert gene.annotation["sbo"] == "SBO:0009999"
 
 
 def test_transport_reaction_detection(model):
