@@ -73,7 +73,7 @@ Please see the installation instructions for each software package.
 
 * MATLAB-based  
   If you want to contribute to the development of yeast-GEM, or otherwise want to run any of the [provided](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code) MATLAB functions, then the following software is required:
-  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later, **except** for reading or writing `model/yeast-GEM.yml` (what `loadYeastYaml`/`saveYeastYaml` do by default): that needs RAVEN's `develop3` branch, until its changes reach a numbered release
+  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later, **except** for reading or writing `model/yeast-GEM.yml` (what `loadYeastYaml`/`saveYeastYaml` do by default): that needs RAVEN's `v3.0.0-rc1` tag (or later), until its changes reach a numbered stable release
 
 * Python-based  
   The `yeastgem` package (`code/python/`) is the actively maintained Python
