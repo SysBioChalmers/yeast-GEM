@@ -7,7 +7,7 @@ r_0005	1,3-beta-glucan synthase		2.4.1.34	sce00500;sce04011	R03118	MNXR143499
 r_0006	1,6-beta-glucan synthase					
 r_0007	1-(5-phosphoribosyl)-5-[(5-phosphoribosylamino)methylideneamino)imidazole-4-carboxamide isomerase	PRMICI	5.3.1.16	sce00340;sce01110;sce01230	R04640	MNXR103169
 r_0012	1-pyrroline-5-carboxylate dehydrogenase	P5CDm	1.2.1.88	sce00250;sce00330	R00707	MNXR102301
-r_0013	2,3-diketo-5-methylthio-1-phosphopentane degradation reaction		1.13.11.54;3.1.3.77	sce00270		
+r_0013	2,3-diketo-5-methylthio-1-phosphopentane degradation reaction	DKMPPD	1.13.11.54;3.1.3.77	sce00270		MNXR126322
 r_0014	2,5-diamino-6-ribitylamino-4(3H)-pyrimidinone 5'-phosphate deaminase	DRTPPD	3.5.4.26;5.4.99.28	sce00740	R09377	MNXR112805
 r_0015	2,5-diamino-6-ribosylamino-4(3H)-pyrimidinone 5'-phosphate reductase (NADPH)		1.1.1.302	sce00740	R09376	MNXR112804
 r_0016	2-aceto-2-hydroxybutanoate synthase	ACHBSm	2.2.1.6	sce00290;sce00650;sce00660;sce00770;sce01110;sce01130;sce01210;sce01230	R08648	MNXR95260
@@ -46,7 +46,7 @@ r_0060	3-isopropylmalate dehydratase	IPPMIa	4.2.1.33	sce00290;sce01110;sce01210;
 r_0061	3-isopropylmalate dehydrogenase	IPMD	1.1.1.85	sce00290;sce00660;sce01110;sce01210;sce01230	R04426	MNXR100878
 r_0062	3-methyl-2-oxobutanoate decarboxylase	3MOBDC	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130		MNXR94922
 r_0063	3-methyl-2-oxobutanoate hydroxymethyltransferase	MTMOHT	2.1.2.11	sce00770;sce01110	R01226	MNXR101702
-r_0064	3-methyl-2-oxopentanoate decarboxylase	3MOPDC	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130	R03894	MNXR94925
+r_0064	3-methyl-2-oxopentanoate decarboxylase	3MOPDC	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130	R03894	MNXR198587
 r_0065	3-phosphoshikimate 1-carboxyvinyltransferase	PSCVT	1.1.1.25;2.5.1.19;2.7.1.71;4.2.1.10;4.2.3.4	sce00400;sce01110;sce01130;sce01230	R03460	MNXR103226
 r_0066	4-amino-4-deoxychorismate synthase	ADCS	2.6.1.85	sce00790	R01716	MNXR95440
 r_0067	4-aminobenzoate synthase	ADCL	4.1.3.38		R05553	MNXR95436
@@ -76,7 +76,7 @@ r_0091	6-phosphogluconolactonase	PGL	3.1.1.31	sce00030;sce01110;sce01130;sce0120
 r_0092	6PP-IP5 depyrophosphorylation to IP6		2.7.4.21;2.7.4.24;3.6.1.52;3.6.1.60		R05779	MNXR103044
 r_0093	6PP-IP5 pyrophosphorylation to 5,6-PP2-IP4		2.7.4.21	sce04070;sce04138		
 r_0094	8-amino-7-oxononanoate synthase				R03210	MNXR95854
-r_0095	acetaldehyde condensation	ACALDCD	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130		MNXR95211
+r_0095	acetaldehyde condensation	ACALDCD	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130		MNXR151373
 r_0096	acetohydroxy acid isomeroreductase		1.1.1.86	sce00290;sce00770;sce01110;sce01130;sce01210;sce01230		
 r_0097	acetolactate synthase		2.2.1.6	sce00290;sce00650;sce00660;sce00770;sce01110;sce01130;sce01210;sce01230	R00006	MNXR106335
 r_0099	acetyl-CoA ACP transacylase	ACOATAm		sce00190	R01624	MNXR95376
@@ -116,7 +116,7 @@ r_0133	acyl-CoA:sterol acyltransferase (palmitoleoyl-CoA:fecosterol), ER membran
 r_0134	acyl-CoA:sterol acyltransferase (palmitoleoyl-CoA:lanosterol), ER membrane		2.3.1.26	sce00100		
 r_0135	acyl-CoA:sterol acyltransferase (palmitoleoyl-CoA:zymosterol), ER membrane		2.3.1.26	sce00100		
 r_0137	acylation of GPI inositol at 2 position, GPI-anchor assembly, step 3		2.3.-.-	sce00563		
-r_0138	adenine deaminase	ADD	3.5.4.2	sce00230	R01244	MNXR95443
+r_0138	adenine deaminase	ADD	3.5.4.2	sce00230	R01244	MNXR152871
 r_0139	adenine phosphoribosyltransferase	ADPT	2.4.2.7	sce00230	R00190	MNXR95482
 r_0140	adenosine deaminase	ADA	3.5.4.2	sce00230	R01560	MNXR95432
 r_0142	adenosine kinase	ADNK1	2.7.1.20	sce00230	R00185	MNXR95456
@@ -133,7 +133,7 @@ r_0152	adenylosuccinate lyase	ADSL1r	4.3.2.2	sce00230;sce00250;sce01110;sce01130
 r_0153	adenylosuccinate synthase	ADSS	6.3.4.4	sce00230;sce00250	R01135	MNXR95495
 r_0154	adenylyl-sulfate kinase	ADSK	2.7.1.25	sce00230;sce00920	R00509	MNXR95159
 r_0155	ADP-ribose 2,3-cyclic phosphodiesterase	23CAPPD	3.1.4.37			MNXR117324
-r_0156	alanine glyoxylate aminotransferase	AGTi	2.6.1.44	sce00250;sce00260;sce00630;sce01110;sce01130;sce01200;sce04146	R00369	MNXR95618
+r_0156	alanine glyoxylate aminotransferase	AGTi	2.6.1.44	sce00250;sce00260;sce00630;sce01110;sce01130;sce01200;sce04146	R00369	MNXR180449
 r_0157	alanyl-tRNA synthetase	ALATRS	6.1.1.7	sce00970	R03038	MNXR107903
 r_0158	alcohol acetyltransferase (2-methylbutanol)	OHACT3	2.3.1.84			MNXR102165
 r_0159	alcohol acetyltransferase (ethanol)		2.3.1.84			MNXR117501
@@ -174,7 +174,7 @@ r_0193	alpha,alpha-trehalase	TREHv	3.2.1.28	sce00500	R00010	MNXR95163
 r_0194	alpha,alpha-trehalase	TREH	3.2.1.28	sce00500	R00010	MNXR95163
 r_0195	alpha,alpha-trehalose-phosphate synthase (UDP-forming)	TRE6PS	2.4.1.15;3.1.3.12	sce00500	R00836	MNXR143415
 r_0198	alpha-glucosidase	MALT	3.2.1.10;3.2.1.20	sce00052;sce00500	R00028	MNXR101350
-r_0199	amidase	AMID	6.3.5.7	sce00970	R03180	MNXR95812
+r_0199	amidase	AMID	6.3.5.7	sce00970	R03180	MNXR154640
 r_0200	Aminoacetone:oxygen oxidoreductase(deaminating)(flavin-containing)	AACTOOR			R02529	MNXR95149
 r_0201	Aminobutyraldehyde dehydrogenase	ABUTDm	1.2.1.5	sce00010;sce00071;sce00280;sce00310;sce00330;sce00340;sce00380;sce00410;sce00561;sce00620;sce01110;sce01130	R02549	MNXR95191
 r_0202	anthranilate phosphoribosyltransferase	ANPRT	2.4.2.18	sce00400;sce01110;sce01130;sce01230	R01073	MNXR95842
@@ -280,7 +280,7 @@ r_0313	cysteinyl-tRNA synthetase	CYSTRS	6.1.1.16	sce00970	R03650	MNXR97018
 r_0314	cytidine deaminase	CYTD	3.5.4.5	sce00240	R01878	MNXR97039
 r_0315	cytidine kinase (GTP)	CYTDK2	2.7.1.48	sce00240	R00517	MNXR97042
 r_0317	cytochrome P450 lanosterol 14-alpha-demethylase (NADP)	LNS14DM	1.14.13.70;1.6.2.4	sce00100;sce01110;sce01130	R05640	MNXR109729
-r_0318	cytosine deaminase	CSND	3.5.4.1	sce00240;sce00330	R00974	MNXR96927
+r_0318	cytosine deaminase	CSND	3.5.4.1	sce00240;sce00330	R00974	MNXR198310
 r_0319	D-arabinono-1,4-lactone oxidase		1.1.3.37		R02715	MNXR107687
 r_0320	D-arabinose 1-dehydrogenase (NAD)	ARAB1D1	1.1.1.116		R01574	MNXR95907
 r_0321	D-arabinose 1-dehydrogenase (NADP)	ARAB1D2	1.1.1.117		R01575	MNXR95908
@@ -302,11 +302,11 @@ r_0343	dihydroceramidase		3.5.1.-	sce00600		MNXR126694
 r_0344	dihydrofolate reductase	DHFR	1.5.1.3	sce00670;sce00790	R00939	MNXR97401
 r_0345	dihydrofolate reductase	DHFRim	1.5.1.3	sce00670;sce00790	R00939	MNXR97401
 r_0346	dihydrofolate synthase	DHFS	6.3.2.12	sce00790	R02237	MNXR140043
-r_0347	dihydroneopterin aldolase		2.5.1.15;2.7.6.3;4.1.2.25	sce00790	R03504	MNXR97415
-r_0348	dihydroneopterin monophosphate dephosphorylase	DNMPPA	3.6.-.-		R04621	MNXR126238
+r_0347	dihydroneopterin aldolase	DHNPA	2.5.1.15;2.7.6.3;4.1.2.25	sce00790	R03504	MNXR151400
+r_0348	dihydroneopterin monophosphate dephosphorylase	DNMPPA	3.6.-.-		R04621	MNXR151449
 r_0349	dihydroorotase	DHORTS	3.5.2.3	sce00240	R01993	MNXR97428
-r_0350	dihydropteroate synthase		2.5.1.15;2.7.6.3;4.1.2.25	sce00790	R03066	MNXR140386
-r_0351	dihydropteroate synthase	FOLD3m	2.5.1.15;2.7.6.3;4.1.2.25	sce00790	R03067	MNXR140085
+r_0350	dihydropteroate synthase	DHPS	2.5.1.15;2.7.6.3;4.1.2.25	sce00790	R03066	MNXR140386
+r_0351	dihydropteroate synthase	FOLD3m	2.5.1.15;2.7.6.3;4.1.2.25	sce00790	R03067	MNXR151976
 r_0352	dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylbutanoate)	DHAD1m	4.2.1.9	sce00290;sce00770;sce01110;sce01130;sce01210;sce01230	R04441	MNXR97358
 r_0353	dihydroxy-acid dehydratase (2,3-dihydroxy-3-methylpentanoate)	DHAD2m	4.2.1.9	sce00290;sce00770;sce01110;sce01130;sce01210;sce01230	R05070	MNXR97359
 r_0354	dihydroxyacetone kinase	DHAK	2.7.1.28;2.7.1.29	sce00051;sce00561;sce01200	R01011	MNXR97361
@@ -323,7 +323,7 @@ r_0364	dUTP diphosphatase	DUTPDP	3.6.1.23	sce00240	R02100	MNXR97822
 r_0365	endopolygalacturonase	EPGALURSe	3.2.1.15	sce00040		
 r_0366	enolase	ENO	4.2.1.11	sce00010;sce01110;sce01130;sce01200;sce01230;sce03018	R00658	MNXR97932
 r_0368	ethanolamine kinase	ETHAK	2.7.1.32;2.7.1.82	sce00564	R01468	MNXR97969
-r_0369	ethyl acetate-hydrolyzing esterase		3.1.-.-			MNXR121010
+r_0369	ethyl acetate-hydrolyzing esterase		3.1.-.-		R12515	MNXR121010
 r_0370	exo-1,3-beta-glucan glucohydrase	13BGHe	3.2.1.58;3.2.1.6	sce00500	R00308	MNXR106465
 r_0373	farnesyltranstransferase	FRTT	2.5.1.-;2.5.1.1;2.5.1.10;2.5.1.29	sce00900;sce01110;sce01130	R02061	MNXR99650
 r_0399	fatty-acid--CoA ligase (decanoate)		6.2.1.3	sce00061;sce00071;sce01212;sce04146		MNXR118203
@@ -381,7 +381,7 @@ r_0485	glutathione synthetase	GTHS	6.3.2.3	sce00270;sce00480	R00497	MNXR100450
 r_0486	glyceraldehyde-3-phosphate dehydrogenase	GAPD	1.2.1.12	sce00010;sce01110;sce01130;sce01200;sce01230	R01061	MNXR100040
 r_0487	glycerol dehydrogenase (NADP-dependent)	GLYCDy	1.1.1.156	sce00561	R01039	MNXR100327
 r_0488	glycerol kinase	GLYK	2.7.1.30	sce00561	R00847	MNXR100348
-r_0489	glycerol-3-phosphatase	G3PT	3.1.3.21	sce00561	R00841	MNXR99894
+r_0489	glycerol-3-phosphatase	G3PT	3.1.3.21	sce00561	R00841	MNXR149860
 r_0490	glycerol-3-phosphate dehydrogenase (fad)	G3PDm	1.1.5.3	sce00564;sce01110	R00848	MNXR99875
 r_0491	glycerol-3-phosphate dehydrogenase (NAD)	G3PD1ir	1.1.1.8	sce00564;sce01110;sce04011	R00842	MNXR99876
 r_0492	glycerol-3-phosphate dehydrogenase (NAD)	G3PD1irm	1.1.1.8	sce00564;sce01110;sce04011	R00842	MNXR99876
@@ -409,7 +409,7 @@ r_0522	GPI-anchor assembly, step 8		2.4.1.-	sce00563
 r_0523	GPI-anchor assembly, step 9		2.-.-.-	sce00563		
 r_0524	GTP cyclohydrolase I	GTPCI	3.5.4.16	sce00790	R00424	MNXR100453
 r_0525	GTP cyclohydrolase II	GTPCII2	3.5.4.25	sce00740;sce00790;sce01110	R00425	MNXR100455
-r_0526	guanine deaminase	GUAD	3.5.4.3	sce00230	R01676	MNXR100464
+r_0526	guanine deaminase	GUAD	3.5.4.3	sce00230	R01676	MNXR145141
 r_0527	guanine phosphoribosyltransferase	GUAPRT	2.4.2.8	sce00230;sce01110	R01229	MNXR100409
 r_0528	guanylate kinase	GK1	2.7.4.8	sce00230	R00332	MNXR100144
 r_0529	guanylate kinase (GMP:dATP)	GK2	2.7.4.8	sce00230		MNXR100145
@@ -450,8 +450,8 @@ r_0564	imidazoleglycerol-phosphate dehydratase	IGPDH	4.2.1.19	sce00340;sce01110;
 r_0565	IMP dehydrogenase	IMPD	1.1.1.205	sce00230;sce01110	R01130	MNXR100830
 r_0566	indole-3-glycerol-phosphate synthase	IGPS	4.1.1.48;4.1.3.27	sce00400;sce01110;sce01130;sce01230	R03508	MNXR100814
 r_0567	indole-3-pyruvate decarboxylase	INDPYRD	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130	R01974	MNXR100837
-r_0568	inorganic diphosphatase	PPA	3.6.1.1	sce00190	R00004	MNXR100808
-r_0569	inorganic diphosphatase	PPAm	3.6.1.1	sce00190	R00004	MNXR100808
+r_0568	inorganic diphosphatase	PPA	3.6.1.1	sce00190	R00004	MNXR145285
+r_0569	inorganic diphosphatase	PPAm	3.6.1.1	sce00190	R00004	MNXR145285
 r_0570	inosine monophosphate cyclohydrolase	IMPC	2.1.2.3;3.5.4.10	sce00230;sce00670;sce01110;sce01130	R01127	MNXR100783
 r_0571	inositol-1,3,4,5,6-pentakisphosphate 2-kinase		2.7.1.158	sce00562;sce04070	R05202	MNXR109392
 r_0572	inositol-1,3,4,5-triphosphate 6-kinase, nucleus		2.7.1.151	sce00562;sce04070;sce04138	R10953	MNXR114260
@@ -518,12 +518,12 @@ r_0652	IPS phospholipase C		3.1.4.-	sce00600
 r_0653	IPS phospholipase C		3.1.4.-	sce00600		
 r_0654	IPS phospholipase C		3.1.4.-	sce00600		
 r_0655	IPS phospholipase C		3.1.4.-	sce00600		
-r_0656	isoamyl acetate-hydrolyzing esterase	ACHLE1	3.1.-.-			MNXR95262
+r_0656	isoamyl acetate-hydrolyzing esterase	ACHLE1	3.1.-.-		R12516	MNXR95262
 r_0657	isobutyl acetate-hydrolyzing esterase	ACHLE2	3.1.-.-			MNXR95263
 r_0658	isocitrate dehydrogenase (NAD+)	ICDHxm	1.1.1.41	sce00020;sce01110;sce01130;sce01200;sce01210;sce01230	R00709	MNXR100782
 r_0659	isocitrate dehydrogenase (NADP)	ICDHyr	1.1.1.42	sce00020;sce00480;sce01110;sce01130;sce01200;sce01210;sce01230;sce04146	R00267	MNXR100781
 r_0661	isocitrate dehydrogenase (NADP+), peroxisomal	ICDHyp	1.1.1.42	sce00020;sce00480;sce01110;sce01130;sce01200;sce01210;sce01230;sce04146	R00267	MNXR100781
-r_0662	isocitrate lyase	ICL	4.1.3.1;4.1.3.30	sce00630;sce01110;sce01200	R00479	MNXR100789
+r_0662	isocitrate lyase	ICL	4.1.3.1;4.1.3.30	sce00630;sce01110;sce01200	R00479	MNXR191123
 r_0663	isoleucine transaminase	ILETA	2.6.1.42	sce00270;sce00280;sce00290;sce00770;sce01110;sce01130;sce01210;sce01230	R02199	MNXR96228
 r_0664	isoleucine transaminase	ILETAm	2.6.1.42	sce00270;sce00280;sce00290;sce00770;sce01110;sce01130;sce01210;sce01230	R02199	MNXR96228
 r_0665	isoleucyl-tRNA synthetase	ILETRS	6.1.1.5	sce00970	R03656	MNXR100820
@@ -536,17 +536,17 @@ r_0671	kynurenine 3-monooxygenase	KYN3OX	1.14.13.9	sce00380	R01960	MNXR100947
 r_0672	L-1-pyrroline-3-hydroxy-5-carboxylate dehydrogenase	PHCDm	1.2.1.88	sce00250;sce00330	R04444	MNXR102616
 r_0673	L-4-hydroxyglutamate semialdehyde dehydrogenase	4HGLSDm	1.2.1.88	sce00250;sce00330	R05051	MNXR95015
 r_0674	L-alanine transaminase	ALATA_Lm	2.6.1.2	sce00220;sce00250;sce01200;sce01210;sce01230	R00258	MNXR95698
-r_0675	L-allo-threonine aldolase	THRA2	4.1.2.48	sce00260;sce01110;sce01130;sce01230	R06171	MNXR104834
+r_0675	L-allo-threonine aldolase	THRA2	4.1.2.48	sce00260;sce01110;sce01130;sce01230	R06171	MNXR123226
 r_0676	L-allo-threonine dehydrogenase	ATHRDHr	1.1.1.381	sce00240;sce00260	R10851	MNXR96121
 r_0678	L-aminoadipate-semialdehyde dehydrogenase (NADPH)	AASAD1	1.2.1.31;1.2.1.95;2.7.8.7	sce00300;sce00770;sce01110;sce01130;sce01230		MNXR95156
-r_0679	L-asparaginase	ASNN	3.5.1.1	sce00250;sce01110	R00485	MNXR96056
-r_0680	L-asparaginase	ASNNe	3.5.1.1		R00485	MNXR96056
+r_0679	L-asparaginase	ASNN	3.5.1.1	sce00250;sce01110	R00485	MNXR192441
+r_0680	L-asparaginase	ASNNe	3.5.1.1		R00485	MNXR192441
 r_0681	L-erythro-4-hydroxyglutamate:2-oxoglutarate aminotransferase	EHGLAT	2.6.1.1	sce00220;sce00250;sce00270;sce00330;sce00350;sce00360;sce00400;sce01110;sce01130;sce01200;sce01210;sce01230	R03266	MNXR97908
 r_0682	L-erythro-4-hydroxyglutamate:2-oxoglutarate aminotransferase	EHGLATm	2.6.1.1	sce00220;sce00250;sce00270;sce00330;sce00350;sce00360;sce00400;sce01110;sce01130;sce01200;sce01210;sce01230	R03266	MNXR97908
 r_0683	L-erythro-4-hydroxyglutamate:2-oxoglutarate aminotransferase	EHGLATp	2.6.1.1	sce00220;sce00250;sce00270;sce00330;sce00350;sce00360;sce00400;sce01110;sce01130;sce01200;sce01210;sce01230	R03266	MNXR97908
 r_0687	L-hydroxyproline reductase (NADP)		1.5.1.2		R03293	MNXR100699
 r_0688	L-lactaldehyde:NADP+ 1-oxidoreductase	LALDO3	1.1.1.-;1.1.1.21;1.1.1.265;1.1.1.283	sce00040;sce00620;sce00640;sce04011	R02260	MNXR101010
-r_0689	L-serine deaminase	SERD_L	4.3.1.17;4.3.1.19	sce00260;sce00270;sce00290;sce01110;sce01130;sce01200;sce01230	R00220	MNXR104339
+r_0689	L-serine deaminase	SERD_L	4.3.1.17;4.3.1.19	sce00260;sce00270;sce00290;sce01110;sce01130;sce01200;sce01230	R00220	MNXR146411
 r_0690	L-serine dehydrogenase	LSERDHr	1.1.1.381	sce00240;sce00260	R06126	MNXR101242
 r_0691	L-sorbitol dehydrogenase (L-sorbose-producing)	SBTD_L	1.1.1.14	sce00040;sce00051		MNXR104284
 r_0692	L-threonine deaminase	THRD_L	4.3.1.17;4.3.1.19	sce00260;sce00270;sce00290;sce01110;sce01130;sce01200;sce01230	R00996	MNXR104714
@@ -655,7 +655,7 @@ r_0812	O-acetylhomoserine (thiol)-lyase	AHSERL	2.5.1.47;2.5.1.49	sce00270;sce009
 r_0813	O-acetylhomoserine (thiol)-lyase	AHSERL2	2.5.1.47;2.5.1.49	sce00270;sce00920;sce01110;sce01130;sce01200;sce01230	R01287	MNXR95631
 r_0815	O-succinylhomoserine lyase (L-cysteine)	SHSL1	4.4.1.1	sce00260;sce00270;sce00450;sce01130;sce01230	R03260	MNXR104380
 r_0816	ornithine carbamoyltransferase	OCBT	2.1.3.3	sce00220;sce01110;sce01130;sce01230	R01398	MNXR102137
-r_0817	ornithine decarboxylase	ORNDC	4.1.1.17	sce00330;sce00480;sce01110;sce01130	R00670	MNXR102209
+r_0817	ornithine decarboxylase	ORNDC	4.1.1.17	sce00330;sce00480;sce01110;sce01130	R00670	MNXR179125
 r_0818	ornithine transacetylase	ORNTACim	2.3.1.1;2.3.1.35	sce00220;sce01110;sce01130;sce01210;sce01230	R02282	MNXR102221
 r_0819	ornithine transaminase	ORNTA	2.6.1.13	sce00330;sce01110;sce01130	R00667	MNXR102220
 r_0820	orotate phosphoribosyltransferase	ORPT	2.4.2.10	sce00240	R01870	MNXR102231
@@ -702,16 +702,16 @@ r_0913	phosphoribosylanthranilate isomerase	PRAIi	5.3.1.24	sce00400;sce01110;sce
 r_0914	phosphoribosylglycinamidine synthetase	PRAGSr	6.3.3.1;6.3.4.13	sce00230;sce01110;sce01130	R04144	MNXR103139
 r_0915	phosphoribosylpyrophosphate amidotransferase	GLUPRT	2.4.2.14	sce00230;sce00250;sce01110;sce01130	R01072	MNXR100287
 r_0916	phosphoribosylpyrophosphate synthetase	PRPPS	2.7.6.1	sce00030;sce00230;sce01110;sce01130;sce01200;sce01230		MNXR103215
-r_0917	phosphoserine phosphatase (L-serine)	PSP_L	3.1.3.3	sce00260;sce01130;sce01200;sce01230	R00582	MNXR103260
+r_0917	phosphoserine phosphatase (L-serine)	PSP_L	3.1.3.3	sce00260;sce01130;sce01200;sce01230	R00582	MNXR116163
 r_0918	phosphoserine transaminase	PSERT	2.6.1.52	sce00260;sce00750;sce01130;sce01200;sce01230	R04173	MNXR103225
 r_0919	phytoceramidase		3.5.1.-	sce00600		MNXR126696
 r_0920	phytoceramidase		1.14.14.-	sce00071;sce00380	R06527	MNXR126694
 r_0921	Phytosphingosine phosphate lyase		4.1.2.27	sce00600		MNXR103262
 r_0922	phytosphingosine synthesis		1.-.-.-	sce00600	R06525	MNXR103263
-r_0929	polyamine oxidase	POLYAO	1.5.3.17	sce00330;sce00410		MNXR103057
+r_0929	polyamine oxidase	POLYAO	1.5.3.17	sce00330;sce00410		MNXR146090
 r_0935	porphobilinogen synthase	PPBNGS	4.2.1.24	sce00860;sce01110	R00036	MNXR103095
-r_0936	poylamine oxidase	POLYAO2	1.5.3.17	sce00330;sce00410	R03899	MNXR103058
-r_0937	poylamine oxidase	POLYAO3	1.5.3.17	sce00330;sce00410	R09076	MNXR103059
+r_0936	poylamine oxidase	POLYAO2	1.5.3.17	sce00330;sce00410	R03899	MNXR146092
+r_0937	poylamine oxidase	POLYAO3	1.5.3.17	sce00330;sce00410	R09076	MNXR146094
 r_0938	prephenate dehydratase	PPNDH	4.2.1.51	sce00400;sce01110;sce01130;sce01230	R01373	MNXR126086
 r_0939	prephenate dehydrogenase (NADP)	PPND2	1.3.1.13	sce00400;sce01110;sce01130	R01730	MNXR103122
 r_0940	proline oxidase (NAD)		1.5.5.2	sce00330;sce01110;sce01130	R10507	MNXR103187
@@ -728,7 +728,7 @@ r_0956	pyridoxine oxidase	PYDXNO	1.4.3.5	sce00750	R01711	MNXR103363
 r_0957	pyrroline-5-carboxylate reductase	P5CR	1.5.1.2	sce00330;sce01110;sce01130;sce01230	R01251	MNXR102302
 r_0958	pyruvate carboxylase	PC	6.4.1.1	sce00020;sce00620;sce01200;sce01230	R00344	MNXR102391
 r_0959	pyruvate decarboxylase	PYRDC	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130	R00224	MNXR103379
-r_0960	pyruvate decarboxylase (acetoin-forming)	PYRDC2	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130		MNXR103380
+r_0960	pyruvate decarboxylase (acetoin-forming)	PYRDC2	4.1.1.-;4.1.1.1;4.1.1.43;4.1.1.74	sce00010;sce01110;sce01130		MNXR151346
 r_0961	pyruvate dehydrogenase	PDHm	1.2.4.1;1.8.1.4;2.3.1.12	sce00010;sce00020;sce00260;sce00280;sce00620;sce00630;sce00640;sce01110;sce01130;sce01200	R00209	MNXR102425
 r_0962	pyruvate kinase	PYK	2.7.1.40	sce00010;sce00230;sce00620;sce01110;sce01130;sce01200;sce01230	R00200	MNXR103371
 r_0963	quinone oxidoreductase		1.14.13.-;2.1.1.114;2.1.1.201;2.1.1.64;2.7.-.-	sce00130;sce01110		
@@ -796,7 +796,7 @@ r_1036	thiamine-phosphate diphosphorylase	TMPPP	2.5.1.3;2.7.1.50	sce00730	R03223
 r_1037	thioredoxin	THIORDXni	1.11.1.15			MNXR104815
 r_1038	thioredoxin reductase (NADPH)	TRDR	1.8.1.9	sce00450	R02016	MNXR104766
 r_1039	thioredoxin reductase (NADPH)	TRDRm	1.8.1.7;1.8.1.9	sce00450;sce00480	R02016	MNXR104766
-r_1040	threonine aldolase	THRA	4.1.2.48	sce00260;sce01110;sce01130;sce01230	R00751	MNXR104833
+r_1040	threonine aldolase	THRA	4.1.2.48	sce00260;sce01110;sce01130;sce01230	R00751	MNXR123226
 r_1041	threonine synthase	THRS	4.2.3.1	sce00260;sce00750;sce01110;sce01230	R01466	MNXR104846
 r_1042	threonyl-tRNA synthetase	THRTRS	6.1.1.3	sce00970	R03663	MNXR104848
 r_1043	threonyl-tRNA synthetase	THRTRSm	6.1.1.3	sce00970	R03663	MNXR104848
@@ -807,7 +807,7 @@ r_1048	transaldolase	TALA	2.2.1.2	sce00030;sce01110;sce01130;sce01200;sce01230		
 r_1049	transketolase 1	TKT1	2.2.1.1	sce00030;sce01110;sce01130;sce01200;sce01230		MNXR104868
 r_1050	transketolase 2	TKT2	2.2.1.1	sce00030;sce01110;sce01130;sce01200;sce01230		MNXR124172
 r_1051	trehalose-phosphatase	TRE6PP	2.4.1.15;3.1.3.12	sce00500	R02778	MNXR104926
-r_1054	triose-phosphate isomerase	TPI	5.3.1.1	sce00010;sce00051;sce00562;sce01110;sce01130;sce01200;sce01230	R01015	MNXR104918
+r_1054	triose-phosphate isomerase	TPI	5.3.1.1	sce00010;sce00051;sce00562;sce01110;sce01130;sce01200;sce01230	R01015	MNXR146573
 r_1055	tryptophan synthase (indoleglycerol phosphate)	TRPS1	4.2.1.20	sce00260;sce00400;sce01110;sce01130;sce01230		MNXR132685
 r_1056	tryptophan transaminase	TRPTA	2.6.1.39;2.6.1.57	sce00130;sce00270;sce00300;sce00350;sce00360;sce00380;sce00400;sce01110;sce01130;sce01210;sce01230	R00684	MNXR104947
 r_1057	tryptophanyl-tRNA synthetase	TRPTRS	6.1.1.2	sce00970	R03664	MNXR104948
@@ -3570,19 +3570,19 @@ r_4211	D-ribose 5-phosphate,D-glyceraldehyde 3-phosphate pyridoxal 5-phosphate-l
 r_4212	D-ribulose 5-phosphate,D-glyceraldehyde 3-phosphate pyridoxal 5-phosphate-lyase	PYDXS	4.3.3.6;3.5.1.2		R07456	MNXR103369
 r_4214	L-cysteinylglycine dipeptidase	AMPTASECG	3.4.13.-		R00899	MNXR95828
 r_4216	riboflavin-5-phosphate phosphohydrolase	ACP1_FMN	3.1.3.2		R00548	MNXR95393
-r_4217	Fe(II):oxygen oxidoreductase; Fe2+:oxygen oxidoreductase		1.16.3.1		R00078	MNXR99561
+r_4217	Fe(II):oxygen oxidoreductase; Fe2+:oxygen oxidoreductase	FERO	1.16.3.1		R00078	MNXR99561
 r_4218	D-aminoacyl-tRNA deacylase (DTD) (EC 3.1.1.96) (D-tyrosyl-tRNA(Tyr) deacylase) (Gly-tRNA(Ala) deacylase) (EC 3.1.1.-)		3.1.1.96;3.1.1.-			
 r_4219	D-aminoacyl-tRNA deacylase (DTD) (EC 3.1.1.96) (D-tyrosyl-tRNA(Tyr) deacylase) (Gly-tRNA(Ala) deacylase) (EC 3.1.1.-)		3.1.1.96;3.1.1.-			
-r_4220	4-nitrophenyl phosphate phosphohydrolase		3.1.3.41		R03024	MNXR107896
+r_4220	4-nitrophenyl phosphate phosphohydrolase	R_r0587	3.1.3.41		R03024	MNXR105353
 r_4221	D-Iditol:NAD+ 2-oxidoreductase	RE1317C	1.1.1.14		R02896	MNXR107809
 r_4222	ATP:alpha-D-galactose 1-phosphotransferase	GALK2			R01092	MNXR99985
 r_4223	3-Hydroxy-2-methylpropanoyl-CoA hydrolase		3.1.2.4		R03352	MNXR108112
 r_4224	Sodium transport ATPase 5 (EC 3.6.3.7)	NAabcO	3.6.3.7			
 r_4226	L-Alanine:2-oxoglutarate aminotransferase	ALATA_L	2.6.1.2		R00258	MNXR95698
-r_4227	2-phenylacetamide amidohydrolase	AMID2	3.5.1.4		R02540	MNXR95813
-r_4228	Indole-3-acetamide amidohydrolase	AMID3	3.5.1.4		R03096	MNXR95814
+r_4227	2-phenylacetamide amidohydrolase	AMID2	3.5.1.4		R02540	MNXR152978
+r_4228	Indole-3-acetamide amidohydrolase	AMID3	3.5.1.4		R03096	MNXR154639
 r_4230	Probable amidase (EC 3.5.1.4)	AMID5	3.5.1.4		R05551	MNXR95816
-r_4231	Acylamide aminohydrolase		3.5.1.4			
+r_4231	Acylamide aminohydrolase		3.5.1.4		R05590	MNXR109702
 r_4232	ATP:D-Gluconate 6-phosphotransferase	GNK	2.7.1.12		R01737	MNXR100390
 r_4234	Phosphatidylinositol N-acetylglucosaminyltransferase subunit GPI19 (GPI-GlcNAc transferase complex subunit GPI19) (GPI-GnT subunit GPI19) (EC 2.4.1.198)		2.4.1.198		R05916	MNXR109940
 r_4236	(R)-lactate hydro-lyase	GLYOX3	4.2.1.130		R09796	MNXR100354
@@ -3594,7 +3594,7 @@ r_4243	Alpha-1,3/1,6-mannosyltransferase ALG2 (EC 2.4.1.132) (EC 2.4.1.257) (Asp
 r_4244	GDP-D-mannose:D-Man-alpha-(1->3)-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-6-mannosyltransferase		2.4.1.132;2.4.1.257		R06238	MNXR110084
 r_4245	2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate 6-phosphomannohydrolase		3.2.1.24		R09645	MNXR101397
 r_4247	ATP:L-threonyl,bicarbonate adenylyltransferase		2.7.7.87		R10463	MNXR113802
-r_4248	D-serine ammonia-lyase	SERD_D	4.3.1.18		R00221	MNXR104338
+r_4248	D-serine ammonia-lyase	SERD_D	4.3.1.18		R00221	MNXR146411
 r_4249	O3-acetyl-L-serine:hydrogen-sulfide 2-amino-2-carboxyethyltransferase; O3-acetyl-L-serine acetate-lyase (adding hydrogen sulfide)	CYSS_m	2.5.1.47		R00897	MNXR97007
 r_4250	Dolichyl-diphosphate phosphohydrolase		3.6.1.43		R01004	MNXR106783
 r_4253	dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,2-glucosyltransferase		2.4.1.256		R06264	MNXR110098
@@ -3602,7 +3602,7 @@ r_4254	nitric oxide, NADH2:oxygen oxidoreductase	NODOx	1.14.12.17		R05724	MNXR10
 r_4255	nitric oxide, NADPH2:oxygen oxidoreductase	NODOy	1.14.12.17		R05725	MNXR101997
 r_4260	Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase homolog 1)		3.5.1.-		R12024	
 r_4261	Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase homolog 1)		3.5.1.-		R12024	
-r_4262	citrate hydroxymutase	ACONTm	4.2.1.-		R01324	MNXR95384
+r_4262	citrate hydroxymutase	ACONTm	4.2.1.-		R01324	MNXR191571
 r_4263	Anion/proton exchange transporter GEF1 (CLC protein GEF1) (ClC-A) (ClC-Y1) (Voltage-gated chloride channel) [Cleaved into: GEF1 N-terminal; GEF1 C-terminal]					
 r_4264	succinate:NAD+ oxidoreductase		1.3.1.6		R00402	MNXR106516
 r_4266	Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)	NTPP5	3.6.1.9			
@@ -3655,7 +3655,7 @@ r_4319	Dextrin 6-alpha-D-glucanohydrolase		3.2.1.10		R01791	MNXR107171
 r_4320	dolichyl beta-D-glucosyl phosphate:D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase		2.4.1.267		R06262	MNXR110096
 r_4321	dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase		2.4.1.265		R06263	MNXR110097
 r_4322	GPI mannosyltransferase 4 (EC 2.4.1.-) (GPI mannosyltransferase IV) (GPI-MT-IV)		2.4.1.-		R07129	MNXR110833
-r_4326	thiosulfate:cyanide sulfurtranserase	CYANSTm	2.8.1.1;2.8.1.-		R01931	MNXR138187
+r_4326	thiosulfate:cyanide sulfurtranserase	CYANSTm	2.8.1.1;2.8.1.-		R01931	MNXR151670
 r_4327	Magnesium transporter MRS2, mitochondrial (RNA-splicing protein MRS2)					
 r_4328	UDPglucose:dolichyl-phosphate beta-D-glucosyltransferase		2.4.1.117		R01005	MNXR143462
 r_4329	Putative sulfate transporter YPR003C	HMR_9626				
@@ -3665,7 +3665,7 @@ r_4332	Protein PNS1 (pH nine-sensitive protein 1)	CHOLtu
 r_4333	Polyphosphate phosphohydrolase		3.6.1.10;3.6.1.-;3.6.1.11		R03042	MNXR107906
 r_4334	Copper-transporting ATPase (EC 3.6.3.54) (Cu(2+)-ATPase)		3.6.3.54			
 r_4335	Endopolyphosphatase (EC 3.6.1.10) (Deoxyadenosine triphosphate phosphohydrolase) (dATP phosphohydrolase) (EC 3.6.1.-) (Exopolyphosphatase) (EC 3.6.1.11) (Phosphate metabolism protein 5)	NTP2	3.6.1.10;3.6.1.-;3.6.1.11			
-r_4336	Monoamide of a dicarboxylic acid amidohydrolase	r0085	3.5.1.3		R03804	MNXR108439
+r_4336	Monoamide of a dicarboxylic acid amidohydrolase	r0085	3.5.1.3		R03804	MNXR105306
 r_4337	Iron-sulfur clusters transporter ATM1, mitochondrial					
 r_4338	Oligo-1,6-glucosidase IMA2 (EC 3.2.1.10) (Alpha-glucosidase) (Isomaltase 2)		3.2.1.10		R06199	MNXR110064
 r_4339	UDP-N-acetylglucosamine transporter YEA4					
@@ -3681,7 +3681,7 @@ r_4349	2-Phosphoglycolate transport in/out via proton symport	2PGLYCt6				MNXR94
 r_4350	2-phosphoglycolate phosphohydrolase	PGLYCP	3.1.3.18		R01334	MNXR102543
 r_4351	alkaline phosphatase		3.1.3.-			MNXR118734
 r_4352	cysteamine S-phosphate transport via proton symport					
-r_4353	Cysteamine:oxygen oxidoreductase		1.13.11.19		R02467	MNXR107528
+r_4353	Cysteamine:oxygen oxidoreductase	CYSAMO	1.13.11.19		R02467	MNXR96988
 r_4354	hypotaurine:NAD+ oxidoreductase		1.8.1.3		R01681	MNXR107116
 r_4355	2-aminobutanoate:2-oxoglutarate aminotransferase	RE2034C	2.6.1.42		R10991	MNXR103594
 r_4356	2-aminobutyrate transport					
@@ -3691,7 +3691,7 @@ r_4359	Uridine 3'-monophosphate phosphohydrolase	3NUCLE2	3.1.3.6		R01877	MNXR949
 r_4360	3'-UMP transport in via proton symport	3UMPt6				MNXR94982
 r_4361	Gly-Met transport via proton symport					MNXR137072
 r_4362	dipeptidase		3.4.13.18			MNXR123343
-r_4363	R07420				R07420	MNXR111061
+r_4363	R07420	CRTNsyn			R07420	MNXR96916
 r_4364	N-phosphocreatine transport					
 r_4365	creatinine transport					
 r_4366	ATP:L-arginine Nomega-phosphotransferase	ARGKr	2.7.3.3		R00554	MNXR95943
@@ -3731,11 +3731,11 @@ r_4399	L-alanyl-L-glutamate transport in via proton symport					MNXR101006
 r_4400	Maltodextrin glucosidase (maltotriose)	MLTG1e	3.2.1.20		R05196	MNXR101619
 r_4401	Ala-Thr transport via proton symport					
 r_4402	Ala-Thr transport via proton symport (extracellular to cytosol)					
-r_4403	Triphosphate phosphohydrolase		3.6.1.25		R00138	MNXR103069
+r_4403	Triphosphate phosphohydrolase	PPA2	3.6.1.25		R00138	MNXR103069
 r_4404	Gly-Asn transport via proton symport (extracellular to cytosol)					
 r_4405	glycerol 1-phosphate transport					
 r_4406	D-O-Phosphoserine transport in/out via proton symport	PSER_Dt6				MNXR103244
-r_4407	D-O-Phosphoserine phosphohydrolase	PSP_D	3.1.3.3		R02853	MNXR103265
+r_4407	D-O-Phosphoserine phosphohydrolase	PSP_D	3.1.3.3		R02853	MNXR116163
 r_4408	L-alanyl-L-glutamate transport in via proton symport					MNXR101006
 r_4409	L-alanyl-gamma-L-glutamate peptidase		3.4.13.18			MNXR101011
 r_4410	3-oxalomalate glyoxylate-lyase (oxaloacetate-forming)		4.1.3.13		R00477	MNXR106549
@@ -3763,7 +3763,7 @@ r_4431	ala-L-asp-L transport via proton symport					MNXR137135
 r_4432	FMNH2-dependent alkanesulfonate monooxygenase	FDMO	1.14.14.5			MNXR99485
 r_4433	thymidine 3-monophosphate transport					
 r_4434	thymidine 5-monophosphate transport					
-r_4435	glycerol-1-phosphate phosphohydrolase				R08658	MNXR112173
+r_4435	glycerol-1-phosphate phosphohydrolase				R08658	MNXR149860
 r_4436	nucleotide-specific phosphatase (thymidine 5'-monophosphate)					
 r_4437	Gly-Glu transport via proton symport (extracellular to cytosol)					
 r_4438	Gly-Glu transport via proton symport (cytosol to vacuole)					
@@ -3809,7 +3809,7 @@ r_4477	Lipoamide transport via proton symport	LPAMt				MNXR137094
 r_4478	L-methionine S-oxide transport via diffusion (extracellular)					MNXR101483
 r_4479	Gly-Asn transport via proton symport					
 r_4480	Cysteamine transport via proton antiport					MNXR137130
-r_4481	Hydrogen sulfide oxidation					
+r_4481	Hydrogen sulfide oxidation	H2SO				MNXR100493
 r_4482	L-alanine transport in via proton symport					MNXR95704
 r_4483	Glycine transport (vacuole)					MNXR100368
 r_4484	O4-succinyl-L-homoserine:hydrogen sulfide S-(3-amino-3-carboxypropyl)transferase; O-succinyl-L-homoserine succinate-lyase (adding hydrogen sulfide)	SHSL2	2.5.1.-;2.5.1.48		R01288	MNXR104382
@@ -3895,13 +3895,13 @@ r_4563	3'-UMP exchange	EX_3ump_e
 r_4564	2',3'-cyclic CMP exchange	EX_23ccmp_e				
 r_4565	2',3'-cyclic UMP exchange	EX_23cump_e				
 r_4567	6-phosphogluconate phosphatase		3.1.3.-;3.1.3.2;3.1.3.29			MNXR123213
-r_4569	Carboxylic ester hydrolases		3.1.1.-;3.1.1.2		R06893	MNXR110621
+r_4569	Carboxylic ester hydrolases		3.1.1.-;3.1.1.2		R06893	MNXR149710
 r_4570	phosphoglycerate dehydrogenase		1.1.1.95		R08198	MNXR111769
 r_4571	seed:rxn00681					MNXR134240
 r_4572	beta-alanine:2-oxoglutarate aminotransferase		2.6.1.19;2.6.1.55		R00908	MNXR95862
 r_4573	3-Oxopropanoate:NAD+ oxidoreductase (decarboxylating, CoA-acetylating)	MMSAD3	1.2.1.-;1.2.1.18;1.2.1.27		R00705	MNXR101665
 r_4574	3-Oxopropanoate:NADP+ oxidoreductase (decarboxylating, CoA-acetylating)		1.2.1.-;1.2.1.18		R00706	MNXR106650
-r_4575	3-oxopropanoate carboxy-lyase		4.1.1.-;4.2.1.155		R06973	MNXR110693
+r_4575	3-oxopropanoate carboxy-lyase	MSADC	4.1.1.-;4.2.1.155		R06973	MNXR110693
 r_4581	(2R,3S)-3-methylmalate:NAD+ oxidoreductase	ERTHMMOR	1.1.1.-;1.1.1.85		R00994	MNXR106779
 r_4582	malate/beta-methylmalate synthase		2.3.3.-			MNXR121603
 r_4583	palmitoyl-CoA hydrolase	FACOAE1829Z12Z	3.1.2.-;3.1.2.2		R08177	MNXR99136
@@ -3972,7 +3972,7 @@ r_4647	hexyl acetate exchange
 r_4648	ethyl decanoate exchange					
 r_4649	mitochondrial ethanol O-acetyltransferase		2.3.1.268		R11957	
 r_4650	ethyl acetate transport, mitochondrial					
-r_4651	pyruvate decarboxylase (aldedyde-forming)		4.1.1.1		R00636	
+r_4651	pyruvate decarboxylase (aldedyde-forming)		4.1.1.1		R00636	MNXR130160
 r_4652	aldehyde dehydrogenase (1-propanol, NAD)		1.1.1.-;1.1.1.1;1.1.1.284	sce00010;sce00071;sce00350;sce01110;sce01130	R00754	
 r_4653	aldehyde dehydrogenase (1-propanol, NAD)		1.1.1.1	sce00010;sce00071;sce00350;sce01110;sce01130		
 r_4654	aldehyde dehydrogenase (1-propanol, NADP)		1.1.1.-;1.1.1.2	sce00010;sce00071;sce00350;sce01110;sce01130		
@@ -3981,7 +3981,7 @@ r_4656	propanal transport, cytosol
 r_4657	1-propyl alcohol transport, cytosol					
 r_4658	propanal exchange					
 r_4659	propanol exchange					
-r_4660	2-oxo acid decarboxylase		4.1.1.1		R00636	
+r_4660	2-oxo acid decarboxylase		4.1.1.1		R00636	MNXR122006
 r_4661	aldehyde dehydrogenase (methionol, NAD)		1.1.1.-;1.1.1.1;1.1.1.284	sce00010;sce00071;sce00350;sce01110;sce01130	R00754	
 r_4662	aldehyde dehydrogenase (methionol, NAD)		1.1.1.1	sce00010;sce00071;sce00350;sce01110;sce01130		
 r_4663	aldehyde dehydrogenase (methionol, NADP)		1.1.1.-;1.1.1.2	sce00010;sce00071;sce00350;sce01110;sce01130		
@@ -3990,7 +3990,7 @@ r_4665	methional transport, cytosol
 r_4666	methionol transport, cytosol					
 r_4667	methional exchange					
 r_4668	methionol exchange					
-r_4669	pyruvate decarboxylase (hydroxy-phenyl)		4.1.1.1			
+r_4669	pyruvate decarboxylase (hydroxy-phenyl)	C4HP	4.1.1.1		R03341	MNXR108106
 r_4670	aldehyde dehydrogenase (tyrosol, NAD)		1.1.1.-;1.1.1.1;1.1.1.284	sce00010;sce00071;sce00350;sce01110;sce01130		
 r_4671	aldehyde dehydrogenase (tyrosol, NAD)		1.1.1.1	sce00010;sce00071;sce00350;sce01110;sce01130		
 r_4672	aldehyde dehydrogenase (tyrosol, NADP)		1.1.1.-;1.1.1.2	sce00010;sce00071;sce00350;sce01110;sce01130		
@@ -4025,16 +4025,16 @@ r_4701	L-cysteine hydrogen-sulfide-lyase (deaminating; pyruvate-forming)		4.4.1.
 r_4702	L-cysteine:2-oxoglutarate aminotransferase		2.6.1.1	sce00280	R00896	
 r_4703	3-mercaptopyruvate sulfurtransferase		2.8.1.2		R03105	
 r_4705	taurocholate transport					
-r_4707	trithionate thiosulfohydrolase		3.12.1.1		R01930	
+r_4707	trithionate thiosulfohydrolase		3.12.1.1		R01930	MNXR107237
 r_4708	hydrogen sulfide exchange					
 r_4710	taurocholate exchange					
 r_4711	ethyl-(2S)-lactate esterase, c		3.1.-.-			
 r_4712	ethyl-(2R)-lactate esterase, c		3.1.-.-			
 r_4713	diethyl-succinate esterase, c		3.1.-.-			
-r_4714	monoethyl-succinate esterase, c		3.1.-.-			
+r_4714	monoethyl-succinate esterase, c		3.1.-.-			MNXR129549
 r_4715	ethyl-benzoate esterase, c		3.1.-.-			
 r_4716	ethyl-pyruvate esterase, c		3.1.-.-			
-r_4717	benzyl-acetate esterase, c		3.1.-.-			
+r_4717	benzyl-acetate esterase, c		3.1.-.-			MNXR136829
 r_4718	isobutyraldehyde dehydrogenase, c		1.2.1.3		R00538	
 r_4719	2-methylbutanal dehydrogenase, c		1.2.1.3		R00538	
 r_4720	ethyl-isobutyrate esterase, c		3.1.-.-			
@@ -4080,7 +4080,7 @@ r_4760	trans-4-hydroxy-L-proline dehydrogenase		1.5.1.2	Arginine and proline met
 r_4761	3-hydroxykynurenine aminotransferase (2-oxoglutarate)		2.6.1.7	Tryptophan metabolism	R04171	MNXR162468
 r_4762	(S)-3-hydroxyisobutyryl-CoA hydrolase		3.1.2.4	Valine, leucine and isoleucine metabolism	R05064	MNXR190062
 r_4763	meso-2,3-butanediol dehydrogenase		1.1.1.-	Butanoate metabolism	R10504	MNXR195390
-r_4764	5-methylcytosine deaminase		3.5.4.1	Pyrimidine metabolism	R01411	MNXR101425
+r_4764	5-methylcytosine deaminase	MCSNAH	3.5.4.1	Pyrimidine metabolism	R01411	MNXR195498
 r_4765	ureidoglycolate hydrolase		4.3.2.3	Purine metabolism		
 r_4766	guanylate cyclase		4.6.1.2	Purine metabolism	R00434	MNXR189648
 r_4767	kynurenine aminotransferase (2-oxoglutarate)		2.6.1.7	Tryptophan metabolism	R12688	MNXR162453
