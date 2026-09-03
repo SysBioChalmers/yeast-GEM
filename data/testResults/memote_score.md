@@ -7,7 +7,7 @@ Skipped (slow) tests: test_stoichiometric_consistency, test_unconserved_metaboli
 | Section | Score |
 | --- | ---: |
 | consistency | 42.0% |
-| annotation_met | 72.5% |
+| annotation_met | 72.6% |
 | annotation_rxn | 71.0% |
 | annotation_gene | 56.9% |
 | annotation_sbo | 88.5% |
@@ -22,11 +22,11 @@ Skipped (slow) tests: test_stoichiometric_consistency, test_unconserved_metaboli
 | Consistency | Metabolite Connectivity | 0.0% |
 | Consistency | Unbounded Flux In Default Medium | 100.0% |
 | Annotation - Metabolites | Presence of Metabolite Annotation | 0.0% |
-| Annotation - Metabolites | Metabolite Annotations Per Database | 73.5% |
+| Annotation - Metabolites | Metabolite Annotations Per Database | 73.2% |
 | Annotation - Metabolites | Metabolite Annotation Conformity Per Database | 36.4% |
 | Annotation - Metabolites | Uniform Metabolite Identifier Namespace | 0.0% |
 | Annotation - Reactions | Presence of Reaction Annotation | 0.0% |
-| Annotation - Reactions | Reaction Annotations Per Database | 82.7% |
+| Annotation - Reactions | Reaction Annotations Per Database | 82.6% |
 | Annotation - Reactions | Reaction Annotation Conformity Per Database | 33.4% |
 | Annotation - Reactions | Uniform Reaction Identifier Namespace | 0.0% |
 | Annotation - Genes | Presence of Gene Annotation | 0.0% |
