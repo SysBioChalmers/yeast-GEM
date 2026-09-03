@@ -61,7 +61,7 @@ You can obtain the model by any of the following methods:
 
 If you want to use the model for your own model simulations, you can use **any software** that accepts SBML L3V1 FBCv3 formatted model files. This includes any of the following:
 * MATLAB-based
-  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later (recommended) — except for loading `model/yeast-GEM.yml` itself, which `loadYeastModel` does by default; see the developer note below  
+  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later (recommended) — except for loading `model/yeast-GEM.yml` itself, which `loadYeastYaml` does by default; see the developer note below  
   * [COBRA Toolbox](https://github.com/opencobra/cobratoolbox)
 
 * Python-based
@@ -73,7 +73,7 @@ Please see the installation instructions for each software package.
 
 * MATLAB-based  
   If you want to contribute to the development of yeast-GEM, or otherwise want to run any of the [provided](https://github.com/SysBioChalmers/yeast-GEM/tree/main/code) MATLAB functions, then the following software is required:
-  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later, **except** for reading or writing `model/yeast-GEM.yml` (what `loadYeastModel`/`saveYeastModel` do by default): that needs RAVEN's `develop3` branch, until its changes reach a numbered release
+  * [RAVEN Toolbox](https://github.com/SysBioChalmers/RAVEN) version 2.8.3 or later, **except** for reading or writing `model/yeast-GEM.yml` (what `loadYeastYaml`/`saveYeastYaml` do by default): that needs RAVEN's `v3.0.0-rc1` tag (or later), until its changes reach a numbered stable release
 
 * Python-based  
   The `yeastgem` package (`code/python/`) is the actively maintained Python
@@ -106,10 +106,11 @@ Make sure to load/save the model with the corresponding wrapper functions:
 * In Matlab:
   ```matlab
   cd ./code
-  model = loadYeastModel(); % loading
-  saveYeastModel(model);    % saving
+  model = loadYeastYaml(); % loading
+  saveYeastYaml(model);    % saving, after editing model
   ```
   * If RAVEN is not installed, you can also use COBRA-native functions (`readCbModel`, `writeCbModel`), but these model-files cannot be committed back to the GitHub repository.
+  * `commitYeastModel(model)` writes a local `.xml`/`.txt`/`.xlsx`/`.mat` build instead, for testing against tools that need SBML; most curation never needs it.
 * In Python, with the [`yeastgem`](code/python/README.md) package:  
 Before opening Python, the following command only needs to be run once, in the yeast-GEM root folder:  
   ```bash
@@ -117,10 +118,11 @@ Before opening Python, the following command only needs to be run once, in the y
   ```
   Afterwards, the model can be loaded in Python with:
   ```python
-  from yeastgem import read_yeast_model, commit_yeast_model
-  model = read_yeast_model()      # loading
-  commit_yeast_model(model)       # saving
+  from yeastgem import load_yeast_yaml, save_yeast_yaml
+  model = load_yeast_yaml()  # loading
+  save_yeast_yaml(model)     # saving, after editing model
   ```
+  `commit_yeast_model(model)` writes a local `.xml`/`.txt` build instead, for testing against tools that need SBML; most curation never needs it.
 
 # Contributing
 

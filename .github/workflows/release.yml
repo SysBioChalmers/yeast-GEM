@@ -144,12 +144,13 @@ jobs:
 
       - uses: matlab-actions/setup-matlab@v3
 
-      # exportForGit alone, not saveYeastModel: saveYeastModel re-applies
-      # minimal media, re-adds SBO terms, re-validates and re-checks
-      # growth -- all needing a solver, all re-deriving what the Python
-      # build step already wrote and already tested. exportForGit just
-      # writes the four derived files from the .yml the Python step
-      # stamped.
+      # exportForGit alone, not commitYeastModel: commitYeastModel
+      # independently re-applies minimal media, re-adds SBO terms,
+      # re-validates and re-checks growth by design (it never trusts that
+      # saveYeastYaml already ran) -- all needing a solver, all
+      # re-deriving what the Python build step already wrote and already
+      # tested. exportForGit just writes the four derived files from the
+      # .yml the Python step stamped.
       - name: Export .xml, .txt, .xlsx and .mat
         uses: matlab-actions/run-command@v3
         with:

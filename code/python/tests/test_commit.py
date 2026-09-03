@@ -10,27 +10,6 @@ from yeastgem import commit_yeast_model, write_yeast_model
 from yeastgem import io as yio
 
 
-@pytest.fixture
-def isolated_paths(model, tmp_path, monkeypatch):
-    """Redirect MODEL_PATH and ΔG CSV paths into a tmp directory.
-
-    Returns the temp directory.
-    """
-    from yeastgem import missing_fields as mf
-
-    model_dir = tmp_path / "model"
-    model_dir.mkdir()
-    model_path = model_dir / "yeast-GEM.xml"
-    monkeypatch.setattr(yio, "MODEL_PATH", model_path)
-    monkeypatch.setattr(yio, "REPO_PATH", tmp_path)
-
-    # ΔG CSV redirection lives in missing_fields.
-    monkeypatch.setattr(mf, "_MET_CSV", tmp_path / "met.csv")
-    monkeypatch.setattr(mf, "_RXN_CSV", tmp_path / "rxn.csv")
-
-    return tmp_path
-
-
 def test_write_yeast_model_deprecation_warning(model, isolated_paths):
     """The shim must warn and still write a usable model."""
     with warnings.catch_warnings(record=True) as caught:
@@ -48,6 +27,30 @@ def test_commit_yeast_model_writes_sbml(model, isolated_paths):
     commit_yeast_model(model.copy())
     assert yio.MODEL_PATH.exists()
     assert yio.MODEL_PATH.stat().st_size > 1_000_000  # ~MB-scale SBML
+
+
+def test_commit_yeast_model_writes_txt_by_default(model, isolated_paths):
+    commit_yeast_model(model.copy())
+    assert (yio.MODEL_PATH.parent / "yeast-GEM.txt").exists()
+
+
+def test_commit_yeast_model_formats_xml_only(model, isolated_paths):
+    commit_yeast_model(model.copy(), formats=("xml",))
+    assert yio.MODEL_PATH.exists()
+    assert not (yio.MODEL_PATH.parent / "yeast-GEM.txt").exists()
+
+
+def test_commit_yeast_model_does_not_write_yaml(model, isolated_paths):
+    """commit_yeast_model must not touch model/yeast-GEM.yml or the
+    annotation tsvs -- that is exclusively save_yeast_yaml's job."""
+    commit_yeast_model(model.copy())
+    assert not yio.YAML_PATH.exists()
+
+
+def test_commit_yeast_model_rejects_unsupported_formats(model, isolated_paths):
+    """'xlsx'/'mat' need RAVEN; only 'xml'/'txt' are available in Python."""
+    with pytest.raises(ValueError, match="xlsx"):
+        commit_yeast_model(model.copy(), formats=("xlsx",))
 
 
 def test_commit_yeast_model_writes_deltag_csvs(model, isolated_paths):

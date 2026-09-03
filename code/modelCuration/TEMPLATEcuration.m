@@ -61,5 +61,5 @@ fprintf('R2 of growth prediction: %.4f\n', R2);
 
 % Save model:
 cd ..
-saveYeastModel(model)
+saveYeastYaml(model)
 cd modelCuration

@@ -7,7 +7,7 @@ sensibly on the real 4000+ reaction model.
 """
 from __future__ import annotations
 
-from yeastgem import ComparisonReport, compare_models, read_yeast_model
+from yeastgem import ComparisonReport, compare_models, load_yeast_yaml
 
 
 def test_real_model_equal_to_itself(model):
@@ -17,8 +17,8 @@ def test_real_model_equal_to_itself(model):
 
 
 def test_real_model_independent_loads_are_equal():
-    a = read_yeast_model()
-    b = read_yeast_model()
+    a = load_yeast_yaml()
+    b = load_yeast_yaml()
     assert compare_models(a, b).equal
 
 

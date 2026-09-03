@@ -4,7 +4,7 @@ function model = GetMNXID(model,type,level)
 %   In this function, we call the function 'mapIDsViaMNXref.m' from /code/missingFields, which is orginiated from
 %   HMR3, and the part 'Load MNXref data structure' is modified to read the reference data from RAVEN.
 %
-%   model                   a model structure;please load yeast model using function 'loadYeastModel.m' from
+%   model                   a model structure;please load yeast model using function 'loadYeastYaml.m' from
 %                           yeast-GEM github repository.
 %   type                    type = 'mets' or 'rxns'
 %   level                   level = 1:only compares MNXid FROM kegg and CHEBI
@@ -100,5 +100,5 @@ end
 
 %save model
 cd ..
-saveYeastModel(model)
+saveYeastYaml(model)
 end

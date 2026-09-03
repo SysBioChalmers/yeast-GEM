@@ -44,8 +44,13 @@ for i=numel(model.rxns)
     end
 end
 
+%Define SBO terms for genes
+geneSBO = cell(size(model.genes));
+geneSBO(:) = {'SBO:0000243'};       %Gene
+
 % Add SBO term if it wasn't annotated yet
 model=editMiriam(model,'met','all','sbo',metsSBO,'fill');
 model=editMiriam(model,'rxn','all','sbo',rxnSBO,'fill');
+model=editMiriam(model,'gene','all','sbo',geneSBO,'fill');
 
 end

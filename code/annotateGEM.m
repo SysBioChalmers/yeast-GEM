@@ -4,7 +4,7 @@ function model = annotateGEM(model, annPath)
 %   model/reactions.tsv, model/metabolites.tsv and model/genes.tsv into a
 %   model loaded from the (annotation-light) yeast-GEM.yml.
 %
-%   Called by loadYeastModel.m so that day-to-day curation sees the same
+%   Called by loadYeastYaml.m so that day-to-day curation sees the same
 %   fully-annotated model as before the cross-reference annotation was
 %   split out of the yml (yeast-GEM#379). Does not touch SBO terms
 %   (addSBOterms.m, unrelated to this migration) or any field other than

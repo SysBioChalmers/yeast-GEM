@@ -1,8 +1,13 @@
 function model = loadYeastModel(filename)
 % loadYeastModel
-%   Load the yeast-GEM in a MATLAB environment, requires the RAVEN Toolbox.
-%   If RAVEN Toolbox is not installed, an attempt is made to load the model
-%   via COBRA Toolbox, accompanied with a warning as RAVEN is recommended.
+%   DEPRECATED. Use loadYeastYaml to load model/yeast-GEM.yml for
+%   curation, or a generic SBML loader (importModel, readCbModel or
+%   cobra.io.read_sbml_model) to load model/yeast-GEM.xml directly.
+%
+%   Kept as a shim for external code that still calls this name. Forwards
+%   .yml/.yaml filenames (including the default) to loadYeastYaml; any
+%   other filename keeps the original RAVEN/COBRA import plus deltaG
+%   restoration, unchanged.
 %
 % Input:
 %   filename    by default, the model is loaded from its location at
@@ -10,15 +15,11 @@ function model = loadYeastModel(filename)
 %               be loaded if provided here. (opt, default empty).
 %
 % Output:
-%   model       the yeast-GEM model structure. Reaction, metabolite and
-%               gene cross-reference annotation (KEGG, BiGG, ChEBI,
-%               MetaNetX, EC codes, UniProt) is stored separately in
-%               model/reactions.tsv, model/metabolites.tsv and
-%               model/genes.tsv (yeast-GEM#379) and merged back in here
-%               via annotateGEM, so the returned model looks the same as
-%               before that split either way.
+%   model       the yeast-GEM model structure.
 %
 %   Usage: model = loadYeastModel(filename)
+
+warning('loadYeastModel is deprecated; use loadYeastYaml instead.')
 
 funcDir = dbstack('-completenames');
 funcDir = regexprep(funcDir(1).file,[funcDir(1).name '\.m'],'');
@@ -28,16 +29,7 @@ if nargin<1 || isempty(filename)
 end
 
 if endsWith(filename,{'.yml','.yaml'})
-    model = readYAMLmodel(filename);
-    % The yml only carries this by itself for the default model path -- a
-    % filename argument may point at an .xml-derived .yml or some other
-    % file that already has full annotation, or at a model/ folder
-    % without the tsvs, in which case there is nothing to merge.
-    annPath = fullfile(funcDir,'..','model');
-    if isequal(filename, fullfile(funcDir,'..','model','yeast-GEM.yml')) ...
-            && isfile(fullfile(annPath,'reactions.tsv'))
-        model = annotateGEM(model, annPath);
-    end
+    model = loadYeastYaml(filename);
 else
     if ~(exist('ravenCobraWrapper.m','file')==2)
         if exist('readCbModel.m','file')==2

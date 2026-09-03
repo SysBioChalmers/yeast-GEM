@@ -1,201 +1,42 @@
-function saveYeastModel(model,upDATE,allowNoGrowth,binaryFiles)
+function model = saveYeastModel(model,upDATE,allowNoGrowth,binaryFiles)
 % saveYeastModel
-%   Saves model as .xml, .txt and .yml file (.mat and .xlsx on demand).
-%   It also updates dependencies.txt and checks for growth.
+%   DEPRECATED. Use saveYeastYaml for a routine curation save (writes
+%   model/yeast-GEM.yml only), or commitYeastModel for a local binary
+%   build or release (writes .xml/.txt/.xlsx/.mat).
+%
+%   Kept as a shim for external code that still calls this name. Forwards
+%   to commitYeastModel, the closest behavioural match: unlike
+%   saveYeastYaml, the original saveYeastModel always wrote .xml/.txt (and
+%   .xlsx/.mat when binaryFiles was true), never just the .yml.
 %
 % Inputs:
 %   model           (struct) model to save. Preferably RAVEN format,
-%                   although COBRA format is also allowed, but some fields
-%                   might be lost in the conversion.
-%   upDATE          (bool, opt) If updating the date in the README file is
-%                   needed (default true)
+%                   although COBRA format is also allowed, but some
+%                   fields might be lost in the conversion.
+%   upDATE          unused (kept for call-signature compatibility).
 %   allowNoGrowth   (bool, opt) if saving should be allowed whenever the
 %                   model cannot grow, returning a warning (default true),
-%                   otherwise will error
-%   binaryFiles     (bool, opt) if the model should be stored in binary
-%                   file formats (= xlsx and mat)
+%                   otherwise will error.
+%   binaryFiles     (bool, opt) if the model should also be stored in
+%                   binary file formats (= xlsx and mat).
 %
-% Usage: saveYeastModel(model,upDATE,allowNoGrowth,binaryFiles)
+% Usage: model = saveYeastModel(model,upDATE,allowNoGrowth,binaryFiles)
 
-if nargin < 2
-    upDATE = true;
-end
-if nargin < 3
+warning(['saveYeastModel is deprecated; use saveYeastYaml for a routine '...
+    'curation save, or commitYeastModel to write .xml/.txt/.xlsx/.mat.'])
+
+if nargin < 3 || isempty(allowNoGrowth)
     allowNoGrowth = true;
 end
-if nargin < 4
+if nargin < 4 || isempty(binaryFiles)
     binaryFiles = false;
 end
-if ~(exist('ravenCobraWrapper.m','file')==2)
-    error(['RAVEN cannot be found. See README.md for installation '...
-        'instructions. RAVEN is required to make sure that the model '...
-        'is stored in the correct file formats for use in the '...
-        'yeast-GEM GitHub repository'])
-end
 
-% Export as RAVEN format
-if isfield(model,'rules')
-    model = ravenCobraWrapper(model);
-end
-
-%Get and change to the script folder, as all folders are relative to this
-%folder
-scriptFolder = fileparts(which(mfilename));
-currentDir = cd(scriptFolder);
-
-%Set minimal media
-cd modelCuration
-model = minimal_Y6(model);
-cd ..
-
-%Update SBO terms in model:
-cd missingFields
-model = addSBOterms(model);
-cd ..
-
-%Check if model is a valid SBML structure:
-exportModel(model,'tempModel.xml',false,false,true);
-try
-    [~,~,errors] = evalc('TranslateSBML_RAVEN(''tempModel.xml'',1,0)');
-catch
-    [~,~,errors] = evalc('TranslateSBML(''tempModel.xml'',1,0)');
-end
-if any(strcmp({errors.severity},'Error'))
-    delete('tempModel.xml');
-    error('Model should be a valid SBML structure. Please fix all errors before saving.')
-end
-
-%Check if model can grow:
-checkGrowth(model,'aerobic',allowNoGrowth)
-checkGrowth(model,'anaerobic',allowNoGrowth)
-
-%Update .xml, .txt and .yml models:
-copyfile('tempModel.xml','../model/yeast-GEM.xml')
-delete('tempModel.xml');
-% .yml is written from a stripped copy: reaction, metabolite and gene
-% cross-reference annotation (KEGG, BiGG, ChEBI, MetaNetX, EC codes,
-% UniProt) lives in model/{reactions,metabolites,genes}.tsv instead
-% (yeast-GEM#379), so it is not re-embedded here. .xml/.txt/.xlsx/.mat
-% keep the full, unstripped model exactly as before.
-leanModel = stripTsvAnnotation(model);
-exportForGit(leanModel,'yeast-GEM','../model',{'yml'},false,false);
-if binaryFiles==false
-    exportForGit(model,'yeast-GEM','../model',{'txt'},false,false);
+if binaryFiles
+    formats = {'xml','txt','xlsx','mat'};
 else
-    exportForGit(model,'yeast-GEM','../model',{'txt','xlsx','mat'},false,false);
+    formats = {'xml','txt'};
 end
 
-%Write deltaG fields to file
-cd missingFields
-saveDeltaG(model,false);
-cd ..
-
-%README.md is deliberately not touched here: its model statistics and
-%validation numbers are only ever current for a specific released
-%version, so they are stamped once at release time
-%(code/python/release/increase_version.py) rather than on every curation
-%commit, where they would immediately start going stale on develop.
-
-%Convert notation "e-005" to "e-05 " in stoich. coeffs. to avoid
-%inconsistencies between Windows and MAC:
-copyfile('../model/yeast-GEM.xml','backup.xml')
-fin  = fopen('backup.xml','r');
-fout = fopen('../model/yeast-GEM.xml','w');
-still_reading = true;
-while still_reading
-    inline = fgets(fin);
-    if ~ischar(inline)
-        still_reading = false;
-    else
-        if ~isempty(regexp(inline,'[0-9]e-?00[0-9]','once'))
-            inline = regexprep(inline,'(?<=[0-9]e-?)00(?=[0-9])','0');
-        end
-        fwrite(fout,inline);
-    end
-end
-fclose('all');
-delete('backup.xml');
-
-%Switch back to original folder
-cd(currentDir)
-end
-
-%%
-function checkGrowth(model,condition,allowNoGrowth)
-%Function that checks if the model can grow or not using RAVEN under a
-%given condition (aerobic or anaerobic). Will either return warnings or
-%errors depending on allowNoGrowth.
-
-if strcmp(condition,'anaerobic')
-    cd otherChanges
-    model = anaerobicModel(model);
-    cd ..
-end
-try
-    xPos = strcmp(model.rxnNames,'growth');
-    sol  = solveLP(model);
-    if sol.x(xPos) < 1e-6
-        dispText = ['The model is not able to support growth under ' ...
-            condition ' conditions. Please ensure the model can grow'];
-    end
-catch
-    dispText = ['The model yields an infeasible simulation using RAVEN ' ...
-        'under ' condition ' conditions. Please ensure the model ' ...
-        'can be simulated with RAVEN'];
-end
-
-if exist('dispText','var')
-    if allowNoGrowth
-        warning([dispText ' before opening a PR.'])
-    else
-        error([dispText ' before committing.'])
-    end
-end
-end
-
-%%
-function model = stripTsvAnnotation(model)
-%Remove the six cross-reference fields that live in
-%model/{reactions,metabolites,genes}.tsv from a copy of the model, so
-%they are not re-embedded in model/yeast-GEM.yml on every save
-%(yeast-GEM#379). sbo and every other field is left untouched.
-if isfield(model,'rxnMiriams')
-    model.rxnMiriams = stripMiriamNames(model.rxnMiriams, ...
-        {'bigg.reaction','kegg.pathway','kegg.reaction','metanetx.reaction'});
-end
-if isfield(model,'eccodes')
-    model.eccodes = repmat({''}, size(model.eccodes));
-end
-
-if isfield(model,'metMiriams')
-    model.metMiriams = stripMiriamNames(model.metMiriams, ...
-        {'bigg.metabolite','chebi','kegg.compound','metanetx.chemical'});
-end
-if isfield(model,'metSmiles')
-    model.metSmiles = repmat({''}, size(model.metSmiles));
-end
-
-if isfield(model,'geneMiriams')
-    model.geneMiriams = stripMiriamNames(model.geneMiriams, {'uniprot'});
-end
-end
-
-function miriams = stripMiriamNames(miriams, names)
-%Remove any (name,value) pair whose name is in NAMES from every entity's
-%MIRIAM struct, leaving other namespaces (e.g. sbo) untouched. An entity
-%left with no annotation at all collapses to '', matching
-%readYAMLmodel's own empty-entry convention.
-for i = 1:numel(miriams)
-    if ~isstruct(miriams{i})
-        continue
-    end
-    keep = ~ismember(miriams{i}.name, names);
-    if all(keep)
-        continue
-    elseif any(keep)
-        miriams{i} = struct('name',{miriams{i}.name(keep)},'value',{miriams{i}.value(keep)});
-    else
-        miriams{i} = '';
-    end
-end
+model = commitYeastModel(model,formats,allowNoGrowth);
 end

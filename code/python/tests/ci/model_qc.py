@@ -35,7 +35,7 @@ versus formula and charge (report only).
 check_malformed_xrefs reads reactions.tsv/metabolites.tsv/genes.tsv
 directly rather than the model's own (SBML-derived) annotation, per
 edkerk's comment on #379: a curator who edits a tsv cell directly (e.g.
-via the GitHub web UI, never running saveYeastModel/commit_yeast_model)
+via the GitHub web UI, never running saveYeastYaml/save_yeast_yaml)
 should have a bad identifier caught at that file, not only after
 someone next regenerates model/yeast-GEM.xml. sbo is consequently no
 longer checked here -- it is computed, not curator-edited, and does not
@@ -46,7 +46,7 @@ not part of this rework -- not asked for, and arguably worth revisiting
 for the same reason later.
 
 Usage:
-    python model_qc.py --model model/yeast-GEM.xml --out data/testResults
+    python model_qc.py --model model/yeast-GEM.yml --out data/testResults
 """
 from __future__ import annotations
 
@@ -57,6 +57,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import cobra
+from raven_toolbox.io import read_yaml_model
 from rdkit import Chem, RDLogger
 from rdkit.Chem import rdMolDescriptors
 
@@ -694,7 +695,14 @@ def _write_findings(path: Path, sections: list[tuple[str, tuple, list]]) -> None
 def run(model_path: Path, out_dir: Path, base_model_dir: Path | None = None) -> dict:
     out_dir.mkdir(parents=True, exist_ok=True)
     if model_path.suffix in {".yml", ".yaml"}:
-        model = cobra.io.load_yaml_model(str(model_path))
+        # raven_toolbox.io.read_yaml_model, not cobra.io.load_yaml_model:
+        # the latter silently drops RAVEN-only fields (model.id/name/
+        # version, deltaG, confidence_score, notes, inchis) -- harmless
+        # for the checks below today, but this branch is now the default
+        # path on every develop PR (yeast-GEM#379 stage 2), not an
+        # occasional opt-in, so it should read at the same fidelity as
+        # the .xml branch rather than silently less.
+        model = read_yaml_model(str(model_path))
     else:
         model = cobra.io.read_sbml_model(str(model_path))
     model_dir = model_path.parent
@@ -773,7 +781,7 @@ def run(model_path: Path, out_dir: Path, base_model_dir: Path | None = None) -> 
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--model", type=Path, default=Path("model/yeast-GEM.xml"))
+    parser.add_argument("--model", type=Path, default=Path("model/yeast-GEM.yml"))
     parser.add_argument("--out", type=Path, default=Path("data/testResults"))
     parser.add_argument("--base-model-dir", type=Path, default=None,
                          help="target branch's own model/ checkout, for "

@@ -15,7 +15,7 @@ import numpy as np
 import pandas as pd
 
 from yeastgem import biomass, conditions
-from yeastgem.io import REPO_PATH, read_yeast_model
+from yeastgem.io import REPO_PATH, load_yeast_yaml
 
 # Yeast-GEM reaction ids the chemostat sweep needs to drive.
 _GLC_EX_ID = "r_1714"
@@ -48,7 +48,7 @@ def growth(
     Parameters
     ----------
     model
-        Model to test. Defaults to a fresh :func:`read_yeast_model` load.
+        Model to test. Defaults to a fresh :func:`load_yeast_yaml` load.
     write_output
         When True, save the scatter plot to
         ``data/testResults/growth.png`` and a markdown report to
@@ -57,7 +57,7 @@ def growth(
         Draw the figure into the active matplotlib axes (does not save).
     """
     if model is None:
-        model = read_yeast_model()
+        model = load_yeast_yaml()
 
     exp = _load_tobias_chemostat_data()
     predicted = np.zeros(len(exp))

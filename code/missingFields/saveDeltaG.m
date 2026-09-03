@@ -2,7 +2,7 @@ function model = saveDeltaG(model,verbose)
 % saveDeltaG
 %   Saves the metDeltaG and rxnDeltaG fields as tables to /data/databases/...
 %   model_rxnDeltaG.csv and /data/databases/model_metDeltaG.csv. When
-%   loadYeastModel is run, these tables will be read to reconstruct the
+%   loadYeastYaml is run, these tables will be read to reconstruct the
 %   metDeltaG and rxnDeltaG fields.
 %
 % Input:
