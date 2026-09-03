@@ -291,9 +291,10 @@ jobs:
           git fetch origin develop
           git checkout -b "sync/main-to-develop-$version" origin/develop
           git merge --no-commit --no-ff origin/main
-          git rm --cached model/yeast-GEM.mat model/yeast-GEM.xlsx version.txt
+          git rm --cached model/yeast-GEM.mat model/yeast-GEM.xlsx \
+            model/yeast-GEM.xml model/yeast-GEM.txt version.txt
           git commit -m "chore: merge main into develop after $version, without binaries or version.txt"
           git push origin "sync/main-to-develop-$version"
           gh pr create --base develop --head "sync/main-to-develop-$version" \
             --title "chore: sync main into develop after $version" \
-            --body "Brings $version back into develop, keeping the binary model files and version.txt off it. See branch-hygiene.yml, which would otherwise flag them."
+            --body "Brings $version back into develop, keeping the binary model files, .xml/.txt and version.txt off it. See branch-hygiene.yml, which would otherwise flag them."

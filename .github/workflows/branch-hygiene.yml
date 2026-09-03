@@ -27,7 +27,14 @@ jobs:
       # rather than being added directly.
       - name: No release-only files on develop
         run: |
-          found=$(git ls-files '*.mat' '*.xls' '*.xlsx' '*.xlsm' 'version.txt')
+          # model/yeast-GEM.xml and .txt are exact paths, not globs: a glob
+          # (e.g. '*.txt') would false-positive on model/dependencies.txt and
+          # data/essentialGenes/*.txt, both legitimately tracked on develop.
+          # Nothing reads or writes model/yeast-GEM.xml/.txt from develop any
+          # more (yeast-GEM#379 stage 2) -- they are generated on demand by
+          # commitYeastModel/commit_yeast_model, or produced at release time.
+          found=$(git ls-files '*.mat' '*.xls' '*.xlsx' '*.xlsm' 'version.txt' \
+            'model/yeast-GEM.xml' 'model/yeast-GEM.txt')
           if [ -n "$found" ]; then
             echo "::error::These are generated or stamped at release time, but belong on main only:"
             echo "$found" | sed 's/^/  /'
