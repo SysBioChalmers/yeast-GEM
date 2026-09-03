@@ -14,6 +14,12 @@ data/databases/.metanetx/
 # a merge, since .gitignore only applies to untracked paths.
 version.txt
 
+# model/yeast-GEM.xml and .txt: generated from model/yeast-GEM.yml by
+# commitYeastModel/commit_yeast_model (yeast-GEM#379 stage 2), or produced
+# at release time -- not tracked on develop, same reasoning as version.txt.
+model/yeast-GEM.xml
+model/yeast-GEM.txt
+
 # Compiled source #
 ###################
 *.com
