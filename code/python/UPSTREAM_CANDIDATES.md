@@ -20,7 +20,6 @@ RAVEN's `develop3`):
 |---|---|---|
 | `yeastgem.compare.compare_models` / `ComparisonReport` | `raven_toolbox.comparison` | `diff_models`, `DiffReport` |
 | `yeastgem.missing_fields.add_sbo_terms` | `raven_toolbox.annotation.sbo` | `add_sbo_terms` (with `only_last_reaction_for_pseudo` legacy flag) |
-| `yeastgem.missing_fields.{load,save}_delta_g` mechanism | `raven_toolbox.annotation.delta_g` | `load_delta_g_csv`, `save_delta_g_csv` (column / note-key params) |
 | `yeastgem.conditions.apply` internals (prelude / cofactor / biomass-delta / bounds) | `raven_toolbox.conditions` | `apply_condition`, `load_condition`, `set_reaction_bounds` |
 | `code/readYAML.m` | RAVEN `io/readYAML.m` | unchanged signature |
 | `code/applyCondition.m` (generic core) | RAVEN `core/applyCondition.m` | takes YAML path or struct |
@@ -28,12 +27,21 @@ RAVEN's `develop3`):
 | `findDuplicatedRxns` (detection only) | `raven_toolbox.manipulation` | `find_duplicate_reactions(model, *, ignore_direction=True)` |
 | `curateMetsRxnsGenes` (batch TSV curation engine) | `raven_toolbox.curation` + RAVEN `core/curateModelFromTables.m` | `batch_curate(model, mets_df=…, genes_df=…, rxns_df=…, rxns_coeffs_df=…, met_id_prefix=…, rxn_id_prefix=…)`, `batch_curate_from_tsv` |
 
+**Reverted:** ΔG persistence (`load_delta_g`/`save_delta_g`) also moved
+upstream at phase 3.5, to `raven_toolbox.annotation.delta_g`'s
+`load_delta_g_csv`/`save_delta_g_csv`, but was pulled back local at
+yeast-GEM#379 stage 2 — the upstream helper is CSV-only, yeast-GEM's own
+tables are tab-separated, and ΔG values were made opt-in only (never
+written into the committed model artifact). See the ΔG entry under
+*Boundary cases* below.
+
 yeast-GEM now keeps:
 - `yeastgem.compare` — re-export of the upstream `diff_models` under
   the historical names `compare_models` / `ComparisonReport`.
-- `yeastgem.missing_fields` — thin wrappers passing the yeast CSV
-  paths (`data/databases/model_metDeltaG.csv` etc.) and the legacy
-  `only_last_reaction_for_pseudo=True` bug-compat flag.
+- `yeastgem.missing_fields` — the legacy `only_last_reaction_for_pseudo=True`
+  bug-compat flag for `add_sbo_terms`, plus a local (not upstream-delegated)
+  ΔG load/save implementation over yeast-GEM's own tab-separated
+  `data/databases/model_{met,rxn}DeltaG.tsv` files, opt-in only.
 - `yeastgem.conditions.apply` — resolves a name to `data/conditions/<name>.yml`,
   runs `change_amino_acid_ratio` when the YAML asks for it (since
   phase 4), then delegates to upstream.
@@ -264,17 +272,26 @@ Probably worth upstreaming eventually, but the abstraction is less obvious.
   speculative; no second consumer to validate it.
 - **Trigger to upstream:** a second GEM wants the same SBO assignment.
 
-### ΔG annotation⇄CSV persistence (`loadDeltaG` / `saveDeltaG`)
+### ΔG notes⇄tsv persistence (`loadDeltaG` / `saveDeltaG`)
 
 - **Current location:** `code/missingFields/loadDeltaG.m`, `saveDeltaG.m`,
   `code/python/yeastgem/missing_fields.py`.
-- **Sketch:** generic "persist a named annotation key across mets/rxns to CSV
-  and reload it." Useful for any project that stores a model-adjacent
-  numeric annotation outside the SBML file.
-- **Why local for now:** column schema is a yeast-GEM convention; no second
-  consumer.
-- **Trigger to upstream:** another project asks for the same CSV format,
-  *or* this becomes a recurring pattern across multiple SysBioChalmers GEMs.
+- **Sketch:** generic "persist a named notes key across mets/rxns to a
+  delimited file and reload it." Useful for any project that stores a
+  model-adjacent numeric annotation outside the SBML file. Was briefly
+  delegated to `raven_toolbox.annotation.load_delta_g_csv`/
+  `save_delta_g_csv` at phase 3.5, then reverted to a local, tab-separated
+  implementation (yeast-GEM#379 stage 2) — the upstream helper is
+  CSV-only, and yeast-GEM's own tables (`reactions.tsv`,
+  `metabolites.tsv`, `genes.tsv`) are tab-separated.
+- **Why local for now:** column schema and delimiter are a yeast-GEM
+  convention; ΔG is also opt-in only now (never written into
+  `model/yeast-GEM.yml` or any exported `.xml`/`.txt`/`.xlsx`/`.mat` — see
+  [model/README.md](../../model/README.md)), itself a yeast-GEM-specific
+  policy choice, not something to push upstream; no second consumer.
+- **Trigger to upstream:** another project asks for the same tsv format
+  and the same opt-in-only policy, *or* this becomes a recurring pattern
+  across multiple SysBioChalmers GEMs.
 
 ---
 

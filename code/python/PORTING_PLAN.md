@@ -49,13 +49,17 @@ Python side only until the follow-up lands.
   phase 3.* In MATLAB, yeast-GEM builds on RAVEN (`importModel`,
   `exportModel`, `solveLP`, the new `readYAML` / `applyCondition`, …). In
   Python, yeast-GEM builds on `raven-toolbox` (which itself builds on
-  cobrapy) — `diff_models`, `add_sbo_terms`, `apply_condition`, ΔG CSV
-  helpers all live upstream. yeastgem keeps only the *yeast-specific
-  configuration* of those generics: the data files under `data/`, the
-  `applyYeastCondition` wrapper that handles the yeast-only
-  `amino_acid_ratio` step, the legacy-bug-compat flag on
-  `add_sbo_terms`, and the repo orchestration in `commit_yeast_model`
-  (paths, README rewrite).
+  cobrapy) — `diff_models`, `add_sbo_terms`, `apply_condition` live
+  upstream. yeastgem keeps only the *yeast-specific configuration* of
+  those generics: the data files under `data/`, the `applyYeastCondition`
+  wrapper that handles the yeast-only `amino_acid_ratio` step, the
+  legacy-bug-compat flag on `add_sbo_terms`, and the repo orchestration in
+  `commit_yeast_model` (paths, README rewrite). ΔG persistence
+  (`load_delta_g`/`save_delta_g`) briefly lived upstream too, but was
+  reverted to a local, tab-separated implementation (yeast-GEM#379 stage
+  2) — the upstream helper is CSV-only, and ΔG is now opt-in only, never
+  written into the committed model artifact at all; see
+  [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md).
 - **Package layout:** a proper importable package under `code/python/`
   (working name `yeastgem`), with flat submodules. The existing `code/io.py`
   is folded into `yeastgem.io`.
@@ -72,9 +76,11 @@ These four choices shape every section below:
    contributes the organism-agnostic helpers there rather than keeping
    them in-tree. Phase 3.5 moved the first batch (`diff_models`,
    `add_sbo_terms`, ΔG CSV persistence, `apply_condition`, `readYAML`).
-   yeastgem keeps only the yeast-specific configuration / wrappers.
-   See [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md) for the
-   remaining tracked items.
+   yeastgem keeps only the yeast-specific configuration / wrappers. ΔG
+   persistence was later reverted to a local, tab-separated, opt-in-only
+   implementation (yeast-GEM#379 stage 2) — see the ΔG entry under
+   *Boundary cases* in [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md).
+   See that document for the remaining tracked items.
 
    *(Earlier, pre-phase-3 stance:)* keep everything in yeast-GEM for now;
    no new
@@ -149,9 +155,9 @@ data/
 
 | MATLAB | Python target | Reuse (baseline only) |
 |---|---|---|
-| `loadYeastModel` | `io.read_yeast_model` (extend existing) | cobrapy SBML; local YAML reader if needed; `loadDeltaG` |
+| `loadYeastModel` | `io.read_yeast_model` (extend existing) | cobrapy SBML; local YAML reader if needed (ΔG is opt-in only — never auto-loaded; see `loadDeltaG` row below) |
 | `saveYeastModel` → `commit_yeast_model` | `io.commit_yeast_model` | cobrapy SBML/validator, local multi-format writer, local growth check |
-| `loadDeltaG` / `saveDeltaG` | `missing_fields` | pandas; ΔG stored in cobra `annotation` |
+| `loadDeltaG` / `saveDeltaG` | `missing_fields` | local tsv I/O (`csv` module, not the upstream CSV-only helper); ΔG stored in cobra `notes`, opt-in only |
 | `addSBOterms` | `missing_fields.add_sbo_terms` | cobrapy reaction inspection (no ravengem) |
 | `addConfidenceScores` | `missing_fields.add_confidence_scores` | pure logic |
 | `minimal_Y6` | `conditions.apply('minimal_Y6')` (post-refactor) | pure bound-setting |
@@ -229,7 +235,7 @@ by a small ID config, so the same code is upstream-ready when the time comes.
 |---|---|---|---|
 | `loadYeastModel` | thin shim — default path + ΔG fix-up for legacy formats | routine | **drop** (or ultra-thin shim); call `read_yaml_model`/`readYAMLmodel` on the default path directly. See *Load vs save asymmetry* below. |
 | `saveYeastModel` → **rename to `commitYeastModel` / `commit_yeast_model`** | release pipeline — canonical state, validation gates, multi-format export, README metadata | routine | **yeastgem** — reframe as the commit function (run before `git commit`), not a wrapper. Keep `saveYeastModel` as a deprecated shim for one release cycle. See *Load vs save asymmetry* below. |
-| `loadDeltaG` / `saveDeltaG` | annotation⇄CSV persistence | occasional | **yeastgem** (mechanism logged as upstream candidate) |
+| `loadDeltaG` / `saveDeltaG` | notes⇄tsv persistence, opt-in only (never shipped in `model/yeast-GEM.yml` or any exported `.xml`/`.txt`/`.xlsx`/`.mat`) | occasional | **yeastgem**, local — reverted from the upstream CSV-only helper (yeast-GEM's tables are tab-separated); not an upstream candidate while ΔG stays opt-in |
 | `addSBOterms` | mostly generic rule-based annotation | routine | **yeastgem** (generic skeleton + yeast pseudoreaction tweak; upstream candidate) |
 | `addConfidenceScores` | generic 0–3 scheme + yeast naming heuristics | occasional | **yeastgem** (heuristics too yeast-flavoured to upstream cleanly) |
 | `minimal_Y6` | **config-as-code** (hardcoded exchange IDs) | routine | **yeastgem** — demote to a media data file |
@@ -284,11 +290,13 @@ not:
   scripts that call the current name. Remove the shim at the next minor
   version bump after the rename ships.
 
-Open question to verify early: does `ravengem.io.read_yaml_model` accept
-yeast-GEM's RAVEN-style YAML (with top-level `metDeltaG`/`rxnDeltaG` arrays),
-or does it expect cobrapy's YAML convention? If the latter, either teach
-ravengem to read RAVEN YAML or migrate ΔG into `annotation` in the committed
-file — this is the prerequisite for "drop loadYeastModel" to be clean.
+**Resolved:** `raven_toolbox.io.read_yaml_model`/`write_yaml_model`
+round-trip yeast-GEM's full RAVEN-style YAML, ΔG included — confirmed
+directly against `model/yeast-GEM.yml`. The question turned out moot for a
+different reason than expected, though: ΔG was made opt-in only
+(yeast-GEM#379 stage 2), so it is never written into the committed
+yml/xml/txt/xlsx/mat at all, regardless of what the upstream YAML
+reader/writer supports.
 
 ### Duplication to eliminate (do not port)
 
@@ -401,7 +409,9 @@ A summary, for orientation only:
   TSV-driven batch curation, duplicate-reaction detector,
   cross-language model comparator (used by CI).
 - **Boundary cases** (probably worth upstreaming, may need API refinement):
-  `addSBOterms`, ΔG annotation⇄CSV persistence.
+  `addSBOterms`. ΔG notes⇄tsv persistence was in this category briefly but
+  was pulled back local and made opt-in only (yeast-GEM#379 stage 2), so
+  it no longer belongs here.
 - **Unlikely to upstream**: `addConfidenceScores` (heuristics too
   yeast-flavoured), all explicit yeast benchmarks and physiology, repo
   orchestration (`commitYeastModel`, `loadYeastModel`).
@@ -517,7 +527,9 @@ MATLAB equivalent) checks, on the same model loaded by each toolchain:
 - lower/upper bounds, objective coefficients (exact)
 - GPR rules (parsed and normalised; insensitive to whitespace / operator
   spelling)
-- key annotation fields: SBO terms, MIRIAM, ΔG, confidence scores
+- key annotation fields: SBO terms, MIRIAM, confidence scores (ΔG is
+  deliberately excluded here — it is opt-in only and never part of the
+  committed model artifact)
 
 Formatting differences (key ordering, whitespace, float repr) are explicitly
 **not** failures. The comparator is single-source — used both for PR CI and
