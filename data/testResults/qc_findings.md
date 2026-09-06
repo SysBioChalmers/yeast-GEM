@@ -1046,6 +1046,10 @@ _None._
 | s_4332 | heme a | protonation | C49H55FeN4O6 | -3 | C49H56FeN4O6-2 | -2 | CC1=C(C2=CC3=NC(=CC4=C(C(=C([N-]4)C=C5C(=C(C(=N5)C=C1[N-]2)C(CCC=C(C)CCC=C(C)CCC=C(C)C)O)C)C=O)CCC(=O)O)C(=C3C)CCC(=O)O)C=C.[Fe] |
 | s_4334 | trans-but-2-enoyl-CoA | protonation | C25H36N7O17P3S | -4 | C25H40N7O17P3S | 0 | C/C=C/C(=O)SCCNC(=O)CCNC(=O)[C@@H](C(C)(C)COP(=O)(O)OP(=O)(O)OC[C@@H]1[C@H]([C@H]([C@@H](O1)N2C=NC3=C(N=CN=C32)N)O)OP(=O)(O)O)O |
 
+## deltaG tsvs out of sync with the model
+
+_None._
+
 ## Dead-end metabolites
 
 | metabolite | name | reactions blocked |
