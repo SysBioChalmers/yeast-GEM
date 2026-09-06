@@ -26,11 +26,16 @@ only mean this branch introduced one). Everything else is reported so
 that a pull request which makes a number worse is visible, without
 blocking work on findings that were already there.
 
-Two more checks: identifiers removed since the target branch that were
-not added to data/deprecatedIdentifiers/ (report only -- needs
---base-model-dir, empty without it), and metabolite structure (SMILES;
+Three more checks, all report only: identifiers removed since the target
+branch that were not added to data/deprecatedIdentifiers/ (needs
+--base-model-dir, empty without it); metabolite structure (SMILES;
 yeast-GEM has no InChI field, so there is no smiles/InChI cross-check)
-versus formula and charge (report only).
+versus formula and charge; and the model's reaction/metabolite ids
+versus data/databases/model_{rxn,met}DeltaG.tsv, so those tsvs drifting
+out of sync with the model (a stale row for a removed/renamed id, most
+often) is visible rather than silent -- not a gate, since ΔG estimation
+is a separate, occasional task, not something every curation edit is
+expected to keep complete.
 
 check_malformed_xrefs reads reactions.tsv/metabolites.tsv/genes.tsv
 directly rather than the model's own (SBML-derived) annotation, per
@@ -308,6 +313,37 @@ def check_annotation_consistency(model, model_dir: Path) -> tuple[int, list]:
     compare("metabolite", {m.id for m in model.metabolites},
             "metabolites.tsv", "deprecatedMetabolites.tsv")
     compare("gene", {g.id for g in model.genes}, "genes.tsv", None)  # no deprecated list
+
+    return len(rows), rows
+
+
+def check_delta_g_consistency(model, model_dir: Path) -> tuple[int, list]:
+    """Reaction/metabolite ids vs. the ids in
+    data/databases/model_{rxn,met}DeltaG.tsv. Report only: ΔG
+    (yeast-GEM#379 stage 2) is an estimated, not curator-verified value,
+    filled in as a separate, occasional task rather than on every
+    curation edit, so an id newly added to the model with no ΔG row yet
+    is normal, not a mistake to fix in this pull request. Still worth
+    surfacing so the tsvs' drift from the model is visible rather than
+    silent -- especially a row for an id no longer in the model at all,
+    most often left behind by a rename or removal.
+    """
+    rows = []
+    databases_dir = model_dir.parent / "data" / "databases"
+
+    def compare(kind, model_ids, tsv_name):
+        tsv_path = databases_dir / tsv_name
+        if not tsv_path.is_file():
+            return
+        with tsv_path.open(encoding="utf-8", newline="") as fh:
+            tsv_ids = {row["id"] for row in csv.DictReader(fh, delimiter="\t")}
+        for missing in sorted(model_ids - tsv_ids):
+            rows.append((kind, missing, f"in the model but not in {tsv_name}"))
+        for orphan in sorted(tsv_ids - model_ids):
+            rows.append((kind, orphan, f"in {tsv_name} but not in the model"))
+
+    compare("reaction", {r.id for r in model.reactions}, "model_rxnDeltaG.tsv")
+    compare("metabolite", {m.id for m in model.metabolites}, "model_metDeltaG.tsv")
 
     return len(rows), rows
 
@@ -653,6 +689,7 @@ _HEADERS = {
     "deprecation_completeness": ("kind", "id", "issue"),
     "structure_inconsistent": ("metabolite", "name", "issue", "model formula",
                                "model charge", "smiles formula", "smiles charge", "smiles"),
+    "delta_g_consistency": ("kind", "id", "issue"),
 }
 
 
@@ -765,6 +802,13 @@ def run(model_path: Path, out_dir: Path, base_model_dir: Path | None = None) -> 
     sections.append((
         "Metabolite structure (SMILES) disagreeing with formula/charge",
         _HEADERS["structure_inconsistent"], structure_rows,
+    ))
+
+    delta_g_count, delta_g_rows = check_delta_g_consistency(model, model_dir)
+    metrics["delta_g_consistency"] = delta_g_count
+    sections.append((
+        "deltaG tsvs out of sync with the model",
+        _HEADERS["delta_g_consistency"], delta_g_rows,
     ))
 
     macaw_metrics, macaw_sections = check_macaw(model)

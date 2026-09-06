@@ -53,12 +53,29 @@ def test_commit_yeast_model_rejects_unsupported_formats(model, isolated_paths):
         commit_yeast_model(model.copy(), formats=("xlsx",))
 
 
-def test_commit_yeast_model_writes_deltag_csvs(model, isolated_paths):
-    """commit pipeline must persist ΔG CSVs to the configured paths."""
+def test_commit_yeast_model_never_ships_delta_g(model, isolated_paths):
+    """ΔG is an estimated, not curator-verified value: it must never
+    appear in the exported model file, even if the caller's model
+    happens to carry it, and commit_yeast_model must never touch the
+    ΔG tsvs at all (call load_delta_g/save_delta_g explicitly for that)."""
     from yeastgem import missing_fields as mf
 
-    commit_yeast_model(model.copy())
-    assert mf._MET_CSV.exists() and mf._RXN_CSV.exists()
+    mutated = model.copy()
+    # Stamp a deltaG note directly rather than going through load_delta_g:
+    # this test only needs "the model happens to carry deltaG", not a
+    # real load, and load_delta_g's tsv paths default to
+    # isolated_paths' redirected (deliberately nonexistent) tmp files.
+    met = mutated.metabolites[0]
+    met.notes = {**met.notes, "deltaG": "-343.18"}
+
+    commit_yeast_model(mutated)
+
+    assert not mf._MET_TSV.exists() and not mf._RXN_TSV.exists()
+
+    reloaded = cobra.io.read_sbml_model(str(yio.MODEL_PATH))
+    assert not any("deltaG" in m.notes for m in reloaded.metabolites)
+    # commit_yeast_model must not have stripped the caller's own model.
+    assert any("deltaG" in m.notes for m in mutated.metabolites)
 
 
 def test_commit_applies_canonical_state(model, isolated_paths):

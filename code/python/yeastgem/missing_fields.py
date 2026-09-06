@@ -1,31 +1,30 @@
 """Yeast-specific wrappers for raven-toolbox's annotation helpers.
 
-The mechanism for SBO assignment and ΔG side-car CSV persistence lives
-in :mod:`raven_toolbox.annotation`. This module configures those helpers
-with the yeast-GEM data layout (the CSV paths under
-``data/databases/``) and the bug-compat flag that keeps the model
-artifact byte-equivalent during the migration.
+The mechanism for SBO assignment lives in :mod:`raven_toolbox.annotation`.
+This module configures it with the yeast-GEM data layout and the
+bug-compat flag that keeps the model artifact byte-equivalent during the
+migration. ΔG load/save is implemented locally (not delegated to
+:func:`raven_toolbox.annotation.load_delta_g_csv`/``save_delta_g_csv``,
+which are CSV-only): yeast-GEM's own ΔG tables are tab-separated, to
+match ``reactions.tsv``/``metabolites.tsv``/``genes.tsv``.
 """
 from __future__ import annotations
 
+import csv
+import math
+from collections.abc import Iterable
 from pathlib import Path
 
 import cobra
 from raven_toolbox.annotation import (
     add_sbo_terms as _ra_add_sbo_terms,
 )
-from raven_toolbox.annotation import (
-    load_delta_g_csv as _ra_load_delta_g_csv,
-)
-from raven_toolbox.annotation import (
-    save_delta_g_csv as _ra_save_delta_g_csv,
-)
 
 from yeastgem.io import REPO_PATH
 
 _DELTAG_DIR = REPO_PATH / "data" / "databases"
-_MET_CSV = _DELTAG_DIR / "model_metDeltaG.csv"
-_RXN_CSV = _DELTAG_DIR / "model_rxnDeltaG.csv"
+_MET_TSV = _DELTAG_DIR / "model_metDeltaG.tsv"
+_RXN_TSV = _DELTAG_DIR / "model_rxnDeltaG.tsv"
 
 # Key under which the ΔG value is stored in cobra ``notes``.
 _DELTA_G_NOTE_KEY = "deltaG"
@@ -63,34 +62,88 @@ def add_sbo_terms(model: cobra.Model) -> cobra.Model:
     return model
 
 
-def load_delta_g(model: cobra.Model, *,
-                 met_csv: Path | str | None = None,
-                 rxn_csv: Path | str | None = None) -> cobra.Model:
-    """Populate ΔG annotations on the model from the project CSVs.
+def _load_delta_g_tsv(entities: Iterable, path: Path, *, note_key: str) -> int:
+    """Record ``note_key`` on each entity from a tsv of ``id -> value``.
 
-    Thin wrapper over :func:`raven_toolbox.annotation.load_delta_g_csv`.
-    The CSV paths default to ``data/databases/model_{met,rxn}DeltaG.csv``.
-    Values land in ``entity.notes['deltaG']``.
+    Mirrors :func:`raven_toolbox.annotation.load_delta_g_csv`'s semantics
+    (does not interpret values -- yeast-GEM's own "no measurement"
+    placeholder, ``10000000.0``, is recorded as-is), just tab-separated
+    and with ``id``/``deltaG`` headers instead of pandas' ``Var1``/
+    ``Var2``.
     """
-    met_csv = Path(met_csv) if met_csv else _MET_CSV
-    rxn_csv = Path(rxn_csv) if rxn_csv else _RXN_CSV
-    _ra_load_delta_g_csv(model.metabolites, met_csv, note_key=_DELTA_G_NOTE_KEY)
-    _ra_load_delta_g_csv(model.reactions, rxn_csv, note_key=_DELTA_G_NOTE_KEY)
+    with path.open(encoding="utf-8", newline="") as fh:
+        lookup = {row["id"]: row["deltaG"] for row in csv.DictReader(fh, delimiter="\t")}
+
+    stamped = 0
+    for entity in entities:
+        raw = lookup.get(entity.id)
+        if raw is None:
+            continue
+        try:
+            if math.isnan(float(raw)):
+                continue
+        except ValueError:
+            continue
+        entity.notes[note_key] = raw
+        stamped += 1
+    return stamped
+
+
+def _save_delta_g_tsv(entities: Iterable, path: Path, *, note_key: str) -> int:
+    """Dump ``entity.notes[note_key]`` for each entity to a tsv.
+
+    Entities without ``note_key`` set get ``nan`` written, preserving
+    one-row-per-entity ordering (mirrors MATLAB's ``saveDeltaG.m``).
+    """
+    rows: list[tuple[str, str]] = []
+    for entity in entities:
+        raw = entity.notes.get(note_key)
+        try:
+            value = str(float(raw)) if raw is not None else "nan"
+        except ValueError:
+            value = "nan"
+        rows.append((entity.id, value))
+
+    with path.open("w", encoding="utf-8", newline="") as fh:
+        writer = csv.writer(fh, delimiter="\t", lineterminator="\n")
+        writer.writerow(["id", "deltaG"])
+        writer.writerows(rows)
+    return len(rows)
+
+
+def load_delta_g(model: cobra.Model, *,
+                 met_tsv: Path | str | None = None,
+                 rxn_tsv: Path | str | None = None) -> cobra.Model:
+    """Populate ΔG annotations on the model from the project tsvs.
+
+    The tsv paths default to ``data/databases/model_{met,rxn}DeltaG.tsv``.
+    Values land in ``entity.notes['deltaG']``.
+
+    These are estimated, not curator-verified values, so they are never
+    part of ``load_yeast_yaml``'s result or ``model/yeast-GEM.yml`` --
+    call this explicitly if you want them.
+    """
+    met_tsv = Path(met_tsv) if met_tsv else _MET_TSV
+    rxn_tsv = Path(rxn_tsv) if rxn_tsv else _RXN_TSV
+    _load_delta_g_tsv(model.metabolites, met_tsv, note_key=_DELTA_G_NOTE_KEY)
+    _load_delta_g_tsv(model.reactions, rxn_tsv, note_key=_DELTA_G_NOTE_KEY)
     return model
 
 
 def save_delta_g(model: cobra.Model, *,
                  verbose: bool = False,
-                 met_csv: Path | str | None = None,
-                 rxn_csv: Path | str | None = None) -> None:
-    """Persist ΔG annotations to the project CSVs.
+                 met_tsv: Path | str | None = None,
+                 rxn_tsv: Path | str | None = None) -> None:
+    """Persist ΔG annotations to the project tsvs.
 
-    Thin wrapper over :func:`raven_toolbox.annotation.save_delta_g_csv`.
+    These are estimated, not curator-verified values, so they are never
+    part of ``save_yeast_yaml``'s or ``commit_yeast_model``'s output --
+    call this explicitly if you want to persist them.
     """
-    met_csv = Path(met_csv) if met_csv else _MET_CSV
-    rxn_csv = Path(rxn_csv) if rxn_csv else _RXN_CSV
-    _ra_save_delta_g_csv(model.metabolites, met_csv, note_key=_DELTA_G_NOTE_KEY)
-    _ra_save_delta_g_csv(model.reactions, rxn_csv, note_key=_DELTA_G_NOTE_KEY)
+    met_tsv = Path(met_tsv) if met_tsv else _MET_TSV
+    rxn_tsv = Path(rxn_tsv) if rxn_tsv else _RXN_TSV
+    _save_delta_g_tsv(model.metabolites, met_tsv, note_key=_DELTA_G_NOTE_KEY)
+    _save_delta_g_tsv(model.reactions, rxn_tsv, note_key=_DELTA_G_NOTE_KEY)
     if verbose:
-        print(f"Wrote {met_csv}")
-        print(f"Wrote {rxn_csv}")
+        print(f"Wrote {met_tsv}")
+        print(f"Wrote {rxn_tsv}")

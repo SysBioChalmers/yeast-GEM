@@ -2,10 +2,12 @@ function model = saveYeastYaml(model,allowNoGrowth,deriveTsvs)
 % saveYeastYaml
 %   Save a curated model back to model/yeast-GEM.yml. Applies the
 %   minimal_Y6 canonical medium, adds SBO terms, and checks aerobic and
-%   anaerobic growth, then writes model/yeast-GEM.yml (with the
+%   anaerobic growth, then writes model/yeast-GEM.yml, with the
 %   cross-reference annotation that lives in model/{reactions,
-%   metabolites,genes}.tsv stripped back out, yeast-GEM#379) and the
-%   deltaG side-car CSVs.
+%   metabolites,genes}.tsv (yeast-GEM#379) and any deltaG fields
+%   stripped back out -- deltaG is an estimated, not curator-verified
+%   value, so it never goes into model/yeast-GEM.yml; call saveDeltaG
+%   explicitly if you want to persist it to its own tsv files.
 %
 %   This is the function every curation script should call after editing
 %   a model -- for producing the .xml/.txt/.xlsx/.mat files instead, see
@@ -77,15 +79,10 @@ end
 
 %Update .yml model. Reaction, metabolite and gene cross-reference
 %annotation (KEGG, BiGG, ChEBI, MetaNetX, EC codes, UniProt) lives in
-%model/{reactions,metabolites,genes}.tsv instead (yeast-GEM#379), so it
-%is not re-embedded here.
+%model/{reactions,metabolites,genes}.tsv instead (yeast-GEM#379), and
+%deltaG lives in its own tsv files, so neither is re-embedded here.
 leanModel = stripTsvAnnotation(model);
 exportForGit(leanModel,'yeast-GEM','../model',{'yml'},false,false);
-
-%Write deltaG fields to file
-cd missingFields
-saveDeltaG(model,false);
-cd ..
 
 %Switch back to original folder
 cd(currentDir)
@@ -94,9 +91,16 @@ end
 %%
 function model = stripTsvAnnotation(model)
 %Remove the six cross-reference fields that live in
-%model/{reactions,metabolites,genes}.tsv from a copy of the model, so
-%they are not re-embedded in model/yeast-GEM.yml on every save
-%(yeast-GEM#379). sbo and every other field is left untouched.
+%model/{reactions,metabolites,genes}.tsv, and the deltaG fields that live
+%in their own tsv files, from a copy of the model, so none of them are
+%re-embedded in model/yeast-GEM.yml on every save (yeast-GEM#379). sbo
+%and every other field is left untouched.
+if isfield(model,'metDeltaG')
+    model = rmfield(model,'metDeltaG');
+end
+if isfield(model,'rxnDeltaG')
+    model = rmfield(model,'rxnDeltaG');
+end
 if isfield(model,'rxnMiriams')
     model.rxnMiriams = stripMiriamNames(model.rxnMiriams, ...
         {'bigg.reaction','kegg.pathway','kegg.reaction','metanetx.reaction'});

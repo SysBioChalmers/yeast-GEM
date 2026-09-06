@@ -91,6 +91,7 @@ _ANNOTATION_ROWS = [
      "count"),
     ("structure_inconsistent", "Metabolite structure (SMILES) vs. formula/charge",
      "count"),
+    ("delta_g_consistency", "deltaG tsvs out of sync with the model", "count"),
 ]
 
 # (metric key -> the reason clause used in the "Merge blocked" verdict)

@@ -1,5 +1,6 @@
 annotation_consistency	0
 charge_imbalanced	10
+delta_g_consistency	0
 deprecation_completeness	0
 duplicate_reactions	0
 growth	0.08110025381639169

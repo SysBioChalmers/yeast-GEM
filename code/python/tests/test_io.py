@@ -40,6 +40,14 @@ def test_load_yeast_yaml_merges_tsv_annotation(model):
     assert annotated, "no metabolite carries metanetx.chemical -- tsv merge did not run"
 
 
+def test_load_yeast_yaml_never_carries_delta_g(model):
+    """ΔG is an estimated, not curator-verified value: load_yeast_yaml
+    must never surface it, even though model/yeast-GEM.yml itself still
+    carries it inline for now. Call load_delta_g explicitly for that."""
+    assert not any("deltaG" in m.notes for m in model.metabolites)
+    assert not any("deltaG" in r.notes for r in model.reactions)
+
+
 def test_bigg_compliant_load_produces_a_valid_model():
     """``make_bigg_compliant=True`` remaps identifiers via a lookup table
     (see ``_make_bigg_compliant``), which is the kind of transform that can

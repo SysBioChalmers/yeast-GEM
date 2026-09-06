@@ -115,27 +115,27 @@ def test_save_delta_g_round_trip(model, tmp_path):
     mutated = model.copy()
     load_delta_g(mutated)
 
-    met_csv = tmp_path / "met.csv"
-    rxn_csv = tmp_path / "rxn.csv"
-    save_delta_g(mutated, met_csv=met_csv, rxn_csv=rxn_csv)
+    met_tsv = tmp_path / "met.tsv"
+    rxn_tsv = tmp_path / "rxn.tsv"
+    save_delta_g(mutated, met_tsv=met_tsv, rxn_tsv=rxn_tsv)
 
-    assert met_csv.exists() and rxn_csv.exists()
-    met_df = pd.read_csv(met_csv)
-    assert list(met_df.columns) == ["Var1", "Var2"]
+    assert met_tsv.exists() and rxn_tsv.exists()
+    met_df = pd.read_csv(met_tsv, sep="\t")
+    assert list(met_df.columns) == ["id", "deltaG"]
     assert len(met_df) == len(mutated.metabolites)
-    assert list(met_df["Var1"]) == [m.id for m in mutated.metabolites]
+    assert list(met_df["id"]) == [m.id for m in mutated.metabolites]
 
 
 def test_save_then_load_preserves_values(model, tmp_path):
     """Save ΔG, reload into a fresh model, and verify the notes survive."""
     seed = model.copy()
     load_delta_g(seed)
-    met_csv = tmp_path / "met.csv"
-    rxn_csv = tmp_path / "rxn.csv"
-    save_delta_g(seed, met_csv=met_csv, rxn_csv=rxn_csv)
+    met_tsv = tmp_path / "met.tsv"
+    rxn_tsv = tmp_path / "rxn.tsv"
+    save_delta_g(seed, met_tsv=met_tsv, rxn_tsv=rxn_tsv)
 
     fresh = model.copy()
-    load_delta_g(fresh, met_csv=met_csv, rxn_csv=rxn_csv)
+    load_delta_g(fresh, met_tsv=met_tsv, rxn_tsv=rxn_tsv)
 
     for original, reloaded in zip(seed.metabolites, fresh.metabolites, strict=True):
         assert original.notes.get(_DELTA_G_NOTE_KEY) == \
@@ -143,12 +143,14 @@ def test_save_then_load_preserves_values(model, tmp_path):
 
 
 def test_save_delta_g_emits_nan_for_missing_notes(model, tmp_path):
-    """Metabolites without a ΔG note appear in the CSV as NaN, preserving
-    one-row-per-entity ordering (mirrors MATLAB's array2table behaviour).
+    """Metabolites without a ΔG note appear in the tsv as NaN, preserving
+    one-row-per-entity ordering (mirrors MATLAB's saveDeltaG.m).
 
-    Note: the committed SBML already carries ΔG values in metabolite
-    notes from MATLAB's release pipeline, so we must explicitly clear
-    them before asserting the "missing → NaN" behaviour.
+    Note: the ``model`` fixture no longer carries deltaG notes at all
+    (load_yeast_yaml never populates them -- deltaG is opt-in, loaded
+    only via an explicit load_delta_g call), so this is really testing
+    "every metabolite is missing" rather than a specific subset -- kept
+    as an explicit pop for clarity and to stay correct if that changes.
     """
     fresh = model.copy()
     for met in fresh.metabolites:
@@ -156,9 +158,9 @@ def test_save_delta_g_emits_nan_for_missing_notes(model, tmp_path):
     for rxn in fresh.reactions:
         rxn.notes.pop(_DELTA_G_NOTE_KEY, None)
 
-    met_csv = tmp_path / "met.csv"
-    rxn_csv = tmp_path / "rxn.csv"
-    save_delta_g(fresh, met_csv=met_csv, rxn_csv=rxn_csv)
-    df = pd.read_csv(met_csv)
+    met_tsv = tmp_path / "met.tsv"
+    rxn_tsv = tmp_path / "rxn.tsv"
+    save_delta_g(fresh, met_tsv=met_tsv, rxn_tsv=rxn_tsv)
+    df = pd.read_csv(met_tsv, sep="\t")
     assert len(df) == len(fresh.metabolites)
-    assert df["Var2"].apply(lambda v: math.isnan(v)).all()
+    assert df["deltaG"].apply(lambda v: math.isnan(v)).all()

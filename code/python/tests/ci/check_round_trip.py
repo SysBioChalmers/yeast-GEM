@@ -1,8 +1,9 @@
 """Level-1 parity gate — Python SBML round-trip preserves the model.
 
 Loads model/yeast-GEM.yml the same way curation does (load_yeast_yaml:
-tsv cross-reference annotation merged in, deltaG restored), writes it out
-as SBML to a temp file, reads that back, and asserts the two
+tsv cross-reference annotation merged in, deltaG stripped -- an
+estimated, not curator-verified field never shipped in a model file),
+writes it out as SBML to a temp file, reads that back, and asserts the two
 ``cobra.Model`` objects are semantically equal (delegated to
 ``raven_toolbox.comparison.diff_models``). Catches SBML library
 regressions, annotation losses, and accidental ID rewrites -- for
