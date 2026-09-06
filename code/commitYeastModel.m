@@ -8,7 +8,10 @@ function model = commitYeastModel(model,formats,allowNoGrowth)
 %   is faster and does not require SBML validation.
 %
 %   Does not write model/yeast-GEM.yml or the annotation tsvs -- that is
-%   exclusively saveYeastYaml's job.
+%   exclusively saveYeastYaml's job. Never writes deltaG either, even if
+%   the model happens to carry metDeltaG/rxnDeltaG: those are estimated,
+%   not curator-verified values, so they never go into a shipped model
+%   file -- call loadDeltaG/saveDeltaG explicitly if you want them.
 %
 % Inputs:
 %   model           (struct) model to commit. Preferably RAVEN format,
@@ -58,6 +61,18 @@ cd missingFields
 model = addSBOterms(model);
 cd ..
 
+%deltaG is an estimated, not curator-verified value, so it never goes
+%into the exported .xml/.txt/.xlsx/.mat -- strip it regardless of
+%whether the caller happened to have it loaded (call loadDeltaG/
+%saveDeltaG explicitly if you want it), and before the SBML validity
+%check below, since that temp file becomes the final .xml verbatim.
+if isfield(model,'metDeltaG')
+    model = rmfield(model,'metDeltaG');
+end
+if isfield(model,'rxnDeltaG')
+    model = rmfield(model,'rxnDeltaG');
+end
+
 %Check if model is a valid SBML structure:
 exportModel(model,'tempModel.xml',false,false,true);
 try
@@ -85,11 +100,6 @@ otherFormats = setdiff(formats,{'xml'});
 if ~isempty(otherFormats)
     exportForGit(model,'yeast-GEM','../model',otherFormats,false,false);
 end
-
-%Write deltaG fields to file
-cd missingFields
-saveDeltaG(model,false);
-cd ..
 
 %Convert notation "e-005" to "e-05 " in stoich. coeffs. to avoid
 %inconsistencies between Windows and MAC (.xml only):

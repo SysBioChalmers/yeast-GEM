@@ -19,11 +19,29 @@ def test_save_yeast_yaml_does_not_write_binaries(model, isolated_paths):
     assert not yio.MODEL_PATH.exists()
 
 
-def test_save_yeast_yaml_writes_deltag_csvs(model, isolated_paths):
+def test_save_yeast_yaml_never_ships_delta_g(model, isolated_paths):
+    """ΔG is an estimated, not curator-verified value: it must never
+    appear in the written yml, even if the caller's model happens to
+    carry it, and save_yeast_yaml must never touch the ΔG tsvs at all
+    (call load_delta_g/save_delta_g explicitly for that)."""
     from yeastgem import missing_fields as mf
 
-    save_yeast_yaml(model.copy())
-    assert mf._MET_CSV.exists() and mf._RXN_CSV.exists()
+    mutated = model.copy()
+    # Stamp a deltaG note directly rather than going through load_delta_g:
+    # this test only needs "the model happens to carry deltaG", not a
+    # real load, and load_delta_g's tsv paths default to
+    # isolated_paths' redirected (deliberately nonexistent) tmp files.
+    met = mutated.metabolites[0]
+    met.notes = {**met.notes, "deltaG": "-343.18"}
+
+    save_yeast_yaml(mutated)
+
+    assert not mf._MET_TSV.exists() and not mf._RXN_TSV.exists()
+
+    written = read_yaml_model(str(yio.YAML_PATH))
+    assert not any("deltaG" in m.notes for m in written.metabolites)
+    # save_yeast_yaml must not have stripped the caller's own model.
+    assert any("deltaG" in m.notes for m in mutated.metabolites)
 
 
 def test_save_yeast_yaml_applies_canonical_state(model, isolated_paths):

@@ -8,10 +8,10 @@ The model is available as `.xml`, `.txt`, `.yml`, and (on `main` only) `.xlsx` a
 
 `model/yeast-GEM.yml` is the file to edit directly when curating the model
 (yeast-GEM#379) — reactions, metabolites, genes, stoichiometry, bounds,
-gene-reaction rules, subsystems, SBO terms, ΔG values and confidence scores
-all live there. It is intentionally **not** the place to look for
-cross-reference identifiers to external databases (KEGG, BiGG, ChEBI,
-MetaNetX, EC numbers, UniProt): those live in the three TSV files below
+gene-reaction rules, subsystems, SBO terms and confidence scores all live
+there. It is intentionally **not** the place to look for cross-reference
+identifiers to external databases (KEGG, BiGG, ChEBI, MetaNetX, EC numbers,
+UniProt), or for ΔG values: those live in the TSV files described below
 instead, kept separate so the yml stays lean, diffable, and reviewable
 directly on GitHub.
 
@@ -89,3 +89,21 @@ Removing a reaction or metabolite needs its row deleted here *and* an entry
 added to `data/deprecatedIdentifiers/deprecatedReactions.tsv` or
 `deprecatedMetabolites.tsv`, so the retired id stays resolvable instead of
 silently vanishing — CI reports (does not block) when this is missed.
+
+## ΔG values
+
+Estimated reaction/metabolite ΔG values live in
+[`data/databases/model_rxnDeltaG.tsv`](../data/databases/model_rxnDeltaG.tsv)
+and
+[`data/databases/model_metDeltaG.tsv`](../data/databases/model_metDeltaG.tsv)
+— never in `model/yeast-GEM.yml` or any exported `.xml`/`.txt`/`.xlsx`/`.mat`,
+deliberately: these are group-contribution/eQuilibrator-style estimates, not
+curator-verified values, so they should not be mistaken for the same kind of
+ground truth as the rest of the model.
+
+Loading and saving them is fully opt-in and decoupled from routine curation
+— `loadYeastYaml`/`saveYeastYaml` (Python: `load_yeast_yaml`/`save_yeast_yaml`)
+never touch them, and `commitYeastModel`/`commit_yeast_model` strips them from
+whatever it exports even if the model happens to carry them in memory. Call
+`loadDeltaG.m`/`load_delta_g` to add them to a model, and
+`saveDeltaG.m`/`save_delta_g` to persist any changes back to these files.

@@ -52,7 +52,7 @@ in that order. No additional setup needed for the common case.
 | **Comparison** | [`yeastgem.compare`](yeastgem/compare.py) | `compare_models` / `ComparisonReport` re-exported from `raven_toolbox.comparison.diff_models`. Use for cross-toolchain semantic-equality checks. |
 | **Conditions** | [`yeastgem.conditions`](yeastgem/conditions.py) | `apply(model, name)` — minimal_Y6, anaerobic, glycine_nitrogen, nitrogen_limitation. Files under [`data/conditions/`](../../data/conditions/). |
 | **Biomass** | [`yeastgem.biomass`](yeastgem/biomass.py) | `sum_biomass`, `scale_biomass`, `rescale_pseudoreaction`, `set_gam`, `change_amino_acid_ratio`. Configured from [`data/yeastgem/ids.yml`](../../data/yeastgem/ids.yml). |
-| **Annotations** | [`yeastgem.missing_fields`](yeastgem/missing_fields.py) | `add_sbo_terms`, `load_delta_g`, `save_delta_g`. |
+| **Annotations** | [`yeastgem.missing_fields`](yeastgem/missing_fields.py) | `add_sbo_terms`. `load_delta_g`/`save_delta_g` — opt-in only: `load_yeast_yaml`/`save_yeast_yaml`/`commit_yeast_model` never call them, since ΔG is estimated, not curator-verified, and never ships in a model file. |
 | **Model tests** | [`yeastgem.model_tests`](yeastgem/model_tests/) | `growth` (Tobias 2013 chemostat R²), `essential_genes` (Stanford KO collection), `anaerobic_flux_predictions`, `plot_anaerobic`, `find_duplicated_rxns`. |
 | **Curation** | [`yeastgem.curation`](yeastgem/curation.py) | `curate_mets_rxns_genes` / `..._from_tsv` — batch curation from data tables with the yeast `s_`/`r_` id prefixes. |
 

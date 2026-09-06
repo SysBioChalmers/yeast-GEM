@@ -68,6 +68,13 @@ REPO_PATH: Path = _find_repo_root()
 MODEL_PATH: Path = REPO_PATH / "model" / "yeast-GEM.xml"
 YAML_PATH: Path = REPO_PATH / "model" / "yeast-GEM.yml"
 
+# Key under which ΔG is stored in cobra ``notes`` -- duplicated from
+# yeastgem.missing_fields (a plain string constant, not worth a
+# cross-module import) rather than shared, since io.py must not import
+# missing_fields at module level (missing_fields imports REPO_PATH from
+# here, which would be circular).
+_DELTA_G_NOTE_KEY = "deltaG"
+
 
 # --- load / save for curation --------------------------------------------
 
@@ -77,17 +84,20 @@ def load_yeast_yaml(*, make_bigg_compliant: bool = False) -> cobra.Model:
 
     Reads via :func:`raven_toolbox.io.read_yaml_model` — not
     ``cobra.io.load_yaml_model``, which silently drops RAVEN-only fields
-    (``model.id``/``name``/``version``, ``deltaG``, ``confidence_score``,
-    ``notes``, ``inchis``) — merges in the reaction/metabolite/gene
+    (``model.id``/``name``/``version``, ``confidence_score``, ``notes``,
+    ``inchis``) — and merges in the reaction/metabolite/gene
     cross-reference annotation from
     ``model/{reactions,metabolites,genes}.tsv`` (yeast-GEM#379) via
-    :func:`yeastgem.annotate.annotate_gem`, and restores the ΔG fields via
-    :func:`yeastgem.missing_fields.load_delta_g`. Mirrors
-    `code/loadYeastYaml.m`.
+    :func:`yeastgem.annotate.annotate_gem`. Mirrors `code/loadYeastYaml.m`.
 
-    Loading ``model/yeast-GEM.xml`` does not need a yeast-GEM wrapper:
-    once RAVEN/raven-toolbox support ΔG in SBML, ``read_sbml_model``
-    already returns the complete model.
+    Never carries ΔG: those are estimated, not curator-verified values,
+    so any ``deltaG`` note is stripped, whether it came from the yml
+    itself or anywhere else. Call :func:`yeastgem.missing_fields.load_delta_g`
+    explicitly if you want it.
+
+    Loading ``model/yeast-GEM.xml`` does not need a yeast-GEM wrapper: a
+    generic loader (``cobra.io.read_sbml_model``) already returns the
+    complete model.
 
     Parameters
     ----------
@@ -96,21 +106,43 @@ def load_yeast_yaml(*, make_bigg_compliant: bool = False) -> cobra.Model:
         dictionaries under ``data/databases/``. Default ``False``.
     """
     from yeastgem.annotate import annotate_gem
-    from yeastgem.missing_fields import load_delta_g
 
     model = read_yaml_model(str(YAML_PATH))
     _collapse_single_value_annotations(model)
     _normalize_metabolite_charges(model)
+    _strip_delta_g(model)
     # Pass YAML_PATH's own directory explicitly, for the same reason as in
     # save_yeast_yaml: annotate_gem's REPO_PATH-derived default is a
     # separate binding from annotate.py's own module load time.
     annotate_gem(model, YAML_PATH.parent)
-    load_delta_g(model)
     _escape_notes_for_sbml(model)
 
     if make_bigg_compliant and "x" not in model.compartments:
         _make_bigg_compliant(model)
     return model
+
+
+def _strip_delta_g(model: cobra.Model) -> None:
+    """Remove the ``deltaG`` notes key from every entity, in place.
+
+    ΔG is an estimated, not curator-verified value, so it never survives
+    into ``model/yeast-GEM.yml`` or an exported ``.xml``/``.txt`` --
+    call :func:`yeastgem.missing_fields.load_delta_g`/``save_delta_g``
+    explicitly if you want it.
+
+    Safe to call on a model obtained via ``.copy()``: reassigns
+    ``.notes`` to a new dict rather than popping the key from the
+    existing one, so it never mutates a *different* model that happens
+    to share the same underlying notes dict (``cobra.Model.copy()`` does
+    not deep-copy per-entity ``.notes``, mirroring the ``.annotation``
+    behaviour ``_strip_tsv_annotation`` already accounts for).
+    """
+    for collection in (model.reactions, model.metabolites, model.genes):
+        for entity in collection:
+            if _DELTA_G_NOTE_KEY in entity.notes:
+                entity.notes = {
+                    k: v for k, v in entity.notes.items() if k != _DELTA_G_NOTE_KEY
+                }
 
 
 def _normalize_metabolite_charges(model: cobra.Model) -> None:
@@ -184,9 +216,12 @@ def save_yeast_yaml(
     """Save a curated model back to model/yeast-GEM.yml.
 
     Applies ``minimal_Y6`` (canonical medium), adds SBO terms, and checks
-    aerobic and anaerobic growth, then writes ``model/yeast-GEM.yml``
-    (with the tsv-sourced cross-reference annotation stripped back out,
-    yeast-GEM#379) and the ΔG side-car CSVs. Mirrors
+    aerobic and anaerobic growth, then writes ``model/yeast-GEM.yml``,
+    with the tsv-sourced cross-reference annotation (yeast-GEM#379) and
+    any ΔG notes stripped back out -- ΔG is an estimated, not
+    curator-verified value, so it never goes into ``model/yeast-GEM.yml``;
+    call :func:`yeastgem.missing_fields.save_delta_g` explicitly if you
+    want to persist it to its own tsv files. Mirrors
     `code/saveYeastYaml.m`.
 
     This is the function every curation script should call after editing
@@ -210,7 +245,7 @@ def save_yeast_yaml(
     """
     from yeastgem import conditions
     from yeastgem.annotate import derive_annotation_tsvs
-    from yeastgem.missing_fields import add_sbo_terms, save_delta_g
+    from yeastgem.missing_fields import add_sbo_terms
 
     conditions.apply(model, "minimal_Y6")
     add_sbo_terms(model)
@@ -229,15 +264,14 @@ def save_yeast_yaml(
     lean_model = _strip_tsv_annotation(model)
     write_yaml_model(lean_model, str(YAML_PATH))
 
-    save_delta_g(model)
-
     return model
 
 
 def _strip_tsv_annotation(model: cobra.Model) -> cobra.Model:
     """Copy of ``model`` with the tsv-sourced cross-reference annotation
-    removed, so it is not re-embedded in model/yeast-GEM.yml on every save
-    (yeast-GEM#379). Mirrors the MATLAB ``stripTsvAnnotation``.
+    and any ΔG notes removed, so neither is re-embedded in
+    model/yeast-GEM.yml on every save (yeast-GEM#379). Mirrors the MATLAB
+    ``stripTsvAnnotation``.
 
     Replaces each entity's ``.annotation`` with a new dict rather than
     popping keys from the existing one in place: ``cobra.Model.copy()``
@@ -254,6 +288,7 @@ def _strip_tsv_annotation(model: cobra.Model) -> cobra.Model:
         met.annotation = {k: v for k, v in met.annotation.items() if k not in MET_COLUMNS}
     for gene in stripped.genes:
         gene.annotation = {k: v for k, v in gene.annotation.items() if k not in GENE_COLUMNS}
+    _strip_delta_g(stripped)
     return stripped
 
 
@@ -315,21 +350,26 @@ def commit_yeast_model(
     RAVEN, so use the MATLAB ``commitYeastModel`` for those.
 
     Does not write ``model/yeast-GEM.yml`` or the annotation tsvs — that
-    is exclusively :func:`save_yeast_yaml`'s job.
+    is exclusively :func:`save_yeast_yaml`'s job. Never writes ΔG either,
+    even if ``model`` happens to carry ``deltaG`` notes: those are
+    estimated, not curator-verified values, so they never go into a
+    shipped model file — call :func:`yeastgem.missing_fields.load_delta_g`/
+    ``save_delta_g`` explicitly if you want them.
 
     Pipeline
     --------
     1. Apply ``minimal_Y6`` (canonical media) via :mod:`yeastgem.conditions`.
     2. Apply ``add_sbo_terms`` (canonical SBO annotations) via
        :mod:`yeastgem.missing_fields`.
-    3. Validate that the model writes as valid SBML (cobrapy's
+    3. Strip any ``deltaG`` notes from a copy (never trust that ``model``
+       doesn't carry them).
+    4. Validate that the stripped copy writes as valid SBML (cobrapy's
        ``validate_sbml_model``).
-    4. Aerobic growth check — fail (or warn) if the model cannot grow.
-    5. Anaerobic growth check — apply the ``anaerobic`` condition on a
+    5. Aerobic growth check — fail (or warn) if the model cannot grow.
+    6. Anaerobic growth check — apply the ``anaerobic`` condition on a
        *copy* and confirm the resulting model still grows.
-    6. Write the requested formats to ``model/`` via
+    7. Write the requested formats to ``model/`` via
        :func:`raven_toolbox.io.export_for_git`.
-    7. Persist ΔG annotations via :func:`save_delta_g`.
 
     Root ``README.md`` is deliberately not touched here: its model
     statistics and validation numbers are only ever current for a
@@ -356,7 +396,7 @@ def commit_yeast_model(
     # Import locally to keep the io module free of circular imports —
     # these submodules depend on REPO_PATH from this module.
     from yeastgem import conditions
-    from yeastgem.missing_fields import add_sbo_terms, save_delta_g
+    from yeastgem.missing_fields import add_sbo_terms
 
     unknown = set(formats) - set(_COMMIT_FORMATS)
     if unknown:
@@ -369,16 +409,21 @@ def commit_yeast_model(
     conditions.apply(model, "minimal_Y6")
     add_sbo_terms(model)
 
-    _check_sbml_validity(model)
+    # ΔG never ships in an exported model file (estimated, not
+    # curator-verified) -- strip a copy rather than model itself, so the
+    # caller's own in-memory model is unaffected.
+    exportable = model.copy()
+    _strip_delta_g(exportable)
+
+    _check_sbml_validity(exportable)
     _check_growth(model, "aerobic", allow_no_growth)
     _check_growth_anaerobic(model, allow_no_growth)
 
     if formats:
         export_for_git(
-            model, MODEL_PATH.parent, prefix="yeast-GEM",
+            exportable, MODEL_PATH.parent, prefix="yeast-GEM",
             formats=formats, sub_dirs=False,
         )
-    save_delta_g(model)
 
     return model
 
