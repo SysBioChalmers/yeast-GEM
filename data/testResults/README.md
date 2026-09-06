@@ -260,6 +260,20 @@ pre-existing count — a target for gradual curation, not something a single
 pull request is expected to fix. There is no SMILES/InChI cross-check:
 yeast-GEM has no InChI field.
 
+#### deltaG tsvs out of sync with the model
+Reaction/metabolite ids in the model that have no row in
+`data/databases/model_rxnDeltaG.tsv`/`model_metDeltaG.tsv`, and — the more
+actionable direction — rows in those tsvs for an id no longer in the model at
+all, usually left behind by a rename or removal.
+
+Report only, not a gate: ΔG values are group-contribution/eQuilibrator-style
+estimates, not curator-verified data (see [model/README.md](../../model/README.md)'s
+"ΔG values" section), filled in as its own separate, occasional task rather
+than on every curation edit, so a newly added id with no ΔG row yet is
+expected, not a mistake to fix in the same pull request. An orphaned row is
+different — nothing costs anything by fixing it, so it is worth cleaning up
+when noticed.
+
 ### Validation metrics
 
 Predictions against measured data. These are continuous rather than counts, so
