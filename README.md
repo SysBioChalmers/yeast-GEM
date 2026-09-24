@@ -46,6 +46,10 @@ for those numbers, or
 [data/testResults/README.md](data/testResults/README.md) for this
 branch's current validation results.
 
+# Enzyme-constrained model
+
+An enzyme-constrained version of yeast-GEM, **ecYeastGEM**, is available from the [ecModels](https://github.com/SysBioChalmers/ecModels/tree/gecko4/ecYeastGEM) repository (`gecko4` branch). It is built with [geckopy](https://github.com/SysBioChalmers/geckopy), and each ecYeastGEM version is built from the yeast-GEM release with the same version number (see also #416).
+
 # Installation & usage
 
 ## Obtain model
