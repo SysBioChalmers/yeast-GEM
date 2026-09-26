@@ -83,13 +83,15 @@ def anaerobic_model(model: cobra.Model) -> cobra.Model:
         "r_2137": 0.0,        # ergosta-5,7,22,24(28)-tetraen-3beta-ol (block)
         "r_1967": -1000.0,    # nicotinate
         "r_1548": -1000.0,    # (R)-pantothenate
+        "r_2067": -1000.0,    # thiamine(1+)
     }
     for rxn_id, lower_bound in lower_bounds.items():
         model.reactions.get_by_id(rxn_id).lower_bound = lower_bound
 
     # 4. Block MDH2 (r_0714) and IDP2 (r_0659): repressed/undetected under
-    #    anaerobic glucose growth.
-    for rxn_id in ("r_0714", "r_0659"):
+    #    anaerobic glucose growth. Block Thi5 (r_1603): HMP synthesis needs O2,
+    #    so thiamine comes from the medium.
+    for rxn_id in ("r_0714", "r_0659", "r_1603"):
         model.reactions.get_by_id(rxn_id).bounds = (0.0, 0.0)
 
     # 5. Fumarate reductase recycles FADH2 from Ero1-driven disulphide-bond

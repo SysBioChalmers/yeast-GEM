@@ -42,6 +42,12 @@ model.lb(strcmp(model.rxns,'r_2137')) = 0;    %ergosta-5,7,22,24(28)-tetraen-3be
 % Enable uptake of vitamins for NAD(P)H and CoA synthesis
 model.lb(strcmp(model.rxns,'r_1967')) = -1000;    %nicotinate
 model.lb(strcmp(model.rxns,'r_1548')) = -1000;    %(R)-pantothenate
+% Thiamine uptake: the pyrimidine synthase Thi5 needs O2 (Coquille et al
+% (2012) 10.1021/ja3073917; Mondal et al (2023) 10.1021/jacs.2c12814), so
+% anaerobic cultures rely on the thiamine in the medium.
+model.lb(strcmp(model.rxns,'r_2067')) = -1000;    %thiamine(1+)
+model.lb(strcmp(model.rxns,'r_1603')) = 0;        %Thi5, HMP synthesis
+model.ub(strcmp(model.rxns,'r_1603')) = 0;
 
 %% Curations that are required to reach correct metabolic phenotypes during
 % anaerobic batch growth on minimal glucose media

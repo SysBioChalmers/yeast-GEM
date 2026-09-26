@@ -1,5 +1,5 @@
 # Anaerobic conditions for yeast-GEM. Mirrors code/otherChanges/
-# anaerobicModel.m as of release v9.1.0. Documentation references:
+# anaerobicModel.m. Documentation references:
 #   - heme/AA ratio: anaerobicModel.m
 #   - sterol/fatty acid supplementation: anaerobicModel.m
 #   - MDH2 / IDP2 blocking: Hung et al 2004 (10.1074/jbc.M404544200),
@@ -52,6 +52,10 @@ bounds:
   # Allow vitamin uptake for NAD(P)H and CoA synthesis
   - { rxn: r_1967, lb: -1000, comment: nicotinate exchange }
   - { rxn: r_1548, lb: -1000, comment: "(R)-pantothenate exchange" }
+  # Allow thiamine uptake and block Thi5, whose HMP synthesis needs O2
+  # (Coquille et al 2012, 10.1021/ja3073917; Mondal et al 2023, 10.1021/jacs.2c12814)
+  - { rxn: r_2067, lb: -1000, comment: thiamine(1+) exchange }
+  - { rxn: r_1603, lb: 0, ub: 0, comment: Thi5 (4-amino-5-hydroxymethyl-2-methylpyrimidine synthetase) }
   # Block MDH2 — repressed under anaerobic growth on glucose
   - { rxn: r_0714, lb: 0, ub: 0, comment: MDH2 (malate dehydrogenase) }
   # Block IDP2 — repressed in transcriptome and not detected in proteome
