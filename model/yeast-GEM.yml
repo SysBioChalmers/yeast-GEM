@@ -27997,7 +27997,7 @@
       - s_1198: 1.0
       - s_1203: -1.0
     - lower_bound: 0.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YLR011W
     - subsystem:
       - Riboflavin metabolism
@@ -28005,7 +28005,7 @@
       - pubmed: "15184374"
       - sbo: SBO:0000176
     - confidence_score: 3.0
-    - notes: "model.S(601,338) curated (PR #222); Blocked: with the FMNH2-linked fumarate reductase (r_1000) this reduction of free FMN forms a net NADH:fumarate oxidoreductase that is not supported in vivo; Frd1/Osm1 re-oxidise FADH2 (Camarasa et al 2007, 10.1002/yea.1467; Kim et al 2018, 10.1038/s41467-018-07285-9)"
+    - notes: "model.S(601,338) curated (PR #222)"
   - !!omap
     - id: r_0442
     - name: FMN reductase
@@ -28016,7 +28016,7 @@
       - s_1207: 1.0
       - s_1212: -1.0
     - lower_bound: 0.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YLR011W
     - subsystem:
       - Riboflavin metabolism
@@ -28024,7 +28024,7 @@
       - pubmed: "15184374"
       - sbo: SBO:0000176
     - confidence_score: 3.0
-    - notes: "model.S(601,339) curated (PR #222); Blocked: with the FMNH2-linked fumarate reductase (r_1000) this reduction of free FMN forms a net NADH:fumarate oxidoreductase that is not supported in vivo; Frd1/Osm1 re-oxidise FADH2 (Camarasa et al 2007, 10.1002/yea.1467; Kim et al 2018, 10.1038/s41467-018-07285-9)"
+    - notes: "model.S(601,339) curated (PR #222)"
   - !!omap
     - id: r_0443
     - name: formaldehyde dehydrogenase
@@ -87904,7 +87904,7 @@
       - s_0803: 1.0
       - s_4271: 1.0
     - lower_bound: -1000.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YOR126C
     - subsystem:
       - Fatty acid ester pathway
@@ -87912,7 +87912,7 @@
       - sbo: SBO:0000176
     - references: 10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z
     - confidence_score: 2.0
-    - notes: "Volatile esters and polyphosphate curation (PR #337); Hydrolysis only: Iah1 is known to hydrolyse esters, not to synthesise them (Fukuda et al 1998, 10.1128/AEM.64.10.4076-4078.1998; Lilly et al 2006, 10.1002/yea.1382)"
+    - notes: "Volatile esters and polyphosphate curation (PR #337)"
   - !!omap
     - id: r_4712
     - name: ethyl-(2R)-lactate esterase, c
@@ -87923,7 +87923,7 @@
       - s_0803: 1.0
       - s_4273: 1.0
     - lower_bound: -1000.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YOR126C
     - subsystem:
       - Fatty acid ester pathway
@@ -87931,7 +87931,7 @@
       - sbo: SBO:0000176
     - references: 10.1006/fmic.1999.0272; 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z
     - confidence_score: 2.0
-    - notes: "Volatile esters and polyphosphate curation (PR #337); Hydrolysis only: Iah1 is known to hydrolyse esters, not to synthesise them (Fukuda et al 1998, 10.1128/AEM.64.10.4076-4078.1998; Lilly et al 2006, 10.1002/yea.1382)"
+    - notes: "Volatile esters and polyphosphate curation (PR #337)"
   - !!omap
     - id: r_4713
     - name: diethyl-succinate esterase, c
@@ -87980,7 +87980,7 @@
       - s_3874: -1.0
       - s_4278: 1.0
     - lower_bound: -1000.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YOR126C
     - subsystem:
       - Fatty acid ester pathway
@@ -87988,7 +87988,7 @@
       - sbo: SBO:0000176
     - references: 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z
     - confidence_score: 2.0
-    - notes: "Volatile esters and polyphosphate curation (PR #337); Hydrolysis only: Iah1 is known to hydrolyse esters, not to synthesise them (Fukuda et al 1998, 10.1128/AEM.64.10.4076-4078.1998; Lilly et al 2006, 10.1002/yea.1382)"
+    - notes: "Volatile esters and polyphosphate curation (PR #337)"
   - !!omap
     - id: r_4716
     - name: ethyl-pyruvate esterase, c
@@ -87999,7 +87999,7 @@
       - s_1399: -1.0
       - s_4280: 1.0
     - lower_bound: -1000.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YOR126C
     - subsystem:
       - Fatty acid ester pathway
@@ -88007,7 +88007,7 @@
       - sbo: SBO:0000176
     - references: 10.1006/fmic.1999.0272; 10.1038/s41598-022-16554-z
     - confidence_score: 2.0
-    - notes: "Volatile esters and polyphosphate curation (PR #337); Hydrolysis only: Iah1 is known to hydrolyse esters, not to synthesise them (Fukuda et al 1998, 10.1128/AEM.64.10.4076-4078.1998; Lilly et al 2006, 10.1002/yea.1382)"
+    - notes: "Volatile esters and polyphosphate curation (PR #337)"
   - !!omap
     - id: r_4717
     - name: benzyl-acetate esterase, c
@@ -88018,7 +88018,7 @@
       - s_3799: -1.0
       - s_4288: 1.0
     - lower_bound: -1000.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YOR126C
     - subsystem:
       - Fatty acid ester pathway
@@ -88026,7 +88026,7 @@
       - sbo: SBO:0000176
     - references: 10.1016/j.aca.2009.09.040; 10.1038/s41598-022-16554-z
     - confidence_score: 2.0
-    - notes: "Volatile esters and polyphosphate curation (PR #337); Hydrolysis only: Iah1 is known to hydrolyse esters, not to synthesise them (Fukuda et al 1998, 10.1128/AEM.64.10.4076-4078.1998; Lilly et al 2006, 10.1002/yea.1382)"
+    - notes: "Volatile esters and polyphosphate curation (PR #337)"
   - !!omap
     - id: r_4718
     - name: isobutyraldehyde dehydrogenase, c
@@ -88077,7 +88077,7 @@
       - s_4285: -1.0
       - s_4286: 1.0
     - lower_bound: -1000.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YOR126C
     - subsystem:
       - Fatty acid ester pathway
@@ -88085,7 +88085,7 @@
       - sbo: SBO:0000176
     - references: 10.1038/s41598-022-16554-z
     - confidence_score: 2.0
-    - notes: "Volatile esters and polyphosphate curation (PR #337); Hydrolysis only: Iah1 is known to hydrolyse esters, not to synthesise them (Fukuda et al 1998, 10.1128/AEM.64.10.4076-4078.1998; Lilly et al 2006, 10.1002/yea.1382)"
+    - notes: "Volatile esters and polyphosphate curation (PR #337)"
   - !!omap
     - id: r_4721
     - name: ethyl-2-methylbutyrate esterase, c
@@ -88096,7 +88096,7 @@
       - s_4282: -1.0
       - s_4283: 1.0
     - lower_bound: -1000.0
-    - upper_bound: 0.0
+    - upper_bound: 1000.0
     - gene_reaction_rule: YOR126C
     - subsystem:
       - Fatty acid ester pathway
@@ -88104,7 +88104,7 @@
       - sbo: SBO:0000176
     - references: 10.1038/s41598-022-16554-z
     - confidence_score: 2.0
-    - notes: "Volatile esters and polyphosphate curation (PR #337); Hydrolysis only: Iah1 is known to hydrolyse esters, not to synthesise them (Fukuda et al 1998, 10.1128/AEM.64.10.4076-4078.1998; Lilly et al 2006, 10.1002/yea.1382)"
+    - notes: "Volatile esters and polyphosphate curation (PR #337)"
   - !!omap
     - id: r_4722
     - name: polyphosphate polymerase, c
