@@ -23,7 +23,7 @@ if ~exist(outDir, 'dir')
     mkdir(outDir);
 end
 
-conds = {'minimal_Y6', 'anaerobicModel', 'glycineNitrogenSource', 'nitrogenLimitation'};
+conds = {'minimal_Y6', 'applyAnaerobic', 'glycineNitrogenSource', 'nitrogenLimitation'};
 
 for i = 1:numel(conds)
     name = conds{i};

@@ -308,7 +308,7 @@ For traceability — so we don't accidentally re-litigate these:
 - Repo orchestration: `loadYeastModel` (drop entirely or keep as
   default-path shim), `commitYeastModel`, `getEarlierModelVersion`,
   `increaseVersion`.
-- Data-driven condition presets (`minimal_Y6`, `anaerobicModel`,
+- Data-driven condition presets (`minimal_Y6`, `applyAnaerobic`,
   `glycineNitrogenSource`, `nitrogenLimitation`) — these are *data* under
   `data/conditions/`, not functions.
 

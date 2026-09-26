@@ -18,7 +18,7 @@ function checkGrowth(model,condition,allowNoGrowth)
 
 if strcmp(condition,'anaerobic')
     cd otherChanges
-    model = anaerobicModel(model);
+    model = applyAnaerobic(model);
     cd ..
 end
 try

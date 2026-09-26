@@ -73,7 +73,7 @@ direction may flip — until then, MATLAB seeds, Python verifies.
 ## Phase-2 specific: the refactor equivalence check
 
 Phase 2 of [PORTING_PLAN.md](../../PORTING_PLAN.md) is a pure refactor
-of the MATLAB condition functions (`minimal_Y6`, `anaerobicModel`,
+of the MATLAB condition functions (`minimal_Y6`, `applyAnaerobic`,
 `glycineNitrogenSource`, `nitrogenLimitation`) into data-as-code with
 shim functions. The verification is automated by two MATLAB scripts in
 this directory:
@@ -106,7 +106,7 @@ matlab -batch "addpath('code/python/tests/reference'); \
 
 # 4. Belt-and-suspenders: compare the SBML files of the two feasible
 #    conditions with the Python comparator.
-for c in minimal_Y6 anaerobicModel; do
+for c in minimal_Y6 applyAnaerobic; do
     python -m yeastgem.compare /tmp/phase2-pre/$c.xml /tmp/phase2-post/$c.xml
 done
 
@@ -136,7 +136,7 @@ the Tier-2 `amino_acid_ratio` implementation.
 
 Phase 3 renames `saveYeastModel` to `commitYeastModel` (with a
 deprecation shim), swaps the in-pipeline `cd modelCuration; minimal_Y6;
-cd otherChanges; anaerobicModel; cd ..` dance for direct
+cd otherChanges; applyAnaerobic; cd ..` dance for direct
 `applyCondition` calls, and adds the Python `commit_yeast_model`
 release pipeline. The verification driver
 [`runPhase3.m`](runPhase3.m) takes a yeast-GEM checkout path and a

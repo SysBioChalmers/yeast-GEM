@@ -1,12 +1,13 @@
 function model = anaerobicModelOld(model)
 % anaerobicModelOld
-%   This file has been replaced with anaerobicModel since yeast-GEM 9.1.0.
-%   This function is kept just for comparison purposes.
+%   Anaerobic constraints of yeast-GEM releases before 9.1.0, kept for
+%   comparison. applyAnaerobic applies the constraints curated in 9.1.0;
+%   the deprecated anaerobicModel calls this function.
 %
 %   Inputs: model           (struct) aerobic model
 %   Output: model           (struct) anaerobic model
 %   
-%   Usage: model = anaerobicModel(model)
+%   Usage: model = anaerobicModelOld(model)
 %
 
 %1st change: Refit GAM and NGAM to exp. data, change biomass composition

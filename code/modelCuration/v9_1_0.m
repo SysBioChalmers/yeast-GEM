@@ -335,7 +335,7 @@ model = setParam(model,'eq',{'r_0252'},0);
 model.rxnNotes(ismember(model.rxns,{'r_0252'})) = {'Only active if growth medium contains carnitine'};
 
 %% Update amino acid ratio with Björkeroth 2020 data
-% Matching ratio in anaerobicModel function
+% Matching ratio in applyAnaerobic function
 model = changeAminoAcidRatio(model,1);
 
 %% Rescale protein fraction so that biomass sums up to 1 g/gDCW

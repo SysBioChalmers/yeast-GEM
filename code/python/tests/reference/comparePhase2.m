@@ -9,7 +9,7 @@ function comparePhase2(preDir, postDir)
 warning('off','all');
 restoredefaultpath; rehash toolboxcache;
 
-conds = {'minimal_Y6', 'anaerobicModel', 'glycineNitrogenSource', 'nitrogenLimitation'};
+conds = {'minimal_Y6', 'applyAnaerobic', 'glycineNitrogenSource', 'nitrogenLimitation'};
 tol = 1e-12;
 allOk = true;
 

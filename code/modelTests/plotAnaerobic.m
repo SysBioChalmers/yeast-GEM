@@ -8,7 +8,7 @@ function [metrics, results] = plotAnaerobic(modelAn, doPlot)
 %   data/physiology/exchange_data_anaerobic.tsv, together with the glucose
 %   uptake rate they were measured at, which is fixed before solving.
 %
-%   modelAn     an anaerobic model, as returned by anaerobicModel
+%   modelAn     an anaerobic model, as returned by applyAnaerobic
 %   doPlot      whether to draw the bar plot into the current axes
 %               (optional, default true)
 %
