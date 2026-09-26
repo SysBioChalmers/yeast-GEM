@@ -143,7 +143,7 @@ data/
     glycine_nitrogen.yml          # glycine-as-N-source preset
     nitrogen_limitation.yml       # N-limitation preset
   physiology/
-    aminoacid_Bjorkeroth2020.tsv  # (existing) AA ratios, aerobic + anaerobic
+    aminoAcid_Bjorkeroth2020.tsv  # (existing) AA ratios, aerobic + anaerobic
 ```
 
 ## Function triage
@@ -441,7 +441,7 @@ change.
   switch + FAD recycling, all expressed as a structured diff.
 - `data/conditions/glycine_nitrogen.yml`, `data/conditions/nitrogen_limitation.yml` —
   the existing 3–5-line bound flips, as data.
-- `data/physiology/aminoacid_Bjorkeroth2020.tsv` — already exists; the AA-ratio
+- `data/physiology/aminoAcid_Bjorkeroth2020.tsv` — already exists; the AA-ratio
   function becomes a thin loader.
 
 ### Loader API (mirrored in both languages)
@@ -462,7 +462,7 @@ change.
 name: anaerobic
 description: Convert aerobic yeast-GEM to anaerobic.
 biomass:
-  amino_acid_ratio: anaerobic   # column selector for aminoacid_Bjorkeroth2020.tsv
+  amino_acid_ratio: anaerobic   # column selector for aminoAcid_Bjorkeroth2020.tsv
   remove_cofactors:
     - heme a
 bounds:
