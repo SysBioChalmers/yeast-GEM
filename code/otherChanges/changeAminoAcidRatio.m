@@ -26,7 +26,7 @@ funcDir = dbstack('-completenames');
 funcDir = regexprep(funcDir(1).file,[funcDir(1).name '\.m'],'');
 
 %Load chemostat data:
-fid     = fopen(fullfile(funcDir,'..','..','data','physiology','aminoacid_Bjorkeroth2020.tsv'),'r');
+fid     = fopen(fullfile(funcDir,'..','..','data','physiology','aminoAcid_Bjorkeroth2020.tsv'),'r');
 data    = textscan(fid,'%s %s %s %f %f %f','Delimiter','\t','HeaderLines',1);
 tRNAids = [data{2} data{3}];
 aaRatio = [data{5} data{6}];
