@@ -14,9 +14,15 @@ function model = applyEnvironment(model,environment)
 %                                reactions to lb 0, ub 1000
 %   cofactor_pseudoreaction      remove metabolites from the pseudoreaction
 %                                and recompute the charge-balancing H+
+%                                (a metabolite without charge counts as 0,
+%                                with a warning)
 %   biomass_stoichiometry_delta  add coefficients to a reaction
 %   bounds                       set lb and/or ub of listed reactions
 %   expected_uptake_count        warn if fewer lb -1000 bounds were applied
+%
+%   The environment is checked before the model is changed: an invalid
+%   value (e.g. a non-numeric bound, lb > ub, an unknown reset_exchanges
+%   value) is an error and nothing is applied.
 %
 % Input:
 %   model           yeast-GEM model structure
@@ -30,6 +36,7 @@ function model = applyEnvironment(model,environment)
 %
 % Usage: model = applyEnvironment(model,environment)
 
+environment = char(environment);
 codeDir = fileparts(mfilename('fullpath'));
 if isfile(environment)
     envFile = environment;
@@ -41,34 +48,50 @@ else
     end
 end
 env = readEnvironmentFile(envFile);
+if isfield(model,'unconstrained') && any(model.unconstrained)
+    error('applyEnvironment:boundaryMets', ...
+        'Models with boundary metabolites (model.unconstrained) are not supported.');
+end
+
+% Check the environment before changing the model
+aerobic = [];
+if isfield(env,'amino_acid_ratio') && ~isempty(env.amino_acid_ratio)
+    if ~ischar(env.amino_acid_ratio) || ~any(strcmp(env.amino_acid_ratio,{'aerobic','anaerobic'}))
+        error('applyEnvironment:aminoAcidRatio', ...
+            'amino_acid_ratio must be aerobic or anaerobic.');
+    end
+    aerobic = strcmp(env.amino_acid_ratio,'aerobic');
+end
+exch = false(numel(model.rxns),1);
+if isfield(env,'prelude') && isfield(env.prelude,'reset_exchanges') ...
+        && ~isempty(env.prelude.reset_exchanges)
+    reset = env.prelude.reset_exchanges;
+    if ~ischar(reset) || ~any(strcmpi(reset,{'in','out','all'}))
+        error('applyEnvironment:resetExchanges', ...
+            'reset_exchanges must be in, out or all.');
+    end
+    % Exchange rule of RAVEN's getExchangeRxns
+    noProducts   = ~any(model.S > 0,1)';
+    noSubstrates = ~any(model.S < 0,1)';
+    switch lower(reset)
+        case 'out', exch = noProducts;
+        case 'in',  exch = noSubstrates;
+        otherwise,  exch = noProducts | noSubstrates;
+    end
+end
+newBounds = checkBounds(model,env,exch);
 
 % Amino acid ratio of the protein pseudoreaction
-if isfield(env,'amino_acid_ratio')
-    switch env.amino_acid_ratio
-        case 'aerobic',   aerobic = true;
-        case 'anaerobic', aerobic = false;
-        otherwise
-            error('applyEnvironment:aminoAcidRatio', ...
-                'amino_acid_ratio must be aerobic or anaerobic.');
-    end
+if ~isempty(aerobic)
     oldPath = addpath(fullfile(codeDir,'otherChanges'));
     restorePath = onCleanup(@() path(oldPath));
     model = changeAminoAcidRatio(model,aerobic);
     clear restorePath
 end
 
-% Reset exchange reactions (exchange rule of RAVEN's getExchangeRxns)
-if isfield(env,'prelude') && isfield(env.prelude,'reset_exchanges')
-    noProducts   = ~any(model.S > 0,1)';
-    noSubstrates = ~any(model.S < 0,1)';
-    switch lower(env.prelude.reset_exchanges)
-        case 'out', exch = noProducts;
-        case 'in',  exch = noSubstrates;
-        otherwise,  exch = noProducts | noSubstrates;
-    end
-    model.lb(exch) = 0;
-    model.ub(exch) = 1000;
-end
+% Reset exchange reactions
+model.lb(exch) = 0;
+model.ub(exch) = 1000;
 
 % Cofactor pseudoreaction: remove metabolites, recompute the H+ balance
 if isfield(env,'cofactor_pseudoreaction')
@@ -85,12 +108,12 @@ if isfield(env,'cofactor_pseudoreaction')
         metIdx = find(model.S(:,rxnIdx));
         unknown = metIdx(isnan(model.metCharges(metIdx)));
         if ~isempty(unknown)
-            error('applyEnvironment:unknownCharge', ...
-                'Cannot charge balance %s, no charge for: %s', ...
+            warning('applyEnvironment:unknownCharge', ...
+                'Charge balance of %s: no charge for %s, counted as 0.', ...
                 cp.rxn_id, strjoin(model.mets(unknown),', '));
         end
         model.S(balIdx,rxnIdx) = ...
-            -sum(full(model.S(metIdx,rxnIdx)).*model.metCharges(metIdx));
+            -sum(full(model.S(metIdx,rxnIdx)).*model.metCharges(metIdx),'omitnan');
     end
 end
 
@@ -98,35 +121,58 @@ end
 if isfield(env,'biomass_stoichiometry_delta')
     delta = env.biomass_stoichiometry_delta;
     rxnIdx = findIndex(model.rxns,delta.rxn_id);
-    for i = 1:numel(delta.add)
-        metIdx = findIndex(model.mets,delta.add{i}.met);
-        model.S(metIdx,rxnIdx) = model.S(metIdx,rxnIdx) + delta.add{i}.coef;
+    if isfield(delta,'add')
+        for i = 1:numel(delta.add)
+            metIdx = findIndex(model.mets,delta.add{i}.met);
+            model.S(metIdx,rxnIdx) = model.S(metIdx,rxnIdx) + delta.add{i}.coef;
+        end
     end
 end
 
 % Reaction bounds
-nUptake = 0;
-if isfield(env,'bounds')
-    for i = 1:numel(env.bounds)
-        b = env.bounds{i};
-        rxnIdx = find(strcmp(model.rxns,b.rxn));
-        if isempty(rxnIdx)
-            warning('applyEnvironment:missingRxn', ...
-                'Reaction %s not in the model; skipped.', b.rxn);
-            continue
-        end
-        if isfield(b,'lb')
-            model.lb(rxnIdx) = b.lb;
-            nUptake = nUptake + (b.lb == -1000);
-        end
-        if isfield(b,'ub')
-            model.ub(rxnIdx) = b.ub;
-        end
-    end
-end
+model.lb(newBounds.idx) = newBounds.lb;
+model.ub(newBounds.idx) = newBounds.ub;
+nUptake = sum(newBounds.hasLb & newBounds.lb == -1000);
 if isfield(env,'expected_uptake_count') && nUptake ~= env.expected_uptake_count
     warning('applyEnvironment:uptakeCount', ...
         'Expected %d uptake reactions, applied %d.', env.expected_uptake_count, nUptake);
+end
+end
+
+function nb = checkBounds(model,env,exch)
+% The bounds to set (reaction index, lb, ub, whether lb was given), checked:
+% bounds must be finite numbers and lb <= ub, given the exchange reset.
+nb = struct('idx',zeros(0,1),'lb',zeros(0,1),'ub',zeros(0,1),'hasLb',false(0,1));
+if ~isfield(env,'bounds')
+    return
+end
+for i = 1:numel(env.bounds)
+    b = env.bounds{i};
+    rxnIdx = find(strcmp(model.rxns,b.rxn));
+    if isempty(rxnIdx)
+        warning('applyEnvironment:missingRxn', ...
+            'Reaction %s not in the model; skipped.', b.rxn);
+        continue
+    end
+    if exch(rxnIdx), lb = 0; ub = 1000; else, lb = model.lb(rxnIdx); ub = model.ub(rxnIdx); end
+    for key = {'lb','ub'}
+        if isfield(b,key{1})
+            v = b.(key{1});
+            if ~isnumeric(v) || ~isscalar(v) || ~isreal(v) || ~isfinite(v)
+                error('applyEnvironment:bound', ...
+                    '%s: %s must be a finite number.', b.rxn, key{1});
+            end
+        end
+    end
+    if isfield(b,'lb'), lb = b.lb; end
+    if isfield(b,'ub'), ub = b.ub; end
+    if lb > ub
+        error('applyEnvironment:bound','%s: lb %g is larger than ub %g.', b.rxn, lb, ub);
+    end
+    nb.idx(end+1,1) = rxnIdx;
+    nb.lb(end+1,1) = lb;
+    nb.ub(end+1,1) = ub;
+    nb.hasLb(end+1,1) = isfield(b,'lb');
 end
 end
 
@@ -227,7 +273,7 @@ end
 
 function tok = splitKey(s)
 % {key, value} for 'key: value' or 'key:', empty if s is not a key.
-tok = regexp(s,'^([A-Za-z_]\w*):(.*)$','tokens','once');
+tok = regexp(s,'^([A-Za-z]\w*):(.*)$','tokens','once');
 if ~isempty(tok)
     if isempty(tok{2})
         tok{2} = '';
@@ -259,20 +305,24 @@ end
 end
 
 function parts = splitTopLevel(s)
-parts = {}; depth = 0; quote = ''; start = 1;
-for i = 1:numel(s)
+parts = {}; depth = 0; quote = ''; start = 1; i = 1;
+while i <= numel(s)
     c = s(i);
     if ~isempty(quote)
-        if c == quote, quote = ''; end
-    elseif c == '"' || c == ''''
-        quote = c;
-    elseif c == '{' || c == '['
-        depth = depth + 1;
-    elseif c == '}' || c == ']'
-        depth = depth - 1;
-    elseif c == ',' && depth == 0
-        parts{end+1} = strtrim(s(start:i-1)); %#ok<AGROW>
-        start = i + 1;
+        i = quoteStep(s,i,quote);
+        if i < 0, quote = ''; i = -i; end
+    else
+        if (c == '"' || c == '''') && quoteStarts(s,i)
+            quote = c;
+        elseif c == '{' || c == '['
+            depth = depth + 1;
+        elseif c == '}' || c == ']'
+            depth = depth - 1;
+        elseif c == ',' && depth == 0
+            parts{end+1} = strtrim(s(start:i-1)); %#ok<AGROW>
+            start = i + 1;
+        end
+        i = i + 1;
     end
 end
 last = strtrim(s(start:end));
@@ -282,16 +332,45 @@ end
 end
 
 function line = stripComment(line)
-quote = '';
-for i = 1:numel(line)
+quote = ''; i = 1;
+while i <= numel(line)
     c = line(i);
     if ~isempty(quote)
-        if c == quote, quote = ''; end
-    elseif c == '"' || c == ''''
-        quote = c;
-    elseif c == '#' && (i == 1 || any(line(i-1) == [' ' sprintf('\t')]))
-        line = line(1:i-1);
-        return
+        i = quoteStep(line,i,quote);
+        if i < 0, quote = ''; i = -i; end
+    else
+        if (c == '"' || c == '''') && quoteStarts(line,i)
+            quote = c;
+        elseif c == '#' && (i == 1 || any(line(i-1) == [' ' sprintf('\t')]))
+            line = line(1:i-1);
+            return
+        end
+        i = i + 1;
     end
 end
+end
+
+function i = quoteStep(s,i,quote)
+% Next position inside a quoted scalar; negative if the quote closes at i.
+% Escapes: \x in double quotes, '' in single quotes.
+if quote == '"' && s(i) == '\'
+    i = i + 2;
+elseif s(i) == quote && quote == '''' && i < numel(s) && s(i+1) == ''''
+    i = i + 2;
+elseif s(i) == quote
+    i = -(i + 1);
+else
+    i = i + 1;
+end
+end
+
+function tf = quoteStarts(s,i)
+% A quote character starts a quoted scalar only at the start of a value
+% (after '{', '[', ',', ': ' or a sequence '- '); elsewhere, as in
+% 5'-phosphate, it is part of a plain scalar.
+j = i - 1;
+while j >= 1 && isspace(s(j))
+    j = j - 1;
+end
+tf = j < 1 || any(s(j) == '{[,:') || (s(j) == '-' && (j == 1 || isspace(s(j-1))));
 end

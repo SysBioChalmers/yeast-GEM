@@ -165,17 +165,64 @@ def test_anaerobic_biomass_step_adds_fadh2_on_real_model(model):
     assert after[proton] == pytest.approx(before[proton.id] - 0.16)
 
 
-def test_conditions_module_needs_only_cobra_and_yaml():
-    """Environments depend on no toolbox: yeastgem.conditions imports only the
-    standard library, cobra and yaml."""
+def _top_level_imports(path: Path) -> set[str]:
     import ast
-    import sys
 
-    tree = ast.parse(Path(conditions.__file__).read_text())
-    imported = {
-        (n.module if isinstance(n, ast.ImportFrom) else a.name).split(".")[0]
+    tree = ast.parse(path.read_text())
+    return {
+        (n.module if isinstance(n, ast.ImportFrom) else a.name)
         for n in ast.walk(tree) if isinstance(n, (ast.Import, ast.ImportFrom))
         for a in (n.names if isinstance(n, ast.Import) else [n])
     }
-    assert imported <= set(sys.stdlib_module_names) | {"__future__", "cobra", "yaml"}
 
+
+def test_conditions_module_needs_no_toolbox():
+    """Environments depend on no toolbox: yeastgem.conditions imports only the
+    standard library, cobra, yaml and yeastgem.paths (standard library only)."""
+    import sys
+
+    allowed = set(sys.stdlib_module_names) | {"__future__"}
+    imported = _top_level_imports(Path(conditions.__file__))
+    assert {m.split(".")[0] for m in imported} <= allowed | {"cobra", "yaml", "yeastgem"}
+    assert {m for m in imported if m.startswith("yeastgem")} == {"yeastgem.paths"}
+    paths = Path(conditions.__file__).with_name("paths.py")
+    assert {m.split(".")[0] for m in _top_level_imports(paths)} <= allowed | {"dotenv"}
+
+
+def test_load_condition_follows_yeast_gem_path(tmp_path, monkeypatch):
+    (tmp_path / "data" / "conditions").mkdir(parents=True)
+    (tmp_path / "data" / "conditions" / "test_env.yml").write_text("name: test_env\n")
+    monkeypatch.setenv("YEAST_GEM_PATH", str(tmp_path))
+    assert conditions.load_condition("test_env")["name"] == "test_env"
+
+
+def test_load_condition_from_path(tmp_path):
+    path = tmp_path / "my_env.yml"
+    path.write_text("name: my_env\nbounds:\n  - { rxn: r_1992, lb: 0 }\n")
+    assert conditions.load_condition(str(path))["bounds"][0]["rxn"] == "r_1992"
+
+
+@pytest.mark.parametrize("cfg", [
+    {"bounds": [{"rxn": "r_1992", "lb": -5}, {"rxn": "r_0714", "lb": 5, "ub": 1}]},
+    {"bounds": [{"rxn": "r_1992", "lb": -5}, {"rxn": "r_0714", "lb": None}]},
+    {"bounds": [{"rxn": "r_1992", "lb": -5}, {"rxn": "r_0714", "ub": "high"}]},
+    {"prelude": {"reset_exchanges": "outt"}, "bounds": [{"rxn": "r_1992", "lb": -5}]},
+    {"amino_acid_ratio": "anoxic", "bounds": [{"rxn": "r_1992", "lb": -5}]},
+])
+def test_invalid_environment_leaves_model_unchanged(model, cfg):
+    mutated = model.copy()
+    before = {r.id: r.bounds for r in mutated.reactions}
+    protein = dict(mutated.reactions.get_by_id("r_4047").metabolites)
+    with pytest.raises(ValueError):
+        conditions.apply_condition(mutated, cfg)
+    assert {r.id: r.bounds for r in mutated.reactions} == before
+    assert dict(mutated.reactions.get_by_id("r_4047").metabolites) == protein
+
+
+def test_empty_lists_are_allowed(model):
+    mutated = model.copy()
+    conditions.apply_condition(mutated, {
+        "cofactor_pseudoreaction": {"rxn_id": "r_4598", "remove_mets": None},
+        "biomass_stoichiometry_delta": {"rxn_id": "r_4041", "add": None},
+        "bounds": None,
+    })
