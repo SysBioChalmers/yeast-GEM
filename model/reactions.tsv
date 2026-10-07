@@ -1078,7 +1078,7 @@ r_1598	3-methylbutanal exchange	EX_3mbald_e
 r_1599	3-methylbutanal transport	3MBALDt				MNXR137944
 r_1600	3-methylbutanal transport	3MBALDtm				MNXR137944
 r_1601	3-octaprenyl-4-hydroxybenzoate transport	3OPHB_5tm				MNXR94966
-r_1603	4-amino-5-hydroxymethyl-2-methylpyrimidine synthetase	AHMMPS				MNXR95632
+r_1603	4-amino-5-hydroxymethyl-2-methylpyrimidine phosphate synthase					
 r_1604	4-aminobenzoate exchange	EX_4abz_e				
 r_1605	4-aminobenzoate transport	4ABZt				MNXR94995
 r_1606	4-aminobenzoate transport	4ABZtm				MNXR94995
@@ -4104,3 +4104,4 @@ r_4784	malate/sulphate antiport, mitochondrial
 r_4785	acetate transport					MNXR95431
 r_4786	ribonucleotide reductase	RNDR4	1.17.4.1	sce00230;sce00240;sce00480	R02018	MNXR104066
 r_4787	ribonucleotide reductase	RNDR4n	1.17.4.1	sce00230;sce00240;sce00480	R02018	MNXR104066
+r_4788	(2S)-2-amino-5-hydroxy-4-oxopentanoate sink					
