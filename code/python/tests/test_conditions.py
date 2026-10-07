@@ -1,6 +1,8 @@
 """Tests for ``yeastgem.conditions`` (data-driven condition presets)."""
 from __future__ import annotations
 
+from pathlib import Path
+
 import pytest
 
 from yeastgem import compare_models, conditions
@@ -87,8 +89,7 @@ def test_apply_minimal_Y6_resets_all_exchanges(model):
 
 
 def test_apply_anaerobic_runs_end_to_end(model):
-    """Phase 4: anaerobic application now succeeds (amino_acid_ratio +
-    upstream apply_condition). The resulting model must have O2 uptake
+    """The anaerobic environment as a whole. The resulting model must have O2 uptake
     blocked, ergosterol uptake allowed, MDH2 blocked, and the cofactor
     pseudoreaction's heme coefficient set to zero."""
     mutated = model.copy()
@@ -114,20 +115,13 @@ def test_apply_is_idempotent_for_glycine(model):
 
 # --- partial-anaerobic checks on the real model ---------------------
 #
-# The generic application steps moved upstream to
-# raven_toolbox.conditions.apply_condition; they are exercised against
-# tiny synthetic fixtures in raven-toolbox's own test suite. The two
-# tests below run those upstream steps against the real yeast-GEM
-# model with the anaerobic YAML to catch yeast-specific ID-drift
-# regressions (heme-a id, FADH2 / FAD / H+ ids, biomass rxn id, …).
+# Single steps of the anaerobic environment, to catch ID drift (heme a,
+# FADH2 / FAD / H+, biomass reaction).
 
 
 def test_anaerobic_cofactor_step_removes_heme_on_real_model(model):
-    """Build a sub-config with only the cofactor step and apply via
-    upstream. The cofactor pseudoreaction (r_4598) should lose heme a
+    """Apply only the cofactor step. The cofactor pseudoreaction (r_4598) should lose heme a
     (s_3714)."""
-    from raven_toolbox.conditions import apply_condition
-
     mutated = model.copy()
     cofac = mutated.reactions.get_by_id("r_4598")
     heme = mutated.metabolites.get_by_id("s_3714")
@@ -135,14 +129,12 @@ def test_anaerobic_cofactor_step_removes_heme_on_real_model(model):
 
     full_cfg = conditions.load_condition("anaerobic")
     sub_cfg = {"cofactor_pseudoreaction": full_cfg["cofactor_pseudoreaction"]}
-    apply_condition(mutated, sub_cfg)
+    conditions.apply_condition(mutated, sub_cfg)
     assert cofac.metabolites.get(heme, 0) == 0
 
 
 def test_anaerobic_biomass_step_adds_fadh2_on_real_model(model):
     """Same idea for the biomass stoichiometry delta block."""
-    from raven_toolbox.conditions import apply_condition
-
     mutated = model.copy()
     bio = mutated.reactions.get_by_id("r_4041")
     fadh2 = mutated.metabolites.get_by_id("s_0689")
@@ -157,9 +149,25 @@ def test_anaerobic_biomass_step_adds_fadh2_on_real_model(model):
 
     full_cfg = conditions.load_condition("anaerobic")
     sub_cfg = {"biomass_stoichiometry_delta": full_cfg["biomass_stoichiometry_delta"]}
-    apply_condition(mutated, sub_cfg)
+    conditions.apply_condition(mutated, sub_cfg)
 
     after = bio.metabolites
     assert after[fadh2] == pytest.approx(before[fadh2.id] + 0.08)
     assert after[fad] == pytest.approx(before[fad.id] - 0.08)
     assert after[proton] == pytest.approx(before[proton.id] - 0.16)
+
+
+def test_conditions_module_needs_only_cobra_and_yaml():
+    """Environments depend on no toolbox: yeastgem.conditions imports only the
+    standard library, cobra and yaml."""
+    import ast
+    import sys
+
+    tree = ast.parse(Path(conditions.__file__).read_text())
+    imported = {
+        (n.module if isinstance(n, ast.ImportFrom) else a.name).split(".")[0]
+        for n in ast.walk(tree) if isinstance(n, (ast.Import, ast.ImportFrom))
+        for a in (n.names if isinstance(n, ast.Import) else [n])
+    }
+    assert imported <= set(sys.stdlib_module_names) | {"__future__", "cobra", "yaml"}
+
