@@ -8,6 +8,7 @@ tests/reference/).
 from __future__ import annotations
 
 import matplotlib
+import pytest
 
 matplotlib.use("Agg")
 
@@ -73,6 +74,15 @@ def test_plot_anaerobic_returns_exchange_metrics(model):
     # measured ratio is near 1, so anything wildly off indicates the
     # wrong reactions are being read.
     assert 0.5 < result.ammonium_per_atpase < 2.0
+
+
+def test_plot_anaerobic_infeasible_model_raises(model):
+    """An infeasible model gives a RuntimeError, not a solver exception."""
+    anaerobic = model.copy()
+    conditions.apply(anaerobic, "anaerobic")
+    anaerobic.reactions.get_by_id("r_4041").lower_bound = 1000
+    with pytest.raises(RuntimeError, match="pFBA"):
+        model_tests.plot_anaerobic(anaerobic, plot=False)
 
 
 def test_find_duplicated_rxns_returns_list(model, capsys):

@@ -18,6 +18,8 @@ from dataclasses import dataclass
 
 import cobra
 import pandas as pd
+from cobra.exceptions import OptimizationError
+from cobra.flux_analysis import pfba
 
 from yeastgem.io import REPO_PATH
 
@@ -83,10 +85,17 @@ def plot_anaerobic(
         model_anaerobic.reactions.get_by_id(_GLC_EX_ID).bounds = (
             -glucose_uptake, -glucose_uptake,
         )
-        sol = model_anaerobic.optimize()
+        # Parsimonious FBA, as solveLP(model,1) in plotAnaerobic.m: the
+        # ATPase and ammonium fluxes are not unique at the optimum.
+        try:
+            sol = pfba(model_anaerobic)
+        except OptimizationError as err:
+            raise RuntimeError(
+                f"anaerobic pFBA failed at a glucose uptake rate of {glucose_uptake}: {err}"
+            ) from err
         if sol.status != "optimal":
             raise RuntimeError(
-                f"anaerobic FBA returned status {sol.status!r} at a glucose "
+                f"anaerobic pFBA returned status {sol.status!r} at a glucose "
                 f"uptake rate of {glucose_uptake}."
             )
         predicted = [abs(sol.fluxes[rxn]) for rxn in measurements["rxnID"]]

@@ -45,8 +45,8 @@ def test_apply_glycine_nitrogen_sets_bounds(model):
     conditions.apply(mutated, "glycine_nitrogen")
     for rxn_id in ("r_0501", "r_0507", "r_0509"):
         rxn = mutated.reactions.get_by_id(rxn_id)
-        assert rxn.lower_bound == 1000
-        assert rxn.upper_bound == 0
+        assert rxn.lower_bound == 0
+        assert rxn.upper_bound == 1000
 
 
 def test_apply_nitrogen_limitation_sets_bounds(model):
@@ -54,7 +54,8 @@ def test_apply_nitrogen_limitation_sets_bounds(model):
     conditions.apply(mutated, "nitrogen_limitation")
     assert mutated.reactions.get_by_id("r_0472").upper_bound == 1000
     for rxn_id in ("r_0501", "r_0507", "r_0509"):
-        assert mutated.reactions.get_by_id(rxn_id).lower_bound == 1000
+        assert mutated.reactions.get_by_id(rxn_id).lower_bound == 0
+        assert mutated.reactions.get_by_id(rxn_id).upper_bound == 1000
 
 
 def test_apply_minimal_Y6_caps_glucose_and_zeros_bicarbonate(model):
