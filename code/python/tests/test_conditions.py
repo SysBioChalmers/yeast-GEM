@@ -60,6 +60,14 @@ def test_apply_nitrogen_limitation_sets_bounds(model):
         assert mutated.reactions.get_by_id(rxn_id).upper_bound == 1000
 
 
+def test_apply_carnitine_opens_shuttle(model):
+    mutated = model.copy()
+    assert mutated.reactions.get_by_id("r_0252").upper_bound == 0
+    conditions.apply(mutated, "carnitine")
+    assert mutated.reactions.get_by_id("r_0252").upper_bound == 1000
+    assert mutated.reactions.get_by_id("r_1545").lower_bound == -1000
+
+
 def test_apply_minimal_Y6_caps_glucose_and_zeros_bicarbonate(model):
     mutated = model.copy()
     conditions.apply(mutated, "minimal_Y6")

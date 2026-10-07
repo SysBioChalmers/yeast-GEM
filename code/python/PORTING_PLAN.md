@@ -49,8 +49,9 @@ Python side only until the follow-up lands.
 > `yeastgem.conditions` (cobrapy and pyyaml only, no raven-toolbox) both read
 > `data/conditions/*.yml`; `minimal_Y6`, `glycineNitrogenSource` and
 > `nitrogenLimitation` are removed (use `applyEnvironment` with the
-> environment name); the two files are corrected. The two languages give
-> identical models (`tests/reference/compare_environments.py`).
+> environment name); the two files are corrected; `carnitine.yml` is new.
+> The two languages give identical models
+> (`tests/reference/compare_environments.py`).
 
 ## Design principles
 

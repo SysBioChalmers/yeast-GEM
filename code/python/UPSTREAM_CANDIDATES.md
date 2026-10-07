@@ -313,7 +313,7 @@ For traceability — so we don't accidentally re-litigate these:
   default-path shim), `commitYeastModel`, `getEarlierModelVersion`,
   `increaseVersion`.
 - Environments (minimal_Y6, anaerobic, glycine_nitrogen,
-  nitrogen_limitation) — these are *data* under
+  nitrogen_limitation, carnitine) — these are *data* under
   `data/conditions/`, applied by yeast-GEM's own `applyEnvironment` /
   `yeastgem.conditions`.
 

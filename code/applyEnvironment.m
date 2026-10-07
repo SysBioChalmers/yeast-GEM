@@ -22,7 +22,7 @@ function model = applyEnvironment(model,environment)
 %   model           yeast-GEM model structure
 %   environment     name of a file in data/conditions, without .yml
 %                   (e.g. 'anaerobic', 'minimal_Y6', 'glycine_nitrogen',
-%                   'nitrogen_limitation'), or the path to
+%                   'nitrogen_limitation', 'carnitine'), or the path to
 %                   such a file
 %
 % Output:

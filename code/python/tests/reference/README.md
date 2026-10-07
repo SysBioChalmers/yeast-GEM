@@ -86,7 +86,7 @@ matlab -batch "addpath('code'); addpath('code/python/tests/reference'); \
 python code/python/tests/reference/compare_environments.py /tmp/environments
 ```
 
-Result (2026-10-07): identical for anaerobic, glycine_nitrogen,
+Result (2026-10-07): identical for anaerobic, carnitine, glycine_nitrogen,
 minimal_Y6 and nitrogen_limitation. `applyEnvironment` also gave the
 same lb, ub and S as the functions it replaces on develop
 (anaerobicModel of 9.1.0, minimal_Y6, glycineNitrogenSource and
