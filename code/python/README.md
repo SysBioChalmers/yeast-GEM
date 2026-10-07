@@ -4,9 +4,9 @@ Python counterpart to the MATLAB code under [../](..). Builds on
 [cobrapy](https://github.com/opencobra/cobrapy) and
 [raven-toolbox](https://github.com/SysBioChalmers/raven-toolbox) — the
 latter hosts the generic GEM utilities (model diffing, SBO term
-assignment, condition / biomass / curation engines) that `yeastgem`
-configures with the yeast-specific data files under
-[../../data/](../../data/).
+assignment, biomass / curation engines) that `yeastgem` configures with
+the yeast-specific data files under [../../data/](../../data/).
+Environments (`yeastgem.conditions`) need only cobrapy and pyyaml.
 
 See [PORTING_PLAN.md](PORTING_PLAN.md) for the porting history and
 [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md) for the
@@ -50,7 +50,7 @@ in that order. No additional setup needed for the common case.
 |---|---|---|
 | **I/O** | [`yeastgem.io`](yeastgem/io.py) | `load_yeast_yaml` / `save_yeast_yaml` for routine curation (read+merge tsvs / apply canonical state + write `model/yeast-GEM.yml`); `commit_yeast_model` for a local `.xml`/`.txt` build or a release (independently re-applies canonical state → SBML validity → aerobic + anaerobic growth → write). `read_yeast_model`/`write_yeast_model` are deprecated forwarding shims. |
 | **Comparison** | [`yeastgem.compare`](yeastgem/compare.py) | `compare_models` / `ComparisonReport` re-exported from `raven_toolbox.comparison.diff_models`. Use for cross-toolchain semantic-equality checks. |
-| **Conditions** | [`yeastgem.conditions`](yeastgem/conditions.py) | `apply(model, name)` — minimal_Y6, anaerobic, glycine_nitrogen, nitrogen_limitation. Files under [`data/conditions/`](../../data/conditions/). |
+| **Conditions** | [`yeastgem.conditions`](yeastgem/conditions.py) | `apply(model, name)` — minimal_Y6, anaerobic, glycine_nitrogen, nitrogen_limitation, carnitine. Files under [`data/conditions/`](../../data/conditions/), shared with the MATLAB `applyEnvironment`; both give identical models. |
 | **Biomass** | [`yeastgem.biomass`](yeastgem/biomass.py) | `sum_biomass`, `scale_biomass`, `rescale_pseudoreaction`, `set_gam`, `change_amino_acid_ratio`. Configured from [`data/yeastgem/ids.yml`](../../data/yeastgem/ids.yml). |
 | **Annotations** | [`yeastgem.missing_fields`](yeastgem/missing_fields.py) | `add_sbo_terms`. `load_delta_g`/`save_delta_g` — opt-in only: `load_yeast_yaml`/`save_yeast_yaml`/`commit_yeast_model` never call them, since ΔG is estimated, not curator-verified, and never ships in a model file. |
 | **Model tests** | [`yeastgem.model_tests`](yeastgem/model_tests/) | `growth` (Tobias 2013 chemostat R²), `essential_genes` (Stanford KO collection), `anaerobic_flux_predictions`, `plot_anaerobic`, `find_duplicated_rxns`. |
@@ -101,7 +101,9 @@ model, level-2 metric parity vs the committed reference values).
 
 Code under [`yeastgem/`](yeastgem/) is *only* yeast-specific
 configuration and orchestration. Anything generic — model diff,
-condition application, biomass scaling, curation, annotation — lives
-in [raven-toolbox](https://github.com/SysBioChalmers/raven-toolbox).
+biomass scaling, curation, annotation — lives in
+[raven-toolbox](https://github.com/SysBioChalmers/raven-toolbox).
+Exception: environments are applied by `yeastgem.conditions` itself, so
+that they depend on no toolbox (as the MATLAB `applyEnvironment`).
 Functions tracked for future upstreaming are in
 [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md).

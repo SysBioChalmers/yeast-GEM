@@ -10,7 +10,7 @@ function [energyResults,redoxResults] = CheckEnergyProduction(model,rxn,energyRe
 
 if rxnID ~= 0
     model_test = model;
-    model_test = minimal_Y6(model_test);
+    model_test = applyEnvironment(model_test,'minimal_Y6');
     %Add/change ATP production reaction:
     %            ATP    +    H2O    ->  ADP     +   H+      +  PO4
     mets  = {'s_0434[c]','s_0803[c]','s_0394[c]','s_0794[c]','s_1322[c]'};
@@ -28,7 +28,7 @@ if rxnID ~= 0
     end
     
     model_test = model;
-    model_test = minimal_Y6(model_test);
+    model_test = applyEnvironment(model_test,'minimal_Y6');
     %Add/change NADH production reaction:
     %            NADH[c] + H[c] =>  NAD[c]
     mets  = {'s_1203[c]','s_0794[c]','s_1198[c]'};

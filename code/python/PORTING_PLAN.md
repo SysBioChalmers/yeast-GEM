@@ -40,6 +40,20 @@ Python side only until the follow-up lands.
 | 6. Tier 4 — curation framework | **done** | Generic `curateModelFromTables` engine moved to RAVEN (with `metPrefix` / `rxnPrefix` parameters defaulted to BiGG `M_`/`R_`); equivalent `raven_toolbox.curation.{batch_curate, batch_curate_from_tsv}` in raven-toolbox with the same schema (DataFrames + a `from_tsv` convenience). yeast-GEM keeps the user-facing `curateMetsRxnsGenes` MATLAB function as a 50-line shim that pins yeast's `s_`/`r_` prefixes and forwards upstream; the historical v8_*/v9_* curation scripts and `TEMPLATEcuration` keep working without change. New `yeastgem.curation.curate_mets_rxns_genes` Python entry point with the same prefix pinning. "Everything after the listed core columns is MIRIAM" — yeast-GEM's existing TSVs (12+10+9 MIRIAM columns) work unchanged. 13 new raven-toolbox tests + 4 new yeast-GEM tests; full Python suite 65/65 passing. **MATLAB shim verified** to forward correctly (no-op call leaves the model unchanged). Direct MATLAB-vs-Python end-to-end parity check is blocked by pre-existing flakiness in the legacy `curateMetsRxnsGenes` (errors on the v8_6_3 VolPolyP schema and the v8_7_0 DBnewRxns pack); the Python implementation is more permissive than the legacy MATLAB on these edge cases. |
 | 7. Docs + CI | **done** | Top-level README updated: "Contribution via Python is supported" section explaining the `yeastgem` + `raven-toolbox` split + `saveYeastModel` → `commitYeastModel` rename. `code/python/README.md` rewritten with a getting-started block and an API map across the seven modules. CI workflow has three required jobs: `test` (matrix Python 3.11/3.12 + ruff + pytest), `parity-level-1-round-trip` (Python SBML read+write must round-trip the committed model semantically equal — `tests/ci/check_round_trip.py`), and `parity-level-2-metrics` (Python validation metrics must match the committed MATLAB reference within tolerance — `tests/ci/check_metrics.py` against `data/testResults/README.md`). Reference tolerances absorb solver drift on the R^2 metrics plus the non-solver 1-gene difference (1 gene on the essential-gene confusion matrix, ≤ 5e-3 on R² metrics). Both parity scripts pass locally. Upstream has since been released: `raven-toolbox` 0.3.0 is on PyPI, so the dependency is a plain version constraint rather than a git URL. |
 
+> **Update 2026-10 (environments).** The MATLAB side of phases 2–3.5
+> (`applyCondition.m`, `readYAML.m`, `applyYeastCondition.m`, shims) never
+> reached develop: the squash merge (e06e31d) kept only the Python code and
+> the data files, and `glycine_nitrogen.yml` / `nitrogen_limitation.yml`
+> kept the glycine-cleavage bounds from before 9676af1 (infeasible / forced
+> flux). Now: `applyEnvironment` (MATLAB, no toolbox) and
+> `yeastgem.conditions` (cobrapy and pyyaml only, no raven-toolbox) both read
+> `data/conditions/*.yml`; `glycineNitrogenSource` and `nitrogenLimitation`
+> are removed (use `applyEnvironment` with the environment name) and
+> `minimal_Y6` is kept as a shim for backwards compatibility; the two files
+> are corrected; `carnitine.yml` is new.
+> The two languages give identical models
+> (`tests/reference/compare_environments.py`).
+
 ## Design principles
 
 - **Canonical object is `cobra.Model`** (ravengem's convention). No parallel
@@ -47,12 +61,11 @@ Python side only until the follow-up lands.
   SBO terms, MIRIAM) live in cobra `annotation`/`notes`.
 - **Depend on the upstream toolboxes; do not duplicate.** *Revised after
   phase 3.* In MATLAB, yeast-GEM builds on RAVEN (`importModel`,
-  `exportModel`, `solveLP`, the new `readYAML` / `applyCondition`, …). In
+  `exportModel`, `solveLP`, …), except for environments (see the update
+  above). In
   Python, yeast-GEM builds on `raven-toolbox` (which itself builds on
-  cobrapy) — `diff_models`, `add_sbo_terms`, `apply_condition` live
-  upstream. yeastgem keeps only the *yeast-specific configuration* of
-  those generics: the data files under `data/`, the `applyYeastCondition`
-  wrapper that handles the yeast-only `amino_acid_ratio` step, the
+  cobrapy) — `diff_models` and `add_sbo_terms` live upstream. yeastgem keeps only the *yeast-specific configuration* of
+  those generics: the data files under `data/`, the
   legacy-bug-compat flag on `add_sbo_terms`, and the repo orchestration in
   `commit_yeast_model` (paths, README rewrite). ΔG persistence
   (`load_delta_g`/`save_delta_g`) briefly lived upstream too, but was
@@ -446,12 +459,12 @@ change.
 
 ### Loader API (mirrored in both languages)
 
-- MATLAB: `model = applyCondition(model, 'anaerobic')` reads
-  `data/conditions/anaerobic.yml` and applies the diff. `applyMedia`,
-  `applyIDs` similarly. The current functions (`minimal_Y6`, `anaerobicModel`,
-  `glycineNitrogenSource`, `nitrogenLimitation`) become 3-line shims that call
-  `applyCondition` with a fixed name — kept for backwards compatibility, with
-  a deprecation note.
+- MATLAB: `model = applyEnvironment(model, 'anaerobic')` reads
+  `data/conditions/anaerobic.yml` and applies the diff. `glycineNitrogenSource`
+  and `nitrogenLimitation` are removed in favour of `applyEnvironment` with the
+  environment name; `minimal_Y6` is kept as a shim for backwards
+  compatibility; `anaerobicModel` is
+  deprecated and keeps the pre-9.1.0 constraints (`anaerobicModelOld`).
 - Python: `yeastgem.conditions.apply(model, 'anaerobic')` does the same. Same
   YAML files, same semantics.
 

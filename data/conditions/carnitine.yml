@@ -1,0 +1,18 @@
+# Medium containing carnitine (L-carnitine supplement, or complex media
+# with yeast extract or peptone). S. cerevisiae cannot synthesise
+# carnitine, but carnitine only cycles as a carrier in the model, so the
+# acetyl-carnitine shuttle would run without any supply. yeast-GEM
+# therefore blocks the cytosolic carnitine O-acetyltransferase (Yat1, Yat2)
+# by default. Under anaerobic conditions no carnitine reaction can then carry
+# flux; under aerobic conditions the mitochondrial Cat2 reaction still can,
+# through peroxisomal acetyl-carnitine.
+# Reference: van Rossum et al (2016) mBio 7:e00520-16,
+# doi:10.1128/mBio.00520-16 (S. cerevisiae lacks carnitine synthesis; the
+# shuttle depends on carnitine in the medium).
+
+name: carnitine
+description: Carnitine available in the medium (carnitine shuttle enabled).
+
+bounds:
+  - { rxn: r_0252, ub: 1000,  comment: "carnitine O-acetyltransferase, cytosolic (Yat1, Yat2)" }
+  - { rxn: r_1545, lb: -1000, comment: "(R)-carnitine exchange" }

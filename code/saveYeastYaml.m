@@ -58,9 +58,7 @@ scriptFolder = fileparts(which(mfilename));
 currentDir = cd(scriptFolder);
 
 %Set minimal media
-cd modelCuration
-model = minimal_Y6(model);
-cd ..
+model = applyEnvironment(model,'minimal_Y6');
 
 %Update SBO terms in model:
 cd missingFields

@@ -86,7 +86,7 @@ mod_data = zeros(size(exp_data));
 solresult = zeros(length(model_origin.rxns),length(exp_data(:,1)));
 
 if mode1 == 2
-    model_origin = anaerobicModel(model_origin);
+    model_origin = applyEnvironment(model_origin,'anaerobic');
 end
 
 if strcmp(mode2,'N')
