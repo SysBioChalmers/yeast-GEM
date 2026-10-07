@@ -47,9 +47,10 @@ Python side only until the follow-up lands.
 > kept the glycine-cleavage bounds from before 9676af1 (infeasible / forced
 > flux). Now: `applyEnvironment` (MATLAB, no toolbox) and
 > `yeastgem.conditions` (cobrapy and pyyaml only, no raven-toolbox) both read
-> `data/conditions/*.yml`; `minimal_Y6`, `glycineNitrogenSource` and
-> `nitrogenLimitation` are removed (use `applyEnvironment` with the
-> environment name); the two files are corrected; `carnitine.yml` is new.
+> `data/conditions/*.yml`; `glycineNitrogenSource` and `nitrogenLimitation`
+> are removed (use `applyEnvironment` with the environment name) and
+> `minimal_Y6` is kept as a shim for backwards compatibility; the two files
+> are corrected; `carnitine.yml` is new.
 > The two languages give identical models
 > (`tests/reference/compare_environments.py`).
 
@@ -459,9 +460,10 @@ change.
 ### Loader API (mirrored in both languages)
 
 - MATLAB: `model = applyEnvironment(model, 'anaerobic')` reads
-  `data/conditions/anaerobic.yml` and applies the diff. The functions
-  `minimal_Y6`, `glycineNitrogenSource` and `nitrogenLimitation` are removed
-  in favour of `applyEnvironment` with the environment name; `anaerobicModel` is
+  `data/conditions/anaerobic.yml` and applies the diff. `glycineNitrogenSource`
+  and `nitrogenLimitation` are removed in favour of `applyEnvironment` with the
+  environment name; `minimal_Y6` is kept as a shim for backwards
+  compatibility; `anaerobicModel` is
   deprecated and keeps the pre-9.1.0 constraints (`anaerobicModelOld`).
 - Python: `yeastgem.conditions.apply(model, 'anaerobic')` does the same. Same
   YAML files, same semantics.
