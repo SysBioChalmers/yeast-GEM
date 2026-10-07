@@ -50,6 +50,10 @@ bounds:
   # Allow vitamin uptake for NAD(P)H and CoA synthesis
   - { rxn: r_1967, lb: -1000, comment: nicotinate exchange }
   - { rxn: r_1548, lb: -1000, comment: "(R)-pantothenate exchange" }
+  # Allow thiamine uptake: synthetic media contain thiamine, and the
+  # THI5-family HMP-P synthase (r_1603) requires O2 (Lai et al 2012,
+  # 10.1021/ja302474a; Mondal et al 2023, 10.1021/jacs.2c08560)
+  - { rxn: r_2067, lb: -1000, comment: "thiamine(1+) exchange" }
   # Block MDH2 — repressed under anaerobic growth on glucose
   - { rxn: r_0714, lb: 0, ub: 0, comment: MDH2 (malate dehydrogenase) }
   # Block IDP2 — repressed in transcriptome and not detected in proteome

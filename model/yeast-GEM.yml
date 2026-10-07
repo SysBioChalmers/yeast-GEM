@@ -22042,6 +22042,14 @@
     - formula: C25H36N7O17P3S
     - annotation: !!omap
       - sbo: SBO:0000247
+  - !!omap
+    - id: s_4335
+    - name: (2S)-2-amino-5-hydroxy-4-oxopentanoate
+    - compartment: c
+    - charge: 0.0
+    - formula: C5H9NO4
+    - annotation: !!omap
+      - sbo: SBO:0000247
 - reactions:
   - !!omap
     - id: r_0001
@@ -40684,22 +40692,26 @@
     - confidence_score: 0.0
   - !!omap
     - id: r_1603
-    - name: 4-amino-5-hydroxymethyl-2-methylpyrimidine synthetase
+    - name: 4-amino-5-hydroxymethyl-2-methylpyrimidine phosphate synthase
     - metabolites: !!omap
-      - s_0270: 1.0
-      - s_0300: -1.0
-      - s_0775: 1.0
-      - s_0794: -1.0
-      - s_1322: 1.0
+      - s_0268: 1.0
+      - s_0794: 1.0
+      - s_0803: -2.0
+      - s_1006: -1.0
+      - s_1275: -0.5
+      - s_1393: -1.0
+      - s_4184: 1.0
+      - s_4335: 1.0
     - lower_bound: 0.0
     - upper_bound: 1000.0
-    - gene_reaction_rule: YFL058W
+    - gene_reaction_rule: YDL244W or YFL058W or YJR156C or YNL332W
     - subsystem:
       - Thiamine metabolism
     - annotation: !!omap
       - sbo: SBO:0000176
+    - references: 10.1021/ja302474a; 10.1021/jacs.2c08560
     - confidence_score: 2.0
-    - notes: "model.S(601,2491) curated (PR #222)"
+    - notes: "RHEA:65756 with free metabolites; single-turnover enzyme whose active-site histidine and bound PLP form HMP-P; requires Fe(II) and O2 (O2 as electron acceptor instead of the Fe(3+) of RHEA:65756); the histidine remnant leaves via r_4788"
   - !!omap
     - id: r_1604
     - name: 4-aminobenzoate exchange
@@ -89176,6 +89188,19 @@
       - sbo: SBO:0000176
     - references: 10.1073/pnas.0600443103
     - confidence_score: 2.0
+  - !!omap
+    - id: r_4788
+    - name: (2S)-2-amino-5-hydroxy-4-oxopentanoate sink
+    - metabolites: !!omap
+      - s_4335: -1.0
+    - lower_bound: 0.0
+    - upper_bound: 1000.0
+    - subsystem:
+      - Exchange reaction
+    - annotation: !!omap
+      - sbo: SBO:0000632
+    - confidence_score: 0.0
+    - notes: "remnant of the active-site histidine of the HMP-P synthase (r_1603), which is inactivated after a single turnover"
 - genes:
   - !!omap
     - id: Q0045
@@ -89751,6 +89776,9 @@
   - !!omap
     - id: YDL243C
     - name: AAD4
+  - !!omap
+    - id: YDL244W
+    - name: THI13
   - !!omap
     - id: YDL245C
     - name: HXT15
@@ -91162,6 +91190,9 @@
     - id: YJR155W
     - name: AAD10
   - !!omap
+    - id: YJR156C
+    - name: THI11
+  - !!omap
     - id: YJR158W
     - name: HXT16
   - !!omap
@@ -92039,6 +92070,9 @@
   - !!omap
     - id: YNL331C
     - name: AAD14
+  - !!omap
+    - id: YNL332W
+    - name: THI12
   - !!omap
     - id: YNL333W
     - name: SNZ2
