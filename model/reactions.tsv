@@ -348,8 +348,8 @@ r_0450	fructose-bisphosphate aldolase	FBA	4.1.2.13	sce00010;sce00030;sce00051;sc
 r_0451	fumarase	FUMm	4.2.1.2	sce00020;sce00620;sce01110;sce01130;sce01200	R01082	MNXR99705
 r_0452	fumarase, cytoplasmic	FUM	4.2.1.2	sce00020;sce00620;sce01110;sce01130;sce01200	R01082	MNXR99705
 r_0453	dihydoorotic acid dehydrogenase	DHORDfum	1.3.98.1	sce00240	R01867	MNXR97425
-r_0454	fumarate reductase	FRDm	1.3.1.6		R00408	MNXR99636
-r_0455	soluble fumarate reductase	FRD	1.3.1.6		R00408	MNXR99636
+r_0454	fumarate reductase	FRDm	1.3.8.-		R00408	MNXR99636
+r_0455	soluble fumarate reductase	FRD	1.3.8.-		R00408	MNXR99636
 r_0457	g-glutamyltransferase	GTMLT	2.3.2.2;3.4.19.13	sce00430;sce00480		MNXR100451
 r_0458	galactokinase	GALKr	2.7.1.6	sce00052;sce00520	R01092	MNXR99985
 r_0459	galactose-1-phosphate uridylyltransferase	GALT	2.7.7.12	sce00052;sce00520	R00502	MNXR100014
@@ -713,7 +713,7 @@ r_0935	porphobilinogen synthase	PPBNGS	4.2.1.24	sce00860;sce01110	R00036	MNXR103
 r_0936	poylamine oxidase	POLYAO2	1.5.3.17	sce00330;sce00410	R03899	MNXR146092
 r_0937	poylamine oxidase	POLYAO3	1.5.3.17	sce00330;sce00410	R09076	MNXR146094
 r_0938	prephenate dehydratase	PPNDH	4.2.1.51	sce00400;sce01110;sce01130;sce01230	R01373	MNXR126086
-r_0939	prephenate dehydrogenase (NADP)	PPND2	1.3.1.13	sce00400;sce01110;sce01130	R01730	MNXR103122
+r_0939	prephenate dehydrogenase (NAD)	PPND	1.3.1.12	sce00400;sce01110;sce01130	R01728	MNXR146103
 r_0940	proline oxidase (NAD)		1.5.5.2	sce00330;sce01110;sce01130	R10507	MNXR103187
 r_0941	prolyl-tRNA synthetase	PROTRS_1	6.1.1.15	sce00970	R03661	MNXR103208
 r_0942	protoporphyrinogen oxidase	PPPGOm	1.3.3.4	sce00860;sce01110	R03222	MNXR103132
@@ -764,7 +764,7 @@ r_0996	shikimate dehydrogenase	SHK3Dr	1.1.1.25;2.5.1.19;2.7.1.71;4.2.1.10;4.2.3.
 r_0997	shikimate kinase	SHKK	1.1.1.25;2.5.1.19;2.7.1.71;4.2.1.10;4.2.3.4	sce00400;sce01110;sce01130;sce01230	R02412	MNXR104379
 r_0998	sirohydrochlorin dehydrogenase	SHCHD2	1.3.1.76;4.99.1.4	sce00860;sce01110	R03947	MNXR104373
 r_0999	sirohydrochlorin ferrochetalase	SHCHF	1.3.1.76;4.99.1.4	sce00860;sce01110	R02864	MNXR104375
-r_1000	fumarate reductase (FMN)		1.3.1.6		R00408	MNXR129857
+r_1000	fumarate reductase (FMN)		1.3.8.-		R00408	MNXR129857
 r_1001	spermidine synthase	SPMS	2.5.1.16	sce00270;sce00330;sce00410;sce00480	R01920	MNXR95860
 r_1002	spermine synthase	SPRMS	2.5.1.22	sce00270;sce00330;sce00410;sce00480	R02869	MNXR96042
 r_1003	sphinganine phosphate lyase	SGPL11r	4.1.2.27	sce00600	R02464	MNXR104365
@@ -3604,7 +3604,6 @@ r_4260	Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase hom
 r_4261	Deaminated glutathione amidase (dGSH amidase) (EC 3.5.1.-) (Nitrilase homolog 1)		3.5.1.-		R12024	
 r_4262	citrate hydroxymutase	ACONTm	4.2.1.-		R01324	MNXR191571
 r_4263	Anion/proton exchange transporter GEF1 (CLC protein GEF1) (ClC-A) (ClC-Y1) (Voltage-gated chloride channel) [Cleaved into: GEF1 N-terminal; GEF1 C-terminal]					
-r_4264	succinate:NAD+ oxidoreductase		1.3.1.6		R00402	MNXR106516
 r_4266	Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)	NTPP5	3.6.1.9			
 r_4267	2'-Deoxyguanosine 5'-triphosphate diphosphohydrolase	NTPP1	3.6.1.9		R01855	MNXR102049
 r_4268	dTTP diphosphohydrolase	NTPP7	3.6.1.9		R11323	MNXR97809
