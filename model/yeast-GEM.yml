@@ -28220,7 +28220,7 @@
       - s_0727: -1.0
       - s_0799: 1.0
       - s_1460: 1.0
-    - lower_bound: -1000.0
+    - lower_bound: 0.0
     - upper_bound: 1000.0
     - gene_reaction_rule: YEL047C
     - subsystem:
@@ -28231,8 +28231,9 @@
         - "8946166"
         - "9587404"
       - sbo: SBO:0000176
+    - references: 10.1006/abbi.1998.0583; 10.1091/mbc.e16-10-0712; 10.1126/science.1257522
     - confidence_score: 3.0
-    - notes: "model.S(606,350) curated (PR #222)"
+    - notes: "model.S(606,350) curated (PR #222) | Irreversible fumarate reduction (Muratsubaki and Enomoto 1998). The mitochondrial form of Osm1 faces the intermembrane space (Neal et al 2017) and does not support anaerobic growth alone (Williams et al 2014), so OSM1 is not assigned here"
   - !!omap
     - id: r_0455
     - name: soluble fumarate reductase
@@ -28242,16 +28243,17 @@
       - s_0725: -1.0
       - s_0794: 1.0
       - s_1458: 1.0
-    - lower_bound: -1000.0
+    - lower_bound: 0.0
     - upper_bound: 1000.0
-    - gene_reaction_rule: YEL047C
+    - gene_reaction_rule: YEL047C or YJR051W
     - subsystem:
       - Cellular response to anaerobic conditions
     - annotation: !!omap
       - pubmed: "22672422"
       - sbo: SBO:0000176
+    - references: 10.1006/abbi.1998.0583; 10.1111/j.1574-6968.1998.tb13134.x; 10.1002/yea.1467; 10.1126/science.1257522
     - confidence_score: 3.0
-    - notes: "model.S(601,351) curated (PR #222)"
+    - notes: "model.S(601,351) curated (PR #222) | Irreversible fumarate reduction (Muratsubaki and Enomoto 1998). Frd1 is cytosolic and the ER form of Osm1 supports anaerobic growth (Williams et al 2014); the model has no ER FAD pool, so this reaction stands for both"
   - !!omap
     - id: r_0457
     - name: g-glutamyltransferase
@@ -35711,9 +35713,9 @@
       - s_0725: -1.0
       - s_0794: 1.0
       - s_1458: 1.0
-    - lower_bound: -1000.0
+    - lower_bound: 0.0
     - upper_bound: 1000.0
-    - gene_reaction_rule: YEL047C
+    - gene_reaction_rule: YEL047C or YJR051W
     - subsystem:
       - Cellular response to anaerobic conditions
     - annotation: !!omap
@@ -35721,8 +35723,9 @@
         - "22672422"
         - "12393208"
       - sbo: SBO:0000176
+    - references: 10.1006/abbi.1998.0583; 10.1038/s41467-018-07285-9
     - confidence_score: 3.0
-    - notes: "MetaNetX ID curated (PR #220) | alternative MetaNetX ID MNXR99636 (PR #220) | model.S(601,767) curated (PR #222)"
+    - notes: "MetaNetX ID curated (PR #220) | alternative MetaNetX ID MNXR99636 (PR #220) | model.S(601,767) curated (PR #222) | Irreversible fumarate reduction (Muratsubaki and Enomoto 1998); flavin donors shown in vitro (Kim et al 2018)"
   - !!omap
     - id: r_1001
     - name: spermidine synthase
@@ -81396,24 +81399,6 @@
       - sbo: SBO:0000655
     - confidence_score: 2.0
     - notes: "added after new annotation (PR #142)"
-  - !!omap
-    - id: r_4264
-    - name: succinate:NAD+ oxidoreductase
-    - metabolites: !!omap
-      - s_0727: -1.0
-      - s_0799: -1.0
-      - s_1200: 1.0
-      - s_1205: -1.0
-      - s_1460: 1.0
-    - lower_bound: 0.0
-    - upper_bound: 1000.0
-    - gene_reaction_rule: YJR051W
-    - subsystem:
-      - Cellular response to anaerobic conditions
-    - annotation: !!omap
-      - sbo: SBO:0000176
-    - confidence_score: 2.0
-    - notes: "added after new annotation (PR #142) | rxnDirection curated (PR #227)"
   - !!omap
     - id: r_4266
     - name: Inosine triphosphate pyrophosphatase (ITPase) (Inosine triphosphatase) (EC 3.6.1.9) (Hydroxylaminopurine sensitivity protein 1) (Non-canonical purine NTP pyrophosphatase) (Non-standard purine NTP pyrophosphatase) (Nucleoside-triphosphate diphosphatase) (Nucleoside-triphosphate pyrophosphatase) (NTPase)
