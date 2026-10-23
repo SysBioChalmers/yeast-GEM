@@ -120,11 +120,11 @@ A single ratio of two fluxes; there is nothing behind it to list.
 
 ## Gene essentiality accuracy
 
-1107 genes compared. The per-gene calls are in [essentialGenes.tsv](essentialGenes.tsv).
+1106 genes compared. The per-gene calls are in [essentialGenes.tsv](essentialGenes.tsv).
 
 | Call | Count |
 |---|---:|
-| True non-essential | 933 |
+| True non-essential | 932 |
 | True essential | 65 |
 | False non-essential | 94 |
 | False essential | 15 |
