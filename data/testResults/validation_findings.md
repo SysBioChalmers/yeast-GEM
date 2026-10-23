@@ -43,13 +43,13 @@ Per-condition measured against predicted growth is in [growth.md](growth.md), re
 | r_2056 | 0.45 | 0.3038 | 1.481 |
 | r_0502 | 0.5189 | 0.7679 | 1.480 |
 | r_1048 | 2 | 2.907 | 1.454 |
-| r_0491 | 22.16 | 15.81 | 1.402 |
 | r_2111 | 2.247 | 1.641 | 1.369 |
 | r_0958 | 4.2 | 5.601 | 1.334 |
 | r_0658 | 1.705 | 1.292 | 1.320 |
 | r_4783 | 2.372 | 3.035 | 1.279 |
 | r_0466 | 11.4 | 9.043 | 1.261 |
 | r_0489 | 22.09 | 18.72 | 1.180 |
+| r_0491 | 22.16 | 18.83 | 1.177 |
 | r_1808 | 21.8 | 18.91 | 1.153 |
 | r_4783 | 3.4 | 3.054 | 1.113 |
 | r_2111 | 1.804 | 1.648 | 1.095 |
@@ -61,7 +61,6 @@ Per-condition measured against predicted growth is in [growth.md](growth.md), re
 | r_2111 | 1.7 | 1.574 | 1.080 |
 | r_1672 | 156.6 | 168.6 | 1.077 |
 | r_0489 | 17 | 18.19 | 1.070 |
-| r_2115 | 147 | 157 | 1.068 |
 | r_1761 | 147 | 157 | 1.068 |
 | r_0959 | 148.5 | 158.1 | 1.065 |
 | r_1808 | 17.8 | 18.84 | 1.058 |
@@ -70,6 +69,7 @@ Per-condition measured against predicted growth is in [growth.md](growth.md), re
 | r_1808 | 17.2 | 18.07 | 1.051 |
 | r_0959 | 164.3 | 156.6 | 1.049 |
 | r_1761 | 148.2 | 155.5 | 1.049 |
+| r_2115 | 147 | 154 | 1.048 |
 | r_1761 | 148.8 | 156 | 1.048 |
 | r_2111 | 1.705 | 1.631 | 1.046 |
 | r_0467 | 84.7 | 88.29 | 1.042 |
@@ -87,7 +87,6 @@ Per-condition measured against predicted growth is in [growth.md](growth.md), re
 | r_2056 | 0.3 | 0.3069 | 1.023 |
 | r_2111 | 1.553 | 1.585 | 1.021 |
 | r_0450 | 91 | 92.82 | 1.020 |
-| r_2115 | 153 | 155.7 | 1.018 |
 | r_4783 | 3 | 2.95 | 1.017 |
 | r_0486 | 166.2 | 168.9 | 1.016 |
 | r_0366 | 165.7 | 167.5 | 1.011 |
@@ -97,6 +96,7 @@ Per-condition measured against predicted growth is in [growth.md](growth.md), re
 | r_1808 | 19 | 18.82 | 1.010 |
 | r_0467 | 88 | 88.69 | 1.008 |
 | r_0959 | 157.4 | 156.9 | 1.004 |
+| r_2115 | 153 | 152.7 | 1.002 |
 | r_1714 | 100 | 100 | 1.000 |
 | r_1714 | 100 | 100 | 1.000 |
 | r_1714 | 100 | 100 | 1.000 |
@@ -120,11 +120,11 @@ A single ratio of two fluxes; there is nothing behind it to list.
 
 ## Gene essentiality accuracy
 
-1107 genes compared. The per-gene calls are in [essentialGenes.tsv](essentialGenes.tsv).
+1106 genes compared. The per-gene calls are in [essentialGenes.tsv](essentialGenes.tsv).
 
 | Call | Count |
 |---|---:|
-| True non-essential | 933 |
+| True non-essential | 932 |
 | True essential | 65 |
 | False non-essential | 94 |
 | False essential | 15 |

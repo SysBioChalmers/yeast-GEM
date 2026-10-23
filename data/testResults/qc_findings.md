@@ -2026,7 +2026,6 @@ _None._
 | r_0208 | argininosuccinate synthase | only when going backwards |
 | r_0349 | dihydroorotase | only when going forwards |
 | r_0447 | formate-tetrahydrofolate ligase | only when going forwards |
-| r_0455 | soluble fumarate reductase | only when going backwards |
 | r_0542 | homoacontinate hydratase | only when going backwards |
 | r_0570 | inosine monophosphate cyclohydrolase | only when going backwards |
 | r_0664 | isoleucine transaminase | only when going forwards |
@@ -2045,7 +2044,6 @@ _None._
 | r_0912 | phosphoribosylaminoimidazolecarboxamide formyltransferase | only when going backwards |
 | r_0949 | guanosine phosphorylase | only when going backwards |
 | r_0990 | sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase | only when going forwards |
-| r_1000 | fumarate reductase (FMN) | only when going backwards |
 | r_1069 | UDP-N-acetylglucosamine diphosphorylase | only when going backwards |
 | r_1071 | UDPglucose--hexose-1-phosphate uridylyltransferase | only when going forwards |
 | r_1087 | valine transaminase | only when going backwards |
