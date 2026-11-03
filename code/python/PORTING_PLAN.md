@@ -464,7 +464,7 @@ change.
   and `nitrogenLimitation` are removed in favour of `applyEnvironment` with the
   environment name; `minimal_Y6` is kept as a shim for backwards
   compatibility; `anaerobicModel` is
-  deprecated and keeps the pre-9.1.0 constraints (`anaerobicModelOld`).
+  deprecated and keeps the pre-9.1.0 constraints.
 - Python: `yeastgem.conditions.apply(model, 'anaerobic')` does the same. Same
   YAML files, same semantics.
 
