@@ -11,18 +11,26 @@ function model = applyEnvironment(model,environment)
 %   amino_acid_ratio             'aerobic' or 'anaerobic' column of
 %                                data/physiology/aminoAcid_Bjorkeroth2020.tsv
 %   prelude.reset_exchanges      'out', 'in' or 'all': set those exchange
-%                                reactions to lb 0, ub 1000
+%                                reactions to lb 0, ub 1000, which closes
+%                                their uptake and opens their secretion.
+%                                'out' are the reactions without products
+%                                (A =>), 'in' those without substrates
+%                                (=> A) and 'all' both, as RAVEN's
+%                                getExchangeRxns
 %   cofactor_pseudoreaction      remove metabolites from the pseudoreaction
 %                                and recompute the charge-balancing H+
 %                                (a metabolite without charge counts as 0,
 %                                with a warning)
 %   biomass_stoichiometry_delta  add coefficients to a reaction
-%   bounds                       set lb and/or ub of listed reactions
+%   bounds                       set lb and/or ub of listed reactions;
+%                                entries for one reaction are combined in
+%                                order, the later value of a key winning
 %   expected_uptake_count        warn if fewer lb -1000 bounds were applied
 %
 %   The environment is checked before the model is changed: an invalid
 %   value (e.g. a non-numeric bound, lb > ub, an unknown reset_exchanges
-%   value) is an error and nothing is applied.
+%   value) or an identifier that is not in the model is an error and
+%   nothing is applied.
 %
 % Input:
 %   model           yeast-GEM model structure
@@ -141,20 +149,27 @@ end
 
 function nb = checkBounds(model,env,exch)
 % The bounds to set (reaction index, lb, ub, whether lb was given), checked:
-% bounds must be finite numbers and lb <= ub, given the exchange reset.
+% the reaction must be in the model, bounds must be finite numbers and
+% lb <= ub, given the exchange reset. Entries for one reaction are combined
+% in order, the later value of a key winning.
 nb = struct('idx',zeros(0,1),'lb',zeros(0,1),'ub',zeros(0,1),'hasLb',false(0,1));
 if ~isfield(env,'bounds')
     return
 end
 for i = 1:numel(env.bounds)
     b = env.bounds{i};
-    rxnIdx = find(strcmp(model.rxns,b.rxn));
-    if isempty(rxnIdx)
-        warning('applyEnvironment:missingRxn', ...
-            'Reaction %s not in the model; skipped.', b.rxn);
-        continue
+    rxnIdx = findIndex(model.rxns,b.rxn);
+    k = find(nb.idx == rxnIdx);
+    if isempty(k)
+        k = numel(nb.idx) + 1;
+        nb.idx(k,1) = rxnIdx;
+        if exch(rxnIdx)
+            nb.lb(k,1) = 0; nb.ub(k,1) = 1000;
+        else
+            nb.lb(k,1) = model.lb(rxnIdx); nb.ub(k,1) = model.ub(rxnIdx);
+        end
+        nb.hasLb(k,1) = false;
     end
-    if exch(rxnIdx), lb = 0; ub = 1000; else, lb = model.lb(rxnIdx); ub = model.ub(rxnIdx); end
     for key = {'lb','ub'}
         if isfield(b,key{1})
             v = b.(key{1});
@@ -162,17 +177,15 @@ for i = 1:numel(env.bounds)
                 error('applyEnvironment:bound', ...
                     '%s: %s must be a finite number.', b.rxn, key{1});
             end
+            nb.(key{1})(k,1) = v;
+            nb.hasLb(k,1) = nb.hasLb(k,1) || strcmp(key{1},'lb');
         end
     end
-    if isfield(b,'lb'), lb = b.lb; end
-    if isfield(b,'ub'), ub = b.ub; end
-    if lb > ub
-        error('applyEnvironment:bound','%s: lb %g is larger than ub %g.', b.rxn, lb, ub);
-    end
-    nb.idx(end+1,1) = rxnIdx;
-    nb.lb(end+1,1) = lb;
-    nb.ub(end+1,1) = ub;
-    nb.hasLb(end+1,1) = isfield(b,'lb');
+end
+bad = find(nb.lb > nb.ub,1);
+if ~isempty(bad)
+    error('applyEnvironment:bound','%s: lb %g is larger than ub %g.', ...
+        model.rxns{nb.idx(bad)}, nb.lb(bad), nb.ub(bad));
 end
 end
 
@@ -219,6 +232,10 @@ if startsWith(lines{k},'-')
         item = strtrim(lines{k}(2:end));
         if isempty(item)
             error('applyEnvironment:yaml','Nested block in sequence not supported.');
+        end
+        if ~startsWith(item,'{') && ~isempty(splitKey(item))
+            error('applyEnvironment:yaml', ...
+                'A mapping in a sequence must be written as { key: value } ("%s").',item);
         end
         value{end+1,1} = parseInline(item); %#ok<AGROW>
         k = k + 1;
