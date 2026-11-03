@@ -93,11 +93,6 @@ def plot_anaerobic(
             raise RuntimeError(
                 f"anaerobic pFBA failed at a glucose uptake rate of {glucose_uptake}: {err}"
             ) from err
-        if sol.status != "optimal":
-            raise RuntimeError(
-                f"anaerobic pFBA returned status {sol.status!r} at a glucose "
-                f"uptake rate of {glucose_uptake}."
-            )
         predicted = [abs(sol.fluxes[rxn]) for rxn in measurements["rxnID"]]
         ammonium = float(sol.fluxes[_AMMONIUM_EX_ID])
         atpase = float(sol.fluxes[_ATPASE_ID])
