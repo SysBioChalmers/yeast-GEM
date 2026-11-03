@@ -1050,6 +1050,43 @@ _None._
 
 _None._
 
+## Duplicate keys in the model file
+
+_None._
+
+## Reactions without metabolites
+
+_None._
+
+## Reaction bound and gene rule issues
+
+_None._
+
+## Reactions split across compartments
+
+| reaction | name | compartments | equation |
+|---|---|---|---|
+| r_0001 | (R)-lactate:ferricytochrome-c 2-oxidoreductase | c,m | (R)-lactate + 2.0 ferricytochrome c --> 2.0 ferrocytochrome c + pyruvate |
+| r_0004 | (S)-lactate:ferricytochrome-c 2-oxidoreductase | c,m | (S)-lactate + 2.0 ferricytochrome c --> 2.0 ferrocytochrome c + pyruvate |
+| r_0005 | 1,3-beta-glucan synthase | c,ce | UDP-D-glucose --> (1->3)-beta-D-glucan + H+ + UDP |
+| r_0006 | 1,6-beta-glucan synthase | c,ce | UDP-D-glucose --> (1->6)-beta-D-glucan + H+ + UDP |
+| r_0227 | ATPase, plasma membrane | c,e | ATP + H2O --> ADP + H+ + phosphate |
+| r_0241 | C-4 sterol methyl oxidase (4,4-dimethylzymosterol) | c,er | 14-demethyllanosterol + 5.0 H+ + 3.0 oxygen + 6.0 ferrocytochrome b5 --> 4beta-methylzymosterol-4alpha-carboxylic acid + 4.0 H2O + 6.0 ferricytochrome b5 |
+| r_0271 | chitin deacetylase | c,ce | chitin + H2O --> acetate + chitosan + H+ |
+| r_0331 | deoxyhypusine synthase, cytosolic/mitochondrial | c,m | H2O + spermidine + ubiquinone-6 --> 4-aminobutanal + trimethylenediamine + ubiquinol-6 |
+| r_0361 | dolichyl-phosphate D-mannosyltransferase | c,er | dolichyl phosphate + GDP-alpha-D-mannose --> dolichyl D-mannosyl phosphate + GDP + H+ |
+| r_0770 | NADH dehydrogenase, cytosolic/mitochondrial | c,m | H+ + NADH + ubiquinone-6 --> NAD + ubiquinol-6 |
+| r_2316 | glycerol-3-phosphate acyltransferase (16:0), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + palmitoyl-CoA --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (16:0) |
+| r_2317 | glycerol-3-phosphate acyltransferase (16:1), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + palmitoleoyl-CoA(4-) --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (16:1) |
+| r_2318 | glycerol-3-phosphate acyltransferase (18:0), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + stearoyl-CoA --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (18:0) |
+| r_2319 | glycerol-3-phosphate acyltransferase (18:1), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + oleoyl-CoA --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (18:1) |
+| r_4154 | Probable diacetyl reductase [(R)-acetoin forming] 2 (EC 1.1.1.303) | c,n | NAD + (R)-acetoin <=> H+ + diacetyl + NADH |
+| r_4275 | Fe(II):NADP+ oxidoreductase | c,e | NADPH + 2.0 iron(3+) <=> H+ + 2.0 iron(2+) + NADP(+) |
+| r_4276 | Fe(II):NADP+ oxidoreductase | c,v | NADPH + 2.0 iron(3+) <=> H+ + 2.0 iron(2+) + NADP(+) |
+| r_4382 | thiosulfate:ferricytochrome-c oxidoreductase | c,m | 2.0 ferricytochrome c + 2.0 thiosulfate <=> 2.0 ferrocytochrome c + tetrathionate |
+| r_4608 | propionyl-CoA transport | c,m | ATP + H2O + propionyl-CoA --> ADP + H+ + phosphate + propionyl-CoA |
+| r_4722 | polyphosphate polymerase, c | c,v | 2.0 ATP + H2O --> 2.0 ADP + H+ + polyphosphate |
+
 ## Dead-end metabolites
 
 | metabolite | name | reactions blocked |

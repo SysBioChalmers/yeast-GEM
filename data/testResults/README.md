@@ -59,11 +59,11 @@ The pull request in each row is the one whose run last wrote those files.
 
 | Result files | Produced by | Last updated by |
 |---|---|---|
-| `qc_findings.md`, `qc_metrics.tsv`, `model_qc_summary.md` | `model_qc.py`, `build_qc_report.py` | <!-- last:qc -->**PR #0** |
-| `qc_status.tsv` (YAML lint, YAML and SBML round-trip) | `model_file_checks.py` | <!-- last:qc -->**PR #0** |
-| `validation_findings.md`, `validation_metrics.tsv` | `check_metrics.py` | <!-- last:qc -->**PR #0** |
-| `annotation_report.md`, `annotation_metrics.tsv` | `verify_annotations.py` | <!-- last:qc -->**PR #0** |
-| `memote_score.md` | `memote_snapshot.py` (fast subset on every pull request, full suite on demand) | <!-- last:memote -->**PR #0** |
+| `qc_findings.md`, `qc_metrics.tsv`, `model_qc_summary.md` | `model_qc.py`, `build_qc_report.py` | <!-- last:qc -->**PR #429** |
+| `qc_status.tsv` (YAML lint, YAML and SBML round-trip) | `model_file_checks.py` | <!-- last:qc -->**PR #429** |
+| `validation_findings.md`, `validation_metrics.tsv` | `check_metrics.py` | <!-- last:qc -->**PR #429** |
+| `annotation_report.md`, `annotation_metrics.tsv` | `verify_annotations.py` | <!-- last:qc -->**PR #429** |
+| `memote_score.md` | `memote_snapshot.py` (fast subset on every pull request, full suite on demand) | <!-- last:memote -->**PR #429** |
 
 ## 2. Latest release results
 
