@@ -70,27 +70,25 @@ port can be validated independently. When both toolchains have full
 parity and a single-language production owner is chosen, this
 direction may flip — until then, MATLAB seeds, Python verifies.
 
-## Environments: MATLAB and Python give the same model
+## Environments: MATLAB and Python give the same changes
 
 Environments (`data/conditions/*.yml`) are applied by `applyEnvironment`
 in MATLAB and `yeastgem.conditions.apply` in Python, two independent
 readers of the same files. [`dumpEnvironments.m`](dumpEnvironments.m)
-writes the bounds and stoichiometry after every environment;
-[`compare_environments.py`](compare_environments.py) applies the same
-environments in Python and requires identical bounds and coefficients
-(within 1e-9):
+writes, per environment, the bounds and stoichiometric coefficients that
+`applyEnvironment` changes to [`environments/`](environments). The test
+[`test_environments_match_matlab.py`](../test_environments_match_matlab.py)
+requires that `yeastgem.conditions.apply` makes the same changes (bounds
+identical, coefficients within 1e-9), so the pull-request CI checks the
+agreement without MATLAB. After a change in `data/conditions`, regenerate the
+files with MATLAB and commit them:
 
 ```bash
-matlab -batch "addpath('code'); addpath('code/python/tests/reference'); \
-    dumpEnvironments('/tmp/environments')"
-python code/python/tests/reference/compare_environments.py /tmp/environments
+matlab -batch "addpath('code'); addpath('code/python/tests/reference'); dumpEnvironments"
 ```
 
-Result (2026-10-07): identical for anaerobic, carnitine, glycine_nitrogen,
-minimal_Y6 and nitrogen_limitation. `applyEnvironment` also gave the
-same lb, ub and S as the functions it replaces on develop
-(anaerobicModel of 9.1.0, minimal_Y6, glycineNitrogenSource and
-nitrogenLimitation).
+[`testApplyEnvironment.m`](testApplyEnvironment.m) runs the error cases and
+the combination of bound entries of `applyEnvironment` on a small model.
 
 ## Phase-3 specific: the commit-pipeline equivalence check
 
