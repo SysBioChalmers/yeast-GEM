@@ -1,0 +1,4 @@
+check	result
+roundtrip_sbml	pass
+roundtrip_yaml	pass
+yamllint	pass

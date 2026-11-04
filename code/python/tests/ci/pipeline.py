@@ -14,6 +14,7 @@ Subcommands:
     licence    write the Gurobi WLS licence from the environment
     collect    copy the generated results into data/testResults
     comment    create or update the sticky pull-request comment
+    stamp      record the pull request that last updated each group of results
     require    fail unless a job actually produced output
     gate       apply the merge gate to a metrics file
 """
@@ -22,8 +23,10 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import sys
+import time
 import urllib.error
 import urllib.request
 from pathlib import Path
@@ -39,9 +42,11 @@ _TRACKED = (
     "qc_metrics.tsv",
     "validation_findings.md",
     "validation_metrics.tsv",
+    "essentialGenes.tsv",
     "memote_score.md",
     "annotation_report.md",
     "annotation_metrics.tsv",
+    "qc_status.tsv",
 )
 
 
@@ -123,16 +128,35 @@ def cmd_collect(args) -> int:
     return 0
 
 
-def _request(method: str, url: str, token: str, payload=None):
+def _request(method: str, url: str, token: str, payload=None, attempts: int = 5):
+    """One GitHub API call, retried with exponential backoff on a transient error.
+
+    The API returns an occasional 5xx, or a 429 from the secondary rate limit.
+    The run has finished its real work by the time it posts, so a blip there
+    must not fail it.
+    """
     data = json.dumps(payload).encode() if payload is not None else None
-    request = urllib.request.Request(url, data=data, method=method)
-    request.add_header("Authorization", f"Bearer {token}")
-    request.add_header("Accept", "application/vnd.github+json")
-    request.add_header("X-GitHub-Api-Version", "2022-11-28")
-    if data is not None:
-        request.add_header("Content-Type", "application/json")
-    with urllib.request.urlopen(request) as response:
-        return json.loads(response.read() or "null")
+    for attempt in range(1, attempts + 1):
+        request = urllib.request.Request(url, data=data, method=method)
+        request.add_header("Authorization", f"Bearer {token}")
+        request.add_header("Accept", "application/vnd.github+json")
+        request.add_header("X-GitHub-Api-Version", "2022-11-28")
+        if data is not None:
+            request.add_header("Content-Type", "application/json")
+        try:
+            with urllib.request.urlopen(request) as response:
+                return json.loads(response.read() or "null")
+        except urllib.error.HTTPError as error:
+            if (error.code != 429 and error.code < 500) or attempt == attempts:
+                raise
+            print(f"::warning::GitHub API returned {error.code}; retrying "
+                  f"({attempt}/{attempts - 1})")
+        except urllib.error.URLError as error:
+            if attempt == attempts:
+                raise
+            print(f"::warning::GitHub API unreachable ({error.reason}); retrying "
+                  f"({attempt}/{attempts - 1})")
+        time.sleep(2 ** attempt)
 
 
 def cmd_comment(args) -> int:
@@ -150,21 +174,21 @@ def cmd_comment(args) -> int:
     body = marker + "\n" + args.body.read_text(encoding="utf-8")
     base = f"{_API}/repos/{args.repo}/issues/{args.issue}/comments"
 
-    existing = None
-    page = 1
-    while True:
-        batch = _request("GET", f"{base}?per_page=100&page={page}", token)
-        if not batch:
-            break
-        for comment in batch:
-            if marker in (comment.get("body") or ""):
-                existing = comment["id"]
-                break
-        if existing or len(batch) < 100:
-            break
-        page += 1
-
     try:
+        existing = None
+        page = 1
+        while True:
+            batch = _request("GET", f"{base}?per_page=100&page={page}", token)
+            if not batch:
+                break
+            for comment in batch:
+                if marker in (comment.get("body") or ""):
+                    existing = comment["id"]
+                    break
+            if existing or len(batch) < 100:
+                break
+            page += 1
+
         if existing:
             _request(
                 "PATCH",
@@ -178,18 +202,39 @@ def cmd_comment(args) -> int:
     except urllib.error.HTTPError as error:
         print(f"::error::GitHub API returned {error.code}: {error.reason}")
         return 1
+    except urllib.error.URLError as error:
+        print(f"::error::GitHub API unreachable: {error.reason}")
+        return 1
+    return 0
+
+
+def cmd_stamp(args) -> int:
+    """Write the pull request number into the README's "last updated by" table.
+
+    A table cell is marked ``<!-- last:GROUP -->**PR #N**``; the cells of the
+    named groups get this pull request's number.
+    """
+    text = args.readme.read_text(encoding="utf-8")
+    for group in args.group:
+        pattern = re.compile(rf"(<!-- last:{re.escape(group)} -->\*\*PR #)\d+(\*\*)")
+        text, count = pattern.subn(rf"\g<1>{args.pr}\g<2>", text)
+        if not count:
+            print(f"::warning::no 'last updated by' cell for group {group!r} in {args.readme}")
+    args.readme.write_text(text, encoding="utf-8")
     return 0
 
 
 def cmd_gate(args) -> int:
     """Fail the build only on the conditions that block a merge.
 
-    Three gates: growth, reaction/metabolite name agreement between
-    model/yeast-GEM.yml and the annotation tsvs, and id agreement between
-    the model and the tsvs -- with no deprecated id in active use
-    (yeast-GEM#379). Everything else in the report is a finding to
-    review, not a reason to stop, so this deliberately reads specific
-    values rather than looking at the report as a whole.
+    Gates: growth; reaction/metabolite name agreement between
+    model/yeast-GEM.yml and the annotation tsvs; id agreement between the model
+    and the tsvs, with no deprecated id in active use (yeast-GEM#379); no
+    duplicate keys in the model file; no reaction without metabolites; and, from
+    ``--status``, the YAML and SBML round-trips and the YAML lint. Everything
+    else in the report is a finding to review, not a reason to stop, so this
+    deliberately reads specific values rather than looking at the report as a
+    whole.
     """
     metrics = read_metrics(args.metrics)
     if not metrics:
@@ -210,22 +255,34 @@ def cmd_gate(args) -> int:
         else:
             print(f"Growth {growth:g}")
 
-    name_mismatches = metrics.get("name_mismatches", 0)
-    if name_mismatches > 0:
-        print(f"::error::{name_mismatches:g} reaction/metabolite name(s) disagree "
-              "between model/yeast-GEM.yml and the annotation tsvs -- see "
-              "qc_findings.md")
-        failed = True
-    else:
-        print(f"Names: model and tsvs agree ({name_mismatches:g} mismatches)")
+    # (metric, what a non-zero value means, where the detail is)
+    zero_gates = (
+        ("name_mismatches", "reaction/metabolite name(s) disagree between "
+         "model/yeast-GEM.yml and the annotation tsvs"),
+        ("annotation_consistency", "model/annotation-table inconsistenc(y/ies)"),
+        ("duplicate_keys", "duplicate key(s) in model/yeast-GEM.yml"),
+        ("empty_reactions", "reaction(s) without metabolites"),
+    )
+    for key, meaning in zero_gates:
+        value = metrics.get(key, 0)
+        if value > 0:
+            print(f"::error::{value:g} {meaning} -- see qc_findings.md")
+            failed = True
+        else:
+            print(f"{key}: 0")
 
-    annotation_consistency = metrics.get("annotation_consistency", 0)
-    if annotation_consistency > 0:
-        print(f"::error::{annotation_consistency:g} model/annotation-table "
-              "inconsistenc(y/ies) -- see qc_findings.md")
-        failed = True
-    else:
-        print(f"Annotation tables: model and tsvs agree ({annotation_consistency:g} issues)")
+    if args.status:
+        status = {}
+        if args.status.is_file():
+            for line in args.status.read_text(encoding="utf-8").splitlines()[1:]:
+                key, _, value = line.partition("\t")
+                status[key.strip()] = value.strip()
+        for key in ("roundtrip_yaml", "roundtrip_sbml", "yamllint"):
+            if status.get(key) == "pass":
+                print(f"{key}: pass")
+            else:
+                print(f"::error::{key}: {status.get(key, 'not run')}")
+                failed = True
 
     return 1 if failed else 0
 
@@ -270,8 +327,16 @@ def main(argv=None) -> int:
     p.add_argument("--any", type=Path, nargs="+", required=True)
     p.set_defaults(func=cmd_require)
 
+    p = sub.add_parser("stamp", help="record the pull request in the results README")
+    p.add_argument("--readme", type=Path, default=Path("data/testResults/README.md"))
+    p.add_argument("--pr", required=True)
+    p.add_argument("--group", nargs="+", required=True)
+    p.set_defaults(func=cmd_stamp)
+
     p = sub.add_parser("gate", help="apply the merge gate")
     p.add_argument("--metrics", type=Path, required=True)
+    p.add_argument("--status", type=Path, default=None,
+                   help="qc_status.tsv, for the model-file gates")
     p.set_defaults(func=cmd_gate)
 
     args = parser.parse_args(argv)
