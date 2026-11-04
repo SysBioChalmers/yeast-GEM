@@ -190,13 +190,16 @@ jobs:
         continue-on-error: true
         run: |
           python code/python/tests/ci/check_metrics.py \
-            --emit results/head/validation_metrics.tsv             --findings results/head/validation_findings.md
+            --emit results/head/validation_metrics.tsv \
+            --genes results/head/essentialGenes.tsv \
+            --findings results/head/validation_findings.md
 
       - name: Measure the target branch
         continue-on-error: true
         run: |
           python code/python/tests/ci/check_metrics.py \
             --model base-checkout/model/yeast-GEM.yml \
+            --genes results/base/essentialGenes.tsv \
             --emit results/base/validation_metrics.tsv
 
       - uses: actions/upload-artifact@v7

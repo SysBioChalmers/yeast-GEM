@@ -136,3 +136,71 @@ def test_request_does_not_retry_a_client_error(monkeypatch):
     with pytest.raises(urllib.error.HTTPError):
         pipeline._request("GET", "https://api.github.com/x", "token")
     assert len(calls) == 1
+
+
+# --- gene essentiality ------------------------------------------------
+
+NAMES = {"YEL047C": "FRD1", "YJR051W": "OSM1", "YAL001C": "TFC3"}
+
+
+def test_gene_changes_are_classified_by_effect():
+    base = {"YEL047C": "FP", "YJR051W": "TP", "YAL001C": "TN", "YAL002W": "FN", "YAL003W": "TP"}
+    now = {"YEL047C": "TN", "YJR051W": "FN", "YAL001C": "TN", "YAL002W": "FP", "YAL004W": "TP"}
+    summary = bq.essential_summary(now, base, NAMES)
+    changed = {row[0]: row[4] for row in summary["changed"]}
+    assert changed == {"YEL047C": "better", "YJR051W": "worse", "YAL002W": "changed",
+                       "YAL003W": "removed", "YAL004W": "new"}
+    assert summary["false_non_essential"] == [("YAL002W", "")]
+    assert summary["false_essential"] == [("YJR051W", "OSM1")]
+
+
+def test_without_calls_or_baseline_nothing_is_claimed():
+    assert bq.essential_summary({}, {"YEL047C": "TP"}, NAMES) is None
+    summary = bq.essential_summary({"YEL047C": "FP"}, {}, NAMES)
+    assert summary["changed"] == [] and not summary["has_base"]
+    assert "no baseline" in bq._essential_cell(summary, "develop", False)
+
+
+def test_the_comment_names_the_changed_genes_and_counts_the_wrong_calls():
+    base = {"YEL047C": "FP", "YJR051W": "TP"}
+    now = {"YEL047C": "TN", "YJR051W": "FN"}
+    essential = bq.essential_summary(now, base, NAMES)
+    report = bq.collect(BASE, BASE, "develop", False, essential=essential)
+    text = bq.render_condensed(report, BASE, BASE, "develop", "https://x/u", False,
+                               "https://x/d", "https://x/d/model_qc_summary.md")
+    assert "| Gene essentiality | :warning: 1 better, 1 worse vs `develop`; " \
+           "0 false non-essential, 1 false essential |" in text
+    assert "- `YEL047C` (FRD1): false non-essential → true essential (better)" in text
+    assert "- `YJR051W` (OSM1): true non-essential → false essential (worse)" in text
+
+
+def test_the_comment_lists_at_most_twenty_changed_genes():
+    base = {f"G{i:03d}": "FP" for i in range(30)}
+    now = {gene: "TN" for gene in base}
+    essential = bq.essential_summary(now, base, {})
+    report = bq.collect(BASE, BASE, "develop", False, essential=essential)
+    text = bq.render_condensed(report, BASE, BASE, "develop", "https://x/u", False,
+                               "https://x/d", "https://x/d/model_qc_summary.md")
+    assert text.count("(better)") == 20
+    assert "and 10 more, see the [full report](https://x/d/model_qc_summary.md#gene-essentiality)" \
+        in text
+
+
+def test_the_full_report_lists_every_change_and_every_wrong_call():
+    base = {"YEL047C": "FP"}
+    now = {"YEL047C": "TN", "YAL001C": "FN"}
+    essential = bq.essential_summary(now, base, NAMES)
+    report = bq.collect(BASE, BASE, "develop", False, essential=essential)
+    full = bq.render_full(report, BASE, BASE, "develop", "https://x/u", False, "",
+                          "https://x/d")
+    assert "### Gene essentiality" in full
+    assert "| `YEL047C` | FRD1 | false non-essential | true essential | better |" in full
+    assert "#### False essential genes (1)" in full and "| `YAL001C` | TFC3 |" in full
+
+
+def test_gene_calls_and_names_are_read_from_their_files(tmp_path):
+    (tmp_path / "essentialGenes.tsv").write_text("gene\tclassification\nYEL047C\tTP\nYAL001C\tFN\n")
+    (tmp_path / "names.tsv").write_text("Systematic_name\tStandard_name\nYEL047C\tFRD1\nQ0045\t\n")
+    assert bq.read_calls(tmp_path) == {"YEL047C": "TP", "YAL001C": "FN"}
+    assert bq.read_calls(tmp_path / "missing") == {}
+    assert bq.read_gene_names(tmp_path / "names.tsv") == {"YEL047C": "FRD1"}

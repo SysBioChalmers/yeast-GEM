@@ -42,6 +42,7 @@ _TRACKED = (
     "qc_metrics.tsv",
     "validation_findings.md",
     "validation_metrics.tsv",
+    "essentialGenes.tsv",
     "memote_score.md",
     "annotation_report.md",
     "annotation_metrics.tsv",

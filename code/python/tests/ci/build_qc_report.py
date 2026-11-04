@@ -337,6 +337,131 @@ def read_status(directory: Path | None) -> dict[str, str]:
     return status
 
 
+# essentialGenes.tsv classifications. The reference is the Stanford deletion collection:
+# a true call agrees with it, a false non-essential gene is essential there but viable in
+# the model, a false essential gene is viable there but not in the model.
+_CALL_LABELS = {
+    "TP": "true non-essential", "TN": "true essential",
+    "FP": "false non-essential", "FN": "false essential",
+}
+_CORRECT_CALLS = {"TP", "TN"}
+_MAX_LISTED = 20  # changed genes named in the comment; all are in the full report
+
+
+def read_calls(directory: Path | None) -> dict[str, str]:
+    """Read ``essentialGenes.tsv`` (``gene<TAB>classification``), if it exists."""
+    path = directory / "essentialGenes.tsv" if directory else None
+    if path is None or not path.is_file():
+        return {}
+    calls = {}
+    for line in path.read_text(encoding="utf-8").splitlines()[1:]:
+        gene, _, call = line.partition("\t")
+        if gene.strip():
+            calls[gene.strip()] = call.strip()
+    return calls
+
+
+def read_gene_names(path: Path | None) -> dict[str, str]:
+    """Systematic to standard gene names, from ``data/databases/SGDgeneNames.tsv``."""
+    if path is None or not path.is_file():
+        return {}
+    names = {}
+    for line in path.read_text(encoding="utf-8").splitlines()[1:]:
+        systematic, _, standard = line.partition("\t")
+        if systematic and standard.strip():
+            names[systematic] = standard.strip()
+    return names
+
+
+def essential_summary(calls: dict, base_calls: dict, names: dict) -> dict | None:
+    """The genes that changed class since the target branch, and the wrong calls.
+
+    ``changed`` rows are ``(gene, name, before, after, verdict)`` with the verdict
+    ``better`` or ``worse`` (a call that became right or wrong), ``changed`` (wrong
+    both times), ``new`` or ``removed`` (the gene is only in one model). ``None``
+    when the branch has no calls."""
+    if not calls:
+        return None
+    changed = []
+    if base_calls:
+        for gene in sorted(set(calls) | set(base_calls)):
+            before, after = base_calls.get(gene), calls.get(gene)
+            if before == after:
+                continue
+            if before is None:
+                verdict = "new"
+            elif after is None:
+                verdict = "removed"
+            elif (before in _CORRECT_CALLS) != (after in _CORRECT_CALLS):
+                verdict = "better" if after in _CORRECT_CALLS else "worse"
+            else:
+                verdict = "changed"
+            changed.append((gene, names.get(gene, ""), before, after, verdict))
+    wrong = {call: [(gene, names.get(gene, "")) for gene, c in sorted(calls.items()) if c == call]
+             for call in ("FP", "FN")}
+    return {"changed": changed, "false_non_essential": wrong["FP"],
+            "false_essential": wrong["FN"], "has_base": bool(base_calls)}
+
+
+def _gene_label(gene: str, name: str) -> str:
+    return f"`{gene}` ({name})" if name else f"`{gene}`"
+
+
+def _call_text(call: str | None) -> str:
+    return _CALL_LABELS.get(call, "not in the model") if call else "not in the model"
+
+
+def _essential_cell(summary: dict | None, base_ref: str, running: bool) -> str:
+    if running:
+        return ":hourglass_flowing_sand: running"
+    if summary is None:
+        return ":grey_question: not run"
+    wrong = (f"{len(summary['false_non_essential'])} false non-essential, "
+             f"{len(summary['false_essential'])} false essential")
+    if not summary["has_base"]:
+        return f":grey_question: no baseline; {wrong}"
+    count = {verdict: sum(1 for row in summary["changed"] if row[4] == verdict)
+             for verdict in ("better", "worse", "changed", "new", "removed")}
+    parts = [f"{n} {verdict}" for verdict, n in count.items() if n]
+    if not parts:
+        return f":white_check_mark: no gene changed class vs `{base_ref}`; {wrong}"
+    icon = ":warning:" if count["worse"] else ":white_check_mark:"
+    return f"{icon} {', '.join(parts)} vs `{base_ref}`; {wrong}"
+
+
+def _change_line(row: tuple) -> str:
+    gene, name, before, after, verdict = row
+    return f"- {_gene_label(gene, name)}: {_call_text(before)} → {_call_text(after)} ({verdict})"
+
+
+def _render_essential_full(summary: dict | None, base_ref: str) -> list[str]:
+    lines = [
+        "### Gene essentiality",
+        "_Single-gene deletions against the Stanford deletion collection. A false "
+        "non-essential gene is essential in the collection and viable in the model; a "
+        "false essential gene is viable in the collection and not in the model. The "
+        "per-gene calls are in [essentialGenes.tsv](essentialGenes.tsv)._",
+        "",
+    ]
+    if summary is None:
+        return [*lines, "_not run, the validation job reported no gene calls._", ""]
+    if summary["has_base"]:
+        lines += [f"#### Changed since `{base_ref}`", ""]
+        if summary["changed"]:
+            lines += ["| Gene | Name | Before | Now | Effect |", "| --- | --- | --- | --- | --- |"]
+            lines += [f"| `{g}` | {n} | {_call_text(b)} | {_call_text(a)} | {v} |"
+                      for g, n, b, a, v in summary["changed"]]
+        else:
+            lines += ["_No gene changed class._"]
+        lines += [""]
+    for title, key in (("False non-essential genes", "false_non_essential"),
+                       ("False essential genes", "false_essential")):
+        lines += [f"#### {title} ({len(summary[key])})", ""]
+        lines += ["| Gene | Name |", "| --- | --- |"] if summary[key] else ["_None._"]
+        lines += [f"| `{g}` | {n} |" for g, n in summary[key]] + [""]
+    return lines
+
+
 def _status_records(status, running):
     records = []
     for key, label in _STATUS_ROWS:
@@ -584,7 +709,7 @@ def _render_annotation(current_dir: Path | None, base_dir: Path | None,
 
 def collect(current: dict, base: dict, base_ref: str, running: bool,
             validation: dict | None = None, validation_base: dict | None = None,
-            status: dict | None = None) -> dict:
+            status: dict | None = None, essential: dict | None = None) -> dict:
     """Compute every row once; ``render_full`` and ``render_condensed`` format it."""
     groups = [
         ("Model checks",
@@ -608,6 +733,7 @@ def collect(current: dict, base: dict, base_ref: str, running: bool,
     return {
         "groups": groups,
         "validation": validation_records,
+        "essential": essential,
         "regressions": sum(r["regression"] for r in records),
         "warnings": sum(r["icon"] == ":warning:" for r in records
                         if r["kind"] != "validation" and r["state"] == "measured"),
@@ -685,6 +811,7 @@ def render_full(report: dict, current: dict, base: dict, base_ref: str, url_base
         "| --- | ---: | ---: | :---: |",
         *_render_validation(report["validation"], url_base, detail_base),
         "",
+        *_render_essential_full(report["essential"], base_ref),
     ]
 
     if _memote_suite(memote_dir) == "full suite":
@@ -785,6 +912,9 @@ def render_condensed(report: dict, current: dict, base: dict, base_ref: str, url
     table.append(f"| Validation metrics ({len(report['validation'])}) | "
                  f"{_section_status(report['validation'])} |")
 
+    essential = report["essential"]
+    table.append(f"| Gene essentiality | {_essential_cell(essential, base_ref, running)} |")
+
     parsed = _parse_memote(memote_dir)
     if running:
         memote_cell = ":hourglass_flowing_sand: running"
@@ -823,6 +953,17 @@ def render_condensed(report: dict, current: dict, base: dict, base_ref: str, url
             lists += [f"**{heading}**", "",
                       *[_list_item(r, url_base, detail_base) for r in selected], ""]
 
+    if essential and essential["changed"] and not running:
+        shown = essential["changed"][:_MAX_LISTED]
+        more = len(essential["changed"]) - len(shown)
+        lists += [f"**Gene essentiality, changed since `{base_ref}`**", "",
+                  *[_change_line(row) for row in shown]]
+        if more:
+            lists += [f"- and {more} more, see the "
+                      f"[full report]({summary_url}#gene-essentiality)" if summary_url
+                      else f"- and {more} more in the full report"]
+        lists += [""]
+
     size_line = f"**Model size:** {_render_size(current, base, base_ref, running)}"
     return "\n".join(
         ["## Model quality report", "", _verdict(report, base, base_ref), "", size_line, "",
@@ -840,6 +981,10 @@ def main() -> int:
     parser.add_argument("--detail-base", default="",
                         help="base URL for the findings files; when empty "
                              "the counts are plain text")
+    parser.add_argument("--gene-names", type=Path,
+                        default=Path(__file__).resolve().parents[4] / "data" / "databases"
+                        / "SGDgeneNames.tsv",
+                        help="systematic and standard gene names, for the essentiality lists")
     parser.add_argument("--run-url", default="")
     parser.add_argument("--running", action="store_true",
                         help="render every row as still running")
@@ -856,8 +1001,10 @@ def main() -> int:
         read_metrics(args.base, "validation_metrics.tsv") if args.base else {}
     )
     status = read_status(args.current)
+    essential = essential_summary(read_calls(args.current), read_calls(args.base),
+                                  read_gene_names(args.gene_names))
     report = collect(current, base, args.base_ref, args.running, validation,
-                     validation_base, status)
+                     validation_base, status, essential)
     url_base, detail_base = args.url_base.rstrip("/"), args.detail_base.rstrip("/")
     directories = dict(memote_dir=args.current, memote_base_dir=args.base,
                        annotation_dir=args.current, annotation_base_dir=args.base)

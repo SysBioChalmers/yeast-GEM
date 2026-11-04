@@ -37,6 +37,7 @@ matplotlib.use("Agg")
 
 from yeastgem import conditions, load_yeast_yaml, model_tests
 from yeastgem.io import REPO_PATH
+from yeastgem.model_tests.essential_genes import format_calls
 
 _DEFAULT_RESULTS = REPO_PATH / "data" / "testResults" / "README.md"
 
@@ -211,8 +212,11 @@ def _findings(flux, exchange, essential) -> str:
     return "\n".join(lines) + "\n"
 
 
-def compute(model, findings_path: Path | None = None) -> dict[str, float]:
-    """Every validation metric for one model, keyed by test."""
+def compute(model, findings_path: Path | None = None,
+            genes_path: Path | None = None) -> dict[str, float]:
+    """Every validation metric for one model, keyed by test.
+
+    ``genes_path`` receives the per-gene essentiality calls (essentialGenes.tsv)."""
     growth_r2 = model_tests.growth(model.copy())
     essential = model_tests.essential_genes(model.copy())
 
@@ -220,6 +224,11 @@ def compute(model, findings_path: Path | None = None) -> dict[str, float]:
     conditions.apply(anaerobic, "anaerobic")
     flux = model_tests.anaerobic_flux_predictions(anaerobic)
     exchange = model_tests.plot_anaerobic(anaerobic, plot=False)
+
+    if genes_path is not None:
+        genes_path.parent.mkdir(parents=True, exist_ok=True)
+        genes_path.write_text(format_calls(essential), encoding="utf-8")
+        print(f"Wrote {genes_path}")
 
     if findings_path is not None:
         findings_path.parent.mkdir(parents=True, exist_ok=True)
@@ -386,6 +395,9 @@ def main() -> int:
                              "--base-model")
     parser.add_argument("--findings", type=Path, default=None,
                         help="write the measurements behind each metric here")
+    parser.add_argument("--genes", type=Path, default=None,
+                        help="write the per-gene essentiality calls here "
+                             "(essentialGenes.tsv)")
     parser.add_argument("--emit", type=Path, default=None,
                         help="write the measured values as key<TAB>value, for "
                              "build_qc_report.py to compare and render")
@@ -399,7 +411,7 @@ def main() -> int:
     model = _load(args.model)
 
     print("Measuring this branch ...")
-    current = compute(model, args.findings)
+    current = compute(model, args.findings, args.genes)
 
     if args.emit is not None:
         args.emit.parent.mkdir(parents=True, exist_ok=True)
