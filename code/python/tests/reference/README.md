@@ -58,8 +58,7 @@ committed to this directory in the same PR that introduced the change.
   `true` and the level-1 comparison becomes a required check.
 - The level-2 metric-parity gate (not yet wired) will load
   `metrics.yml` and compare Python-computed metrics to the reference
-  values within the tolerances defined in
-  [PORTING_PLAN.md](../../PORTING_PLAN.md).
+  values within the tolerances of `tests/ci/check_metrics.py`.
 
 ## Why this is in MATLAB, not Python
 
@@ -70,27 +69,25 @@ port can be validated independently. When both toolchains have full
 parity and a single-language production owner is chosen, this
 direction may flip — until then, MATLAB seeds, Python verifies.
 
-## Environments: MATLAB and Python give the same model
+## Environments: MATLAB and Python give the same changes
 
 Environments (`data/conditions/*.yml`) are applied by `applyEnvironment`
 in MATLAB and `yeastgem.conditions.apply` in Python, two independent
 readers of the same files. [`dumpEnvironments.m`](dumpEnvironments.m)
-writes the bounds and stoichiometry after every environment;
-[`compare_environments.py`](compare_environments.py) applies the same
-environments in Python and requires identical bounds and coefficients
-(within 1e-9):
+writes, per environment, the bounds and stoichiometric coefficients that
+`applyEnvironment` changes to [`environments/`](environments). The test
+[`test_environments_match_matlab.py`](../test_environments_match_matlab.py)
+requires that `yeastgem.conditions.apply` makes the same changes (bounds
+identical, coefficients within 1e-9), so the pull-request CI checks the
+agreement without MATLAB. After a change in `data/conditions`, regenerate the
+files with MATLAB and commit them:
 
 ```bash
-matlab -batch "addpath('code'); addpath('code/python/tests/reference'); \
-    dumpEnvironments('/tmp/environments')"
-python code/python/tests/reference/compare_environments.py /tmp/environments
+matlab -batch "addpath('code'); addpath('code/python/tests/reference'); dumpEnvironments"
 ```
 
-Result (2026-10-07): identical for anaerobic, carnitine, glycine_nitrogen,
-minimal_Y6 and nitrogen_limitation. `applyEnvironment` also gave the
-same lb, ub and S as the functions it replaces on develop
-(anaerobicModel of 9.1.0, minimal_Y6, glycineNitrogenSource and
-nitrogenLimitation).
+[`testApplyEnvironment.m`](testApplyEnvironment.m) runs the error cases and
+the combination of bound entries of `applyEnvironment` on a small model.
 
 ## Phase-3 specific: the commit-pipeline equivalence check
 
@@ -195,6 +192,6 @@ The single-gene discrepancy is a borderline case at the 1e-6 growth-ratio
 threshold. This is not solver-related -- it persists when Python also
 uses Gurobi -- and points at cobrapy's single_gene_deletion differing
 from RAVEN's findGeneDeletions. All metrics are within
-the level-2 tolerances defined in PORTING_PLAN.md (R²/accuracy ≤ 1e-4
+the level-2 tolerances (R²/accuracy ≤ 1e-4
 when the underlying inputs match; here we're at 1e-3 because of one
 gene). Acceptable for phase 5; revisit if any drifts beyond 1e-2.
