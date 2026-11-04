@@ -69,6 +69,132 @@ _Predictions against measured data, to 4 significant digits. A change within tol
 | [False non-essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#false-non-essential-genes) | [94](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :warning: |
 | [False essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#false-essential-genes) | [15](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :warning: |
 
+### Gene essentiality
+_Single-gene deletions against the Stanford deletion collection. A false non-essential gene is essential in the collection and viable in the model; a false essential gene is viable in the collection and not in the model. The per-gene calls are in [essentialGenes.tsv](essentialGenes.tsv)._
+
+#### Changed since `develop`
+
+_No gene changed class._
+
+#### False non-essential genes (94)
+
+| Gene | Name |
+| --- | --- |
+| `YAL038W` | CDC19 |
+| `YBL030C` | PET9 |
+| `YBR002C` | RER2 |
+| `YBR004C` | GPI18 |
+| `YBR011C` | IPP1 |
+| `YBR038W` | CHS2 |
+| `YBR070C` | ALG14 |
+| `YBR110W` | ALG1 |
+| `YBR153W` | RIB7 |
+| `YBR192W` | RIM2 |
+| `YBR196C` | PGI1 |
+| `YBR243C` | ALG7 |
+| `YBR252W` | DUT1 |
+| `YBR256C` | RIB5 |
+| `YBR265W` | TSC10 |
+| `YCL052C` | PBN1 |
+| `YCR012W` | PGK1 |
+| `YDL004W` | ATP16 |
+| `YDL015C` | TSC13 |
+| `YDL120W` | YFH1 |
+| `YDL166C` | FAP7 |
+| `YDR023W` | SES1 |
+| `YDR050C` | TPI1 |
+| `YDR062W` | LCB2 |
+| `YDR208W` | MSS4 |
+| `YDR236C` | FMN1 |
+| `YDR302W` | GPI11 |
+| `YDR353W` | TRR1 |
+| `YDR367W` | KEI1 |
+| `YDR373W` | FRQ1 |
+| `YDR376W` | ARH1 |
+| `YDR437W` | GPI19 |
+| `YDR487C` | RIB3 |
+| `YER023W` | PRO3 |
+| `YGL001C` | ERG26 |
+| `YGL008C` | PMA1 |
+| `YGL047W` | ALG13 |
+| `YGL065C` | ALG2 |
+| `YGL142C` | GPI10 |
+| `YGL169W` | SUA5 |
+| `YGL225W` | VRG4 |
+| `YGR046W` | TAM41 |
+| `YGR060W` | ERG25 |
+| `YGR065C` | VHT1 |
+| `YGR175C` | ERG1 |
+| `YGR191W` | HIP1 |
+| `YGR216C` | GPI1 |
+| `YGR277C` | CAB4 |
+| `YHR007C` | ERG11 |
+| `YHR042W` | NCP1 |
+| `YHR068W` | DYS1 |
+| `YHR072W` | ERG7 |
+| `YHR128W` | FUR1 |
+| `YHR190W` | ERG9 |
+| `YIL048W` | NEO1 |
+| `YJL005W` | CYR1 |
+| `YJL026W` | RNR2 |
+| `YJL091C` | GWT1 |
+| `YJL097W` | PHS1 |
+| `YJR013W` | GPI14 |
+| `YJR016C` | ILV3 |
+| `YJR057W` | CDC8 |
+| `YKL004W` | AUR1 |
+| `YKL019W` | RAM2 |
+| `YKL035W` | UGP1 |
+| `YKL060C` | FBA1 |
+| `YKL141W` | SDH3 |
+| `YKL152C` | GPM1 |
+| `YKL165C` | MCD4 |
+| `YKL182W` | FAS1 |
+| `YLL031C` | GPI13 |
+| `YLR100W` | ERG27 |
+| `YLR153C` | ACS2 |
+| `YLR305C` | STT4 |
+| `YLR355C` | ILV5 |
+| `YLR359W` | ADE13 |
+| `YML125C` | PGA3 |
+| `YMR013C` | SEC59 |
+| `YMR108W` | ILV2 |
+| `YMR281W` | GPI12 |
+| `YMR296C` | LCB1 |
+| `YMR298W` | LIP1 |
+| `YMR301C` | ATM1 |
+| `YNL036W` | NCE103 |
+| `YNL038W` | GPI15 |
+| `YNL267W` | PIK1 |
+| `YOL066C` | RIB2 |
+| `YOR143C` | THI80 |
+| `YOR149C` | SMP3 |
+| `YPL076W` | GPI2 |
+| `YPL175W` | SPT14 |
+| `YPL231W` | FAS2 |
+| `YPL252C` | YAH1 |
+| `YPR035W` | GLN1 |
+
+#### False essential genes (15)
+
+| Gene | Name |
+| --- | --- |
+| `YBR126C` | TPS1 |
+| `YDR074W` | TPS2 |
+| `YER014W` | HEM14 |
+| `YER026C` | CHO1 |
+| `YGR157W` | CHO2 |
+| `YJR073C` | OPI3 |
+| `YKL067W` | YNK1 |
+| `YKR039W` | GAP1 |
+| `YKR067W` | GPT2 |
+| `YKR072C` | SIS2 |
+| `YMR217W` | GUA1 |
+| `YNL275W` | BOR1 |
+| `YOL122C` | SMF1 |
+| `YOR054C` | VHS3 |
+| `YPL172C` | COX10 |
+
 ### MEMOTE score
 _Fast subset -- flux-variability and matrix-rank tests are skipped, so this is not the same score `memote report snapshot` would give. Compared against `develop`'s own last-committed score, not a fresh run on it. Comment `/run memote` on the pull request for the full suite._
 
