@@ -199,14 +199,19 @@ def _write_report(result: EssentialGeneResult) -> None:
     """
     out_dir = REPO_PATH / "data" / "testResults"
     out_dir.mkdir(parents=True, exist_ok=True)
+    (out_dir / "essentialGenes.tsv").write_text(format_calls(result), encoding="utf-8")
+
+
+def format_calls(result: EssentialGeneResult) -> str:
+    """The per-gene calls as ``essentialGenes.tsv``: ``gene<TAB>classification``, sorted.
+
+    TP is a gene that is viable in the collection and in the model, TN one that is
+    essential in both, FP one that is essential in the collection but viable in the
+    model, and FN one that is viable in the collection but essential in the model."""
     rows = sorted(
         [(gene, label)
          for label, genes in (("TP", result.tp), ("TN", result.tn),
                               ("FP", result.fp), ("FN", result.fn))
          for gene in genes]
     )
-    (out_dir / "essentialGenes.tsv").write_text(
-        "gene\tclassification\n"
-        + "".join(f"{gene}\t{label}\n" for gene, label in rows),
-        encoding="utf-8",
-    )
+    return "gene\tclassification\n" + "".join(f"{gene}\t{label}\n" for gene, label in rows)
