@@ -13,7 +13,6 @@ on:
       - 'model/**'
       - '.github/workflows/python.yml'
   pull_request:
-    branches: [main, develop]
     paths:
       - 'code/python/**'
       - 'code/io.py'

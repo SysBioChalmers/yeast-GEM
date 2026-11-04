@@ -3,9 +3,9 @@
 MEMOTE only computes a score when it builds a report; the raw ``memote run``
 result holds per-test results but no score. So this runs MEMOTE through its
 Python API and then builds the snapshot report to obtain the score, rather
-than shelling out to ``memote run`` (which would leave us without one). One
-run per pull request rather than a core-subset/full-suite split -- yeast-GEM
-does not (yet) have a slash-command trigger for an on-demand full run.
+than shelling out to ``memote run`` (which would leave us without one). Every
+pull request gets the fast subset; the full suite runs on demand
+(``/run memote``, see memote-full.yml) with ``--full``.
 
 Skips the handful of tests that dominate runtime on a genome-scale model
 (flux-variability / loopless-MILP consistency checks, and the matrix-rank /
@@ -136,24 +136,28 @@ def _detailed_rows(scored: dict, config: ReportConfiguration
     return rows
 
 
-def snapshot(model: cobra.Model) -> tuple[dict, ReportConfiguration]:
-    """Run the MEMOTE fast subset on ``model`` and return the scored result."""
+def snapshot(model: cobra.Model, full: bool = False) -> tuple[dict, ReportConfiguration]:
+    """Run MEMOTE on ``model`` and return the scored result.
+
+    The fast subset skips the slow tests; ``full`` runs every test.
+    """
     with tempfile.TemporaryDirectory() as tmp:
         sbml_path = str(Path(tmp) / "model.xml")
         cobra.io.write_sbml_model(model, sbml_path)
         model_obj, sbml_ver, _ = api.validate_model(sbml_path)
-        print(f"Running MEMOTE (fast subset, skipping {len(_SLOW_TESTS)} slow "
-              "tests)", flush=True)
+        print("Running MEMOTE (full suite)" if full else
+              f"Running MEMOTE (fast subset, skipping {len(_SLOW_TESTS)} slow tests)",
+              flush=True)
         _, result = api.test_model(
             model_obj, sbml_version=sbml_ver, results=True,
-            skip=_SLOW_TESTS, solver_timeout=120,
+            skip=[] if full else _SLOW_TESTS, solver_timeout=120,
         )
     config = ReportConfiguration.load()
     scored = SnapshotReport(result=result, configuration=config).result
     return scored, config
 
 
-def render(scored: dict, config: ReportConfiguration) -> str:
+def render(scored: dict, config: ReportConfiguration, full: bool = False) -> str:
     total = _total_score(scored)
     if total is None:
         return "# MEMOTE snapshot\n\nTotal score: unavailable (see workflow log).\n"
@@ -161,7 +165,8 @@ def render(scored: dict, config: ReportConfiguration) -> str:
     lines = [
         "# MEMOTE snapshot",
         "",
-        f"Skipped (slow) tests: {', '.join(_SLOW_TESTS)}.",
+        "Full suite: no test skipped." if full
+        else f"Skipped (slow) tests: {', '.join(_SLOW_TESTS)}.",
         "",
         f"**Total score: {pct:.1f}%**",
     ]
@@ -193,6 +198,8 @@ def main() -> int:
                         help="model to score (default: this checkout's)")
     parser.add_argument("--out", type=Path, default=Path("data/testResults"),
                         help="directory to write memote_score.md into")
+    parser.add_argument("--full", action="store_true",
+                        help="run every MEMOTE test (takes hours), not the fast subset")
     args = parser.parse_args()
 
     model = (
@@ -212,13 +219,13 @@ def main() -> int:
     # that having happened yet.
     add_sbo_terms(model)
 
-    scored, config = snapshot(model)
+    scored, config = snapshot(model, args.full)
 
     args.out.mkdir(parents=True, exist_ok=True)
     with open(args.out / "memote_result.json", "w", encoding="utf-8") as fh:
         json.dump(scored, fh, default=str)
 
-    summary = render(scored, config)
+    summary = render(scored, config, args.full)
     (args.out / "memote_score.md").write_text(summary, encoding="utf-8")
     print(summary)
     return 0

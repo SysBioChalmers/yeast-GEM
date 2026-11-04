@@ -273,8 +273,7 @@ def write_yeast_model(model: cobra.Model) -> None:
     next minor version bump after the rename ships.
     """
     warnings.warn(
-        "write_yeast_model is deprecated; use commit_yeast_model instead. "
-        "See code/python/PORTING_PLAN.md (phase 3) for the rename rationale.",
+        "write_yeast_model is deprecated; use commit_yeast_model instead.",
         DeprecationWarning,
         stacklevel=2,
     )

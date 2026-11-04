@@ -13,8 +13,7 @@ function regenerate()
 %
 %   This script is intentionally a thin orchestrator. The behaviours it
 %   captures (load, commit pipeline, growth/essentialGenes metrics) are
-%   already implemented under code/. See PORTING_PLAN.md, validation
-%   strategy, for what the bundle is used for.
+%   already implemented under code/.
 
 % TODO: implement once the Python port reaches the level-2 gate. For
 % phase 1 of the port (scaffold), this file documents the contract:

@@ -1,9 +1,8 @@
 """yeastgem — Python interface to the yeast-GEM consensus model.
 
 Python-side counterpart to the MATLAB functions under
-[code/](../). See [PORTING_PLAN.md](../PORTING_PLAN.md) for scope and
-[UPSTREAM_CANDIDATES.md](../UPSTREAM_CANDIDATES.md) for what may move
-upstream later.
+[code/](../). See [UPSTREAM_CANDIDATES.md](../UPSTREAM_CANDIDATES.md) for
+what may move upstream later.
 """
 from __future__ import annotations
 

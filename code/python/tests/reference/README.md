@@ -58,8 +58,7 @@ committed to this directory in the same PR that introduced the change.
   `true` and the level-1 comparison becomes a required check.
 - The level-2 metric-parity gate (not yet wired) will load
   `metrics.yml` and compare Python-computed metrics to the reference
-  values within the tolerances defined in
-  [PORTING_PLAN.md](../../PORTING_PLAN.md).
+  values within the tolerances of `tests/ci/check_metrics.py`.
 
 ## Why this is in MATLAB, not Python
 
@@ -193,6 +192,6 @@ The single-gene discrepancy is a borderline case at the 1e-6 growth-ratio
 threshold. This is not solver-related -- it persists when Python also
 uses Gurobi -- and points at cobrapy's single_gene_deletion differing
 from RAVEN's findGeneDeletions. All metrics are within
-the level-2 tolerances defined in PORTING_PLAN.md (R²/accuracy ≤ 1e-4
+the level-2 tolerances (R²/accuracy ≤ 1e-4
 when the underlying inputs match; here we're at 1e-3 because of one
 gene). Acceptable for phase 5; revisit if any drifts beyond 1e-2.
