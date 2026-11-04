@@ -2,8 +2,8 @@ growthPredictionR2	0.9019063673672041
 anaerobicFluxMedianFoldError	1.0615004190100084
 anaerobicExchangeMeanRelativeError	0.06454754283211148
 anaerobicAmmoniumPerATPase	1.071951239704114
-geneEssentialityAccuracy	0.9015356820234869
-geneEssentialityTrueNonEssential	933.0
+geneEssentialityAccuracy	0.9014466546112115
+geneEssentialityTrueNonEssential	932.0
 geneEssentialityTrueEssential	65.0
 geneEssentialityFalseNonEssential	94.0
 geneEssentialityFalseEssential	15.0
