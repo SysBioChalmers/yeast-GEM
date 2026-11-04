@@ -22,17 +22,6 @@ _None._
 | s_0337 | 6-O-{2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol |
 | s_0338 | 6-O-{alpha-D-mannosyl-(1->2)-alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol |
 | s_0339 | 6-O-{alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol |
-| s_0450 | biomass |
-| s_0694 | fatty acid backbone |
-| s_1096 | lipid |
-| s_3717 | protein |
-| s_3718 | carbohydrate |
-| s_3719 | RNA |
-| s_3720 | DNA |
-| s_3746 | lipid backbone |
-| s_3747 | lipid chain |
-| s_4205 | cofactor |
-| s_4206 | ion |
 
 ## Metabolites missing charge
 
@@ -1066,974 +1055,974 @@ _None._
 
 | reaction | name | compartments | equation |
 |---|---|---|---|
-| r_0001 | (R)-lactate:ferricytochrome-c 2-oxidoreductase | c,m | (R)-lactate + 2.0 ferricytochrome c --> 2.0 ferrocytochrome c + pyruvate |
-| r_0004 | (S)-lactate:ferricytochrome-c 2-oxidoreductase | c,m | (S)-lactate + 2.0 ferricytochrome c --> 2.0 ferrocytochrome c + pyruvate |
-| r_0005 | 1,3-beta-glucan synthase | c,ce | UDP-D-glucose --> (1->3)-beta-D-glucan + H+ + UDP |
-| r_0006 | 1,6-beta-glucan synthase | c,ce | UDP-D-glucose --> (1->6)-beta-D-glucan + H+ + UDP |
-| r_0227 | ATPase, plasma membrane | c,e | ATP + H2O --> ADP + H+ + phosphate |
-| r_0241 | C-4 sterol methyl oxidase (4,4-dimethylzymosterol) | c,er | 14-demethyllanosterol + 5.0 H+ + 3.0 oxygen + 6.0 ferrocytochrome b5 --> 4beta-methylzymosterol-4alpha-carboxylic acid + 4.0 H2O + 6.0 ferricytochrome b5 |
-| r_0271 | chitin deacetylase | c,ce | chitin + H2O --> acetate + chitosan + H+ |
-| r_0331 | deoxyhypusine synthase, cytosolic/mitochondrial | c,m | H2O + spermidine + ubiquinone-6 --> 4-aminobutanal + trimethylenediamine + ubiquinol-6 |
-| r_0361 | dolichyl-phosphate D-mannosyltransferase | c,er | dolichyl phosphate + GDP-alpha-D-mannose --> dolichyl D-mannosyl phosphate + GDP + H+ |
-| r_0770 | NADH dehydrogenase, cytosolic/mitochondrial | c,m | H+ + NADH + ubiquinone-6 --> NAD + ubiquinol-6 |
-| r_2316 | glycerol-3-phosphate acyltransferase (16:0), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + palmitoyl-CoA --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (16:0) |
-| r_2317 | glycerol-3-phosphate acyltransferase (16:1), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + palmitoleoyl-CoA(4-) --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (16:1) |
-| r_2318 | glycerol-3-phosphate acyltransferase (18:0), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + stearoyl-CoA --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (18:0) |
-| r_2319 | glycerol-3-phosphate acyltransferase (18:1), lipid particle | er,lp | glycerol 3-phosphate + 2.0 H+ + oleoyl-CoA --> coenzyme A + 1-acyl-sn-glycerol 3-phosphate (18:1) |
-| r_4154 | Probable diacetyl reductase [(R)-acetoin forming] 2 (EC 1.1.1.303) | c,n | NAD + (R)-acetoin <=> H+ + diacetyl + NADH |
-| r_4275 | Fe(II):NADP+ oxidoreductase | c,e | NADPH + 2.0 iron(3+) <=> H+ + 2.0 iron(2+) + NADP(+) |
-| r_4276 | Fe(II):NADP+ oxidoreductase | c,v | NADPH + 2.0 iron(3+) <=> H+ + 2.0 iron(2+) + NADP(+) |
-| r_4382 | thiosulfate:ferricytochrome-c oxidoreductase | c,m | 2.0 ferricytochrome c + 2.0 thiosulfate <=> 2.0 ferrocytochrome c + tetrathionate |
-| r_4608 | propionyl-CoA transport | c,m | ATP + H2O + propionyl-CoA --> ADP + H+ + phosphate + propionyl-CoA |
-| r_4722 | polyphosphate polymerase, c | c,v | 2.0 ATP + H2O --> 2.0 ADP + H+ + polyphosphate |
+| r_0001 | (R)-lactate:ferricytochrome-c 2-oxidoreductase | c,m | (R)-lactate [c] + 2 ferricytochrome c [m] --> 2 ferrocytochrome c [m] + pyruvate [c] |
+| r_0004 | (S)-lactate:ferricytochrome-c 2-oxidoreductase | c,m | (S)-lactate [c] + 2 ferricytochrome c [m] --> 2 ferrocytochrome c [m] + pyruvate [c] |
+| r_0005 | 1,3-beta-glucan synthase | c,ce | UDP-D-glucose [c] --> (1->3)-beta-D-glucan [ce] + H+ [c] + UDP [c] |
+| r_0006 | 1,6-beta-glucan synthase | c,ce | UDP-D-glucose [c] --> (1->6)-beta-D-glucan [ce] + H+ [c] + UDP [c] |
+| r_0227 | ATPase, plasma membrane | c,e | ATP [c] + H2O [c] --> ADP [c] + H+ [e] + phosphate [c] |
+| r_0241 | C-4 sterol methyl oxidase (4,4-dimethylzymosterol) | c,er | 14-demethyllanosterol [c] + 5 H+ [c] + 6 ferrocytochrome b5 [erm] + 3 oxygen [c] --> 4beta-methylzymosterol-4alpha-carboxylic acid [c] + 4 H2O [c] + 6 ferricytochrome b5 [erm] |
+| r_0271 | chitin deacetylase | c,ce | H2O [c] + chitin [c] --> H+ [c] + acetate [c] + chitosan [ce] |
+| r_0331 | deoxyhypusine synthase, cytosolic/mitochondrial | c,m | H2O [c] + spermidine [c] + ubiquinone-6 [m] --> 4-aminobutanal [c] + trimethylenediamine [c] + ubiquinol-6 [m] |
+| r_0361 | dolichyl-phosphate D-mannosyltransferase | c,er | GDP-alpha-D-mannose [c] + dolichyl phosphate [c] --> GDP [c] + H+ [c] + dolichyl D-mannosyl phosphate [er] |
+| r_0770 | NADH dehydrogenase, cytosolic/mitochondrial | c,m | H+ [c] + NADH [c] + ubiquinone-6 [m] --> NAD [c] + ubiquinol-6 [m] |
+| r_2316 | glycerol-3-phosphate acyltransferase (16:0), lipid particle | er,lp | 2 H+ [erm] + glycerol 3-phosphate [lp] + palmitoyl-CoA [lp] --> 1-acyl-sn-glycerol 3-phosphate (16:0) [lp] + coenzyme A [lp] |
+| r_2317 | glycerol-3-phosphate acyltransferase (16:1), lipid particle | er,lp | 2 H+ [erm] + glycerol 3-phosphate [lp] + palmitoleoyl-CoA(4-) [lp] --> 1-acyl-sn-glycerol 3-phosphate (16:1) [lp] + coenzyme A [lp] |
+| r_2318 | glycerol-3-phosphate acyltransferase (18:0), lipid particle | er,lp | 2 H+ [erm] + glycerol 3-phosphate [lp] + stearoyl-CoA [lp] --> 1-acyl-sn-glycerol 3-phosphate (18:0) [lp] + coenzyme A [lp] |
+| r_2319 | glycerol-3-phosphate acyltransferase (18:1), lipid particle | er,lp | 2 H+ [erm] + glycerol 3-phosphate [lp] + oleoyl-CoA [lp] --> 1-acyl-sn-glycerol 3-phosphate (18:1) [lp] + coenzyme A [lp] |
+| r_4154 | Probable diacetyl reductase [(R)-acetoin forming] 2 (EC 1.1.1.303) | c,n | (R)-acetoin [n] + NAD [n] <=> H+ [c] + NADH [n] + diacetyl [n] |
+| r_4275 | Fe(II):NADP+ oxidoreductase | c,e | NADPH [c] + 2 iron(3+) [e] <=> H+ [c] + NADP(+) [c] + 2 iron(2+) [c] |
+| r_4276 | Fe(II):NADP+ oxidoreductase | c,v | NADPH [c] + 2 iron(3+) [v] <=> H+ [c] + NADP(+) [c] + 2 iron(2+) [c] |
+| r_4382 | thiosulfate:ferricytochrome-c oxidoreductase | c,m | 2 ferricytochrome c [m] + 2 thiosulfate [c] <=> 2 ferrocytochrome c [m] + tetrathionate [c] |
+| r_4608 | propionyl-CoA transport | c,m | ATP [c] + H2O [c] + propionyl-CoA [c] --> ADP [m] + H+ [m] + phosphate [m] + propionyl-CoA [m] |
+| r_4722 | polyphosphate polymerase, c | c,v | 2 ATP [c] + H2O [c] --> 2 ADP [c] + H+ [c] + polyphosphate [v] |
 
 ## Dead-end metabolites
 
-| metabolite | name | reactions blocked |
-|---|---|---|
-| s_0002 | (1->3)-beta-D-glucan | 1 |
-| s_0003 | (1->3)-beta-D-glucan | 2 |
-| s_0007 | (2E)-3-(methoxycarbonyl)pent-2-enedioic acid | 1 |
-| s_0011 | (2S)-2-isopropyl-3-oxosuccinate | 2 |
-| s_0013 | (5S,6S)-di-HETE | 1 |
-| s_0014 | (5S,6S)-di-HETE | 1 |
-| s_0026 | (R)-lactate | 2 |
-| s_0032 | (R)-pantothenate | 2 |
-| s_0034 | (R)-S-lactoylglutathione | 1 |
-| s_0064 | (S)-lactate | 2 |
-| s_0065 | (S)-lactate | 1 |
-| s_0084 | 1-acylglycerophosphocholine | 1 |
-| s_0087 | 1-methylnicotinamide | 1 |
-| s_0129 | 1D-myo-inositol 3-phosphate | 10 |
-| s_0131 | 2',3'-cyclic AMP | 2 |
-| s_0132 | 2'-deoxyadenosine | 3 |
-| s_0133 | 2'-deoxyadenosine | 2 |
-| s_0134 | 2'-deoxyguanosine | 3 |
-| s_0135 | 2'-deoxyguanosine | 2 |
-| s_0136 | 2'-deoxyinosine | 2 |
-| s_0137 | 2'-deoxyinosine | 2 |
-| s_0139 | 2'-deoxyuridine | 2 |
-| s_0140 | 2,3-bisphospho-D-glyceric acid | 1 |
-| s_0143 | 2-(3-amino-3-carboxypropyl)-L-histidine | 1 |
-| s_0144 | 2-[3-carboxy-3-(methylammonio)propyl]-L-histidine | 1 |
-| s_0152 | 2-deoxy-D-ribose | 2 |
-| s_0153 | 2-deoxy-D-ribose 5-phosphate | 1 |
-| s_0161 | 2-hydroxyhexadecanal | 1 |
-| s_0183 | 2-oxoglutarate | 2 |
-| s_0193 | 3',5'-cyclic CMP | 1 |
-| s_0194 | 3',5'-cyclic dAMP | 1 |
-| s_0196 | 3',5'-cyclic IMP | 1 |
-| s_0217 | 3-hydroxy-2-isopropyl-4-methoxy-4-oxobutanoate | 1 |
-| s_0263 | 4,5-bis(diphospho)-1D-myo-inositol tetrakisphosphate | 2 |
-| s_0264 | 4-(phosphonooxy)-L-threonine | 1 |
-| s_0279 | 4-diphospho-1D-myo-inositol pentakisphosphate | 2 |
-| s_0280 | 4-guanidinobutanamide | 1 |
-| s_0281 | 4-guanidinobutanoic acid | 1 |
-| s_0282 | 4-hydroxy-2-oxoglutarate | 3 |
-| s_0283 | 4-hydroxy-2-oxoglutarate | 2 |
-| s_0284 | 4-hydroxy-2-oxoglutarate | 2 |
-| s_0285 | 4-hydroxy-L-threonine | 1 |
-| s_0290 | 4-hydroxybenzoyl-CoA | 1 |
-| s_0292 | 4-methyl-2-oxopentanoate | 2 |
-| s_0308 | 5,6,7,8-tetrahydrofolyl-L-glutamic acid | 1 |
-| s_0316 | 5-aminolevulinate | 2 |
-| s_0319 | 5-formyltetrahydrofolic acid | 3 |
-| s_0320 | 5-formyltetrahydrofolic acid | 2 |
-| s_0323 | 5-methyltetrahydropteroyltri-L-glutamic acid | 1 |
-| s_0329 | 6-(alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol | 2 |
-| s_0330 | 6-(alpha-D-glucosaminyl)-O-acyl-1-phosphatidyl-1D-myo-inositol | 2 |
-| s_0331 | 6-(N-acetyl-alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol | 1 |
-| s_0332 | 6-[6-(2-aminoethylphosphoryl)-alpha-mannosyl-(1->6)-2-(2-aminoethylphosphoryl)-alpha-mannosyl-(1->6)-alpha-2-(2-aminoethylphosphoryl)mannosyl-(1->4)-alpha-glucosaminyl]-O-acyl-1-phosphatidyl-1D-myo-inositol | 1 |
-| s_0333 | 6-diphospho-1D-myo-inositol pentakisphosphate | 2 |
-| s_0334 | 6-O-[alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl]-O-acyl-1-phosphatidyl-1D-myo-inositol | 2 |
-| s_0337 | 6-O-{2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol | 2 |
-| s_0338 | 6-O-{alpha-D-mannosyl-(1->2)-alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol | 2 |
-| s_0339 | 6-O-{alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol | 2 |
-| s_0341 | 7,8-diaminononanoate | 3 |
-| s_0342 | 7,8-diaminononanoate | 2 |
-| s_0352 | 8-amino-7-oxononanoate | 3 |
-| s_0354 | 8-amino-7-oxononanoate | 2 |
-| s_0363 | acetate | 2 |
-| s_0372 | acetyl-ACP | 2 |
-| s_0384 | adenine | 2 |
-| s_0385 | adenine | 1 |
-| s_0387 | adenosine | 2 |
-| s_0389 | adenosine 2'-phosphate | 3 |
-| s_0399 | ADP | 1 |
-| s_0402 | ADP-ribose | 2 |
-| s_0405 | allantoate | 3 |
-| s_0406 | allantoate | 2 |
-| s_0407 | allantoin | 2 |
-| s_0408 | allantoin | 2 |
-| s_0411 | alpha-D-glucosamine 1-phosphate | 1 |
-| s_0414 | alpha-D-mannosyl-beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | 1 |
-| s_0416 | alpha-D-ribose 1-phosphate(2-) | 1 |
-| s_0417 | aminoacetaldehyde | 1 |
-| s_0418 | aminoacetone | 2 |
-| s_0429 | Arg-tRNA(Arg) | 1 |
-| s_0431 | Asn-tRNA(Asn) | 1 |
-| s_0433 | Asp-tRNA(Asp) | 1 |
-| s_0443 | beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | 1 |
-| s_0444 | beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | 1 |
-| s_0447 | bicarbonate | 2 |
-| s_0451 | biotin | 3 |
-| s_0452 | biotin | 2 |
-| s_0453 | biotinyl-5'-AMP | 1 |
-| s_0465 | carboxyacetyl-ACP | 4 |
-| s_0468 | CDP | 2 |
-| s_0474 | CDP-ethanolamine | 2 |
-| s_0477 | ceramide-1 (C24) | 3 |
-| s_0480 | ceramide-1 (C26) | 3 |
-| s_0483 | ceramide-2 (C24) | 3 |
-| s_0486 | ceramide-2 (C26) | 3 |
-| s_0489 | ceramide-2' (C24) | 3 |
-| s_0492 | ceramide-2' (C26) | 3 |
-| s_0495 | ceramide-3 (C24) | 3 |
-| s_0498 | ceramide-3 (C26) | 3 |
-| s_0501 | ceramide-4 (C24) | 3 |
-| s_0504 | ceramide-4 (C26) | 3 |
-| s_0510 | chitosan | 1 |
-| s_0544 | cytidine | 2 |
-| s_0546 | cytosine | 2 |
-| s_0547 | D-arabinono-1,4-lactone | 3 |
-| s_0548 | D-arabinose | 4 |
-| s_0549 | D-arabinose | 2 |
-| s_0553 | D-fructose | 8 |
-| s_0554 | D-fructose | 5 |
-| s_0556 | D-fructose 1-phosphate | 2 |
-| s_0558 | D-galactose | 4 |
-| s_0559 | D-galactose | 2 |
-| s_0560 | D-galacturonate | 2 |
-| s_0561 | D-glucitol | 2 |
-| s_0562 | D-glucitol | 2 |
-| s_0570 | D-glyceraldehyde | 4 |
-| s_0571 | D-mannose | 2 |
-| s_0572 | D-mannose | 2 |
-| s_0576 | D-ribose | 2 |
-| s_0578 | D-xylose | 2 |
-| s_0579 | D-xylose | 2 |
-| s_0580 | D-xylulose | 3 |
-| s_0583 | dADP | 2 |
-| s_0585 | dAMP | 1 |
-| s_0588 | dCDP | 2 |
-| s_0606 | decaprenyl diphosphate | 2 |
-| s_0607 | dehydro-D-arabinono-1,4-lactone | 1 |
-| s_0608 | Delta(6)-trans,Delta(8)-cis-leukotriene B4 | 1 |
-| s_0609 | Delta(6)-trans,Delta(8)-cis-leukotriene B4 | 1 |
-| s_0611 | deoxycytidine | 2 |
-| s_0612 | dethiobiotin | 2 |
-| s_0614 | dGDP | 2 |
-| s_0616 | dGMP | 1 |
-| s_0618 | dIDP | 2 |
-| s_0620 | diglyceride backbone | 1 |
-| s_0639 | dITP | 2 |
-| s_0640 | docosaprenyl diphosphate | 1 |
-| s_0641 | dodecaprenyl diphosphate | 2 |
-| s_0642 | dolichol | 1 |
-| s_0665 | ergosterol | 1 |
-| s_0670 | ergosterol 3-beta-D-glucoside | 1 |
-| s_0677 | erythro-4-hydroxy-L-glutamic acid | 3 |
-| s_0679 | erythro-4-hydroxy-L-glutamic acid | 2 |
-| s_0683 | ethanolamine | 2 |
-| s_0684 | ethanolamine | 2 |
-| s_0692 | farnesyl diphosphate | 2 |
-| s_0699 | fecosterol | 1 |
-| s_0713 | fMet-tRNA(fMet) | 1 |
-| s_0715 | FMN | 2 |
-| s_0719 | folate | 1 |
-| s_0720 | folate | 2 |
-| s_0721 | formaldehyde | 1 |
-| s_0736 | gamma-aminobutyrate | 2 |
-| s_0742 | GDP | 2 |
-| s_0746 | geranylgeranyl diphosphate | 2 |
-| s_0749 | Glu-tRNA(Glu) | 1 |
-| s_0751 | glutathione | 2 |
-| s_0752 | glutathione | 3 |
-| s_0755 | glutathione disulfide | 2 |
-| s_0756 | glutathione disulfide | 2 |
-| s_0771 | glycerone | 3 |
-| s_0788 | guanine | 2 |
-| s_0789 | guanine | 2 |
-| s_0791 | guanosine | 2 |
-| s_0792 | guanosine | 2 |
-| s_0813 | henicosaprenyl diphosphate | 2 |
-| s_0814 | heptadecaprenyl diphosphate | 2 |
-| s_0815 | heptaprenyl diphosphate | 2 |
-| s_0825 | hexadecanal | 1 |
-| s_0826 | hexadecanal | 1 |
-| s_0829 | hexadecaprenyl diphosphate | 2 |
-| s_0830 | hexaprenyl diphosphate | 2 |
-| s_0833 | His-tRNA(His) | 1 |
-| s_0835 | homocitrate | 1 |
-| s_0838 | hydrogen peroxide | 4 |
-| s_0839 | hydrogen peroxide | 2 |
-| s_0845 | icosaprenyl diphosphate | 2 |
-| s_0848 | Ile-tRNA(Ile) | 1 |
-| s_0853 | indole-3-acetate | 4 |
-| s_0854 | indole-3-acetate | 3 |
-| s_0857 | inosine | 2 |
-| s_0859 | inositol phosphomannosylinositol phosphoceramide backbone | 11 |
-| s_0861 | inositol phosphomannosylinositol phosphoceramide A (C24) | 2 |
-| s_0862 | inositol phosphomannosylinositol phosphoceramide A (C24) | 10 |
-| s_0863 | inositol phosphomannosylinositol phosphoceramide A (C24) | 1 |
-| s_0864 | inositol phosphomannosylinositol phosphoceramide A (C26) | 2 |
-| s_0865 | inositol phosphomannosylinositol phosphoceramide A (C26) | 10 |
-| s_0866 | inositol phosphomannosylinositol phosphoceramide A (C26) | 1 |
-| s_0867 | inositol phosphomannosylinositol phosphoceramide B (C24) | 2 |
-| s_0868 | inositol phosphomannosylinositol phosphoceramide B (C24) | 10 |
-| s_0869 | inositol phosphomannosylinositol phosphoceramide B (C24) | 1 |
-| s_0870 | inositol phosphomannosylinositol phosphoceramide B (C26) | 2 |
-| s_0871 | inositol phosphomannosylinositol phosphoceramide B (C26) | 10 |
-| s_0872 | inositol phosphomannosylinositol phosphoceramide B (C26) | 1 |
-| s_0873 | inositol phosphomannosylinositol phosphoceramide B' (C24) | 2 |
-| s_0874 | inositol phosphomannosylinositol phosphoceramide B' (C24) | 10 |
-| s_0875 | inositol phosphomannosylinositol phosphoceramide B' (C24) | 1 |
-| s_0876 | inositol phosphomannosylinositol phosphoceramide B' (C26) | 2 |
-| s_0877 | inositol phosphomannosylinositol phosphoceramide B' (C26) | 10 |
-| s_0878 | inositol phosphomannosylinositol phosphoceramide B' (C26) | 1 |
-| s_0879 | inositol phosphomannosylinositol phosphoceramide C (C24) | 2 |
-| s_0880 | inositol phosphomannosylinositol phosphoceramide C (C24) | 10 |
-| s_0881 | inositol phosphomannosylinositol phosphoceramide C (C24) | 1 |
-| s_0882 | inositol phosphomannosylinositol phosphoceramide C (C26) | 2 |
-| s_0883 | inositol phosphomannosylinositol phosphoceramide C (C26) | 10 |
-| s_0884 | inositol phosphomannosylinositol phosphoceramide C (C26) | 1 |
-| s_0885 | inositol phosphomannosylinositol phosphoceramide D (C24) | 2 |
-| s_0886 | inositol phosphomannosylinositol phosphoceramide D (C24) | 10 |
-| s_0887 | inositol phosphomannosylinositol phosphoceramide D (C24) | 1 |
-| s_0888 | inositol phosphomannosylinositol phosphoceramide D (C26) | 2 |
-| s_0889 | inositol phosphomannosylinositol phosphoceramide D (C26) | 10 |
-| s_0890 | inositol phosphomannosylinositol phosphoceramide D (C26) | 1 |
-| s_0892 | inositol-P-ceramide backbone | 11 |
-| s_0896 | inositol-P-ceramide A (C24) | 1 |
-| s_0899 | inositol-P-ceramide A (C26) | 1 |
-| s_0902 | inositol-P-ceramide B (C24) | 1 |
-| s_0905 | inositol-P-ceramide B (C26) | 1 |
-| s_0908 | inositol-P-ceramide B' (C24) | 1 |
-| s_0911 | inositol-P-ceramide B' (C26) | 1 |
-| s_0914 | inositol-P-ceramide C (C24) | 1 |
-| s_0917 | inositol-P-ceramide C (C26) | 1 |
-| s_0920 | inositol-P-ceramide D (C24) | 1 |
-| s_0923 | inositol-P-ceramide D (C26) | 1 |
-| s_0944 | isopentenyl diphosphate | 19 |
-| s_0946 | itaconate | 1 |
-| s_0949 | itaconyl-CoA | 1 |
-| s_0952 | L-2-amino-3-oxobutanoate | 3 |
-| s_0956 | L-alanine | 2 |
-| s_0958 | L-allothreonine | 2 |
-| s_0960 | L-alpha-formylglycine | 1 |
-| s_0961 | L-arabinitol | 3 |
-| s_0962 | L-arabinitol | 2 |
-| s_0963 | L-arabinose | 2 |
-| s_0964 | L-arabinose | 2 |
-| s_0966 | L-arginine | 2 |
-| s_0967 | L-arginine | 2 |
-| s_0970 | L-asparagine | 3 |
-| s_0971 | L-asparagine | 2 |
-| s_0974 | L-aspartate | 3 |
-| s_0977 | L-aspartate | 2 |
-| s_0982 | L-cysteine | 2 |
-| s_0984 | L-cystine | 1 |
-| s_0985 | L-cystine | 1 |
-| s_0987 | L-gamma-glutamyl-L-alanine | 1 |
-| s_0989 | L-glucitol | 2 |
-| s_0990 | L-glucitol | 2 |
-| s_0992 | L-glutamate | 2 |
-| s_0996 | L-glutamate | 3 |
-| s_1000 | L-glutamine | 2 |
-| s_1007 | L-histidine | 2 |
-| s_1008 | L-histidine | 2 |
-| s_1017 | L-isoleucine | 2 |
-| s_1022 | L-leucine | 2 |
-| s_1023 | L-leucine | 2 |
-| s_1026 | L-lysine | 2 |
-| s_1027 | L-lysine | 2 |
-| s_1030 | L-methionine | 2 |
-| s_1031 | L-methionine | 2 |
-| s_1033 | L-phenylalanine | 2 |
-| s_1034 | L-phenylalanine | 2 |
-| s_1036 | L-proline | 2 |
-| s_1041 | L-serine | 2 |
-| s_1043 | L-sorbose | 3 |
-| s_1044 | L-sorbose | 2 |
-| s_1046 | L-threonine | 2 |
-| s_1049 | L-tryptophan | 2 |
-| s_1050 | L-tryptophan | 2 |
-| s_1052 | L-tyrosine | 2 |
-| s_1053 | L-tyrosine | 2 |
-| s_1057 | L-valine | 2 |
-| s_1078 | Leu-tRNA(Leu) | 1 |
-| s_1079 | leukotriene A4 | 3 |
-| s_1080 | leukotriene A4 | 3 |
-| s_1081 | leukotriene B4 | 1 |
-| s_1082 | leukotriene B4 | 1 |
-| s_1100 | Lys-tRNA(Lys) | 1 |
-| s_1104 | malonyl-CoA | 2 |
-| s_1105 | maltose | 2 |
-| s_1106 | maltose | 3 |
-| s_1109 | mannose-(1D-myo-inositol 1-phosphate)2 | 10 |
-| s_1110 | mannose-(1D-myo-inositol 1-phosphate)2 | 10 |
-| s_1111 | mannose-1D-myo-inositol 1-phosphate | 10 |
-| s_1112 | mannose-1D-myo-inositol 1-phosphate | 10 |
-| s_1114 | mannosylinositol phosphorylceramide backbone | 11 |
-| s_1116 | mannosylinositol phosphorylceramide A (C24) | 2 |
-| s_1117 | mannosylinositol phosphorylceramide A (C24) | 11 |
-| s_1118 | mannosylinositol phosphorylceramide A (C24) | 1 |
-| s_1119 | mannosylinositol phosphorylceramide A (C26) | 2 |
-| s_1120 | mannosylinositol phosphorylceramide A (C26) | 11 |
-| s_1121 | mannosylinositol phosphorylceramide A (C26) | 1 |
-| s_1122 | mannosylinositol phosphorylceramide B (C24) | 2 |
-| s_1123 | mannosylinositol phosphorylceramide B (C24) | 11 |
-| s_1124 | mannosylinositol phosphorylceramide B (C24) | 1 |
-| s_1125 | mannosylinositol phosphorylceramide B (C26) | 2 |
-| s_1126 | mannosylinositol phosphorylceramide B (C26) | 11 |
-| s_1127 | mannosylinositol phosphorylceramide B (C26) | 1 |
-| s_1128 | mannosylinositol phosphorylceramide B' (C24) | 2 |
-| s_1129 | mannosylinositol phosphorylceramide B' (C24) | 11 |
-| s_1130 | mannosylinositol phosphorylceramide B' (C24) | 1 |
-| s_1131 | mannosylinositol phosphorylceramide B' (C26) | 2 |
-| s_1132 | mannosylinositol phosphorylceramide B' (C26) | 11 |
-| s_1133 | mannosylinositol phosphorylceramide B' (C26) | 1 |
-| s_1134 | mannosylinositol phosphorylceramide C (C24) | 2 |
-| s_1135 | mannosylinositol phosphorylceramide C (C24) | 11 |
-| s_1136 | mannosylinositol phosphorylceramide C (C24) | 1 |
-| s_1137 | mannosylinositol phosphorylceramide C (C26) | 2 |
-| s_1138 | mannosylinositol phosphorylceramide C (C26) | 11 |
-| s_1139 | mannosylinositol phosphorylceramide C (C26) | 1 |
-| s_1140 | mannosylinositol phosphorylceramide D (C24) | 2 |
-| s_1141 | mannosylinositol phosphorylceramide D (C24) | 11 |
-| s_1142 | mannosylinositol phosphorylceramide D (C24) | 1 |
-| s_1143 | mannosylinositol phosphorylceramide D (C26) | 2 |
-| s_1144 | mannosylinositol phosphorylceramide D (C26) | 11 |
-| s_1145 | mannosylinositol phosphorylceramide D (C26) | 1 |
-| s_1149 | Met-tRNA(Met) | 2 |
-| s_1150 | methanethiol | 1 |
-| s_1154 | myo-inositol | 2 |
-| s_1180 | N(1)-acetylspermidine | 3 |
-| s_1181 | N(1)-acetylspermine | 2 |
-| s_1183 | N(pros)-methyl-L-histidine | 1 |
-| s_1184 | N,N'-diacetylchitobiosyldiphosphodolichol | 1 |
-| s_1193 | N-acetylputrescine | 1 |
-| s_1199 | NAD | 1 |
-| s_1204 | NADH | 1 |
-| s_1217 | nicotinamide | 2 |
-| s_1218 | nicotinamide riboside | 2 |
-| s_1221 | nicotinate | 2 |
-| s_1223 | nicotinic acid D-ribonucleotide | 2 |
-| s_1225 | NMN | 2 |
-| s_1229 | nonadecaprenyl diphosphate | 2 |
-| s_1230 | nonaprenyl 4-hydroxybenzoate | 1 |
-| s_1231 | nonaprenyl diphosphate | 1 |
-| s_1232 | nonaprenyl diphosphate | 2 |
-| s_1239 | O-phosphoethanolamine | 4 |
-| s_1240 | O-phosphoethanolamine | 3 |
-| s_1246 | octadecaprenyl diphosphate | 2 |
-| s_1254 | octanoyl-ACP | 1 |
-| s_1259 | octaprenyl diphosphate | 2 |
-| s_1267 | ornithine | 2 |
-| s_1283 | P(1),P(4)-bis(5'-guanosyl) tetraphosphate | 1 |
-| s_1284 | P1-(5'-adenosyl),P4-(5'-guanosyl) tetraphosphate | 1 |
-| s_1309 | pectin | 2 |
-| s_1310 | pentadecaprenyl diphosphate | 2 |
-| s_1312 | pentaprenyl diphosphate | 2 |
-| s_1315 | Phe-tRNA(Phe) | 1 |
-| s_1321 | phenylacetic acid | 2 |
-| s_1352 | phosphatidylethanolamine backbone | 2 |
-| s_1368 | pimeloyl-CoA | 1 |
-| s_1371 | polysulphur | 1 |
-| s_1375 | precorrin-2 | 2 |
-| s_1387 | PRPP | 3 |
-| s_1388 | pseudouridine 5'-phosphate | 1 |
-| s_1391 | putrescine | 1 |
-| s_1397 | pyridoxine | 2 |
-| s_1400 | pyruvate | 2 |
-| s_1404 | quinolinate | 2 |
-| s_1406 | riboflavin | 3 |
-| s_1412 | S-adenosyl-4-methylthio-2-oxobutanoate | 1 |
-| s_1418 | S-adenosyl-L-methionine | 2 |
-| s_1421 | S-formylglutathione | 2 |
-| s_1424 | S-methyl-L-methionine | 1 |
-| s_1425 | S-methyl-L-methionine | 2 |
-| s_1430 | siroheme | 1 |
-| s_1431 | sirohydrochlorin | 2 |
-| s_1441 | spermidine | 1 |
-| s_1444 | spermine | 1 |
-| s_1466 | sucrose | 2 |
-| s_1471 | taurine | 3 |
-| s_1472 | taurine | 2 |
-| s_1473 | taurocholate | 1 |
-| s_1474 | taurocholate | 1 |
-| s_1476 | TDP | 2 |
-| s_1477 | TDP | 1 |
-| s_1483 | tetradecaprenyl diphosphate | 2 |
-| s_1486 | tetrahydropteroyltri-L-glutamic acid | 1 |
-| s_1490 | thiamine | 4 |
-| s_1492 | Thr-tRNA(Thr) | 1 |
-| s_1498 | TMP | 2 |
-| s_1503 | trans-aconitate | 2 |
-| s_1504 | trans-aconitate | 1 |
-| s_1521 | trehalose | 2 |
-| s_1523 | tridecaprenyl diphosphate | 2 |
-| s_1526 | trimethylenediamine | 1 |
-| s_1528 | Trp-tRNA(Trp) | 1 |
-| s_1532 | thiamine(1+) triphosphate(4-) | 1 |
-| s_1534 | Tyr-tRNA(Tyr) | 1 |
-| s_1542 | UDP-D-galactose | 1 |
-| s_1547 | UMP | 2 |
-| s_1549 | undecaprenyl diphosphate | 2 |
-| s_1551 | uracil | 2 |
-| s_1553 | urea | 2 |
-| s_1555 | ureidoglycolic acid | 3 |
-| s_1557 | uridine | 2 |
-| s_1560 | UTP | 2 |
-| s_1562 | Val-tRNA(Val) | 1 |
-| s_1563 | xanthosine | 2 |
-| s_1564 | xanthosine | 2 |
-| s_1566 | xylitol | 4 |
-| s_1567 | xylitol | 2 |
-| s_1584 | tRNA(Arg) | 1 |
-| s_1586 | tRNA(Asn) | 1 |
-| s_1588 | tRNA(Asp) | 1 |
-| s_1592 | tRNA(Glu) | 1 |
-| s_1595 | tRNA(His) | 1 |
-| s_1597 | tRNA(Ile) | 1 |
-| s_1599 | tRNA(Leu) | 1 |
-| s_1601 | tRNA(Lys) | 1 |
-| s_1603 | tRNA(Met) | 1 |
-| s_1605 | tRNA(Phe) | 1 |
-| s_1609 | tRNA(Thr) | 1 |
-| s_1611 | tRNA(Trp) | 1 |
-| s_1613 | tRNA(Tyr) | 1 |
-| s_1615 | tRNA(Val) | 1 |
-| s_1617 | TRX1 | 2 |
-| s_1618 | TRX1 | 5 |
-| s_1621 | TRX1 disulphide | 2 |
-| s_1622 | TRX1 disulphide | 6 |
-| s_1845 | ACP1 | 5 |
-| s_2763 | kynurenic acid | 2 |
-| s_2764 | quinaldic acid | 1 |
-| s_2770 | acetoacetyl-ACP | 2 |
-| s_2771 | butanoyl-ACP | 2 |
-| s_2772 | 3-oxo-hexanoyl-ACP | 2 |
-| s_2773 | hexanoyl-ACP | 2 |
-| s_2774 | 3-oxo-octanoyl-ACP | 2 |
-| s_2775 | 3-hydroxybutanoyl-ACP | 2 |
-| s_2776 | 3-hydroxyhexanoyl-ACP | 2 |
-| s_2777 | 3-hydroxyoctanoyl-ACP | 2 |
-| s_2778 | trans-but-2-enoyl-ACP | 2 |
-| s_2779 | trans-hex-2-enoyl-ACP | 2 |
-| s_2780 | trans-oct-2-enoyl-ACP | 2 |
-| s_2858 | arachidate | 1 |
-| s_2861 | icosanoyl-CoA | 2 |
-| s_2862 | behenate | 1 |
-| s_2863 | docosanoyl-CoA | 2 |
-| s_2868 | behenate | 1 |
-| s_2871 | behenate | 1 |
-| s_2872 | docosanoyl-CoA | 2 |
-| s_2978 | diglyceride (1-16:0, 2-16:1) | 1 |
-| s_2980 | diglyceride (1-16:0, 2-18:1) | 1 |
-| s_2982 | diglyceride (1-16:1, 2-16:1) | 1 |
-| s_2984 | diglyceride (1-16:1, 2-18:1) | 1 |
-| s_2986 | diglyceride (1-18:0, 2-16:1) | 1 |
-| s_2988 | diglyceride (1-18:0, 2-18:1) | 1 |
-| s_2990 | diglyceride (1-18:1, 2-16:1) | 1 |
-| s_2992 | diglyceride (1-18:1, 2-18:1) | 1 |
-| s_3126 | sn-2-acyl-1-lysophosphatidylinositol (16:1) | 2 |
-| s_3127 | sn-2-acyl-1-lysophosphatidylinositol (18:1) | 2 |
-| s_3216 | CDP-ethanolamine | 9 |
-| s_3343 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:0, 2-16:1) | 1 |
-| s_3345 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:1, 2-16:1) | 1 |
-| s_3347 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:0, 2-16:1) | 1 |
-| s_3349 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:1, 2-16:1) | 1 |
-| s_3351 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:0, 2-18:1) | 1 |
-| s_3353 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:1, 2-18:1) | 1 |
-| s_3355 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:0, 2-18:1) | 1 |
-| s_3357 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:1, 2-18:1) | 1 |
-| s_3465 | phosphatidylethanolamine (1-16:0, 2-16:1) | 2 |
-| s_3466 | 1-acylglycerophosphoethanolamine (16:0) | 3 |
-| s_3467 | phosphatidylethanolamine (1-16:1, 2-16:1) | 2 |
-| s_3468 | 1-acylglycerophosphoethanolamine (16:1) | 3 |
-| s_3469 | phosphatidylethanolamine (1-18:0, 2-16:1) | 2 |
-| s_3470 | 1-acylglycerophosphoethanolamine (18:0) | 3 |
-| s_3471 | phosphatidylethanolamine (1-18:1, 2-16:1) | 2 |
-| s_3472 | 1-acylglycerophosphoethanolamine (18:1) | 3 |
-| s_3473 | phosphatidylethanolamine (1-16:0, 2-18:1) | 2 |
-| s_3474 | phosphatidylethanolamine (1-16:1, 2-18:1) | 2 |
-| s_3475 | phosphatidylethanolamine (1-18:0, 2-18:1) | 2 |
-| s_3476 | phosphatidylethanolamine (1-18:1, 2-18:1) | 2 |
-| s_3477 | sn-glycero-3-phosphoethanolamine | 4 |
-| s_3478 | phosphatidyl-L-serine (1-16:0, 2-16:1) | 2 |
-| s_3479 | 1-acylglycerophosphoserine (16:0) | 3 |
-| s_3480 | phosphatidyl-L-serine (1-16:1, 2-16:1) | 2 |
-| s_3481 | 1-acylglycerophosphoserine (16:1) | 3 |
-| s_3482 | phosphatidyl-L-serine (1-18:0, 2-16:1) | 2 |
-| s_3483 | 1-acylglycerophosphoserine (18:0) | 3 |
-| s_3484 | phosphatidyl-L-serine (1-18:1, 2-16:1) | 2 |
-| s_3485 | 1-acylglycerophosphoserine (18:1) | 3 |
-| s_3486 | phosphatidyl-L-serine (1-16:0, 2-18:1) | 2 |
-| s_3487 | phosphatidyl-L-serine (1-16:1, 2-18:1) | 2 |
-| s_3488 | phosphatidyl-L-serine (1-18:0, 2-18:1) | 2 |
-| s_3489 | phosphatidyl-L-serine (1-18:1, 2-18:1) | 2 |
-| s_3490 | sn-glycero-3-phosphoserine | 4 |
-| s_3498 | 1D-myo-inositol 1,4,5-trisphosphate | 8 |
-| s_3632 | 1-acyl-sn-glycerol 3-phosphate (16:0) | 1 |
-| s_3633 | 1-monoglyceride (16:0) | 1 |
-| s_3634 | 1-acyl-sn-glycerol 3-phosphate (16:1) | 1 |
-| s_3635 | 1-monoglyceride (16:1) | 1 |
-| s_3636 | 1-acyl-sn-glycerol 3-phosphate (18:0) | 1 |
-| s_3637 | 1-monoglyceride (18:0) | 1 |
-| s_3638 | 1-acyl-sn-glycerol 3-phosphate (18:1) | 1 |
-| s_3639 | 1-monoglyceride (18:1) | 1 |
-| s_3640 | 1-acyl-sn-glycerol 3-phosphate (16:0) | 1 |
-| s_3641 | 1-monoglyceride (16:0) | 1 |
-| s_3642 | 1-acyl-sn-glycerol 3-phosphate (16:1) | 1 |
-| s_3643 | 1-monoglyceride (16:1) | 1 |
-| s_3644 | 1-acyl-sn-glycerol 3-phosphate (18:0) | 1 |
-| s_3645 | 1-monoglyceride (18:0) | 1 |
-| s_3646 | 1-acyl-sn-glycerol 3-phosphate (18:1) | 1 |
-| s_3647 | 1-monoglyceride (18:1) | 1 |
-| s_3648 | 1-acyl-sn-glycerol 3-phosphate (16:0) | 1 |
-| s_3649 | 1-monoglyceride (16:0) | 1 |
-| s_3650 | 1-acyl-sn-glycerol 3-phosphate (16:1) | 1 |
-| s_3651 | 1-monoglyceride (16:1) | 1 |
-| s_3652 | 1-acyl-sn-glycerol 3-phosphate (18:0) | 1 |
-| s_3653 | 1-monoglyceride (18:0) | 1 |
-| s_3654 | 1-acyl-sn-glycerol 3-phosphate (18:1) | 1 |
-| s_3655 | 1-monoglyceride (18:1) | 1 |
-| s_3675 | diglyceride (1-16:0, 2-18:1) | 1 |
-| s_3676 | 1-monoglyceride (16:0) | 1 |
-| s_3677 | oleate | 5 |
-| s_3678 | diglyceride (1-16:1, 2-18:1) | 1 |
-| s_3679 | 1-monoglyceride (16:1) | 1 |
-| s_3680 | diglyceride (1-18:0, 2-18:1) | 1 |
-| s_3681 | 1-monoglyceride (18:0) | 1 |
-| s_3682 | diglyceride (1-18:1, 2-18:1) | 1 |
-| s_3683 | 1-monoglyceride (18:1) | 1 |
-| s_3715 | raffinose | 2 |
-| s_3716 | melibiose | 2 |
-| s_3721 | ceramide backbone | 11 |
-| s_3722 | ceramide backbone | 1 |
-| s_3723 | inositol phosphomannosylinositol phosphoceramide backbone | 1 |
-| s_3724 | inositol-P-ceramide backbone | 1 |
-| s_3725 | mannosylinositol phosphorylceramide backbone | 1 |
-| s_3726 | long-chain base backbone | 3 |
-| s_3727 | long-chain base backbone | 1 |
-| s_3728 | long-chain base phosphate backbone | 3 |
-| s_3729 | long-chain base phosphate backbone | 1 |
-| s_3730 | phosphatidate backbone | 9 |
-| s_3731 | phosphatidate backbone | 1 |
-| s_3732 | diglyceride backbone | 9 |
-| s_3733 | diglyceride backbone | 1 |
-| s_3734 | sn-2-acyl-1-lysophosphatidylinositol backbone | 3 |
-| s_3735 | sn-2-acyl-1-lysophosphatidylinositol backbone | 1 |
-| s_3736 | phosphatidylglycerol backbone | 7 |
-| s_3737 | phosphatidylglycerol backbone | 1 |
-| s_3738 | cardiolipin backbone | 49 |
-| s_3739 | cardiolipin backbone | 1 |
-| s_3744 | C24:0 chain | 20 |
-| s_3745 | C26:0 chain | 20 |
-| s_3748 | Cytochrome c | 1 |
-| s_3749 | Apocytochrome c | 1 |
-| s_3750 | diacetyl | 1 |
-| s_3751 | (R)-acetoin | 2 |
-| s_3752 | diacetyl | 1 |
-| s_3753 | NADH | 1 |
-| s_3754 | L-glutamyl-tRNA(Gln) | 1 |
-| s_3755 | L-glutamine | 2 |
-| s_3756 | Gln-tRNA(Gln) | 1 |
-| s_3757 | Met-Ala | 2 |
-| s_3758 | L-methionine | 3 |
-| s_3759 | L-alanine | 9 |
-| s_3760 | ADP-D-ribose 1''-phosphate | 1 |
-| s_3761 | ADP-ribose | 3 |
-| s_3762 | quinone | 1 |
-| s_3763 | 1,4-benzosemiquinone | 1 |
-| s_3764 | UDP-N-acetyl-alpha-D-glucosamine | 4 |
-| s_3765 | N-Acetyl-D-glucosaminyldiphosphodolichol | 2 |
-| s_3766 | UDP | 3 |
-| s_3767 | N,N'-Chitobiosyldiphosphodolichol | 1 |
-| s_3768 | D-ribofuranose 5-phosphate | 1 |
-| s_3769 | Oxalate | 1 |
-| s_3770 | Oxalyl-CoA | 1 |
-| s_3771 | G00171 | 2 |
-| s_3772 | D-glucose | 3 |
-| s_3773 | G00010 | 2 |
-| s_3774 | G00011 | 3 |
-| s_3775 | sodium | 1 |
-| s_3776 | potassium | 1 |
-| s_3777 | chloride | 1 |
-| s_3779 | D-fructose | 1 |
-| s_3780 | D-galactose | 1 |
-| s_3781 | UMP | 2 |
-| s_3782 | cadmium(2+) | 1 |
-| s_3783 | cadmium(2+) | 1 |
-| s_3787 | cholesterol | 1 |
-| s_3788 | cholesterol | 1 |
-| s_3789 | 3-chlorobenzyl alcohol | 1 |
-| s_3790 | 3-chlorobenzaldehyde | 1 |
-| s_3791 | 3-hydroxybenzyl alcohol | 1 |
-| s_3792 | 3-hydroxybenzaldehyde | 1 |
-| s_3793 | 3-methylbenzyl alcohol | 1 |
-| s_3794 | 3-methylbenzaldehyde | 1 |
-| s_3795 | 4-isopropylbenzyl alcohol | 1 |
-| s_3796 | p-cumic aldehyde | 1 |
-| s_3797 | 4-methylbenzyl alcohol | 1 |
-| s_3798 | 4-methylbenzaldehyde | 1 |
-| s_3799 | benzyl alcohol | 2 |
-| s_3800 | benzaldehyde | 1 |
-| s_3802 | Mn(2+) | 1 |
-| s_3805 | Mannitol | 1 |
-| s_3806 | 4-hydroxy-4-methyl-2-oxoglutarate | 1 |
-| s_3807 | L-methionine (S)-S-oxide | 1 |
-| s_3808 | tRNA(Pro) | 1 |
-| s_3809 | Pro-tRNA(Pro) | 1 |
-| s_3811 | 4a-Hydroxytetrahydrobiopterin | 1 |
-| s_3812 | Dihydrobiopterin | 1 |
-| s_3813 | superoxide | 1 |
-| s_3814 | 2-deoxy-D-glucose 6-phosphate | 1 |
-| s_3815 | 2-deoxy-D-glucose | 1 |
-| s_3816 | [cytochrome c]-L-lysine | 1 |
-| s_3817 | [cytochrome c]-N6-methyl-L-lysine | 1 |
-| s_3818 | S-adenosyl-L-methionine | 1 |
-| s_3823 | Zn(2+) | 1 |
-| s_3826 | ferricytochrome b5 | 1 |
-| s_3827 | ferrocytochrome b5 | 1 |
-| s_3828 | (S)-benzoin | 1 |
-| s_3829 | benzil | 1 |
-| s_3831 | glutathione | 1 |
-| s_3838 | Ala-Gly | 2 |
-| s_3839 | L-glycine | 6 |
-| s_3840 | Ala-Leu | 2 |
-| s_3841 | Threo-3-hydroxy-L-aspartate | 1 |
-| s_3843 | glutathione | 1 |
-| s_3846 | dehydroascorbate | 1 |
-| s_3847 | ascorbate | 1 |
-| s_3848 | dehydroascorbate | 1 |
-| s_3849 | glutathione disulfide | 1 |
-| s_3850 | ascorbate | 1 |
-| s_3851 | Cyanamide | 1 |
-| s_3852 | aldehydo-D-ribose 5-phosphate | 1 |
-| s_3855 | iron(3+) | 1 |
-| s_3856 | Glycyl-tRNA(Ala) | 1 |
-| s_3857 | D-tyrosyl-tRNA(Tyr) | 1 |
-| s_3858 | D-tyrosine | 1 |
-| s_3859 | 4-nitrophenyl phosphate | 1 |
-| s_3860 | 4-nitrophenol | 1 |
-| s_3861 | L-iditol | 1 |
-| s_3862 | alpha-D-Galactose | 1 |
-| s_3863 | 3-hydroxy-2-methylpropanoyl-CoA | 1 |
-| s_3864 | 3-hydroxy-2-methylpropanoate | 1 |
-| s_3867 | 2-Phenylacetamide | 1 |
-| s_3868 | (Indol-3-yl)acetamide | 1 |
-| s_3871 | Acrylic acid | 1 |
-| s_3872 | Acrylamide | 1 |
-| s_3873 | Benzamide | 1 |
-| s_3874 | Benzoate | 2 |
-| s_3878 | 1-phosphatidyl-1D-myo-inositol | 1 |
-| s_3879 | G00143 | 1 |
-| s_3881 | ATP | 2 |
-| s_3882 | Ca(2+) | 1 |
-| s_3883 | ADP | 2 |
-| s_3887 | G00008 | 1 |
-| s_3888 | Dolichyl diphosphate | 1 |
-| s_3889 | G00009 | 1 |
-| s_3890 | GDP-alpha-D-mannose | 5 |
-| s_3891 | G10694 | 2 |
-| s_3892 | GDP | 5 |
-| s_3893 | G01813 | 1 |
-| s_3894 | G00003 | 1 |
-| s_3895 | G00004 | 2 |
-| s_3896 | G00005 | 2 |
-| s_3897 | 2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate | 1 |
-| s_3898 | D-mannose 6-phosphate | 2 |
-| s_3899 | D-Glycerate | 1 |
-| s_3903 | L-Threonylcarbamoyladenylate | 1 |
-| s_3904 | D-Serine | 2 |
-| s_3911 | Dolichyl beta-D-glucosyl phosphate | 4 |
-| s_3912 | G10599 | 2 |
-| s_3913 | nitric oxide | 2 |
-| s_3914 | nitrate | 2 |
-| s_3923 | N-(4-oxoglutarate)-L-cysteinylglycine | 1 |
-| s_3924 | N-(4-oxoglutarate)-L-cysteinylglycine | 1 |
-| s_3925 | L-cysteinylglycine | 2 |
-| s_3926 | chloride | 1 |
-| s_3929 | 2'-deoxyribonucleoside 5'-triphosphate | 1 |
-| s_3930 | 2'-deoxyribonucleoside 5'-phosphate | 1 |
-| s_3931 | superoxide | 1 |
-| s_3932 | G00012 | 1 |
-| s_3933 | D-mannose | 2 |
-| s_3934 | Ethylnitronate | 1 |
-| s_3935 | Nitrite | 1 |
-| s_3936 | iron(3+) | 1 |
-| s_3942 | 8-oxo-dGTP | 1 |
-| s_3943 | 8-oxo-dGMP | 1 |
-| s_3948 | beta-D-Fructose 6-phosphate | 3 |
-| s_3949 | beta-D-Glucose | 2 |
-| s_3950 | beta-D-Glucose 6-phosphate | 2 |
-| s_3951 | alpha-D-Glucose | 4 |
-| s_3952 | alpha-D-Glucose 6-phosphate | 2 |
-| s_3953 | D-Glucosamine | 2 |
-| s_3954 | beta-D-Fructose | 1 |
-| s_3958 | D-Glycerate | 1 |
-| s_3959 | 2-Propynal | 1 |
-| s_3960 | Propynoate | 1 |
-| s_3961 | D-Glucuronolactone | 1 |
-| s_3962 | D-Glucarate | 1 |
-| s_3963 | 4-Trimethylammoniobutanal | 1 |
-| s_3964 | 4-Trimethylammoniobutanoate | 1 |
-| s_3965 | (S)-Methylmalonate semialdehyde | 1 |
-| s_3966 | Methylmalonate | 1 |
-| s_3967 | Imidazole-4-acetaldehyde | 1 |
-| s_3968 | Imidazole-4-acetate | 1 |
-| s_3969 | 3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al | 1 |
-| s_3970 | 3alpha,7alpha-Dihydroxy-5beta-cholestanate | 1 |
-| s_3971 | 5-Hydroxyindoleacetaldehyde | 1 |
-| s_3972 | 5-Hydroxyindoleacetate | 1 |
-| s_3973 | N4-Acetylaminobutanal | 1 |
-| s_3974 | 4-Acetamidobutanoate | 1 |
-| s_3975 | trans-3-Chloroallyl aldehyde | 1 |
-| s_3976 | trans-3-Chloroacrylic acid | 1 |
-| s_3977 | cis-3-Chloroallyl aldehyde | 1 |
-| s_3978 | cis-3-Chloroacrylic acid | 1 |
-| s_3979 | Chloroacetaldehyde | 1 |
-| s_3980 | Chloroacetic acid | 1 |
-| s_3981 | Perillyl aldehyde | 1 |
-| s_3982 | Perillic acid | 1 |
-| s_3983 | 2-trans,6-trans-Farnesal | 1 |
-| s_3984 | Farnesoic acid | 1 |
-| s_3987 | ADP | 1 |
-| s_3988 | 1-oleoyl-sn-glycerol | 1 |
-| s_3989 | G10526 | 2 |
-| s_3990 | G00006 | 1 |
-| s_3991 | carnosine | 1 |
-| s_3992 | anserine | 1 |
-| s_3993 | G10595 | 1 |
-| s_3994 | G10596 | 2 |
-| s_3995 | G10597 | 2 |
-| s_3996 | G00007 | 2 |
-| s_3997 | glycolate | 2 |
-| s_3998 | sucrose | 2 |
-| s_3999 | Isomaltose | 1 |
-| s_4000 | Dextrin | 1 |
-| s_4001 | G10598 | 2 |
-| s_4002 | G00149 | 1 |
-| s_4003 | G00140 | 1 |
-| s_4009 | hydrogen cyanide | 1 |
-| s_4010 | thiosulfate | 2 |
-| s_4011 | sulphite | 2 |
-| s_4012 | thiocyanate | 1 |
-| s_4014 | Mg(2+) | 1 |
-| s_4015 | UDP-D-glucose | 2 |
-| s_4016 | sulphate | 1 |
-| s_4017 | N-Acetyl-D-glucosamine | 1 |
-| s_4020 | Cu2(+) | 1 |
-| s_4021 | 2-Oxoglutaramate | 1 |
-| s_4022 | porphyrin | 1 |
-| s_4023 | porphyrin | 1 |
-| s_4024 | Starch | 1 |
-| s_4025 | UDP-N-acetyl-alpha-D-glucosamine | 2 |
-| s_4026 | Zn(2+) | 1 |
-| s_4027 | Zn(2+) | 1 |
-| s_4031 | iron(3+) | 1 |
-| s_4034 | Ala-Gln | 2 |
-| s_4035 | Ala-Gln | 2 |
-| s_4036 | Ala-Gln | 2 |
-| s_4037 | Ala-Glu | 2 |
-| s_4038 | Ala-Glu | 2 |
-| s_4039 | Ala-Glu | 2 |
-| s_4040 | Ala-Thr | 2 |
-| s_4041 | Ala-Thr | 2 |
-| s_4042 | Ala-Thr | 2 |
-| s_4043 | L-threonine | 2 |
-| s_4044 | thymidine 3'-monophosphate | 2 |
-| s_4045 | thymidine 3'-monophosphate | 2 |
-| s_4046 | thymidine 5'-monophosphate | 2 |
-| s_4047 | thymidine 5'-monophosphate | 2 |
-| s_4048 | glycerol 1-phosphate | 2 |
-| s_4049 | glycerol 1-phosphate | 2 |
-| s_4050 | Ala-His | 2 |
-| s_4051 | Ala-His | 2 |
-| s_4052 | Ala-His | 2 |
-| s_4053 | Gly-Asn | 2 |
-| s_4054 | Gly-Asn | 2 |
-| s_4055 | Gly-Asn | 2 |
-| s_4056 | Gly-Gln | 2 |
-| s_4057 | Gly-Gln | 2 |
-| s_4058 | Gly-Gln | 2 |
-| s_4059 | Gly-Glu | 2 |
-| s_4060 | Gly-Glu | 2 |
-| s_4061 | Gly-Glu | 2 |
-| s_4062 | glycerol 2-phosphate(2-) | 2 |
-| s_4063 | glycerol 2-phosphate(2-) | 2 |
-| s_4064 | O-phospho-L-threonine | 2 |
-| s_4065 | O-phospho-L-threonine | 2 |
-| s_4066 | guanosine 2'-monophosphate | 3 |
-| s_4067 | guanosine 2'-monophosphate | 2 |
-| s_4068 | 3'-GMP | 2 |
-| s_4069 | 3'-GMP | 2 |
-| s_4070 | 2-phosphoglycolate | 2 |
-| s_4071 | 2-phosphoglycolate | 2 |
-| s_4072 | cysteamine S-phosphate | 2 |
-| s_4073 | cysteamine | 3 |
-| s_4074 | cysteamine | 2 |
-| s_4075 | cysteamine S-phosphate | 2 |
-| s_4076 | hypotaurine | 2 |
-| s_4077 | O-phosphonatooxy-D-serine(2-) | 2 |
-| s_4078 | O-phosphonatooxy-D-serine(2-) | 2 |
-| s_4079 | 2-aminobutanoate | 2 |
-| s_4080 | 2-aminobutanoate | 2 |
-| s_4081 | uridine 2'-phosphate | 3 |
-| s_4082 | uridine 2'-phosphate | 2 |
-| s_4083 | 3'-UMP | 2 |
-| s_4084 | 3'-UMP | 2 |
-| s_4085 | Gly-Met | 2 |
-| s_4086 | Gly-Met | 2 |
-| s_4087 | Gly-Met | 2 |
-| s_4088 | N-phosphocreatine | 2 |
-| s_4089 | creatinine | 2 |
-| s_4090 | N-phosphocreatine | 1 |
-| s_4091 | creatinine | 1 |
-| s_4092 | N(omega)-phospho-L-arginine | 2 |
-| s_4093 | N(omega)-phospho-L-arginine | 2 |
-| s_4094 | 2',3'-cyclic GMP | 2 |
-| s_4095 | 2',3'-cyclic GMP | 2 |
-| s_4096 | O(4)-phospho-L-tyrosine | 2 |
-| s_4097 | O(4)-phospho-L-tyrosine | 2 |
-| s_4098 | triphosphate | 2 |
-| s_4099 | triphosphate | 2 |
-| s_4100 | cytidine 2'-phosphate | 3 |
-| s_4101 | cytidine 2'-phosphate | 2 |
-| s_4102 | 2',3'-cyclic UMP | 2 |
-| s_4103 | 2',3'-cyclic UMP | 2 |
-| s_4104 | 3-sulfino-L-alanine | 2 |
-| s_4105 | 3-sulfino-L-alanine | 2 |
-| s_4106 | 3'-AMP | 2 |
-| s_4107 | 3'-AMP | 2 |
-| s_4108 | 6-O-alpha-D-glucopyranosyl-D-fructofuranose | 2 |
-| s_4109 | 6-O-alpha-D-glucopyranosyl-D-fructofuranose | 2 |
-| s_4110 | N-acetyl-L-cysteine | 2 |
-| s_4111 | N-acetyl-L-cysteine | 2 |
-| s_4112 | tetrathionate | 2 |
-| s_4113 | thiosulfate | 4 |
-| s_4114 | tetrathionate | 1 |
-| s_4115 | 2-hydroxyethane-1-sulfonate | 2 |
-| s_4116 | 2-hydroxyethane-1-sulfonate | 2 |
-| s_4117 | 5-dehydro-D-gluconate | 2 |
-| s_4118 | 5-dehydro-D-gluconate | 2 |
-| s_4119 | Ala-Asp | 2 |
-| s_4120 | Ala-Asp | 2 |
-| s_4121 | Ala-Asp | 2 |
-| s_4122 | methyl alpha-D-glucopyranoside | 2 |
-| s_4123 | methanol | 2 |
-| s_4124 | methanol | 2 |
-| s_4125 | methyl alpha-D-glucopyranoside | 2 |
-| s_4126 | 2',3'-cyclic CMP | 2 |
-| s_4127 | 2',3'-cyclic CMP | 2 |
-| s_4128 | D-tagatose | 2 |
-| s_4129 | D-tagatofuranose 6-phosphate | 2 |
-| s_4130 | D-tagatose | 2 |
-| s_4131 | turanose | 2 |
-| s_4134 | N(alpha)-acetyl-L-methionine | 2 |
-| s_4135 | N(alpha)-acetyl-L-methionine | 2 |
-| s_4136 | 3-oxalomalate(3-) | 2 |
-| s_4137 | 3-oxalomalate(3-) | 2 |
-| s_4138 | L-cysteate | 2 |
-| s_4139 | L-cysteate | 2 |
-| s_4140 | alpha-maltotriose | 2 |
-| s_4141 | 2-phospho-D-glyceric acid | 2 |
-| s_4142 | 3-phosphonato-D-glycerate(3-) | 2 |
-| s_4143 | Met-Ala | 2 |
-| s_4144 | Met-Ala | 2 |
-| s_4147 | 3-phospho-serine | 2 |
-| s_4148 | GMP | 2 |
-| s_4149 | myo-inositol hexakisphosphate | 1 |
-| s_4152 | phosphoenolpyruvate | 2 |
-| s_4154 | O-phosphoethanolamine | 2 |
-| s_4155 | 6-phospho-D-gluconate | 2 |
-| s_4156 | D-mannose 1-phosphate | 2 |
-| s_4157 | diphosphate | 2 |
-| s_4159 | thiosulfate | 1 |
-| s_4160 | AMP | 2 |
-| s_4161 | 2',3'-cyclic AMP | 2 |
-| s_4162 | adenosine 2'-phosphate | 2 |
-| s_4163 | CMP | 2 |
-| s_4164 | D-Glucosamine | 2 |
-| s_4165 | 2-deoxy-D-ribose | 1 |
-| s_4166 | L-citrulline | 2 |
-| s_4167 | glycerone | 2 |
-| s_4168 | Ala-Leu | 2 |
-| s_4169 | Ala-Leu | 2 |
-| s_4170 | Ala-Gly | 2 |
-| s_4171 | Ala-Gly | 2 |
-| s_4174 | lipoamide | 1 |
-| s_4175 | lipoamide | 1 |
-| s_4180 | L-xylulose | 2 |
-| s_4181 | D-arabinitol | 2 |
-| s_4192 | stachyose | 2 |
-| s_4193 | raffinose | 2 |
-| s_4194 | 4-hydroxyphenyl acetate | 1 |
-| s_4195 | Hydroquinone | 1 |
-| s_4196 | ATP | 1 |
-| s_4197 | Ca(2+) | 1 |
-| s_4198 | ADP | 1 |
-| s_4217 | hexanol | 1 |
-| s_4218 | hexyl acetate | 2 |
-| s_4224 | hexyl acetate | 2 |
-| s_4229 | hexyl acetate | 2 |
-| s_4234 | propanal | 1 |
-| s_4235 | propanol | 2 |
-| s_4240 | methional | 1 |
-| s_4241 | methionol | 2 |
-| s_4246 | (4-hydroxyphenyl)acetaldehyde | 1 |
-| s_4247 | tyrosol | 2 |
-| s_4267 | taurocholic acid | 1 |
-| s_4268 | taurocholic acid | 2 |
-| s_4269 | trithionate | 1 |
-| s_4274 | diethyl succinate | 2 |
-| s_4275 | diethyl succinate | 2 |
-| s_4276 | monoethyl succinate | 2 |
-| s_4277 | monoethyl succinate | 2 |
-| s_4278 | ethyl benzoate | 2 |
-| s_4279 | ethyl benzoate | 2 |
-| s_4288 | benzyl acetate | 2 |
-| s_4289 | benzyl acetate | 2 |
-| s_4292 | polyphosphate | 2 |
-| s_4293 | phosphate | 1 |
-| s_4294 | 4-(2-aminophenyl)-2,4-dioxobutanoate | 1 |
-| s_4295 | dimethylallyl phosphate | 1 |
-| s_4296 | D-phenylalanine | 1 |
-| s_4297 | N-acetyl-D-phenylalanine | 1 |
-| s_4298 | FMNH2 | 1 |
-| s_4299 | cadaverine | 1 |
-| s_4300 | aminopropylcadaverine | 1 |
-| s_4301 | 2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate | 1 |
-| s_4302 | 2-hydroxyglutarate | 1 |
-| s_4303 | farnesol | 1 |
-| s_4304 | D-ribulose | 1 |
-| s_4305 | 2-deoxy-D-ribose 1-phosphate | 1 |
-| s_4306 | 3-hydroxyisobutyryl-CoA | 1 |
-| s_4307 | 3-hydroxyisobutyrate | 1 |
-| s_4308 | meso-2,3-butanediol | 1 |
-| s_4309 | acetoin | 1 |
-| s_4310 | 5-methylcytosine | 1 |
-| s_4311 | thymine | 1 |
-| s_4312 | prenylated FMNH2 | 1 |
-| s_4313 | ITP | 1 |
-| s_4314 | IDP | 1 |
-| s_4317 | P(1),P(3)-bis(5'-adenosyl) triphosphate | 1 |
-| s_4318 | dATP | 1 |
-| s_4319 | dADP | 1 |
-| s_4320 | dGTP | 1 |
-| s_4321 | dGDP | 1 |
-| s_4322 | CDP | 1 |
-| s_4323 | dCDP | 1 |
-| s_4324 | dCTP | 1 |
-| s_4325 | dTDP | 1 |
-| s_4326 | dTTP | 1 |
-| s_4327 | dIDP | 1 |
-| s_4328 | dITP | 1 |
-| s_4329 | dUDP | 1 |
-| s_4330 | dUTP | 1 |
-| s_4331 | xanthurenate | 1 |
+| metabolite | name | compartment | dead end | reactions blocked | blocked reactions |
+|---|---|---|---|---|---|
+| s_0002 | (1->3)-beta-D-glucan | c | after other dead ends | 1 | r_1543 ((1->3)-beta-D-glucan transport) |
+| s_0003 | (1->3)-beta-D-glucan | e | never produced | 2 | r_0370 (exo-1,3-beta-glucan glucohydrase); r_1542 ((1->3)-beta-D-glucan exchange) |
+| s_0007 | (2E)-3-(methoxycarbonyl)pent-2-enedioic acid | c | never consumed | 1 | r_1046 (trans-aconitate 3-methyltransferase) |
+| s_0011 | (2S)-2-isopropyl-3-oxosuccinate | m | after other dead ends | 2 | r_0030 (2-oxo-4-methyl-3-carboxypentanoate decar); r_1595 (3-carboxy-4-methyl-2-oxopentanoate trans) |
+| s_0013 | (5S,6S)-di-HETE | c | after other dead ends | 1 | r_0703 (leukotriene A4 hydrolase) |
+| s_0014 | (5S,6S)-di-HETE | n | after other dead ends | 1 | r_0704 (leukotriene A4 hydrolase) |
+| s_0026 | (R)-lactate | e | never produced | 2 | r_1136 (D-lactate transport); r_1546 ((R)-lactate exchange) |
+| s_0032 | (R)-pantothenate | e | never produced | 2 | r_1241 (pantothenate transport); r_1548 ((R)-pantothenate exchange) |
+| s_0034 | (R)-S-lactoylglutathione | m | never produced | 1 | r_0554 (hydroxyacylglutathione hydrolase) |
+| s_0064 | (S)-lactate | e | never produced | 2 | r_1207 (L-lactate transport); r_1551 ((S)-lactate exchange) |
+| s_0065 | (S)-lactate | m | after other dead ends | 1 | r_1206 (L-lactate transport) |
+| s_0084 | 1-acylglycerophosphocholine | e | never produced | 1 | r_1554 (1-acylglycerophosphocholine exchange) |
+| s_0087 | 1-methylnicotinamide | c | never consumed | 1 | r_0782 (nicotinamide N-methyltransferase) |
+| s_0129 | 1D-myo-inositol 3-phosphate | m | never consumed | 10 | r_0616 (IPS phospholipase C); r_0617 (IPS phospholipase C); r_0618 (IPS phospholipase C); r_0619 (IPS phospholipase C); r_0620 (IPS phospholipase C); r_0621 (IPS phospholipase C); r_0622 (IPS phospholipase C); r_0623 (IPS phospholipase C); r_0624 (IPS phospholipase C); r_0625 (IPS phospholipase C) |
+| s_0131 | 2',3'-cyclic AMP | c | after other dead ends | 2 | r_0155 (ADP-ribose 2,3-cyclic phosphodiesterase); r_4464 (23cAMP transport via diffusion (extracel) |
+| s_0132 | 2'-deoxyadenosine | c | after other dead ends | 3 | r_0328 (deoxyadenosine deaminase); r_1614 (5'-nucleotidase (dAMP)); r_1728 (deoxyadenosine transport) |
+| s_0133 | 2'-deoxyadenosine | e | never produced | 2 | r_1563 (2'-deoxyadenosine exchange); r_1728 (deoxyadenosine transport) |
+| s_0134 | 2'-deoxyguanosine | c | after other dead ends | 3 | r_1616 (5'-nucleotidase (dGMP)); r_1732 (deoxyguanosine transport); r_4758 (deoxyguanosine phosphorylase) |
+| s_0135 | 2'-deoxyguanosine | e | never produced | 2 | r_1564 (2'-deoxyguanosine exchange); r_1732 (deoxyguanosine transport) |
+| s_0136 | 2'-deoxyinosine | c | never consumed | 2 | r_0328 (deoxyadenosine deaminase); r_1733 (deoxyinosine transport) |
+| s_0137 | 2'-deoxyinosine | e | never produced | 2 | r_1565 (2'-deoxyinosine exchange); r_1733 (deoxyinosine transport) |
+| s_0139 | 2'-deoxyuridine | e | never produced | 2 | r_1566 (2'-deoxyuridine exchange); r_1735 (deoxyuridine transport) |
+| s_0140 | 2,3-bisphospho-D-glyceric acid | c | after other dead ends | 1 | r_0356 (diphosphoglyceromutase) |
+| s_0143 | 2-(3-amino-3-carboxypropyl)-L-histidine | c | never produced | 1 | r_0359 (diphthine synthase) |
+| s_0144 | 2-[3-carboxy-3-(methylammonio)propyl]-L-histidine | c | never consumed | 1 | r_0359 (diphthine synthase) |
+| s_0152 | 2-deoxy-D-ribose | c | after other dead ends | 2 | r_0332 (deoxyribokinase); r_4468 (2-deoxy-D-ribose transport) |
+| s_0153 | 2-deoxy-D-ribose 5-phosphate | c | never consumed | 1 | r_0332 (deoxyribokinase) |
+| s_0161 | 2-hydroxyhexadecanal | er | never consumed | 1 | r_0921 (Phytosphingosine phosphate lyase) |
+| s_0183 | 2-oxoglutarate | n | after other dead ends | 2 | r_0543 (homocitrate synthase); r_1587 (2-oxoglutarate transport) |
+| s_0193 | 3',5'-cyclic CMP | c | never produced | 1 | r_0037 (3',5'-cyclic-nucleotide phosphodiesteras) |
+| s_0194 | 3',5'-cyclic dAMP | c | never produced | 1 | r_0034 (3',5'-cyclic-nucleotide phosphodiesteras) |
+| s_0196 | 3',5'-cyclic IMP | c | never produced | 1 | r_0035 (3',5'-cyclic-nucleotide phosphodiesteras) |
+| s_0217 | 3-hydroxy-2-isopropyl-4-methoxy-4-oxobutanoate | c | never consumed | 1 | r_0059 (3-isopropylmalate 3-methyltransferase) |
+| s_0263 | 4,5-bis(diphospho)-1D-myo-inositol tetrakisphosphate | c | after other dead ends | 2 | r_0074 (4PP-IP5 pyrophosphorylation to 4,5-PP2-I); r_0088 (5PP-IP5 pyrophosphorylation to 4,5-PP2-I) |
+| s_0264 | 4-(phosphonooxy)-L-threonine | c | never produced | 1 | r_0069 (4-hydroxy-L-threonine synthase) |
+| s_0279 | 4-diphospho-1D-myo-inositol pentakisphosphate | c | never produced | 2 | r_0073 (4PP-IP5 depyrophosphorylation to IP6); r_0074 (4PP-IP5 pyrophosphorylation to 4,5-PP2-I) |
+| s_0280 | 4-guanidinobutanamide | c | never produced | 1 | r_0199 (amidase) |
+| s_0281 | 4-guanidinobutanoic acid | c | never consumed | 1 | r_0199 (amidase) |
+| s_0282 | 4-hydroxy-2-oxoglutarate | c | after other dead ends | 3 | r_0681 (L-erythro-4-hydroxyglutamate:2-oxoglutar); r_1609 (4-hydroxy-2-oxoglutarate transport); r_1610 (4-hydroxy-2-oxoglutarate transport) |
+| s_0283 | 4-hydroxy-2-oxoglutarate | m | after other dead ends | 2 | r_0682 (L-erythro-4-hydroxyglutamate:2-oxoglutar); r_1609 (4-hydroxy-2-oxoglutarate transport) |
+| s_0284 | 4-hydroxy-2-oxoglutarate | p | after other dead ends | 2 | r_0683 (L-erythro-4-hydroxyglutamate:2-oxoglutar); r_1610 (4-hydroxy-2-oxoglutarate transport) |
+| s_0285 | 4-hydroxy-L-threonine | c | never consumed | 1 | r_0069 (4-hydroxy-L-threonine synthase) |
+| s_0290 | 4-hydroxybenzoyl-CoA | m | never produced | 1 | r_0070 (4-hydroxybenzoate formation) |
+| s_0292 | 4-methyl-2-oxopentanoate | m | after other dead ends | 2 | r_0030 (2-oxo-4-methyl-3-carboxypentanoate decar); r_0700 (leucine transaminase) |
+| s_0308 | 5,6,7,8-tetrahydrofolyl-L-glutamic acid | c | after other dead ends | 1 | r_1031 (tetrahydrofolate:L-glutamate gamma-ligas) |
+| s_0316 | 5-aminolevulinate | e | never produced | 2 | r_1102 (5-aminolevulinate transport); r_1621 (5-aminolevulinate exchange) |
+| s_0319 | 5-formyltetrahydrofolic acid | c | after other dead ends | 3 | r_0084 (5-formethyltetrahydrofolate cyclo-ligase); r_1103 (5-formyltetrahydrofolic acid transport); r_1624 (5-formyltetrahydrofolate:10-formyltetrah) |
+| s_0320 | 5-formyltetrahydrofolic acid | e | after other dead ends | 2 | r_1103 (5-formyltetrahydrofolic acid transport); r_1625 (5-formyltetrahydrofolic acid exchange) |
+| s_0323 | 5-methyltetrahydropteroyltri-L-glutamic acid | c | never produced | 1 | r_0085 (5-methyltetrahydropteroyltriglutamate-ho) |
+| s_0329 | 6-(alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 2 | r_0137 (acylation of GPI inositol at 2 position,); r_0518 (GPI-anchor assembly, step 2) |
+| s_0330 | 6-(alpha-D-glucosaminyl)-O-acyl-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 2 | r_0137 (acylation of GPI inositol at 2 position,); r_0519 (GPI-anchor assembly, step 5) |
+| s_0331 | 6-(N-acetyl-alpha-D-glucosaminyl)-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 1 | r_0518 (GPI-anchor assembly, step 2) |
+| s_0332 | 6-[6-(2-aminoethylphosphoryl)-alpha-mannosyl-(1->6)-2-(2-aminoethylphosphoryl)-alpha-mannosyl-(1->6)-alpha-2-(2-aminoethylphosphoryl)mannosyl-(1->4)-alpha-glucosaminyl]-O-acyl-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 1 | r_0523 (GPI-anchor assembly, step 9) |
+| s_0333 | 6-diphospho-1D-myo-inositol pentakisphosphate | c | never produced | 2 | r_0092 (6PP-IP5 depyrophosphorylation to IP6); r_0093 (6PP-IP5 pyrophosphorylation to 5,6-PP2-I) |
+| s_0334 | 6-O-[alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl]-O-acyl-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 2 | r_0519 (GPI-anchor assembly, step 5); r_0520 (GPI-anchor assembly, step 6) |
+| s_0337 | 6-O-{2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 2 | r_0520 (GPI-anchor assembly, step 6); r_0521 (GPI-anchor assembly, step 7) |
+| s_0338 | 6-O-{alpha-D-mannosyl-(1->2)-alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 2 | r_0522 (GPI-anchor assembly, step 8); r_0523 (GPI-anchor assembly, step 9) |
+| s_0339 | 6-O-{alpha-D-mannosyl-(1->6)-2-O-[(2-aminoethyl)phosphoryl]-alpha-D-mannosyl-(1->4)-alpha-D-glucosaminyl}-O-acyl-1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 2 | r_0521 (GPI-anchor assembly, step 7); r_0522 (GPI-anchor assembly, step 8) |
+| s_0341 | 7,8-diaminononanoate | c | after other dead ends | 3 | r_0146 (adenosylmethionine-8-amino-7-oxononanoat); r_0335 (dethiobiotin synthase); r_1628 (7,8-diaminononanoate transport) |
+| s_0342 | 7,8-diaminononanoate | e | after other dead ends | 2 | r_1627 (7,8-diaminononanoate exchange); r_1628 (7,8-diaminononanoate transport) |
+| s_0352 | 8-amino-7-oxononanoate | c | after other dead ends | 3 | r_0094 (8-amino-7-oxononanoate synthase); r_0146 (adenosylmethionine-8-amino-7-oxononanoat); r_1104 (8-Amino-7-oxononanoate transport) |
+| s_0354 | 8-amino-7-oxononanoate | e | never produced | 2 | r_1104 (8-Amino-7-oxononanoate transport); r_1629 (8-amino-7-oxononanoate exchange) |
+| s_0363 | acetate | er | after other dead ends | 2 | r_0518 (GPI-anchor assembly, step 2); r_4602 (acetate transport) |
+| s_0372 | acetyl-ACP | m | after other dead ends | 2 | r_0099 (acetyl-CoA ACP transacylase); r_2142 (B-ketoacyl-ACP synthase (acetoacetyl-ACP) |
+| s_0384 | adenine | e | never produced | 2 | r_1108 (adenine transport); r_1639 (adenine exchange) |
+| s_0385 | adenine | m | after other dead ends | 1 | r_1640 (adenine transport) |
+| s_0387 | adenosine | e | never produced | 2 | r_1109 (adenosine transport); r_1643 (adenosine exchange) |
+| s_0389 | adenosine 2'-phosphate | c | after other dead ends | 3 | r_0155 (ADP-ribose 2,3-cyclic phosphodiesterase); r_4465 (Adenosine- 2'-Monophosphate transport in); r_4495 (alkaline phosphatase) |
+| s_0399 | ADP | p | never produced | 1 | r_1111 (ADP/ATP transporter) |
+| s_0402 | ADP-ribose | n | after other dead ends | 2 | r_0767 (NAD nucleosidase nuclear); r_4603 (ADP-ribose transport) |
+| s_0405 | allantoate | c | after other dead ends | 3 | r_0189 (allantoate amidinohydrolase); r_0190 (allantoinase, reaction); r_1113 (allantoate uniport) |
+| s_0406 | allantoate | e | never produced | 2 | r_1113 (allantoate uniport); r_1648 (allantoate exchange) |
+| s_0407 | allantoin | c | after other dead ends | 2 | r_0190 (allantoinase, reaction); r_1114 (allantoin uniport) |
+| s_0408 | allantoin | e | never produced | 2 | r_1114 (allantoin uniport); r_1649 (allantoin exchange) |
+| s_0411 | alpha-D-glucosamine 1-phosphate | c | after other dead ends | 1 | r_0890 (phosphoglucosamine mutase) |
+| s_0414 | alpha-D-mannosyl-beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | g | never consumed | 1 | r_0192 (alpha 1,2-mannosyltransferase) |
+| s_0416 | alpha-D-ribose 1-phosphate(2-) | m | after other dead ends | 1 | r_0950 (guanosine phosphorylase) |
+| s_0417 | aminoacetaldehyde | c | never consumed | 1 | r_1029 (taurine dioxygenase) |
+| s_0418 | aminoacetone | c | after other dead ends | 2 | r_0200 (Aminoacetone:oxygen oxidoreductase(deami); r_1872 (L-2-amino-3-oxobutanoate decarboxylation) |
+| s_0429 | Arg-tRNA(Arg) | m | never consumed | 1 | r_0210 (arginyl-tRNA synthetase) |
+| s_0431 | Asn-tRNA(Asn) | m | never consumed | 1 | r_0213 (asparaginyl-tRNA synthetase, miotchondri) |
+| s_0433 | Asp-tRNA(Asp) | m | never consumed | 1 | r_0221 (Aspartyl-tRNA synthetase) |
+| s_0443 | beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | c | never consumed | 1 | r_0228 (beta-1,4 mannosyltransferase) |
+| s_0444 | beta-D-mannosyldiacetylchitobiosyldiphosphodolichol | g | never produced | 1 | r_0192 (alpha 1,2-mannosyltransferase) |
+| s_0447 | bicarbonate | m | after other dead ends | 2 | r_0108 (acetyl-Coa carboxylase); r_1664 (bicarbonate formation) |
+| s_0451 | biotin | c | after other dead ends | 3 | r_0229 (biotin synthase); r_0230 (biotin-[acetyl-CoA-carboxylase] ligase); r_1119 (biotin uptake) |
+| s_0452 | biotin | e | never produced | 2 | r_1119 (biotin uptake); r_1671 (biotin exchange) |
+| s_0453 | biotinyl-5'-AMP | c | never consumed | 1 | r_0230 (biotin-[acetyl-CoA-carboxylase] ligase) |
+| s_0465 | carboxyacetyl-ACP | m | after other dead ends | 4 | r_0721 (malonyl-CoA-ACP transacylase); r_2142 (B-ketoacyl-ACP synthase (acetoacetyl-ACP); r_2143 (B-ketoacyl-ACP synthase (3-oxo-hexanoyl-); r_2144 (B-ketoacyl-ACP synthase (3-oxo-octanoyl-) |
+| s_0468 | CDP | n | after other dead ends | 2 | r_0977 (ribonucleotide reductase); r_1675 (CDP transport) |
+| s_0474 | CDP-ethanolamine | c | after other dead ends | 2 | r_0885 (phosphoethanolamine cytidyltransferase); r_3541 (CDP-ethanolamine transport, cytoplasm-ER) |
+| s_0477 | ceramide-1 (C24) | m | never consumed | 3 | r_0616 (IPS phospholipase C); r_0626 (IPS phospholipase C); r_0636 (IPS phospholipase C) |
+| s_0480 | ceramide-1 (C26) | m | never consumed | 3 | r_0617 (IPS phospholipase C); r_0627 (IPS phospholipase C); r_0637 (IPS phospholipase C) |
+| s_0483 | ceramide-2 (C24) | m | never consumed | 3 | r_0620 (IPS phospholipase C); r_0630 (IPS phospholipase C); r_0640 (IPS phospholipase C) |
+| s_0486 | ceramide-2 (C26) | m | never consumed | 3 | r_0621 (IPS phospholipase C); r_0631 (IPS phospholipase C); r_0641 (IPS phospholipase C) |
+| s_0489 | ceramide-2' (C24) | m | never consumed | 3 | r_0618 (IPS phospholipase C); r_0628 (IPS phospholipase C); r_0638 (IPS phospholipase C) |
+| s_0492 | ceramide-2' (C26) | m | never consumed | 3 | r_0619 (IPS phospholipase C); r_0629 (IPS phospholipase C); r_0639 (IPS phospholipase C) |
+| s_0495 | ceramide-3 (C24) | m | never consumed | 3 | r_0622 (IPS phospholipase C); r_0632 (IPS phospholipase C); r_0642 (IPS phospholipase C) |
+| s_0498 | ceramide-3 (C26) | m | never consumed | 3 | r_0623 (IPS phospholipase C); r_0633 (IPS phospholipase C); r_0643 (IPS phospholipase C) |
+| s_0501 | ceramide-4 (C24) | m | never consumed | 3 | r_0624 (IPS phospholipase C); r_0634 (IPS phospholipase C); r_0644 (IPS phospholipase C) |
+| s_0504 | ceramide-4 (C26) | m | never consumed | 3 | r_0625 (IPS phospholipase C); r_0635 (IPS phospholipase C); r_0645 (IPS phospholipase C) |
+| s_0510 | chitosan | ce | never consumed | 1 | r_0271 (chitin deacetylase) |
+| s_0544 | cytidine | e | never produced | 2 | r_1132 (cytidine transport); r_1702 (cytidine exchange) |
+| s_0546 | cytosine | e | never produced | 2 | r_1133 (cytosine transport); r_1705 (cytosine exchange) |
+| s_0547 | D-arabinono-1,4-lactone | c | after other dead ends | 3 | r_0319 (D-arabinono-1,4-lactone oxidase); r_0320 (D-arabinose 1-dehydrogenase (NAD)); r_0321 (D-arabinose 1-dehydrogenase (NADP)) |
+| s_0548 | D-arabinose | c | after other dead ends | 4 | r_0320 (D-arabinose 1-dehydrogenase (NAD)); r_0321 (D-arabinose 1-dehydrogenase (NADP)); r_1707 (D-arabinose transport); r_4491 (arabinose reductase (D-arabinose)) |
+| s_0549 | D-arabinose | e | after other dead ends | 2 | r_1706 (D-arabinose exchange); r_1707 (D-arabinose transport) |
+| s_0553 | D-fructose | c | after other dead ends | 8 | r_0323 (D-sorbitol dehydrogenase (D-fructose pro); r_0533 (hexokinase (D-fructose:ATP)); r_1134 (D-fructose transport); r_4168 (Probable metabolite transport protein YB); r_4183 (D-Mannitol:NAD+ 2-oxidoreductase); r_4283 (ATP:D-fructose 6-phosphotransferase); r_4317 (sucrose glucohydrolase); r_4378 (alpha-glucosidase) |
+| s_0554 | D-fructose | e | after other dead ends | 5 | r_1024 (sucrose hydrolyzing enzyme); r_1134 (D-fructose transport); r_1709 (D-fructose exchange); r_4042 (raffinose invertase); r_4420 (alpha-glucosidase) |
+| s_0556 | D-fructose 1-phosphate | c | after other dead ends | 2 | r_0322 (D-fructose 1-phosphate D-glyceraldehyde-); r_1797 (fructose-1-phosphate kinase) |
+| s_0558 | D-galactose | c | after other dead ends | 4 | r_0458 (galactokinase); r_1135 (D-galactose transport); r_4169 (Probable metabolite transport protein YB); r_4585 (a-galactosidase (stachyose)) |
+| s_0559 | D-galactose | e | never produced | 2 | r_1135 (D-galactose transport); r_1710 (D-galactose exchange) |
+| s_0560 | D-galacturonate | e | after other dead ends | 2 | r_0365 (endopolygalacturonase); r_1711 (D-galacturonate exchange) |
+| s_0561 | D-glucitol | c | after other dead ends | 2 | r_0323 (D-sorbitol dehydrogenase (D-fructose pro); r_1717 (D-sorbitol transport) |
+| s_0562 | D-glucitol | e | after other dead ends | 2 | r_1712 (D-glucitol exchange); r_1717 (D-sorbitol transport) |
+| s_0570 | D-glyceraldehyde | c | after other dead ends | 4 | r_0164 (alcohol dehydrogenase (glycerol, NADP)); r_0322 (D-fructose 1-phosphate D-glyceraldehyde-); r_4291 (D-Glyceraldehyde:NAD+ oxidoreductase); r_4748 (D-glyceraldehyde kinase) |
+| s_0571 | D-mannose | c | after other dead ends | 2 | r_0535 (hexokinase (D-mannose:ATP)); r_1139 (D-mannose transport) |
+| s_0572 | D-mannose | e | never produced | 2 | r_1139 (D-mannose transport); r_1715 (D-mannose exchange) |
+| s_0576 | D-ribose | e | never produced | 2 | r_1716 (D-ribose exchange); r_2041 (ribose transporter) |
+| s_0578 | D-xylose | c | after other dead ends | 2 | r_1093 (xylose reductase); r_1719 (D-xylose transport) |
+| s_0579 | D-xylose | e | after other dead ends | 2 | r_1718 (D-xylose exchange); r_1719 (D-xylose transport) |
+| s_0580 | D-xylulose | c | after other dead ends | 3 | r_1092 (xylitol dehydrogenase (D-xyulose-forming); r_1094 (xylulokinase); r_4492 (D-arabinitol:NAT 4-oxidoreductase) |
+| s_0583 | dADP | n | after other dead ends | 2 | r_0975 (ribonucleotide reductase); r_1720 (dADP transport) |
+| s_0585 | dAMP | m | never produced | 1 | r_1230 (NAD transport) |
+| s_0588 | dCDP | n | after other dead ends | 2 | r_0977 (ribonucleotide reductase); r_1721 (dCDP transport) |
+| s_0606 | decaprenyl diphosphate | lp | after other dead ends | 2 | r_0287 (cis-prenyltransferase step 07); r_0288 (cis-prenyltransferase step 08) |
+| s_0607 | dehydro-D-arabinono-1,4-lactone | c | never consumed | 1 | r_0319 (D-arabinono-1,4-lactone oxidase) |
+| s_0608 | Delta(6)-trans,Delta(8)-cis-leukotriene B4 | c | after other dead ends | 1 | r_0705 (leukotriene A4 hydrolase) |
+| s_0609 | Delta(6)-trans,Delta(8)-cis-leukotriene B4 | n | after other dead ends | 1 | r_0706 (leukotriene A4 hydrolase) |
+| s_0611 | deoxycytidine | e | never produced | 2 | r_1730 (deoxycytidine exchange); r_1731 (deoxycytidine transport) |
+| s_0612 | dethiobiotin | c | after other dead ends | 2 | r_0229 (biotin synthase); r_0335 (dethiobiotin synthase) |
+| s_0614 | dGDP | n | after other dead ends | 2 | r_0979 (ribonucleotide reductase); r_1737 (dGDP transport) |
+| s_0616 | dGMP | m | never produced | 1 | r_1232 (NAD transport) |
+| s_0618 | dIDP | c | after other dead ends | 2 | r_0802 (nucleoside diphosphate kinase); r_1725 (dADP deamination) |
+| s_0620 | diglyceride backbone | er | after other dead ends | 1 | r_0523 (GPI-anchor assembly, step 9) |
+| s_0639 | dITP | c | after other dead ends | 2 | r_0802 (nucleoside diphosphate kinase); r_1723 (dATP deamination) |
+| s_0640 | docosaprenyl diphosphate | lp | never consumed | 1 | r_0299 (cis-prenyltransferase step 19) |
+| s_0641 | dodecaprenyl diphosphate | lp | after other dead ends | 2 | r_0289 (cis-prenyltransferase step 09); r_0290 (cis-prenyltransferase step 10) |
+| s_0642 | dolichol | c | never produced | 1 | r_0360 (dolichol kinase) |
+| s_0665 | ergosterol | ce | after other dead ends | 1 | r_1148 (ergosterol transport) |
+| s_0670 | ergosterol 3-beta-D-glucoside | c | never consumed | 1 | r_1068 (UDP-glucose:ergosterol glucosyltransfera) |
+| s_0677 | erythro-4-hydroxy-L-glutamic acid | c | after other dead ends | 3 | r_0681 (L-erythro-4-hydroxyglutamate:2-oxoglutar); r_1884 (L-erythro-4-hydroxyglutamate transport); r_1885 (L-erythro-4-hydroxyglutamate transport) |
+| s_0679 | erythro-4-hydroxy-L-glutamic acid | p | after other dead ends | 2 | r_0683 (L-erythro-4-hydroxyglutamate:2-oxoglutar); r_1885 (L-erythro-4-hydroxyglutamate transport) |
+| s_0683 | ethanolamine | c | after other dead ends | 2 | r_0368 (ethanolamine kinase); r_1149 (ethanolamine transport) |
+| s_0684 | ethanolamine | e | after other dead ends | 2 | r_1149 (ethanolamine transport); r_1764 (ethanolamine exchange) |
+| s_0692 | farnesyl diphosphate | lp | after other dead ends | 2 | r_0281 (cis-prenyltransferase step 01); r_4604 (farnesyl diphosphate transport) |
+| s_0699 | fecosterol | ce | after other dead ends | 1 | r_1162 (fecosterol transport) |
+| s_0713 | fMet-tRNA(fMet) | m | never consumed | 1 | r_0728 (methionyl-tRNA formyltransferase) |
+| s_0715 | FMN | e | never produced | 2 | r_0116 (acid phosphatase (secreted)); r_1791 (FMN exchange) |
+| s_0719 | folate | c | after other dead ends | 1 | r_1164 (folic acid transport) |
+| s_0720 | folate | e | after other dead ends | 2 | r_1164 (folic acid transport); r_1792 (folic acid exchange) |
+| s_0721 | formaldehyde | c | never produced | 1 | r_0443 (formaldehyde dehydrogenase) |
+| s_0736 | gamma-aminobutyrate | e | never produced | 2 | r_1101 (4-aminobutyrate transport); r_1800 (gamma-aminobutyrate exchange) |
+| s_0742 | GDP | n | after other dead ends | 2 | r_0979 (ribonucleotide reductase); r_1802 (GDP transport) |
+| s_0746 | geranylgeranyl diphosphate | lp | after other dead ends | 2 | r_0281 (cis-prenyltransferase step 01); r_0282 (cis-prenyltransferase step 02) |
+| s_0749 | Glu-tRNA(Glu) | m | never consumed | 1 | r_0480 (glutamyl-tRNA synthetase) |
+| s_0751 | glutathione | e | never produced | 2 | r_1167 (glutathione transport); r_1807 (glutathione exchange) |
+| s_0752 | glutathione | m | after other dead ends | 3 | r_0482 (glutathione oxidoreductase); r_0484 (glutathione peroxidase, mitochondria); r_0554 (hydroxyacylglutathione hydrolase) |
+| s_0755 | glutathione disulfide | e | never produced | 2 | r_1806 (glutathione disulfide exchange); r_1990 (oxidized glutathione uniport) |
+| s_0756 | glutathione disulfide | m | after other dead ends | 2 | r_0482 (glutathione oxidoreductase); r_0484 (glutathione peroxidase, mitochondria) |
+| s_0771 | glycerone | c | after other dead ends | 3 | r_0354 (dihydroxyacetone kinase); r_0487 (glycerol dehydrogenase (NADP-dependent)); r_4470 (Dihydroxyacetone transport via facilitat) |
+| s_0788 | guanine | e | never produced | 2 | r_1176 (guanine transport); r_1818 (guanine exchange) |
+| s_0789 | guanine | m | after other dead ends | 2 | r_0950 (guanosine phosphorylase); r_1819 (guanine transport) |
+| s_0791 | guanosine | e | never produced | 2 | r_1820 (guanosine exchange); r_1823 (guanosine transport) |
+| s_0792 | guanosine | m | after other dead ends | 2 | r_0950 (guanosine phosphorylase); r_1822 (guanosine transport) |
+| s_0813 | henicosaprenyl diphosphate | lp | after other dead ends | 2 | r_0298 (cis-prenyltransferase step 18); r_0299 (cis-prenyltransferase step 19) |
+| s_0814 | heptadecaprenyl diphosphate | lp | after other dead ends | 2 | r_0294 (cis-prenyltransferase step 14); r_0295 (cis-prenyltransferase step 15) |
+| s_0815 | heptaprenyl diphosphate | lp | after other dead ends | 2 | r_0284 (cis-prenyltransferase step 04); r_0285 (cis-prenyltransferase step 05) |
+| s_0825 | hexadecanal | er | never consumed | 1 | r_1003 (sphinganine phosphate lyase) |
+| s_0826 | hexadecanal | e | never produced | 1 | r_1834 (hexadecanal exchange) |
+| s_0829 | hexadecaprenyl diphosphate | lp | after other dead ends | 2 | r_0293 (cis-prenyltransferase step 13); r_0294 (cis-prenyltransferase step 14) |
+| s_0830 | hexaprenyl diphosphate | lp | after other dead ends | 2 | r_0283 (cis-prenyltransferase step 03); r_0284 (cis-prenyltransferase step 04) |
+| s_0833 | His-tRNA(His) | m | never consumed | 1 | r_0540 (histidyl-tRNA synthetase) |
+| s_0835 | homocitrate | n | never consumed | 1 | r_0543 (homocitrate synthase) |
+| s_0838 | hydrogen peroxide | m | after other dead ends | 4 | r_0437 (ferrocytochrome-c:hydrogen-peroxide oxid); r_0484 (glutathione peroxidase, mitochondria); r_0551 (hydrogen peroxide reductase (thioredoxin); r_4190 (superoxide:superoxide oxidoreductase) |
+| s_0839 | hydrogen peroxide | n | after other dead ends | 2 | r_1037 (thioredoxin); r_1839 (hydrogen peroxide transport) |
+| s_0845 | icosaprenyl diphosphate | lp | after other dead ends | 2 | r_0297 (cis-prenyltransferase step 17); r_0298 (cis-prenyltransferase step 18) |
+| s_0848 | Ile-tRNA(Ile) | m | never consumed | 1 | r_0666 (isoleucyl-tRNA synthetase) |
+| s_0853 | indole-3-acetate | c | after other dead ends | 4 | r_0177 (aldehyde dehydrogenase (indole-3-acetald); r_1846 (indole-3-acetate transport); r_4228 (Indole-3-acetamide amidohydrolase); r_4294 (Indole-3-acetaldehyde:NAD+ oxidoreductas) |
+| s_0854 | indole-3-acetate | m | after other dead ends | 3 | r_0176 (aldehyde dehydrogenase (indole-3-acetald); r_0178 (aldehyde dehydrogenase (indole-3-acetald); r_1846 (indole-3-acetate transport) |
+| s_0857 | inosine | e | never produced | 2 | r_1847 (inosine exchange); r_1848 (inosine transport) |
+| s_0859 | inositol phosphomannosylinositol phosphoceramide backbone | g | after other dead ends | 11 | r_1479 (inositol phosphomannosylinositol phospho); r_1480 (inositol phosphomannosylinositol phospho); r_1481 (inositol phosphomannosylinositol phospho); r_1482 (inositol phosphomannosylinositol phospho); r_1483 (inositol phosphomannosylinositol phospho); r_1484 (inositol phosphomannosylinositol phospho); r_1485 (inositol phosphomannosylinositol phospho); r_1486 (inositol phosphomannosylinositol phospho); r_1487 (inositol phosphomannosylinositol phospho); r_1488 (inositol phosphomannosylinositol phospho); r_4052 (inositol phosphomannosylinositol phospho) |
+| s_0861 | inositol phosphomannosylinositol phosphoceramide A (C24) | er | after other dead ends | 2 | r_0606 (IPS phospholipase C); r_1920 (M(IP)2C transport) |
+| s_0862 | inositol phosphomannosylinositol phosphoceramide A (C24) | g | after other dead ends | 10 | r_1479 (inositol phosphomannosylinositol phospho); r_1920 (M(IP)2C transport); r_3348 (inositolphosphotransferase (PI (1-16:0, ); r_3349 (inositolphosphotransferase (PI (1-16:1, ); r_3350 (inositolphosphotransferase (PI (1-18:0, ); r_3351 (inositolphosphotransferase (PI (1-18:1, ); r_3352 (inositolphosphotransferase (PI (1-16:0, ); r_3353 (inositolphosphotransferase (PI (1-16:1, ); r_3354 (inositolphosphotransferase (PI (1-18:0, ); r_3355 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0863 | inositol phosphomannosylinositol phosphoceramide A (C24) | m | never produced | 1 | r_0636 (IPS phospholipase C) |
+| s_0864 | inositol phosphomannosylinositol phosphoceramide A (C26) | er | after other dead ends | 2 | r_0607 (IPS phospholipase C); r_1925 (M(IP)2C transport) |
+| s_0865 | inositol phosphomannosylinositol phosphoceramide A (C26) | g | after other dead ends | 10 | r_1480 (inositol phosphomannosylinositol phospho); r_1925 (M(IP)2C transport); r_3356 (inositolphosphotransferase (PI (1-16:0, ); r_3357 (inositolphosphotransferase (PI (1-16:1, ); r_3358 (inositolphosphotransferase (PI (1-18:0, ); r_3359 (inositolphosphotransferase (PI (1-18:1, ); r_3360 (inositolphosphotransferase (PI (1-16:0, ); r_3361 (inositolphosphotransferase (PI (1-16:1, ); r_3362 (inositolphosphotransferase (PI (1-18:0, ); r_3363 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0866 | inositol phosphomannosylinositol phosphoceramide A (C26) | m | never produced | 1 | r_0637 (IPS phospholipase C) |
+| s_0867 | inositol phosphomannosylinositol phosphoceramide B (C24) | er | after other dead ends | 2 | r_0610 (IPS phospholipase C); r_1921 (M(IP)2C transport) |
+| s_0868 | inositol phosphomannosylinositol phosphoceramide B (C24) | g | after other dead ends | 10 | r_1483 (inositol phosphomannosylinositol phospho); r_1921 (M(IP)2C transport); r_3380 (inositolphosphotransferase (PI (1-16:0, ); r_3381 (inositolphosphotransferase (PI (1-16:1, ); r_3382 (inositolphosphotransferase (PI (1-18:0, ); r_3383 (inositolphosphotransferase (PI (1-18:1, ); r_3384 (inositolphosphotransferase (PI (1-16:0, ); r_3385 (inositolphosphotransferase (PI (1-16:1, ); r_3386 (inositolphosphotransferase (PI (1-18:0, ); r_3387 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0869 | inositol phosphomannosylinositol phosphoceramide B (C24) | m | never produced | 1 | r_0640 (IPS phospholipase C) |
+| s_0870 | inositol phosphomannosylinositol phosphoceramide B (C26) | er | after other dead ends | 2 | r_0611 (IPS phospholipase C); r_1926 (M(IP)2C transport) |
+| s_0871 | inositol phosphomannosylinositol phosphoceramide B (C26) | g | after other dead ends | 10 | r_1484 (inositol phosphomannosylinositol phospho); r_1926 (M(IP)2C transport); r_3388 (inositolphosphotransferase (PI (1-16:0, ); r_3389 (inositolphosphotransferase (PI (1-16:1, ); r_3390 (inositolphosphotransferase (PI (1-18:0, ); r_3391 (inositolphosphotransferase (PI (1-18:1, ); r_3392 (inositolphosphotransferase (PI (1-16:0, ); r_3393 (inositolphosphotransferase (PI (1-16:1, ); r_3394 (inositolphosphotransferase (PI (1-18:0, ); r_3395 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0872 | inositol phosphomannosylinositol phosphoceramide B (C26) | m | never produced | 1 | r_0641 (IPS phospholipase C) |
+| s_0873 | inositol phosphomannosylinositol phosphoceramide B' (C24) | er | after other dead ends | 2 | r_0608 (IPS phospholipase C); r_1922 (M(IP)2C transport) |
+| s_0874 | inositol phosphomannosylinositol phosphoceramide B' (C24) | g | after other dead ends | 10 | r_1481 (inositol phosphomannosylinositol phospho); r_1922 (M(IP)2C transport); r_3364 (inositolphosphotransferase (PI (1-16:0, ); r_3365 (inositolphosphotransferase (PI (1-16:1, ); r_3366 (inositolphosphotransferase (PI (1-18:0, ); r_3367 (inositolphosphotransferase (PI (1-18:1, ); r_3368 (inositolphosphotransferase (PI (1-16:0, ); r_3369 (inositolphosphotransferase (PI (1-16:1, ); r_3370 (inositolphosphotransferase (PI (1-18:0, ); r_3371 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0875 | inositol phosphomannosylinositol phosphoceramide B' (C24) | m | never produced | 1 | r_0638 (IPS phospholipase C) |
+| s_0876 | inositol phosphomannosylinositol phosphoceramide B' (C26) | er | after other dead ends | 2 | r_0609 (IPS phospholipase C); r_1927 (M(IP)2C transport) |
+| s_0877 | inositol phosphomannosylinositol phosphoceramide B' (C26) | g | after other dead ends | 10 | r_1482 (inositol phosphomannosylinositol phospho); r_1927 (M(IP)2C transport); r_3372 (inositolphosphotransferase (PI (1-16:0, ); r_3373 (inositolphosphotransferase (PI (1-16:1, ); r_3374 (inositolphosphotransferase (PI (1-18:0, ); r_3375 (inositolphosphotransferase (PI (1-18:1, ); r_3376 (inositolphosphotransferase (PI (1-16:0, ); r_3377 (inositolphosphotransferase (PI (1-16:1, ); r_3378 (inositolphosphotransferase (PI (1-18:0, ); r_3379 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0878 | inositol phosphomannosylinositol phosphoceramide B' (C26) | m | never produced | 1 | r_0639 (IPS phospholipase C) |
+| s_0879 | inositol phosphomannosylinositol phosphoceramide C (C24) | er | after other dead ends | 2 | r_0612 (IPS phospholipase C); r_1923 (M(IP)2C transport) |
+| s_0880 | inositol phosphomannosylinositol phosphoceramide C (C24) | g | after other dead ends | 10 | r_1485 (inositol phosphomannosylinositol phospho); r_1923 (M(IP)2C transport); r_3396 (inositolphosphotransferase (PI (1-16:0, ); r_3397 (inositolphosphotransferase (PI (1-16:1, ); r_3398 (inositolphosphotransferase (PI (1-18:0, ); r_3399 (inositolphosphotransferase (PI (1-18:1, ); r_3400 (inositolphosphotransferase (PI (1-16:0, ); r_3401 (inositolphosphotransferase (PI (1-16:1, ); r_3402 (inositolphosphotransferase (PI (1-18:0, ); r_3403 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0881 | inositol phosphomannosylinositol phosphoceramide C (C24) | m | never produced | 1 | r_0642 (IPS phospholipase C) |
+| s_0882 | inositol phosphomannosylinositol phosphoceramide C (C26) | er | after other dead ends | 2 | r_0613 (IPS phospholipase C); r_1928 (M(IP)2C transport) |
+| s_0883 | inositol phosphomannosylinositol phosphoceramide C (C26) | g | after other dead ends | 10 | r_1486 (inositol phosphomannosylinositol phospho); r_1928 (M(IP)2C transport); r_3404 (inositolphosphotransferase (PI (1-16:0, ); r_3405 (inositolphosphotransferase (PI (1-16:1, ); r_3406 (inositolphosphotransferase (PI (1-18:0, ); r_3407 (inositolphosphotransferase (PI (1-18:1, ); r_3408 (inositolphosphotransferase (PI (1-16:0, ); r_3409 (inositolphosphotransferase (PI (1-16:1, ); r_3410 (inositolphosphotransferase (PI (1-18:0, ); r_3411 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0884 | inositol phosphomannosylinositol phosphoceramide C (C26) | m | never produced | 1 | r_0643 (IPS phospholipase C) |
+| s_0885 | inositol phosphomannosylinositol phosphoceramide D (C24) | er | after other dead ends | 2 | r_0614 (IPS phospholipase C); r_1924 (M(IP)2C transport) |
+| s_0886 | inositol phosphomannosylinositol phosphoceramide D (C24) | g | after other dead ends | 10 | r_1487 (inositol phosphomannosylinositol phospho); r_1924 (M(IP)2C transport); r_3412 (inositolphosphotransferase (PI (1-16:0, ); r_3413 (inositolphosphotransferase (PI (1-16:1, ); r_3414 (inositolphosphotransferase (PI (1-18:0, ); r_3415 (inositolphosphotransferase (PI (1-18:1, ); r_3416 (inositolphosphotransferase (PI (1-16:0, ); r_3417 (inositolphosphotransferase (PI (1-16:1, ); r_3418 (inositolphosphotransferase (PI (1-18:0, ); r_3419 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0887 | inositol phosphomannosylinositol phosphoceramide D (C24) | m | never produced | 1 | r_0644 (IPS phospholipase C) |
+| s_0888 | inositol phosphomannosylinositol phosphoceramide D (C26) | er | after other dead ends | 2 | r_0615 (IPS phospholipase C); r_1929 (M(IP)2C transport) |
+| s_0889 | inositol phosphomannosylinositol phosphoceramide D (C26) | g | after other dead ends | 10 | r_1488 (inositol phosphomannosylinositol phospho); r_1929 (M(IP)2C transport); r_3420 (inositolphosphotransferase (PI (1-16:0, ); r_3421 (inositolphosphotransferase (PI (1-16:1, ); r_3422 (inositolphosphotransferase (PI (1-18:0, ); r_3423 (inositolphosphotransferase (PI (1-18:1, ); r_3424 (inositolphosphotransferase (PI (1-16:0, ); r_3425 (inositolphosphotransferase (PI (1-16:1, ); r_3426 (inositolphosphotransferase (PI (1-18:0, ); r_3427 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_0890 | inositol phosphomannosylinositol phosphoceramide D (C26) | m | never produced | 1 | r_0645 (IPS phospholipase C) |
+| s_0892 | inositol-P-ceramide backbone | g | after other dead ends | 11 | r_1449 (inositol-P-ceramide B' (C24) [Golgi] SLI); r_1450 (inositol-P-ceramide B' (C26) [Golgi] SLI); r_1451 (inositol-P-ceramide C (C24) [Golgi] SLIM); r_1452 (inositol-P-ceramide C (C26) [Golgi] SLIM); r_1453 (inositol-P-ceramide A (C24) [Golgi] SLIM); r_1454 (inositol-P-ceramide A (C26) [Golgi] SLIM); r_1455 (inositol-P-ceramide B (C24) [Golgi] SLIM); r_1456 (inositol-P-ceramide B (C26) [Golgi] SLIM); r_1457 (inositol-P-ceramide D (C24) [Golgi] SLIM); r_1458 (inositol-P-ceramide D (C26) [Golgi] SLIM); r_4053 (inositol-P-ceramide transport) |
+| s_0896 | inositol-P-ceramide A (C24) | m | never produced | 1 | r_0616 (IPS phospholipase C) |
+| s_0899 | inositol-P-ceramide A (C26) | m | never produced | 1 | r_0617 (IPS phospholipase C) |
+| s_0902 | inositol-P-ceramide B (C24) | m | never produced | 1 | r_0620 (IPS phospholipase C) |
+| s_0905 | inositol-P-ceramide B (C26) | m | never produced | 1 | r_0621 (IPS phospholipase C) |
+| s_0908 | inositol-P-ceramide B' (C24) | m | never produced | 1 | r_0618 (IPS phospholipase C) |
+| s_0911 | inositol-P-ceramide B' (C26) | m | never produced | 1 | r_0619 (IPS phospholipase C) |
+| s_0914 | inositol-P-ceramide C (C24) | m | never produced | 1 | r_0622 (IPS phospholipase C) |
+| s_0917 | inositol-P-ceramide C (C26) | m | never produced | 1 | r_0623 (IPS phospholipase C) |
+| s_0920 | inositol-P-ceramide D (C24) | m | never produced | 1 | r_0624 (IPS phospholipase C) |
+| s_0923 | inositol-P-ceramide D (C26) | m | never produced | 1 | r_0625 (IPS phospholipase C) |
+| s_0944 | isopentenyl diphosphate | lp | after other dead ends | 19 | r_0281 (cis-prenyltransferase step 01); r_0282 (cis-prenyltransferase step 02); r_0283 (cis-prenyltransferase step 03); r_0284 (cis-prenyltransferase step 04); r_0285 (cis-prenyltransferase step 05); r_0286 (cis-prenyltransferase step 06); r_0287 (cis-prenyltransferase step 07); r_0288 (cis-prenyltransferase step 08); r_0289 (cis-prenyltransferase step 09); r_0290 (cis-prenyltransferase step 10); r_0291 (cis-prenyltransferase step 11); r_0292 (cis-prenyltransferase step 12); r_0293 (cis-prenyltransferase step 13); r_0294 (cis-prenyltransferase step 14); r_0295 (cis-prenyltransferase step 15); r_0296 (cis-prenyltransferase step 16); r_0297 (cis-prenyltransferase step 17); r_0298 (cis-prenyltransferase step 18); r_0299 (cis-prenyltransferase step 19) |
+| s_0946 | itaconate | m | after other dead ends | 1 | r_0668 (itaconate-CoA ligase (ADP-forming)) |
+| s_0949 | itaconyl-CoA | m | after other dead ends | 1 | r_0668 (itaconate-CoA ligase (ADP-forming)) |
+| s_0952 | L-2-amino-3-oxobutanoate | c | after other dead ends | 3 | r_0500 (glycine C-acetyltransferase); r_0676 (L-allo-threonine dehydrogenase); r_1872 (L-2-amino-3-oxobutanoate decarboxylation) |
+| s_0956 | L-alanine | e | never produced | 2 | r_1183 (L-alanine transport); r_1873 (L-alanine exchange) |
+| s_0958 | L-allothreonine | c | after other dead ends | 2 | r_0675 (L-allo-threonine aldolase); r_0676 (L-allo-threonine dehydrogenase) |
+| s_0960 | L-alpha-formylglycine | c | never consumed | 1 | r_0690 (L-serine dehydrogenase) |
+| s_0961 | L-arabinitol | c | after other dead ends | 3 | r_0205 (arabinose reductase); r_1876 (L-arabinitol transport); r_4489 (L-arabinitol:NAD+ 4-oxidoreductase (L-xy) |
+| s_0962 | L-arabinitol | e | after other dead ends | 2 | r_1875 (L-arabinitol exchange); r_1876 (L-arabinitol transport) |
+| s_0963 | L-arabinose | c | after other dead ends | 2 | r_0205 (arabinose reductase); r_1877 (L-arabinoase transport) |
+| s_0964 | L-arabinose | e | after other dead ends | 2 | r_1877 (L-arabinoase transport); r_1878 (L-arabinose exchange) |
+| s_0966 | L-arginine | e | never produced | 2 | r_1184 (L-arganine transport); r_1879 (L-arginine exchange) |
+| s_0967 | L-arginine | m | after other dead ends | 2 | r_0210 (arginyl-tRNA synthetase); r_1657 (arginine transport) |
+| s_0970 | L-asparagine | e | never produced | 3 | r_0680 (L-asparaginase); r_1186 (L-asparagine transport); r_1880 (L-asparagine exchange) |
+| s_0971 | L-asparagine | m | after other dead ends | 2 | r_0213 (asparaginyl-tRNA synthetase, miotchondri); r_1658 (asparagine transport) |
+| s_0974 | L-aspartate | e | after other dead ends | 3 | r_0680 (L-asparaginase); r_1190 (L-aspartate transport); r_1881 (L-aspartate exchange) |
+| s_0977 | L-aspartate | v | after other dead ends | 2 | r_1189 (L-aspartate transport); r_4386 (dipeptidase) |
+| s_0982 | L-cysteine | e | never produced | 2 | r_1192 (L-cystine transport); r_1883 (L-cysteine exchange) |
+| s_0984 | L-cystine | c | never consumed | 1 | r_1193 (L-cystine transport) |
+| s_0985 | L-cystine | v | never produced | 1 | r_1193 (L-cystine transport) |
+| s_0987 | L-gamma-glutamyl-L-alanine | c | never consumed | 1 | r_0457 (g-glutamyltransferase) |
+| s_0989 | L-glucitol | c | after other dead ends | 2 | r_0691 (L-sorbitol dehydrogenase (L-sorbose-prod); r_1908 (L-sorbitol transport) |
+| s_0990 | L-glucitol | e | after other dead ends | 2 | r_1886 (L-glucitol exchange); r_1908 (L-sorbitol transport) |
+| s_0992 | L-glutamate | e | never produced | 2 | r_1196 (L-glutamate transport); r_1889 (L-glutamate exchange) |
+| s_0996 | L-glutamate | v | after other dead ends | 3 | r_1195 (L-glutamate transport); r_4409 (L-alanyl-gamma-L-glutamate peptidase); r_4439 (cytosol nonspecific dipeptidase) |
+| s_1000 | L-glutamine | e | never produced | 2 | r_1199 (L-glutamine transport); r_1891 (L-glutamine exchange) |
+| s_1007 | L-histidine | e | never produced | 2 | r_1201 (L-histidine transport); r_1893 (L-histidine exchange) |
+| s_1008 | L-histidine | m | after other dead ends | 2 | r_0540 (histidyl-tRNA synthetase); r_1837 (L-histidine transport, mitochondrial) |
+| s_1017 | L-isoleucine | e | never produced | 2 | r_1205 (L-isoleucine transport); r_1897 (L-isoleucine exchange) |
+| s_1022 | L-leucine | e | never produced | 2 | r_1211 (L-leucine transport); r_1899 (L-leucine exchange) |
+| s_1023 | L-leucine | m | after other dead ends | 2 | r_0700 (leucine transaminase); r_0702 (leucyl-tRNA synthetase) |
+| s_1026 | L-lysine | e | never produced | 2 | r_1213 (L-lysine transport); r_1900 (L-lysine exchange) |
+| s_1027 | L-lysine | m | after other dead ends | 2 | r_0712 (lysyl-tRNA synthetase); r_1919 (lysine transport) |
+| s_1030 | L-methionine | e | never produced | 2 | r_1214 (L-methionine transport); r_1902 (L-methionine exchange) |
+| s_1031 | L-methionine | m | never produced | 2 | r_0730 (methionyl-tRNA synthetase); r_1935 (methionine transport) |
+| s_1033 | L-phenylalanine | e | never produced | 2 | r_1215 (L-phenylalanine transport); r_1903 (L-phenylalanine exchange) |
+| s_1034 | L-phenylalanine | m | after other dead ends | 2 | r_0853 (phenylalanyl-tRNA synthetase); r_2004 (phenylalanine transport) |
+| s_1036 | L-proline | e | never produced | 2 | r_1216 (L-proline transport); r_1904 (L-proline exchange) |
+| s_1041 | L-serine | e | never produced | 2 | r_1217 (L-serine transport); r_1906 (L-serine exchange) |
+| s_1043 | L-sorbose | c | after other dead ends | 3 | r_0691 (L-sorbitol dehydrogenase (L-sorbose-prod); r_1910 (L-sorbose transport); r_4221 (D-Iditol:NAD+ 2-oxidoreductase) |
+| s_1044 | L-sorbose | e | after other dead ends | 2 | r_1909 (L-sorbose exchange); r_1910 (L-sorbose transport) |
+| s_1046 | L-threonine | e | never produced | 2 | r_1218 (L-threonine transport); r_1911 (L-threonine exchange) |
+| s_1049 | L-tryptophan | e | never produced | 2 | r_1219 (L-tryptophan transport); r_1912 (L-tryptophan exchange) |
+| s_1050 | L-tryptophan | m | after other dead ends | 2 | r_1058 (tryptophanyl-tRNA synthetase); r_2082 (tryptophan transport) |
+| s_1052 | L-tyrosine | e | never produced | 2 | r_1223 (L-tyrosine transport); r_1913 (L-tyrosine exchange) |
+| s_1053 | L-tyrosine | m | after other dead ends | 2 | r_1067 (tyrosyl-tRNA synthetase); r_2086 (tyrosine transport) |
+| s_1057 | L-valine | e | never produced | 2 | r_1224 (L-valine transport); r_1914 (L-valine exchange) |
+| s_1078 | Leu-tRNA(Leu) | m | never consumed | 1 | r_0702 (leucyl-tRNA synthetase) |
+| s_1079 | leukotriene A4 | c | after other dead ends | 3 | r_0703 (leukotriene A4 hydrolase); r_0705 (leukotriene A4 hydrolase); r_0707 (leukotriene A4 hydrolase) |
+| s_1080 | leukotriene A4 | n | after other dead ends | 3 | r_0704 (leukotriene A4 hydrolase); r_0706 (leukotriene A4 hydrolase); r_0708 (leukotriene A4 hydrolase) |
+| s_1081 | leukotriene B4 | c | after other dead ends | 1 | r_0707 (leukotriene A4 hydrolase) |
+| s_1082 | leukotriene B4 | n | after other dead ends | 1 | r_0708 (leukotriene A4 hydrolase) |
+| s_1100 | Lys-tRNA(Lys) | m | never consumed | 1 | r_0712 (lysyl-tRNA synthetase) |
+| s_1104 | malonyl-CoA | m | after other dead ends | 2 | r_0108 (acetyl-Coa carboxylase); r_0721 (malonyl-CoA-ACP transacylase) |
+| s_1105 | maltose | c | after other dead ends | 2 | r_0198 (alpha-glucosidase); r_1227 (maltose transport) |
+| s_1106 | maltose | e | after other dead ends | 3 | r_1227 (maltose transport); r_1931 (maltose exchange); r_4400 (Maltodextrin glucosidase (maltotriose)) |
+| s_1109 | mannose-(1D-myo-inositol 1-phosphate)2 | er | never consumed | 10 | r_0606 (IPS phospholipase C); r_0607 (IPS phospholipase C); r_0608 (IPS phospholipase C); r_0609 (IPS phospholipase C); r_0610 (IPS phospholipase C); r_0611 (IPS phospholipase C); r_0612 (IPS phospholipase C); r_0613 (IPS phospholipase C); r_0614 (IPS phospholipase C); r_0615 (IPS phospholipase C) |
+| s_1110 | mannose-(1D-myo-inositol 1-phosphate)2 | m | never consumed | 10 | r_0636 (IPS phospholipase C); r_0637 (IPS phospholipase C); r_0638 (IPS phospholipase C); r_0639 (IPS phospholipase C); r_0640 (IPS phospholipase C); r_0641 (IPS phospholipase C); r_0642 (IPS phospholipase C); r_0643 (IPS phospholipase C); r_0644 (IPS phospholipase C); r_0645 (IPS phospholipase C) |
+| s_1111 | mannose-1D-myo-inositol 1-phosphate | er | never consumed | 10 | r_0596 (IPS phospholipase C); r_0597 (IPS phospholipase C); r_0598 (IPS phospholipase C); r_0599 (IPS phospholipase C); r_0600 (IPS phospholipase C); r_0601 (IPS phospholipase C); r_0602 (IPS phospholipase C); r_0603 (IPS phospholipase C); r_0604 (IPS phospholipase C); r_0605 (IPS phospholipase C) |
+| s_1112 | mannose-1D-myo-inositol 1-phosphate | m | never consumed | 10 | r_0626 (IPS phospholipase C); r_0627 (IPS phospholipase C); r_0628 (IPS phospholipase C); r_0629 (IPS phospholipase C); r_0630 (IPS phospholipase C); r_0631 (IPS phospholipase C); r_0632 (IPS phospholipase C); r_0633 (IPS phospholipase C); r_0634 (IPS phospholipase C); r_0635 (IPS phospholipase C) |
+| s_1114 | mannosylinositol phosphorylceramide backbone | g | after other dead ends | 11 | r_1509 (mannosylinositol phosphorylceramide B' (); r_1510 (mannosylinositol phosphorylceramide B' (); r_1511 (mannosylinositol phosphorylceramide C (C); r_1512 (mannosylinositol phosphorylceramide C (C); r_1513 (mannosylinositol phosphorylceramide A (C); r_1514 (mannosylinositol phosphorylceramide A (C); r_1515 (mannosylinositol phosphorylceramide B (C); r_1516 (mannosylinositol phosphorylceramide B (C); r_1517 (mannosylinositol phosphorylceramide D (C); r_1518 (mannosylinositol phosphorylceramide D (C); r_4054 (mannosylinositol phosphorylceramide tran) |
+| s_1116 | mannosylinositol phosphorylceramide A (C24) | er | after other dead ends | 2 | r_0596 (IPS phospholipase C); r_1937 (MIPC transport) |
+| s_1117 | mannosylinositol phosphorylceramide A (C24) | g | after other dead ends | 11 | r_0747 (MIPC synthase); r_1513 (mannosylinositol phosphorylceramide A (C); r_1937 (MIPC transport); r_3348 (inositolphosphotransferase (PI (1-16:0, ); r_3349 (inositolphosphotransferase (PI (1-16:1, ); r_3350 (inositolphosphotransferase (PI (1-18:0, ); r_3351 (inositolphosphotransferase (PI (1-18:1, ); r_3352 (inositolphosphotransferase (PI (1-16:0, ); r_3353 (inositolphosphotransferase (PI (1-16:1, ); r_3354 (inositolphosphotransferase (PI (1-18:0, ); r_3355 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1118 | mannosylinositol phosphorylceramide A (C24) | m | never produced | 1 | r_0626 (IPS phospholipase C) |
+| s_1119 | mannosylinositol phosphorylceramide A (C26) | er | after other dead ends | 2 | r_0597 (IPS phospholipase C); r_1942 (MIPC transport) |
+| s_1120 | mannosylinositol phosphorylceramide A (C26) | g | after other dead ends | 11 | r_0748 (MIPC synthase); r_1514 (mannosylinositol phosphorylceramide A (C); r_1942 (MIPC transport); r_3356 (inositolphosphotransferase (PI (1-16:0, ); r_3357 (inositolphosphotransferase (PI (1-16:1, ); r_3358 (inositolphosphotransferase (PI (1-18:0, ); r_3359 (inositolphosphotransferase (PI (1-18:1, ); r_3360 (inositolphosphotransferase (PI (1-16:0, ); r_3361 (inositolphosphotransferase (PI (1-16:1, ); r_3362 (inositolphosphotransferase (PI (1-18:0, ); r_3363 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1121 | mannosylinositol phosphorylceramide A (C26) | m | never produced | 1 | r_0627 (IPS phospholipase C) |
+| s_1122 | mannosylinositol phosphorylceramide B (C24) | er | after other dead ends | 2 | r_0600 (IPS phospholipase C); r_1938 (MIPC transport) |
+| s_1123 | mannosylinositol phosphorylceramide B (C24) | g | after other dead ends | 11 | r_0751 (MIPC synthase); r_1515 (mannosylinositol phosphorylceramide B (C); r_1938 (MIPC transport); r_3380 (inositolphosphotransferase (PI (1-16:0, ); r_3381 (inositolphosphotransferase (PI (1-16:1, ); r_3382 (inositolphosphotransferase (PI (1-18:0, ); r_3383 (inositolphosphotransferase (PI (1-18:1, ); r_3384 (inositolphosphotransferase (PI (1-16:0, ); r_3385 (inositolphosphotransferase (PI (1-16:1, ); r_3386 (inositolphosphotransferase (PI (1-18:0, ); r_3387 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1124 | mannosylinositol phosphorylceramide B (C24) | m | never produced | 1 | r_0630 (IPS phospholipase C) |
+| s_1125 | mannosylinositol phosphorylceramide B (C26) | er | after other dead ends | 2 | r_0601 (IPS phospholipase C); r_1943 (MIPC transport) |
+| s_1126 | mannosylinositol phosphorylceramide B (C26) | g | after other dead ends | 11 | r_0752 (MIPC synthase); r_1516 (mannosylinositol phosphorylceramide B (C); r_1943 (MIPC transport); r_3388 (inositolphosphotransferase (PI (1-16:0, ); r_3389 (inositolphosphotransferase (PI (1-16:1, ); r_3390 (inositolphosphotransferase (PI (1-18:0, ); r_3391 (inositolphosphotransferase (PI (1-18:1, ); r_3392 (inositolphosphotransferase (PI (1-16:0, ); r_3393 (inositolphosphotransferase (PI (1-16:1, ); r_3394 (inositolphosphotransferase (PI (1-18:0, ); r_3395 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1127 | mannosylinositol phosphorylceramide B (C26) | m | never produced | 1 | r_0631 (IPS phospholipase C) |
+| s_1128 | mannosylinositol phosphorylceramide B' (C24) | er | after other dead ends | 2 | r_0598 (IPS phospholipase C); r_1939 (MIPC transport) |
+| s_1129 | mannosylinositol phosphorylceramide B' (C24) | g | after other dead ends | 11 | r_0749 (MIPC synthase); r_1509 (mannosylinositol phosphorylceramide B' (); r_1939 (MIPC transport); r_3364 (inositolphosphotransferase (PI (1-16:0, ); r_3365 (inositolphosphotransferase (PI (1-16:1, ); r_3366 (inositolphosphotransferase (PI (1-18:0, ); r_3367 (inositolphosphotransferase (PI (1-18:1, ); r_3368 (inositolphosphotransferase (PI (1-16:0, ); r_3369 (inositolphosphotransferase (PI (1-16:1, ); r_3370 (inositolphosphotransferase (PI (1-18:0, ); r_3371 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1130 | mannosylinositol phosphorylceramide B' (C24) | m | never produced | 1 | r_0628 (IPS phospholipase C) |
+| s_1131 | mannosylinositol phosphorylceramide B' (C26) | er | after other dead ends | 2 | r_0599 (IPS phospholipase C); r_1944 (MIPC transport) |
+| s_1132 | mannosylinositol phosphorylceramide B' (C26) | g | after other dead ends | 11 | r_0750 (MIPC synthase); r_1510 (mannosylinositol phosphorylceramide B' (); r_1944 (MIPC transport); r_3372 (inositolphosphotransferase (PI (1-16:0, ); r_3373 (inositolphosphotransferase (PI (1-16:1, ); r_3374 (inositolphosphotransferase (PI (1-18:0, ); r_3375 (inositolphosphotransferase (PI (1-18:1, ); r_3376 (inositolphosphotransferase (PI (1-16:0, ); r_3377 (inositolphosphotransferase (PI (1-16:1, ); r_3378 (inositolphosphotransferase (PI (1-18:0, ); r_3379 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1133 | mannosylinositol phosphorylceramide B' (C26) | m | never produced | 1 | r_0629 (IPS phospholipase C) |
+| s_1134 | mannosylinositol phosphorylceramide C (C24) | er | after other dead ends | 2 | r_0602 (IPS phospholipase C); r_1940 (MIPC transport) |
+| s_1135 | mannosylinositol phosphorylceramide C (C24) | g | after other dead ends | 11 | r_0753 (MIPC synthase); r_1511 (mannosylinositol phosphorylceramide C (C); r_1940 (MIPC transport); r_3396 (inositolphosphotransferase (PI (1-16:0, ); r_3397 (inositolphosphotransferase (PI (1-16:1, ); r_3398 (inositolphosphotransferase (PI (1-18:0, ); r_3399 (inositolphosphotransferase (PI (1-18:1, ); r_3400 (inositolphosphotransferase (PI (1-16:0, ); r_3401 (inositolphosphotransferase (PI (1-16:1, ); r_3402 (inositolphosphotransferase (PI (1-18:0, ); r_3403 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1136 | mannosylinositol phosphorylceramide C (C24) | m | never produced | 1 | r_0632 (IPS phospholipase C) |
+| s_1137 | mannosylinositol phosphorylceramide C (C26) | er | after other dead ends | 2 | r_0603 (IPS phospholipase C); r_1945 (MIPC transport) |
+| s_1138 | mannosylinositol phosphorylceramide C (C26) | g | after other dead ends | 11 | r_0754 (MIPC synthase); r_1512 (mannosylinositol phosphorylceramide C (C); r_1945 (MIPC transport); r_3404 (inositolphosphotransferase (PI (1-16:0, ); r_3405 (inositolphosphotransferase (PI (1-16:1, ); r_3406 (inositolphosphotransferase (PI (1-18:0, ); r_3407 (inositolphosphotransferase (PI (1-18:1, ); r_3408 (inositolphosphotransferase (PI (1-16:0, ); r_3409 (inositolphosphotransferase (PI (1-16:1, ); r_3410 (inositolphosphotransferase (PI (1-18:0, ); r_3411 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1139 | mannosylinositol phosphorylceramide C (C26) | m | never produced | 1 | r_0633 (IPS phospholipase C) |
+| s_1140 | mannosylinositol phosphorylceramide D (C24) | er | after other dead ends | 2 | r_0604 (IPS phospholipase C); r_1941 (MIPC transport) |
+| s_1141 | mannosylinositol phosphorylceramide D (C24) | g | after other dead ends | 11 | r_0755 (MIPC synthase); r_1517 (mannosylinositol phosphorylceramide D (C); r_1941 (MIPC transport); r_3412 (inositolphosphotransferase (PI (1-16:0, ); r_3413 (inositolphosphotransferase (PI (1-16:1, ); r_3414 (inositolphosphotransferase (PI (1-18:0, ); r_3415 (inositolphosphotransferase (PI (1-18:1, ); r_3416 (inositolphosphotransferase (PI (1-16:0, ); r_3417 (inositolphosphotransferase (PI (1-16:1, ); r_3418 (inositolphosphotransferase (PI (1-18:0, ); r_3419 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1142 | mannosylinositol phosphorylceramide D (C24) | m | never produced | 1 | r_0634 (IPS phospholipase C) |
+| s_1143 | mannosylinositol phosphorylceramide D (C26) | er | after other dead ends | 2 | r_0605 (IPS phospholipase C); r_1946 (MIPC transport) |
+| s_1144 | mannosylinositol phosphorylceramide D (C26) | g | after other dead ends | 11 | r_0756 (MIPC synthase); r_1518 (mannosylinositol phosphorylceramide D (C); r_1946 (MIPC transport); r_3420 (inositolphosphotransferase (PI (1-16:0, ); r_3421 (inositolphosphotransferase (PI (1-16:1, ); r_3422 (inositolphosphotransferase (PI (1-18:0, ); r_3423 (inositolphosphotransferase (PI (1-18:1, ); r_3424 (inositolphosphotransferase (PI (1-16:0, ); r_3425 (inositolphosphotransferase (PI (1-16:1, ); r_3426 (inositolphosphotransferase (PI (1-18:0, ); r_3427 (inositolphosphotransferase (PI (1-18:1, ) |
+| s_1145 | mannosylinositol phosphorylceramide D (C26) | m | never produced | 1 | r_0635 (IPS phospholipase C) |
+| s_1149 | Met-tRNA(Met) | m | after other dead ends | 2 | r_0728 (methionyl-tRNA formyltransferase); r_0730 (methionyl-tRNA synthetase) |
+| s_1150 | methanethiol | c | never produced | 1 | r_0812 (O-acetylhomoserine (thiol)-lyase) |
+| s_1154 | myo-inositol | e | never produced | 2 | r_1177 (inositol transport); r_1947 (myo-inositol exchange) |
+| s_1180 | N(1)-acetylspermidine | c | after other dead ends | 3 | r_0929 (polyamine oxidase); r_0936 (poylamine oxidase); r_2050 (spermidine acetyltransferase) |
+| s_1181 | N(1)-acetylspermine | c | after other dead ends | 2 | r_0936 (poylamine oxidase); r_1739 (diamine transaminase) |
+| s_1183 | N(pros)-methyl-L-histidine | c | never consumed | 1 | r_0541 (hnRNP arginine N-methyltransferase) |
+| s_1184 | N,N'-diacetylchitobiosyldiphosphodolichol | c | never produced | 1 | r_0228 (beta-1,4 mannosyltransferase) |
+| s_1193 | N-acetylputrescine | c | never consumed | 1 | r_0929 (polyamine oxidase) |
+| s_1199 | NAD | er | never consumed | 1 | r_1010 (squalene epoxidase (NAD)) |
+| s_1204 | NADH | er | never produced | 1 | r_1010 (squalene epoxidase (NAD)) |
+| s_1217 | nicotinamide | n | after other dead ends | 2 | r_0767 (NAD nucleosidase nuclear); r_1966 (nicotinamide diffusion) |
+| s_1218 | nicotinamide riboside | c | never produced | 2 | r_0943 (purine-nucleoside phosphorylase); r_0983 (ribosylnicotinamide kinase) |
+| s_1221 | nicotinate | m | after other dead ends | 2 | r_0775 (NAPRtase); r_4605 (nicotinate transport) |
+| s_1223 | nicotinic acid D-ribonucleotide | m | never consumed | 2 | r_0775 (NAPRtase); r_0787 (nicotinate-nucleotide diphosphorylase (c) |
+| s_1225 | NMN | e | never produced | 2 | r_1968 (NMN exchange); r_1972 (NMN transport) |
+| s_1229 | nonadecaprenyl diphosphate | lp | after other dead ends | 2 | r_0296 (cis-prenyltransferase step 16); r_0297 (cis-prenyltransferase step 17) |
+| s_1230 | nonaprenyl 4-hydroxybenzoate | c | never consumed | 1 | r_0249 (CAAX farnesyltransferase) |
+| s_1231 | nonaprenyl diphosphate | c | never produced | 1 | r_0249 (CAAX farnesyltransferase) |
+| s_1232 | nonaprenyl diphosphate | lp | after other dead ends | 2 | r_0286 (cis-prenyltransferase step 06); r_0287 (cis-prenyltransferase step 07) |
+| s_1239 | O-phosphoethanolamine | c | after other dead ends | 4 | r_0368 (ethanolamine kinase); r_0885 (phosphoethanolamine cytidyltransferase); r_4457 (O-Phosphoryl-Ethanolamine transport in v); r_4606 (O-phosphoethanolamine transport) |
+| s_1240 | O-phosphoethanolamine | er | after other dead ends | 3 | r_0921 (Phytosphingosine phosphate lyase); r_1003 (sphinganine phosphate lyase); r_4606 (O-phosphoethanolamine transport) |
+| s_1246 | octadecaprenyl diphosphate | lp | after other dead ends | 2 | r_0295 (cis-prenyltransferase step 15); r_0296 (cis-prenyltransferase step 16) |
+| s_1254 | octanoyl-ACP | m | never consumed | 1 | r_2153 (enoyl-ACP reductase (octanoyl-ACP)) |
+| s_1259 | octaprenyl diphosphate | lp | after other dead ends | 2 | r_0285 (cis-prenyltransferase step 05); r_0286 (cis-prenyltransferase step 06) |
+| s_1267 | ornithine | e | never produced | 2 | r_1238 (orntithine transport); r_1987 (ornithine exchange) |
+| s_1283 | P(1),P(4)-bis(5'-guanosyl) tetraphosphate | c | never consumed | 1 | r_0224 (ATP adenylyltransferase) |
+| s_1284 | P1-(5'-adenosyl),P4-(5'-guanosyl) tetraphosphate | c | never consumed | 1 | r_0223 (ATP adenylyltransferase) |
+| s_1309 | pectin | e | never produced | 2 | r_0365 (endopolygalacturonase); r_1999 (pectin exchange) |
+| s_1310 | pentadecaprenyl diphosphate | lp | after other dead ends | 2 | r_0292 (cis-prenyltransferase step 12); r_0293 (cis-prenyltransferase step 13) |
+| s_1312 | pentaprenyl diphosphate | lp | after other dead ends | 2 | r_0282 (cis-prenyltransferase step 02); r_0283 (cis-prenyltransferase step 03) |
+| s_1315 | Phe-tRNA(Phe) | m | never consumed | 1 | r_0853 (phenylalanyl-tRNA synthetase) |
+| s_1321 | phenylacetic acid | c | after other dead ends | 2 | r_0185 (aldehyde dehydrogenase (phenylacetaldehy); r_4227 (2-phenylacetamide amidohydrolase) |
+| s_1352 | phosphatidylethanolamine backbone | er | after other dead ends | 2 | r_0520 (GPI-anchor assembly, step 6); r_0523 (GPI-anchor assembly, step 9) |
+| s_1368 | pimeloyl-CoA | c | never produced | 1 | r_0094 (8-amino-7-oxononanoate synthase) |
+| s_1371 | polysulphur | c | after other dead ends | 1 | r_0229 (biotin synthase) |
+| s_1375 | precorrin-2 | c | after other dead ends | 2 | r_0998 (sirohydrochlorin dehydrogenase); r_1082 (uroporphyrinogen methyltransferase) |
+| s_1387 | PRPP | m | after other dead ends | 3 | r_0775 (NAPRtase); r_0787 (nicotinate-nucleotide diphosphorylase (c); r_2023 (PRPP transport) |
+| s_1388 | pseudouridine 5'-phosphate | c | after other dead ends | 1 | r_1095 (yUMP synthetase) |
+| s_1391 | putrescine | v | after other dead ends | 1 | r_1252 (putrescine transport) |
+| s_1397 | pyridoxine | e | never produced | 2 | r_1253 (pyridoxine symport); r_2028 (pyridoxine exchange) |
+| s_1400 | pyruvate | e | never produced | 2 | r_1254 (pyruvate transport); r_2033 (pyruvate exchange) |
+| s_1404 | quinolinate | m | after other dead ends | 2 | r_0787 (nicotinate-nucleotide diphosphorylase (c); r_2036 (quinolinate transport) |
+| s_1406 | riboflavin | e | after other dead ends | 3 | r_0116 (acid phosphatase (secreted)); r_2038 (riboflavin exchange); r_2040 (riboflavin transport) |
+| s_1412 | S-adenosyl-4-methylthio-2-oxobutanoate | c | after other dead ends | 1 | r_0146 (adenosylmethionine-8-amino-7-oxononanoat) |
+| s_1418 | S-adenosyl-L-methionine | e | never produced | 2 | r_1255 (S-adenosyl-L-methionine transport); r_2043 (S-adenosyl-L-methionine exchange) |
+| s_1421 | S-formylglutathione | c | after other dead ends | 2 | r_0443 (formaldehyde dehydrogenase); r_0987 (S-formylglutathione hydralase) |
+| s_1424 | S-methyl-L-methionine | c | never consumed | 1 | r_1257 (S-methylmethionine permease) |
+| s_1425 | S-methyl-L-methionine | e | never produced | 2 | r_1257 (S-methylmethionine permease); r_2044 (S-methyl-L-methionine exchange) |
+| s_1430 | siroheme | c | never consumed | 1 | r_0999 (sirohydrochlorin ferrochetalase) |
+| s_1431 | sirohydrochlorin | c | after other dead ends | 2 | r_0998 (sirohydrochlorin dehydrogenase); r_0999 (sirohydrochlorin ferrochetalase) |
+| s_1441 | spermidine | v | after other dead ends | 1 | r_1261 (spermidine transport) |
+| s_1444 | spermine | v | after other dead ends | 1 | r_1263 (spermine transport) |
+| s_1466 | sucrose | e | never produced | 2 | r_1024 (sucrose hydrolyzing enzyme); r_2058 (sucrose exchange) |
+| s_1471 | taurine | c | after other dead ends | 3 | r_1029 (taurine dioxygenase); r_1268 (taurine transport); r_4354 (hypotaurine:NAD+ oxidoreductase) |
+| s_1472 | taurine | e | after other dead ends | 2 | r_1268 (taurine transport); r_2062 (taurine exchange) |
+| s_1473 | taurocholate | c | never produced | 1 | r_1028 (taurcholate via ABC system) |
+| s_1474 | taurocholate | v | never consumed | 1 | r_1028 (taurcholate via ABC system) |
+| s_1476 | TDP | e | never produced | 2 | r_1032 (thiamin diphosphatase); r_2066 (thiamine(1+) diphosphate(1-) exchange) |
+| s_1477 | TDP | m | never consumed | 1 | r_1269 (thiamine diphosphate transport) |
+| s_1483 | tetradecaprenyl diphosphate | lp | after other dead ends | 2 | r_0291 (cis-prenyltransferase step 11); r_0292 (cis-prenyltransferase step 12) |
+| s_1486 | tetrahydropteroyltri-L-glutamic acid | c | never consumed | 1 | r_0085 (5-methyltetrahydropteroyltriglutamate-ho) |
+| s_1490 | thiamine | e | after other dead ends | 4 | r_1032 (thiamin diphosphatase); r_1033 (thiamin phosphatase); r_1270 (thiamine transport); r_2067 (thiamine(1+) exchange) |
+| s_1492 | Thr-tRNA(Thr) | m | never consumed | 1 | r_1043 (threonyl-tRNA synthetase) |
+| s_1498 | TMP | e | never produced | 2 | r_1033 (thiamin phosphatase); r_2068 (thiamine(1+) monophosphate exchange) |
+| s_1503 | trans-aconitate | c | after other dead ends | 2 | r_1009 (spontaneous cis-aconitate(3-) to trans-a); r_1046 (trans-aconitate 3-methyltransferase) |
+| s_1504 | trans-aconitate | m | after other dead ends | 1 | r_1008 (spontaneous cis-aconitate(3-) to trans-a) |
+| s_1521 | trehalose | e | never produced | 2 | r_1650 (trehalose exchange); r_2079 (trehalose transporter) |
+| s_1523 | tridecaprenyl diphosphate | lp | after other dead ends | 2 | r_0290 (cis-prenyltransferase step 10); r_0291 (cis-prenyltransferase step 11) |
+| s_1526 | trimethylenediamine | c | never consumed | 1 | r_0331 (deoxyhypusine synthase, cytosolic/mitoch) |
+| s_1528 | Trp-tRNA(Trp) | m | never consumed | 1 | r_1058 (tryptophanyl-tRNA synthetase) |
+| s_1532 | thiamine(1+) triphosphate(4-) | c | never consumed | 1 | r_1035 (thiamine-diphosphate kinase) |
+| s_1534 | Tyr-tRNA(Tyr) | m | never consumed | 1 | r_1067 (tyrosyl-tRNA synthetase) |
+| s_1542 | UDP-D-galactose | g | never consumed | 1 | r_1271 (UDPgalactose transport) |
+| s_1547 | UMP | m | never produced | 2 | r_1275 (UTP transport); r_1276 (UTP/UMP antiport) |
+| s_1549 | undecaprenyl diphosphate | lp | after other dead ends | 2 | r_0288 (cis-prenyltransferase step 08); r_0289 (cis-prenyltransferase step 09) |
+| s_1551 | uracil | e | never produced | 2 | r_1272 (uracil transport); r_2090 (uracil exchange) |
+| s_1553 | urea | e | never produced | 2 | r_1273 (urea transport); r_2091 (urea exchange) |
+| s_1555 | ureidoglycolic acid | c | after other dead ends | 3 | r_0189 (allantoate amidinohydrolase); r_1076 (ureidoglycolate hydrolase); r_4765 (ureidoglycolate hydrolase) |
+| s_1557 | uridine | e | never produced | 2 | r_1274 (uridine transport); r_2092 (uridine exchange) |
+| s_1560 | UTP | m | never consumed | 2 | r_1275 (UTP transport); r_1276 (UTP/UMP antiport) |
+| s_1562 | Val-tRNA(Val) | m | never consumed | 1 | r_1090 (valyl-tRNA synthetase) |
+| s_1563 | xanthosine | c | never consumed | 2 | r_1620 (5'-nucleotidase (XMP)); r_2103 (xanthosine transport) |
+| s_1564 | xanthosine | e | never produced | 2 | r_2102 (xanthosine exchange); r_2103 (xanthosine transport) |
+| s_1566 | xylitol | c | after other dead ends | 4 | r_1092 (xylitol dehydrogenase (D-xyulose-forming); r_1093 (xylose reductase); r_2105 (xylitol transport); r_4490 (Xylitol:NADP+ 4-oxidoreductase (L-xylulo) |
+| s_1567 | xylitol | e | after other dead ends | 2 | r_2104 (xylitol exchange); r_2105 (xylitol transport) |
+| s_1584 | tRNA(Arg) | m | never produced | 1 | r_0210 (arginyl-tRNA synthetase) |
+| s_1586 | tRNA(Asn) | m | never produced | 1 | r_0213 (asparaginyl-tRNA synthetase, miotchondri) |
+| s_1588 | tRNA(Asp) | m | never produced | 1 | r_0221 (Aspartyl-tRNA synthetase) |
+| s_1592 | tRNA(Glu) | m | never produced | 1 | r_0480 (glutamyl-tRNA synthetase) |
+| s_1595 | tRNA(His) | m | never produced | 1 | r_0540 (histidyl-tRNA synthetase) |
+| s_1597 | tRNA(Ile) | m | never produced | 1 | r_0666 (isoleucyl-tRNA synthetase) |
+| s_1599 | tRNA(Leu) | m | never produced | 1 | r_0702 (leucyl-tRNA synthetase) |
+| s_1601 | tRNA(Lys) | m | never produced | 1 | r_0712 (lysyl-tRNA synthetase) |
+| s_1603 | tRNA(Met) | m | never produced | 1 | r_0730 (methionyl-tRNA synthetase) |
+| s_1605 | tRNA(Phe) | m | never produced | 1 | r_0853 (phenylalanyl-tRNA synthetase) |
+| s_1609 | tRNA(Thr) | m | never produced | 1 | r_1043 (threonyl-tRNA synthetase) |
+| s_1611 | tRNA(Trp) | m | never produced | 1 | r_1058 (tryptophanyl-tRNA synthetase) |
+| s_1613 | tRNA(Tyr) | m | never produced | 1 | r_1067 (tyrosyl-tRNA synthetase) |
+| s_1615 | tRNA(Val) | m | never produced | 1 | r_1090 (valyl-tRNA synthetase) |
+| s_1617 | TRX1 | m | after other dead ends | 2 | r_0551 (hydrogen peroxide reductase (thioredoxin); r_1039 (thioredoxin reductase (NADPH)) |
+| s_1618 | TRX1 | n | never produced | 5 | r_0975 (ribonucleotide reductase); r_0977 (ribonucleotide reductase); r_0979 (ribonucleotide reductase); r_1037 (thioredoxin); r_4787 (ribonucleotide reductase) |
+| s_1621 | TRX1 disulphide | m | after other dead ends | 2 | r_0551 (hydrogen peroxide reductase (thioredoxin); r_1039 (thioredoxin reductase (NADPH)) |
+| s_1622 | TRX1 disulphide | n | after other dead ends | 6 | r_0975 (ribonucleotide reductase); r_0977 (ribonucleotide reductase); r_0979 (ribonucleotide reductase); r_1037 (thioredoxin); r_4612 (TRX1 disulphide transport); r_4787 (ribonucleotide reductase) |
+| s_1845 | ACP1 | m | after other dead ends | 5 | r_0099 (acetyl-CoA ACP transacylase); r_0721 (malonyl-CoA-ACP transacylase); r_2142 (B-ketoacyl-ACP synthase (acetoacetyl-ACP); r_2143 (B-ketoacyl-ACP synthase (3-oxo-hexanoyl-); r_2144 (B-ketoacyl-ACP synthase (3-oxo-octanoyl-) |
+| s_2763 | kynurenic acid | c | after other dead ends | 2 | r_2112 (kynurenine aminotransferase); r_2113 (spontaneous kynurenic acid to quinaldic ) |
+| s_2764 | quinaldic acid | c | never consumed | 1 | r_2113 (spontaneous kynurenic acid to quinaldic ) |
+| s_2770 | acetoacetyl-ACP | m | after other dead ends | 2 | r_2142 (B-ketoacyl-ACP synthase (acetoacetyl-ACP); r_2145 (3-oxoacyl-ACP reductase (3-hydroxybutano) |
+| s_2771 | butanoyl-ACP | m | after other dead ends | 2 | r_2143 (B-ketoacyl-ACP synthase (3-oxo-hexanoyl-); r_2151 (enoyl-ACP reductase (butanoyl-ACP)) |
+| s_2772 | 3-oxo-hexanoyl-ACP | m | after other dead ends | 2 | r_2143 (B-ketoacyl-ACP synthase (3-oxo-hexanoyl-); r_2146 (3-oxoacyl-ACP reductase (3-hydroxyhexano) |
+| s_2773 | hexanoyl-ACP | m | after other dead ends | 2 | r_2144 (B-ketoacyl-ACP synthase (3-oxo-octanoyl-); r_2152 (enoyl-ACP reductase (hexanoyl-ACP)) |
+| s_2774 | 3-oxo-octanoyl-ACP | m | after other dead ends | 2 | r_2144 (B-ketoacyl-ACP synthase (3-oxo-octanoyl-); r_2147 (3-oxoacyl-ACP reductase (3-hydroxyoctano) |
+| s_2775 | 3-hydroxybutanoyl-ACP | m | after other dead ends | 2 | r_2145 (3-oxoacyl-ACP reductase (3-hydroxybutano); r_2148 (3-hydroxyacyl-thioester dehydratase (tra) |
+| s_2776 | 3-hydroxyhexanoyl-ACP | m | after other dead ends | 2 | r_2146 (3-oxoacyl-ACP reductase (3-hydroxyhexano); r_2149 (3-hydroxyacyl-thioester dehydratase (tra) |
+| s_2777 | 3-hydroxyoctanoyl-ACP | m | after other dead ends | 2 | r_2147 (3-oxoacyl-ACP reductase (3-hydroxyoctano); r_2150 (3-hydroxyacyl-thioester dehydratase (tra) |
+| s_2778 | trans-but-2-enoyl-ACP | m | after other dead ends | 2 | r_2148 (3-hydroxyacyl-thioester dehydratase (tra); r_2151 (enoyl-ACP reductase (butanoyl-ACP)) |
+| s_2779 | trans-hex-2-enoyl-ACP | m | after other dead ends | 2 | r_2149 (3-hydroxyacyl-thioester dehydratase (tra); r_2152 (enoyl-ACP reductase (hexanoyl-ACP)) |
+| s_2780 | trans-oct-2-enoyl-ACP | m | after other dead ends | 2 | r_2150 (3-hydroxyacyl-thioester dehydratase (tra); r_2153 (enoyl-ACP reductase (octanoyl-ACP)) |
+| s_2858 | arachidate | ce | after other dead ends | 1 | r_2209 (fatty-acid--CoA ligase (arachidate), cel) |
+| s_2861 | icosanoyl-CoA | ce | after other dead ends | 2 | r_2209 (fatty-acid--CoA ligase (arachidate), cel); r_3612 (icosanoyl-CoA transport, cell envelope-c) |
+| s_2862 | behenate | ce | after other dead ends | 1 | r_2210 (fatty-acid--CoA ligase (behenate), cell ) |
+| s_2863 | docosanoyl-CoA | ce | after other dead ends | 2 | r_2210 (fatty-acid--CoA ligase (behenate), cell ); r_3613 (docosanoyl-CoA transport, cell envelope-) |
+| s_2868 | behenate | erm | after other dead ends | 1 | r_2213 (fatty-acid--CoA ligase (behenate), ER me) |
+| s_2871 | behenate | lp | after other dead ends | 1 | r_2216 (fatty-acid--CoA ligase (behenate), lipid) |
+| s_2872 | docosanoyl-CoA | lp | after other dead ends | 2 | r_2216 (fatty-acid--CoA ligase (behenate), lipid); r_3598 (docosanoyl-CoA transport, lipid particle) |
+| s_2978 | diglyceride (1-16:0, 2-16:1) | vm | never consumed | 1 | r_2352 (PA phosphatase (1-16:0, 2-16:1), vacuola) |
+| s_2980 | diglyceride (1-16:0, 2-18:1) | vm | never consumed | 1 | r_2353 (PA phosphatase (1-16:0, 2-18:1), vacuola) |
+| s_2982 | diglyceride (1-16:1, 2-16:1) | vm | never consumed | 1 | r_2354 (PA phosphatase (1-16:1, 2-16:1), vacuola) |
+| s_2984 | diglyceride (1-16:1, 2-18:1) | vm | never consumed | 1 | r_2355 (PA phosphatase (1-16:1, 2-18:1), vacuola) |
+| s_2986 | diglyceride (1-18:0, 2-16:1) | vm | never consumed | 1 | r_2356 (PA phosphatase (1-18:0, 2-16:1), vacuola) |
+| s_2988 | diglyceride (1-18:0, 2-18:1) | vm | never consumed | 1 | r_2357 (PA phosphatase (1-18:0, 2-18:1), vacuola) |
+| s_2990 | diglyceride (1-18:1, 2-16:1) | vm | never consumed | 1 | r_2358 (PA phosphatase (1-18:1, 2-16:1), vacuola) |
+| s_2992 | diglyceride (1-18:1, 2-18:1) | vm | never consumed | 1 | r_2359 (PA phosphatase (1-18:1, 2-18:1), vacuola) |
+| s_3126 | sn-2-acyl-1-lysophosphatidylinositol (16:1) | erm | after other dead ends | 2 | r_2462 (lysoPI acyltransferase (1-18:0, 2-16:1),); r_4096 (sn-2-acyl-1-lysophosphatidylinositol (16) |
+| s_3127 | sn-2-acyl-1-lysophosphatidylinositol (18:1) | erm | after other dead ends | 2 | r_2463 (lysoPI acyltransferase (1-18:0, 2-18:1),); r_4097 (sn-2-acyl-1-lysophosphatidylinositol (18) |
+| s_3216 | CDP-ethanolamine | erm | after other dead ends | 9 | r_2520 (ethanolaminephosphotransferase (1-16:0, ); r_2521 (ethanolaminephosphotransferase (1-16:1, ); r_2522 (ethanolaminephosphotransferase (1-18:0, ); r_2523 (ethanolaminephosphotransferase (1-18:1, ); r_2524 (ethanolaminephosphotransferase (1-16:0, ); r_2525 (ethanolaminephosphotransferase (1-16:1, ); r_2526 (ethanolaminephosphotransferase (1-18:0, ); r_2527 (ethanolaminephosphotransferase (1-18:1, ); r_3541 (CDP-ethanolamine transport, cytoplasm-ER) |
+| s_3343 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:0, 2-16:1) | vm | never consumed | 1 | r_2828 (phosphatidylinositol 4-kinase (1-16:0, 2) |
+| s_3345 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:1, 2-16:1) | vm | never consumed | 1 | r_2829 (phosphatidylinositol 4-kinase (1-16:1, 2) |
+| s_3347 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:0, 2-16:1) | vm | never consumed | 1 | r_2830 (phosphatidylinositol 4-kinase (1-18:0, 2) |
+| s_3349 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:1, 2-16:1) | vm | never consumed | 1 | r_2831 (phosphatidylinositol 4-kinase (1-18:1, 2) |
+| s_3351 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:0, 2-18:1) | vm | never consumed | 1 | r_2832 (phosphatidylinositol 4-kinase (1-16:0, 2) |
+| s_3353 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-16:1, 2-18:1) | vm | never consumed | 1 | r_2833 (phosphatidylinositol 4-kinase (1-16:1, 2) |
+| s_3355 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:0, 2-18:1) | vm | never consumed | 1 | r_2834 (phosphatidylinositol 4-kinase (1-18:0, 2) |
+| s_3357 | 1-phosphatidyl-1D-myo-inositol 4-phosphate (1-18:1, 2-18:1) | vm | never consumed | 1 | r_2835 (phosphatidylinositol 4-kinase (1-18:1, 2) |
+| s_3465 | phosphatidylethanolamine (1-16:0, 2-16:1) | ce | after other dead ends | 2 | r_3046 (PE phospholipase B (1-16:0, 2-16:1), cel); r_3885 (phosphatidylethanolamine (1-16:0, 2-16:1) |
+| s_3466 | 1-acylglycerophosphoethanolamine (16:0) | ce | after other dead ends | 3 | r_3046 (PE phospholipase B (1-16:0, 2-16:1), cel); r_3050 (PE phospholipase B (1-16:0, 2-18:1), cel); r_3054 (LPE phospholipase B (16:0), cell envelop) |
+| s_3467 | phosphatidylethanolamine (1-16:1, 2-16:1) | ce | after other dead ends | 2 | r_3047 (PE phospholipase B (1-16:1, 2-16:1), cel); r_3886 (phosphatidylethanolamine (1-16:1, 2-16:1) |
+| s_3468 | 1-acylglycerophosphoethanolamine (16:1) | ce | after other dead ends | 3 | r_3047 (PE phospholipase B (1-16:1, 2-16:1), cel); r_3051 (PE phospholipase B (1-16:1, 2-18:1), cel); r_3055 (LPE phospholipase B (16:1), cell envelop) |
+| s_3469 | phosphatidylethanolamine (1-18:0, 2-16:1) | ce | after other dead ends | 2 | r_3048 (PE phospholipase B (1-18:0, 2-16:1), cel); r_3887 (phosphatidylethanolamine (1-18:0, 2-16:1) |
+| s_3470 | 1-acylglycerophosphoethanolamine (18:0) | ce | after other dead ends | 3 | r_3048 (PE phospholipase B (1-18:0, 2-16:1), cel); r_3052 (PE phospholipase B (1-18:0, 2-18:1), cel); r_3056 (LPE phospholipase B (18:0), cell envelop) |
+| s_3471 | phosphatidylethanolamine (1-18:1, 2-16:1) | ce | after other dead ends | 2 | r_3049 (PE phospholipase B (1-18:1, 2-16:1), cel); r_3888 (phosphatidylethanolamine (1-18:1, 2-16:1) |
+| s_3472 | 1-acylglycerophosphoethanolamine (18:1) | ce | after other dead ends | 3 | r_3049 (PE phospholipase B (1-18:1, 2-16:1), cel); r_3053 (PE phospholipase B (1-18:1, 2-18:1), cel); r_3057 (LPE phospholipase B (18:1), cell envelop) |
+| s_3473 | phosphatidylethanolamine (1-16:0, 2-18:1) | ce | after other dead ends | 2 | r_3050 (PE phospholipase B (1-16:0, 2-18:1), cel); r_3889 (phosphatidylethanolamine (1-16:0, 2-18:1) |
+| s_3474 | phosphatidylethanolamine (1-16:1, 2-18:1) | ce | after other dead ends | 2 | r_3051 (PE phospholipase B (1-16:1, 2-18:1), cel); r_3890 (phosphatidylethanolamine (1-16:1, 2-18:1) |
+| s_3475 | phosphatidylethanolamine (1-18:0, 2-18:1) | ce | after other dead ends | 2 | r_3052 (PE phospholipase B (1-18:0, 2-18:1), cel); r_3891 (phosphatidylethanolamine (1-18:0, 2-18:1) |
+| s_3476 | phosphatidylethanolamine (1-18:1, 2-18:1) | ce | after other dead ends | 2 | r_3053 (PE phospholipase B (1-18:1, 2-18:1), cel); r_3892 (phosphatidylethanolamine (1-18:1, 2-18:1) |
+| s_3477 | sn-glycero-3-phosphoethanolamine | ce | never consumed | 4 | r_3054 (LPE phospholipase B (16:0), cell envelop); r_3055 (LPE phospholipase B (16:1), cell envelop); r_3056 (LPE phospholipase B (18:0), cell envelop); r_3057 (LPE phospholipase B (18:1), cell envelop) |
+| s_3478 | phosphatidyl-L-serine (1-16:0, 2-16:1) | ce | after other dead ends | 2 | r_3058 (PS phospholipase B (1-16:0, 2-16:1), cel); r_3893 (phosphatidyl-L-serine (1-16:0, 2-16:1) t) |
+| s_3479 | 1-acylglycerophosphoserine (16:0) | ce | after other dead ends | 3 | r_3058 (PS phospholipase B (1-16:0, 2-16:1), cel); r_3062 (PS phospholipase B (1-16:0, 2-18:1), cel); r_3066 (LPS phospholipase B (16:0), cell envelop) |
+| s_3480 | phosphatidyl-L-serine (1-16:1, 2-16:1) | ce | after other dead ends | 2 | r_3059 (PS phospholipase B (1-16:1, 2-16:1), cel); r_3894 (phosphatidyl-L-serine (1-16:1, 2-16:1) t) |
+| s_3481 | 1-acylglycerophosphoserine (16:1) | ce | after other dead ends | 3 | r_3059 (PS phospholipase B (1-16:1, 2-16:1), cel); r_3063 (PS phospholipase B (1-16:1, 2-18:1), cel); r_3067 (LPS phospholipase B (16:1), cell envelop) |
+| s_3482 | phosphatidyl-L-serine (1-18:0, 2-16:1) | ce | after other dead ends | 2 | r_3060 (PS phospholipase B (1-18:0, 2-16:1), cel); r_3895 (phosphatidyl-L-serine (1-18:0, 2-16:1) t) |
+| s_3483 | 1-acylglycerophosphoserine (18:0) | ce | after other dead ends | 3 | r_3060 (PS phospholipase B (1-18:0, 2-16:1), cel); r_3064 (PS phospholipase B (1-18:0, 2-18:1), cel); r_3068 (LPS phospholipase B (18:0), cell envelop) |
+| s_3484 | phosphatidyl-L-serine (1-18:1, 2-16:1) | ce | after other dead ends | 2 | r_3061 (PS phospholipase B (1-18:1, 2-16:1), cel); r_3896 (phosphatidyl-L-serine (1-18:1, 2-16:1) t) |
+| s_3485 | 1-acylglycerophosphoserine (18:1) | ce | after other dead ends | 3 | r_3061 (PS phospholipase B (1-18:1, 2-16:1), cel); r_3065 (PS phospholipase B (1-18:1, 2-18:1), cel); r_3069 (LPS phospholipase B (18:1), cell envelop) |
+| s_3486 | phosphatidyl-L-serine (1-16:0, 2-18:1) | ce | after other dead ends | 2 | r_3062 (PS phospholipase B (1-16:0, 2-18:1), cel); r_3897 (phosphatidyl-L-serine (1-16:0, 2-18:1) t) |
+| s_3487 | phosphatidyl-L-serine (1-16:1, 2-18:1) | ce | after other dead ends | 2 | r_3063 (PS phospholipase B (1-16:1, 2-18:1), cel); r_3898 (phosphatidyl-L-serine (1-16:1, 2-18:1) t) |
+| s_3488 | phosphatidyl-L-serine (1-18:0, 2-18:1) | ce | after other dead ends | 2 | r_3064 (PS phospholipase B (1-18:0, 2-18:1), cel); r_3899 (phosphatidyl-L-serine (1-18:0, 2-18:1) t) |
+| s_3489 | phosphatidyl-L-serine (1-18:1, 2-18:1) | ce | after other dead ends | 2 | r_3065 (PS phospholipase B (1-18:1, 2-18:1), cel); r_3900 (phosphatidyl-L-serine (1-18:1, 2-18:1) t) |
+| s_3490 | sn-glycero-3-phosphoserine | ce | never consumed | 4 | r_3066 (LPS phospholipase B (16:0), cell envelop); r_3067 (LPS phospholipase B (16:1), cell envelop); r_3068 (LPS phospholipase B (18:0), cell envelop); r_3069 (LPS phospholipase B (18:1), cell envelop) |
+| s_3498 | 1D-myo-inositol 1,4,5-trisphosphate | c | never consumed | 8 | r_3082 (PI 4,5-P2 phospholipase C (1-16:0, 2-16:); r_3083 (PI 4,5-P2 phospholipase C (1-16:1, 2-16:); r_3084 (PI 4,5-P2 phospholipase C (1-18:0, 2-16:); r_3085 (PI 4,5-P2 phospholipase C (1-18:1, 2-16:); r_3086 (PI 4,5-P2 phospholipase C (1-16:0, 2-18:); r_3087 (PI 4,5-P2 phospholipase C (1-16:1, 2-18:); r_3088 (PI 4,5-P2 phospholipase C (1-18:0, 2-18:); r_3089 (PI 4,5-P2 phospholipase C (1-18:1, 2-18:) |
+| s_3632 | 1-acyl-sn-glycerol 3-phosphate (16:0) | c | never produced | 1 | r_3240 (lysoPA phosphatase (16:0), cytoplasm) |
+| s_3633 | 1-monoglyceride (16:0) | c | never consumed | 1 | r_3240 (lysoPA phosphatase (16:0), cytoplasm) |
+| s_3634 | 1-acyl-sn-glycerol 3-phosphate (16:1) | c | never produced | 1 | r_3241 (lysoPA phosphatase (16:1), cytoplasm) |
+| s_3635 | 1-monoglyceride (16:1) | c | never consumed | 1 | r_3241 (lysoPA phosphatase (16:1), cytoplasm) |
+| s_3636 | 1-acyl-sn-glycerol 3-phosphate (18:0) | c | never produced | 1 | r_3242 (lysoPA phosphatase (18:0), cytoplasm) |
+| s_3637 | 1-monoglyceride (18:0) | c | never consumed | 1 | r_3242 (lysoPA phosphatase (18:0), cytoplasm) |
+| s_3638 | 1-acyl-sn-glycerol 3-phosphate (18:1) | c | never produced | 1 | r_3243 (lysoPA phosphatase (18:1), cytoplasm) |
+| s_3639 | 1-monoglyceride (18:1) | c | never consumed | 1 | r_3243 (lysoPA phosphatase (18:1), cytoplasm) |
+| s_3640 | 1-acyl-sn-glycerol 3-phosphate (16:0) | vm | never produced | 1 | r_3244 (lysoPA phosphatase (16:0), vacuolar memb) |
+| s_3641 | 1-monoglyceride (16:0) | vm | never consumed | 1 | r_3244 (lysoPA phosphatase (16:0), vacuolar memb) |
+| s_3642 | 1-acyl-sn-glycerol 3-phosphate (16:1) | vm | never produced | 1 | r_3245 (lysoPA phosphatase (16:1), vacuolar memb) |
+| s_3643 | 1-monoglyceride (16:1) | vm | never consumed | 1 | r_3245 (lysoPA phosphatase (16:1), vacuolar memb) |
+| s_3644 | 1-acyl-sn-glycerol 3-phosphate (18:0) | vm | never produced | 1 | r_3246 (lysoPA phosphatase (18:0), vacuolar memb) |
+| s_3645 | 1-monoglyceride (18:0) | vm | never consumed | 1 | r_3246 (lysoPA phosphatase (18:0), vacuolar memb) |
+| s_3646 | 1-acyl-sn-glycerol 3-phosphate (18:1) | vm | never produced | 1 | r_3247 (lysoPA phosphatase (18:1), vacuolar memb) |
+| s_3647 | 1-monoglyceride (18:1) | vm | never consumed | 1 | r_3247 (lysoPA phosphatase (18:1), vacuolar memb) |
+| s_3648 | 1-acyl-sn-glycerol 3-phosphate (16:0) | gm | never produced | 1 | r_3248 (lysoPA phosphatase (16:0), Golgi membran) |
+| s_3649 | 1-monoglyceride (16:0) | gm | never consumed | 1 | r_3248 (lysoPA phosphatase (16:0), Golgi membran) |
+| s_3650 | 1-acyl-sn-glycerol 3-phosphate (16:1) | gm | never produced | 1 | r_3249 (lysoPA phosphatase (16:1), Golgi membran) |
+| s_3651 | 1-monoglyceride (16:1) | gm | never consumed | 1 | r_3249 (lysoPA phosphatase (16:1), Golgi membran) |
+| s_3652 | 1-acyl-sn-glycerol 3-phosphate (18:0) | gm | never produced | 1 | r_3250 (lysoPA phosphatase (18:0), Golgi membran) |
+| s_3653 | 1-monoglyceride (18:0) | gm | never consumed | 1 | r_3250 (lysoPA phosphatase (18:0), Golgi membran) |
+| s_3654 | 1-acyl-sn-glycerol 3-phosphate (18:1) | gm | never produced | 1 | r_3251 (lysoPA phosphatase (18:1), Golgi membran) |
+| s_3655 | 1-monoglyceride (18:1) | gm | never consumed | 1 | r_3251 (lysoPA phosphatase (18:1), Golgi membran) |
+| s_3675 | diglyceride (1-16:0, 2-18:1) | m | never produced | 1 | r_3304 (DAG lipase (1-16:0, 2-18:1), mitochondri) |
+| s_3676 | 1-monoglyceride (16:0) | m | never consumed | 1 | r_3304 (DAG lipase (1-16:0, 2-18:1), mitochondri) |
+| s_3677 | oleate | m | after other dead ends | 5 | r_3304 (DAG lipase (1-16:0, 2-18:1), mitochondri); r_3305 (DAG lipase (1-16:1, 2-18:1), mitochondri); r_3306 (DAG lipase (1-18:0, 2-18:1), mitochondri); r_3307 (DAG lipase (1-18:1, 2-18:1), mitochondri); r_4613 (oleate transport) |
+| s_3678 | diglyceride (1-16:1, 2-18:1) | m | never produced | 1 | r_3305 (DAG lipase (1-16:1, 2-18:1), mitochondri) |
+| s_3679 | 1-monoglyceride (16:1) | m | never consumed | 1 | r_3305 (DAG lipase (1-16:1, 2-18:1), mitochondri) |
+| s_3680 | diglyceride (1-18:0, 2-18:1) | m | never produced | 1 | r_3306 (DAG lipase (1-18:0, 2-18:1), mitochondri) |
+| s_3681 | 1-monoglyceride (18:0) | m | never consumed | 1 | r_3306 (DAG lipase (1-18:0, 2-18:1), mitochondri) |
+| s_3682 | diglyceride (1-18:1, 2-18:1) | m | never produced | 1 | r_3307 (DAG lipase (1-18:1, 2-18:1), mitochondri) |
+| s_3683 | 1-monoglyceride (18:1) | m | never consumed | 1 | r_3307 (DAG lipase (1-18:1, 2-18:1), mitochondri) |
+| s_3715 | raffinose | e | never produced | 2 | r_4042 (raffinose invertase); r_4043 (raffinose exchange) |
+| s_3716 | melibiose | e | after other dead ends | 2 | r_4042 (raffinose invertase); r_4044 (melibiose exchange) |
+| s_3721 | ceramide backbone | g | after other dead ends | 11 | r_4051 (ceramide transport); r_4066 (ceramide-1 (C24) [Golgi] SLIME rxn); r_4067 (ceramide-1 (C26) [Golgi] SLIME rxn); r_4068 (ceramide-2 (C24) [Golgi] SLIME rxn); r_4069 (ceramide-2 (C26) [Golgi] SLIME rxn); r_4070 (ceramide-2' (C24) [Golgi] SLIME rxn); r_4071 (ceramide-2' (C26) [Golgi] SLIME rxn); r_4072 (ceramide-3 (C24) [Golgi] SLIME rxn); r_4073 (ceramide-3 (C26) [Golgi] SLIME rxn); r_4074 (ceramide-4 (C24) [Golgi] SLIME rxn); r_4075 (ceramide-4 (C26) [Golgi] SLIME rxn) |
+| s_3722 | ceramide backbone | c | never consumed | 1 | r_4051 (ceramide transport) |
+| s_3723 | inositol phosphomannosylinositol phosphoceramide backbone | c | never consumed | 1 | r_4052 (inositol phosphomannosylinositol phospho) |
+| s_3724 | inositol-P-ceramide backbone | c | never consumed | 1 | r_4053 (inositol-P-ceramide transport) |
+| s_3725 | mannosylinositol phosphorylceramide backbone | c | never consumed | 1 | r_4054 (mannosylinositol phosphorylceramide tran) |
+| s_3726 | long-chain base backbone | er | after other dead ends | 3 | r_4055 (long-chain base transport); r_4076 (phytosphingosine [endoplasmic reticulum]); r_4078 (sphinganine [endoplasmic reticulum] SLIM) |
+| s_3727 | long-chain base backbone | c | never consumed | 1 | r_4055 (long-chain base transport) |
+| s_3728 | long-chain base phosphate backbone | er | after other dead ends | 3 | r_4056 (long-chain base phosphate transport); r_4077 (phytosphingosine 1-phosphate [endoplasmi); r_4079 (sphinganine 1-phosphate [endoplasmic ret) |
+| s_3729 | long-chain base phosphate backbone | c | never consumed | 1 | r_4056 (long-chain base phosphate transport) |
+| s_3730 | phosphatidate backbone | erm | after other dead ends | 9 | r_4057 (phosphatidate transport); r_4080 (phosphatidate (1-16:0, 2-16:1) [endoplas); r_4081 (phosphatidate (1-16:0, 2-18:1) [endoplas); r_4082 (phosphatidate (1-16:1, 2-16:1) [endoplas); r_4083 (phosphatidate (1-16:1, 2-18:1) [endoplas); r_4084 (phosphatidate (1-18:0, 2-16:1) [endoplas); r_4085 (phosphatidate (1-18:0, 2-18:1) [endoplas); r_4086 (phosphatidate (1-18:1, 2-16:1) [endoplas); r_4087 (phosphatidate (1-18:1, 2-18:1) [endoplas) |
+| s_3731 | phosphatidate backbone | c | never consumed | 1 | r_4057 (phosphatidate transport) |
+| s_3732 | diglyceride backbone | erm | after other dead ends | 9 | r_4058 (diglyceride transport); r_4088 (diglyceride (1-16:0, 2-16:1) [endoplasmi); r_4089 (diglyceride (1-16:0, 2-18:1) [endoplasmi); r_4090 (diglyceride (1-16:1, 2-16:1) [endoplasmi); r_4091 (diglyceride (1-16:1, 2-18:1) [endoplasmi); r_4092 (diglyceride (1-18:0, 2-16:1) [endoplasmi); r_4093 (diglyceride (1-18:0, 2-18:1) [endoplasmi); r_4094 (diglyceride (1-18:1, 2-16:1) [endoplasmi); r_4095 (diglyceride (1-18:1, 2-18:1) [endoplasmi) |
+| s_3733 | diglyceride backbone | c | never consumed | 1 | r_4058 (diglyceride transport) |
+| s_3734 | sn-2-acyl-1-lysophosphatidylinositol backbone | erm | after other dead ends | 3 | r_4059 (sn-2-acyl-1-lysophosphatidylinositol tra); r_4096 (sn-2-acyl-1-lysophosphatidylinositol (16); r_4097 (sn-2-acyl-1-lysophosphatidylinositol (18) |
+| s_3735 | sn-2-acyl-1-lysophosphatidylinositol backbone | c | never consumed | 1 | r_4059 (sn-2-acyl-1-lysophosphatidylinositol tra) |
+| s_3736 | phosphatidylglycerol backbone | mm | after other dead ends | 7 | r_4060 (phosphatidylglycerol transport); r_4098 (phosphatidylglycerol (1-16:0, 2-16:1) [m); r_4099 (phosphatidylglycerol (1-16:1, 2-16:1) [m); r_4100 (phosphatidylglycerol (1-18:0, 2-16:1) [m); r_4101 (phosphatidylglycerol (1-18:1, 2-16:1) [m); r_4102 (phosphatidylglycerol (1-16:0, 2-18:1) [m); r_4103 (phosphatidylglycerol (1-16:1, 2-18:1) [m) |
+| s_3737 | phosphatidylglycerol backbone | c | never consumed | 1 | r_4060 (phosphatidylglycerol transport) |
+| s_3738 | cardiolipin backbone | mm | after other dead ends | 49 | r_4061 (cardiolipin transport); r_4104 (cardiolipin (1-16:0, 2-16:1, 3-16:0, 4-1); r_4105 (cardiolipin (1-16:0, 2-16:1, 3-16:1, 4-1); r_4106 (cardiolipin (1-16:0, 2-16:1, 3-18:0, 4-1); r_4107 (cardiolipin (1-16:0, 2-16:1, 3-18:1, 4-1); r_4108 (cardiolipin (1-16:0, 2-16:1, 3-16:0, 4-1); r_4109 (cardiolipin (1-16:0, 2-16:1, 3-16:1, 4-1); r_4110 (cardiolipin (1-16:1, 2-16:1, 3-16:0, 4-1); r_4111 (cardiolipin (1-16:1, 2-16:1, 3-16:1, 4-1); r_4112 (cardiolipin (1-16:1, 2-16:1, 3-18:0, 4-1); r_4113 (cardiolipin (1-16:1, 2-16:1, 3-18:1, 4-1); r_4114 (cardiolipin (1-16:1, 2-16:1, 3-16:0, 4-1); r_4115 (cardiolipin (1-16:1, 2-16:1, 3-16:1, 4-1); r_4116 (cardiolipin (1-18:0, 2-16:1, 3-16:0, 4-1); r_4117 (cardiolipin (1-18:0, 2-16:1, 3-16:1, 4-1); r_4118 (cardiolipin (1-18:0, 2-16:1, 3-18:0, 4-1); r_4119 (cardiolipin (1-18:0, 2-16:1, 3-18:1, 4-1); r_4120 (cardiolipin (1-18:0, 2-16:1, 3-16:0, 4-1); r_4121 (cardiolipin (1-18:0, 2-16:1, 3-16:1, 4-1); r_4122 (cardiolipin (1-18:1, 2-16:1, 3-16:0, 4-1); r_4123 (cardiolipin (1-18:1, 2-16:1, 3-16:1, 4-1); r_4124 (cardiolipin (1-18:1, 2-16:1, 3-18:0, 4-1); r_4125 (cardiolipin (1-18:1, 2-16:1, 3-18:1, 4-1); r_4126 (cardiolipin (1-18:1, 2-16:1, 3-16:0, 4-1); r_4127 (cardiolipin (1-18:1, 2-16:1, 3-16:1, 4-1); r_4128 (cardiolipin (1-16:0, 2-18:1, 3-16:0, 4-1); r_4129 (cardiolipin (1-16:0, 2-18:1, 3-16:1, 4-1); r_4130 (cardiolipin (1-16:0, 2-18:1, 3-18:0, 4-1); r_4131 (cardiolipin (1-16:0, 2-18:1, 3-18:1, 4-1); r_4132 (cardiolipin (1-16:0, 2-18:1, 3-16:0, 4-1); r_4133 (cardiolipin (1-16:0, 2-18:1, 3-16:1, 4-1); r_4134 (cardiolipin (1-16:1, 2-18:1, 3-16:0, 4-1); r_4135 (cardiolipin (1-16:1, 2-18:1, 3-16:1, 4-1); r_4136 (cardiolipin (1-16:1, 2-18:1, 3-18:0, 4-1); r_4137 (cardiolipin (1-16:1, 2-18:1, 3-18:1, 4-1); r_4138 (cardiolipin (1-16:1, 2-18:1, 3-16:0, 4-1); r_4139 (cardiolipin (1-16:1, 2-18:1, 3-16:1, 4-1); r_4140 (cardiolipin (1-18:1, 2-18:1, 3-16:0, 4-1); r_4141 (cardiolipin (1-18:1, 2-18:1, 3-16:1, 4-1); r_4142 (cardiolipin (1-18:1, 2-18:1, 3-18:0, 4-1); r_4143 (cardiolipin (1-18:1, 2-18:1, 3-18:1, 4-1); r_4144 (cardiolipin (1-18:1, 2-18:1, 3-16:0, 4-1); r_4145 (cardiolipin (1-18:1, 2-18:1, 3-16:1, 4-1); r_4146 (cardiolipin (1-16:0, 2-16:1, 3-18:1, 4-1); r_4147 (cardiolipin (1-16:1, 2-16:1, 3-18:1, 4-1); r_4148 (cardiolipin (1-18:0, 2-16:1, 3-18:1, 4-1); r_4149 (cardiolipin (1-18:1, 2-16:1, 3-18:1, 4-1); r_4150 (cardiolipin (1-16:0, 2-18:1, 3-18:1, 4-1); r_4151 (cardiolipin (1-16:1, 2-18:1, 3-18:1, 4-1) |
+| s_3739 | cardiolipin backbone | c | never consumed | 1 | r_4061 (cardiolipin transport) |
+| s_3744 | C24:0 chain | c | never consumed | 20 | r_1449 (inositol-P-ceramide B' (C24) [Golgi] SLI); r_1451 (inositol-P-ceramide C (C24) [Golgi] SLIM); r_1453 (inositol-P-ceramide A (C24) [Golgi] SLIM); r_1455 (inositol-P-ceramide B (C24) [Golgi] SLIM); r_1457 (inositol-P-ceramide D (C24) [Golgi] SLIM); r_1479 (inositol phosphomannosylinositol phospho); r_1481 (inositol phosphomannosylinositol phospho); r_1483 (inositol phosphomannosylinositol phospho); r_1485 (inositol phosphomannosylinositol phospho); r_1487 (inositol phosphomannosylinositol phospho); r_1509 (mannosylinositol phosphorylceramide B' (); r_1511 (mannosylinositol phosphorylceramide C (C); r_1513 (mannosylinositol phosphorylceramide A (C); r_1515 (mannosylinositol phosphorylceramide B (C); r_1517 (mannosylinositol phosphorylceramide D (C); r_4066 (ceramide-1 (C24) [Golgi] SLIME rxn); r_4068 (ceramide-2 (C24) [Golgi] SLIME rxn); r_4070 (ceramide-2' (C24) [Golgi] SLIME rxn); r_4072 (ceramide-3 (C24) [Golgi] SLIME rxn); r_4074 (ceramide-4 (C24) [Golgi] SLIME rxn) |
+| s_3745 | C26:0 chain | c | never consumed | 20 | r_1450 (inositol-P-ceramide B' (C26) [Golgi] SLI); r_1452 (inositol-P-ceramide C (C26) [Golgi] SLIM); r_1454 (inositol-P-ceramide A (C26) [Golgi] SLIM); r_1456 (inositol-P-ceramide B (C26) [Golgi] SLIM); r_1458 (inositol-P-ceramide D (C26) [Golgi] SLIM); r_1480 (inositol phosphomannosylinositol phospho); r_1482 (inositol phosphomannosylinositol phospho); r_1484 (inositol phosphomannosylinositol phospho); r_1486 (inositol phosphomannosylinositol phospho); r_1488 (inositol phosphomannosylinositol phospho); r_1510 (mannosylinositol phosphorylceramide B' (); r_1512 (mannosylinositol phosphorylceramide C (C); r_1514 (mannosylinositol phosphorylceramide A (C); r_1516 (mannosylinositol phosphorylceramide B (C); r_1518 (mannosylinositol phosphorylceramide D (C); r_4067 (ceramide-1 (C26) [Golgi] SLIME rxn); r_4069 (ceramide-2 (C26) [Golgi] SLIME rxn); r_4071 (ceramide-2' (C26) [Golgi] SLIME rxn); r_4073 (ceramide-3 (C26) [Golgi] SLIME rxn); r_4075 (ceramide-4 (C26) [Golgi] SLIME rxn) |
+| s_3748 | Cytochrome c | m | after other dead ends | 1 | r_4152 (Cytochrome c apocytochrome-c-lyase) |
+| s_3749 | Apocytochrome c | m | after other dead ends | 1 | r_4152 (Cytochrome c apocytochrome-c-lyase) |
+| s_3750 | diacetyl | c | never produced | 1 | r_4153 ((R)-Acetoin:NAD+ oxidoreductase) |
+| s_3751 | (R)-acetoin | n | after other dead ends | 2 | r_4154 (Probable diacetyl reductase [(R)-acetoin); r_4614 ((R)-acetoin transport) |
+| s_3752 | diacetyl | n | after other dead ends | 1 | r_4154 (Probable diacetyl reductase [(R)-acetoin) |
+| s_3753 | NADH | n | after other dead ends | 1 | r_4154 (Probable diacetyl reductase [(R)-acetoin) |
+| s_3754 | L-glutamyl-tRNA(Gln) | m | never produced | 1 | r_4155 (Glutamyl-tRNA(Gln) amidotransferase subu) |
+| s_3755 | L-glutamine | m | after other dead ends | 2 | r_4155 (Glutamyl-tRNA(Gln) amidotransferase subu); r_4615 (L-glutamine transport) |
+| s_3756 | Gln-tRNA(Gln) | m | never consumed | 1 | r_4155 (Glutamyl-tRNA(Gln) amidotransferase subu) |
+| s_3757 | Met-Ala | v | after other dead ends | 2 | r_4156 (Methionine aminopeptidase 2 (MAP 2) (Met); r_4449 (Met-Ala transport via proton symport (cy) |
+| s_3758 | L-methionine | v | after other dead ends | 3 | r_4156 (Methionine aminopeptidase 2 (MAP 2) (Met); r_4362 (dipeptidase); r_4440 (L-methionine transport, vacuoluar) |
+| s_3759 | L-alanine | v | after other dead ends | 9 | r_4156 (Methionine aminopeptidase 2 (MAP 2) (Met); r_4203 (Vacuolar aminopeptidase 1 (EC 3.4.11.22)); r_4204 (Vacuolar aminopeptidase 1 (EC 3.4.11.22)); r_4386 (dipeptidase); r_4409 (L-alanyl-gamma-L-glutamate peptidase); r_4414 (cytosol nonspecific dipeptidase); r_4415 (Cytosol non-specific dipeptidase); r_4416 (Cytosol non-specific dipeptidase); r_4482 (L-alanine transport in via proton sympor) |
+| s_3760 | ADP-D-ribose 1''-phosphate | c | after other dead ends | 1 | r_4157 (ADP-ribose 1''-phosphate phosphatase (EC) |
+| s_3761 | ADP-ribose | c | after other dead ends | 3 | r_4157 (ADP-ribose 1''-phosphate phosphatase (EC); r_4160 (ADP-ribose pyrophosphatase (EC 3.6.1.13)); r_4603 (ADP-ribose transport) |
+| s_3762 | quinone | c | after other dead ends | 1 | r_4158 (NADPH2:quinone oxidoreductase) |
+| s_3763 | 1,4-benzosemiquinone | c | after other dead ends | 1 | r_4158 (NADPH2:quinone oxidoreductase) |
+| s_3764 | UDP-N-acetyl-alpha-D-glucosamine | er | after other dead ends | 4 | r_4159 (UDP-N-acetylglucosamine transferase subu); r_4170 (UDP-N-acetyl-D-glucosamine:dolichyl-phos); r_4234 (Phosphatidylinositol N-acetylglucosaminy); r_4339 (UDP-N-acetylglucosamine transporter YEA4) |
+| s_3765 | N-Acetyl-D-glucosaminyldiphosphodolichol | er | after other dead ends | 2 | r_4159 (UDP-N-acetylglucosamine transferase subu); r_4170 (UDP-N-acetyl-D-glucosamine:dolichyl-phos) |
+| s_3766 | UDP | er | after other dead ends | 3 | r_4159 (UDP-N-acetylglucosamine transferase subu); r_4234 (Phosphatidylinositol N-acetylglucosaminy); r_4328 (UDPglucose:dolichyl-phosphate beta-D-glu) |
+| s_3767 | N,N'-Chitobiosyldiphosphodolichol | er | after other dead ends | 1 | r_4159 (UDP-N-acetylglucosamine transferase subu) |
+| s_3768 | D-ribofuranose 5-phosphate | c | after other dead ends | 1 | r_4160 (ADP-ribose pyrophosphatase (EC 3.6.1.13)) |
+| s_3769 | Oxalate | p | after other dead ends | 1 | r_4164 (oxalate:CoA ligase (AMP-forming)) |
+| s_3770 | Oxalyl-CoA | p | after other dead ends | 1 | r_4164 (oxalate:CoA ligase (AMP-forming)) |
+| s_3771 | G00171 | er | after other dead ends | 2 | r_4165 (Glucosidase 2 subunit alpha (EC 3.2.1.84); r_4241 (Mannosyl-oligosaccharide glucosidase (EC) |
+| s_3772 | D-glucose | er | after other dead ends | 3 | r_4165 (Glucosidase 2 subunit alpha (EC 3.2.1.84); r_4166 (Glucosidase 2 subunit alpha (EC 3.2.1.84); r_4241 (Mannosyl-oligosaccharide glucosidase (EC) |
+| s_3773 | G00010 | er | after other dead ends | 2 | r_4165 (Glucosidase 2 subunit alpha (EC 3.2.1.84); r_4166 (Glucosidase 2 subunit alpha (EC 3.2.1.84) |
+| s_3774 | G00011 | er | after other dead ends | 3 | r_4166 (Glucosidase 2 subunit alpha (EC 3.2.1.84); r_4271 (Endoplasmic reticulum mannosyl-oligosacc); r_4272 (alpha 1,2-mannosyloligosaccharide alpha-) |
+| s_3775 | sodium | v | after other dead ends | 1 | r_4167 (Vacuolar cation-chloride cotransporter 1) |
+| s_3776 | potassium | v | after other dead ends | 1 | r_4167 (Vacuolar cation-chloride cotransporter 1) |
+| s_3777 | chloride | v | after other dead ends | 1 | r_4167 (Vacuolar cation-chloride cotransporter 1) |
+| s_3779 | D-fructose | v | after other dead ends | 1 | r_4168 (Probable metabolite transport protein YB) |
+| s_3780 | D-galactose | v | after other dead ends | 1 | r_4169 (Probable metabolite transport protein YB) |
+| s_3781 | UMP | er | after other dead ends | 2 | r_4170 (UDP-N-acetyl-D-glucosamine:dolichyl-phos); r_4616 (UMP transport) |
+| s_3782 | cadmium(2+) | c | never produced | 1 | r_4172 (P-type cation-transporting ATPase (EC 3.) |
+| s_3783 | cadmium(2+) | e | never consumed | 1 | r_4172 (P-type cation-transporting ATPase (EC 3.) |
+| s_3787 | cholesterol | er | after other dead ends | 1 | r_4174 (Probable ATP-dependent permease) |
+| s_3788 | cholesterol | erm | after other dead ends | 1 | r_4174 (Probable ATP-dependent permease) |
+| s_3789 | 3-chlorobenzyl alcohol | c | after other dead ends | 1 | r_4175 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3790 | 3-chlorobenzaldehyde | c | after other dead ends | 1 | r_4175 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3791 | 3-hydroxybenzyl alcohol | c | after other dead ends | 1 | r_4176 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3792 | 3-hydroxybenzaldehyde | c | after other dead ends | 1 | r_4176 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3793 | 3-methylbenzyl alcohol | c | after other dead ends | 1 | r_4177 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3794 | 3-methylbenzaldehyde | c | after other dead ends | 1 | r_4177 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3795 | 4-isopropylbenzyl alcohol | c | after other dead ends | 1 | r_4178 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3796 | p-cumic aldehyde | c | after other dead ends | 1 | r_4178 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3797 | 4-methylbenzyl alcohol | c | after other dead ends | 1 | r_4179 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3798 | 4-methylbenzaldehyde | c | after other dead ends | 1 | r_4179 (Putative aryl-alcohol dehydrogenase AAD3) |
+| s_3799 | benzyl alcohol | c | after other dead ends | 2 | r_4180 (Benzyl alcohol:NAD+ oxidoreductase); r_4717 (benzyl-acetate esterase, c) |
+| s_3800 | benzaldehyde | c | after other dead ends | 1 | r_4180 (Benzyl alcohol:NAD+ oxidoreductase) |
+| s_3802 | Mn(2+) | er | after other dead ends | 1 | r_4181 (Manganese-transporting ATPase 1 (EC 3.6.) |
+| s_3805 | Mannitol | c | after other dead ends | 1 | r_4183 (D-Mannitol:NAD+ 2-oxidoreductase) |
+| s_3806 | 4-hydroxy-4-methyl-2-oxoglutarate | c | after other dead ends | 1 | r_4184 (4-hydroxy-4-methyl-2-oxoglutarate pyruva) |
+| s_3807 | L-methionine (S)-S-oxide | c | after other dead ends | 1 | r_4186 (L-methionine:thioredoxin-disulfide S-oxi) |
+| s_3808 | tRNA(Pro) | m | never produced | 1 | r_4187 (L-proline:tRNA(Pro) ligase (AMP-forming)) |
+| s_3809 | Pro-tRNA(Pro) | m | never consumed | 1 | r_4187 (L-proline:tRNA(Pro) ligase (AMP-forming)) |
+| s_3811 | 4a-Hydroxytetrahydrobiopterin | m | after other dead ends | 1 | r_4189 (4a-hydroxytetrahydrobiopterin hydro-lyas) |
+| s_3812 | Dihydrobiopterin | m | after other dead ends | 1 | r_4189 (4a-hydroxytetrahydrobiopterin hydro-lyas) |
+| s_3813 | superoxide | m | never produced | 1 | r_4190 (superoxide:superoxide oxidoreductase) |
+| s_3814 | 2-deoxy-D-glucose 6-phosphate | c | after other dead ends | 1 | r_4191 (2-Deoxy-D-glucose 6-phosphate phosphohyd) |
+| s_3815 | 2-deoxy-D-glucose | c | after other dead ends | 1 | r_4191 (2-Deoxy-D-glucose 6-phosphate phosphohyd) |
+| s_3816 | [cytochrome c]-L-lysine | c | after other dead ends | 1 | r_4192 (Cytochrome c lysine N-methyltransferase ) |
+| s_3817 | [cytochrome c]-N6-methyl-L-lysine | c | after other dead ends | 1 | r_4192 (Cytochrome c lysine N-methyltransferase ) |
+| s_3818 | S-adenosyl-L-methionine | n | after other dead ends | 1 | r_4617 (S-adenosyl-L-methionine transport) |
+| s_3823 | Zn(2+) | er | after other dead ends | 1 | r_4194 (Zinc transporter YKE4) |
+| s_3826 | ferricytochrome b5 | m | after other dead ends | 1 | r_4197 (NADH-cytochrome b5 reductase 1 (EC 1.6.2) |
+| s_3827 | ferrocytochrome b5 | m | after other dead ends | 1 | r_4197 (NADH-cytochrome b5 reductase 1 (EC 1.6.2) |
+| s_3828 | (S)-benzoin | c | after other dead ends | 1 | r_4198 (Benzil reductase ((S)-benzoin forming) I) |
+| s_3829 | benzil | c | after other dead ends | 1 | r_4198 (Benzil reductase ((S)-benzoin forming) I) |
+| s_3831 | glutathione | er | after other dead ends | 1 | r_4618 (glutathione transport) |
+| s_3838 | Ala-Gly | v | after other dead ends | 2 | r_4203 (Vacuolar aminopeptidase 1 (EC 3.4.11.22)); r_4474 (L-alanylglycine transport via proton ant) |
+| s_3839 | L-glycine | v | after other dead ends | 6 | r_4203 (Vacuolar aminopeptidase 1 (EC 3.4.11.22)); r_4362 (dipeptidase); r_4417 (Cytosol non-specific dipeptidase); r_4418 (Cytosol non-specific dipeptidase); r_4439 (cytosol nonspecific dipeptidase); r_4483 (Glycine transport (vacuole)) |
+| s_3840 | Ala-Leu | v | after other dead ends | 2 | r_4204 (Vacuolar aminopeptidase 1 (EC 3.4.11.22)); r_4472 (Ala-Leu transport via proton symport (cy) |
+| s_3841 | Threo-3-hydroxy-L-aspartate | c | after other dead ends | 1 | r_4206 (threo-3-hydroxy-L-aspartate ammonia-lyas) |
+| s_3843 | glutathione | p | after other dead ends | 1 | r_4209 (Glutathione S-transferase omega-like 2 () |
+| s_3846 | dehydroascorbate | c | after other dead ends | 1 | r_4208 (glutathione:dehydroascorbate oxidoreduct) |
+| s_3847 | ascorbate | c | after other dead ends | 1 | r_4208 (glutathione:dehydroascorbate oxidoreduct) |
+| s_3848 | dehydroascorbate | p | after other dead ends | 1 | r_4209 (Glutathione S-transferase omega-like 2 () |
+| s_3849 | glutathione disulfide | p | after other dead ends | 1 | r_4209 (Glutathione S-transferase omega-like 2 () |
+| s_3850 | ascorbate | p | after other dead ends | 1 | r_4209 (Glutathione S-transferase omega-like 2 () |
+| s_3851 | Cyanamide | c | after other dead ends | 1 | r_4210 (urea hydro-lyase (cyanamide-forming)) |
+| s_3852 | aldehydo-D-ribose 5-phosphate | c | after other dead ends | 1 | r_4211 (D-ribose 5-phosphate,D-glyceraldehyde 3-) |
+| s_3855 | iron(3+) | m | after other dead ends | 1 | r_4217 (Fe(II):oxygen oxidoreductase; Fe2+:oxyge) |
+| s_3856 | Glycyl-tRNA(Ala) | c | after other dead ends | 1 | r_4218 (D-aminoacyl-tRNA deacylase (DTD) (EC 3.1) |
+| s_3857 | D-tyrosyl-tRNA(Tyr) | c | after other dead ends | 1 | r_4219 (D-aminoacyl-tRNA deacylase (DTD) (EC 3.1) |
+| s_3858 | D-tyrosine | c | after other dead ends | 1 | r_4219 (D-aminoacyl-tRNA deacylase (DTD) (EC 3.1) |
+| s_3859 | 4-nitrophenyl phosphate | c | after other dead ends | 1 | r_4220 (4-nitrophenyl phosphate phosphohydrolase) |
+| s_3860 | 4-nitrophenol | c | after other dead ends | 1 | r_4220 (4-nitrophenyl phosphate phosphohydrolase) |
+| s_3861 | L-iditol | c | after other dead ends | 1 | r_4221 (D-Iditol:NAD+ 2-oxidoreductase) |
+| s_3862 | alpha-D-Galactose | c | never produced | 1 | r_4222 (ATP:alpha-D-galactose 1-phosphotransfera) |
+| s_3863 | 3-hydroxy-2-methylpropanoyl-CoA | m | never produced | 1 | r_4223 (3-Hydroxy-2-methylpropanoyl-CoA hydrolas) |
+| s_3864 | 3-hydroxy-2-methylpropanoate | m | never consumed | 1 | r_4223 (3-Hydroxy-2-methylpropanoyl-CoA hydrolas) |
+| s_3867 | 2-Phenylacetamide | c | after other dead ends | 1 | r_4227 (2-phenylacetamide amidohydrolase) |
+| s_3868 | (Indol-3-yl)acetamide | c | never produced | 1 | r_4228 (Indole-3-acetamide amidohydrolase) |
+| s_3871 | Acrylic acid | c | after other dead ends | 1 | r_4230 (Probable amidase (EC 3.5.1.4)) |
+| s_3872 | Acrylamide | c | after other dead ends | 1 | r_4230 (Probable amidase (EC 3.5.1.4)) |
+| s_3873 | Benzamide | c | after other dead ends | 1 | r_4231 (Acylamide aminohydrolase) |
+| s_3874 | Benzoate | c | after other dead ends | 2 | r_4231 (Acylamide aminohydrolase); r_4715 (ethyl-benzoate esterase, c) |
+| s_3878 | 1-phosphatidyl-1D-myo-inositol | er | after other dead ends | 1 | r_4234 (Phosphatidylinositol N-acetylglucosaminy) |
+| s_3879 | G00143 | er | after other dead ends | 1 | r_4234 (Phosphatidylinositol N-acetylglucosaminy) |
+| s_3881 | ATP | v | after other dead ends | 2 | r_4237 (Calcium-transporting ATPase 2 (EC 3.6.3.); r_4619 (ATP transport) |
+| s_3882 | Ca(2+) | v | never consumed | 1 | r_4237 (Calcium-transporting ATPase 2 (EC 3.6.3.) |
+| s_3883 | ADP | v | after other dead ends | 2 | r_4237 (Calcium-transporting ATPase 2 (EC 3.6.3.); r_4619 (ATP transport) |
+| s_3887 | G00008 | er | after other dead ends | 1 | r_4253 (dolichyl beta-D-glucosyl phosphate:D-Glc) |
+| s_3888 | Dolichyl diphosphate | er | after other dead ends | 1 | r_4250 (Dolichyl-diphosphate phosphohydrolase) |
+| s_3889 | G00009 | er | after other dead ends | 1 | r_4241 (Mannosyl-oligosaccharide glucosidase (EC) |
+| s_3890 | GDP-alpha-D-mannose | er | after other dead ends | 5 | r_4242 (Initiation-specific alpha-1,6-mannosyltr); r_4243 (Alpha-1,3/1,6-mannosyltransferase ALG2 (); r_4244 (GDP-D-mannose:D-Man-alpha-(1->3)-D-Man-b); r_4310 (GDP-mannose:glycolipid 1,2-alpha-D-manno); r_4311 (GDP-mannose:glycolipid 1,2-alpha-D-manno) |
+| s_3891 | G10694 | er | after other dead ends | 2 | r_4242 (Initiation-specific alpha-1,6-mannosyltr); r_4272 (alpha 1,2-mannosyloligosaccharide alpha-) |
+| s_3892 | GDP | er | after other dead ends | 5 | r_4242 (Initiation-specific alpha-1,6-mannosyltr); r_4243 (Alpha-1,3/1,6-mannosyltransferase ALG2 (); r_4244 (GDP-D-mannose:D-Man-alpha-(1->3)-D-Man-b); r_4310 (GDP-mannose:glycolipid 1,2-alpha-D-manno); r_4311 (GDP-mannose:glycolipid 1,2-alpha-D-manno) |
+| s_3893 | G01813 | er | after other dead ends | 1 | r_4242 (Initiation-specific alpha-1,6-mannosyltr) |
+| s_3894 | G00003 | er | after other dead ends | 1 | r_4243 (Alpha-1,3/1,6-mannosyltransferase ALG2 () |
+| s_3895 | G00004 | er | after other dead ends | 2 | r_4243 (Alpha-1,3/1,6-mannosyltransferase ALG2 (); r_4244 (GDP-D-mannose:D-Man-alpha-(1->3)-D-Man-b) |
+| s_3896 | G00005 | er | after other dead ends | 2 | r_4244 (GDP-D-mannose:D-Man-alpha-(1->3)-D-Man-b); r_4310 (GDP-mannose:glycolipid 1,2-alpha-D-manno) |
+| s_3897 | 2-O-(6-phospho-alpha-D-mannosyl)-D-glycerate | v | never produced | 1 | r_4245 (2-O-(6-phospho-alpha-D-mannosyl)-D-glyce) |
+| s_3898 | D-mannose 6-phosphate | v | after other dead ends | 2 | r_4245 (2-O-(6-phospho-alpha-D-mannosyl)-D-glyce); r_4620 (D-mannose 6-phosphate transport) |
+| s_3899 | D-Glycerate | v | never consumed | 1 | r_4245 (2-O-(6-phospho-alpha-D-mannosyl)-D-glyce) |
+| s_3903 | L-Threonylcarbamoyladenylate | c | never consumed | 1 | r_4247 (ATP:L-threonyl,bicarbonate adenylyltrans) |
+| s_3904 | D-Serine | c | after other dead ends | 2 | r_4248 (D-serine ammonia-lyase); r_4407 (D-O-Phosphoserine phosphohydrolase) |
+| s_3911 | Dolichyl beta-D-glucosyl phosphate | er | after other dead ends | 4 | r_4253 (dolichyl beta-D-glucosyl phosphate:D-Glc); r_4320 (dolichyl beta-D-glucosyl phosphate:D-Man); r_4321 (dolichyl beta-D-glucosyl phosphate:D-Glc); r_4328 (UDPglucose:dolichyl-phosphate beta-D-glu) |
+| s_3912 | G10599 | er | after other dead ends | 2 | r_4253 (dolichyl beta-D-glucosyl phosphate:D-Glc); r_4321 (dolichyl beta-D-glucosyl phosphate:D-Glc) |
+| s_3913 | nitric oxide | c | never produced | 2 | r_4254 (nitric oxide, NADH2:oxygen oxidoreductas); r_4255 (nitric oxide, NADPH2:oxygen oxidoreducta) |
+| s_3914 | nitrate | c | never consumed | 2 | r_4254 (nitric oxide, NADH2:oxygen oxidoreductas); r_4255 (nitric oxide, NADPH2:oxygen oxidoreducta) |
+| s_3923 | N-(4-oxoglutarate)-L-cysteinylglycine | c | after other dead ends | 1 | r_4260 (Deaminated glutathione amidase (dGSH ami) |
+| s_3924 | N-(4-oxoglutarate)-L-cysteinylglycine | m | after other dead ends | 1 | r_4261 (Deaminated glutathione amidase (dGSH ami) |
+| s_3925 | L-cysteinylglycine | m | after other dead ends | 2 | r_4261 (Deaminated glutathione amidase (dGSH ami); r_4623 (L-cysteinylglycine transport) |
+| s_3926 | chloride | g | after other dead ends | 1 | r_4263 (Anion/proton exchange transporter GEF1 () |
+| s_3929 | 2'-deoxyribonucleoside 5'-triphosphate | c | after other dead ends | 1 | r_4269 (Inosine triphosphate pyrophosphatase (IT) |
+| s_3930 | 2'-deoxyribonucleoside 5'-phosphate | c | after other dead ends | 1 | r_4269 (Inosine triphosphate pyrophosphatase (IT) |
+| s_3931 | superoxide | c | never produced | 1 | r_4270 (superoxide:superoxide oxidoreductase) |
+| s_3932 | G00012 | er | after other dead ends | 1 | r_4271 (Endoplasmic reticulum mannosyl-oligosacc) |
+| s_3933 | D-mannose | er | after other dead ends | 2 | r_4271 (Endoplasmic reticulum mannosyl-oligosacc); r_4272 (alpha 1,2-mannosyloligosaccharide alpha-) |
+| s_3934 | Ethylnitronate | c | after other dead ends | 1 | r_4273 (ethylnitronate:oxygen 2-oxidoreductase () |
+| s_3935 | Nitrite | c | after other dead ends | 1 | r_4273 (ethylnitronate:oxygen 2-oxidoreductase () |
+| s_3936 | iron(3+) | e | after other dead ends | 1 | r_4275 (Fe(II):NADP+ oxidoreductase) |
+| s_3942 | 8-oxo-dGTP | p | never produced | 1 | r_4279 (8-oxo-dGTP diphosphohydrolase) |
+| s_3943 | 8-oxo-dGMP | p | never consumed | 1 | r_4279 (8-oxo-dGTP diphosphohydrolase) |
+| s_3948 | beta-D-Fructose 6-phosphate | c | after other dead ends | 3 | r_4282 (ATP:D-fructose-6-phosphate 2-phosphotran); r_4283 (ATP:D-fructose 6-phosphotransferase); r_4287 (ATP:D-fructose 6-phosphotransferase) |
+| s_3949 | beta-D-Glucose | c | after other dead ends | 2 | r_4284 (ATP:beta-D-glucose 6-phosphotransferase); r_4750 (D-glucose 1-epimerase) |
+| s_3950 | beta-D-Glucose 6-phosphate | c | after other dead ends | 2 | r_4284 (ATP:beta-D-glucose 6-phosphotransferase); r_4288 (alpha-D-Glucose 6-phosphate ketol-isomer) |
+| s_3951 | alpha-D-Glucose | c | after other dead ends | 4 | r_4285 (ATP:alpha-D-glucose 6-phosphotransferase); r_4318 (Isomaltose 6-alpha-D-glucanohydrolase); r_4338 (Oligo-1,6-glucosidase IMA2 (EC 3.2.1.10)); r_4750 (D-glucose 1-epimerase) |
+| s_3952 | alpha-D-Glucose 6-phosphate | c | after other dead ends | 2 | r_4285 (ATP:alpha-D-glucose 6-phosphotransferase); r_4288 (alpha-D-Glucose 6-phosphate ketol-isomer) |
+| s_3953 | D-Glucosamine | c | after other dead ends | 2 | r_4286 (ATP:D-glucosamine 6-phosphotransferase); r_4467 (D-glucosamine transport via diffusion (e) |
+| s_3954 | beta-D-Fructose | c | never produced | 1 | r_4287 (ATP:D-fructose 6-phosphotransferase) |
+| s_3958 | D-Glycerate | c | after other dead ends | 1 | r_4291 (D-Glyceraldehyde:NAD+ oxidoreductase) |
+| s_3959 | 2-Propynal | c | after other dead ends | 1 | r_4295 (2-Propyn-1-al:NAD+ oxidoreductase) |
+| s_3960 | Propynoate | c | after other dead ends | 1 | r_4295 (2-Propyn-1-al:NAD+ oxidoreductase) |
+| s_3961 | D-Glucuronolactone | c | never produced | 1 | r_4296 (D-Glucuronolactone:NAD+ oxidoreductase) |
+| s_3962 | D-Glucarate | c | never consumed | 1 | r_4296 (D-Glucuronolactone:NAD+ oxidoreductase) |
+| s_3963 | 4-Trimethylammoniobutanal | c | after other dead ends | 1 | r_4297 (4-Trimethylammoniobutanal:NAD+ 1-oxidore) |
+| s_3964 | 4-Trimethylammoniobutanoate | c | after other dead ends | 1 | r_4297 (4-Trimethylammoniobutanal:NAD+ 1-oxidore) |
+| s_3965 | (S)-Methylmalonate semialdehyde | c | after other dead ends | 1 | r_4298 ((S)-Methylmalonate semialdehyde:NAD+ oxi) |
+| s_3966 | Methylmalonate | c | after other dead ends | 1 | r_4298 ((S)-Methylmalonate semialdehyde:NAD+ oxi) |
+| s_3967 | Imidazole-4-acetaldehyde | c | after other dead ends | 1 | r_4299 (Imidazole acetaldehyde:NAD+ oxidoreducta) |
+| s_3968 | Imidazole-4-acetate | c | after other dead ends | 1 | r_4299 (Imidazole acetaldehyde:NAD+ oxidoreducta) |
+| s_3969 | 3alpha,7alpha-Dihydroxy-5beta-cholestan-26-al | c | after other dead ends | 1 | r_4300 (3alpha,7alpha-Dihydroxy-5beta-cholestan-) |
+| s_3970 | 3alpha,7alpha-Dihydroxy-5beta-cholestanate | c | after other dead ends | 1 | r_4300 (3alpha,7alpha-Dihydroxy-5beta-cholestan-) |
+| s_3971 | 5-Hydroxyindoleacetaldehyde | c | after other dead ends | 1 | r_4301 (5-Hydroxyindoleacetaldehyde:NAD+ oxidore) |
+| s_3972 | 5-Hydroxyindoleacetate | c | after other dead ends | 1 | r_4301 (5-Hydroxyindoleacetaldehyde:NAD+ oxidore) |
+| s_3973 | N4-Acetylaminobutanal | c | after other dead ends | 1 | r_4302 (N4-Acetylaminobutanal:NAD+ oxidoreductas) |
+| s_3974 | 4-Acetamidobutanoate | c | after other dead ends | 1 | r_4302 (N4-Acetylaminobutanal:NAD+ oxidoreductas) |
+| s_3975 | trans-3-Chloroallyl aldehyde | c | after other dead ends | 1 | r_4303 (Fatty aldehyde dehydrogenase HFD1 (EC 1.) |
+| s_3976 | trans-3-Chloroacrylic acid | c | after other dead ends | 1 | r_4303 (Fatty aldehyde dehydrogenase HFD1 (EC 1.) |
+| s_3977 | cis-3-Chloroallyl aldehyde | c | after other dead ends | 1 | r_4304 (Fatty aldehyde dehydrogenase HFD1 (EC 1.) |
+| s_3978 | cis-3-Chloroacrylic acid | c | after other dead ends | 1 | r_4304 (Fatty aldehyde dehydrogenase HFD1 (EC 1.) |
+| s_3979 | Chloroacetaldehyde | c | after other dead ends | 1 | r_4305 (Chloroacetaldehyde:NAD+ oxidoreductase) |
+| s_3980 | Chloroacetic acid | c | after other dead ends | 1 | r_4305 (Chloroacetaldehyde:NAD+ oxidoreductase) |
+| s_3981 | Perillyl aldehyde | c | after other dead ends | 1 | r_4306 (Aldehyde:NAD+ oxidoreductase) |
+| s_3982 | Perillic acid | c | after other dead ends | 1 | r_4306 (Aldehyde:NAD+ oxidoreductase) |
+| s_3983 | 2-trans,6-trans-Farnesal | c | after other dead ends | 1 | r_4307 (farnesal:NAD+ oxidoreductase) |
+| s_3984 | Farnesoic acid | c | after other dead ends | 1 | r_4307 (farnesal:NAD+ oxidoreductase) |
+| s_3987 | ADP | erm | after other dead ends | 1 | r_4624 (ATP transport) |
+| s_3988 | 1-oleoyl-sn-glycerol | c | never produced | 1 | r_4309 (Putative esterase YMR210W (EC 3.1.1.-)) |
+| s_3989 | G10526 | er | after other dead ends | 2 | r_4310 (GDP-mannose:glycolipid 1,2-alpha-D-manno); r_4311 (GDP-mannose:glycolipid 1,2-alpha-D-manno) |
+| s_3990 | G00006 | er | after other dead ends | 1 | r_4311 (GDP-mannose:glycolipid 1,2-alpha-D-manno) |
+| s_3991 | carnosine | c | after other dead ends | 1 | r_4312 (S-adenosyl-L-methionine:carnosine N-meth) |
+| s_3992 | anserine | c | after other dead ends | 1 | r_4312 (S-adenosyl-L-methionine:carnosine N-meth) |
+| s_3993 | G10595 | er | after other dead ends | 1 | r_4313 (Alpha-1,2-mannosyltransferase ALG9 (EC 2) |
+| s_3994 | G10596 | er | after other dead ends | 2 | r_4313 (Alpha-1,2-mannosyltransferase ALG9 (EC 2); r_4316 (Dol-P-Man:Man(7)GlcNAc(2)-PP-Dol alpha-1) |
+| s_3995 | G10597 | er | after other dead ends | 2 | r_4314 (Alpha-1,2-mannosyltransferase ALG9 (EC 2); r_4316 (Dol-P-Man:Man(7)GlcNAc(2)-PP-Dol alpha-1) |
+| s_3996 | G00007 | er | after other dead ends | 2 | r_4314 (Alpha-1,2-mannosyltransferase ALG9 (EC 2); r_4320 (dolichyl beta-D-glucosyl phosphate:D-Man) |
+| s_3997 | glycolate | c | after other dead ends | 2 | r_4315 (Glycolate:NAD+ oxidoreductase); r_4350 (2-phosphoglycolate phosphohydrolase) |
+| s_3998 | sucrose | c | after other dead ends | 2 | r_4317 (sucrose glucohydrolase); r_4586 (stachyose synthase) |
+| s_3999 | Isomaltose | c | after other dead ends | 1 | r_4318 (Isomaltose 6-alpha-D-glucanohydrolase) |
+| s_4000 | Dextrin | c | after other dead ends | 1 | r_4319 (Dextrin 6-alpha-D-glucanohydrolase) |
+| s_4001 | G10598 | er | after other dead ends | 2 | r_4320 (dolichyl beta-D-glucosyl phosphate:D-Man); r_4321 (dolichyl beta-D-glucosyl phosphate:D-Glc) |
+| s_4002 | G00149 | er | after other dead ends | 1 | r_4322 (GPI mannosyltransferase 4 (EC 2.4.1.-) () |
+| s_4003 | G00140 | er | after other dead ends | 1 | r_4322 (GPI mannosyltransferase 4 (EC 2.4.1.-) () |
+| s_4009 | hydrogen cyanide | m | after other dead ends | 1 | r_4326 (thiosulfate:cyanide sulfurtranserase) |
+| s_4010 | thiosulfate | m | after other dead ends | 2 | r_4326 (thiosulfate:cyanide sulfurtranserase); r_4625 (thiosulfate transport) |
+| s_4011 | sulphite | m | after other dead ends | 2 | r_4326 (thiosulfate:cyanide sulfurtranserase); r_4626 (sulphite transport) |
+| s_4012 | thiocyanate | m | after other dead ends | 1 | r_4326 (thiosulfate:cyanide sulfurtranserase) |
+| s_4014 | Mg(2+) | m | after other dead ends | 1 | r_4327 (Magnesium transporter MRS2, mitochondria) |
+| s_4015 | UDP-D-glucose | er | after other dead ends | 2 | r_4328 (UDPglucose:dolichyl-phosphate beta-D-glu); r_4627 (UDP-D-glucose transport) |
+| s_4016 | sulphate | er | after other dead ends | 1 | r_4329 (Putative sulfate transporter YPR003C) |
+| s_4017 | N-Acetyl-D-glucosamine | c | after other dead ends | 1 | r_4331 ([1,4-(N-Acetyl-beta-D-glucosaminyl)]n gl) |
+| s_4020 | Cu2(+) | g | never consumed | 1 | r_4334 (Copper-transporting ATPase (EC 3.6.3.54)) |
+| s_4021 | 2-Oxoglutaramate | c | after other dead ends | 1 | r_4336 (Monoamide of a dicarboxylic acid amidohy) |
+| s_4022 | porphyrin | m | after other dead ends | 1 | r_4337 (Iron-sulfur clusters transporter ATM1, m) |
+| s_4023 | porphyrin | c | after other dead ends | 1 | r_4337 (Iron-sulfur clusters transporter ATM1, m) |
+| s_4024 | Starch | c | after other dead ends | 1 | r_4338 (Oligo-1,6-glucosidase IMA2 (EC 3.2.1.10)) |
+| s_4025 | UDP-N-acetyl-alpha-D-glucosamine | g | after other dead ends | 2 | r_4339 (UDP-N-acetylglucosamine transporter YEA4); r_4628 (UDP-N-acetyl-alpha-D-glucosamine transpo) |
+| s_4026 | Zn(2+) | m | after other dead ends | 1 | r_4195 (Zinc transporter YKE4) |
+| s_4027 | Zn(2+) | v | after other dead ends | 1 | r_4195 (Zinc transporter YKE4) |
+| s_4031 | iron(3+) | v | after other dead ends | 1 | r_4276 (Fe(II):NADP+ oxidoreductase) |
+| s_4034 | Ala-Gln | e | never produced | 2 | r_4398 (Ala-Gln transport via proton symport); r_4508 (Ala-Gln exchange) |
+| s_4035 | Ala-Gln | c | after other dead ends | 2 | r_4398 (Ala-Gln transport via proton symport); r_4426 (Ala-Gln transport via proton symport) |
+| s_4036 | Ala-Gln | v | after other dead ends | 2 | r_4414 (cytosol nonspecific dipeptidase); r_4426 (Ala-Gln transport via proton symport) |
+| s_4037 | Ala-Glu | e | never produced | 2 | r_4408 (L-alanyl-L-glutamate transport in via pr); r_4513 (Ala-Glu exchange) |
+| s_4038 | Ala-Glu | c | after other dead ends | 2 | r_4399 (L-alanyl-L-glutamate transport in via pr); r_4408 (L-alanyl-L-glutamate transport in via pr) |
+| s_4039 | Ala-Glu | v | after other dead ends | 2 | r_4399 (L-alanyl-L-glutamate transport in via pr); r_4409 (L-alanyl-gamma-L-glutamate peptidase) |
+| s_4040 | Ala-Thr | e | never produced | 2 | r_4402 (Ala-Thr transport via proton symport (ex); r_4517 (Ala-Thr exchange) |
+| s_4041 | Ala-Thr | c | after other dead ends | 2 | r_4401 (Ala-Thr transport via proton symport); r_4402 (Ala-Thr transport via proton symport (ex) |
+| s_4042 | Ala-Thr | v | after other dead ends | 2 | r_4401 (Ala-Thr transport via proton symport); r_4416 (Cytosol non-specific dipeptidase) |
+| s_4043 | L-threonine | v | after other dead ends | 2 | r_4416 (Cytosol non-specific dipeptidase); r_4441 (L-threonine transport, vacuoluar) |
+| s_4044 | thymidine 3'-monophosphate | c | after other dead ends | 2 | r_4413 (deoxynucleotide 3'-phosphatase); r_4433 (thymidine 3-monophosphate transport) |
+| s_4045 | thymidine 3'-monophosphate | e | after other dead ends | 2 | r_4433 (thymidine 3-monophosphate transport); r_4560 (thymidine 3'-monophosphate exchange) |
+| s_4046 | thymidine 5'-monophosphate | c | after other dead ends | 2 | r_4434 (thymidine 5-monophosphate transport); r_4436 (nucleotide-specific phosphatase (thymidi) |
+| s_4047 | thymidine 5'-monophosphate | e | after other dead ends | 2 | r_4434 (thymidine 5-monophosphate transport); r_4559 (thymidine 5'-monophosphate exchange) |
+| s_4048 | glycerol 1-phosphate | c | after other dead ends | 2 | r_4405 (glycerol 1-phosphate transport); r_4435 (glycerol-1-phosphate phosphohydrolase) |
+| s_4049 | glycerol 1-phosphate | e | after other dead ends | 2 | r_4405 (glycerol 1-phosphate transport); r_4522 (glycerol 1-phosphate exchange) |
+| s_4050 | Ala-His | e | never produced | 2 | r_4429 (Ala-His transport via proton symport); r_4511 (Ala-His exchange) |
+| s_4051 | Ala-His | c | after other dead ends | 2 | r_4429 (Ala-His transport via proton symport); r_4430 (Ala-His transport via proton symport) |
+| s_4052 | Ala-His | v | after other dead ends | 2 | r_4415 (Cytosol non-specific dipeptidase); r_4430 (Ala-His transport via proton symport) |
+| s_4053 | Gly-Asn | e | never produced | 2 | r_4404 (Gly-Asn transport via proton symport (ex); r_4512 (Gly-Asn exchange) |
+| s_4054 | Gly-Asn | c | after other dead ends | 2 | r_4404 (Gly-Asn transport via proton symport (ex); r_4479 (Gly-Asn transport via proton symport) |
+| s_4055 | Gly-Asn | v | after other dead ends | 2 | r_4417 (Cytosol non-specific dipeptidase); r_4479 (Gly-Asn transport via proton symport) |
+| s_4056 | Gly-Gln | e | never produced | 2 | r_4424 (Gly-Gln transport via proton symport); r_4510 (Gly-Gln exchange) |
+| s_4057 | Gly-Gln | c | after other dead ends | 2 | r_4424 (Gly-Gln transport via proton symport); r_4425 (Gly-Gln transport via proton symport) |
+| s_4058 | Gly-Gln | v | after other dead ends | 2 | r_4418 (Cytosol non-specific dipeptidase); r_4425 (Gly-Gln transport via proton symport) |
+| s_4059 | Gly-Glu | e | never produced | 2 | r_4437 (Gly-Glu transport via proton symport (ex); r_4516 (Gly-Glu exchange) |
+| s_4060 | Gly-Glu | c | after other dead ends | 2 | r_4437 (Gly-Glu transport via proton symport (ex); r_4438 (Gly-Glu transport via proton symport (cy) |
+| s_4061 | Gly-Glu | v | after other dead ends | 2 | r_4438 (Gly-Glu transport via proton symport (cy); r_4439 (cytosol nonspecific dipeptidase) |
+| s_4062 | glycerol 2-phosphate(2-) | c | after other dead ends | 2 | r_4341 (glycerol 2-phosphate(2-) transport); r_4342 (Glycerol-2-phosphate phosphohydrolase) |
+| s_4063 | glycerol 2-phosphate(2-) | e | after other dead ends | 2 | r_4341 (glycerol 2-phosphate(2-) transport); r_4535 (glycerol 2-phosphate(2-) exchange) |
+| s_4064 | O-phospho-L-threonine | c | after other dead ends | 2 | r_4343 (L-Threonine phosphate transport in via p); r_4344 (acid phosphatase / phosphotransferase) |
+| s_4065 | O-phospho-L-threonine | e | never produced | 2 | r_4343 (L-Threonine phosphate transport in via p); r_4542 (O-phospho-L-threonine exchange) |
+| s_4066 | guanosine 2'-monophosphate | c | after other dead ends | 3 | r_4345 (alkaline phosphatase); r_4346 (Guanosine transport via proton symport); r_4412 (cyclic phosphodiesterase) |
+| s_4067 | guanosine 2'-monophosphate | e | never produced | 2 | r_4346 (Guanosine transport via proton symport); r_4534 (guanosine 2'-monophosphate exchange) |
+| s_4068 | 3'-GMP | c | after other dead ends | 2 | r_4347 (Guanosine 3'-phosphate phosphohydrolase); r_4348 (Guanosine transport via proton symport(f) |
+| s_4069 | 3'-GMP | e | never produced | 2 | r_4348 (Guanosine transport via proton symport(f); r_4536 (3'-GMP exchange) |
+| s_4070 | 2-phosphoglycolate | e | never produced | 2 | r_4349 (2-Phosphoglycolate transport in/out via ); r_4537 (2-phosphoglycolate exchange) |
+| s_4071 | 2-phosphoglycolate | c | after other dead ends | 2 | r_4349 (2-Phosphoglycolate transport in/out via ); r_4350 (2-phosphoglycolate phosphohydrolase) |
+| s_4072 | cysteamine S-phosphate | c | after other dead ends | 2 | r_4351 (alkaline phosphatase); r_4352 (cysteamine S-phosphate transport via pro) |
+| s_4073 | cysteamine | c | after other dead ends | 3 | r_4351 (alkaline phosphatase); r_4353 (Cysteamine:oxygen oxidoreductase); r_4480 (Cysteamine transport via proton antiport) |
+| s_4074 | cysteamine | e | never produced | 2 | r_4442 (cysteamine exchange); r_4480 (Cysteamine transport via proton antiport) |
+| s_4075 | cysteamine S-phosphate | e | after other dead ends | 2 | r_4352 (cysteamine S-phosphate transport via pro); r_4533 (cysteamine S-phosphate exchange) |
+| s_4076 | hypotaurine | c | after other dead ends | 2 | r_4353 (Cysteamine:oxygen oxidoreductase); r_4354 (hypotaurine:NAD+ oxidoreductase) |
+| s_4077 | O-phosphonatooxy-D-serine(2-) | c | after other dead ends | 2 | r_4406 (D-O-Phosphoserine transport in/out via p); r_4407 (D-O-Phosphoserine phosphohydrolase) |
+| s_4078 | O-phosphonatooxy-D-serine(2-) | e | never produced | 2 | r_4406 (D-O-Phosphoserine transport in/out via p); r_4526 (O-phosphonatooxy-D-serine(2-) exchange) |
+| s_4079 | 2-aminobutanoate | c | after other dead ends | 2 | r_4355 (2-aminobutanoate:2-oxoglutarate aminotra); r_4356 (2-aminobutyrate transport) |
+| s_4080 | 2-aminobutanoate | e | never produced | 2 | r_4356 (2-aminobutyrate transport); r_4520 (2-aminobutanoate exchange) |
+| s_4081 | uridine 2'-phosphate | c | after other dead ends | 3 | r_4357 (alkaline phosphatase); r_4358 (Uridine 2'-phosphate transport in via pr); r_4372 (cyclic phosphodiesterase) |
+| s_4082 | uridine 2'-phosphate | e | never produced | 2 | r_4358 (Uridine 2'-phosphate transport in via pr); r_4562 (uridine 2'-phosphate exchange) |
+| s_4083 | 3'-UMP | c | after other dead ends | 2 | r_4359 (Uridine 3'-monophosphate phosphohydrolas); r_4360 (3'-UMP transport in via proton symport) |
+| s_4084 | 3'-UMP | e | never produced | 2 | r_4360 (3'-UMP transport in via proton symport); r_4563 (3'-UMP exchange) |
+| s_4085 | Gly-Met | e | never produced | 2 | r_4361 (Gly-Met transport via proton symport); r_4514 (Gly-Met exchange) |
+| s_4086 | Gly-Met | c | after other dead ends | 2 | r_4361 (Gly-Met transport via proton symport); r_4423 (Gly-Met transport via proton symport) |
+| s_4087 | Gly-Met | v | after other dead ends | 2 | r_4362 (dipeptidase); r_4423 (Gly-Met transport via proton symport) |
+| s_4088 | N-phosphocreatine | c | after other dead ends | 2 | r_4363 (R07420); r_4364 (N-phosphocreatine transport) |
+| s_4089 | creatinine | c | never consumed | 2 | r_4363 (R07420); r_4365 (creatinine transport) |
+| s_4090 | N-phosphocreatine | e | never produced | 1 | r_4364 (N-phosphocreatine transport) |
+| s_4091 | creatinine | e | never produced | 1 | r_4365 (creatinine transport) |
+| s_4092 | N(omega)-phospho-L-arginine | c | after other dead ends | 2 | r_4366 (ATP:L-arginine Nomega-phosphotransferase); r_4367 (L-arginine phosphate transport in/out vi) |
+| s_4093 | N(omega)-phospho-L-arginine | e | never produced | 2 | r_4367 (L-arginine phosphate transport in/out vi); r_4530 (N(omega)-phospho-L-arginine exchange) |
+| s_4094 | 2',3'-cyclic GMP | c | after other dead ends | 2 | r_4412 (cyclic phosphodiesterase); r_4443 (23cGMP transport via diffusion (extracel) |
+| s_4095 | 2',3'-cyclic GMP | e | after other dead ends | 2 | r_4443 (23cGMP transport via diffusion (extracel); r_4540 (2',3'-cyclic GMP exchange) |
+| s_4096 | O(4)-phospho-L-tyrosine | c | after other dead ends | 2 | r_4368 (acid phosphatase / phosphotransferase); r_4428 (Phosphotyrosine transport via proton sym) |
+| s_4097 | O(4)-phospho-L-tyrosine | e | never produced | 2 | r_4428 (Phosphotyrosine transport via proton sym); r_4541 (O(4)-phospho-L-tyrosine exchange) |
+| s_4098 | triphosphate | c | after other dead ends | 2 | r_4369 (Tripolyphosphate transport in via proton); r_4403 (Triphosphate phosphohydrolase) |
+| s_4099 | triphosphate | e | never produced | 2 | r_4369 (Tripolyphosphate transport in via proton); r_4528 (triphosphate exchange) |
+| s_4100 | cytidine 2'-phosphate | c | after other dead ends | 3 | r_4370 (alkaline phosphatase); r_4371 (Cytidine- 2'- Monophosphate transport in); r_4388 (cyclic phosphodiesterase) |
+| s_4101 | cytidine 2'-phosphate | e | never produced | 2 | r_4371 (Cytidine- 2'- Monophosphate transport in); r_4561 (cytidine 2'-phosphate exchange) |
+| s_4102 | 2',3'-cyclic UMP | c | after other dead ends | 2 | r_4372 (cyclic phosphodiesterase); r_4373 (2',3'-Cyclic UMP transport in via proton) |
+| s_4103 | 2',3'-cyclic UMP | e | never produced | 2 | r_4373 (2',3'-Cyclic UMP transport in via proton); r_4565 (2',3'-cyclic UMP exchange) |
+| s_4104 | 3-sulfino-L-alanine | c | after other dead ends | 2 | r_4374 (3-Sulfino-L-alanine 4-carboxy-lyase); r_4375 (3-Sulfino-L-alanine transport via proton) |
+| s_4105 | 3-sulfino-L-alanine | e | never produced | 2 | r_4375 (3-Sulfino-L-alanine transport via proton); r_4551 (3-sulfino-L-alanine exchange) |
+| s_4106 | 3'-AMP | c | after other dead ends | 2 | r_4376 (adenosine 3'-phosphate phosphohydrolase); r_4377 (3AMP transport via diffusion (extracellu) |
+| s_4107 | 3'-AMP | e | after other dead ends | 2 | r_4377 (3AMP transport via diffusion (extracellu); r_4545 (3'-AMP exchange) |
+| s_4108 | 6-O-alpha-D-glucopyranosyl-D-fructofuranose | c | after other dead ends | 2 | r_4378 (alpha-glucosidase); r_4379 (Palatinose transport in via proton sympo) |
+| s_4109 | 6-O-alpha-D-glucopyranosyl-D-fructofuranose | e | never produced | 2 | r_4379 (Palatinose transport in via proton sympo); r_4498 (6-O-alpha-D-glucopyranosyl-D-fructofuran) |
+| s_4110 | N-acetyl-L-cysteine | c | after other dead ends | 2 | r_4380 (Amino-Acid N-Acetyltransferase); r_4381 (Acetylcysteine transport via proton symp) |
+| s_4111 | N-acetyl-L-cysteine | e | never produced | 2 | r_4381 (Acetylcysteine transport via proton symp); r_4552 (N-acetyl-L-cysteine exchange) |
+| s_4112 | tetrathionate | c | after other dead ends | 2 | r_4382 (thiosulfate:ferricytochrome-c oxidoreduc); r_4383 (etrathionate transport via diffusion) |
+| s_4113 | thiosulfate | c | after other dead ends | 4 | r_4382 (thiosulfate:ferricytochrome-c oxidoreduc); r_4462 (thiosulfate transport); r_4625 (thiosulfate transport); r_4707 (trithionate thiosulfohydrolase) |
+| s_4114 | tetrathionate | e | after other dead ends | 1 | r_4383 (etrathionate transport via diffusion) |
+| s_4115 | 2-hydroxyethane-1-sulfonate | c | after other dead ends | 2 | r_4421 (2-Hydroxyethanesulfonate transport via p); r_4432 (FMNH2-dependent alkanesulfonate monooxyg) |
+| s_4116 | 2-hydroxyethane-1-sulfonate | e | never produced | 2 | r_4421 (2-Hydroxyethanesulfonate transport via p); r_4554 (2-hydroxyethane-1-sulfonate exchange) |
+| s_4117 | 5-dehydro-D-gluconate | c | after other dead ends | 2 | r_4384 (D-Gluconate:NADP+ 5-oxidoreductase); r_4385 (5-Dehydro-D-gluconate transport via prot) |
+| s_4118 | 5-dehydro-D-gluconate | e | never produced | 2 | r_4385 (5-Dehydro-D-gluconate transport via prot); r_4499 (5-dehydro-D-gluconate exchange) |
+| s_4119 | Ala-Asp | e | never produced | 2 | r_4387 (ala-L-asp-L transport via proton symport); r_4515 (Ala-Asp exchange) |
+| s_4120 | Ala-Asp | c | after other dead ends | 2 | r_4387 (ala-L-asp-L transport via proton symport); r_4431 (ala-L-asp-L transport via proton symport) |
+| s_4121 | Ala-Asp | v | after other dead ends | 2 | r_4386 (dipeptidase); r_4431 (ala-L-asp-L transport via proton symport) |
+| s_4122 | methyl alpha-D-glucopyranoside | c | after other dead ends | 2 | r_4390 (beta-glucosidase (methyl-alpha-D-glucosi); r_4392 (alpha-Methyl-D-glucoside transport via p) |
+| s_4123 | methanol | c | after other dead ends | 2 | r_4390 (beta-glucosidase (methyl-alpha-D-glucosi); r_4391 (Methanol diffusion) |
+| s_4124 | methanol | e | after other dead ends | 2 | r_4391 (Methanol diffusion); r_4494 (methanol exchange) |
+| s_4125 | methyl alpha-D-glucopyranoside | e | never produced | 2 | r_4392 (alpha-Methyl-D-glucoside transport via p); r_4505 (methyl alpha-D-glucopyranoside exchange) |
+| s_4126 | 2',3'-cyclic CMP | c | after other dead ends | 2 | r_4388 (cyclic phosphodiesterase); r_4389 (2',3'-Cyclic CMP transport in via proton) |
+| s_4127 | 2',3'-cyclic CMP | e | never produced | 2 | r_4389 (2',3'-Cyclic CMP transport in via proton); r_4564 (2',3'-cyclic CMP exchange) |
+| s_4128 | D-tagatose | c | after other dead ends | 2 | r_4393 (ATP:D-tagatose 6-phosphotransferase); r_4395 (D-tagatose uptake via diffusion) |
+| s_4129 | D-tagatofuranose 6-phosphate | c | after other dead ends | 2 | r_4393 (ATP:D-tagatose 6-phosphotransferase); r_4394 (D-tagatose 6-phosphate 4-epimerase) |
+| s_4130 | D-tagatose | e | after other dead ends | 2 | r_4395 (D-tagatose uptake via diffusion); r_4500 (D-tagatose exchange) |
+| s_4131 | turanose | e | after other dead ends | 2 | r_4420 (alpha-glucosidase); r_4501 (turanose exchange) |
+| s_4134 | N(alpha)-acetyl-L-methionine | c | after other dead ends | 2 | r_4397 (N-Acyl-Aliphatic-L-Amino Acid Amidohydro); r_4427 (N-Acetylmethionine transport via proton ) |
+| s_4135 | N(alpha)-acetyl-L-methionine | e | never produced | 2 | r_4427 (N-Acetylmethionine transport via proton ); r_4549 (N(alpha)-acetyl-L-methionine exchange) |
+| s_4136 | 3-oxalomalate(3-) | c | after other dead ends | 2 | r_4410 (3-oxalomalate glyoxylate-lyase (oxaloace); r_4422 (3-Oxalomalate transport via proton sympo) |
+| s_4137 | 3-oxalomalate(3-) | e | never produced | 2 | r_4422 (3-Oxalomalate transport via proton sympo); r_4497 (3-oxalomalate(3-) exchange) |
+| s_4138 | L-cysteate | c | after other dead ends | 2 | r_4411 (L-cysteate bisulfite-lyase (deaminating)); r_4419 (L-Cysteate transport via proton symport) |
+| s_4139 | L-cysteate | e | never produced | 2 | r_4419 (L-Cysteate transport via proton symport); r_4553 (L-cysteate exchange) |
+| s_4140 | alpha-maltotriose | e | never produced | 2 | r_4400 (Maltodextrin glucosidase (maltotriose)); r_4503 (alpha-maltotriose exchange) |
+| s_4141 | 2-phospho-D-glyceric acid | e | never produced | 2 | r_4444 (D-Glycerate 2-phosphate transport in/out); r_4523 (2-phospho-D-glyceric acid exchange) |
+| s_4142 | 3-phosphonato-D-glycerate(3-) | e | never produced | 2 | r_4445 (3-Phospho-D-glycerate transport in/out v); r_4543 (3-phosphonato-D-glycerate(3-) exchange) |
+| s_4143 | Met-Ala | e | never produced | 2 | r_4448 (Met-Ala transport via proton symport (ex); r_4518 (Met-Ala exchange) |
+| s_4144 | Met-Ala | c | after other dead ends | 2 | r_4448 (Met-Ala transport via proton symport (ex); r_4449 (Met-Ala transport via proton symport (cy) |
+| s_4147 | 3-phospho-serine | e | never produced | 2 | r_4450 (O-Phospho-L-serine transport in via prot); r_4525 (3-phospho-serine exchange) |
+| s_4148 | GMP | e | never produced | 2 | r_4451 (GMP transport via proton symport); r_4524 (GMP exchange) |
+| s_4149 | myo-inositol hexakisphosphate | e | after other dead ends | 1 | r_4452 (myo-inositol phosphate transport via dif) |
+| s_4152 | phosphoenolpyruvate | e | never produced | 2 | r_4455 (Phosphoenolpyruvate transport in via pro); r_4529 (phosphoenolpyruvate exchange) |
+| s_4154 | O-phosphoethanolamine | e | never produced | 2 | r_4457 (O-Phosphoryl-Ethanolamine transport in v); r_4532 (O-phosphoethanolamine exchange) |
+| s_4155 | 6-phospho-D-gluconate | e | never produced | 2 | r_4458 (6-Phospho-D-gluconate transport in/out v); r_4538 (6-phospho-D-gluconate exchange) |
+| s_4156 | D-mannose 1-phosphate | e | never produced | 2 | r_4459 (MAN1P transport in/out via proton sympor); r_4547 (D-mannose 1-phosphate exchange) |
+| s_4157 | diphosphate | e | never produced | 2 | r_4460 (Pyrophosphate transport in via proton sy); r_4527 (diphosphate exchange) |
+| s_4159 | thiosulfate | e | after other dead ends | 1 | r_4462 (thiosulfate transport) |
+| s_4160 | AMP | e | never produced | 2 | r_4463 (AMP transport in/out via proton symport); r_4548 (AMP exchange) |
+| s_4161 | 2',3'-cyclic AMP | e | after other dead ends | 2 | r_4464 (23cAMP transport via diffusion (extracel); r_4546 (2',3'-cyclic AMP exchange) |
+| s_4162 | adenosine 2'-phosphate | e | never produced | 2 | r_4465 (Adenosine- 2'-Monophosphate transport in); r_4544 (adenosine 2'-phosphate exchange) |
+| s_4163 | CMP | e | never produced | 2 | r_4466 (CMP transport in/out via proton symport); r_4558 (CMP exchange) |
+| s_4164 | D-Glucosamine | e | after other dead ends | 2 | r_4467 (D-glucosamine transport via diffusion (e); r_4506 (D-Glucosamine exchange) |
+| s_4165 | 2-deoxy-D-ribose | e | after other dead ends | 1 | r_4468 (2-deoxy-D-ribose transport) |
+| s_4166 | L-citrulline | e | never produced | 2 | r_4469 (L-Citrulline transport in via proton sym); r_4519 (L-citrulline exchange) |
+| s_4167 | glycerone | e | after other dead ends | 2 | r_4470 (Dihydroxyacetone transport via facilitat); r_4507 (glycerone exchange) |
+| s_4168 | Ala-Leu | e | never produced | 2 | r_4471 (Ala-Leu transport via proton symport (ex); r_4509 (Ala-Leu exchange) |
+| s_4169 | Ala-Leu | c | after other dead ends | 2 | r_4471 (Ala-Leu transport via proton symport (ex); r_4472 (Ala-Leu transport via proton symport (cy) |
+| s_4170 | Ala-Gly | e | never produced | 2 | r_4473 (L-alanylglycine transport via proton ant); r_4496 (Ala-Gly exchange) |
+| s_4171 | Ala-Gly | c | after other dead ends | 2 | r_4473 (L-alanylglycine transport via proton ant); r_4474 (L-alanylglycine transport via proton ant) |
+| s_4174 | lipoamide | e | never produced | 1 | r_4477 (Lipoamide transport via proton symport) |
+| s_4175 | lipoamide | c | never consumed | 1 | r_4477 (Lipoamide transport via proton symport) |
+| s_4180 | L-xylulose | c | after other dead ends | 2 | r_4489 (L-arabinitol:NAD+ 4-oxidoreductase (L-xy); r_4490 (Xylitol:NADP+ 4-oxidoreductase (L-xylulo) |
+| s_4181 | D-arabinitol | c | after other dead ends | 2 | r_4491 (arabinose reductase (D-arabinose)); r_4492 (D-arabinitol:NAT 4-oxidoreductase) |
+| s_4192 | stachyose | c | never produced | 2 | r_4585 (a-galactosidase (stachyose)); r_4586 (stachyose synthase) |
+| s_4193 | raffinose | c | never consumed | 2 | r_4585 (a-galactosidase (stachyose)); r_4586 (stachyose synthase) |
+| s_4194 | 4-hydroxyphenyl acetate | c | never consumed | 1 | r_4569 (Carboxylic ester hydrolases) |
+| s_4195 | Hydroquinone | c | never produced | 1 | r_4569 (Carboxylic ester hydrolases) |
+| s_4196 | ATP | g | never produced | 1 | r_4238 (Calcium-transporting ATPase 2 (EC 3.6.3.) |
+| s_4197 | Ca(2+) | g | never consumed | 1 | r_4238 (Calcium-transporting ATPase 2 (EC 3.6.3.) |
+| s_4198 | ADP | g | never consumed | 1 | r_4238 (Calcium-transporting ATPase 2 (EC 3.6.3.) |
+| s_4217 | hexanol | m | after other dead ends | 1 | r_4632 (alcohol acetyltransferase (hexanol)) |
+| s_4218 | hexyl acetate | m | after other dead ends | 2 | r_4632 (alcohol acetyltransferase (hexanol)); r_4637 (hexyl acetate transport, mitochondrial) |
+| s_4224 | hexyl acetate | c | after other dead ends | 2 | r_4637 (hexyl acetate transport, mitochondrial); r_4642 (hexyl acetate transport) |
+| s_4229 | hexyl acetate | e | after other dead ends | 2 | r_4642 (hexyl acetate transport); r_4647 (hexyl acetate exchange) |
+| s_4234 | propanal | m | never produced | 1 | r_4653 (aldehyde dehydrogenase (1-propanol, NAD)) |
+| s_4235 | propanol | m | after other dead ends | 2 | r_4653 (aldehyde dehydrogenase (1-propanol, NAD)); r_4655 (1-propyl alcohol transport, mitochondria) |
+| s_4240 | methional | m | never produced | 1 | r_4662 (aldehyde dehydrogenase (methionol, NAD)) |
+| s_4241 | methionol | m | after other dead ends | 2 | r_4662 (aldehyde dehydrogenase (methionol, NAD)); r_4664 (methionol transport, mitochondrial) |
+| s_4246 | (4-hydroxyphenyl)acetaldehyde | m | never produced | 1 | r_4671 (aldehyde dehydrogenase (tyrosol, NAD)) |
+| s_4247 | tyrosol | m | after other dead ends | 2 | r_4671 (aldehyde dehydrogenase (tyrosol, NAD)); r_4673 (tyrosol transport, mitochondrial) |
+| s_4267 | taurocholic acid | c | never consumed | 1 | r_4705 (taurocholate transport) |
+| s_4268 | taurocholic acid | e | never produced | 2 | r_4705 (taurocholate transport); r_4710 (taurocholate exchange) |
+| s_4269 | trithionate | c | after other dead ends | 1 | r_4707 (trithionate thiosulfohydrolase) |
+| s_4274 | diethyl succinate | c | after other dead ends | 2 | r_4713 (diethyl-succinate esterase, c); r_4730 (diethyl-succinate transport) |
+| s_4275 | diethyl succinate | e | after other dead ends | 2 | r_4730 (diethyl-succinate transport); r_4731 (diethyl-succinate exchange) |
+| s_4276 | monoethyl succinate | c | after other dead ends | 2 | r_4714 (monoethyl-succinate esterase, c); r_4732 (monoethyl-succinate transport) |
+| s_4277 | monoethyl succinate | e | after other dead ends | 2 | r_4732 (monoethyl-succinate transport); r_4733 (monoethyl-succinate exchange) |
+| s_4278 | ethyl benzoate | c | after other dead ends | 2 | r_4715 (ethyl-benzoate esterase, c); r_4734 (ethyl-benzoate transport) |
+| s_4279 | ethyl benzoate | e | after other dead ends | 2 | r_4734 (ethyl-benzoate transport); r_4735 (ethyl-benzoate exchange) |
+| s_4288 | benzyl acetate | c | after other dead ends | 2 | r_4717 (benzyl-acetate esterase, c); r_4738 (benzyl-acetate transport) |
+| s_4289 | benzyl acetate | e | after other dead ends | 2 | r_4738 (benzyl-acetate transport); r_4739 (benzyl-acetate exchange) |
+| s_4292 | polyphosphate | n | after other dead ends | 2 | r_4725 (polyphosphate phosphohydrolase, n); r_4746 (polyphosphate transport, c-n) |
+| s_4293 | phosphate | n | never consumed | 1 | r_4725 (polyphosphate phosphohydrolase, n) |
+| s_4294 | 4-(2-aminophenyl)-2,4-dioxobutanoate | c | never consumed | 1 | r_4767 (kynurenine aminotransferase (2-oxoglutar) |
+| s_4295 | dimethylallyl phosphate | m | after other dead ends | 1 | r_4754 (flavin prenyltransferase) |
+| s_4296 | D-phenylalanine | c | never produced | 1 | r_4751 (D-phenylalanine N-acetyltransferase) |
+| s_4297 | N-acetyl-D-phenylalanine | c | never consumed | 1 | r_4751 (D-phenylalanine N-acetyltransferase) |
+| s_4298 | FMNH2 | m | after other dead ends | 1 | r_4754 (flavin prenyltransferase) |
+| s_4299 | cadaverine | c | never produced | 1 | r_4752 (S-adenosylmethioninamine:cadaverine 3-am) |
+| s_4300 | aminopropylcadaverine | c | never consumed | 1 | r_4752 (S-adenosylmethioninamine:cadaverine 3-am) |
+| s_4301 | 2-(2-carboxy-4-methylthiazol-5-yl)ethyl phosphate | c | after other dead ends | 1 | r_4753 (thiamine phosphate synthase) |
+| s_4302 | 2-hydroxyglutarate | m | never produced | 1 | r_4755 ((R)-2-hydroxyglutarate:pyruvate oxidored) |
+| s_4303 | farnesol | c | never consumed | 1 | r_4768 (farnesyl diphosphatase) |
+| s_4304 | D-ribulose | c | after other dead ends | 1 | r_4757 (D-ribulokinase) |
+| s_4305 | 2-deoxy-D-ribose 1-phosphate | c | after other dead ends | 1 | r_4758 (deoxyguanosine phosphorylase) |
+| s_4306 | 3-hydroxyisobutyryl-CoA | m | after other dead ends | 1 | r_4762 ((S)-3-hydroxyisobutyryl-CoA hydrolase) |
+| s_4307 | 3-hydroxyisobutyrate | m | after other dead ends | 1 | r_4762 ((S)-3-hydroxyisobutyryl-CoA hydrolase) |
+| s_4308 | meso-2,3-butanediol | c | after other dead ends | 1 | r_4763 (meso-2,3-butanediol dehydrogenase) |
+| s_4309 | acetoin | c | after other dead ends | 1 | r_4763 (meso-2,3-butanediol dehydrogenase) |
+| s_4310 | 5-methylcytosine | c | never produced | 1 | r_4764 (5-methylcytosine deaminase) |
+| s_4311 | thymine | c | never consumed | 1 | r_4764 (5-methylcytosine deaminase) |
+| s_4312 | prenylated FMNH2 | m | after other dead ends | 1 | r_4754 (flavin prenyltransferase) |
+| s_4313 | ITP | m | never consumed | 1 | r_4776 (nucleoside diphosphate kinase) |
+| s_4314 | IDP | m | never produced | 1 | r_4776 (nucleoside diphosphate kinase) |
+| s_4317 | P(1),P(3)-bis(5'-adenosyl) triphosphate | c | never produced | 1 | r_4769 (bis(5'-adenosyl)-triphosphatase) |
+| s_4318 | dATP | m | never consumed | 1 | r_4771 (nucleoside diphosphate kinase) |
+| s_4319 | dADP | m | never produced | 1 | r_4771 (nucleoside diphosphate kinase) |
+| s_4320 | dGTP | m | never consumed | 1 | r_4773 (nucleoside diphosphate kinase) |
+| s_4321 | dGDP | m | never produced | 1 | r_4773 (nucleoside diphosphate kinase) |
+| s_4322 | CDP | m | never produced | 1 | r_4770 (nucleoside diphosphate kinase) |
+| s_4323 | dCDP | m | never produced | 1 | r_4772 (nucleoside diphosphate kinase) |
+| s_4324 | dCTP | m | never consumed | 1 | r_4772 (nucleoside diphosphate kinase) |
+| s_4325 | dTDP | m | never produced | 1 | r_4774 (nucleoside diphosphate kinase) |
+| s_4326 | dTTP | m | never consumed | 1 | r_4774 (nucleoside diphosphate kinase) |
+| s_4327 | dIDP | m | after other dead ends | 1 | r_4777 (nucleoside diphosphate kinase) |
+| s_4328 | dITP | m | after other dead ends | 1 | r_4777 (nucleoside diphosphate kinase) |
+| s_4329 | dUDP | m | after other dead ends | 1 | r_4778 (nucleoside diphosphate kinase) |
+| s_4330 | dUTP | m | after other dead ends | 1 | r_4778 (nucleoside diphosphate kinase) |
+| s_4331 | xanthurenate | c | never consumed | 1 | r_4761 (3-hydroxykynurenine aminotransferase (2-) |
 
 ## Reactions that can only carry flux one way
 
@@ -2612,29 +2601,29 @@ _None._
 
 ## Reactions flagged as MACAW duplicates
 
-| reaction | name | why | duplicates |
-|---|---|---|---|
-| r_0163 | alcohol dehydrogenase (ethanol to acetaldehyde) | same metabolites, different coefficients | r_2115 |
-| r_0163 | alcohol dehydrogenase (ethanol to acetaldehyde) | same metabolites, opposite direction or reversibility | r_2115 |
-| r_0342 | dihydroceramidase | same metabolites, different coefficients | r_0919 |
-| r_0342 | dihydroceramidase | same metabolites, opposite direction or reversibility | r_0919 |
-| r_0343 | dihydroceramidase | same metabolites, different coefficients | r_0920 |
-| r_0343 | dihydroceramidase | same metabolites, opposite direction or reversibility | r_0920 |
-| r_0919 | phytoceramidase | same metabolites, different coefficients | r_0342 |
-| r_0919 | phytoceramidase | same metabolites, opposite direction or reversibility | r_0342 |
-| r_0920 | phytoceramidase | same metabolites, different coefficients | r_0343 |
-| r_0920 | phytoceramidase | same metabolites, opposite direction or reversibility | r_0343 |
-| r_1130 | CTP transport | same metabolites, different coefficients | r_1131 |
-| r_1131 | CTP/CMP antiport | same metabolites, different coefficients | r_1130 |
-| r_1187 | L-asparagine transport | same metabolites, different coefficients | r_1188 |
-| r_1188 | L-aspartate transport | same metabolites, different coefficients | r_1187 |
-| r_1197 | L-glutamine transport | same metabolites, different coefficients | r_1198 |
-| r_1198 | L-glutamine transport | same metabolites, different coefficients | r_1197 |
-| r_1203 | L-isoleucine transport | same metabolites, different coefficients | r_1204 |
-| r_1204 | L-isoleucine transport | same metabolites, different coefficients | r_1203 |
-| r_1209 | L-leucine transport, vacuoluar | same metabolites, different coefficients | r_1210 |
-| r_1210 | L-leucine transport, vacuoluar | same metabolites, different coefficients | r_1209 |
-| r_1221 | L-tyrosine transport | same metabolites, different coefficients | r_1222 |
-| r_1222 | L-tyrosine transport | same metabolites, different coefficients | r_1221 |
-| r_2115 | alcohol dehydrogenase, (acetaldehyde to ethanol) | same metabolites, different coefficients | r_0163 |
-| r_2115 | alcohol dehydrogenase, (acetaldehyde to ethanol) | same metabolites, opposite direction or reversibility | r_0163 |
+| reaction | name | equation | why | duplicate of | equation of the duplicate |
+|---|---|---|---|---|---|
+| r_0163 | alcohol dehydrogenase (ethanol to acetaldehyde) | NAD [c] + ethanol [c] --> H+ [c] + NADH [c] + acetaldehyde [c] | same metabolites, different coefficients | r_2115 | H+ [c] + NADH [c] + acetaldehyde [c] --> NAD [c] + ethanol [c] |
+| r_0163 | alcohol dehydrogenase (ethanol to acetaldehyde) | NAD [c] + ethanol [c] --> H+ [c] + NADH [c] + acetaldehyde [c] | same metabolites, opposite direction or reversibility | r_2115 | H+ [c] + NADH [c] + acetaldehyde [c] --> NAD [c] + ethanol [c] |
+| r_0342 | dihydroceramidase | H2O [er] + ceramide-2 (C24) [er] --> lignoceric acid [er] + phytosphingosine [er] | same metabolites, different coefficients | r_0919 | lignoceric acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C24) [er] |
+| r_0342 | dihydroceramidase | H2O [er] + ceramide-2 (C24) [er] --> lignoceric acid [er] + phytosphingosine [er] | same metabolites, opposite direction or reversibility | r_0919 | lignoceric acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C24) [er] |
+| r_0343 | dihydroceramidase | H2O [er] + ceramide-2 (C26) [er] --> cerotic acid [er] + phytosphingosine [er] | same metabolites, different coefficients | r_0920 | cerotic acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C26) [er] |
+| r_0343 | dihydroceramidase | H2O [er] + ceramide-2 (C26) [er] --> cerotic acid [er] + phytosphingosine [er] | same metabolites, opposite direction or reversibility | r_0920 | cerotic acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C26) [er] |
+| r_0919 | phytoceramidase | lignoceric acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C24) [er] | same metabolites, different coefficients | r_0342 | H2O [er] + ceramide-2 (C24) [er] --> lignoceric acid [er] + phytosphingosine [er] |
+| r_0919 | phytoceramidase | lignoceric acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C24) [er] | same metabolites, opposite direction or reversibility | r_0342 | H2O [er] + ceramide-2 (C24) [er] --> lignoceric acid [er] + phytosphingosine [er] |
+| r_0920 | phytoceramidase | cerotic acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C26) [er] | same metabolites, different coefficients | r_0343 | H2O [er] + ceramide-2 (C26) [er] --> cerotic acid [er] + phytosphingosine [er] |
+| r_0920 | phytoceramidase | cerotic acid [er] + phytosphingosine [er] --> H2O [er] + ceramide-2 (C26) [er] | same metabolites, opposite direction or reversibility | r_0343 | H2O [er] + ceramide-2 (C26) [er] --> cerotic acid [er] + phytosphingosine [er] |
+| r_1130 | CTP transport | CMP [m] + CTP [c] + H+ [c] --> CMP [c] + CTP [m] + H+ [m] | same metabolites, different coefficients | r_1131 | CMP [m] + CTP [c] + 2 H+ [c] --> CMP [c] + CTP [m] + 2 H+ [m] |
+| r_1131 | CTP/CMP antiport | CMP [m] + CTP [c] + 2 H+ [c] --> CMP [c] + CTP [m] + 2 H+ [m] | same metabolites, different coefficients | r_1130 | CMP [m] + CTP [c] + H+ [c] --> CMP [c] + CTP [m] + H+ [m] |
+| r_1187 | L-asparagine transport | H+ [v] + L-asparagine [c] --> H+ [c] + L-asparagine [v] | same metabolites, different coefficients | r_1188 | H+ [v] + L-asparagine [v] --> H+ [c] + L-asparagine [c] |
+| r_1188 | L-aspartate transport | H+ [v] + L-asparagine [v] --> H+ [c] + L-asparagine [c] | same metabolites, different coefficients | r_1187 | H+ [v] + L-asparagine [c] --> H+ [c] + L-asparagine [v] |
+| r_1197 | L-glutamine transport | H+ [v] + L-glutamine [c] --> H+ [c] + L-glutamine [v] | same metabolites, different coefficients | r_1198 | H+ [v] + L-glutamine [v] --> H+ [c] + L-glutamine [c] |
+| r_1198 | L-glutamine transport | H+ [v] + L-glutamine [v] --> H+ [c] + L-glutamine [c] | same metabolites, different coefficients | r_1197 | H+ [v] + L-glutamine [c] --> H+ [c] + L-glutamine [v] |
+| r_1203 | L-isoleucine transport | H+ [v] + L-isoleucine [c] --> H+ [c] + L-isoleucine [v] | same metabolites, different coefficients | r_1204 | H+ [v] + L-isoleucine [v] --> H+ [c] + L-isoleucine [c] |
+| r_1204 | L-isoleucine transport | H+ [v] + L-isoleucine [v] --> H+ [c] + L-isoleucine [c] | same metabolites, different coefficients | r_1203 | H+ [v] + L-isoleucine [c] --> H+ [c] + L-isoleucine [v] |
+| r_1209 | L-leucine transport, vacuoluar | H+ [v] + L-leucine [c] --> H+ [c] + L-leucine [v] | same metabolites, different coefficients | r_1210 | H+ [v] + L-leucine [v] --> H+ [c] + L-leucine [c] |
+| r_1210 | L-leucine transport, vacuoluar | H+ [v] + L-leucine [v] --> H+ [c] + L-leucine [c] | same metabolites, different coefficients | r_1209 | H+ [v] + L-leucine [c] --> H+ [c] + L-leucine [v] |
+| r_1221 | L-tyrosine transport | H+ [v] + L-tyrosine [c] --> H+ [c] + L-tyrosine [v] | same metabolites, different coefficients | r_1222 | H+ [v] + L-tyrosine [v] --> H+ [c] + L-tyrosine [c] |
+| r_1222 | L-tyrosine transport | H+ [v] + L-tyrosine [v] --> H+ [c] + L-tyrosine [c] | same metabolites, different coefficients | r_1221 | H+ [v] + L-tyrosine [c] --> H+ [c] + L-tyrosine [v] |
+| r_2115 | alcohol dehydrogenase, (acetaldehyde to ethanol) | H+ [c] + NADH [c] + acetaldehyde [c] --> NAD [c] + ethanol [c] | same metabolites, different coefficients | r_0163 | NAD [c] + ethanol [c] --> H+ [c] + NADH [c] + acetaldehyde [c] |
+| r_2115 | alcohol dehydrogenase, (acetaldehyde to ethanol) | H+ [c] + NADH [c] + acetaldehyde [c] --> NAD [c] + ethanol [c] | same metabolites, opposite direction or reversibility | r_0163 | NAD [c] + ethanol [c] --> H+ [c] + NADH [c] + acetaldehyde [c] |
