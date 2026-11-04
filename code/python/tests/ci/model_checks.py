@@ -29,6 +29,17 @@ import yaml
 ORGANELLE = {"erm": "er", "gm": "g", "mm": "m", "vm": "v"}
 
 
+def is_pseudoreaction(rxn) -> bool:
+    """Biomass and its components are lumped compositions, written as pseudoreactions."""
+    return "pseudoreaction" in (rxn.name or "").lower()
+
+
+def in_pseudoreaction(met) -> bool:
+    """Whether the metabolite is a substrate or product of a pseudoreaction: the lumped
+    pools (biomass, protein, lipid, ...) and what they are made of."""
+    return any(is_pseudoreaction(rxn) for rxn in met.reactions)
+
+
 def balances_by_design(rxn) -> bool:
     """Whether a reaction is expected to balance and to keep its chemistry in one place.
 
@@ -42,7 +53,7 @@ def balances_by_design(rxn) -> bool:
       the rest of the model, so leaving them in would make the count useless.
     """
     name = rxn.name or ""
-    return not (rxn.boundary or "pseudoreaction" in name.lower() or "SLIME" in name)
+    return not (rxn.boundary or is_pseudoreaction(rxn) or "SLIME" in name)
 
 
 def check_duplicate_keys(model_file: Path) -> tuple[int, list]:
@@ -126,6 +137,44 @@ def check_reaction_sanity(model, model_dir: Path) -> tuple[int, list]:
     return len(rows), rows
 
 
+def dead_end_kind(met) -> str:
+    """Why a metabolite is a dead end, from the bounds of its reactions.
+
+    ``never consumed`` or ``never produced`` when no reaction can run in the direction
+    that would consume or produce it; ``no open reaction`` when none can carry it either
+    way; ``after other dead ends`` when each direction is open in some reaction, so the
+    metabolite is a dead end only once the reactions blocked by other dead ends are
+    removed."""
+    produced = consumed = False
+    for rxn in met.reactions:
+        coefficient = rxn.metabolites[met]
+        forward, backward = rxn.upper_bound > 0, rxn.lower_bound < 0
+        produced |= (coefficient > 0 and forward) or (coefficient < 0 and backward)
+        consumed |= (coefficient < 0 and forward) or (coefficient > 0 and backward)
+    if produced and consumed:
+        return "after other dead ends"
+    if produced:
+        return "never consumed"
+    if consumed:
+        return "never produced"
+    return "no open reaction"
+
+
+def equation_with_compartments(rxn) -> str:
+    """The reaction equation with the metabolite names and their compartments, as
+    ``2 ATP [c] + H2O [c] --> ADP [m]``."""
+    def side(items):
+        return " + ".join(
+            (f"{abs(c):g} " if abs(c) != 1 else "") + f"{m.name} [{m.compartment}]"
+            for m, c in sorted(items, key=lambda item: (item[0].name, item[0].compartment)))
+
+    arrow = "<=>" if rxn.lower_bound < 0 < rxn.upper_bound else (
+        "<--" if rxn.upper_bound <= 0 else "-->")
+    reactants = [(m, c) for m, c in rxn.metabolites.items() if c < 0]
+    products = [(m, c) for m, c in rxn.metabolites.items() if c > 0]
+    return f"{side(reactants)} {arrow} {side(products)}"
+
+
 def check_split_compartments(model) -> tuple[int, list]:
     """Reactions whose own chemistry, apart from what they transport, spans compartments.
 
@@ -149,6 +198,6 @@ def check_split_compartments(model) -> tuple[int, list]:
         compartments = sorted({ORGANELLE.get(m.compartment, m.compartment) for m in chemistry})
         if len(compartments) > 1:
             rows.append((rxn.id, rxn.name or "", ",".join(compartments),
-                         rxn.build_reaction_string(use_metabolite_names=True)))
+                         equation_with_compartments(rxn)))
     rows.sort()
     return len(rows), rows

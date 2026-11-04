@@ -87,6 +87,18 @@ def test_reaction_sanity(tmp_path):
     assert issues["EX_a"] == "boundary_with_gpr"
 
 
+def test_metabolites_of_pseudoreactions_are_found():
+    biomass, protein, glucose = (_metabolite("s_1", "biomass"), _metabolite("s_2", "protein"),
+                                 _metabolite("s_3", "glucose"))
+    model = cobra.Model("toy")
+    pseudo = _reaction("r_1", {protein: -1, biomass: 1}, name="biomass pseudoreaction")
+    ordinary = _reaction("r_2", {glucose: -1, protein: 1}, name="hexokinase")
+    model.add_reactions([pseudo, ordinary])
+    assert mc.is_pseudoreaction(pseudo) and not mc.is_pseudoreaction(ordinary)
+    assert mc.in_pseudoreaction(biomass) and mc.in_pseudoreaction(protein)
+    assert not mc.in_pseudoreaction(glucose)
+
+
 def test_split_compartments_flags_chemistry_but_not_transport():
     model = cobra.Model("toy")
     atp_c, atp_e = _metabolite("s_1", "ATP", "c"), _metabolite("s_2", "ATP", "e")
@@ -107,3 +119,28 @@ def test_split_compartments_flags_chemistry_but_not_transport():
     assert count == 1
     assert rows[0][0] == "r_split"
     assert rows[0][2] == "c,m"
+    assert rows[0][3] == "X [c] + Y [m] <=> Z [c]"
+
+
+def test_dead_end_kind_follows_the_open_directions():
+    a, b, c = _metabolite("s_1", "A"), _metabolite("s_2", "B"), _metabolite("s_3", "C")
+    model = cobra.Model("toy")
+    model.add_reactions([
+        _reaction("r_1", {a: -1, b: 1}, lower=0),      # A -> B
+        _reaction("r_2", {b: -1, c: 1}, lower=0),      # B -> C
+        _reaction("r_3", {a: -1, c: 1}, lower=0, upper=0),  # closed
+    ])
+    assert mc.dead_end_kind(a) == "never produced"
+    assert mc.dead_end_kind(c) == "never consumed"
+    assert mc.dead_end_kind(b) == "after other dead ends"
+    closed = _metabolite("s_4", "D")
+    model.add_reactions([_reaction("r_4", {closed: -1}, lower=0, upper=0)])
+    assert mc.dead_end_kind(closed) == "no open reaction"
+
+
+def test_equation_with_compartments_shows_coefficients_and_direction():
+    a, b = _metabolite("s_1", "A", "c"), _metabolite("s_2", "B", "e")
+    reversible = _reaction("r_1", {a: -2, b: 1})
+    backward = _reaction("r_2", {a: -1, b: 0.5}, lower=-1000, upper=0)
+    assert mc.equation_with_compartments(reversible) == "2 A [c] <=> B [e]"
+    assert mc.equation_with_compartments(backward) == "A [c] <-- 0.5 B [e]"

@@ -144,7 +144,10 @@ edited.
 #### Metabolites missing formula
 Metabolites with no chemical formula. These also make every reaction they
 appear in impossible to mass-balance, so a single missing formula shows up
-twice: once here, and once in the mass-balance count.
+twice: once here, and once in the mass-balance count. Metabolites that take part
+in a pseudoreaction are not counted: biomass, protein, carbohydrate, RNA, DNA,
+lipid, cofactor, ion and the lipid backbone and chain are lumped pools with no
+formula by construction.
 
 #### Metabolites missing charge
 Metabolites with no charge assigned, which likewise makes their reactions
@@ -162,7 +165,8 @@ what the reaction transports and is ignored; metabolites of different compartmen
 are the same chemical when they share a name, and an organelle membrane counts as
 the organelle it surrounds. The metabolites left over normally take place in one
 compartment, so one in another compartment (a cytosolic substrate of a
-mitochondrial reaction) is usually a curation error. Some enzymes do work across a
+mitochondrial reaction) is usually a curation error. The reported equation gives the
+compartment of every metabolite. Some enzymes do work across a
 membrane, so this is a report, and only a rise in the count is flagged. Boundary
 reactions, pseudoreactions and SLIME reactions are skipped.
 
@@ -199,8 +203,11 @@ for each dead-end metabolite in it, so one gap is counted many times: on the
 committed model 943 dead-end metabolites account for 1753 flagged reactions,
 and a single metabolite accounts for 49 of them. The metabolite is what gets
 fixed, and the blocked reactions follow. `qc_findings.md` lists each metabolite
-with its name and how many reactions it blocks, so the ones worth attention
-sort to the top.
+with its name, its compartment, why it is a dead end, how many reactions it blocks and
+which ones, so the ones worth attention sort to the top. The reason is read from the bounds
+of the reactions of the metabolite: `never consumed`, `never produced`, `no open reaction`,
+or `after other dead ends` when each direction is open in some reaction and the metabolite
+is a dead end only once the reactions blocked by other dead ends are removed.
 
 #### Reactions that can only carry flux one way
 Reversible reactions that are not themselves dead ends, but that have a
@@ -216,7 +223,8 @@ separately from the dead-end count because it is a different fix.
 Reactions MACAW considers possible duplicates of each other. It runs four
 sub-tests and writes one column per sub-test rather than a single verdict; the
 count is the union, since a reaction can be flagged by more than one.
-`qc_findings.md` names the reaction it duplicates and why, in these terms:
+`qc_findings.md` gives the equation of the reaction and of the reaction it duplicates, with the
+compartment of every metabolite, and why, in these terms:
 
 | Reported as | Means |
 |---|---|
