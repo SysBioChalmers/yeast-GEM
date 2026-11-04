@@ -58,7 +58,6 @@ _None._
 | r_0438 | ferrocytochrome-c:oxygen oxidoreductase | -0.633 |
 | r_0439 | ubiquinol:ferricytochrome c reductase | 1.266 |
 | r_0532 | hexaprenyldihydroxybenzoate methyltransferase | -2 |
-| r_1603 | 4-amino-5-hydroxymethyl-2-methylpyrimidine synthetase | -2 |
 | r_4196 | NADH:ferricytochrome-b5 oxidoreductase | 2 |
 | r_4320 | dolichyl beta-D-glucosyl phosphate:D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase | 2 |
 | r_4321 | dolichyl beta-D-glucosyl phosphate:D-Glc-alpha-(1->3)-D-Man-alpha-(1->2)-D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->3)-[D-Man-alpha-(1->2)-D-Man-alpha-(1->6)]-D-Man-alpha-(1->6)]-D-Man-beta-(1->4)-D-GlcNAc-beta-(1->4)-D-GlcNAc-diphosphodolichol alpha-1,3-glucosyltransferase | -2 |
@@ -2052,7 +2051,6 @@ _None._
 | r_0208 | argininosuccinate synthase | only when going backwards |
 | r_0349 | dihydroorotase | only when going forwards |
 | r_0447 | formate-tetrahydrofolate ligase | only when going forwards |
-| r_0455 | soluble fumarate reductase | only when going backwards |
 | r_0542 | homoacontinate hydratase | only when going backwards |
 | r_0570 | inosine monophosphate cyclohydrolase | only when going backwards |
 | r_0664 | isoleucine transaminase | only when going forwards |
@@ -2071,7 +2069,6 @@ _None._
 | r_0912 | phosphoribosylaminoimidazolecarboxamide formyltransferase | only when going backwards |
 | r_0949 | guanosine phosphorylase | only when going backwards |
 | r_0990 | sedoheptulose 1,7-bisphosphate D-glyceraldehyde-3-phosphate-lyase | only when going forwards |
-| r_1000 | fumarate reductase (FMN) | only when going backwards |
 | r_1069 | UDP-N-acetylglucosamine diphosphorylase | only when going backwards |
 | r_1071 | UDPglucose--hexose-1-phosphate uridylyltransferase | only when going forwards |
 | r_1087 | valine transaminase | only when going backwards |
@@ -2533,7 +2530,6 @@ _None._
 | r_4163 | Probable vacuolar amino acid transporter YPQ3 (PQ-loop repeat-containing protein 3) (Protein RTC2) (Restriction of telomere capping protein 2) | only when going backwards |
 | r_4196 | NADH:ferricytochrome-b5 oxidoreductase | only when going backwards |
 | r_4202 | L-methionine:oxidized-thioredoxin S-oxidoreductase | only when going backwards |
-| r_4212 | D-ribulose 5-phosphate,D-glyceraldehyde 3-phosphate pyridoxal 5-phosphate-lyase | only when going forwards |
 | r_4214 | L-cysteinylglycine dipeptidase | only when going backwards |
 | r_4232 | ATP:D-Gluconate 6-phosphotransferase | only when going backwards |
 | r_4292 | 4-Aminobutyraldehyde:NAD+ oxidoreductase | only when going forwards |
@@ -2552,7 +2548,6 @@ _None._
 | r_4493 | Acetoacetate transport via diffusion | only when going forwards |
 | r_4570 | phosphoglycerate dehydrogenase | only when going forwards |
 | r_4571 | seed:rxn00681 | only when going backwards |
-| r_4572 | beta-alanine:2-oxoglutarate aminotransferase | only when going backwards |
 | r_4588 | chloride transport | only when going backwards |
 | r_4601 | 3-(4-hydroxyphenyl)pyruvate transport | only when going backwards |
 | r_4607 | phosphate transport | only when going forwards |
