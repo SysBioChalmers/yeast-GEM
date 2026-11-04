@@ -17,9 +17,7 @@ function checkGrowth(model,condition,allowNoGrowth)
 % Usage: checkGrowth(model,condition,allowNoGrowth)
 
 if strcmp(condition,'anaerobic')
-    cd otherChanges
-    model = anaerobicModel(model);
-    cd ..
+    model = applyEnvironment(model,'anaerobic');
 end
 try
     xPos = strcmp(model.rxnNames,'growth');

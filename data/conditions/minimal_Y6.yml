@@ -4,7 +4,7 @@
 # and lipid chain exchanges are blocked as they are biomass internals,
 # not media. Reference: doi:10.1371/journal.pcbi.1004530.
 #
-# Loaders: code/applyCondition.m (MATLAB), yeastgem.conditions.apply (Python).
+# Applied by applyEnvironment (MATLAB) and yeastgem.conditions.apply (Python).
 
 name: minimal_Y6
 description: Minimal media for aerobic glucose-limited growth.
@@ -37,6 +37,5 @@ bounds:
   - { rxn: r_4062, lb: 0, ub: 0, comment: lipid backbone exchange blocked }
   - { rxn: r_4064, lb: 0, ub: 0, comment: lipid chain exchange blocked }
 
-# Sanity check that all 15 "uptake" reactions (lb=-1000) resolved. Mirrors
-# the warning in the legacy minimal_Y6.m.
+# Warn if not all 15 uptake reactions (lb -1000) were found.
 expected_uptake_count: 15
