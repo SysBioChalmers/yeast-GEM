@@ -28,7 +28,7 @@ import cobra
 
 # Repo paths: this file lives in ``code/``; the repo root is its parent.
 _REPO_ROOT = Path(__file__).resolve().parent.parent
-_AA_TSV = _REPO_ROOT / "data" / "physiology" / "aminoacid_Bjorkeroth2020.tsv"
+_AA_TSV = _REPO_ROOT / "data" / "physiology" / "aminoAcid_Bjorkeroth2020.tsv"
 
 # Metabolite/reaction IDs reused across helpers.
 _PROTON_ID = "s_0794"        # H+ [cytoplasm]
@@ -143,7 +143,7 @@ def _change_amino_acid_ratio(model: cobra.Model, *, aerobic: bool = True) -> Non
 
     Port of ``changeAminoAcidRatio.m``. The protein mass is snapshotted, the
     tRNA stoichiometries in ``r_4047`` are replaced with the aerobic or
-    anaerobic ratios from ``aminoacid_Bjorkeroth2020.tsv``, and the protein
+    anaerobic ratios from ``aminoAcid_Bjorkeroth2020.tsv``, and the protein
     pseudoreaction is rescaled so the protein fraction returns to its
     pre-switch value.
     """
@@ -217,7 +217,7 @@ def _formula_weight(metabolite: cobra.Metabolite) -> float:
 
 
 def _read_amino_acid_ratios() -> list[list[str]]:
-    """Read ``aminoacid_Bjorkeroth2020.tsv`` (one header line, tab separated).
+    """Read ``aminoAcid_Bjorkeroth2020.tsv`` (one header line, tab separated).
 
     Returns the data rows verbatim; columns are
     ``[aa, substrate_met, product_met, MW, aerobic, anaerobic]``.

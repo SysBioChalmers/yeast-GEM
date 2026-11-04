@@ -4,70 +4,70 @@
 
 **Model size:** 4105 reactions (0), 2748 metabolites (0), 1143 genes (0) vs `develop`
 
-_Each check name links to its explanation in the [testResults README](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md)._
+_Each check name links to its explanation in the [testResults README](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md)._
 
 ### Model checks
 _Growth, duplicate keys and reactions without metabolites are gates and block the merge; every other row is a non-blocking report._
 
 | Check | Result | &Delta; vs `develop` | |
 | --- | ---: | ---: | :---: |
-| [Growth (biomass producible)](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#growth-biomass-producible) | 0.0811 | 0 | :white_check_mark: |
-| [Duplicate keys in the model file](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#duplicate-keys-in-the-model-file) | 0 | 0 | :white_check_mark: |
-| [Reactions without metabolites](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#reactions-without-metabolites) | 0 | 0 | :white_check_mark: |
-| [Exact-duplicate reaction groups](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#exact-duplicate-reaction-groups) | 0 | 0 | :white_check_mark: |
-| [Unused metabolites](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#unused-metabolites) | 0 | 0 | :white_check_mark: |
-| [Unused genes](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#unused-genes) | 0 | 0 | :white_check_mark: |
-| [Metabolites missing formula](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#metabolites-missing-formula) | [5](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#metabolites-missing-formula) | 0 | :warning: |
-| [Metabolites missing charge](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#metabolites-missing-charge) | 0 | 0 | :white_check_mark: |
-| [Reaction bound and gene rule issues](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#reaction-bound-and-gene-rule-issues) | 0 | 0 | :white_check_mark: |
-| [Reactions split across compartments](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#reactions-split-across-compartments) | [20](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#reactions-split-across-compartments) | 0 | :warning: |
+| [Growth (biomass producible)](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#growth-biomass-producible) | 0.0811 | 0 | :white_check_mark: |
+| [Duplicate keys in the model file](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#duplicate-keys-in-the-model-file) | 0 | 0 | :white_check_mark: |
+| [Reactions without metabolites](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#reactions-without-metabolites) | 0 | 0 | :white_check_mark: |
+| [Exact-duplicate reaction groups](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#exact-duplicate-reaction-groups) | 0 | 0 | :white_check_mark: |
+| [Unused metabolites](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#unused-metabolites) | 0 | 0 | :white_check_mark: |
+| [Unused genes](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#unused-genes) | 0 | 0 | :white_check_mark: |
+| [Metabolites missing formula](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#metabolites-missing-formula) | [5](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#metabolites-missing-formula) | 0 | :warning: |
+| [Metabolites missing charge](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#metabolites-missing-charge) | 0 | 0 | :white_check_mark: |
+| [Reaction bound and gene rule issues](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#reaction-bound-and-gene-rule-issues) | 0 | 0 | :white_check_mark: |
+| [Reactions split across compartments](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#reactions-split-across-compartments) | [20](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#reactions-split-across-compartments) | 0 | :warning: |
 
 ### Mass/charge balance and MACAW
 
 | Check | Result | &Delta; vs `develop` | |
 | --- | ---: | ---: | :---: |
-| [Mass-imbalanced reactions](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#mass-imbalanced-reactions) | [8](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#mass-imbalanced-reactions) | 0 | :warning: |
-| [Charge-imbalanced reactions](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#charge-imbalanced-reactions) | [10](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#charge-imbalanced-reactions) | 0 | :warning: |
-| [Dead-end metabolites](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#dead-end-metabolites) | [943](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#dead-end-metabolites) | 0 | :warning: |
-| [Reactions that can only carry flux one way](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#reactions-that-can-only-carry-flux-one-way) | [570](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#reactions-that-can-only-carry-flux-one-way) | 0 | :warning: |
-| [Reactions flagged as MACAW duplicates](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#reactions-flagged-as-macaw-duplicates) | [18](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#reactions-flagged-as-macaw-duplicates) | 0 | :warning: |
+| [Mass-imbalanced reactions](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#mass-imbalanced-reactions) | [8](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#mass-imbalanced-reactions) | 0 | :warning: |
+| [Charge-imbalanced reactions](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#charge-imbalanced-reactions) | [10](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#charge-imbalanced-reactions) | 0 | :warning: |
+| [Dead-end metabolites](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#dead-end-metabolites) | [943](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#dead-end-metabolites) | 0 | :warning: |
+| [Reactions that can only carry flux one way](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#reactions-that-can-only-carry-flux-one-way) | [570](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#reactions-that-can-only-carry-flux-one-way) | 0 | :warning: |
+| [Reactions flagged as MACAW duplicates](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#reactions-flagged-as-macaw-duplicates) | [18](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#reactions-flagged-as-macaw-duplicates) | 0 | :warning: |
 
 ### Annotations
 _Reaction/metabolite name agreement with the tsvs, and model/annotation-table consistency, are also gates; every other row is a non-blocking report._
 
 | Check | Result | &Delta; vs `develop` | |
 | --- | ---: | ---: | :---: |
-| [Malformed cross-references](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#malformed-cross-references) | [34](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#malformed-cross-references) | 0 | :warning: |
-| [Cross-refs inconsistent across compartments](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#cross-refs-inconsistent-across-compartments) | 0 | 0 | :white_check_mark: |
-| [Reaction/metabolite names disagreeing with the tsvs](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#reactionmetabolite-names-disagreeing-with-the-tsvs) | 0 | 0 | :white_check_mark: |
-| [Model/annotation-table consistency](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#modelannotation-table-consistency) | 0 | 0 | :white_check_mark: |
-| [Removed identifiers not added to the deprecated lists](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#removed-identifiers-not-added-to-the-deprecated-lists) | 0 | 0 | :white_check_mark: |
-| [Metabolite structure (SMILES) vs. formula/charge](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#metabolite-structure-smiles-vs-formulacharge) | [916](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/qc_findings.md#metabolite-structure-smiles-vs-formulacharge) | 0 | :warning: |
-| [deltaG tsvs out of sync with the model](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#deltag-tsvs-out-of-sync-with-the-model) | 0 | 0 | :white_check_mark: |
+| [Malformed cross-references](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#malformed-cross-references) | [34](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#malformed-cross-references) | 0 | :warning: |
+| [Cross-refs inconsistent across compartments](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#cross-refs-inconsistent-across-compartments) | 0 | 0 | :white_check_mark: |
+| [Reaction/metabolite names disagreeing with the tsvs](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#reactionmetabolite-names-disagreeing-with-the-tsvs) | 0 | 0 | :white_check_mark: |
+| [Model/annotation-table consistency](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#modelannotation-table-consistency) | 0 | 0 | :white_check_mark: |
+| [Removed identifiers not added to the deprecated lists](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#removed-identifiers-not-added-to-the-deprecated-lists) | 0 | 0 | :white_check_mark: |
+| [Metabolite structure (SMILES) vs. formula/charge](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#metabolite-structure-smiles-vs-formulacharge) | [916](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/qc_findings.md#metabolite-structure-smiles-vs-formulacharge) | 0 | :warning: |
+| [deltaG tsvs out of sync with the model](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#deltag-tsvs-out-of-sync-with-the-model) | 0 | 0 | :white_check_mark: |
 
 ### Model files
 _All three are gates._
 
 | Check | Result | &Delta; vs `develop` | |
 | --- | ---: | ---: | :---: |
-| [YAML round-trip](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#yaml-round-trip) | pass |  | :white_check_mark: |
-| [SBML round-trip](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#sbml-round-trip) | pass |  | :white_check_mark: |
-| [YAML lint](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#yaml-lint) | pass |  | :white_check_mark: |
+| [YAML round-trip](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#yaml-round-trip) | pass |  | :white_check_mark: |
+| [SBML round-trip](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#sbml-round-trip) | pass |  | :white_check_mark: |
+| [YAML lint](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#yaml-lint) | pass |  | :white_check_mark: |
 
 ### Validation metrics
 _Predictions against measured data, to 4 significant digits. A change within tolerance still gets a checkmark; direction matters, so a rising R2 is a gain and a rising error is not._
 
 | Metric | This branch | &Delta; vs `develop` | |
 | --- | ---: | ---: | :---: |
-| [Growth prediction R2](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#growth-prediction-r2) | [0.9019](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#growth-prediction-r2) | 0 | :white_check_mark: |
-| [Anaerobic flux median fold error](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#anaerobic-flux-median-fold-error) | [1.062](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#anaerobic-flux-median-fold-error) | 0 | :white_check_mark: |
-| [Anaerobic exchange mean relative error](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#anaerobic-exchange-mean-relative-error) | [0.06455](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#anaerobic-exchange-mean-relative-error) | 0 | :white_check_mark: |
-| [Ammonium per ATPase](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#ammonium-per-atpase) | [1.072](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#ammonium-per-atpase) | 0 | :white_check_mark: |
-| [Gene essentiality accuracy](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#gene-essentiality-accuracy) | [0.9015](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :white_check_mark: |
-| [True non-essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#true-non-essential-genes) | [933](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :white_check_mark: |
-| [True essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#true-essential-genes) | [65](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :white_check_mark: |
-| [False non-essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#false-non-essential-genes) | [94](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :warning: |
-| [False essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/README.md#false-essential-genes) | [15](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :warning: |
+| [Growth prediction R2](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#growth-prediction-r2) | [0.9019](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#growth-prediction-r2) | 0 | :white_check_mark: |
+| [Anaerobic flux median fold error](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#anaerobic-flux-median-fold-error) | [1.062](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#anaerobic-flux-median-fold-error) | 0 | :white_check_mark: |
+| [Anaerobic exchange mean relative error](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#anaerobic-exchange-mean-relative-error) | [0.06455](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#anaerobic-exchange-mean-relative-error) | 0 | :white_check_mark: |
+| [Ammonium per ATPase](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#ammonium-per-atpase) | [1.072](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#ammonium-per-atpase) | 0 | :white_check_mark: |
+| [Gene essentiality accuracy](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#gene-essentiality-accuracy) | [0.9015](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :white_check_mark: |
+| [True non-essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#true-non-essential-genes) | [933](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :white_check_mark: |
+| [True essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#true-essential-genes) | [65](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :white_check_mark: |
+| [False non-essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#false-non-essential-genes) | [94](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :warning: |
+| [False essential genes](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/README.md#false-essential-genes) | [15](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/validation_findings.md#gene-essentiality-accuracy) | 0 | :warning: |
 
 ### Gene essentiality
 _Single-gene deletions against the Stanford deletion collection. A false non-essential gene is essential in the collection and viable in the model; a false essential gene is viable in the collection and not in the model. The per-gene calls are in [essentialGenes.tsv](essentialGenes.tsv)._
@@ -251,7 +251,7 @@ _Metabolite/reaction identifiers cross-checked against MetaNetX's reference data
 | `drift` (safe to `--fix`) | 0 | 0 | :white_check_mark: |
 | `missing` (safe to `--fix`) | 0 | 0 | :white_check_mark: |
 
-[Full report](https://github.com/SysBioChalmers/yeast-GEM/blob/ci/model-qc-report/data/testResults/annotation_report.md)
+[Full report](https://github.com/SysBioChalmers/yeast-GEM/blob/fix/environment-and-anaerobic-bugs/data/testResults/annotation_report.md)
 
 :x: = a count rose vs the target branch (regression) &middot; :warning: = a non-zero or worse-than-baseline finding (non-blocking) &middot; :hourglass_flowing_sand: = still running &middot; :grey_question: = the check did not run, or has no baseline yet.
 

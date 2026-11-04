@@ -8,8 +8,7 @@ assignment, condition / biomass / curation engines) that `yeastgem`
 configures with the yeast-specific data files under
 [../../data/](../../data/).
 
-See [PORTING_PLAN.md](PORTING_PLAN.md) for the porting history and
-[UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md) for the
+See [UPSTREAM_CANDIDATES.md](UPSTREAM_CANDIDATES.md) for the
 function-level upstream tracking.
 
 ## Install (development)
@@ -73,7 +72,6 @@ code/python/
     reference/             # MATLAB-produced verification artefacts +
                            #   the runPhase*.m drivers
   pyproject.toml
-  PORTING_PLAN.md
   UPSTREAM_CANDIDATES.md
 ```
 

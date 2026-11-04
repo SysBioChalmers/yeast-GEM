@@ -45,8 +45,8 @@ def test_apply_glycine_nitrogen_sets_bounds(model):
     conditions.apply(mutated, "glycine_nitrogen")
     for rxn_id in ("r_0501", "r_0507", "r_0509"):
         rxn = mutated.reactions.get_by_id(rxn_id)
-        assert rxn.lower_bound == 1000
-        assert rxn.upper_bound == 0
+        assert rxn.lower_bound == 0
+        assert rxn.upper_bound == 1000
 
 
 def test_apply_nitrogen_limitation_sets_bounds(model):
@@ -54,7 +54,22 @@ def test_apply_nitrogen_limitation_sets_bounds(model):
     conditions.apply(mutated, "nitrogen_limitation")
     assert mutated.reactions.get_by_id("r_0472").upper_bound == 1000
     for rxn_id in ("r_0501", "r_0507", "r_0509"):
-        assert mutated.reactions.get_by_id(rxn_id).lower_bound == 1000
+        assert mutated.reactions.get_by_id(rxn_id).lower_bound == 0
+        assert mutated.reactions.get_by_id(rxn_id).upper_bound == 1000
+
+
+@pytest.mark.parametrize("preset", ["glycine_nitrogen", "nitrogen_limitation"])
+@pytest.mark.parametrize("environment", [None, "anaerobic"])
+def test_nitrogen_presets_keep_the_model_growing(model, preset, environment):
+    """The presets open reactions, so growth is feasible and does not fall."""
+    mutated = model.copy()
+    if environment:
+        conditions.apply(mutated, environment)
+    before = mutated.slim_optimize()
+    conditions.apply(mutated, preset)
+    after = mutated.slim_optimize()
+    assert before > 1e-6
+    assert after >= before - 1e-9
 
 
 def test_apply_minimal_Y6_caps_glucose_and_zeros_bicarbonate(model):

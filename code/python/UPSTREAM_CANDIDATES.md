@@ -6,9 +6,8 @@ duplicate organism-agnostic logic. The "done" section records what
 already moved; the "pending" section records what remains and the API
 shape we want it to land with.
 
-**Decision #1 was revised after phase 3** (see [PORTING_PLAN.md](PORTING_PLAN.md)):
-generic helpers move upstream now and yeast-GEM declares a dependency
-on those toolboxes, rather than implementing locally first.
+**Decision #1:** generic helpers move upstream now and yeast-GEM declares a
+dependency on those toolboxes, rather than implementing locally first.
 
 ## Done — moved upstream in phase 3.5
 
@@ -334,6 +333,6 @@ When ravengem (or RAVEN) absorbs a candidate:
 
 1. Move the entry out of this document into a "Done" section (or just
    delete) and reference the upstream PR.
-2. Update [PORTING_PLAN.md](PORTING_PLAN.md) if the yeast-GEM code now calls
-   the upstream version instead of the local one — this is a behavioral
-   change and goes through the normal lock-step parity CI.
+2. If the yeast-GEM code now calls the upstream version instead of the
+   local one, this is a behavioral change and goes through the normal
+   lock-step parity CI.
