@@ -14,7 +14,8 @@ repository, so there is no baseline to keep up to date: the comparison is
 always this model against that branch's model, computed the same way on the
 same day with the same dependencies.
 
-Four checks are gates: the model must load, it must grow, reaction/
+Six checks are gates: the model file has no duplicate keys, the model must
+load, it must grow, no reaction is without metabolites, reaction/
 metabolite names in model/yeast-GEM.yml must agree with
 model/reactions.tsv and model/metabolites.tsv, and the model's reaction/
 metabolite/gene ids must agree with the three tsvs -- with no id that
@@ -25,6 +26,9 @@ reviewed the two are supposed to already agree, so any disagreement can
 only mean this branch introduced one). Everything else is reported so
 that a pull request which makes a number worse is visible, without
 blocking work on findings that were already there.
+
+The bound and gene rule issues and the reactions split across compartments
+(model_checks.py) are reported.
 
 Three more checks, all report only: identifiers removed since the target
 branch that were not added to data/deprecatedIdentifiers/ (needs
@@ -62,6 +66,16 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 import cobra
+from model_checks import (
+    balances_by_design,
+    check_duplicate_keys,
+    check_empty_reactions,
+    check_reaction_sanity,
+    check_split_compartments,
+    dead_end_kind,
+    equation_with_compartments,
+    in_pseudoreaction,
+)
 from raven_toolbox.io import read_yaml_model
 from rdkit import Chem, RDLogger
 from rdkit.Chem import rdMolDescriptors
@@ -134,7 +148,10 @@ def check_unused_genes(model) -> tuple[int, list]:
 
 
 def check_missing_formula(model) -> tuple[int, list]:
-    rows = [(m.id, m.name or "") for m in model.metabolites if not m.formula]
+    """Metabolites without a formula, except those of the biomass pseudoreactions: the
+    lumped pools (biomass, protein, lipid, ...) have no formula by construction."""
+    rows = [(m.id, m.name or "") for m in model.metabolites
+            if not m.formula and not in_pseudoreaction(m)]
     return len(rows), rows
 
 
@@ -171,33 +188,11 @@ def check_duplicate_reactions(model) -> tuple[int, list]:
     return len(rows), rows
 
 
-def _balances_by_design(rxn) -> bool:
-    """Whether a reaction is expected to balance at all.
-
-    Three classes are not, and including them buries the reactions that
-    matter:
-
-    * boundary reactions -- an exchange has one side by construction;
-    * pseudoreactions -- biomass and its components are lumped compositions;
-    * SLIME reactions -- yeast-GEM splits lipids into measurable entities
-      with fractional, averaged coefficients, so they are unbalanced by
-      design. There are 186 of them, against 2 genuinely unexpected mass
-      imbalances in the rest of the model, so leaving them in would make
-      the count useless.
-    """
-    name = (rxn.name or "")
-    return not (
-        rxn.boundary
-        or "pseudoreaction" in name.lower()
-        or "SLIME" in name
-    )
-
-
 def _balance(model):
     """Split reactions into mass- and charge-imbalanced."""
     mass_rows, charge_rows = [], []
     for rxn in model.reactions:
-        if not _balances_by_design(rxn):
+        if not balances_by_design(rxn):
             continue
         try:
             imbalance = rxn.check_mass_balance()
@@ -524,6 +519,12 @@ def check_name_consistency(model, model_dir: Path) -> tuple[int, list]:
     return len(rows), rows
 
 
+_DUPLICATE_HEADER = ("reaction", "name", "equation", "why", "duplicate of",
+                     "equation of the duplicate")
+_DEAD_END_HEADER = ("metabolite", "name", "compartment", "dead end", "reactions blocked",
+                    "blocked reactions")
+
+
 def check_macaw(model):
     """MACAW dead-end and duplicate tests.
 
@@ -539,11 +540,10 @@ def check_macaw(model):
     blocked reactions follow from it.
     """
     empty = [
-        ("Dead-end metabolites", ("metabolite", "name", "reactions blocked"), []),
+        ("Dead-end metabolites", _DEAD_END_HEADER, []),
         ("Reactions that can only carry flux one way",
          ("reaction", "name", "finding"), []),
-        ("Reactions flagged as MACAW duplicates",
-         ("reaction", "name", "why", "duplicates"), []),
+        ("Reactions flagged as MACAW duplicates", _DUPLICATE_HEADER, []),
     ]
     try:
         from macaw.main import dead_end_test, duplicate_test
@@ -576,6 +576,12 @@ def check_macaw(model):
         except KeyError:
             return ""
 
+    def _equation(identifier):
+        try:
+            return equation_with_compartments(model.reactions.get_by_id(identifier))
+        except KeyError:
+            return ""
+
     ids = merged["reaction_id"].astype(str)
 
     # dead_end_test says either "ok", a direction phrase, or the dead-end
@@ -592,10 +598,13 @@ def check_macaw(model):
             if met_id:
                 blocked_by[met_id].append(rxn_id)
 
-    dead_end_rows = [
-        (met_id, _name(met_id, model.metabolites), len(reactions))
-        for met_id, reactions in blocked_by.items()
-    ]
+    dead_end_rows = []
+    for met_id, reactions in blocked_by.items():
+        met = model.metabolites.get_by_id(met_id)
+        blocked = "; ".join(
+            f"{rxn_id} ({_name(rxn_id, model.reactions)[:40]})" for rxn_id in sorted(reactions))
+        dead_end_rows.append((met_id, met.name or "", met.compartment, dead_end_kind(met),
+                              len(reactions), blocked))
 
     # duplicate_test writes one column per kind of duplicate and no single
     # verdict. The column names are MACAW's internal ones; each is given
@@ -634,8 +643,10 @@ def check_macaw(model):
         print(f"    {column}: flagged={int(mask.sum())}")
         for rxn_id, other in zip(ids[mask], text[mask], strict=True):
             duplicate_rows.append((
-                rxn_id, _name(rxn_id, model.reactions),
+                rxn_id, _name(rxn_id, model.reactions), _equation(rxn_id),
                 reasons.get(column, column), other,
+                " | ".join(_equation(partner.strip())
+                           for partner in re.split(r"[;,]", other) if partner.strip()),
             ))
         duplicates = mask if duplicates is None else (duplicates | mask)
 
@@ -645,12 +656,10 @@ def check_macaw(model):
         "macaw_duplicates": int(duplicates.sum()) if duplicates is not None else 0,
     }
     sections = [
-        ("Dead-end metabolites",
-         ("metabolite", "name", "reactions blocked"), dead_end_rows),
+        ("Dead-end metabolites", _DEAD_END_HEADER, dead_end_rows),
         ("Reactions that can only carry flux one way",
          ("reaction", "name", "finding"), direction_rows),
-        ("Reactions flagged as MACAW duplicates",
-         ("reaction", "name", "why", "duplicates"), duplicate_rows),
+        ("Reactions flagged as MACAW duplicates", _DUPLICATE_HEADER, duplicate_rows),
     ]
     return metrics, sections
 
@@ -690,6 +699,10 @@ _HEADERS = {
     "structure_inconsistent": ("metabolite", "name", "issue", "model formula",
                                "model charge", "smiles formula", "smiles charge", "smiles"),
     "delta_g_consistency": ("kind", "id", "issue"),
+    "duplicate_keys": ("entry", "scope", "key", "first line", "duplicate line"),
+    "empty_reactions": ("reaction", "name"),
+    "reaction_sanity": ("reaction", "name", "issues"),
+    "split_compartments": ("reaction", "name", "compartments", "equation"),
 }
 
 
@@ -811,6 +824,26 @@ def run(model_path: Path, out_dir: Path, base_model_dir: Path | None = None) -> 
         _HEADERS["delta_g_consistency"], delta_g_rows,
     ))
 
+    if model_path.suffix in {".yml", ".yaml"}:
+        count, rows = check_duplicate_keys(model_path)
+        metrics["duplicate_keys"] = count
+        sections.append(("Duplicate keys in the model file",
+                         _HEADERS["duplicate_keys"], rows))
+
+    count, rows = check_empty_reactions(model)
+    metrics["empty_reactions"] = count
+    sections.append(("Reactions without metabolites", _HEADERS["empty_reactions"], rows))
+
+    count, rows = check_reaction_sanity(model, model_dir)
+    metrics["reaction_sanity"] = count
+    sections.append(("Reaction bound and gene rule issues",
+                     _HEADERS["reaction_sanity"], rows))
+
+    count, rows = check_split_compartments(model)
+    metrics["split_compartments"] = count
+    sections.append(("Reactions split across compartments",
+                     _HEADERS["split_compartments"], rows))
+
     macaw_metrics, macaw_sections = check_macaw(model)
     metrics.update(macaw_metrics)
     sections += macaw_sections
@@ -844,6 +877,14 @@ def main() -> int:
     if metrics.get("name_mismatches", 0) > 0:
         print(f"\nGATE FAILED: {metrics['name_mismatches']:g} reaction/metabolite "
               "name(s) disagree between model/yeast-GEM.yml and the tsvs.")
+        failed = True
+    if metrics.get("duplicate_keys", 0) > 0:
+        print(f"\nGATE FAILED: {metrics['duplicate_keys']:g} duplicate key(s) in "
+              "the model file -- see qc_findings.md.")
+        failed = True
+    if metrics.get("empty_reactions", 0) > 0:
+        print(f"\nGATE FAILED: {metrics['empty_reactions']:g} reaction(s) without "
+              "metabolites -- see qc_findings.md.")
         failed = True
     if metrics.get("annotation_consistency", 0) > 0:
         print(f"\nGATE FAILED: {metrics['annotation_consistency']:g} "

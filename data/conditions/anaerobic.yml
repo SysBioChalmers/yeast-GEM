@@ -1,7 +1,5 @@
-# Anaerobic conditions for yeast-GEM. Mirrors code/otherChanges/
-# anaerobicModel.m as of release v9.1.0. Documentation references:
-#   - heme/AA ratio: anaerobicModel.m
-#   - sterol/fatty acid supplementation: anaerobicModel.m
+# Anaerobic conditions for yeast-GEM, applied by applyEnvironment
+# (MATLAB) and yeastgem.conditions.apply (Python). References:
 #   - MDH2 / IDP2 blocking: Hung et al 2004 (10.1074/jbc.M404544200),
 #     Tai et al 2005 (10.1074/jbc.M410573200), Sjöberg et al 2023
 #     (10.1016/j.ymben.2024.01.007)
@@ -14,7 +12,7 @@ description: Convert aerobic yeast-GEM to anaerobic conditions.
 # Cofactor pseudoreaction adjustments (heme a removal + H+ rebalance).
 # After removing the listed mets from the pseudoreaction, the
 # `charge_balance_met` coefficient is recomputed so total charge sums
-# to zero — mirrors the explicit recomputation in anaerobicModel.m.
+# to zero.
 cofactor_pseudoreaction:
   rxn_id: r_4598
   remove_mets:
@@ -55,4 +53,4 @@ bounds:
   # Block MDH2 — repressed under anaerobic growth on glucose
   - { rxn: r_0714, lb: 0, ub: 0, comment: MDH2 (malate dehydrogenase) }
   # Block IDP2 — repressed in transcriptome and not detected in proteome
-  - { rxn: r_0659, lb: 0, ub: 0, comment: IDP2 (isocitrate dehydrogenase, cytosolic) }
+  - { rxn: r_0659, lb: 0, ub: 0, comment: "IDP2 (isocitrate dehydrogenase, cytosolic)" }

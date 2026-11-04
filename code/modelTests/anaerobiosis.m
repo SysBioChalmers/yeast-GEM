@@ -25,9 +25,9 @@ saveas(fig1, '..\..\data\testResults\v910_growth.png');
 
 %% Convert to anaerobic
 cd('../otherChanges/')
-modelAn910 = anaerobicModel(model910);
+modelAn910 = applyEnvironment(model910,'anaerobic');
 modelAnOld910 = anaerobicModelOld(model910);
-modelAn902 = anaerobicModel(model902);
+modelAn902 = applyEnvironment(model902,'anaerobic');
 modelAnOld902 = anaerobicModelOld(model902);
 
 %% Anaerobic flux predictions
@@ -222,13 +222,13 @@ end
 
 function model = anaerobicModelOld(model)
 % anaerobicModelOld
-%   This file has been replaced with anaerobicModel since yeast-GEM 9.1.0.
-%   This function is kept just for comparison purposes.
+%   Anaerobic constraints of yeast-GEM releases before 9.1.0, kept for
+%   comparison with applyEnvironment(model,'anaerobic').
 %
 %   Inputs: model           (struct) aerobic model
 %   Output: model           (struct) anaerobic model
 %   
-%   Usage: model = anaerobicModel(model)
+%   Usage: model = anaerobicModelOld(model)
 %
 
 %1st change: Refit GAM and NGAM to exp. data, change biomass composition

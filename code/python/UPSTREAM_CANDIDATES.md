@@ -6,9 +6,8 @@ duplicate organism-agnostic logic. The "done" section records what
 already moved; the "pending" section records what remains and the API
 shape we want it to land with.
 
-**Decision #1 was revised after phase 3** (see [PORTING_PLAN.md](PORTING_PLAN.md)):
-generic helpers move upstream now and yeast-GEM declares a dependency
-on those toolboxes, rather than implementing locally first.
+**Decision #1:** generic helpers move upstream now and yeast-GEM declares a
+dependency on those toolboxes, rather than implementing locally first.
 
 ## Done — moved upstream in phase 3.5
 
@@ -20,9 +19,6 @@ RAVEN's `develop3`):
 |---|---|---|
 | `yeastgem.compare.compare_models` / `ComparisonReport` | `raven_toolbox.comparison` | `diff_models`, `DiffReport` |
 | `yeastgem.missing_fields.add_sbo_terms` | `raven_toolbox.annotation.sbo` | `add_sbo_terms` (with `only_last_reaction_for_pseudo` legacy flag) |
-| `yeastgem.conditions.apply` internals (prelude / cofactor / biomass-delta / bounds) | `raven_toolbox.conditions` | `apply_condition`, `load_condition`, `set_reaction_bounds` |
-| `code/readYAML.m` | RAVEN `io/readYAML.m` | unchanged signature |
-| `code/applyCondition.m` (generic core) | RAVEN `core/applyCondition.m` | takes YAML path or struct |
 | biomass subsystem (`sumBioMass`/`scaleBioMass`/`rescalePseudoReaction`/`changeGAM`) | `raven_toolbox.biomass` | `BiomassConfig`/`BiomassComponent`, `sum_biomass`, `scale_biomass`, `rescale_pseudoreaction`, `set_gam` |
 | `findDuplicatedRxns` (detection only) | `raven_toolbox.manipulation` | `find_duplicate_reactions(model, *, ignore_direction=True)` |
 | `curateMetsRxnsGenes` (batch TSV curation engine) | `raven_toolbox.curation` + RAVEN `core/curateModelFromTables.m` | `batch_curate(model, mets_df=…, genes_df=…, rxns_df=…, rxns_coeffs_df=…, met_id_prefix=…, rxn_id_prefix=…)`, `batch_curate_from_tsv` |
@@ -35,6 +31,15 @@ tables are tab-separated, and ΔG values were made opt-in only (never
 written into the committed model artifact). See the ΔG entry under
 *Boundary cases* below.
 
+**Reverted:** applying environments (`data/conditions/*.yml`) also moved
+upstream (`raven_toolbox.conditions`, RAVEN `applyCondition`/`parseYAML`)
+but was pulled back local in 2026-10: yeast-GEM's environments must not
+depend on either toolbox. `yeastgem.conditions` needs only cobrapy and
+pyyaml; the MATLAB `applyEnvironment` needs no toolbox, with its own
+reader for the YAML subset used in `data/conditions`. Both apply the
+same steps in the same order and give identical models
+(`tests/reference/compare_environments.py`).
+
 yeast-GEM now keeps:
 - `yeastgem.compare` — re-export of the upstream `diff_models` under
   the historical names `compare_models` / `ComparisonReport`.
@@ -42,14 +47,12 @@ yeast-GEM now keeps:
   bug-compat flag for `add_sbo_terms`, plus a local (not upstream-delegated)
   ΔG load/save implementation over yeast-GEM's own tab-separated
   `data/databases/model_{met,rxn}DeltaG.tsv` files, opt-in only.
-- `yeastgem.conditions.apply` — resolves a name to `data/conditions/<name>.yml`,
-  runs `change_amino_acid_ratio` when the YAML asks for it (since
-  phase 4), then delegates to upstream.
+- `yeastgem.conditions` — applies `data/conditions/<name>.yml` itself
+  (cobrapy and pyyaml only), including `change_amino_acid_ratio`.
+- `code/applyEnvironment.m` — the same in MATLAB, without any toolbox.
 - `yeastgem.biomass` — wraps the upstream biomass API with the yeast
-  `BiomassConfig` (built from `data/yeastgem/ids.yml`) and ships one
-  yeast-only function, `change_amino_acid_ratio`, reading
-  `data/physiology/aminoAcid_Bjorkeroth2020.tsv`.
-- `code/applyYeastCondition.m` — same shape, in MATLAB.
+  `BiomassConfig` (built from `data/yeastgem/ids.yml`);
+  `change_amino_acid_ratio` is the one in `yeastgem.conditions`.
 
 ## Pending — not yet moved
 
@@ -308,9 +311,10 @@ For traceability — so we don't accidentally re-litigate these:
 - Repo orchestration: `loadYeastModel` (drop entirely or keep as
   default-path shim), `commitYeastModel`, `getEarlierModelVersion`,
   `increaseVersion`.
-- Data-driven condition presets (`minimal_Y6`, `anaerobicModel`,
-  `glycineNitrogenSource`, `nitrogenLimitation`) — these are *data* under
-  `data/conditions/`, not functions.
+- Environments (minimal_Y6, anaerobic, glycine_nitrogen,
+  nitrogen_limitation, carnitine) — these are *data* under
+  `data/conditions/`, applied by yeast-GEM's own `applyEnvironment` /
+  `yeastgem.conditions`.
 
 ## Cobrapy-direct (no upstream needed)
 
@@ -334,6 +338,6 @@ When ravengem (or RAVEN) absorbs a candidate:
 
 1. Move the entry out of this document into a "Done" section (or just
    delete) and reference the upstream PR.
-2. Update [PORTING_PLAN.md](PORTING_PLAN.md) if the yeast-GEM code now calls
-   the upstream version instead of the local one — this is a behavioral
-   change and goes through the normal lock-step parity CI.
+2. If the yeast-GEM code now calls the upstream version instead of the
+   local one, this is a behavioral change and goes through the normal
+   lock-step parity CI.

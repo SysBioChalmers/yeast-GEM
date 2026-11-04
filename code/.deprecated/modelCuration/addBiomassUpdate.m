@@ -231,5 +231,5 @@ model.S(AddMets_index,biomassRxn_index) = -1;
 if isfield(model,'grRules')
 model = rmfield(model,'grRules');
 end
-model = minimal_Y6(model);
+model = applyEnvironment(model,'minimal_Y6');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

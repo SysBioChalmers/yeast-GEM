@@ -36,7 +36,7 @@ mcc = (n_tp*n_tn - n_fp*n_fn) / sqrt(denom_mcc);
 
 % --- anaerobic flux ----------------------------------------------------
 fprintf('Running anaerobic_flux_predictions...\n');
-model_an = applyYeastCondition(model, 'anaerobic');
+model_an = applyEnvironment(model, 'anaerobic');
 fig = figure('Visible','off');
 prev = cd(fullfile(yeastGemPath, 'code', 'modelTests'));
 cleanup = onCleanup(@() cd(prev));

@@ -16,7 +16,6 @@ from functools import lru_cache
 from pathlib import Path
 
 import cobra
-import pandas as pd
 from raven_toolbox.biomass import (
     BiomassComponent,
     BiomassConfig,
@@ -34,10 +33,8 @@ from raven_toolbox.biomass import (
     sum_biomass as _ra_sum_biomass,
 )
 
+from yeastgem.conditions import change_amino_acid_ratio as _change_amino_acid_ratio
 from yeastgem.config import load_ids
-from yeastgem.io import REPO_PATH
-
-_AA_TSV = REPO_PATH / "data" / "physiology" / "aminoAcid_Bjorkeroth2020.tsv"
 
 
 @lru_cache(maxsize=1)
@@ -145,57 +142,14 @@ def change_amino_acid_ratio(
     aerobic: bool = True,
     aa_tsv: Path | str | None = None,
 ) -> cobra.Model:
-    """Switch the protein pseudoreaction's amino-acid ratios.
-
-    Ports yeast-GEM's ``changeAminoAcidRatio.m``. Reads
-    ``data/physiology/aminoAcid_Bjorkeroth2020.tsv`` (20 rows; columns:
-    aa name, tRNA substrate id, charged-tRNA product id, MW, aerobic
-    fraction, anaerobic fraction). Replaces the tRNA stoichiometries
-    in the protein pseudoreaction and rescales protein back to its
-    pre-switch mass via :func:`scale_biomass`.
-    """
-    path = Path(aa_tsv) if aa_tsv else _AA_TSV
-    aa_df = _read_aa_ratio_tsv(path)
-    column = "aerobic" if aerobic else "anaerobic"
-
-    # Snapshot current protein mass so we can rescale after replacing
-    # the stoichiometry.
-    cfg = yeast_biomass_config()
-    fractions_before = _ra_sum_biomass(model, cfg)
-    protein_target = fractions_before["protein"]
-
-    ids = load_ids()
-    rxn = model.reactions.get_by_id(ids.protein_rxn)
-    for _i, row in enumerate(aa_df.itertuples(index=False)):
-        sub = model.metabolites.get_by_id(row.tRNA_substrate)
-        prod = model.metabolites.get_by_id(row.tRNA_product)
-        ratio = float(row[aa_df.columns.get_loc(column)])  # type: ignore[index]
-        _set_coefficient(rxn, sub, -ratio)
-        _set_coefficient(rxn, prod,  ratio)
-
-    # Rescale protein content back to its pre-switch mass to keep the
-    # biomass equation summing to 1 g/gDW.
-    scale_biomass(model, "protein", protein_target)
-    return model
+    """Switch the protein pseudoreaction's amino-acid ratios
+    (``changeAminoAcidRatio.m``). Same function as
+    :func:`yeastgem.conditions.change_amino_acid_ratio`, which the
+    environments use."""
+    return _change_amino_acid_ratio(model, aerobic=aerobic, aa_tsv=aa_tsv)
 
 
 # --- helpers ----------------------------------------------------------
-
-def _read_aa_ratio_tsv(path: Path) -> pd.DataFrame:
-    """Parse the AA-ratio TSV (columns shared with MATLAB's textscan).
-
-    The TSV header line has the layout:
-        <tab><tab><tab>MW<tab>aerobic<tab>anaerobic
-    so pandas can't autodetect column names. We name them explicitly.
-    """
-    df = pd.read_csv(
-        path,
-        sep="\t",
-        header=0,
-        names=["aa", "tRNA_substrate", "tRNA_product", "MW", "aerobic", "anaerobic"],
-    )
-    return df
-
 
 def _rescale_named_pseudoreaction(
     model: cobra.Model,

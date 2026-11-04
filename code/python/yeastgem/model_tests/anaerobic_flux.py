@@ -2,7 +2,8 @@
 
 Port of ``code/modelTests/anaerobic_flux_predictions.m``. For each
 dataset in ``data/physiology/flux_data_anaerobic.tsv``: fix glucose
-uptake to the experimental rate, maximise growth, and compare
+uptake to the experimental rate, maximise growth (parsimonious FBA, as
+``solveLP(model,1)`` in the MATLAB original), and compare
 predicted fluxes (scaled to 100 * v_i / v_glc) against the
 experimental values. Returns the coefficient of determination about
 the line of identity across all data points.
@@ -15,6 +16,8 @@ from dataclasses import dataclass
 import cobra
 import numpy as np
 import pandas as pd
+from cobra.exceptions import OptimizationError
+from cobra.flux_analysis import pfba
 
 from yeastgem.io import REPO_PATH
 
@@ -91,8 +94,9 @@ def anaerobic_flux_predictions(
 
         with model:
             model.reactions.get_by_id(glc_rxn_id).bounds = (-glc_value, -glc_value)
-            sol = model.optimize()
-            if sol.status != "optimal":
+            try:
+                sol = pfba(model)
+            except OptimizationError:
                 continue
             glc_predicted = sol.fluxes[glc_rxn_id]
             if glc_predicted == 0:
