@@ -2,8 +2,7 @@
 
 Slow tests — each exercises FBA on the full 4000+ reaction model.
 Tolerances are deliberately loose; the strict pass/fail thresholds
-live in the lock-step verification driver (see PORTING_PLAN.md and
-tests/reference/).
+live in the lock-step verification driver (see tests/reference/).
 """
 from __future__ import annotations
 
