@@ -1,0 +1,9 @@
+variant	quantity	measured	sd	simulated
+v910_new	glycerol	4.5	0.4	4.3527120788709
+v910_new	ethanol	31	2	35.7071618284313
+v910_new	CO2	38	10	38.7740877067967
+v910_new	growth	0.36	0.02	0.379161522016976
+v910_new+mdh1old	glycerol	4.5	0.4	4.48024038616249
+v910_new+mdh1old	ethanol	31	2	35.6167758199522
+v910_new+mdh1old	CO2	38	10	38.7374927221076
+v910_new+mdh1old	growth	0.36	0.02	0.374915446156178

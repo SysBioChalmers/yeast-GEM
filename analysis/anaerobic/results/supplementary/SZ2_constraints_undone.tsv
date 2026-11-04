@@ -1,0 +1,10 @@
+change on Yeast9.1.0 with updated constraints	growth	glycerol	ethanol	growth_R2	MRE_C_limited_anaerobic	flux_MRE
+none (updated constraints)	0.379	4.353	35.71	0.901	0.057	0.307
+tetraenol uptake allowed	0.379	4.353	35.71	0.901	0.057	0.302
+Mdh2 unblocked	0.379	4.353	35.71	0.901	0.057	0.315
+Idp2 unblocked	0.385	3.986	36.05	0.897	0.050	0.328
+no FADH2 in biomass	0.380	4.359	35.72	0.900	0.057	0.324
+aerobic amino-acid ratio	0.379	4.361	35.70	0.901	0.058	0.307
+GAM 30.49, NGAM 0, protein 0.461 (original)	0.472	5.375	33.25	0.782	0.281	0.394
+NAD(P)(H), CoA removed from cofactors (original)	0.380	4.345	35.71	0.899	0.056	0.302
+Mdh1 malate -> OAA only (original)	0.375	4.480	35.62	0.903	0.064	0.365

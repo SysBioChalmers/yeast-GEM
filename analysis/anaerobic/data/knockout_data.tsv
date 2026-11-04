@@ -1,0 +1,10 @@
+# Knockout validation data, transcribed from the source papers.
+# Rates in mmol/gDW/h, growth rate in 1/h, biomass yield in g/g glucose; mean and SD of two cultures.
+# Bakker et al. 2000 J Bacteriol 182:4730, Table 5: exponential batch on glucose (20 g/L), 30 C, pH 5.0, strain CEN.PK113-7D and isogenic adh3 deletion CEN.PK226-1D.
+# Boles et al. 1998 J Bacteriol 180:2875, Discussion: anaerobic glucose-limited chemostat, D = 0.10 1/h; values "the same" as wild type, data not shown (qualitative only).
+source	strain	genotype	oxygen	cultivation	mu	mu_sd	Yxs	Yxs_sd	q_glucose	q_glucose_sd	q_ethanol	q_ethanol_sd	q_glycerol	q_glycerol_sd	q_acetate	q_acetate_sd	q_lactate	q_lactate_sd	q_pyruvate	q_pyruvate_sd	q_succinate	q_succinate_sd
+Bakker2000	CEN.PK113-7D	wild type	aerobic	batch	0.38	0.01	0.14	0.00	15.7	0.7	22.3	0.9	0.97	0.21	0.52	0.08	0.12	0.01	0.12	0.01	<0.1
+Bakker2000	CEN.PK226-1D	adh3	aerobic	batch	0.37	0.01	0.15	0.00	13.8	0.5	19.4	0.9	0.56	0.03	0.74	0.11	0.10	0.00	0.13	0.03	<0.1
+Bakker2000	CEN.PK113-7D	wild type	anaerobic	batch	0.33	0.02	0.10	0.00	19.1	1.1	28.8	0.6	3.50	0.60	0.32	0.04	0.32	0.01	0.11	0.01	0.12	0.03
+Bakker2000	CEN.PK226-1D	adh3	anaerobic	batch	0.22	0.02	0.10	0.01	12.6	0.5	19.2	0.5	2.34	0.25	0.27	0.01	0.14	0.04	0.12	0.02	0.14	0.07
+Boles1998	EBY.D152	mae1	anaerobic	chemostat D=0.10	0.10		same as WT				same as WT				same as WT
