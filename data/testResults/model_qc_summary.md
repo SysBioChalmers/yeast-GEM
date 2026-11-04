@@ -74,7 +74,11 @@ _Single-gene deletions against the Stanford deletion collection. A false non-ess
 
 #### Changed since `develop`
 
-_No gene changed class._
+| Gene | Name | Before | Now | Effect |
+| --- | --- | --- | --- | --- |
+| `YDL244W` | THI13 | not in the model | true non-essential | new |
+| `YJR156C` | THI11 | not in the model | true non-essential | new |
+| `YNL332W` | THI12 | not in the model | true non-essential | new |
 
 #### False non-essential genes (94)
 
@@ -221,7 +225,7 @@ _Fast subset -- flux-variability and matrix-rank tests are skipped, so this is n
 | Annotation - Metabolites | Metabolite Annotation Conformity Per Database | 36.4% |
 | Annotation - Metabolites | Uniform Metabolite Identifier Namespace | 0.0% |
 | Annotation - Reactions | Presence of Reaction Annotation | 0.0% |
-| Annotation - Reactions | Reaction Annotations Per Database | 82.6% |
+| Annotation - Reactions | Reaction Annotations Per Database | 82.7% |
 | Annotation - Reactions | Reaction Annotation Conformity Per Database | 33.4% |
 | Annotation - Reactions | Uniform Reaction Identifier Namespace | 0.0% |
 | Annotation - Genes | Presence of Gene Annotation | 0.0% |
@@ -249,7 +253,7 @@ _Metabolite/reaction identifiers cross-checked against MetaNetX's reference data
 | `wrong`, isolated | 30 | 0 | :white_check_mark: |
 | `wrong`, recurring | 13 | 0 | :white_check_mark: |
 | `drift` (safe to `--fix`) | 0 | 0 | :white_check_mark: |
-| `missing` (safe to `--fix`) | 0 | 0 | :white_check_mark: |
+| `missing` (safe to `--fix`) | 2 | +2 | :warning: |
 
 [Full report](https://github.com/SysBioChalmers/yeast-GEM/blob/feat/apply-environment/data/testResults/annotation_report.md)
 

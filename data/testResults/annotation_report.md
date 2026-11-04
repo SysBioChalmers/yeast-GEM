@@ -23,7 +23,7 @@ Scope: whole model.
 | `wrong`, isolated -- review individually | 30 |
 | `wrong`, recurring -- review as a group | 13 |
 | `drift` -- safe to `--fix` | 0 |
-| `missing` -- safe to `--fix` | 0 |
+| `missing` -- safe to `--fix` | 2 |
 
 ## Needs manual curation (`wrong`)
 
@@ -99,4 +99,7 @@ _None._
 
 ### `missing` (structure-verified id not yet recorded)
 
-_None._
+| kind | id | name | column | current | suggested |
+|---|---|---|---|---|---|
+| met | s_4335 | (2S)-2-amino-5-hydroxy-4-oxopentanoate | chebi | _(none)_ | CHEBI:211341 |
+| met | s_4335 | (2S)-2-amino-5-hydroxy-4-oxopentanoate | metanetx.chemical | _(none)_ | MNXM1393181 |

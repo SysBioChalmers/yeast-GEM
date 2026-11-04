@@ -58,11 +58,11 @@ The pull request in each row is the one whose run last wrote those files.
 
 | Result files | Produced by | Last updated by |
 |---|---|---|
-| `qc_findings.md`, `qc_metrics.tsv`, `model_qc_summary.md` | `model_qc.py`, `build_qc_report.py` | <!-- last:qc -->**PR #422** |
-| `qc_status.tsv` (YAML lint, YAML and SBML round-trip) | `model_file_checks.py` | <!-- last:qc -->**PR #422** |
-| `validation_findings.md`, `validation_metrics.tsv`, `essentialGenes.tsv` | `check_metrics.py` | <!-- last:qc -->**PR #422** |
-| `annotation_report.md`, `annotation_metrics.tsv` | `verify_annotations.py` | <!-- last:qc -->**PR #422** |
-| `memote_score.md` | `memote_snapshot.py` (fast subset on every pull request, full suite on demand) | <!-- last:memote -->**PR #422** |
+| `qc_findings.md`, `qc_metrics.tsv`, `model_qc_summary.md` | `model_qc.py`, `build_qc_report.py` | <!-- last:qc -->**PR #423** |
+| `qc_status.tsv` (YAML lint, YAML and SBML round-trip) | `model_file_checks.py` | <!-- last:qc -->**PR #423** |
+| `validation_findings.md`, `validation_metrics.tsv`, `essentialGenes.tsv` | `check_metrics.py` | <!-- last:qc -->**PR #423** |
+| `annotation_report.md`, `annotation_metrics.tsv` | `verify_annotations.py` | <!-- last:qc -->**PR #423** |
+| `memote_score.md` | `memote_snapshot.py` (fast subset on every pull request, full suite on demand) | <!-- last:memote -->**PR #423** |
 
 ## 2. Latest release results
 
