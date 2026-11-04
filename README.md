@@ -48,7 +48,7 @@ branch's current validation results.
 
 # Enzyme-constrained model
 
-An enzyme-constrained version of yeast-GEM, **ecYeastGEM**, is available from the [ecModels](https://github.com/CompMetEng/ecModels/tree/main/ecYeastGEM) repository. It is built with [geckopy](https://github.com/CompMetEng/geckopy), and each ecYeastGEM version is built from the yeast-GEM release with the same version number (see also #416).
+An enzyme-constrained version of yeast-GEM, **ecYeastGEM**, is available from the [ecModels](https://github.com/CompMetEng/ecModels/tree/main/ecYeastGEM) repository. It is built with [geckopy](https://github.com/CompMetEng/geckopy), and each ecYeastGEM version is built from the yeast-GEM release with the same version number.
 
 # Installation & usage
 
