@@ -34775,7 +34775,7 @@
     - notes: "MetaNetX ID curated (PR #220)"
   - !!omap
     - id: r_0939
-    - name: prephenate dehydrogenase (NADP)
+    - name: prephenate dehydrogenase (NAD)
     - metabolites: !!omap
       - s_0204: 1.0
       - s_0456: 1.0
@@ -34790,7 +34790,9 @@
     - annotation: !!omap
       - pubmed: "2697638"
       - sbo: SBO:0000176
+    - references: 10.1016/j.abb.2019.02.005
     - confidence_score: 3.0
+    - notes: "NADP+ is also accepted, at about 40% of the rate with NAD+ in vitro (Lopez-Nieves et al 2019)"
   - !!omap
     - id: r_0940
     - name: proline oxidase (NAD)
@@ -38321,12 +38323,14 @@
       - s_0022: -1.0
     - lower_bound: -1000.0
     - upper_bound: 1000.0
-    - gene_reaction_rule: YBR132C
+    - gene_reaction_rule: YGL077C
     - subsystem:
       - Transport [c, e]
     - annotation: !!omap
       - sbo: SBO:0000655
+    - references: 10.1371/journal.pone.0065717; 10.1128/mBio.00520-16
     - confidence_score: 2.0
+    - notes: "Carnitine uptake is by Hnm1; Agp2 regulates HNM1 expression and is not a transporter (Aouida et al 2013)"
   - !!omap
     - id: r_1192
     - name: L-cystine transport
@@ -39339,7 +39343,7 @@
       - s_1440: -1.0
     - lower_bound: -1000.0
     - upper_bound: 0.0
-    - gene_reaction_rule: YBR132C or YHL016C or YKR039W or YLL028W or YOR273C or YPL274W
+    - gene_reaction_rule: YHL016C or YLL028W or YOR273C or YPL274W
     - subsystem:
       - Transport [c, e]
     - annotation: !!omap
@@ -39347,7 +39351,9 @@
         - "17218313"
         - "9920864"
       - sbo: SBO:0000655
+    - references: 10.1074/jbc.m611105200; 10.1074/jbc.274.6.3265; 10.1371/journal.pone.0065717
     - confidence_score: 3.0
+    - notes: "AGP2 and GAP1 removed: polyamine uptake does not depend on them, DUR3 and SAM3 are the major uptake proteins (Uemura et al 2007) and Agp2 regulates transporter genes (Aouida et al 2013)"
   - !!omap
     - id: r_1261
     - name: spermidine transport
@@ -89410,9 +89416,6 @@
       - ncbigene: "852425"
       - ncbiprotein: NP_009686
       - refseq: NM_001178476
-  - !!omap
-    - id: YBR132C
-    - name: AGP2
   - !!omap
     - id: YBR145W
     - name: ADH5

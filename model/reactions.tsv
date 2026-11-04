@@ -713,7 +713,7 @@ r_0935	porphobilinogen synthase	PPBNGS	4.2.1.24	sce00860;sce01110	R00036	MNXR103
 r_0936	poylamine oxidase	POLYAO2	1.5.3.17	sce00330;sce00410	R03899	MNXR146092
 r_0937	poylamine oxidase	POLYAO3	1.5.3.17	sce00330;sce00410	R09076	MNXR146094
 r_0938	prephenate dehydratase	PPNDH	4.2.1.51	sce00400;sce01110;sce01130;sce01230	R01373	MNXR126086
-r_0939	prephenate dehydrogenase (NADP)	PPND2	1.3.1.13	sce00400;sce01110;sce01130	R01730	MNXR103122
+r_0939	prephenate dehydrogenase (NAD)	PPND	1.3.1.12	sce00400;sce01110;sce01130	R01728	MNXR146103
 r_0940	proline oxidase (NAD)		1.5.5.2	sce00330;sce01110;sce01130	R10507	MNXR103187
 r_0941	prolyl-tRNA synthetase	PROTRS_1	6.1.1.15	sce00970	R03661	MNXR103208
 r_0942	protoporphyrinogen oxidase	PPPGOm	1.3.3.4	sce00860;sce01110	R03222	MNXR103132
