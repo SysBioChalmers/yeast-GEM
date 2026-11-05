@@ -1,0 +1,77 @@
+source	strain	genotype	quantity	measured	measured_class	predicted	predicted_class	agree
+Papapetridis2016	ald6	ald6Δ	Y_glycerol	1.010		1.056		
+Papapetridis2016	ald6	ald6Δ	Y_biomass	0.936		0.995		
+Papapetridis2016	ald6	ald6Δ	Y_ethanol	1.038		0.993		
+Hubmann2011	gpd1	gpd1Δ	Y_ethanol	1.015		1.000		
+Hubmann2011	gpd1	gpd1Δ	Y_glycerol	0.862		1.000		
+Hubmann2011	gpd1	gpd1Δ	Y_biomass	1.172		1.000		
+Hubmann2011	gpd2	gpd2Δ	Y_ethanol	1.015		1.000		
+Hubmann2011	gpd2	gpd2Δ	Y_glycerol	0.793		1.000		
+Hubmann2011	gpd2	gpd2Δ	Y_biomass	1.094		1.000		
+Hubmann2011	gpd1 gpd2	gpd1Δ gpd2Δ	Y_ethanol	1.075		1.001		
+Hubmann2011	gpd1 gpd2	gpd1Δ gpd2Δ	Y_glycerol	0.086		0.000		
+Hubmann2011	gpd1 gpd2	gpd1Δ gpd2Δ	Y_biomass	0.688		0.889		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_ethanol	1.063		1.000		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_glycerol	0.362		1.000		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_biomass	1.016		1.000		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut2	Y_ethanol	1.078		1.000		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut2	Y_glycerol	0.155		1.000		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut2	Y_biomass	0.781		1.000		
+Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut7	Y_ethanol	1.049		1.000		
+Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut7	Y_glycerol	0.379		1.000		
+Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut7	Y_biomass	1.000		1.000		
+Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut2	Y_ethanol	1.070		1.000		
+Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut2	Y_glycerol	0.293		1.000		
+Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut2	Y_biomass	0.844		1.000		
+Hubmann2011	gpd1	gpd1Δ	Y_glycerol	1.037		1.000		
+Hubmann2011	gpd1	gpd1Δ	Y_ethanol	0.998		1.000		
+Hubmann2011	gpd2	gpd2Δ	Y_glycerol	0.889		1.000		
+Hubmann2011	gpd2	gpd2Δ	Y_ethanol	1.004		1.000		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_glycerol	0.667		1.000		
+Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_ethanol	1.010		1.000		
+Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut7	Y_biomass	0.974		1.000		
+Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut7	Y_glycerol	0.554		1.000		
+Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut7	Y_ethanol	1.022		1.000		
+Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut2	Y_biomass	0.724		1.000		
+Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut2	Y_glycerol	0.393		1.000		
+Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut2	Y_ethanol	1.067		1.000		
+Nissen2000_Yeast	gpd1	gpd1Δ	Y_ethanol	1.029		1.000		
+Nissen2000_Yeast	gpd1	gpd1Δ	Y_glycerol	0.933		1.000		
+Nissen2000_Yeast	gpd1	gpd1Δ	Y_biomass	1.009		1.000		
+Nissen2000_Yeast	gpd2	gpd2Δ	Y_ethanol	0.957		1.000		
+Nissen2000_Yeast	gpd2	gpd2Δ	Y_glycerol	0.695		1.000		
+Nissen2000_Yeast	gpd2	gpd2Δ	Y_biomass	0.875		1.000		
+Nissen2000_Yeast	gpd1 gpd2	gpd1Δ gpd2Δ	growth	no growth	none	0.292	impaired	0
+Nissen2000_Yeast	gpd1 gpd2	gpd1Δ gpd2Δ ura3Δ [YEp24-PGKp-cth-PGKt]	growth	no growth	none	0.292	impaired	0
+Valadi1998	gpd1	gpd1Δ::TRP1	Y_biomass	0.982		1.000		
+Valadi1998	gpd1	gpd1Δ::TRP1	Y_ethanol	1.008		1.000		
+Valadi1998	gpd1	gpd1Δ::TRP1	Y_glycerol	0.829		1.000		
+Valadi1998	gpd2	gpd2Δ::URA3	Y_biomass	1.000		1.000		
+Valadi1998	gpd2	gpd2Δ::URA3	Y_ethanol	1.083		1.000		
+Valadi1998	gpd2	gpd2Δ::URA3	Y_glycerol	0.606		1.000		
+Valadi1998	gpd2	gpd2Δ::URA3	growth	extended lag phase and reduced exponential growth rate	impaired	0.329	normal	0
+SaintPrix2004	ald6	ald6Δ::loxP	growth	growth rate and final biomass similar to wild type	normal	0.327	normal	1
+SaintPrix2004	ald5	ald5Δ::loxP	growth	growth rate and final biomass similar to wild type	normal	0.329	normal	1
+SaintPrix2004	ald4	ald4Δ::loxP	growth	growth rate and final biomass similar to wild type	normal	0.329	normal	1
+SaintPrix2004	ald6	ald6Δ::loxP	growth	growth rate and final biomass similar to wild type	normal	0.327	normal	1
+SaintPrix2004	ald5	ald5Δ::loxP	growth	growth rate and final biomass similar to wild type	normal	0.329	normal	1
+SaintPrix2004	ald4	ald4Δ::loxP	growth	growth rate and final biomass similar to wild type	normal	0.329	normal	1
+SaintPrix2004	ald6 ald4 ald5	ald6Δ::loxP ald4Δ::loxP ald5Δ::kanMX	growth	lag phase of about 40 h, then growth; fermentation complete after about 160 h (wild type 90 h)	impaired	0.327	normal	0
+SaintPrix2004	ald6 ald4 ald5	ald6Δ::loxP ald4Δ::loxP ald5Δ::kanMX	growth	growth defect compared with ald6Δald4Δ	impaired	0.327	normal	0
+Camarasa2003	sdh1	sdh1Δ::kanMX4	growth	growth, fermentation rate and by-products (ethanol, succinate, glycerol, acetate, pyruvate, 2-OG, hydroxyglutarate) similar to wild type	normal	0.329	normal	1
+Camarasa2003	sdh1	sdh1Δ::kanMX4	growth	growth, fermentation rate and by-products (ethanol, succinate, glycerol, acetate, pyruvate, 2-OG, hydroxyglutarate) similar to wild type	normal	0.329	normal	1
+Camarasa2003	sdh1	sdh1Δ::kanMX4	growth	growth, fermentation rate and by-products (ethanol, succinate, glycerol, acetate, pyruvate, 2-OG, hydroxyglutarate) similar to wild type	normal	0.329	normal	1
+Camarasa2003	kgd1	kgd1Δ::kanMX4	growth	growth rate, final biomass and fermentation activity similar to wild type	normal	0.329	normal	1
+Camarasa2003	kgd1	kgd1Δ::kanMX4	growth	growth rate, final biomass and fermentation activity similar to wild type	normal	0.329	normal	1
+Camarasa2003	kgd1	kgd1Δ::kanMX4	growth	growth not affected; fermentation rate slightly lower, fermentation about 5 h longer	normal	0.329	normal	1
+Ansell1997	gpd1	gpd1Δ::TRP1	growth	wild-type growth	normal	0.329	normal	1
+Ansell1997	gpd2	gpd2Δ::URA3	growth	reduced growth rate	impaired	0.329	normal	0
+Ansell1997	gpd1 gpd2	gpd1Δ::TRP1 gpd2Δ::URA3	growth	no growth (completely inhibited)	none	0.292	impaired	0
+Ansell1997	gpd2	gpd2Δ::URA3	growth	anaerobic growth defect not observed (wild-type-like)	normal	0.329	normal	1
+Ansell1997	gpd2	gpd2Δ::URA3	growth	anaerobic growth defect not observed	normal	0.329	normal	1
+Arikawa1998	frd1	frds::URA3	growth	no effect of disruption (grows like wild type)	normal	0.329	normal	1
+Arikawa1998	osm1	osm1::URA3	growth	grew slowly	impaired	0.329	normal	0
+Enomoto2002	frd1	frds::URA3	growth	grew well	normal	0.329	normal	1
+Enomoto2002	osm1	osm1::URA3	growth	grew poorly	impaired	0.329	normal	0
+Camarasa2007	frd1 osm1	osm1Δ frds1Δ::kanMX4	growth	unable to grow	none	0.000	none	1
+Camarasa2007	gpd1 gpd2	gpd1Δ gpd2Δ	growth	no growth during first 25 h (OD660 ~0.2)	none	0.292	impaired	0

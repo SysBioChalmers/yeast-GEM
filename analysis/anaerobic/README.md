@@ -28,7 +28,7 @@ A model is named `<release>_<constraints>` (`common/variantModel.m`), for exampl
 | `r1_major5_degeneracy` | pFBA degeneracy | `fvaRun` (13 scenarios, optimal face and 1% band), `runSampling` (RHMC, four chains), `analyzeSampling`, `compareSensitivity`, `chain_diagnostics.py`, `validateRHMC` |
 | `r1_major6_gcy1` | Gcy1 | `gcy1_thermodynamics.py` |
 | `r1_major7_reproducibility` | reproducibility and backward compatibility | no simulation; the parity test in `code/python/tests/reference` |
-| `r2_major1_deletions` | deletion strains | `knockoutPanel`, `adh3Gpd2`, `engineeredPanel`, `gpdViability`, `gpdSinkChain`, `frdKnockouts`, `geneDeletionScreen` (single-gene essentiality) |
+| `r2_major1_deletions` | deletion strains | `knockoutPanel`, `adh3Gpd2`, `engineeredPanel`, `gpdViability`, `gpdSinkChain`, `frdKnockouts`, `geneDeletionScreen` (single-gene essentiality), `deletion_comparison.py` (Supplementary Table S11 and Figure R2: measured against predicted growth and yields of all deletion strains with data) |
 | `r2_major2_fig3` | what Figure 3C-D compares | `flux_comparison.py` |
 | `r2_major3_protons` | proton diffusion and the plasma-membrane ATPase | `protonBudget` (the FVA of the proton fluxes is in `r1_major5_degeneracy`) |
 | `paper_figures` | | `run_all.m`, `sample_array.sh`, `makeFigures.m`, `make_supplementary.py`, `combine_ablation.py`, `collect_results.sh` |
@@ -44,4 +44,4 @@ A model is named `<release>_<constraints>` (`common/variantModel.m`), for exampl
 
 ## Not yet in this folder
 
-- Supplementary Tables S11 (deletion strains against the measurements) and S12 (CRPS by data set).
+- Supplementary Table S12 (CRPS by data set).

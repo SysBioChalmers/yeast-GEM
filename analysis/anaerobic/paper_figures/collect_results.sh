@@ -13,7 +13,7 @@ put() {   # put <folder> <path in SRC>...
 put r1_major3_attribution repro function_ablation function_pairs sectionB curation_ablation.tsv curation_pairs.tsv biomassDR.txt biomassTermVariants.txt
 put r1_major5_degeneracy fva analysis_opt0.99999 analysis_sensitivity chains
 put r1_major6_gcy1 gcy1_thermodynamics.tsv
-put r2_major1_deletions ko_panel.tsv adh3_gpd2.tsv engineered_panel.tsv gpd_viability.tsv ko_screen frdKnockouts.txt gpdSinkChain.txt
+put r2_major1_deletions deletion_comparison.tsv ko_panel.tsv adh3_gpd2.tsv engineered_panel.tsv gpd_viability.tsv ko_screen frdKnockouts.txt gpdSinkChain.txt
 put r2_major2_fig3 flux_comparison.tsv
 put r2_major3_protons protonBudget.txt
 put paper_figures supplementary figures
