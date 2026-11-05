@@ -1,10 +1,10 @@
 [Warning: loadYeastModel is deprecated; use loadYeastYaml instead.] 
 [> In loadYeastModel (line 22)
-In loadTaggedModel (line 17)
+In loadTaggedModel (line 8)
 In variantModel (line 16)
 In frdKnockouts (line 8)] 
-Loaded model version: '9.1.1'
+Loaded model version: 'yeastGEM_v9.1.1' (checkout)
 knockout                  growth 0.3792
-knockout YEL047C          growth 0.0000
+knockout YEL047C          growth 0.3792
 knockout YJR051W          growth 0.3792
 knockout YEL047C+YJR051W  growth 0.0000
