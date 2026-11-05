@@ -8,7 +8,7 @@ SRC=${ANAEROBIC_RESULTS:?set ANAEROBIC_RESULTS}
 put() {   # put <folder> <path in SRC>...
     local dir=$1; shift
     mkdir -p "$dir/results"
-    for p in "$@"; do mkdir -p "$dir/results/$(dirname "$p")"; cp -r "$SRC/$p" "$dir/results/$p"; done
+    for p in "$@"; do rm -rf "$dir/results/$p"; mkdir -p "$dir/results/$(dirname "$p")"; cp -r "$SRC/$p" "$dir/results/$p"; done
 }
 put r1_major3_attribution repro function_ablation function_pairs sectionB curation_ablation.tsv curation_pairs.tsv biomassDR.txt biomassTermVariants.txt
 put r1_major5_degeneracy fva analysis_opt0.99999 analysis_sensitivity chains

@@ -8,7 +8,7 @@ heme a in cofactor pseudoreaction	r_4598	removed	removed	heme synthesis needs O2
 NAD, NADH, NADP, NADPH, CoA in cofactor pseudoreaction	r_4598	removed	kept	made anaerobically when nicotinate and pantothenate are supplied		function	4.35
 GAM / NGAM / protein	r_4041; r_4046	30.49 / 0 / 0.461 (Nissen et al. 1997)	55.3 / 0.7 / 0.46 (yeast-GEM)	same maintenance for all conditions		function	5.38 (growth 0.47)
 amino-acid ratio of protein	r_4047	aerobic	anaerobic	measured (Bjorkeroth et al. 2020)		function	4.36
-FADH2 production in biomass	r_4041	none	0.08 mmol/gDW	Ero1 disulphide formation, FAD reoxidised by fumarate reductase	10.1038/s41467-018-07285-9	function	
+FADH2 production in biomass	r_4041	none	0.08 mmol/gDW	Ero1 disulphide formation, FAD reoxidised by fumarate reductase	10.1038/s41467-018-07285-9	function	4.36
 Mdh1, mitochondrial malate dehydrogenase	r_0713	malate -> OAA only	reversible	no evidence found for the restriction		-	4.48
 Mdh2, cytosolic malate dehydrogenase	r_0714	malate -> OAA only	blocked	glucose-induced inactivation (Hung et al. 2004); 260-fold lower anaerobically (Table 1)	10.1074/jbc.M404544200	function	4.35
 Idp2, cytosolic NADP-isocitrate dehydrogenase	r_0659	reversible	blocked	glucose-repressed, Cat8-activated (Bojunga & Entian 1999); not detected (Table 1)		function	3.99
