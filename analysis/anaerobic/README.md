@@ -1,6 +1,6 @@
 # Anaerobic revision analyses
 
-Simulations that address the reviewer comments on the anaerobic study, on yeast-GEM 9.1.2 (develop with #423 and #426 merged). Each folder answers one comment of the letter to the reviewers and holds its scripts, a README and the summary tables in `results/`; `paper_figures/` reruns everything and builds the figures and Supplementary Tables. The raw samples are not stored: the working folder `ANAEROBIC_RESULTS` holds them and `paper_figures/collect_results.sh` copies the summary tables into the comment folders.
+Simulations that address the reviewer comments on the anaerobic study (the replies are in `response/`), on yeast-GEM 9.1.2 (develop with #423 and #426 merged). Each folder answers one comment of the letter to the reviewers and holds its scripts, a README and the summary tables in `results/`; `paper_figures/` reruns everything and builds the figures and Supplementary Tables. The raw samples are not stored: the working folder `ANAEROBIC_RESULTS` holds them and `paper_figures/collect_results.sh` copies the summary tables into the comment folders.
 
 ## Setup
 
