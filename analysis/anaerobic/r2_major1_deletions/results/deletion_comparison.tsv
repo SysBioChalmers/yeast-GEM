@@ -11,30 +11,10 @@ Hubmann2011	gpd2	gpd2Δ	Y_biomass	1.094		1.000
 Hubmann2011	gpd1 gpd2	gpd1Δ gpd2Δ	Y_ethanol	1.075		1.001		
 Hubmann2011	gpd1 gpd2	gpd1Δ gpd2Δ	Y_glycerol	0.086		0.000		
 Hubmann2011	gpd1 gpd2	gpd1Δ gpd2Δ	Y_biomass	0.688		0.889		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_ethanol	1.063		1.000		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_glycerol	0.362		1.000		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_biomass	1.016		1.000		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut2	Y_ethanol	1.078		1.000		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut2	Y_glycerol	0.155		1.000		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut2	Y_biomass	0.781		1.000		
-Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut7	Y_ethanol	1.049		1.000		
-Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut7	Y_glycerol	0.379		1.000		
-Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut7	Y_biomass	1.000		1.000		
-Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut2	Y_ethanol	1.070		1.000		
-Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut2	Y_glycerol	0.293		1.000		
-Hubmann2011	gpd1	gpd1Δ GPD2p::TEFmut2	Y_biomass	0.844		1.000		
 Hubmann2011	gpd1	gpd1Δ	Y_glycerol	1.037		1.000		
 Hubmann2011	gpd1	gpd1Δ	Y_ethanol	0.998		1.000		
 Hubmann2011	gpd2	gpd2Δ	Y_glycerol	0.889		1.000		
 Hubmann2011	gpd2	gpd2Δ	Y_ethanol	1.004		1.000		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_glycerol	0.667		1.000		
-Hubmann2011	gpd2	gpd2Δ GPD1p::TEFmut7	Y_ethanol	1.010		1.000		
-Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut7	Y_biomass	0.974		1.000		
-Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut7	Y_glycerol	0.554		1.000		
-Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut7	Y_ethanol	1.022		1.000		
-Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut2	Y_biomass	0.724		1.000		
-Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut2	Y_glycerol	0.393		1.000		
-Pagliardini2013	gpd2	gpd2Δ GPD1p::TEFmut2	Y_ethanol	1.067		1.000		
 Nissen2000_Yeast	gpd1	gpd1Δ	Y_ethanol	1.029		1.000		
 Nissen2000_Yeast	gpd1	gpd1Δ	Y_glycerol	0.933		1.000		
 Nissen2000_Yeast	gpd1	gpd1Δ	Y_biomass	1.009		1.000		

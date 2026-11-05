@@ -78,7 +78,7 @@ for r in data:
             pass
 for r in data:
     m = predicted(r["deleted_genes_systematic"]) if r["deleted_genes_systematic"] else None
-    if m is None or r["genotype"].startswith("wild type"):
+    if m is None or r["genotype"].startswith("wild type") or "TEFmut" in r["genotype"]:   # attenuated promoter alleles are not deletions
         continue
     name, pr = m
     if r["quantity"] == "growth_qualitative":
