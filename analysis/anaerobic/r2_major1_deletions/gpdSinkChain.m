@@ -5,8 +5,9 @@ function gpdSinkChain()
 %   eight exits are closed. Maps the chain of alternative NADH sinks.
 
 paths = setupStudy('3.0.0-rc1');
+log = startLog(paths, 'gpdSinkChain'); %#ok<NASGU>
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));
-m = applyEnvironment(loadTaggedModel(paths.yeast, '9.1.0'), 'anaerobic');
+m = applyEnvironment(loadTaggedModel(paths.yeast, 'dev'), 'anaerobic');
 m = setParam(m, 'eq', 'r_1714', -19.1);
 m = setParam(m, 'obj', 'r_4041', 1);
 wt = solveLP(m, 1);

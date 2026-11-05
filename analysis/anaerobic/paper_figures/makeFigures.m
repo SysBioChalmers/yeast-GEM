@@ -1,6 +1,6 @@
 function makeFigures(optFrac)
 % makeFigures  Figures for the revision from the sampling analysis tables.
-%   makeFigures(0.99999)           v9.1.0 and v9.0.2, updated and original
+%   makeFigures(0.99999)           9.1.2 and v9.0.2, updated and original
 %                                  constraints
 %   Fig R1  (a) sampled 95% intervals of the reactions discussed in the text,
 %               first variant, Sjoberg batch, against pFBA;
@@ -15,10 +15,10 @@ out = fullfile(paths.results, 'figures');
 if ~isfolder(out), mkdir(out); end
 slot = [0.165 0.471 0.839; 0.922 0.408 0.204; 0.106 0.686 0.478; 0.929 0.631 0; 0.910 0.482 0.643];  % validated slots 1-5
 in = fullfile(paths.results, sprintf('analysis_opt%g', optFrac));
-variants = {'v910_new','v910_old','v902_new','v902_old'};
-labels   = {'9.1.0, updated constraints','9.1.0, original constraints','9.0.2, updated constraints','9.0.2, original constraints'};
+variants = {'vdev_new','vdev_old','v902_new','v902_old'};
+labels   = {'9.1.2, updated constraints','9.1.2, original constraints','9.0.2, updated constraints','9.0.2, original constraints'};
 col = slot([1 2 3 4], :);
-release = 'v9.1.0';
+release = '9.1.2';
 ink = [0.20 0.20 0.20]; muted = [0.45 0.45 0.45];
 rd = @(f) readtable(fullfile(in, f), 'FileType','text','Delimiter','\t');
 

@@ -8,7 +8,7 @@ function gpdViability(variants, outName)
 
 paths = setupStudy('3.0.0-rc1');
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));
-if nargin < 1, variants = {'v910_new','v910_old','v902_new','v902_old'}; end
+if nargin < 1, variants = {'vdev_new','vdev_old','v902_new','v902_old'}; end
 if nargin < 2, outName = 'gpd_viability.tsv'; end
 out = fullfile(paths.results, outName);
 kos = {'none', {}; 'gpd1', {'YDL022W'}; 'gpd2', {'YOL059W'}; 'gpd1 gpd2', {'YDL022W','YOL059W'}};

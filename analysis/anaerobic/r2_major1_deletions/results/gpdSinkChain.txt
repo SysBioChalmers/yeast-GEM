@@ -1,0 +1,18 @@
+[Warning: loadYeastModel is deprecated; use loadYeastYaml instead.] 
+[> In loadYeastModel (line 22)
+In loadTaggedModel (line 8)
+In gpdSinkChain (line 10)] 
+Loaded model version: 'yeastGEM_v9.1.1' (checkout)
+step 1: growth 0.2790; largest new product r_4659 (propanol exchange) 2.706
+step 2: growth 0.2790, no new product exchange
+closed: r_4659
+exchanges that differ from the wild type by > 0.01 after closing:
+  r_1654   ammonium exchange              wt   -2.062 ko   -4.539
+  r_1672   carbon dioxide exchange        wt   32.218 ko   31.452
+  r_1761   ethanol exchange               wt   29.679 ko   32.408
+  r_1808   glycerol exchange              wt    3.603 ko    0.000
+  r_1810   L-glycine exchange             wt    0.024 ko    2.728
+  r_1832   H+ exchange                    wt    1.859 ko    5.391
+  r_2056   succinate exchange             wt    0.059 ko    0.568
+  r_2100   water exchange                 wt    3.559 ko    6.376
+  r_2111   growth                         wt    0.314 ko    0.279

@@ -23,7 +23,7 @@ if nargin < 1, optFrac = 0.99999; end
 paths = setupStudy('3.0.0-rc1');
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));
 in  = fullfile(paths.results, 'sampling');
-if nargin < 2 || isempty(variants), variants = {'v910_new','v910_old','v902_new','v902_old'}; end
+if nargin < 2 || isempty(variants), variants = {'vdev_new','vdev_old','v902_new','v902_old'}; end
 if nargin < 3, tag = ''; end
 out = fullfile(paths.results, sprintf('analysis_opt%g', optFrac));
 if ~isempty(tag), out = [out '_' tag]; end

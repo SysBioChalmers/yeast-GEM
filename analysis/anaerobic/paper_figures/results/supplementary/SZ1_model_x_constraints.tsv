@@ -1,0 +1,5 @@
+model	growth	glycerol	ethanol	CO2	growth_R2	growth_MRE	MRE_C_limited_anaerobic	MRE_N_limited_anaerobic	flux_R2	flux_MRE
+Yeast9.0.2, original constraints	0.538	3.958	34.32	36.81	0.666	0.196	0.462	0.466	0.997	0.467
+Yeast9.0.2, updated constraints	0.448	0.000	39.95	40.51	0.849	0.124	0.149	0.398	0.965	0.530
+Yeast9.1.2, original constraints plus thiamine uptake	0.471	5.287	33.42	37.21	0.792	0.157	0.279	0.407	0.996	0.403
+Yeast9.1.2, updated constraints	0.379	4.353	35.71	38.77	0.902	0.105	0.057	0.353	0.997	0.302

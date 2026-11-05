@@ -1,0 +1,7 @@
+case	dG_m_kJ_mol	sd_kJ_mol	NADPH_NADP	max_DHA_per_glycerol	inverse
+Zhang 2015, low dG-sd	20.8	1.8	16	1.42e-05	70524
+Zhang 2015, low dG	22.6	1.8	16	6.78e-06	147388
+Zhang 2015, low dG+sd	24.5	1.8	16	3.25e-06	308028
+Zhang 2015, high dG-sd	20.8	1.8	22	1.03e-05	96970
+Zhang 2015, high dG	22.6	1.8	22	4.93e-06	202659
+Zhang 2015, high dG+sd	24.5	1.8	22	2.36e-06	423538

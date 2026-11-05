@@ -18,7 +18,7 @@ function engineeredPanel(variants)
 %     3-phosphate dehydrogenase (GAPN). Yields in g/g glucose.
 %   Writes results/engineered_panel.tsv.
 
-if nargin < 1, variants = {'v910_new','v910_old','v902_new','v902_old'}; end
+if nargin < 1, variants = {'vdev_new','vdev_old','v902_new','v902_old'}; end
 paths = setupStudy('3.0.0-rc1');
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));
 T = table();

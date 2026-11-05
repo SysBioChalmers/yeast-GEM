@@ -8,7 +8,7 @@ function knockoutPanel(variants, outName)
 %   growth, biomass/ethanol/glycerol yields (g/g glucose), acetate and
 %   succinate (mmol/g biomass) per variant and strain.
 
-if nargin < 1, variants = {'v910_new','v910_old','v902_new','v902_old'}; end
+if nargin < 1, variants = {'vdev_new','vdev_old','v902_new','v902_old'}; end
 if nargin < 2, outName = 'ko_panel.tsv'; end
 paths = setupStudy('3.0.0-rc1');
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));

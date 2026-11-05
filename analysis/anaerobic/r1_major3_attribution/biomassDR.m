@@ -7,15 +7,16 @@ function biomassDR()
 %   the 3 NADPH/gDW that v9_1_0.m added to the biomass reaction to reach the
 %   4.2 per C-mol of Lange and Heijnen (2001).
 paths = setupStudy('3.0.0-rc1');
+log = startLog(paths, 'biomassDR'); %#ok<NASGU>
 cd(fullfile(paths.yeast,'code','otherChanges'));
-base = loadTaggedModel(paths.yeast,'9.1.0');
+base = loadTaggedModel(paths.yeast, 'dev');
 noDR = base;
 bio = strcmp(noDR.rxns,'r_4041');
 [~,o] = ismember({'s_1212','s_1207','s_0794'}, noDR.mets);
 noDR.S(o,bio) = noDR.S(o,bio) - [-3; 3; -3];
 b902 = loadTaggedModel(paths.yeast,'9.0.2');
-cases = {{'9.0.2', b902, false}, {'9.1.0', base, false}, {'9.1.0 without biomass NADPH', noDR, false}, ...
-         {'9.1.0 anaerobic (updated constraints)', base, true}, {'9.1.0 anaerobic without biomass NADPH', noDR, true}};
+cases = {{'9.0.2', b902, false}, {'9.1.2', base, false}, {'9.1.2 without biomass NADPH', noDR, false}, ...
+         {'9.1.2 anaerobic (updated constraints)', base, true}, {'9.1.2 anaerobic without biomass NADPH', noDR, true}};
 for c = cases
     m = c{1}{2};
     m = minimal_Y6_local(m);

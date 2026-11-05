@@ -1,0 +1,32 @@
+[Warning: loadYeastModel is deprecated; use loadYeastYaml instead.] 
+[> In loadYeastModel (line 22)
+In loadTaggedModel (line 8)
+In variantModel (line 16)
+In protonBudget (line 12)] 
+Loaded model version: 'yeastGEM_v9.1.1' (checkout)
+vdev_new, growth 0.3792
+  NH4 uptake and assimilation                  -1.787
+  biomass pseudoreactions                     +21.187
+  exchange with mitochondria                   -1.451
+  glycerol                                     -3.677
+  glycolysis/pyruvate                         -24.982
+  other                                       +10.631
+  other H+ transport over plasma membrane      +0.078
+  plasma membrane H+-ATPase                    +0.000
+  sum (should be 0)                            +0.000
+Largest contributions:
+  r_0486   glyceraldehyde-3-phosphate dehydrogenase                flux   38.771  H+[c]  +38.771
+  r_0962   pyruvate kinase                                         flux   38.185  H+[c]  -38.185
+  r_0959   pyruvate decarboxylase                                  flux   35.976  H+[c]  -35.976
+  r_2115   alcohol dehydrogenase, (acetaldehyde to ethanol)        flux   35.707  H+[c]  -35.707
+  r_0534   hexokinase (D-glucose:ATP)                              flux   23.000  H+[c]  +23.000
+  r_0886   phosphofructokinase                                     flux   21.284  H+[c]  +21.284
+  r_4041   biomass pseudoreaction                                  flux    0.379  H+[c]  +19.769
+  r_0491   glycerol-3-phosphate dehydrogenase (NAD)                flux    3.677  H+[c]   -3.677
+  r_0568   inorganic diphosphatase                                 flux    3.344  H+[c]   +3.344
+  r_0471   glutamate dehydrogenase (NADP)                          flux    2.181  H+[c]   -2.181
+  r_0091   6-phosphogluconolactonase                               flux    2.089  H+[c]   +2.089
+  r_0466   glucose 6-phosphate dehydrogenase                       flux    2.089  H+[c]   +2.089
+  r_4047   protein pseudoreaction                                  flux    0.379  H+[c]   +1.586
+  r_1667   bicarbonate formation                                   flux    1.515  H+[c]   +1.515
+  r_0958   pyruvate carboxylase                                    flux    1.294  H+[c]   +1.294

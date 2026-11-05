@@ -15,6 +15,7 @@ Usage: python chain_diagnostics.py [optFrac]
 from __future__ import annotations
 
 import csv
+import os
 import sys
 from pathlib import Path
 
@@ -23,8 +24,9 @@ import h5py
 import numpy as np
 
 STUDY = Path(__file__).resolve().parents[1]
-SAMPLES = STUDY / "results" / "sampling"
-OUT = STUDY / "results" / "chains"
+RESULTS = Path(os.environ.get("ANAEROBIC_RESULTS", STUDY / "results"))
+SAMPLES = RESULTS / "sampling"
+OUT = RESULTS / "chains"
 FLUX = STUDY.parents[1] / "data" / "physiology" / "flux_data_anaerobic.tsv"
 REPORTED = {"r_4041": "growth", "r_1808": "glycerol", "r_1761": "ethanol", "r_1672": "CO2",
             "r_2056": "succinate", "r_0227": "PM H+-ATPase", "r_2131": "Idp1", "r_0658": "Idh1/2",

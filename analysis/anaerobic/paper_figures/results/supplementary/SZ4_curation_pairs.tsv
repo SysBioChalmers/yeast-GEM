@@ -1,0 +1,201 @@
+parts left out	growth	glycerol	ethanol	CO2	growth_R2	growth_MRE	MRE_Clim_anaerobic	MRE_Nlim_anaerobic	flux_R2	flux_MRE	change_in_glycerol	change_in_flux_MRE	change_in_growth_R2	interaction_glycerol	interaction_flux_MRE	interaction_growth_R2
+all but 1 and 2 (Oac1 malate/sulphate transport; H+ symporters irreversible)	0.383	5.013	34.881	38.287	0.897	0.100	0.051	0.362	0.997	0.356	0.661	0.046	-0.005	0.501	-0.442	0.013
+all but 1 and 3 (Oac1 malate/sulphate transport; mass and charge balance)	0.367	4.733	35.476	38.697	0.908	0.106	0.078	0.344	0.997	0.340	0.380	0.031	0.006			
+all but 1 and 4 (Oac1 malate/sulphate transport; Gcy1 reversed and irreversible)	0.415	0.000	40.254	41.325	0.896	0.108	0.072	0.355	0.964	0.434	-4.353	0.125	-0.006			
+all but 1 and 5 (Oac1 malate/sulphate transport; mitochondrial ATP synthase reversible)	0.364	4.766	35.429	38.668	0.907	0.107	0.081	0.344	0.997	0.343	0.414	0.034	0.005	0.000	0.008	-0.000
+all but 1 and 6 (Oac1 malate/sulphate transport; C1/folate directions)	0.366	4.685	35.498	38.701	0.906	0.107	0.078	0.345	0.997	0.340	0.332	0.031	0.004	0.005	0.011	0.000
+all but 1 and 7 (Oac1 malate/sulphate transport; r_0227 renamed)	0.364	4.766	35.429	38.668	0.907	0.107	0.081	0.344	0.997	0.335	0.414	0.026	0.005	0.000	0.000	0.000
+all but 1 and 8 (Oac1 malate/sulphate transport; PFK1 side reaction r_0887 removed)	0.364	4.766	35.429	38.668	0.907	0.107	0.081	0.344	0.997	0.346	0.414	0.036	0.005	0.000	0.004	-0.000
+all but 1 and 9 (Oac1 malate/sulphate transport; TYR1 cofactor (r_0939))	0.364	4.766	35.429	38.668	0.907	0.107	0.081	0.344	0.997	0.335	0.414	0.026	0.005	0.000	0.000	0.000
+all but 1 and 10 (Oac1 malate/sulphate transport; esterification irreversible)	0.365	4.781	35.260	38.645	0.906	0.107	0.080	0.345	0.997	0.384	0.428	0.075	0.004	0.643	-0.153	0.004
+all but 1 and 11 (Oac1 malate/sulphate transport; polyphosphate irreversible)	0.377	4.929	35.068	38.417	0.898	0.106	0.061	0.357	0.997	0.371	0.576	0.062	-0.004	0.046	0.035	0.002
+all but 1 and 12 (Oac1 malate/sulphate transport; balancing and removals)	0.364	4.766	35.429	38.668	0.907	0.107	0.081	0.344	0.997	0.343	0.414	0.034	0.005			
+all but 1 and 13 (Oac1 malate/sulphate transport; GCV blocked)	0.369	3.880	36.419	39.239	0.908	0.106	0.075	0.344	0.995	0.371	-0.472	0.062	0.006	0.054	-0.027	0.001
+all but 1 and 14 (Oac1 malate/sulphate transport; Glt1 blocked)	0.389	2.302	37.959	40.025	0.910	0.101	0.048	0.344	0.986	0.333	-2.051	0.024	0.008	-0.413	-0.009	0.004
+all but 1 and 15 (Oac1 malate/sulphate transport; carnitine acetyltransferase blocked)	0.365	4.113	36.179	39.093	0.907	0.107	0.080	0.344	0.995	0.288	-0.240	-0.022	0.005	-0.108	-0.015	0.000
+all but 1 and 16 (Oac1 malate/sulphate transport; amino-acid ratio (Bjorkeroth 2020))	0.364	4.766	35.429	38.668	0.908	0.106	0.081	0.344	0.997	0.340	0.414	0.031	0.006	0.000	0.005	0.000
+all but 1 and 17 (Oac1 malate/sulphate transport; protein rescaled to 1 g/gDW)	0.366	4.741	35.464	38.690	0.908	0.106	0.079	0.344	0.997	0.341	0.389	0.032	0.006	-0.002	0.009	0.000
+all but 1 and 18 (Oac1 malate/sulphate transport; biomass pseudoreaction H+ balance)	0.364	4.766	35.429	38.668	0.907	0.107	0.081	0.344	0.997	0.335	0.414	0.026	0.005	0.000	0.000	0.000
+all but 1 and 19 (Oac1 malate/sulphate transport; biomass NADPH (degree of reduction))	0.366	4.786	35.569	38.272	0.907	0.105	0.079	0.346	0.997	0.305	0.433	-0.004	0.005	0.001	0.003	0.000
+all but 1 and 20 (Oac1 malate/sulphate transport; glycine export allowed)	0.000	11.675	0.000	11.675	0.074	0.279	1.000	0.337	0.279	0.852	7.322	0.543	-0.828	-0.414	-0.031	0.002
+all but 2 and 3 (H+ symporters irreversible; mass and charge balance)	0.407	4.061	35.074	37.779	0.879	0.105	0.062	0.379	0.997	0.774	-0.292	0.465	-0.023			
+all but 2 and 4 (H+ symporters irreversible; Gcy1 reversed and irreversible)	0.454	0.000	39.517	40.479	0.846	0.126	0.163	0.388	0.971	0.612	-4.353	0.302	-0.055			
+all but 2 and 5 (H+ symporters irreversible; mitochondrial ATP synthase reversible)	0.404	4.099	35.020	37.748	0.879	0.105	0.060	0.379	0.998	0.767	-0.253	0.457	-0.023	-0.000	-0.005	-0.000
+all but 2 and 6 (H+ symporters irreversible; C1/folate directions)	0.407	4.005	35.095	37.780	0.877	0.106	0.062	0.381	0.997	0.775	-0.347	0.466	-0.025	-0.007	0.009	-0.001
+all but 2 and 7 (H+ symporters irreversible; r_0227 renamed)	0.404	4.099	35.020	37.748	0.879	0.105	0.060	0.379	0.997	0.772	-0.253	0.463	-0.023	0.000	0.000	0.000
+all but 2 and 8 (H+ symporters irreversible; PFK1 side reaction r_0887 removed)	0.404	4.099	35.020	37.748	0.879	0.105	0.060	0.379	0.997	0.778	-0.253	0.469	-0.023	-0.000	-0.001	-0.000
+all but 2 and 9 (H+ symporters irreversible; TYR1 cofactor (r_0939))	0.404	4.099	35.020	37.748	0.879	0.105	0.060	0.379	0.997	0.772	-0.253	0.463	-0.023	0.000	0.000	0.000
+all but 2 and 10 (H+ symporters irreversible; esterification irreversible)	0.407	3.917	32.836	37.251	0.879	0.106	0.062	0.379	0.997	0.522	-0.436	0.212	-0.023	0.446	-0.453	0.005
+all but 2 and 11 (H+ symporters irreversible; polyphosphate irreversible)	0.405	4.106	35.003	37.735	0.878	0.106	0.060	0.381	0.998	0.758	-0.247	0.449	-0.024	-0.110	-0.015	0.010
+all but 2 and 12 (H+ symporters irreversible; balancing and removals)	0.404	4.099	35.020	37.748	0.879	0.105	0.060	0.379	0.997	0.767	-0.253	0.458	-0.023			
+all but 2 and 13 (H+ symporters irreversible; GCV blocked)	0.408	3.094	36.154	38.401	0.879	0.106	0.063	0.379	0.994	0.844	-1.259	0.535	-0.023	-0.066	0.008	-0.001
+all but 2 and 14 (H+ symporters irreversible; Glt1 blocked)	0.430	1.886	37.208	38.872	0.871	0.113	0.103	0.379	0.988	0.823	-2.467	0.514	-0.031	-0.162	0.043	-0.008
+all but 2 and 15 (H+ symporters irreversible; carnitine acetyltransferase blocked)	0.405	3.903	35.157	37.754	0.879	0.105	0.060	0.379	0.997	0.814	-0.450	0.504	-0.023	0.349	0.074	-0.000
+all but 2 and 16 (H+ symporters irreversible; amino-acid ratio (Bjorkeroth 2020))	0.404	4.099	35.020	37.748	0.880	0.105	0.060	0.379	0.997	0.772	-0.253	0.463	-0.022	-0.000	0.000	-0.001
+all but 2 and 17 (H+ symporters irreversible; protein rescaled to 1 g/gDW)	0.406	4.072	35.061	37.773	0.879	0.105	0.061	0.379	0.997	0.772	-0.281	0.463	-0.023	-0.004	0.004	-0.001
+all but 2 and 18 (H+ symporters irreversible; biomass pseudoreaction H+ balance)	0.404	4.099	35.020	37.748	0.879	0.105	0.060	0.379	0.997	0.772	-0.253	0.463	-0.023	0.000	0.000	0.000
+all but 2 and 19 (H+ symporters irreversible; biomass NADPH (degree of reduction))	0.406	4.118	35.174	37.305	0.877	0.103	0.061	0.382	0.997	0.738	-0.235	0.429	-0.025	0.000	-0.002	-0.002
+all but 2 and 20 (H+ symporters irreversible; glycine export allowed)	0.404	4.099	35.020	37.748	0.879	0.105	0.060	0.379	0.997	0.772	-0.253	0.463	-0.023	-7.322	-0.548	0.836
+all but 3 and 4 (mass and charge balance; Gcy1 reversed and irreversible)	0.429	0.000	40.120	41.209	0.883	0.113	0.099	0.364	0.966	0.429	-4.353	0.120	-0.019			
+all but 3 and 5 (mass and charge balance; mitochondrial ATP synthase reversible)	0.381	4.322	35.754	38.804	0.903	0.103	0.054	0.353	0.997	0.308	-0.031	-0.001	0.001			
+all but 3 and 6 (mass and charge balance; C1/folate directions)	0.383	4.235	35.828	38.839	0.902	0.103	0.051	0.355	0.997	0.305	-0.118	-0.005	-0.000			
+all but 3 and 7 (mass and charge balance; r_0227 renamed)	0.381	4.322	35.754	38.804	0.903	0.103	0.054	0.353	0.997	0.301	-0.031	-0.008	0.001			
+all but 3 and 8 (mass and charge balance; PFK1 side reaction r_0887 removed)	0.381	4.322	35.754	38.804	0.903	0.103	0.054	0.353	0.997	0.313	-0.031	0.003	0.001			
+all but 3 and 9 (mass and charge balance; TYR1 cofactor (r_0939))	0.381	4.322	35.754	38.804	0.903	0.103	0.054	0.353	0.997	0.301	-0.031	-0.008	0.001			
+all but 3 and 10 (mass and charge balance; esterification irreversible)	0.389	3.699	33.548	37.721	0.898	0.103	0.048	0.359	0.997	0.509	-0.654	0.200	-0.004			
+all but 3 and 11 (mass and charge balance; polyphosphate irreversible)	0.391	4.437	35.481	38.612	0.891	0.104	0.048	0.366	0.997	0.309	0.084	0.000	-0.011			
+all but 3 and 12 (mass and charge balance; balancing and removals)	0.381	4.322	35.754	38.804	0.903	0.103	0.054	0.353	0.997	0.304	-0.031	-0.005	0.001			
+all but 3 and 13 (mass and charge balance; GCV blocked)	0.384	3.386	36.818	39.423	0.903	0.102	0.050	0.353	0.993	0.369	-0.967	0.059	0.001			
+all but 3 and 14 (mass and charge balance; Glt1 blocked)	0.404	2.284	37.823	39.908	0.901	0.104	0.059	0.353	0.987	0.321	-2.068	0.011	-0.000			
+all but 3 and 15 (mass and charge balance; carnitine acetyltransferase blocked)	0.382	3.781	36.374	39.156	0.903	0.103	0.053	0.353	0.995	0.279	-0.572	-0.030	0.001			
+all but 3 and 16 (mass and charge balance; amino-acid ratio (Bjorkeroth 2020))	0.381	4.322	35.754	38.804	0.904	0.102	0.054	0.353	0.997	0.301	-0.031	-0.008	0.002			
+all but 3 and 17 (mass and charge balance; protein rescaled to 1 g/gDW)	0.381	4.330	35.742	38.796	0.903	0.103	0.055	0.353	0.997	0.301	-0.023	-0.008	0.001			
+all but 3 and 18 (mass and charge balance; biomass pseudoreaction H+ balance)	0.380	4.306	35.791	38.830	0.900	0.107	0.056	0.363	0.997	0.305	-0.047	-0.004	-0.002			
+all but 3 and 19 (mass and charge balance; biomass NADPH (degree of reduction))	0.383	4.340	35.902	38.391	0.902	0.100	0.051	0.355	0.997	0.274	-0.013	-0.035	0.000			
+all but 3 and 20 (mass and charge balance; glycine export allowed)	0.000	11.675	0.000	11.675	0.067	0.280	1.000	0.347	0.293	0.857	7.322	0.548	-0.835			
+all but 4 and 5 (Gcy1 reversed and irreversible; mitochondrial ATP synthase reversible)	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.966	0.430	-4.353	0.120	-0.018			
+all but 4 and 6 (Gcy1 reversed and irreversible; C1/folate directions)	0.428	0.000	40.085	41.188	0.882	0.114	0.096	0.365	0.966	0.423	-4.353	0.114	-0.020			
+all but 4 and 7 (Gcy1 reversed and irreversible; r_0227 renamed)	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.966	0.430	-4.353	0.120	-0.018			
+all but 4 and 8 (Gcy1 reversed and irreversible; PFK1 side reaction r_0887 removed)	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.966	0.430	-4.353	0.120	-0.018			
+all but 4 and 9 (Gcy1 reversed and irreversible; TYR1 cofactor (r_0939))	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.966	0.430	-4.353	0.120	-0.018			
+all but 4 and 10 (Gcy1 reversed and irreversible; esterification irreversible)	0.429	0.000	39.316	40.780	0.881	0.115	0.100	0.366	0.970	0.505	-4.353	0.196	-0.021			
+all but 4 and 11 (Gcy1 reversed and irreversible; polyphosphate irreversible)	0.440	0.000	39.917	41.051	0.861	0.123	0.127	0.380	0.968	0.438	-4.353	0.129	-0.041			
+all but 4 and 12 (Gcy1 reversed and irreversible; balancing and removals)	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.967	0.422	-4.353	0.113	-0.018			
+all but 4 and 13 (Gcy1 reversed and irreversible; GCV blocked)	0.427	0.000	40.139	41.159	0.883	0.114	0.096	0.364	0.967	0.420	-4.353	0.110	-0.019			
+all but 4 and 14 (Gcy1 reversed and irreversible; Glt1 blocked)	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.965	0.439	-4.353	0.130	-0.018			
+all but 4 and 15 (Gcy1 reversed and irreversible; carnitine acetyltransferase blocked)	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.967	0.425	-4.353	0.115	-0.018			
+all but 4 and 16 (Gcy1 reversed and irreversible; amino-acid ratio (Bjorkeroth 2020))	0.427	0.000	40.101	41.201	0.885	0.112	0.093	0.364	0.966	0.430	-4.353	0.120	-0.017			
+all but 4 and 17 (Gcy1 reversed and irreversible; protein rescaled to 1 g/gDW)	0.428	0.000	40.115	41.207	0.883	0.113	0.097	0.364	0.966	0.429	-4.353	0.120	-0.019			
+all but 4 and 18 (Gcy1 reversed and irreversible; biomass pseudoreaction H+ balance)	0.427	0.000	40.101	41.201	0.883	0.114	0.093	0.364	0.966	0.430	-4.353	0.120	-0.018			
+all but 4 and 19 (Gcy1 reversed and irreversible; biomass NADPH (degree of reduction))	0.421	0.000	40.183	41.268	0.887	0.108	0.081	0.364	0.965	0.420	-4.353	0.111	-0.015			
+all but 4 and 20 (Gcy1 reversed and irreversible; glycine export allowed)	0.000	11.675	0.000	11.675	0.054	0.284	1.000	0.361	0.293	0.857	7.322	0.548	-0.848			
+all but 5 and 6 (mitochondrial ATP synthase reversible; C1/folate directions)	0.381	4.266	35.781	38.809	0.901	0.104	0.054	0.354	0.997	0.298	-0.087	-0.011	-0.001	0.000	-0.005	0.000
+all but 5 and 7 (mitochondrial ATP synthase reversible; r_0227 renamed)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.309	0.000	-0.000	0.000	0.000	0.000	0.000
+all but 5 and 8 (mitochondrial ATP synthase reversible; PFK1 side reaction r_0887 removed)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.313	-0.000	0.004	-0.000	0.000	-0.003	-0.000
+all but 5 and 9 (mitochondrial ATP synthase reversible; TYR1 cofactor (r_0939))	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.309	0.000	-0.000	0.000	0.000	0.000	0.000
+all but 5 and 10 (mitochondrial ATP synthase reversible; esterification irreversible)	0.387	3.724	33.483	37.681	0.897	0.104	0.049	0.359	0.997	0.510	-0.628	0.201	-0.005	-0.000	-0.002	-0.000
+all but 5 and 11 (mitochondrial ATP synthase reversible; polyphosphate irreversible)	0.389	4.469	35.432	38.581	0.890	0.105	0.048	0.366	0.997	0.309	0.116	-0.000	-0.011	0.000	-0.002	-0.000
+all but 5 and 12 (mitochondrial ATP synthase reversible; balancing and removals)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.307	-0.000	-0.002	-0.000			
+all but 5 and 13 (mitochondrial ATP synthase reversible; GCV blocked)	0.382	3.413	36.775	39.395	0.902	0.104	0.052	0.353	0.993	0.370	-0.940	0.061	0.000	-0.000	-0.003	-0.000
+all but 5 and 14 (mitochondrial ATP synthase reversible; Glt1 blocked)	0.402	2.301	37.790	39.885	0.901	0.105	0.057	0.353	0.987	0.319	-2.052	0.010	-0.001	-0.000	0.003	-0.000
+all but 5 and 15 (mitochondrial ATP synthase reversible; carnitine acetyltransferase blocked)	0.380	3.807	36.333	39.129	0.902	0.105	0.056	0.353	0.995	0.282	-0.545	-0.027	-0.000	0.000	0.005	0.000
+all but 5 and 16 (mitochondrial ATP synthase reversible; amino-acid ratio (Bjorkeroth 2020))	0.379	4.353	35.707	38.774	0.903	0.103	0.057	0.353	0.997	0.309	0.000	-0.000	0.001	0.000	-0.000	0.000
+all but 5 and 17 (mitochondrial ATP synthase reversible; protein rescaled to 1 g/gDW)	0.381	4.330	35.742	38.797	0.903	0.103	0.055	0.353	0.997	0.306	-0.023	-0.003	0.001	-0.000	0.000	0.000
+all but 5 and 18 (mitochondrial ATP synthase reversible; biomass pseudoreaction H+ balance)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.309	0.000	-0.000	0.000	0.000	0.000	0.000
+all but 5 and 19 (mitochondrial ATP synthase reversible; biomass NADPH (degree of reduction))	0.381	4.371	35.854	38.363	0.901	0.102	0.055	0.355	0.997	0.272	0.018	-0.037	-0.000	-0.000	-0.005	0.000
+all but 5 and 20 (mitochondrial ATP synthase reversible; glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.281	1.000	0.347	0.293	0.857	7.322	0.548	-0.836	-0.000	-0.000	-0.000
+all but 6 and 7 (C1/folate directions; r_0227 renamed)	0.381	4.266	35.781	38.809	0.901	0.104	0.054	0.354	0.997	0.303	-0.087	-0.006	-0.001	0.000	0.000	0.000
+all but 6 and 8 (C1/folate directions; PFK1 side reaction r_0887 removed)	0.381	4.266	35.781	38.809	0.901	0.104	0.054	0.354	0.996	0.314	-0.087	0.005	-0.001	0.000	0.004	0.000
+all but 6 and 9 (C1/folate directions; TYR1 cofactor (r_0939))	0.381	4.266	35.781	38.809	0.901	0.104	0.054	0.354	0.997	0.303	-0.087	-0.006	-0.001	0.000	0.000	0.000
+all but 6 and 10 (C1/folate directions; esterification irreversible)	0.389	3.632	33.546	37.711	0.895	0.104	0.048	0.361	0.997	0.513	-0.720	0.204	-0.006	-0.005	0.007	-0.000
+all but 6 and 11 (C1/folate directions; polyphosphate irreversible)	0.391	4.381	35.506	38.616	0.889	0.106	0.048	0.368	0.997	0.307	0.028	-0.003	-0.013	-0.002	0.002	-0.001
+all but 6 and 12 (C1/folate directions; balancing and removals)	0.381	4.266	35.781	38.809	0.901	0.104	0.054	0.354	0.997	0.307	-0.087	-0.002	-0.001			
+all but 6 and 13 (C1/folate directions; GCV blocked)	0.384	3.320	36.856	39.433	0.901	0.103	0.050	0.354	0.993	0.369	-1.032	0.060	-0.001	-0.006	0.002	-0.000
+all but 6 and 14 (C1/folate directions; Glt1 blocked)	0.404	2.198	37.880	39.928	0.899	0.105	0.059	0.354	0.987	0.323	-2.155	0.014	-0.003	-0.017	0.013	-0.001
+all but 6 and 15 (C1/folate directions; carnitine acetyltransferase blocked)	0.382	3.717	36.410	39.166	0.901	0.104	0.053	0.355	0.995	0.279	-0.635	-0.030	-0.001	-0.003	0.008	0.000
+all but 6 and 16 (C1/folate directions; amino-acid ratio (Bjorkeroth 2020))	0.381	4.266	35.781	38.809	0.902	0.103	0.054	0.354	0.997	0.303	-0.087	-0.006	0.000	-0.000	-0.000	-0.000
+all but 6 and 17 (C1/folate directions; protein rescaled to 1 g/gDW)	0.383	4.243	35.816	38.832	0.901	0.103	0.052	0.354	0.996	0.304	-0.110	-0.005	-0.001	-0.000	0.004	-0.000
+all but 6 and 18 (C1/folate directions; biomass pseudoreaction H+ balance)	0.381	4.266	35.781	38.809	0.901	0.104	0.054	0.354	0.997	0.303	-0.087	-0.006	-0.001	0.000	0.000	0.000
+all but 6 and 19 (C1/folate directions; biomass NADPH (degree of reduction))	0.383	4.284	35.929	38.396	0.900	0.101	0.052	0.357	0.997	0.277	-0.069	-0.032	-0.002	-0.000	0.006	-0.000
+all but 6 and 20 (C1/folate directions; glycine export allowed)	0.000	11.675	0.000	11.675	0.065	0.281	1.000	0.349	0.293	0.857	7.322	0.548	-0.837	0.087	0.006	-0.000
+all but 7 and 8 (r_0227 renamed; PFK1 side reaction r_0887 removed)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.316	-0.000	0.007	0.000	0.000	0.000	0.000
+all but 7 and 9 (r_0227 renamed; TYR1 cofactor (r_0939))	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.309	0.000	0.000	0.000	0.000	0.000	0.000
+all but 7 and 10 (r_0227 renamed; esterification irreversible)	0.387	3.724	33.483	37.681	0.897	0.104	0.049	0.359	0.997	0.512	-0.628	0.203	-0.005	0.000	0.000	0.000
+all but 7 and 11 (r_0227 renamed; polyphosphate irreversible)	0.389	4.469	35.432	38.581	0.890	0.105	0.048	0.366	0.997	0.311	0.116	0.001	-0.011	0.000	0.000	0.000
+all but 7 and 12 (r_0227 renamed; balancing and removals)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.307	0.000	-0.002	-0.000			
+all but 7 and 13 (r_0227 renamed; GCV blocked)	0.382	3.413	36.775	39.395	0.902	0.104	0.052	0.353	0.993	0.373	-0.940	0.064	0.000	0.000	0.000	0.000
+all but 7 and 14 (r_0227 renamed; Glt1 blocked)	0.402	2.301	37.790	39.885	0.901	0.105	0.057	0.353	0.987	0.316	-2.052	0.007	-0.001	0.000	0.000	0.000
+all but 7 and 15 (r_0227 renamed; carnitine acetyltransferase blocked)	0.380	3.807	36.333	39.129	0.902	0.105	0.056	0.353	0.995	0.277	-0.545	-0.032	-0.000	0.000	0.000	0.000
+all but 7 and 16 (r_0227 renamed; amino-acid ratio (Bjorkeroth 2020))	0.379	4.353	35.707	38.774	0.903	0.103	0.057	0.353	0.997	0.309	-0.000	-0.000	0.001	0.000	0.000	0.000
+all but 7 and 17 (r_0227 renamed; protein rescaled to 1 g/gDW)	0.381	4.330	35.742	38.797	0.903	0.103	0.055	0.353	0.997	0.306	-0.023	-0.003	0.001	0.000	0.000	0.000
+all but 7 and 18 (r_0227 renamed; biomass pseudoreaction H+ balance)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.309	0.000	0.000	0.000	0.000	0.000	0.000
+all but 7 and 19 (r_0227 renamed; biomass NADPH (degree of reduction))	0.381	4.371	35.854	38.363	0.901	0.102	0.055	0.355	0.997	0.277	0.018	-0.032	-0.000	0.000	0.000	0.000
+all but 7 and 20 (r_0227 renamed; glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.281	1.000	0.347	0.283	0.857	7.322	0.548	-0.836	0.000	0.000	0.000
+all but 8 and 9 (PFK1 side reaction r_0887 removed; TYR1 cofactor (r_0939))	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.316	-0.000	0.007	0.000	0.000	0.000	0.000
+all but 8 and 10 (PFK1 side reaction r_0887 removed; esterification irreversible)	0.387	3.724	33.483	37.681	0.897	0.104	0.049	0.359	0.997	0.511	-0.628	0.202	-0.005	0.000	-0.007	0.000
+all but 8 and 11 (PFK1 side reaction r_0887 removed; polyphosphate irreversible)	0.389	4.469	35.432	38.581	0.890	0.105	0.048	0.366	0.997	0.315	0.116	0.006	-0.011	0.000	-0.002	-0.000
+all but 8 and 12 (PFK1 side reaction r_0887 removed; balancing and removals)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.312	-0.000	0.002	-0.000			
+all but 8 and 13 (PFK1 side reaction r_0887 removed; GCV blocked)	0.382	3.413	36.775	39.395	0.902	0.104	0.052	0.353	0.993	0.374	-0.940	0.065	0.000	-0.000	-0.006	-0.000
+all but 8 and 14 (PFK1 side reaction r_0887 removed; Glt1 blocked)	0.402	2.301	37.790	39.885	0.901	0.105	0.057	0.353	0.987	0.323	-2.052	0.014	-0.001	-0.000	-0.000	0.000
+all but 8 and 15 (PFK1 side reaction r_0887 removed; carnitine acetyltransferase blocked)	0.380	3.807	36.333	39.129	0.902	0.105	0.056	0.353	0.995	0.288	-0.545	-0.021	-0.000	0.000	0.004	0.000
+all but 8 and 16 (PFK1 side reaction r_0887 removed; amino-acid ratio (Bjorkeroth 2020))	0.379	4.353	35.707	38.774	0.903	0.103	0.057	0.353	0.997	0.316	0.000	0.007	0.001	0.000	0.000	0.000
+all but 8 and 17 (PFK1 side reaction r_0887 removed; protein rescaled to 1 g/gDW)	0.381	4.330	35.742	38.797	0.903	0.103	0.055	0.353	0.997	0.313	-0.023	0.004	0.001	0.000	0.000	0.000
+all but 8 and 18 (PFK1 side reaction r_0887 removed; biomass pseudoreaction H+ balance)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.316	-0.000	0.007	0.000	0.000	0.000	0.000
+all but 8 and 19 (PFK1 side reaction r_0887 removed; biomass NADPH (degree of reduction))	0.381	4.371	35.854	38.363	0.901	0.102	0.055	0.355	0.997	0.288	0.018	-0.021	-0.000	0.000	0.004	-0.000
+all but 8 and 20 (PFK1 side reaction r_0887 removed; glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.281	1.000	0.347	0.293	0.857	7.322	0.548	-0.836	0.000	-0.007	-0.000
+all but 9 and 10 (TYR1 cofactor (r_0939); esterification irreversible)	0.387	3.724	33.483	37.681	0.897	0.104	0.049	0.359	0.997	0.512	-0.628	0.203	-0.005	0.000	0.000	0.000
+all but 9 and 11 (TYR1 cofactor (r_0939); polyphosphate irreversible)	0.389	4.469	35.432	38.581	0.890	0.105	0.048	0.366	0.997	0.311	0.116	0.001	-0.011	0.000	0.000	0.000
+all but 9 and 12 (TYR1 cofactor (r_0939); balancing and removals)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.307	0.000	-0.002	-0.000			
+all but 9 and 13 (TYR1 cofactor (r_0939); GCV blocked)	0.382	3.413	36.775	39.395	0.902	0.104	0.052	0.353	0.993	0.373	-0.940	0.064	0.000	0.000	0.000	0.000
+all but 9 and 14 (TYR1 cofactor (r_0939); Glt1 blocked)	0.402	2.301	37.790	39.885	0.901	0.105	0.057	0.353	0.987	0.316	-2.052	0.007	-0.001	0.000	0.000	0.000
+all but 9 and 15 (TYR1 cofactor (r_0939); carnitine acetyltransferase blocked)	0.380	3.807	36.333	39.129	0.902	0.105	0.056	0.353	0.995	0.277	-0.545	-0.032	-0.000	0.000	0.000	0.000
+all but 9 and 16 (TYR1 cofactor (r_0939); amino-acid ratio (Bjorkeroth 2020))	0.379	4.353	35.707	38.774	0.903	0.103	0.057	0.353	0.997	0.309	-0.000	-0.000	0.001	0.000	0.000	0.000
+all but 9 and 17 (TYR1 cofactor (r_0939); protein rescaled to 1 g/gDW)	0.381	4.330	35.742	38.797	0.903	0.103	0.055	0.353	0.997	0.306	-0.023	-0.003	0.001	0.000	0.000	0.000
+all but 9 and 18 (TYR1 cofactor (r_0939); biomass pseudoreaction H+ balance)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.309	0.000	0.000	0.000	0.000	0.000	0.000
+all but 9 and 19 (TYR1 cofactor (r_0939); biomass NADPH (degree of reduction))	0.381	4.371	35.854	38.363	0.901	0.102	0.055	0.355	0.997	0.277	0.018	-0.032	-0.000	0.000	0.000	0.000
+all but 9 and 20 (TYR1 cofactor (r_0939); glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.281	1.000	0.347	0.283	0.857	7.322	0.548	-0.836	0.000	0.000	0.000
+all but 10 and 11 (esterification irreversible; polyphosphate irreversible)	0.398	3.828	33.134	37.449	0.882	0.108	0.053	0.374	0.997	0.497	-0.525	0.188	-0.020	-0.013	-0.016	-0.003
+all but 10 and 12 (esterification irreversible; balancing and removals)	0.387	3.724	33.483	37.681	0.897	0.104	0.049	0.359	0.997	0.510	-0.628	0.201	-0.005			
+all but 10 and 13 (esterification irreversible; GCV blocked)	0.393	2.436	33.778	37.902	0.897	0.104	0.049	0.359	0.993	0.643	-1.916	0.333	-0.005	-0.348	0.067	-0.000
+all but 10 and 14 (esterification irreversible; Glt1 blocked)	0.410	1.591	35.475	38.749	0.894	0.107	0.065	0.359	0.989	0.529	-2.762	0.220	-0.008	-0.082	0.010	-0.002
+all but 10 and 15 (esterification irreversible; carnitine acetyltransferase blocked)	0.387	3.724	33.483	37.681	0.897	0.104	0.049	0.359	0.997	0.510	-0.628	0.201	-0.005	0.545	0.030	0.000
+all but 10 and 16 (esterification irreversible; amino-acid ratio (Bjorkeroth 2020))	0.387	3.724	33.483	37.681	0.898	0.103	0.049	0.359	0.997	0.512	-0.628	0.203	-0.004	0.000	0.000	0.000
+all but 10 and 17 (esterification irreversible; protein rescaled to 1 g/gDW)	0.388	3.705	33.532	37.711	0.897	0.103	0.048	0.359	0.997	0.508	-0.648	0.198	-0.005	0.004	-0.001	-0.000
+all but 10 and 18 (esterification irreversible; biomass pseudoreaction H+ balance)	0.387	3.724	33.483	37.681	0.897	0.104	0.049	0.359	0.997	0.512	-0.628	0.203	-0.005	0.000	0.000	0.000
+all but 10 and 19 (esterification irreversible; biomass NADPH (degree of reduction))	0.388	3.740	33.623	37.257	0.896	0.102	0.048	0.362	0.997	0.482	-0.612	0.173	-0.006	-0.002	0.002	-0.000
+all but 10 and 20 (esterification irreversible; glycine export allowed)	0.000	11.675	0.000	11.675	0.059	0.283	1.000	0.355	0.281	0.857	7.322	0.548	-0.843	0.628	-0.203	-0.002
+all but 11 and 12 (polyphosphate irreversible; balancing and removals)	0.389	4.469	35.432	38.581	0.890	0.105	0.048	0.366	0.997	0.309	0.116	-0.000	-0.011			
+all but 11 and 13 (polyphosphate irreversible; GCV blocked)	0.392	3.500	36.539	39.225	0.890	0.105	0.048	0.366	0.994	0.373	-0.852	0.064	-0.011	-0.029	-0.002	-0.000
+all but 11 and 14 (polyphosphate irreversible; Glt1 blocked)	0.413	2.366	37.557	39.711	0.887	0.109	0.068	0.366	0.988	0.310	-1.986	0.001	-0.015	-0.051	-0.007	-0.003
+all but 11 and 15 (polyphosphate irreversible; carnitine acetyltransferase blocked)	0.392	3.926	36.032	38.915	0.889	0.106	0.048	0.367	0.996	0.296	-0.427	-0.013	-0.013	0.002	0.017	-0.001
+all but 11 and 16 (polyphosphate irreversible; amino-acid ratio (Bjorkeroth 2020))	0.389	4.469	35.432	38.581	0.892	0.104	0.048	0.366	0.997	0.311	0.116	0.001	-0.010	0.000	0.000	0.000
+all but 11 and 17 (polyphosphate irreversible; protein rescaled to 1 g/gDW)	0.391	4.445	35.469	38.605	0.891	0.105	0.048	0.366	0.997	0.309	0.092	0.000	-0.011	-0.001	0.002	-0.000
+all but 11 and 18 (polyphosphate irreversible; biomass pseudoreaction H+ balance)	0.389	4.469	35.432	38.581	0.890	0.105	0.048	0.366	0.997	0.311	0.116	0.001	-0.011	0.000	0.000	0.000
+all but 11 and 19 (polyphosphate irreversible; biomass NADPH (degree of reduction))	0.391	4.488	35.582	38.158	0.890	0.103	0.048	0.368	0.997	0.278	0.136	-0.031	-0.012	0.001	0.000	-0.000
+all but 11 and 20 (polyphosphate irreversible; glycine export allowed)	0.000	11.675	0.000	11.675	0.054	0.284	1.000	0.361	0.293	0.857	7.322	0.548	-0.848	-0.116	-0.002	-0.001
+all but 12 and 13 (balancing and removals; GCV blocked)	0.382	3.413	36.775	39.395	0.902	0.104	0.052	0.353	0.993	0.371	-0.940	0.062	0.000			
+all but 12 and 14 (balancing and removals; Glt1 blocked)	0.402	2.301	37.790	39.885	0.901	0.105	0.057	0.353	0.987	0.319	-2.052	0.010	-0.001			
+all but 12 and 15 (balancing and removals; carnitine acetyltransferase blocked)	0.380	3.807	36.333	39.129	0.902	0.105	0.056	0.353	0.995	0.280	-0.545	-0.030	-0.000			
+all but 12 and 16 (balancing and removals; amino-acid ratio (Bjorkeroth 2020))	0.379	4.353	35.707	38.774	0.903	0.103	0.057	0.353	0.997	0.307	-0.000	-0.002	0.001			
+all but 12 and 17 (balancing and removals; protein rescaled to 1 g/gDW)	0.381	4.330	35.742	38.797	0.903	0.103	0.055	0.353	0.997	0.304	-0.023	-0.005	0.001			
+all but 12 and 18 (balancing and removals; biomass pseudoreaction H+ balance)	0.379	4.353	35.707	38.774	0.902	0.105	0.057	0.353	0.997	0.307	0.000	-0.002	-0.000			
+all but 12 and 19 (balancing and removals; biomass NADPH (degree of reduction))	0.381	4.371	35.854	38.363	0.901	0.102	0.055	0.355	0.997	0.270	0.018	-0.039	-0.000			
+all but 12 and 20 (balancing and removals; glycine export allowed)	0.377	4.284	35.755	38.878	0.906	0.105	0.061	0.347	0.997	0.298	-0.068	-0.011	0.004			
+all but 13 and 14 (GCV blocked; Glt1 blocked)	0.409	0.003	40.390	41.367	0.900	0.106	0.064	0.353	0.965	0.454	-4.350	0.145	-0.002	-1.358	0.074	-0.002
+all but 13 and 15 (GCV blocked; carnitine acetyltransferase blocked)	0.383	2.861	37.409	39.754	0.902	0.103	0.051	0.353	0.990	0.341	-1.492	0.031	0.000	-0.007	-0.001	-0.000
+all but 13 and 16 (GCV blocked; amino-acid ratio (Bjorkeroth 2020))	0.382	3.413	36.775	39.395	0.903	0.103	0.052	0.353	0.993	0.373	-0.940	0.064	0.002	-0.000	0.000	-0.000
+all but 13 and 17 (GCV blocked; protein rescaled to 1 g/gDW)	0.384	3.392	36.808	39.416	0.903	0.102	0.051	0.353	0.993	0.367	-0.960	0.057	0.001	0.003	-0.004	-0.000
+all but 13 and 18 (GCV blocked; biomass pseudoreaction H+ balance)	0.382	3.413	36.775	39.395	0.902	0.104	0.052	0.353	0.993	0.373	-0.940	0.064	0.000	0.000	0.000	0.000
+all but 13 and 19 (GCV blocked; biomass NADPH (degree of reduction))	0.384	3.427	36.928	38.983	0.902	0.101	0.051	0.355	0.994	0.336	-0.925	0.027	-0.000	-0.004	-0.005	-0.000
+all but 13 and 20 (GCV blocked; glycine export allowed)	0.382	3.413	36.775	39.395	0.907	0.103	0.052	0.347	0.993	0.371	-0.940	0.062	0.006	-7.322	-0.550	0.841
+all but 14 and 15 (Glt1 blocked; carnitine acetyltransferase blocked)	0.403	1.719	38.458	40.263	0.901	0.105	0.058	0.353	0.981	0.327	-2.634	0.017	-0.001	-0.037	0.042	-0.000
+all but 14 and 16 (Glt1 blocked; amino-acid ratio (Bjorkeroth 2020))	0.402	2.301	37.790	39.885	0.902	0.103	0.057	0.353	0.987	0.316	-2.052	0.007	0.000	-0.000	-0.000	0.000
+all but 14 and 17 (Glt1 blocked; protein rescaled to 1 g/gDW)	0.403	2.289	37.815	39.902	0.901	0.104	0.059	0.353	0.987	0.319	-2.064	0.010	-0.001	0.011	0.006	-0.000
+all but 14 and 18 (Glt1 blocked; biomass pseudoreaction H+ balance)	0.402	2.301	37.790	39.885	0.901	0.105	0.057	0.353	0.987	0.316	-2.052	0.007	-0.001	0.000	0.000	0.000
+all but 14 and 19 (Glt1 blocked; biomass NADPH (degree of reduction))	0.404	2.311	37.956	39.454	0.900	0.103	0.059	0.355	0.986	0.349	-2.041	0.039	-0.002	-0.008	0.064	-0.000
+all but 14 and 20 (Glt1 blocked; glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.281	1.000	0.347	0.293	0.857	7.322	0.548	-0.836	2.052	-0.008	0.001
+all but 15 and 16 (carnitine acetyltransferase blocked; amino-acid ratio (Bjorkeroth 2020))	0.380	3.807	36.333	39.129	0.903	0.103	0.056	0.353	0.995	0.277	-0.545	-0.032	0.001	0.000	0.000	0.000
+all but 15 and 17 (carnitine acetyltransferase blocked; protein rescaled to 1 g/gDW)	0.382	3.788	36.364	39.149	0.903	0.103	0.054	0.353	0.995	0.279	-0.565	-0.030	0.001	0.004	0.005	-0.000
+all but 15 and 18 (carnitine acetyltransferase blocked; biomass pseudoreaction H+ balance)	0.380	3.807	36.333	39.129	0.902	0.105	0.056	0.353	0.995	0.277	-0.545	-0.032	-0.000	0.000	0.000	0.000
+all but 15 and 19 (carnitine acetyltransferase blocked; biomass NADPH (degree of reduction))	0.382	3.823	36.483	38.718	0.901	0.102	0.054	0.355	0.995	0.255	-0.529	-0.054	-0.001	-0.002	0.010	-0.000
+all but 15 and 20 (carnitine acetyltransferase blocked; glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.281	1.000	0.347	0.293	0.857	7.322	0.548	-0.836	0.545	0.031	-0.000
+all but 16 and 17 (amino-acid ratio (Bjorkeroth 2020); protein rescaled to 1 g/gDW)	0.381	4.330	35.742	38.797	0.904	0.102	0.055	0.353	0.997	0.306	-0.023	-0.003	0.002	0.000	-0.000	-0.000
+all but 16 and 18 (amino-acid ratio (Bjorkeroth 2020); biomass pseudoreaction H+ balance)	0.379	4.353	35.707	38.774	0.903	0.103	0.057	0.353	0.997	0.309	-0.000	-0.000	0.001	0.000	0.000	0.000
+all but 16 and 19 (amino-acid ratio (Bjorkeroth 2020); biomass NADPH (degree of reduction))	0.381	4.371	35.854	38.363	0.902	0.101	0.055	0.355	0.997	0.277	0.018	-0.032	0.001	-0.000	-0.000	-0.000
+all but 16 and 20 (amino-acid ratio (Bjorkeroth 2020); glycine export allowed)	0.000	11.675	0.000	11.675	0.068	0.279	1.000	0.347	0.283	0.857	7.322	0.548	-0.834	0.000	0.000	0.001
+all but 17 and 18 (protein rescaled to 1 g/gDW; biomass pseudoreaction H+ balance)	0.381	4.330	35.742	38.797	0.903	0.103	0.055	0.353	0.997	0.306	-0.023	-0.003	0.001	0.000	0.000	0.000
+all but 17 and 19 (protein rescaled to 1 g/gDW; biomass NADPH (degree of reduction))	0.382	4.348	35.890	38.384	0.902	0.101	0.052	0.355	0.997	0.278	-0.005	-0.031	0.000	-0.000	0.005	-0.000
+all but 17 and 20 (protein rescaled to 1 g/gDW; glycine export allowed)	0.000	11.675	0.000	11.675	0.067	0.280	1.000	0.347	0.259	0.861	7.322	0.552	-0.835	0.023	0.007	-0.000
+all but 18 and 19 (biomass pseudoreaction H+ balance; biomass NADPH (degree of reduction))	0.381	4.371	35.854	38.363	0.901	0.102	0.055	0.355	0.997	0.277	0.018	-0.032	-0.000	0.000	0.000	0.000
+all but 18 and 20 (biomass pseudoreaction H+ balance; glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.281	1.000	0.347	0.283	0.857	7.322	0.548	-0.836	0.000	0.000	0.000
+all but 19 and 20 (biomass NADPH (degree of reduction); glycine export allowed)	0.000	11.675	0.000	11.675	0.066	0.279	1.000	0.349	0.306	0.854	7.322	0.544	-0.836	-0.018	0.029	-0.000
+all but categories: charge and element balance; biomass equation	0.381	4.332	35.926	38.411	0.902	0.100	0.054	0.366	0.997	0.276	-0.021	-0.033	-0.000			
+all but categories: charge and element balance; mitochondrial and nitrogen metabolism	0.401	0.000	40.542	41.493	0.915	0.100	0.056	0.337	0.961	0.410	-4.352	0.101	0.013			
+all but categories: charge and element balance; reaction directions and cofactors	0.463	0.000	38.900	40.442	0.828	0.132	0.186	0.399	0.974	0.489	-4.353	0.180	-0.074			
+all but categories: charge and element balance; changes of 9.1.2 after 9.1.0	0.381	4.322	35.754	38.804	0.902	0.104	0.054	0.353	0.997	0.301	-0.031	-0.008	0.000			
+all but categories: biomass equation; mitochondrial and nitrogen metabolism	0.402	0.000	40.716	41.068	0.915	0.097	0.058	0.340	0.960	0.435	-4.352	0.125	0.013			
+all but categories: biomass equation; reaction directions and cofactors	0.459	0.000	36.021	38.529	0.832	0.128	0.177	0.399	0.981	0.651	-4.353	0.341	-0.070			
+all but categories: biomass equation; changes of 9.1.2 after 9.1.0	0.382	4.348	35.890	38.384	0.902	0.100	0.052	0.355	0.997	0.277	-0.005	-0.032	0.000			
+all but categories: mitochondrial and nitrogen metabolism; reaction directions and cofactors	0.450	0.000	39.655	40.899	0.847	0.125	0.155	0.390	0.967	0.524	-4.353	0.215	-0.055			
+all but categories: mitochondrial and nitrogen metabolism; changes of 9.1.2 after 9.1.0	0.399	0.000	40.529	41.481	0.913	0.102	0.054	0.337	0.961	0.411	-4.352	0.102	0.012			
+all but categories: reaction directions and cofactors; changes of 9.1.2 after 9.1.0	0.461	0.000	38.810	40.385	0.828	0.132	0.183	0.399	0.974	0.495	-4.353	0.185	-0.074			

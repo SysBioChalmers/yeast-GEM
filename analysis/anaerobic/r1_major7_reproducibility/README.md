@@ -1,0 +1,3 @@
+# R1 major 7: reproducibility and backward compatibility
+
+The anaerobic constraints are defined once, in `data/conditions/anaerobic.yml`, and applied by `applyEnvironment(model,'anaerobic')` in MATLAB and `yeastgem.conditions.apply(model,'anaerobic')` in Python. The check that both give identical bounds and stoichiometry for all environments is `code/python/tests/reference` in this repository, run by the continuous integration. `common/variantModel.m` uses the same function for the updated constraints and `anaerobicModel` for the original ones, so every simulation of this folder uses the released code.

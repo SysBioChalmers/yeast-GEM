@@ -1,0 +1,12 @@
+[Warning: loadYeastModel is deprecated; use loadYeastYaml instead.] 
+[> In loadYeastModel (line 22)
+In loadTaggedModel (line 8)
+In biomassTermVariants (line 11)] 
+Loaded model version: 'yeastGEM_v9.1.1' (checkout)
+form                    growth glycerol  ethanol |  fluxR2 fluxMRE |    grR2   grMRE N-lim aerobic C-lim aerobic C-lim anaerobic N-lim anaerobic
+[Warning: MATLAB has disabled some advanced graphics rendering features by
+switching to software OpenGL. For more information, click <a
+href="matlab:opengl('problems')">here</a>.] 
+NADPH (released)        0.3792    4.353    35.71 |  0.9967  0.3021 |  0.9019  0.1047       0.0315       0.0552       0.0574       0.3527
+removed                 0.3808    4.371    35.85 |  0.9968  0.2746 |  0.9014  0.1019       0.0315       0.0470       0.0549       0.3552
+NADH (as published)     0.4010    3.400    36.52 |  0.9941  0.3052 |  0.8764  0.1078       0.0315       0.0495       0.0563       0.3806

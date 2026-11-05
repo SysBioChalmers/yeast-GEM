@@ -1,6 +1,6 @@
 function [model, spec] = scenarioModel(paths, variant, scenario, optFrac)
 % scenarioModel  Build the constrained model for one (variant, scenario).
-%   variant   see variantModel, e.g. 'v910_new', 'v902_old', 'v911c_new'
+%   variant   see variantModel, e.g. 'vdev_new', 'v902_old', 'v911c_new'
 %   scenario  'sjoberg'             anaerobic batch, glucose 23 (Figure 1)
 %             'bakker_wt'           anaerobic batch, glucose 19.1 (Bakker 2000, Table 5)
 %             'bakker_adh3'         same, adh3 deletion, glucose 12.6

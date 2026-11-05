@@ -1,0 +1,90 @@
+dataset	rxn	name	measured	published	GCV_open	Glt1_open	Gcy1_reversible
+Celton2012	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00
+Celton2012	r_0467	glucose-6-phosphate isomerase	84.70	88.29	86.15	92.59	97.00
+Celton2012	r_0466	glucose 6-phosphate dehydrogenase	11.40	9.04	11.17	4.58	0.00
+Celton2012	r_1049	transketolase 1	5.60	3.01	3.72	1.52	0.00
+Celton2012	r_0959	pyruvate decarboxylase	164.30	156.61	158.47	165.70	175.11
+Celton2012	r_0958	pyruvate carboxylase	4.20	5.60	8.06	5.93	6.13
+Celton2012	r_4783	oxaloacetate/sulphate antiport, mitochondrial	3.40	3.05	2.72	3.24	3.27
+Celton2012	r_0173		2.40	1.16	1.17	1.23	0.64
+Celton2012	r_0113	acetyl-CoA synthetase	0.30	0.00	0.00	0.00	0.00
+Celton2012	r_1761	ethanol exchange	161.90	155.45	160.07	164.47	174.47
+Celton2012	r_1808	glycerol exchange	17.80	18.84	14.77	9.96	0.00
+Celton2012	r_1634	acetate exchange	2.10	0.00	0.00	0.00	0.00
+Celton2012	r_2056	succinate exchange	0.30	0.31	0.31	0.33	0.35
+Celton2012	r_2111	growth	2.25	1.64	1.65	1.74	1.85
+Jouhten2008	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00
+Jouhten2008	r_0467	glucose-6-phosphate isomerase	88.00	88.69	86.62	92.85	97.10
+Jouhten2008	r_0450	fructose-bisphosphate aldolase	91.00	92.82	92.11	94.01	95.20
+Jouhten2008	r_0366	enolase	163.00	168.39	172.95	177.78	188.19
+Jouhten2008	r_0958	pyruvate carboxylase	5.00	5.41	7.78	5.73	5.92
+Jouhten2008	r_0489	glycerol-3-phosphatase	17.00	18.20	14.27	9.62	21.11
+Jouhten2008	r_0466	glucose 6-phosphate dehydrogenase	5.00	8.73	10.78	4.42	0.00
+Jouhten2008	r_1049	transketolase 1	1.00	2.91	3.59	1.47	0.00
+Jouhten2008	r_1048	transaldolase	2.00	2.91	3.59	1.47	0.00
+Jouhten2008	r_0959	pyruvate decarboxylase	148.50	158.10	159.89	166.87	175.96
+Jouhten2008	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	147.00	156.97	157.08	165.68	175.34
+Jouhten2008	r_1761	ethanol exchange	147.00	156.97	161.44	165.68	175.34
+Jouhten2008	r_0173		2.00	1.12	1.13	1.19	0.62
+Jouhten2008	r_1634	acetate exchange	0.00	0.00	0.00	0.00	0.00
+Jouhten2008	r_0962	pyruvate kinase	162.00	167.33	171.88	176.66	186.99
+Jouhten2008	r_4783	oxaloacetate/sulphate antiport, mitochondrial	3.00	2.95	2.62	3.13	3.16
+Jouhten2008	r_0300	citrate synthase	3.00	1.79	1.81	1.90	2.02
+Jouhten2008	r_0113	acetyl-CoA synthetase	4.00	0.00	0.00	0.00	0.00
+Jouhten2008	r_2034	pyruvate transport	8.00	3.33	3.71	3.53	4.55
+Jouhten2008	r_0658	isocitrate dehydrogenase (NAD+)	3.00	1.26	0.00	1.33	1.25
+Jouhten2008	r_2111	growth	1.55	1.58	1.60	1.68	1.78
+Nissen01	r_2111	growth	1.70	1.57	1.59	1.67	1.77
+Nissen01	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00
+Nissen01	r_1672	'carbon dioxide exchange'	163.20	170.00	172.57	174.61	180.07
+Nissen01	r_1761	ethanol exchange	149.10	157.26	161.70	165.91	175.51
+Nissen01	r_1808	glycerol exchange	17.20	18.07	14.17	9.55	0.00
+Nissen01	r_2056	succinate exchange	0.45	0.29	0.30	0.31	0.33
+Nissen02	r_2111	growth	1.77	1.62	1.64	1.72	1.82
+Nissen02	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00
+Nissen02	r_1672	'carbon dioxide exchange'	163.80	169.08	171.74	173.84	179.47
+Nissen02	r_1761	ethanol exchange	148.80	155.96	160.53	164.88	174.76
+Nissen02	r_1808	glycerol exchange	18.20	18.62	14.60	9.84	0.00
+Nissen02	r_2056	succinate exchange	0.45	0.30	0.31	0.32	0.34
+Nissen03	r_2111	growth	1.79	1.64	1.65	1.74	1.84
+Nissen03	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00
+Nissen03	r_1672	'carbon dioxide exchange'	160.20	168.76	171.45	173.56	179.25
+Nissen03	r_1761	ethanol exchange	148.20	155.51	160.12	164.51	174.50
+Nissen03	r_1808	glycerol exchange	19.00	18.82	14.75	9.95	0.00
+Nissen03	r_2056	succinate exchange	0.30	0.31	0.31	0.33	0.35
+Nissen04	r_2111	growth	1.80	1.65	1.66	1.75	1.85
+Nissen04	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00
+Nissen04	r_1672	'carbon dioxide exchange'	156.60	168.60	171.30	173.43	179.15
+Nissen04	r_1761	ethanol exchange	149.10	155.27	159.92	164.33	174.37
+Nissen04	r_1808	glycerol exchange	21.80	18.91	14.83	10.00	0.00
+Nissen04	r_2056	succinate exchange	0.30	0.31	0.31	0.33	0.35
+Wasylenko2014	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00
+Wasylenko2014	r_2111	growth	1.70	1.63	1.64	1.73	1.83
+Wasylenko2014	r_0466	glucose 6-phosphate dehydrogenase	5.04	8.99	11.09	4.55	0.00
+Wasylenko2014	r_0467	glucose-6-phosphate isomerase	92.07	88.37	86.24	92.64	97.02
+Wasylenko2014	r_0886	phosphofructokinase	93.55	92.62	91.88	93.84	95.07
+Wasylenko2014	r_0984	ribulose 5-phosphate 3-epimerase	2.82	5.44	6.84	2.45	0.62
+Wasylenko2014	r_0982	ribose-5-phosphate isomerase	2.22	3.55	4.25	2.10	0.62
+Wasylenko2014	r_0450	fructose-bisphosphate aldolase	93.55	92.62	91.88	93.84	95.07
+Wasylenko2014	r_0491	glycerol-3-phosphate dehydrogenase (NAD)	22.16	15.81	10.31	6.82	21.85
+Wasylenko2014	r_0489	glycerol-3-phosphatase	22.09	18.72	14.68	9.90	21.72
+Wasylenko2014	r_0486	glyceraldehyde-3-phosphate dehydrogenase	166.20	168.91	172.18	178.66	189.46
+Wasylenko2014	r_0917	phosphoserine phosphatase (L-serine)	0.52	1.43	0.00	1.52	1.61
+Wasylenko2014	r_0502	glycine hydroxymethyltransferase	0.52	0.77	0.77	0.81	0.86
+Wasylenko2014	r_1040	threonine aldolase	1.04	0.00	2.76	0.00	0.00
+Wasylenko2014	r_0366	enolase	165.68	167.48	172.18	177.14	187.85
+Wasylenko2014	r_0962	pyruvate kinase	164.79	166.39	171.07	175.99	186.62
+Wasylenko2014	r_0959	pyruvate decarboxylase	157.45	156.89	158.74	165.92	175.27
+Wasylenko2014	r_0958	pyruvate carboxylase	5.71	5.56	8.01	5.90	6.09
+Wasylenko2014	r_2034	pyruvate transport	1.48	3.43	3.82	3.63	4.69
+Wasylenko2014	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	153.00	155.74	160.33	164.70	170.58
+Wasylenko2014	r_0173		5.49	1.16	1.17	1.22	0.64
+Wasylenko2014	r_0113	acetyl-CoA synthetase	3.19	0.00	0.00	0.00	0.00
+Wasylenko2014	r_1634	acetate exchange	2.30	0.00	0.00	0.00	0.00
+Wasylenko2014	r_4783	oxaloacetate/sulphate antiport, mitochondrial	2.37	3.03	2.70	3.22	3.25
+Wasylenko2014	r_0718	malic enzyme (NAD)	1.33	1.29	0.94	1.37	0.00
+Wasylenko2014	r_0713	malate dehydrogenase	0.67	1.19	0.84	1.26	1.17
+Wasylenko2014	r_0451	fumarase	0.74	0.00	0.00	0.00	0.00
+Wasylenko2014	r_0658	isocitrate dehydrogenase (NAD+)	1.70	0.00	0.00	0.00	1.29
+Wasylenko2014	r_0300	citrate synthase	1.70	1.85	1.86	1.96	2.08
+Wasylenko2014	r_0252	carnitine O-acetyltransferase	2.22	0.00	0.00	0.00	0.00

@@ -1,7 +1,7 @@
 function runSampling(variant, scenario, nSamples, cap, seed, optFrac)
 % runSampling  Sample one (variant, scenario) with RHMC, remove cycles, save.
-%   runSampling('v910_new', 'sjoberg', 1000, 200, 1)
-%   runSampling('v910_new', 'sjoberg', 1000, 200, 1, 0.99)   % sensitivity case
+%   runSampling('vdev_new', 'sjoberg', 1000, 200, 1)
+%   runSampling('vdev_new', 'sjoberg', 1000, 200, 1, 0.99)   % sensitivity case
 %
 %   Writes results/sampling/<variant>__<scenario>.mat with the raw samples X,
 %   the cycle-free samples W, the per-reaction mixing diagnostics, the pFBA

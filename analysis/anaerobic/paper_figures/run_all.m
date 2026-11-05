@@ -9,14 +9,15 @@ function run_all()
 %   release is a yeast-GEM tag, or a variant added to loadTaggedModel for an
 %   unreleased model.
 
-four = {'v910_new','v910_old','v902_new','v902_old'};
+setupStudy('3.0.0-rc1');
+four = {'vdev_new','vdev_old','v902_new','v902_old'};
 
 % R1 major 3: 2x2, undone components, opened constraints, curation replay
-reproVariants(four, 'repro_3.0.0-rc1');
-undone = {'undoTetraenol','undoMdh2','undoIdp2','undoAA','oldGAM','oldCofactor','mdh1old'};
-reproVariants([four, strcat('v910_new+', undone)], 'function_ablation');
-reproVariants({'v910_new','v910_new+gcvopen','v910_new+glt1open','v910_new+gcy1rev'}, 'sectionB');
-curationAblation('curation_ablation_fine', true);
+reproVariants(four, 'repro');
+undone = {'undoTetraenol','undoMdh2','undoIdp2','undoAA','oldGAM','oldCofactor','mdh1old','fadh2x0'};
+reproVariants([four, strcat('vdev_new+', undone)], 'function_ablation');
+reproVariants({'vdev_new','vdev_new+gcvopen','vdev_new+glt1open','vdev_new+gcy1rev'}, 'sectionB');
+curationAblation('curation_ablation', 'categories');
 biomassTermVariants();
 
 % R1 major 5 and R2 major 3: FVA on the optimal face and in the 1% band

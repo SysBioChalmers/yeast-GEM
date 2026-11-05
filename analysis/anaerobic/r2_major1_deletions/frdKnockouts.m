@@ -3,6 +3,7 @@ function frdKnockouts()
 %   v9.1.1 with the new anaerobic constraints; frd1 osm1 cannot grow
 %   anaerobically, single mutants can (Arikawa et al. 1998).
 paths = setupStudy('3.0.0-rc1');
+log = startLog(paths, 'frdKnockouts'); %#ok<NASGU>
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));
 an = variantModel(paths, 'v911_new');
 for ko = {{}, {'YEL047C'}, {'YJR051W'}, {'YEL047C','YJR051W'}}

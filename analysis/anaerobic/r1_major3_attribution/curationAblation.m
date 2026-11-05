@@ -1,14 +1,23 @@
-function curationAblation(outName, fine)
+function curationAblation(outName, mode, only)
 % curationAblation  Which part of the 9.0.2 -> 9.1.0 curation changes the
 %   anaerobic predictions? Replays code/modelCuration/v9_1_0.m section by
 %   section on yeast-GEM 9.0.2: cumulatively (sections 1..k) and leaving one
 %   section out. Every model gets the updated anaerobic constraints (9.1.0
 %   applyEnvironment(model,'anaerobic')) and the manuscript benchmarks: Sjoberg batch (Figure 1),
 %   anaerobic fluxomics (Figure 3C-D) and chemostat growth (Figure 3A-B).
-%   Writes results/<outName>.tsv.
+%   mode 'sections' (default) also gives the cumulative models; 'fine' splits
+%   sections 7 and 9 and leaves out one at a time; 'categories' adds the leave-out
+%   and add-in of groups of sections (the categories of the reviewer comment) and
+%   the changes of 9.1.2 after 9.1.0 (thiamine, fumarate reductases, TYR1 and the acetate transport and ribonucleotide reductase reactions of #389), which
+%   are applied from the checkout model on top of the replay.
+%   mode 'pairs' leaves out every two sections (190 models) and every two categories (10 models).
+%   only: indices of the models to compute (for parallel jobs); the file is then
+%   results/<outName>_<index>.tsv. Writes results/<outName>.tsv.
 
 if nargin < 1, outName = 'curation_ablation'; end
-if nargin < 2, fine = false; end
+if nargin < 2, mode = 'sections'; end
+if nargin < 3, only = []; end
+fine = ismember(mode, {'fine','categories','pairs'});
 paths = setupStudy('3.0.0-rc1');
 scriptFile = fullfile(paths.yeast,'code','modelCuration','v9_1_0.m');
 L = splitlines(fileread(scriptFile));
@@ -53,21 +62,57 @@ assert(contains(L{389},'%% ====') && contains(L{16},'%% ===='), 'v9_1_0.m line l
 base902 = loadTaggedModel(paths.yeast,'9.0.2');
 ref910  = loadTaggedModel(paths.yeast,'9.1.0');
 n = size(S,1);
-sets = {'9.0.2 (no section)', []};
+final = [];
+GROUPS = struct('thiamine', {{'r_1603','r_4788'}}, 'fumarate', {{'r_0454','r_0455','r_1000','r_4264'}}, 'tyr1', {{'r_0939'}}, ...
+    'acetate_rnr', {{'r_4785','r_4786','r_4787'}});   % last: mitochondrial acetate transport and ribonucleotide reductase (#389)
+allGroups = fieldnames(GROUPS)';
+cats = {'charge and element balance', [3 12]
+        'biomass equation', [16 17 18 19]
+        'mitochondrial and nitrogen metabolism', [1 5 13 14 15 20]
+        'reaction directions and cofactors', [2 4 6 7 8 9 10 11]};
+if ismember(mode, {'categories','pairs'}), final = loadTaggedModel(paths.yeast, 'dev'); end
+sets = {'9.0.2 (no section)', [], {}};
+if strcmp(mode, 'pairs'), sets = cell(0,3); end
 if ~fine
-    for k = 1:n, sets(end+1,:) = {sprintf('cumulative 1-%d (+ %s)',k,S{k,1}), 1:k}; end %#ok<AGROW>
+    for k = 1:n, sets(end+1,:) = {sprintf('cumulative 1-%d (+ %s)',k,S{k,1}), 1:k, {}}; end %#ok<AGROW>
 end
-sets(end+1,:) = {'all sections', 1:n};
-for k = 1:n, sets(end+1,:) = {sprintf('all but %d (%s)',k,S{k,1}), setdiff(1:n,k)}; end %#ok<AGROW>
-sets(end+1,:) = {'released 9.1.0', 'ref'};
+grp = {}; if ismember(mode, {'categories','pairs'}), grp = allGroups; end
+sets(end+1,:) = {'all sections', 1:n, grp};
+for k = 1:n, sets(end+1,:) = {sprintf('all but %d (%s)',k,S{k,1}), setdiff(1:n,k), grp}; end %#ok<AGROW>
+if strcmp(mode, 'categories')
+    assert(n == 20, 'category indices assume the 20 sections of the fine split');
+    for c = 1:size(cats,1)
+        sets(end+1,:) = {['all but category: ' cats{c,1}], setdiff(1:n, cats{c,2}), grp}; %#ok<AGROW>
+        sets(end+1,:) = {['only category: ' cats{c,1}], cats{c,2}, {}}; %#ok<AGROW>
+    end
+    sets(end+1,:) = {'all but category: changes of 9.1.2 after 9.1.0', 1:n, {}};
+    sets(end+1,:) = {'only category: changes of 9.1.2 after 9.1.0', [], allGroups};
+    for g = allGroups, sets(end+1,:) = {['all but 9.1.2 change: ' g{1}], 1:n, setdiff(allGroups, g)}; end %#ok<AGROW>
+    sets(end+1,:) = {'checkout (9.1.2)', 'dev', {}};
+end
+if strcmp(mode, 'pairs')   % every two sections, and every two categories, left out together
+    assert(n == 20, 'category indices assume the 20 sections of the fine split');
+    sets = cell(0,3);
+    for i = 1:n-1, for j = i+1:n
+        sets(end+1,:) = {sprintf('all but %d and %d (%s; %s)', i, j, S{i,1}, S{j,1}), setdiff(1:n,[i j]), allGroups}; end, end %#ok<AGROW>
+    cats(end+1,:) = {'changes of 9.1.2 after 9.1.0', []};
+    for a = 1:size(cats,1)-1, for b = a+1:size(cats,1)
+        gr = allGroups; if b == size(cats,1), gr = {}; end
+        sets(end+1,:) = {['all but categories: ' cats{a,1} '; ' cats{b,1}], setdiff(1:n,[cats{a,2} cats{b,2}]), gr}; end, end %#ok<AGROW>
+else
+    sets(end+1,:) = {'released 9.1.0', 'ref', {}};
+end
+if isempty(only), only = 1:size(sets,1); end
 
 T = table();
-for s = 1:size(sets,1)
+for s = only
     name = sets{s,1};
     if ischar(sets{s,2})
-        model = ref910; ok = true; msg = '';
+        if strcmp(sets{s,2}, 'dev'), model = final; else, model = ref910; end
+        ok = true; msg = '';
     else
         [model, ok, msg] = replay(base902, code(sets{s,2}), paths);
+        for g = sets{s,3}, model = copyReactions(model, final, GROUPS.(g{1})); end
     end
     row = table({name}, ok, {msg}, 'VariableNames', {'set','ok','error'});
     vals = nan(1,10);
@@ -83,6 +128,7 @@ for s = 1:size(sets,1)
     T = [T; row]; %#ok<AGROW>
     fprintf('%-60s glycerol %.3f  flux MRE %.4f  growth R2 %.4f\n', name, vals(2), vals(6), vals(7));
 end
+if numel(only) < size(sets,1), outName = sprintf('%s_%d', outName, only(1)); end
 writetable(T, fullfile(paths.results,[outName '.tsv']), 'FileType','text','Delimiter','\t');
 end
 
@@ -112,4 +158,35 @@ obs = double(e(:,4)); pred = m(:,4);
 R2g = 1 - sum((obs-pred).^2)/sum((obs-mean(obs)).^2);
 rel = abs(pred-obs)./obs;
 vals = [sim(4) sim(1) sim(2) sim(3) R2f mref R2g mean(rel) mean(rel(21:26)) mean(rel(27:32))];
+end
+
+function model = copyReactions(model, final, ids)
+% Reactions of the checkout model (9.1.2) put into the replayed model: the
+% stoichiometry and bounds of existing reactions are replaced, new reactions
+% and metabolites are added, and reactions that the checkout model lacks are removed.
+for id = ids
+    fj = find(strcmp(final.rxns, id{1}));
+    if isempty(fj)   % removed in the checkout model
+        model = removeReactions(model, id{1}, true);
+        continue
+    end
+    fi = find(final.S(:, fj));
+    metIds = final.mets(fi); coef = full(final.S(fi, fj));
+    missing = ~ismember(metIds, model.mets);
+    if any(missing)
+        add.mets = metIds(missing); add.metNames = final.metNames(fi(missing));
+        add.compartments = final.comps(final.metComps(fi(missing)));
+        model = addMets(model, add);
+    end
+    mj = find(strcmp(model.rxns, id{1}));
+    if isempty(mj)
+        r.rxns = id; r.rxnNames = final.rxnNames(fj); r.mets = {metIds'}; r.stoichCoeffs = {coef'};
+        r.lb = final.lb(fj); r.ub = final.ub(fj);
+        model = addRxns(model, r);
+    else
+        [~, loc] = ismember(metIds, model.mets);
+        model.S(:, mj) = 0; model.S(loc, mj) = coef;
+        model.lb(mj) = final.lb(fj); model.ub(mj) = final.ub(fj);
+    end
+end
 end

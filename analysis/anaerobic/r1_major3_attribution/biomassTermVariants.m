@@ -1,13 +1,14 @@
 function biomassTermVariants()
-% biomassTermVariants  The 3 mmol/gDW reducing-equivalent term of the 9.1.0 biomass
+% biomassTermVariants  The 3 mmol/gDW reducing-equivalent term of the 9.1.2 biomass
 %   reaction r_4041 in three forms: NADPH (as released), removed, NADH (as the
 %   manuscript and Sjoberg 2024 describe it). Per form: Sjoberg batch (glucose 23)
 %   growth, glycerol and ethanol; anaerobic 13C flux benchmark (R2, mean relative
 %   error); growth benchmark (R2, mean relative error, per group).
 
 paths = setupStudy('3.0.0-rc1');
+log = startLog(paths, 'biomassTermVariants'); %#ok<NASGU>
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));
-base = loadTaggedModel(paths.yeast, '9.1.0');
+base = loadTaggedModel(paths.yeast, 'dev');
 bio = strcmp(base.rxns, 'r_4041');
 ix = @(ids) cellfun(@(s) find(strcmp(base.mets, s)), ids);
 nadph = ix({'s_1212','s_1207','s_0794'});     % NADPH[c], NADP[c], H+[c]

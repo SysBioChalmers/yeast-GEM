@@ -1,0 +1,5 @@
+variant	n_fluxes	n_large	MRE_large	n_small	MRE_small	largest_absolute_deviations
+vdev_new	83	26	0.036	39	0.549	Nissen04 r_1672 +12.0; Jouhten2008 r_2115 +10.0; Jouhten2008 r_1761 +10.0
+vdev_old	83	26	0.032	39	0.730	Celton2012 r_0959 -17.6; Celton2012 r_1761 -16.6; Wasylenko2014 r_0959 -10.7
+v902_new	80	26	0.118	36	0.807	Jouhten2008 r_1761 +27.7; Jouhten2008 r_2115 +27.6; Nissen01 r_1761 +25.8
+v902_old	80	26	0.025	36	0.880	Celton2012 r_0959 -12.9; Celton2012 r_1761 -12.7; Wasylenko2014 r_0491 -8.0

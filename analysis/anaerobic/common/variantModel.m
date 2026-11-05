@@ -1,6 +1,6 @@
 function [modelAn, base, anaerobicFn, post] = variantModel(paths, variant)
 % variantModel  Model for a variant name '<release>_<constraints>'.
-%   release      v902, v910, v911, ... (yeast-GEM tag)
+%   release      v902, vdev, ... (yeast-GEM tag), or vdev (the checkout: yeast-GEM 9.1.2, develop with #423 and #426 merged)
 %   constraints  'new' (applyEnvironment(model,'anaerobic')) or 'old' (the
 %                constraints before 9.1.0, anaerobicModel of this checkout)
 %   Returns the anaerobic model, the aerobic base model, the anaerobic function and the step applied after it; the
@@ -8,17 +8,20 @@ function [modelAn, base, anaerobicFn, post] = variantModel(paths, variant)
 %   and post is passed to it.
 %   Needs the current folder to be code/otherChanges (anaerobicModel).
 %   Optional '+<modifier>' suffixes add a step after the anaerobic function
-%   (see modifierStep), e.g. 'v910_new+mdh1old'.
+%   (see modifierStep), e.g. 'vdev_new+mdh1old'.
 
 parts = strsplit(variant, '+');
-tok = regexp(parts{1}, '^v(\d)(\d)(\d)_(new|old)$', 'tokens', 'once');
+tok = regexp(parts{1}, '^v(dev|\d\d\d)_(new|old)$', 'tokens', 'once');
 assert(~isempty(tok), 'Unknown variant %s', variant);
-base = loadTaggedModel(paths.yeast, sprintf('%s.%s.%s', tok{1:3}));
+base = loadTaggedModel(paths.yeast, regexprep(tok{1}, '^(\d)(\d)(\d)$', '$1.$2.$3'));
 post = @(m) m;
+if strcmp(tok{1}, 'dev') && strcmp(tok{2}, 'old')
+    post = @openThiamine;   % the curated model needs thiamine uptake under anaerobic conditions
+end
 for k = 2:numel(parts)
     post = @(m) modifierStep(post(m), parts{k});
 end
-if strcmp(tok{4}, 'new'), anaerobicFn = @(m) applyEnvironment(m, 'anaerobic'); else, anaerobicFn = @anaerobicModel; end
+if strcmp(tok{2}, 'new'), anaerobicFn = @(m) applyEnvironment(m, 'anaerobic'); else, anaerobicFn = @anaerobicModel; end
 modelAn = post(anaerobicFn(base));
 end
 
@@ -66,4 +69,10 @@ switch name
     otherwise
         error('Unknown modifier %s', name);
 end
+end
+
+function model = openThiamine(model)
+% Thiamine uptake, as in data/conditions/anaerobic.yml: the original constraints
+% do not provide it, and the oxygen-dependent HMP-P synthase is blocked anaerobically.
+model.lb(strcmp(model.rxns, 'r_2067')) = -1000;
 end

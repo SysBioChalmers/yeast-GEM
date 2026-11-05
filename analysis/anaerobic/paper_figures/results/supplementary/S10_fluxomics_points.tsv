@@ -1,0 +1,355 @@
+model	dataset	rxn	name	measured	pFBA	sampled_2.5%	sampled_median	sampled_97.5%	glucose_point
+Yeast9.1.2, updated constraints	Celton2012	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, updated constraints	Celton2012	r_0467	glucose-6-phosphate isomerase	84.70	88.29	88.29	88.29	88.29	0
+Yeast9.1.2, updated constraints	Celton2012	r_0466	glucose 6-phosphate dehydrogenase	11.40	9.04	9.04	9.04	9.04	0
+Yeast9.1.2, updated constraints	Celton2012	r_1049	transketolase 1	5.60	3.01	3.01	3.01	3.01	0
+Yeast9.1.2, updated constraints	Celton2012	r_0959	pyruvate decarboxylase	164.30	156.61	156.61	156.61	156.61	0
+Yeast9.1.2, updated constraints	Celton2012	r_0958	pyruvate carboxylase	4.20	5.60	5.61	5.73	5.95	0
+Yeast9.1.2, updated constraints	Celton2012	r_4783	oxaloacetate/sulphate antiport, mitochondrial	3.40	3.05	3.06	3.18	3.41	0
+Yeast9.1.2, updated constraints	Celton2012	r_0173		2.40	1.16	1.16	1.16	1.16	0
+Yeast9.1.2, updated constraints	Celton2012	r_0113	acetyl-CoA synthetase	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Celton2012	r_1761	ethanol exchange	161.90	155.45	155.45	155.45	155.45	0
+Yeast9.1.2, updated constraints	Celton2012	r_1808	glycerol exchange	17.80	18.84	18.84	18.84	18.84	0
+Yeast9.1.2, updated constraints	Celton2012	r_1634	acetate exchange	2.10	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Celton2012	r_2056	succinate exchange	0.30	0.31	0.31	0.31	0.31	0
+Yeast9.1.2, updated constraints	Celton2012	r_2111	growth	2.25	1.64	1.64	1.64	1.64	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, updated constraints	Jouhten2008	r_0467	glucose-6-phosphate isomerase	88.00	88.69	88.69	88.69	88.69	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0450	fructose-bisphosphate aldolase	91.00	92.82	92.82	92.82	92.82	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0366	enolase	163.00	168.39	168.39	168.39	168.39	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0958	pyruvate carboxylase	5.00	5.41	5.41	5.54	5.75	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0489	glycerol-3-phosphatase	17.00	18.20	18.19	18.19	18.19	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0466	glucose 6-phosphate dehydrogenase	5.00	8.73	8.73	8.73	8.73	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_1049	transketolase 1	1.00	2.91	2.91	2.91	2.91	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_1048	transaldolase	2.00	2.91	2.91	2.91	2.91	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0959	pyruvate decarboxylase	148.50	158.10	158.10	158.10	158.10	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	147.00	156.97	154.15	155.55	156.90	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_1761	ethanol exchange	147.00	156.97	156.97	156.97	156.97	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0173		2.00	1.12	1.12	1.12	1.12	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_1634	acetate exchange	0.00	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0962	pyruvate kinase	162.00	167.33	167.33	167.33	167.33	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0958	pyruvate carboxylase	5.00	5.41	5.41	5.54	5.75	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_4783	oxaloacetate/sulphate antiport, mitochondrial	3.00	2.95	2.96	3.08	3.29	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0300	citrate synthase	3.00	1.79	1.79	1.79	1.79	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0113	acetyl-CoA synthetase	4.00	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_2034	pyruvate transport	8.00	3.33	0.09	1.54	3.14	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_0658	isocitrate dehydrogenase (NAD+)	3.00	0.00	0.03	0.65	1.39	0
+Yeast9.1.2, updated constraints	Jouhten2008	r_2111	growth	1.55	1.58	1.58	1.58	1.58	0
+Yeast9.1.2, updated constraints	Nissen01	r_2111	growth	1.70	1.57	1.57	1.57	1.57	0
+Yeast9.1.2, updated constraints	Nissen01	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, updated constraints	Nissen01	r_1672	'carbon dioxide exchange'	163.20	170.00	170.00	170.00	170.00	0
+Yeast9.1.2, updated constraints	Nissen01	r_1761	ethanol exchange	149.10	157.26	157.26	157.26	157.26	0
+Yeast9.1.2, updated constraints	Nissen01	r_1808	glycerol exchange	17.20	18.07	18.07	18.07	18.07	0
+Yeast9.1.2, updated constraints	Nissen01	r_2056	succinate exchange	0.45	0.29	0.29	0.29	0.29	0
+Yeast9.1.2, updated constraints	Nissen02	r_2111	growth	1.77	1.62	1.62	1.62	1.62	0
+Yeast9.1.2, updated constraints	Nissen02	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, updated constraints	Nissen02	r_1672	'carbon dioxide exchange'	163.80	169.08	169.08	169.08	169.08	0
+Yeast9.1.2, updated constraints	Nissen02	r_1761	ethanol exchange	148.80	155.96	155.96	155.96	155.96	0
+Yeast9.1.2, updated constraints	Nissen02	r_1808	glycerol exchange	18.20	18.62	18.62	18.62	18.62	0
+Yeast9.1.2, updated constraints	Nissen02	r_2056	succinate exchange	0.45	0.30	0.30	0.30	0.30	0
+Yeast9.1.2, updated constraints	Nissen03	r_2111	growth	1.79	1.64	1.64	1.64	1.64	0
+Yeast9.1.2, updated constraints	Nissen03	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, updated constraints	Nissen03	r_1672	'carbon dioxide exchange'	160.20	168.76	168.76	168.76	168.76	0
+Yeast9.1.2, updated constraints	Nissen03	r_1761	ethanol exchange	148.20	155.51	155.51	155.51	155.51	0
+Yeast9.1.2, updated constraints	Nissen03	r_1808	glycerol exchange	19.00	18.82	18.82	18.82	18.82	0
+Yeast9.1.2, updated constraints	Nissen03	r_2056	succinate exchange	0.30	0.31	0.31	0.31	0.31	0
+Yeast9.1.2, updated constraints	Nissen04	r_2111	growth	1.80	1.65	1.65	1.65	1.65	0
+Yeast9.1.2, updated constraints	Nissen04	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, updated constraints	Nissen04	r_1672	'carbon dioxide exchange'	156.60	168.60	168.60	168.60	168.60	0
+Yeast9.1.2, updated constraints	Nissen04	r_1761	ethanol exchange	149.10	155.27	155.27	155.27	155.27	0
+Yeast9.1.2, updated constraints	Nissen04	r_1808	glycerol exchange	21.80	18.91	18.91	18.91	18.91	0
+Yeast9.1.2, updated constraints	Nissen04	r_2056	succinate exchange	0.30	0.31	0.31	0.31	0.31	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, updated constraints	Wasylenko2014	r_2111	growth	1.70	1.63	1.63	1.63	1.63	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0466	glucose 6-phosphate dehydrogenase	5.04	8.99	8.98	8.98	8.98	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0467	glucose-6-phosphate isomerase	92.07	88.37	88.37	88.37	88.37	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0886	phosphofructokinase	93.55	92.62	92.62	92.62	92.62	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0984	ribulose 5-phosphate 3-epimerase	2.82	5.44	5.44	5.44	5.44	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0982	ribose-5-phosphate isomerase	2.22	3.55	3.55	3.55	3.55	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0450	fructose-bisphosphate aldolase	93.55	92.62	92.62	92.62	92.62	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0491	glycerol-3-phosphate dehydrogenase (NAD)	22.16	15.81	15.92	17.31	18.76	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0489	glycerol-3-phosphatase	22.09	18.72	18.72	18.72	18.72	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0486	glyceraldehyde-3-phosphate dehydrogenase	166.20	168.91	168.91	168.91	168.91	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0917	phosphoserine phosphatase (L-serine)	0.52	1.43	1.43	1.43	1.43	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0502	glycine hydroxymethyltransferase	0.52	0.77	0.77	0.77	0.77	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_1040	threonine aldolase	1.04	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0366	enolase	165.68	167.48	167.48	167.48	167.48	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0962	pyruvate kinase	164.79	166.39	166.39	166.39	166.39	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0959	pyruvate decarboxylase	157.45	156.89	156.89	156.89	156.89	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0958	pyruvate carboxylase	5.71	5.56	5.57	5.69	5.92	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_2034	pyruvate transport	1.48	3.43	0.07	1.63	3.22	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	153.00	155.74	152.79	154.24	155.63	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0173		5.49	1.16	1.16	1.16	1.16	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0113	acetyl-CoA synthetase	3.19	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_1634	acetate exchange	2.30	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_4783	oxaloacetate/sulphate antiport, mitochondrial	2.37	3.03	3.04	3.16	3.39	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0718	malic enzyme (NAD)	1.33	1.29	0.03	0.70	1.45	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0713	malate dehydrogenase	0.67	1.19	1.19	1.32	1.54	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0451	fumarase	0.74	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0658	isocitrate dehydrogenase (NAD+)	1.70	0.00	0.03	0.73	1.45	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0300	citrate synthase	1.70	1.85	1.85	1.85	1.85	0
+Yeast9.1.2, updated constraints	Wasylenko2014	r_0252	carnitine O-acetyltransferase	2.22	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_0467	glucose-6-phosphate isomerase	84.70	85.57	85.57	85.57	85.57	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_0466	glucose 6-phosphate dehydrogenase	11.40	11.07	11.07	11.07	11.07	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_1049	transketolase 1	5.60	3.69	3.69	3.69	3.69	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_0959	pyruvate decarboxylase	164.30	146.74	146.74	146.74	146.74	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_0958	pyruvate carboxylase	4.20	6.84	6.00	6.36	6.72	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_4783	oxaloacetate/sulphate antiport, mitochondrial	3.40	2.31	2.31	2.31	2.31	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_0173		2.40	1.45	1.45	1.45	1.45	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_0113	acetyl-CoA synthetase	0.30	0.00	0.18	0.72	1.26	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_1761	ethanol exchange	161.90	145.30	145.30	145.30	145.30	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_1808	glycerol exchange	17.80	22.99	22.99	22.99	22.99	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_1634	acetate exchange	2.10	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_2056	succinate exchange	0.30	0.22	0.22	0.22	0.22	0
+Yeast9.1.2, original constraints plus thiamine uptake	Celton2012	r_2111	growth	2.25	2.05	2.05	2.05	2.05	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0467	glucose-6-phosphate isomerase	88.00	85.57	85.57	85.57	85.57	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0450	fructose-bisphosphate aldolase	91.00	90.78	90.78	90.78	90.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0366	enolase	163.00	159.78	159.78	159.78	159.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0958	pyruvate carboxylase	5.00	6.84	6.01	6.37	6.74	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0489	glycerol-3-phosphatase	17.00	22.99	22.99	22.99	22.99	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0466	glucose 6-phosphate dehydrogenase	5.00	11.07	11.07	11.07	11.07	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_1049	transketolase 1	1.00	3.69	3.69	3.69	3.69	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_1048	transaldolase	2.00	3.69	3.69	3.69	3.69	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0959	pyruvate decarboxylase	148.50	146.74	146.74	146.74	146.74	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	147.00	145.30	141.73	143.43	145.19	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_1761	ethanol exchange	147.00	145.30	145.30	145.30	145.30	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0173		2.00	1.45	1.45	1.45	1.45	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_1634	acetate exchange	0.00	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0962	pyruvate kinase	162.00	158.45	158.45	158.45	158.45	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0958	pyruvate carboxylase	5.00	6.84	6.01	6.37	6.74	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_4783	oxaloacetate/sulphate antiport, mitochondrial	3.00	2.31	2.31	2.31	2.31	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0300	citrate synthase	3.00	2.31	2.31	2.31	2.31	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0113	acetyl-CoA synthetase	4.00	0.00	0.15	0.70	1.26	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_2034	pyruvate transport	8.00	4.24	0.08	2.40	4.64	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_0658	isocitrate dehydrogenase (NAD+)	3.00	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Jouhten2008	r_2111	growth	1.55	2.05	2.05	2.05	2.05	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen01	r_2111	growth	1.70	2.05	2.05	2.05	2.05	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen01	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen01	r_1672	'carbon dioxide exchange'	163.20	161.78	161.78	161.78	161.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen01	r_1761	ethanol exchange	149.10	145.30	145.30	145.30	145.30	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen01	r_1808	glycerol exchange	17.20	22.99	22.99	22.99	22.99	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen01	r_2056	succinate exchange	0.45	0.22	0.22	0.22	0.22	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen02	r_2111	growth	1.77	2.05	2.05	2.05	2.05	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen02	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen02	r_1672	'carbon dioxide exchange'	163.80	161.78	161.78	161.78	161.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen02	r_1761	ethanol exchange	148.80	145.30	145.30	145.30	145.30	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen02	r_1808	glycerol exchange	18.20	22.99	22.99	22.99	22.99	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen02	r_2056	succinate exchange	0.45	0.22	0.22	0.22	0.22	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen03	r_2111	growth	1.79	2.05	2.05	2.05	2.05	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen03	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen03	r_1672	'carbon dioxide exchange'	160.20	161.78	161.78	161.78	161.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen03	r_1761	ethanol exchange	148.20	145.30	145.30	145.30	145.30	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen03	r_1808	glycerol exchange	19.00	22.99	22.99	22.99	22.99	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen03	r_2056	succinate exchange	0.30	0.22	0.22	0.22	0.22	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen04	r_2111	growth	1.80	2.05	2.05	2.05	2.05	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen04	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen04	r_1672	'carbon dioxide exchange'	156.60	161.78	161.78	161.78	161.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen04	r_1761	ethanol exchange	149.10	145.30	145.30	145.30	145.30	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen04	r_1808	glycerol exchange	21.80	22.99	22.99	22.99	22.99	0
+Yeast9.1.2, original constraints plus thiamine uptake	Nissen04	r_2056	succinate exchange	0.30	0.22	0.22	0.22	0.22	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_2111	growth	1.70	2.05	2.05	2.05	2.05	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0466	glucose 6-phosphate dehydrogenase	5.04	11.07	11.07	11.07	11.07	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0467	glucose-6-phosphate isomerase	92.07	85.57	85.57	85.57	85.57	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0886	phosphofructokinase	93.55	90.78	90.78	90.78	90.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0984	ribulose 5-phosphate 3-epimerase	2.82	6.71	6.71	6.71	6.71	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0982	ribose-5-phosphate isomerase	2.22	4.35	4.35	4.35	4.35	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0450	fructose-bisphosphate aldolase	93.55	90.78	90.78	90.78	90.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0491	glycerol-3-phosphate dehydrogenase (NAD)	22.16	19.48	19.58	21.29	23.03	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0489	glycerol-3-phosphatase	22.09	22.99	22.99	22.99	22.99	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0486	glyceraldehyde-3-phosphate dehydrogenase	166.20	161.54	161.54	161.54	161.54	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0917	phosphoserine phosphatase (L-serine)	0.52	1.76	1.76	1.76	1.76	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0502	glycine hydroxymethyltransferase	0.52	0.94	0.94	0.94	0.94	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_1040	threonine aldolase	1.04	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0366	enolase	165.68	159.78	159.78	159.78	159.78	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0962	pyruvate kinase	164.79	158.45	158.45	158.45	158.45	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0959	pyruvate decarboxylase	157.45	146.74	146.74	146.74	146.74	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0958	pyruvate carboxylase	5.71	6.84	6.00	6.37	6.74	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_2034	pyruvate transport	1.48	4.24	0.09	2.47	4.64	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	153.00	145.30	141.74	143.48	145.20	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0173		5.49	1.45	1.45	1.45	1.45	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0113	acetyl-CoA synthetase	3.19	0.00	0.15	0.71	1.27	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_1634	acetate exchange	2.30	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_4783	oxaloacetate/sulphate antiport, mitochondrial	2.37	2.31	2.31	2.31	2.31	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0718	malic enzyme (NAD)	1.33	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0713	malate dehydrogenase	0.67	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0451	fumarase	0.74	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0658	isocitrate dehydrogenase (NAD+)	1.70	0.00	0.00	0.00	0.00	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0300	citrate synthase	1.70	2.31	2.31	2.31	2.31	0
+Yeast9.1.2, original constraints plus thiamine uptake	Wasylenko2014	r_0252	carnitine O-acetyltransferase	2.22	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Celton2012	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, updated constraints	Celton2012	r_0467	glucose-6-phosphate isomerase	84.70	96.85	96.85	96.85	96.85	0
+Yeast9.0.2, updated constraints	Celton2012	r_0466	glucose 6-phosphate dehydrogenase	11.40	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Celton2012	r_1049	transketolase 1	5.60	0.01	0.01	0.01	0.01	0
+Yeast9.0.2, updated constraints	Celton2012	r_0959	pyruvate decarboxylase	164.30	172.98	172.98	172.98	172.98	0
+Yeast9.0.2, updated constraints	Celton2012	r_0958	pyruvate carboxylase	4.20	7.23	7.23	7.23	7.23	0
+Yeast9.0.2, updated constraints	Celton2012	r_0173		2.40	0.67	0.67	0.67	0.67	0
+Yeast9.0.2, updated constraints	Celton2012	r_0113	acetyl-CoA synthetase	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Celton2012	r_1761	ethanol exchange	161.90	173.80	173.80	173.80	173.80	0
+Yeast9.0.2, updated constraints	Celton2012	r_1808	glycerol exchange	17.80	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Celton2012	r_1634	acetate exchange	2.10	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Celton2012	r_2056	succinate exchange	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Celton2012	r_2111	growth	2.25	1.94	1.94	1.94	1.94	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, updated constraints	Jouhten2008	r_0467	glucose-6-phosphate isomerase	88.00	96.96	96.96	96.96	96.96	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0450	fructose-bisphosphate aldolase	91.00	94.96	2.80	49.08	92.62	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0366	enolase	163.00	188.76	188.76	188.76	188.76	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0958	pyruvate carboxylase	5.00	6.98	6.98	6.98	6.98	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0489	glycerol-3-phosphatase	17.00	6.59	6.92	13.40	19.77	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0466	glucose 6-phosphate dehydrogenase	5.00	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_1049	transketolase 1	1.00	0.01	0.01	0.01	0.01	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_1048	transaldolase	2.00	0.01	2.35	45.89	92.17	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0959	pyruvate decarboxylase	148.50	173.91	173.91	173.91	173.91	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	147.00	167.85	168.03	171.55	175.19	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_1761	ethanol exchange	147.00	174.69	174.69	174.69	174.69	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0173		2.00	0.65	0.65	0.65	0.65	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_1634	acetate exchange	0.00	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0962	pyruvate kinase	162.00	187.52	187.52	187.52	187.52	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0958	pyruvate carboxylase	5.00	6.98	6.98	6.98	6.98	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0300	citrate synthase	3.00	2.10	2.10	2.10	2.10	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0113	acetyl-CoA synthetase	4.00	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_2034	pyruvate transport	8.00	6.05	0.15	3.08	5.92	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_0658	isocitrate dehydrogenase (NAD+)	3.00	0.32	0.01	0.15	0.31	0
+Yeast9.0.2, updated constraints	Jouhten2008	r_2111	growth	1.55	1.87	1.87	1.87	1.87	0
+Yeast9.0.2, updated constraints	Nissen01	r_2111	growth	1.70	1.86	1.86	1.86	1.86	0
+Yeast9.0.2, updated constraints	Nissen01	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, updated constraints	Nissen01	r_1672	'carbon dioxide exchange'	163.20	177.19	177.19	177.19	177.19	0
+Yeast9.0.2, updated constraints	Nissen01	r_1761	ethanol exchange	149.10	174.86	174.86	174.86	174.86	0
+Yeast9.0.2, updated constraints	Nissen01	r_1808	glycerol exchange	17.20	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Nissen01	r_2056	succinate exchange	0.45	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Nissen02	r_2111	growth	1.77	1.92	1.92	1.92	1.92	0
+Yeast9.0.2, updated constraints	Nissen02	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, updated constraints	Nissen02	r_1672	'carbon dioxide exchange'	163.80	176.50	176.50	176.50	176.50	0
+Yeast9.0.2, updated constraints	Nissen02	r_1761	ethanol exchange	148.80	174.10	174.10	174.10	174.10	0
+Yeast9.0.2, updated constraints	Nissen02	r_1808	glycerol exchange	18.20	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Nissen02	r_2056	succinate exchange	0.45	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Nissen03	r_2111	growth	1.79	1.94	1.94	1.94	1.94	0
+Yeast9.0.2, updated constraints	Nissen03	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, updated constraints	Nissen03	r_1672	'carbon dioxide exchange'	160.20	176.25	176.25	176.25	176.25	0
+Yeast9.0.2, updated constraints	Nissen03	r_1761	ethanol exchange	148.20	173.83	173.83	173.83	173.83	0
+Yeast9.0.2, updated constraints	Nissen03	r_1808	glycerol exchange	19.00	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Nissen03	r_2056	succinate exchange	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Nissen04	r_2111	growth	1.80	1.95	1.95	1.95	1.95	0
+Yeast9.0.2, updated constraints	Nissen04	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, updated constraints	Nissen04	r_1672	'carbon dioxide exchange'	156.60	176.13	176.13	176.13	176.13	0
+Yeast9.0.2, updated constraints	Nissen04	r_1761	ethanol exchange	149.10	173.69	173.69	173.69	173.69	0
+Yeast9.0.2, updated constraints	Nissen04	r_1808	glycerol exchange	21.80	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Nissen04	r_2056	succinate exchange	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, updated constraints	Wasylenko2014	r_2111	growth	1.70	1.93	1.93	1.93	1.93	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0466	glucose 6-phosphate dehydrogenase	5.04	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0467	glucose-6-phosphate isomerase	92.07	96.87	96.87	96.87	96.87	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0886	phosphofructokinase	93.55	94.82	2.18	44.52	91.65	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0984	ribulose 5-phosphate 3-epimerase	2.82	0.65	0.65	0.65	0.65	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0982	ribose-5-phosphate isomerase	2.22	0.65	0.65	0.65	0.65	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0450	fructose-bisphosphate aldolase	93.55	94.82	2.18	44.52	91.65	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0491	glycerol-3-phosphate dehydrogenase (NAD)	22.16	0.00	1.41	10.06	18.47	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0489	glycerol-3-phosphatase	22.09	6.78	7.16	13.70	20.36	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0486	glyceraldehyde-3-phosphate dehydrogenase	166.20	188.94	188.94	188.94	188.94	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0917	phosphoserine phosphatase (L-serine)	0.52	0.50	0.50	0.50	0.50	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0502	glycine hydroxymethyltransferase	0.52	0.90	0.90	0.90	0.90	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_1040	threonine aldolase	1.04	2.20	2.20	2.20	2.20	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0366	enolase	165.68	188.43	188.43	188.43	188.43	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0962	pyruvate kinase	164.79	187.16	187.16	187.16	187.16	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0959	pyruvate decarboxylase	157.45	173.15	173.15	173.15	173.15	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0958	pyruvate carboxylase	5.71	7.18	7.18	7.18	7.18	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_2034	pyruvate transport	1.48	6.23	0.17	3.05	6.08	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	153.00	173.84	167.15	170.88	174.51	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0173		5.49	0.67	0.67	0.67	0.67	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0113	acetyl-CoA synthetase	3.19	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_1634	acetate exchange	2.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0718	malic enzyme (NAD)	1.33	0.33	0.01	0.16	0.32	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0713	malate dehydrogenase	0.67	2.16	2.16	2.16	2.16	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0451	fumarase	0.74	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0658	isocitrate dehydrogenase (NAD+)	1.70	0.00	0.01	0.17	0.32	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0300	citrate synthase	1.70	2.16	2.16	2.16	2.16	0
+Yeast9.0.2, updated constraints	Wasylenko2014	r_0252	carnitine O-acetyltransferase	2.22	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Celton2012	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, original constraints	Celton2012	r_0467	glucose-6-phosphate isomerase	84.70	86.84	86.84	86.84	86.84	0
+Yeast9.0.2, original constraints	Celton2012	r_0466	glucose 6-phosphate dehydrogenase	11.40	9.37	9.37	9.37	9.37	0
+Yeast9.0.2, original constraints	Celton2012	r_1049	transketolase 1	5.60	3.12	3.12	3.12	3.12	0
+Yeast9.0.2, original constraints	Celton2012	r_0959	pyruvate decarboxylase	164.30	151.38	151.39	151.39	151.39	0
+Yeast9.0.2, original constraints	Celton2012	r_0958	pyruvate carboxylase	4.20	11.39	11.40	11.40	11.40	0
+Yeast9.0.2, original constraints	Celton2012	r_0173		2.40	5.13	5.13	5.13	5.13	0
+Yeast9.0.2, original constraints	Celton2012	r_0113	acetyl-CoA synthetase	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Celton2012	r_1761	ethanol exchange	161.90	149.20	149.20	149.20	149.20	0
+Yeast9.0.2, original constraints	Celton2012	r_1808	glycerol exchange	17.80	17.21	17.21	17.21	17.21	0
+Yeast9.0.2, original constraints	Celton2012	r_1634	acetate exchange	2.10	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Celton2012	r_2056	succinate exchange	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Celton2012	r_2111	growth	2.25	2.34	2.34	2.34	2.34	0
+Yeast9.0.2, original constraints	Jouhten2008	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, original constraints	Jouhten2008	r_0467	glucose-6-phosphate isomerase	88.00	86.84	86.84	86.84	86.84	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0450	fructose-bisphosphate aldolase	91.00	87.55	2.69	47.11	88.60	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0366	enolase	163.00	166.44	166.44	166.44	166.44	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0958	pyruvate carboxylase	5.00	11.39	11.40	11.40	11.40	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0489	glycerol-3-phosphatase	17.00	17.21	17.21	17.21	17.21	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0466	glucose 6-phosphate dehydrogenase	5.00	9.37	9.37	9.37	9.37	0
+Yeast9.0.2, original constraints	Jouhten2008	r_1049	transketolase 1	1.00	3.12	3.12	3.12	3.12	0
+Yeast9.0.2, original constraints	Jouhten2008	r_1048	transaldolase	2.00	0.00	1.07	40.44	84.86	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0959	pyruvate decarboxylase	148.50	151.38	151.39	151.39	151.39	0
+Yeast9.0.2, original constraints	Jouhten2008	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	147.00	149.70	146.57	148.08	149.63	0
+Yeast9.0.2, original constraints	Jouhten2008	r_1761	ethanol exchange	147.00	149.20	149.20	149.20	149.20	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0173		2.00	5.13	5.13	5.13	5.13	0
+Yeast9.0.2, original constraints	Jouhten2008	r_1634	acetate exchange	0.00	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0962	pyruvate kinase	162.00	165.02	165.02	165.02	165.02	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0958	pyruvate carboxylase	5.00	11.39	11.40	11.40	11.40	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0300	citrate synthase	3.00	2.74	2.74	2.74	2.74	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0113	acetyl-CoA synthetase	4.00	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Jouhten2008	r_2034	pyruvate transport	8.00	1.08	0.03	0.54	1.05	0
+Yeast9.0.2, original constraints	Jouhten2008	r_0658	isocitrate dehydrogenase (NAD+)	3.00	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Jouhten2008	r_2111	growth	1.55	2.34	2.34	2.34	2.34	0
+Yeast9.0.2, original constraints	Nissen01	r_2111	growth	1.70	2.34	2.34	2.34	2.34	0
+Yeast9.0.2, original constraints	Nissen01	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, original constraints	Nissen01	r_1672	'carbon dioxide exchange'	163.20	160.04	160.04	160.04	160.04	0
+Yeast9.0.2, original constraints	Nissen01	r_1761	ethanol exchange	149.10	149.20	149.20	149.20	149.20	0
+Yeast9.0.2, original constraints	Nissen01	r_1808	glycerol exchange	17.20	17.21	17.21	17.21	17.21	0
+Yeast9.0.2, original constraints	Nissen01	r_2056	succinate exchange	0.45	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Nissen02	r_2111	growth	1.77	2.34	2.34	2.34	2.34	0
+Yeast9.0.2, original constraints	Nissen02	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, original constraints	Nissen02	r_1672	'carbon dioxide exchange'	163.80	160.04	160.04	160.04	160.04	0
+Yeast9.0.2, original constraints	Nissen02	r_1761	ethanol exchange	148.80	149.20	149.20	149.20	149.20	0
+Yeast9.0.2, original constraints	Nissen02	r_1808	glycerol exchange	18.20	17.21	17.21	17.21	17.21	0
+Yeast9.0.2, original constraints	Nissen02	r_2056	succinate exchange	0.45	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Nissen03	r_2111	growth	1.79	2.34	2.34	2.34	2.34	0
+Yeast9.0.2, original constraints	Nissen03	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, original constraints	Nissen03	r_1672	'carbon dioxide exchange'	160.20	160.04	160.04	160.04	160.04	0
+Yeast9.0.2, original constraints	Nissen03	r_1761	ethanol exchange	148.20	149.20	149.20	149.20	149.20	0
+Yeast9.0.2, original constraints	Nissen03	r_1808	glycerol exchange	19.00	17.21	17.21	17.21	17.21	0
+Yeast9.0.2, original constraints	Nissen03	r_2056	succinate exchange	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Nissen04	r_2111	growth	1.80	2.34	2.34	2.34	2.34	0
+Yeast9.0.2, original constraints	Nissen04	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, original constraints	Nissen04	r_1672	'carbon dioxide exchange'	156.60	160.04	160.04	160.04	160.04	0
+Yeast9.0.2, original constraints	Nissen04	r_1761	ethanol exchange	149.10	149.20	149.20	149.20	149.20	0
+Yeast9.0.2, original constraints	Nissen04	r_1808	glycerol exchange	21.80	17.21	17.21	17.21	17.21	0
+Yeast9.0.2, original constraints	Nissen04	r_2056	succinate exchange	0.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_1714	D-glucose exchange	100.00	100.00	100.00	100.00	100.00	1
+Yeast9.0.2, original constraints	Wasylenko2014	r_2111	growth	1.70	2.34	2.34	2.34	2.34	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0466	glucose 6-phosphate dehydrogenase	5.04	9.37	9.37	9.37	9.37	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0467	glucose-6-phosphate isomerase	92.07	86.84	86.84	86.84	86.84	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0886	phosphofructokinase	93.55	87.55	1.75	45.68	87.78	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0984	ribulose 5-phosphate 3-epimerase	2.82	5.52	5.52	5.52	5.52	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0982	ribose-5-phosphate isomerase	2.22	3.85	3.85	3.85	3.85	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0450	fructose-bisphosphate aldolase	93.55	87.55	1.75	45.68	87.78	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0491	glycerol-3-phosphate dehydrogenase (NAD)	22.16	14.17	14.24	15.77	17.30	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0489	glycerol-3-phosphatase	22.09	17.21	17.21	17.21	17.21	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0486	glyceraldehyde-3-phosphate dehydrogenase	166.20	166.44	166.44	166.44	166.44	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0917	phosphoserine phosphatase (L-serine)	0.52	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0502	glycine hydroxymethyltransferase	0.52	1.00	1.00	1.00	1.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_1040	threonine aldolase	1.04	3.44	3.44	3.44	3.44	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0366	enolase	165.68	166.44	166.44	166.44	166.44	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0962	pyruvate kinase	164.79	165.02	165.02	165.02	165.02	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0959	pyruvate decarboxylase	157.45	151.38	151.39	151.39	151.39	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0958	pyruvate carboxylase	5.71	11.39	11.40	11.40	11.40	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_2034	pyruvate transport	1.48	1.08	0.04	0.53	1.05	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_2115	alcohol dehydrogenase, (acetaldehyde to ethanol)	153.00	149.70	146.57	148.10	149.63	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0173		5.49	5.13	5.13	5.13	5.13	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0113	acetyl-CoA synthetase	3.19	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_1634	acetate exchange	2.30	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0718	malic enzyme (NAD)	1.33	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0713	malate dehydrogenase	0.67	0.71	0.71	0.71	0.71	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0451	fumarase	0.74	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0658	isocitrate dehydrogenase (NAD+)	1.70	0.00	0.00	0.00	0.00	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0300	citrate synthase	1.70	2.74	2.74	2.74	2.74	0
+Yeast9.0.2, original constraints	Wasylenko2014	r_0252	carnitine O-acetyltransferase	2.22	4.31	4.31	4.31	4.31	0

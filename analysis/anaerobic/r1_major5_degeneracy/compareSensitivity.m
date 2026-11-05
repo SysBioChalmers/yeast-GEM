@@ -8,7 +8,7 @@ paths = setupStudy('3.0.0-rc1');
 in  = fullfile(paths.results, 'sampling');
 out = fullfile(paths.results, 'analysis_sensitivity');
 if ~isfolder(out), mkdir(out); end
-variants = {'v910_new','v910_old','v902_new','v902_old'};
+variants = {'vdev_new','vdev_old','v902_new','v902_old'};
 opts = [0.99999 0.99];
 load1 = @(v, s, o) load(fullfile(in, sprintf('%s__%s__opt%g.mat', v, s, o)));
 q = @(x) prctile(x, [2.5 50 97.5], 2);
@@ -56,7 +56,7 @@ claims = {'r_0713','Mdh1'; 'r_2131','Idp1'; 'r_0658','Idh1/2'; 'r_0471','Gdh1/3'
           'r_0226','mito ATP synthase'; 'r_0227','PM H+-ATPase'; 'r_0491','Gpd1/2'; 'r_1810','glycine export'};
 C = table();
 for o = opts
-    R = load1('v910_new', 'sjoberg', o);
+    R = load1('vdev_new', 'sjoberg', o);
     for k = 1:size(claims,1)
         qq = q(R.W(strcmp(R.rxns, claims{k,1}), :));
         C = [C; table(o, claims(k,2), qq(1), qq(2), qq(3), 'VariableNames', {'optFrac','reaction','q2_5','median','q97_5'})]; %#ok<AGROW>

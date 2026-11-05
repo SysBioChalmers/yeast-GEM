@@ -2,7 +2,7 @@ function adh3Gpd2()
 % adh3Gpd2  Anaerobic batch predictions (pFBA) for adh3, gpd2 and adh3 gpd2,
 %   as in knockoutPanel (glucose uptake fixed at 20 mmol/gDW/h, growth
 %   maximised). Writes results/adh3_gpd2.tsv.
-variants = {'v910_new','v910_old','v902_new','v902_old'};
+variants = {'vdev_new','vdev_old','v902_new','v902_old'};
 paths = setupStudy('3.0.0-rc1');
 cd(fullfile(paths.yeast, 'code', 'otherChanges'));
 strains = {'wild type',{}; 'adh3',{'YMR083W'}; 'gpd2',{'YOL059W'}; 'adh3 gpd2',{'YMR083W','YOL059W'}; 'mae1',{'YKL029C'}};

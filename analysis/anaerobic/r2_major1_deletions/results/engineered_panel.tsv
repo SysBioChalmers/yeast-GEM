@@ -1,0 +1,109 @@
+variant	source	strain	quantity	predicted
+vdev_new	de Kok 2011	hydrolytic (IMZ199)	Y_biomass (g/g glucose eq)	0.0623786252291153
+vdev_new	de Kok 2011	phosphorolytic (IMZ226)	Y_biomass (g/g glucose eq)	0.0831715003060992
+vdev_new	de Kok 2011	glucose reference	Y_biomass (g/g glucose eq)	0.0831715003063275
+vdev_new	Basso 2011	SUC2 (CEN.PK113-7D)	Y_biomass (g/mol sucrose)	31.6270239402548
+vdev_new	Basso 2011	iSUC2 (IMI056)	Y_biomass (g/mol sucrose)	23.7202679551886
+vdev_new	Kozak 2014	CEN.PK113-7D	Y_biomass (g/g glucose)	0.087774822214129
+vdev_new	Kozak 2014	CEN.PK113-7D	q_formate	0
+vdev_new	Kozak 2014	acs1 acs2 + PFL (IMZ383)	Y_biomass (g/g glucose)	0.0907480176088355
+vdev_new	Kozak 2014	acs1 acs2 + PFL (IMZ383)	q_formate	0
+vdev_new	Nissen 2000 ME	TN1 wild type	mu (glucose 20)	0.328941552543212
+vdev_new	Nissen 2000 ME	TN1 wild type	Y_biomass (Cmol/Cmol)	0.111430065224665
+vdev_new	Nissen 2000 ME	TN1 wild type	Y_ethanol (Cmol/Cmol)	0.51784086950869
+vdev_new	Nissen 2000 ME	TN1 wild type	Y_glycerol (Cmol/Cmol)	0.0944048470672187
+vdev_new	Nissen 2000 ME	TN9 gdh1	mu (glucose 20)	0
+vdev_new	Nissen 2000 ME	TN9 gdh1	Y_biomass (Cmol/Cmol)	0
+vdev_new	Nissen 2000 ME	TN9 gdh1	Y_ethanol (Cmol/Cmol)	0
+vdev_new	Nissen 2000 ME	TN9 gdh1	Y_glycerol (Cmol/Cmol)	0.254375
+vdev_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	mu (glucose 20)	0.348517172448052
+vdev_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_biomass (Cmol/Cmol)	0.118061372780505
+vdev_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_ethanol (Cmol/Cmol)	0.547963829989948
+vdev_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_glycerol (Cmol/Cmol)	0.0499061811361012
+vdev_new	Bro 2006	reference	Y_biomass (g/g)	0.0912935324227925
+vdev_new	Bro 2006	reference	Y_glycerol (g/g)	0.096513492377941
+vdev_new	Bro 2006	reference	Y_ethanol (g/g)	0.397271179282378
+vdev_new	Bro 2006	gapN (CPB1001)	Y_biomass (g/g)	0.102698091496911
+vdev_new	Bro 2006	gapN (CPB1001)	Y_glycerol (g/g)	0
+vdev_new	Bro 2006	gapN (CPB1001)	Y_ethanol (g/g)	0.446013281766903
+vdev_old	de Kok 2011	hydrolytic (IMZ199)	Y_biomass (g/g glucose eq)	0.0851627760981301
+vdev_old	de Kok 2011	phosphorolytic (IMZ226)	Y_biomass (g/g glucose eq)	0.113550368130489
+vdev_old	de Kok 2011	glucose reference	Y_biomass (g/g glucose eq)	0.113550368130293
+vdev_old	Basso 2011	SUC2 (CEN.PK113-7D)	Y_biomass (g/mol sucrose)	40.9144686446617
+vdev_old	Basso 2011	iSUC2 (IMI056)	Y_biomass (g/mol sucrose)	30.6858514833796
+vdev_old	Kozak 2014	CEN.PK113-7D	Y_biomass (g/g glucose)	0.113550368130385
+vdev_old	Kozak 2014	CEN.PK113-7D	q_formate	0
+vdev_old	Kozak 2014	acs1 acs2 + PFL (IMZ383)	Y_biomass (g/g glucose)	0.118521599653317
+vdev_old	Kozak 2014	acs1 acs2 + PFL (IMZ383)	q_formate	0
+vdev_old	Nissen 2000 ME	TN1 wild type	mu (glucose 20)	0.409144686446542
+vdev_old	Nissen 2000 ME	TN1 wild type	Y_biomass (Cmol/Cmol)	0.138599148525251
+vdev_old	Nissen 2000 ME	TN1 wild type	Y_ethanol (Cmol/Cmol)	0.484318483144298
+vdev_old	Nissen 2000 ME	TN1 wild type	Y_glycerol (Cmol/Cmol)	0.114932393931099
+vdev_old	Nissen 2000 ME	TN9 gdh1	mu (glucose 20)	0
+vdev_old	Nissen 2000 ME	TN9 gdh1	Y_biomass (Cmol/Cmol)	0
+vdev_old	Nissen 2000 ME	TN9 gdh1	Y_ethanol (Cmol/Cmol)	0
+vdev_old	Nissen 2000 ME	TN9 gdh1	Y_glycerol (Cmol/Cmol)	0.25
+vdev_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	mu (glucose 20)	0.442837761496963
+vdev_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_biomass (Cmol/Cmol)	0.150012791835015
+vdev_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_ethanol (Cmol/Cmol)	0.524205281143868
+vdev_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_glycerol (Cmol/Cmol)	0.0538074925813512
+vdev_old	Bro 2006	reference	Y_biomass (g/g)	0.113552889286658
+vdev_old	Bro 2006	reference	Y_glycerol (g/g)	0.117499546583127
+vdev_old	Bro 2006	reference	Y_ethanol (g/g)	0.371553861960598
+vdev_old	Bro 2006	gapN (CPB1001)	Y_biomass (g/g)	0.132132363136986
+vdev_old	Bro 2006	gapN (CPB1001)	Y_glycerol (g/g)	8.31265738355477e-07
+vdev_old	Bro 2006	gapN (CPB1001)	Y_ethanol (g/g)	0.428045470879108
+v902_new	de Kok 2011	hydrolytic (IMZ199)	Y_biomass (g/g glucose eq)	0.073341617064456
+v902_new	de Kok 2011	phosphorolytic (IMZ226)	Y_biomass (g/g glucose eq)	0.0977888227526334
+v902_new	de Kok 2011	glucose reference	Y_biomass (g/g glucose eq)	0.0964629522071999
+v902_new	Basso 2011	SUC2 (CEN.PK113-7D)	Y_biomass (g/mol sucrose)	37.0086068353689
+v902_new	Basso 2011	iSUC2 (IMI056)	Y_biomass (g/mol sucrose)	28.1630343368626
+v902_new	Kozak 2014	CEN.PK113-7D	Y_biomass (g/g glucose)	0.102710387531376
+v902_new	Kozak 2014	CEN.PK113-7D	q_formate	0
+v902_new	Kozak 2014	acs1 acs2 + PFL (IMZ383)	Y_biomass (g/g glucose)	0.105137558355387
+v902_new	Kozak 2014	acs1 acs2 + PFL (IMZ383)	q_formate	0.134591773615438
+v902_new	Nissen 2000 ME	TN1 wild type	mu (glucose 20)	0.388789567784462
+v902_new	Nissen 2000 ME	TN1 wild type	Y_biomass (Cmol/Cmol)	0.131703783124818
+v902_new	Nissen 2000 ME	TN1 wild type	Y_ethanol (Cmol/Cmol)	0.579128456985914
+v902_new	Nissen 2000 ME	TN1 wild type	Y_glycerol (Cmol/Cmol)	1.17451343686348e-06
+v902_new	Nissen 2000 ME	TN9 gdh1	mu (glucose 20)	0.388789567784424
+v902_new	Nissen 2000 ME	TN9 gdh1	Y_biomass (Cmol/Cmol)	0.131703783124805
+v902_new	Nissen 2000 ME	TN9 gdh1	Y_ethanol (Cmol/Cmol)	0.579128456985823
+v902_new	Nissen 2000 ME	TN9 gdh1	Y_glycerol (Cmol/Cmol)	1.17451356351772e-06
+v902_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	mu (glucose 20)	0.388789567784424
+v902_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_biomass (Cmol/Cmol)	0.131703783124805
+v902_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_ethanol (Cmol/Cmol)	0.579128456985823
+v902_new	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_glycerol (Cmol/Cmol)	1.17451356351772e-06
+v902_new	Bro 2006	reference	Y_biomass (g/g)	0.107903585721392
+v902_new	Bro 2006	reference	Y_glycerol (g/g)	1.20074760097646e-06
+v902_new	Bro 2006	reference	Y_ethanol (g/g)	0.444289083017069
+v902_new	Bro 2006	gapN (CPB1001)	Y_biomass (g/g)	0.107903585721381
+v902_new	Bro 2006	gapN (CPB1001)	Y_glycerol (g/g)	9.09980464900402e-07
+v902_new	Bro 2006	gapN (CPB1001)	Y_ethanol (g/g)	0.44428925272333
+v902_old	de Kok 2011	hydrolytic (IMZ199)	Y_biomass (g/g glucose eq)	0.100395029157977
+v902_old	de Kok 2011	phosphorolytic (IMZ226)	Y_biomass (g/g glucose eq)	0.133860038877604
+v902_old	de Kok 2011	glucose reference	Y_biomass (g/g glucose eq)	0.129840904745598
+v902_old	Basso 2011	SUC2 (CEN.PK113-7D)	Y_biomass (g/mol sucrose)	46.7842747979816
+v902_old	Basso 2011	iSUC2 (IMI056)	Y_biomass (g/mol sucrose)	36.1743369062233
+v902_old	Kozak 2014	CEN.PK113-7D	Y_biomass (g/g glucose)	0.129840904745619
+v902_old	Kozak 2014	CEN.PK113-7D	q_formate	0
+v902_old	Kozak 2014	acs1 acs2 + PFL (IMZ383)	Y_biomass (g/g glucose)	0.136181790200228
+v902_old	Kozak 2014	acs1 acs2 + PFL (IMZ383)	q_formate	0.0910133507227673
+v902_old	Nissen 2000 ME	TN1 wild type	mu (glucose 20)	0.467842747978944
+v902_old	Nissen 2000 ME	TN1 wild type	Y_biomass (Cmol/Cmol)	0.158483315711024
+v902_old	Nissen 2000 ME	TN1 wild type	Y_ethanol (Cmol/Cmol)	0.497329215555607
+v902_old	Nissen 2000 ME	TN1 wild type	Y_glycerol (Cmol/Cmol)	0.0860433945436378
+v902_old	Nissen 2000 ME	TN9 gdh1	mu (glucose 20)	0
+v902_old	Nissen 2000 ME	TN9 gdh1	Y_biomass (Cmol/Cmol)	0
+v902_old	Nissen 2000 ME	TN9 gdh1	Y_ethanol (Cmol/Cmol)	0.266666666666667
+v902_old	Nissen 2000 ME	TN9 gdh1	Y_glycerol (Cmol/Cmol)	0
+v902_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	mu (glucose 20)	0.520400521166758
+v902_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_biomass (Cmol/Cmol)	0.176287439419633
+v902_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_ethanol (Cmol/Cmol)	0.55274512067136
+v902_old	Nissen 2000 ME	TN19 gdh1 +GLT1 +GLN1	Y_glycerol (Cmol/Cmol)	1.99999996935195e-06
+v902_old	Bro 2006	reference	Y_biomass (g/g)	0.129843787600453
+v902_old	Bro 2006	reference	Y_glycerol (g/g)	0.0879652767992585
+v902_old	Bro 2006	reference	Y_ethanol (g/g)	0.381535285430074
+v902_old	Bro 2006	gapN (CPB1001)	Y_biomass (g/g)	0.149308007209246
+v902_old	Bro 2006	gapN (CPB1001)	Y_glycerol (g/g)	5.43876536267884e-07
+v902_old	Bro 2006	gapN (CPB1001)	Y_ethanol (g/g)	0.416793481325275

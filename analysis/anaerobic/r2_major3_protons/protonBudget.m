@@ -5,8 +5,9 @@ function protonBudget(variant)
 %   the plasma membrane, mitochondrial transport and other. Prints the groups
 %   and the largest single contributions; also the budget of the lumped
 %   overall reactions glucose -> 2 ethanol + 2 CO2 and glucose -> glycerol.
-if nargin < 1, variant = 'v910_new'; end
+if nargin < 1, variant = 'vdev_new'; end
 paths = setupStudy('3.0.0-rc1');
+log = startLog(paths, 'protonBudget'); %#ok<NASGU>
 cd(fullfile(paths.yeast,'code','otherChanges'));
 m = variantModel(paths, variant);
 m = setParam(m,'eq','r_1714',-23);

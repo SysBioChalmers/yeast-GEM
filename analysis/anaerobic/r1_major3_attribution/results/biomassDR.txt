@@ -1,0 +1,15 @@
+[Warning: loadYeastModel is deprecated; use loadYeastYaml instead.] 
+[> In loadYeastModel (line 22)
+In loadTaggedModel (line 8)
+In biomassDR (line 12)] 
+Loaded model version: 'yeastGEM_v9.1.1' (checkout)
+[Warning: loadYeastModel is deprecated; use loadYeastYaml instead.] 
+[> In loadYeastModel (line 22)
+In loadTaggedModel (line 17)
+In biomassDR (line 17)] 
+Loaded model version: '9.0.2'
+9.0.2                            biomass: -0.041 C-mol/gDW, degree of reduction 4.196 per C-mol
+9.1.2                            biomass: -0.041 C-mol/gDW, degree of reduction 4.365 per C-mol
+9.1.2 without biomass NADPH      biomass: -0.041 C-mol/gDW, degree of reduction 4.219 per C-mol
+9.1.2 anaerobic (updated constraints) biomass: -0.041 C-mol/gDW, degree of reduction 4.360 per C-mol
+9.1.2 anaerobic without biomass NADPH biomass: -0.041 C-mol/gDW, degree of reduction 4.214 per C-mol
