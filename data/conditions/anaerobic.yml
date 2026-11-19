@@ -32,7 +32,15 @@ biomass_stoichiometry_delta:
   add:
     - { met: s_0689, coef:  0.08, comment: "FADH2[c]" }
     - { met: s_0687, coef: -0.08, comment: "FAD[c]" }
-    - { met: s_0794, coef: -0.16, comment: "H+[c] (2 protons per FADH2)" }
+    # Growth-associated maintenance of anaerobic growth: 11 mmol ATP/gDW
+    # above the aerobic value (data/physiology/maintenanceFit.tsv). H+ is
+    # the sum of the 11 protons of the ATP hydrolysis and the -0.16 of
+    # the 2 protons per FADH2; a metabolite can be listed only once.
+    - { met: s_0794, coef: 10.84, comment: "H+[c] (ATP hydrolysis +11, FADH2 -0.16)" }
+    - { met: s_0434, coef: -11, comment: "ATP[c]" }
+    - { met: s_0803, coef: -11, comment: "H2O[c]" }
+    - { met: s_0394, coef:  11, comment: "ADP[c]" }
+    - { met: s_1322, coef:  11, comment: "phosphate[c]" }
 
 bounds:
   # Block aerobic respiration
@@ -52,5 +60,9 @@ bounds:
   - { rxn: r_1548, lb: -1000, comment: "(R)-pantothenate exchange" }
   # Block MDH2 — repressed under anaerobic growth on glucose
   - { rxn: r_0714, lb: 0, ub: 0, comment: MDH2 (malate dehydrogenase) }
+  # Non-growth-associated maintenance of anaerobic growth, from the
+  # anaerobic retentostats of Boender et al 2009 (10.1128/AEM.00429-09):
+  # 0.50 mmol glucose/gDW/h, 1 mmol ATP/gDW/h
+  - { rxn: r_4046, lb: 1.0, ub: 1.0, comment: non-growth associated maintenance }
   # Block IDP2 — repressed in transcriptome and not detected in proteome
   - { rxn: r_0659, lb: 0, ub: 0, comment: "IDP2 (isocitrate dehydrogenase, cytosolic)" }

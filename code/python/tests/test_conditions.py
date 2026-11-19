@@ -177,7 +177,8 @@ def test_anaerobic_biomass_step_adds_fadh2_on_real_model(model):
     after = bio.metabolites
     assert after[fadh2] == pytest.approx(before[fadh2.id] + 0.08)
     assert after[fad] == pytest.approx(before[fad.id] - 0.08)
-    assert after[proton] == pytest.approx(before[proton.id] - 0.16)
+    # 11 protons of the extra ATP hydrolysis, -0.16 for the FADH2.
+    assert after[proton] == pytest.approx(before[proton.id] + 10.84)
 
 
 def _top_level_imports(path: Path) -> set[str]:
