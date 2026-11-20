@@ -5,6 +5,14 @@ import numpy as np
 import pandas as pd
 import pytest
 
+from raven_toolbox.biomass import (
+    huber_loss,
+    log_ratio,
+    min_uptake,
+    ngam_from_maintenance_coefficient,
+    uptake_grid,
+)
+
 from yeastgem import conditions, maintenance
 
 # GAM and NGAM that the model and the anaerobic environment carry: the
@@ -98,7 +106,7 @@ def test_uptake_at_zero_growth_is_proportional_to_ngam(model):
         values = []
         for ngam in (0.5, 1.0):
             maintenance.set_maintenance(model, AEROBIC_GAM, ngam)
-            values.append(maintenance.min_glucose_uptake(model, 0.0))
+            values.append(min_uptake(model, 0.0, maintenance.CONFIG))
     assert values[1] == pytest.approx(2 * values[0], rel=1e-6)
 
 
@@ -107,7 +115,8 @@ def test_ngam_reproduces_the_retentostat_coefficients(model):
     models = maintenance.regime_models(model)
     for oxygen, ngam in (("aerobic", AEROBIC_NGAM), ("anaerobic", ANAEROBIC_NGAM)):
         ms = float(retentostat.loc[oxygen, "ms_glucose"])
-        assert maintenance.ngam_from_retentostat(models[oxygen], ms) == pytest.approx(
+        assert ngam_from_maintenance_coefficient(
+            models[oxygen], ms, maintenance.CONFIG) == pytest.approx(
             ngam, abs=0.01)
 
 
@@ -119,7 +128,10 @@ def test_chemostat_uptake_is_lowest_near_the_fitted_gam(model):
                 & data["study"].isin(["Van Hoek 1998", "Overkamp 2000"])]
     data = data.reset_index(drop=True)
     gams = np.array([AEROBIC_GAM - 15, AEROBIC_GAM, AEROBIC_GAM + 15])
-    grid = maintenance.uptake_grid(model, data, gams, AEROBIC_NGAM)
-    loss = (maintenance._huber(maintenance._log_ratio(
-        grid, data["glucose_uptake"].to_numpy(dtype=float))).sum(axis=1))
+    grid = uptake_grid(
+        model, data, gams, AEROBIC_NGAM, maintenance.CONFIG, growth_col="D",
+        condition_setup=maintenance.set_chemostat_protein,
+    )
+    loss = huber_loss(log_ratio(
+        grid, data["glucose_uptake"].to_numpy(dtype=float))).sum(axis=1)
     assert loss[1] < loss[0] and loss[1] < loss[2]
