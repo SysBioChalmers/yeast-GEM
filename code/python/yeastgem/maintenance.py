@@ -1,40 +1,28 @@
-"""ATP maintenance (GAM and NGAM) of yeast-GEM: data, simulation and fit.
+"""ATP maintenance (GAM and NGAM) of yeast-GEM: data files and the fit.
 
-GAM is the ATP hydrolysed per gram of biomass formed (mmol/gDW), held in
-the ATP, water, ADP, phosphate and proton coefficients of the biomass
-pseudoreaction. NGAM is the ATP hydrolysed per hour and gram of biomass
-(mmol/gDW/h), held as the fixed flux of the non-growth associated
-maintenance reaction.
+GAM is the ATP hydrolysed per gram of biomass formed (mmol/gDW), held in the ATP, water, ADP,
+phosphate and proton coefficients of the biomass pseudoreaction. NGAM is the ATP hydrolysed per
+hour and gram of biomass (mmol/gDW/h), held as the fixed flux of the non-growth associated
+maintenance reaction. The method that fits them, with its loss, study weights and resampling of
+studies, is :func:`raven_toolbox.biomass.fit_maintenance`; this module supplies what is specific to
+yeast-GEM:
 
-The two are determined separately, because the data that fix them differ:
+* the data files in ``data/physiology``:
+  ``maintenanceRetentostat.tsv`` has the maintenance coefficient of glucose (``ms_glucose``) in
+  retentostats and in chemostats at very low growth rates, and ``maintenanceChemostats.tsv`` the
+  glucose uptake of C-limited chemostats at the measured dilution rate ``D``, with the study of
+  every row (``reference``), the origin of the value (``source_type``) and the protein content of
+  the biomass where it was measured;
+* the ids of the biomass pseudoreaction, the NGAM reaction and the cofactors (``CONFIG``, from
+  ``data/yeastgem/ids.yml``);
+* the protein content of each chemostat, which is set in the biomass before the uptake is computed
+  (:func:`set_chemostat_protein`);
+* the two regimes, aerobic and anaerobic growth, which are fitted separately with the model as it
+  is used in each (:func:`regime_models`).
 
-* NGAM from the maintenance coefficient measured in retentostats and in
-  chemostats at very low growth rates
-  (``data/physiology/maintenanceRetentostat.tsv``). The glucose uptake
-  that the model needs at zero growth is proportional to NGAM, so NGAM
-  is the value at which the model reproduces the measured coefficient.
-  The ATP per glucose comes from the model, not from the assumption the
-  authors used to convert to ATP.
-* GAM from the glucose uptake of C-limited chemostats at the measured
-  dilution rate (``data/physiology/maintenanceChemostats.tsv``), with
-  NGAM held at that value.
-
-Aerobic and anaerobic growth are fitted separately. The chemostat data
-come from many studies; the fit weights every study equally (each unit
-counts 1/sqrt of the number of units of its study, and units read from
-figures or from compilations count half) and uses a Huber loss on the
-log ratio of model to measured uptake, so that one study that disagrees
-with the others does not move the result. The spread between studies is
-estimated by resampling the studies.
-
-The fit itself is :func:`raven_toolbox.biomass.fit_maintenance`; this
-module holds the yeast-GEM data files, reaction ids and the protein
-content of each chemostat.
-
-The uptake at a fixed growth rate does not depend on enzyme constraints
-as long as the cell is not limited by enzyme capacity, which holds for
-all fitted chemostats (D below 0.3 1/h), so the fit applies to the
-enzyme-constrained model as well.
+The uptake at a fixed growth rate does not depend on enzyme constraints as long as the cell is not
+limited by enzyme capacity, which holds for all fitted chemostats (D below 0.3 1/h), so the fit
+applies to the enzyme-constrained model as well.
 
 Command line::
 
@@ -84,16 +72,17 @@ _HALF_WEIGHT = ("figure", "compiled")
 
 
 def get_gam(model: cobra.Model) -> float:
-    """GAM of the model: the ATP coefficient of the biomass pseudoreaction."""
+    """GAM of the model (mmol/gDW): the size of the ATP coefficient of the biomass
+    pseudoreaction. See :func:`raven_toolbox.biomass.get_gam`."""
     return _get_gam(model, biomass_rxn=CONFIG.biomass_rxn)
 
 
 def set_maintenance(model: cobra.Model, gam: float, ngam: float) -> None:
-    """Set GAM and NGAM in place.
+    """Set GAM (mmol/gDW) and NGAM (mmol/gDW/h) of the model in place.
 
-    The GAM terms of the biomass pseudoreaction move by the same amount,
-    so the proton coefficient keeps its offset from the ATP coefficient
-    (the offset balances the charge of the other biomass terms). Inside
+    This is :func:`raven_toolbox.biomass.set_gam` with ``keep_offsets_of`` set to ATP: the other
+    GAM terms of the biomass pseudoreaction move by the same amount as ATP, so the proton
+    coefficient keeps the offset that balances the charge of the other biomass terms. Inside
     ``with model:`` both changes revert on exit.
     """
     _set_gam(
@@ -108,22 +97,23 @@ def set_maintenance(model: cobra.Model, gam: float, ngam: float) -> None:
 
 
 def load_chemostat_data(path=CHEMOSTAT_FILE) -> pd.DataFrame:
-    """C-limited chemostats: one row per dilution rate and study.
+    """Read the C-limited chemostats: one row per dilution rate ``D`` (1/h) and study.
 
-    Uptakes and productions are in mmol/gDW/h; ``protein`` is g/gDW where
-    measured.
+    Uptakes and productions are in mmol/gDW/h; ``protein`` is g/gDW where measured.
     """
     return pd.read_csv(path, sep="\t")
 
 
 def load_retentostat_data(path=RETENTOSTAT_FILE) -> pd.DataFrame:
-    """Maintenance coefficients measured at near-zero growth rates."""
+    """Read the maintenance coefficients of glucose measured at near-zero growth rates
+    (``ms_glucose``, mmol/gDW/h), one row per oxygen regime."""
     return pd.read_csv(path, sep="\t")
 
 
 def study_weights(data: pd.DataFrame) -> np.ndarray:
-    """Weight of every row: 1/sqrt(rows of its study), halved for figure
-    and compiled values."""
+    """Weight of every row of the chemostat table: 1/sqrt(rows of its study), halved for
+    values read from a figure or taken from a compilation. See
+    :func:`raven_toolbox.biomass.study_weights`."""
     return _study_weights(
         data["reference"] + data["oxygen"],
         discounted=data["source_type"].isin(_HALF_WEIGHT),
@@ -153,8 +143,13 @@ def regime_models(model: cobra.Model) -> dict[str, cobra.Model]:
 def fit(
     model: cobra.Model | None = None, *, bootstrap: int = 400, gams=None,
 ) -> dict[str, MaintenanceFit]:
-    """NGAM from the retentostats and GAM from the chemostats, for aerobic
-    and anaerobic growth. The result is keyed by the oxygen regime."""
+    """Fit NGAM from the retentostats and GAM from the chemostats, for aerobic and anaerobic
+    growth, with :func:`raven_toolbox.biomass.fit_maintenance`.
+
+    ``model`` defaults to the yeast-GEM of the repository. ``bootstrap`` is the number of
+    resamplings of the studies that give the spread of GAM. ``gams`` is the grid of GAM values
+    (mmol/gDW) on which the uptake is computed. The result is keyed by the oxygen regime.
+    """
     model = load_yeast_yaml() if model is None else model
     chemostats = load_chemostat_data()
     retentostats = load_retentostat_data()
@@ -174,6 +169,7 @@ def fit(
 
 
 def write_fit(results: dict[str, MaintenanceFit], path=FIT_FILE) -> None:
+    """Write the fit of each oxygen regime, one row each, to a tab-separated file."""
     rows = [{"oxygen": oxygen, **asdict(r)} for oxygen, r in results.items()]
     pd.DataFrame(rows).round(3).to_csv(path, sep="\t", index=False)
 
