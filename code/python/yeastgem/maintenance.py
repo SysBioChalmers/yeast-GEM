@@ -40,8 +40,14 @@ from raven_toolbox.biomass import (
     MaintenanceConfig,
     MaintenanceFit,
     fit_maintenance,
+)
+from raven_toolbox.biomass import (
     get_gam as _get_gam,
+)
+from raven_toolbox.biomass import (
     set_gam as _set_gam,
+)
+from raven_toolbox.biomass import (
     study_weights as _study_weights,
 )
 

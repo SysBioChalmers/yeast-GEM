@@ -4,7 +4,6 @@ from __future__ import annotations
 import numpy as np
 import pandas as pd
 import pytest
-
 from raven_toolbox.biomass import (
     huber_loss,
     log_ratio,
@@ -46,7 +45,8 @@ def test_retentostat_data_shape():
     assert set(data["oxygen"]) == {"aerobic", "anaerobic"}
     assert (data["ms_glucose"] > 0).all()
     anaerobic = data[data["oxygen"] == "anaerobic"].iloc[0]
-    assert anaerobic["m_atp"] == pytest.approx(anaerobic["ms_glucose"] * anaerobic["atp_per_glucose"])
+    expected = anaerobic["ms_glucose"] * anaerobic["atp_per_glucose"]
+    assert anaerobic["m_atp"] == pytest.approx(expected)
 
 
 def test_study_weights():
