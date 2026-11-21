@@ -1,0 +1,3 @@
+study	reference	strain	oxygen	ms_glucose	ms_glucose_sd	atp_per_glucose	m_atp	m_atp_sd	note
+Boender 2009	10.1128/AEM.00429-09	CEN.PK113-7D	anaerobic	0.50		2	1.0		Chemostats at D 0.025-0.20 1/h and retentostats down to growth rates below 0.001 1/h; mATP = ms x 2 ATP per glucose of alcoholic fermentation
+Vos 2016	10.1186/s12934-016-0501-z	CEN.PK113-7D	aerobic	0.039	0.003	16	0.63	0.04	Glucose-limited retentostats, growth rate 0.025 to below 0.001 1/h; mATP uses a P/O ratio of 1.0 (16 ATP per glucose)
