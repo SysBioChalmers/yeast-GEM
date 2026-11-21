@@ -1,0 +1,103 @@
+study	reference	strain	location	oxygen	D	glucose_uptake	o2_uptake	co2_production	ethanol	glycerol	acetate	protein	replicates	source_type
+Aon 2001	10.1006/mben.2001.0181	CEN.PK122	Fig. 2-5 (C-limited NH4)	aerobic	0.048	0.5	1.3		0				1	figure
+Aon 2001	10.1006/mben.2001.0181	CEN.PK122	Fig. 2-5 (C-limited NH4)	aerobic	0.07	0.7	1.5		0				1	figure
+Aon 2001	10.1006/mben.2001.0181	CEN.PK122	Fig. 2-5 (C-limited NH4)	aerobic	0.13	1.3	3.1		0				1	figure
+Aon 2001	10.1006/mben.2001.0181	CEN.PK122	Fig. 2-5 (C-limited NH4)	aerobic	0.15	1.6	4		0				1	figure
+Aon 2001	10.1006/mben.2001.0181	CEN.PK122	Table 2, C-limitation NH4+ column (qGlc at Dc, mmol/gDW/h)	aerobic	0.181	1.9							1	table
+Bakker 2000	10.1128/jb.182.17.4730-4737.2000		Nookaew 2008 (10.1186/1752-0509-2-71) Additional file 3, Table S3, 'C-limited Aerobic' block, data row 2; reference column = Bakker 2000	aerobic	0.1	1.15	2.7	2.8	0	0	0		1	table
+Daran-Lapujade 2004	10.1074/jbc.m309578200	CEN.PK113-7D	Table I, row Glucose	aerobic	0.1	1.15	2.74	2.85					1	table
+Diderich 1999	10.1074/jbc.274.22.15350	CEN.PK113-7D	Table II row 4	aerobic	0.1	1.1	2.6	2.8	0			0.42	1	table
+Elsemman 2022	10.1038/s41467-022-28467-6	CEN.PK 113-7D	Supplementary Data 1 (MOESM4), sheet Chemostats, row 21 (rates block; nominal D in column A)	aerobic	0.1957	2.126	5.33	5.393	0	0	0.01656		1	table
+Elsemman 2022	10.1038/s41467-022-28467-6	CEN.PK 113-7D	Supplementary Data 1 (MOESM4), sheet Chemostats, row 22 (rates block; nominal D in column A)	aerobic	0.2024	2.249	5.499	5.6	0	0	0.03886		1	table
+Elsemman 2022	10.1038/s41467-022-28467-6	CEN.PK 113-7D	Supplementary Data 1 (MOESM4), sheet Chemostats, row 24 (rates block; nominal D in column A)	aerobic	0.225	2.51	5.929	5.948	0	0	0.02631		1	table
+Elsemman 2022	10.1038/s41467-022-28467-6	CEN.PK 113-7D	Supplementary Data 1 (MOESM4), sheet Chemostats, row 23 (rates block; nominal D in column A)	aerobic	0.229	2.554	5.998	5.949	0	0	0.03923		1	table
+Elsemman 2022	10.1038/s41467-022-28467-6	CEN.PK 113-7D	Supplementary Data 1 (MOESM4), sheet Chemostats, row 25 (rates block; nominal D in column A)	aerobic	0.268	3.161	7.227	7.781	0	0	0.04642		1	table
+Gombert 2001	10.1128/jb.183.4.1441-1451.2001		Nookaew 2008 (10.1186/1752-0509-2-71) Additional file 3, Table S3, 'C-limited Aerobic' block, data row 4; reference column = Gombert 2001	aerobic	0.11	1.18			0	0	0		1	table
+Jouhten 2008	10.1186/1752-0509-2-60	CEN.PK113-1A	Table 1, column O2 20.9% replicate I; O2 from Table 3 (OUR)	aerobic	0.1	1.28	2.7		0	0	0		1	table
+Jouhten 2008	10.1186/1752-0509-2-60	CEN.PK113-1A	Table 1, column O2 2.8% replicate I; O2 from Table 3 (OUR)	aerobic	0.1	1.36	2.5		0.07	0	0		1	table
+Jouhten 2008	10.1186/1752-0509-2-60	CEN.PK113-1A	Table 1, column O2 2.8% replicate II; O2 from Table 3 (OUR)	aerobic	0.1	1.28	2.5		0.1	0	0		1	table
+Lahtvee 2016	10.1091/mbc.e16-03-0187	CEN.PK113-7D	SI Table 1 (supp s15.xlsx), row 'REFERENCE', columns Glucose..CO2 'Consumption, mmol/gDW'	aerobic	0.1	1.071	2.446	2.628	0	0.001	0		1	derived
+Lahtvee 2017	10.1016/j.cels.2017.03.003		doi:10.1016/j.cels.2017.03.003 	aerobic	0.1	1.071	2.446	2.628	0	0.0008575	0	0.46	1	table
+Larsson 1997	10.1128/jb.179.23.7243-7250.1997	baker's yeast (Jastbolaget AB)	Table 2, C/N 2.5	aerobic	0.1	1	2.3		0			0.449	1	table
+Larsson 1997	10.1128/jb.179.23.7243-7250.1997	baker's yeast (Jastbolaget AB)	Table 2, C/N 10	aerobic	0.1	1.2	3		0			0.468	1	table
+Nookaew 2008 (compiled)	10.1186/1752-0509-2-71		Nookaew 2008 (10.1186/1752-0509-2-71) Additional file 3, Table S3, 'C-limited Aerobic' block, data row 1; reference column = Jewett et al., in prepara	aerobic	0.0516	0.6		1.14	0	0	0		1	table
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=0.6 D=0.0516 (no O2)	aerobic	0.0516	0.6							1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=1.15 O2=2.7 D=0.1	aerobic	0.1	1.15	2.7						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=1.17 O2=2.5 D=0.1	aerobic	0.1	1.17	2.5						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=1.18 D=0.11 (no O2)	aerobic	0.11	1.18							1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=1.69 O2=4.0 D=0.15	aerobic	0.15	1.69	4						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=2.26 O2=5.0 D=0.2	aerobic	0.2	2.26	5						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=2.88 O2=6.5 D=0.25	aerobic	0.25	2.88	6.5						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=3.27 O2=7.46 D=0.27	aerobic	0.27	3.27	7.46						1	compiled
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000		Nookaew 2008 (10.1186/1752-0509-2-71) Additional file 3, Table S3, 'C-limited Aerobic' block, data row 3; reference column = Overkamp 2000	aerobic	0.1	1.17	2.5	2.5	0	0	0		1	table
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000	CEN.PK113-7D	Fig. 2A and 3A	aerobic	0.1	1.154	2.4	2.6	0	0			1	figure
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000		Nookaew 2008 (10.1186/1752-0509-2-71) Additional file 3, Table S3, 'C-limited Aerobic' block, data row 5; reference column = Overkamp 2000	aerobic	0.15	1.69	4	4.1	0	0	0		1	table
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000	CEN.PK113-7D	Fig. 2A and 3A	aerobic	0.15	1.665	3.7	3.9	0	0			1	figure
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000		Nookaew 2008 (10.1186/1752-0509-2-71) Additional file 3, Table S3, 'C-limited Aerobic' block, data row 6; reference column = Overkamp 2000	aerobic	0.2	2.26	5	5.2	0	0	0		1	table
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000	CEN.PK113-7D	Fig. 2A and 3A	aerobic	0.2	2.22	4.9	5.2	0	0			1	figure
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000		Nookaew 2008 (10.1186/1752-0509-2-71) Additional file 3, Table S3, 'C-limited Aerobic' block, data row 7; reference column = Overkamp 2000	aerobic	0.25	2.88	6.5	6.6	0	0	0		1	table
+Overkamp 2000	10.1128/jb.182.10.2823-2830.2000	CEN.PK113-7D	Fig. 2A and 3A	aerobic	0.25	2.826	6.6	7	0	0			1	figure
+Postma 1989	10.1128/aem.55.2.468-477.1989	S. cerevisiae CBS 8066	Table 2, glucose-limited rows, D 0.25	aerobic	0.25	2.78	6.5	6.9					1	derived
+Postmus 2008	10.1074/jbc.m802908200	CEN.PK113-7D	Fig. 2A (dry weight, yield) and Fig. 2B (fluxes)	aerobic	0.1	1.1	2.75	2.75	0	0			1	figure
+Tai 2005	10.1074/jbc.m410573200	CEN.PK113-7D	Table I, Aerobic, row Carbon	aerobic	0.1	1.1	2.8	2.8	0				1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998		doi:10.1128/AEM.64.11.4226-4233.1998	aerobic	0.05	0.6	1.325	1.37	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998	S. cerevisiae DS28911 (prototrophic baker's yeast, Gist-Broc	Table 1, D 0.05 (aerobic glucose-limited chemostat)	aerobic	0.05	0.6	1.3	1.4	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998		doi:10.1128/AEM.64.11.4226-4233.1998	aerobic	0.1	1.1	2.317	2.401	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998	S. cerevisiae DS28911 (prototrophic baker's yeast, Gist-Broc	Table 1, D 0.1 (aerobic glucose-limited chemostat)	aerobic	0.1	1.1	2.5	2.7	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998		doi:10.1128/AEM.64.11.4226-4233.1998	aerobic	0.15	1.7	3.507	3.638	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998	S. cerevisiae DS28911 (prototrophic baker's yeast, Gist-Broc	Table 1, D 0.15 (aerobic glucose-limited chemostat)	aerobic	0.15	1.7	3.9	4.2	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998		doi:10.1128/AEM.64.11.4226-4233.1998	aerobic	0.2	2.3	4.697	4.875	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998	S. cerevisiae DS28911 (prototrophic baker's yeast, Gist-Broc	Table 1, D 0.2 (aerobic glucose-limited chemostat)	aerobic	0.2	2.3	5.3	5.7	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998		doi:10.1128/AEM.64.11.4226-4233.1998	aerobic	0.25	2.8	5.688	5.906	0	0	0		1	table
+Van Hoek 1998	10.1128/aem.64.11.4226-4233.1998	S. cerevisiae DS28911 (prototrophic baker's yeast, Gist-Broc	Table 1, D 0.25 (aerobic glucose-limited chemostat)	aerobic	0.25	2.8	7	7.5	0	0	0		1	table
+Vemuri 2007	10.1073/pnas.0607469104	CON (CEN.PK113-5D/pYX212 based)	Table 2, row 1 (CON, D 0.10, C)	aerobic	0.1	1.12	2.75	2.7					1	table
+Vemuri 2007	10.1073/pnas.0607469104	NOX (CEN.PK113-5D/pYX212 based)	Table 2, row 4 (NOX, D 0.10, C)	aerobic	0.1	1.25	3.01	3.14					1	table
+Vemuri 2007	10.1073/pnas.0607469104	AOX (CEN.PK113-5D/pYX212 based)	Table 2, row 7 (AOX, D 0.10, C)	aerobic	0.1	1.18	2.99	3					1	table
+Vemuri 2007	10.1073/pnas.0607469104	NOX (CEN.PK113-5D/pYX212 based)	Table 2, row 5 (NOX, D 0.26, C)	aerobic	0.26	4.04	10.77	11.7					1	table
+Vemuri 2007	10.1073/pnas.0607469104	CON (CEN.PK113-5D/pYX212 based)	Table 2, row 2 (CON, D 0.27, C)	aerobic	0.27	3.27	7.46	8.32					1	table
+Xia 2022	10.1038/s41467-022-30513-2	CEN.PK113-7D	Source Data file (MOESM10) sheet Fig.1B, row 3 of data	aerobic	0.1022	1.144	2.421	2.686	0				1	table
+Xia 2022	10.1038/s41467-022-30513-2	CEN.PK113-7D	Source Data file (MOESM10) sheet Fig.1B, row 4 of data	aerobic	0.152	1.603	4.058	3.88	0				1	table
+Xia 2022	10.1038/s41467-022-30513-2	CEN.PK113-7D	Source Data file (MOESM10) sheet Fig.1B, row 5 of data	aerobic	0.2142	2.374	5.628	5.923	0				1	table
+Xia 2022	10.1038/s41467-022-30513-2	CEN.PK113-7D	Source Data file (MOESM10) sheet Fig.1B, row 6 of data	aerobic	0.254	2.712	5.905	6.813	0				1	table
+Yu 2020	10.1038/s41467-020-15749-0	CEN.PK113-7D	Supplementary Data 4, row 'C-lim rep1'	aerobic	0.2	2.439	6.505	6.053	0	0	0.0055		2	table
+Yu 2021	10.7554/elife.65722	CEN.PK113-7D	Supplementary file 1e row sample 4 (culture conditions from Supplementary file 1a)	aerobic	0.1	1.135	2.337	1.99	0.005589	0	0	0.358	3	table
+Boender 2009	10.1128/aem.00429-09	CEN.PK113-7D	Fig. 1	anaerobic	0.025	2.02	0			0.26			1	figure
+Boender 2009	10.1128/aem.00429-09	CEN.PK113-7D	Fig. 1	anaerobic	0.03	2.21	0			0.26			1	figure
+Boender 2009	10.1128/aem.00429-09	CEN.PK113-7D	Fig. 1	anaerobic	0.1	6.17	0			0.82			1	figure
+Boender 2009	10.1128/aem.00429-09	CEN.PK113-7D	Fig. 1	anaerobic	0.2	12.03	0			1.85			1	figure
+Diderich 1999	10.1074/jbc.274.22.15350	CEN.PK113-7D	Table II row 7	anaerobic	0.1	5.6	0	8.7	8.5			0.48	1	table
+Hazelwood 2009	10.1128/aem.01464-09	CEN.PK113-7D	Table 3, row Carbon	anaerobic	0.1	6	0			0.81			1	table
+Jewett 2013	10.1534/g3.113.006601		Jewett 2013 Table S3 C anaerobic 30C (uptake derived from Yxs)	anaerobic	0.047	2.352	0						1	table
+Jouhten 2008	10.1186/1752-0509-2-60		doi:10.1186/1752-0509-2-60	anaerobic	0.1	6.44	0		9.26	1.08	0		1	table
+Jouhten 2008	10.1186/1752-0509-2-60	CEN.PK113-1A	Table 1, column O2 0.0% replicate I; O2 from Table 3 (OUR)	anaerobic	0.1	6.44	0		9.26	1.08	0		2	table
+Larsson 1997	10.1128/jb.179.23.7243-7250.1997	baker's yeast (Jastbolaget AB)	Table 1, C/N 10	anaerobic	0.1	5.6	0		7.4	0.7		0.52	1	table
+Larsson 1997	10.1128/jb.179.23.7243-7250.1997	baker's yeast (Jastbolaget AB)	Table 1, C/N 40	anaerobic	0.1	6.4	0		8.7	0.7		0.534	1	table
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.055	3.394	0		4.738	0.7304	0.01382		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.058	3.769	0		5.261	0.811	0.01534		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.106	6.469	0		9.031	1.392	0.06047		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.111	7.006	0		9.781	1.508	0.06549		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.165	10.95	0		15.28	2.355	0.1173		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.172	12.36	0		17.25	2.659	0.131		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.204	15.96	0		22.29	3.435	0.2033		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.215	16.15	0		22.55	3.476	0.2253		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.241	19.61	0		27.38	4.22	0.2883		1	derived
+Liden 1995	10.1007/bf00166921	CBS 8066	Figs 1,2 (X,S), 3b,c (yield averages in text), 4a,b (acetate,succinate)	anaerobic	0.25	18.24	0		25.47	3.926	0.3462		1	derived
+Nissen 1997	10.1099/00221287-143-1-203		doi:10.1099/00221287-143-1-203	anaerobic	0.1	6.018	0	9.822	8.973	1.035	0.02407		1	table
+Nissen 1997	10.1099/00221287-143-1-203		doi:10.1099/00221287-143-1-203	anaerobic	0.2	11.59	0	18.99	17.25	2.11	0.06956		1	table
+Nissen 1997	10.1099/00221287-143-1-203		doi:10.1099/00221287-143-1-203	anaerobic	0.3	17.07	0	27.35	25.3	3.243	0.2048		1	table
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=2.3 O2=0.0 D=0.03	anaerobic	0.03	2.3	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=2.86 O2=0.0 D=0.047	anaerobic	0.047	2.86	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=4.15 O2=0.0 D=0.05	anaerobic	0.05	4.15	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=8.4 O2=0.0 D=0.1	anaerobic	0.1	8.4	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=8.7 O2=0.0 D=0.1	anaerobic	0.1	8.7	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=5.88 O2=0.0 D=0.101	anaerobic	0.101	5.88	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=12.4 O2=0.0 D=0.16	anaerobic	0.16	12.4	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=11.31 O2=0.0 D=0.19	anaerobic	0.19	11.31	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=15.3 O2=0.0 D=0.2	anaerobic	0.2	15.3	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=17.4 O2=0.0 D=0.24	anaerobic	0.24	17.4	0						1	compiled
+Osterlund 2013 (compiled)	10.1186/1752-0509-7-36		Osterlund 2013 Add file 5 row glc=16.75 O2=0.0 D=0.281	anaerobic	0.281	16.75	0						1	compiled
+Verduyn 1990	10.1099/00221287-136-3-405	S. cerevisiae H1022	Table 1, D 0.10 strain H1022	anaerobic	0.1	4.83	0		7.23	0.89		0.45	1	derived
+Verduyn 1990	10.1099/00221287-136-3-405	S. cerevisiae CBS 8066	Table 1, D 0.10	anaerobic	0.1	5.39	0		8.05	0.89		0.47	1	derived
+Verduyn 1990	10.1099/00221287-136-3-405	S. cerevisiae CBS 8066	Table 1, D 0.20	anaerobic	0.2	11.81	0		18.69	2.11		0.53	1	derived
+Verduyn 1990	10.1099/00221287-136-3-395	S. cerevisiae CBS 8066	Table 5, anaerobic column	anaerobic	0.27	18	0		27.7	3.1	0.13		1	table
+Verduyn 1990	10.1099/00221287-136-3-405	S. cerevisiae CBS 8066	Table 1, D 0.27	anaerobic	0.27	17.43	0		27.7	3.09		0.57	1	derived
